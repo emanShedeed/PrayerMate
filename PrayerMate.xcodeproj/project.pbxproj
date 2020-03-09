@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		673E7AA17F98FCA8BDCB85FF /* Pods_PrayerMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1AAC8FDC32641284F33D08 /* Pods_PrayerMate.framework */; };
+		BD77215824165829008A8947 /* PrayerTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77215724165829008A8947 /* PrayerTime.swift */; };
+		BDAA26CB2404F3A80064C8D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA26CA2404F3A80064C8D4 /* AppDelegate.swift */; };
+		BDAA26CD2404F3A80064C8D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA26CC2404F3A80064C8D4 /* SceneDelegate.swift */; };
+		BDAA26CF2404F3A80064C8D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA26CE2404F3A80064C8D4 /* ViewController.swift */; };
+		BDAA26D22404F3A80064C8D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDAA26D02404F3A80064C8D4 /* Main.storyboard */; };
+		BDAA26D42404F3A90064C8D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDAA26D32404F3A90064C8D4 /* Assets.xcassets */; };
+		BDAA26D72404F3A90064C8D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDAA26D52404F3A90064C8D4 /* LaunchScreen.storyboard */; };
+		BDAA26E32405416B0064C8D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDAA26E22405416B0064C8D4 /* GoogleService-Info.plist */; };
+		BDCF6A68240D13B500DD46F7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF6A67240D13B500DD46F7 /* SignInViewController.swift */; };
+		BDCF6A6A240D16D400DD46F7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF6A69240D16D400DD46F7 /* WelcomeViewController.swift */; };
+		BDCF6A6C240D1E8500DD46F7 /* AuthSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDCF6A6B240D1E8500DD46F7 /* AuthSettings.plist */; };
+		BDCF6A6F240D257A00DD46F7 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF6A6E240D257A00DD46F7 /* AuthenticationManager.swift */; };
+		BDCF6A71240D273F00DD46F7 /* GraphManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF6A70240D273F00DD46F7 /* GraphManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7E1AAC8FDC32641284F33D08 /* Pods_PrayerMate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrayerMate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99F20701864EACE850C8951F /* Pods-PrayerMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerMate.release.xcconfig"; path = "Target Support Files/Pods-PrayerMate/Pods-PrayerMate.release.xcconfig"; sourceTree = "<group>"; };
+		B9165590C6B8B564D385D5DC /* Pods-PrayerMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerMate.debug.xcconfig"; path = "Target Support Files/Pods-PrayerMate/Pods-PrayerMate.debug.xcconfig"; sourceTree = "<group>"; };
+		BD77215724165829008A8947 /* PrayerTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTime.swift; sourceTree = "<group>"; };
+		BDAA26C72404F3A80064C8D4 /* PrayerMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrayerMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDAA26CA2404F3A80064C8D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BDAA26CC2404F3A80064C8D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BDAA26CE2404F3A80064C8D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BDAA26D12404F3A80064C8D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BDAA26D32404F3A90064C8D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDAA26D62404F3A90064C8D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BDAA26D82404F3A90064C8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDAA26E22405416B0064C8D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BDCF6A67240D13B500DD46F7 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		BDCF6A69240D16D400DD46F7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		BDCF6A6B240D1E8500DD46F7 /* AuthSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AuthSettings.plist; sourceTree = "<group>"; };
+		BDCF6A6D240D216100DD46F7 /* PrayerMate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrayerMate.entitlements; sourceTree = "<group>"; };
+		BDCF6A6E240D257A00DD46F7 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		BDCF6A70240D273F00DD46F7 /* GraphManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BDAA26C42404F3A80064C8D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				673E7AA17F98FCA8BDCB85FF /* Pods_PrayerMate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD772156241657E3008A8947 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD77215724165829008A8947 /* PrayerTime.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BDAA26BE2404F3A70064C8D4 = {
+			isa = PBXGroup;
+			children = (
+				BDAA26C92404F3A80064C8D4 /* PrayerMate */,
+				BDAA26C82404F3A80064C8D4 /* Products */,
+				D81FA761D7CC63B71CE87CE0 /* Pods */,
+				C7827DD965501B07B1947142 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BDAA26C82404F3A80064C8D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BDAA26C72404F3A80064C8D4 /* PrayerMate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BDAA26C92404F3A80064C8D4 /* PrayerMate */ = {
+			isa = PBXGroup;
+			children = (
+				BD772156241657E3008A8947 /* Model */,
+				BDCF6A6D240D216100DD46F7 /* PrayerMate.entitlements */,
+				BDAA26CA2404F3A80064C8D4 /* AppDelegate.swift */,
+				BDAA26CC2404F3A80064C8D4 /* SceneDelegate.swift */,
+				BDAA26CE2404F3A80064C8D4 /* ViewController.swift */,
+				BDCF6A67240D13B500DD46F7 /* SignInViewController.swift */,
+				BDAA26D02404F3A80064C8D4 /* Main.storyboard */,
+				BDAA26D32404F3A90064C8D4 /* Assets.xcassets */,
+				BDAA26D52404F3A90064C8D4 /* LaunchScreen.storyboard */,
+				BDAA26D82404F3A90064C8D4 /* Info.plist */,
+				BDAA26E22405416B0064C8D4 /* GoogleService-Info.plist */,
+				BDCF6A69240D16D400DD46F7 /* WelcomeViewController.swift */,
+				BDCF6A6B240D1E8500DD46F7 /* AuthSettings.plist */,
+				BDCF6A6E240D257A00DD46F7 /* AuthenticationManager.swift */,
+				BDCF6A70240D273F00DD46F7 /* GraphManager.swift */,
+			);
+			path = PrayerMate;
+			sourceTree = "<group>";
+		};
+		C7827DD965501B07B1947142 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E1AAC8FDC32641284F33D08 /* Pods_PrayerMate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D81FA761D7CC63B71CE87CE0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9165590C6B8B564D385D5DC /* Pods-PrayerMate.debug.xcconfig */,
+				99F20701864EACE850C8951F /* Pods-PrayerMate.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BDAA26C62404F3A80064C8D4 /* PrayerMate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDAA26DB2404F3A90064C8D4 /* Build configuration list for PBXNativeTarget "PrayerMate" */;
+			buildPhases = (
+				C6A1D35E14AEF60C583EBC59 /* [CP] Check Pods Manifest.lock */,
+				BDAA26C32404F3A80064C8D4 /* Sources */,
+				BDAA26C42404F3A80064C8D4 /* Frameworks */,
+				BDAA26C52404F3A80064C8D4 /* Resources */,
+				336388DE84B814DDCC6139A1 /* [CP] Embed Pods Frameworks */,
+				F8246103EF4F139BDAF04CB8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PrayerMate;
+			productName = PrayerMate;
+			productReference = BDAA26C72404F3A80064C8D4 /* PrayerMate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BDAA26BF2404F3A70064C8D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "eman shedeed";
+				TargetAttributes = {
+					BDAA26C62404F3A80064C8D4 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = BDAA26C22404F3A80064C8D4 /* Build configuration list for PBXProject "PrayerMate" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BDAA26BE2404F3A70064C8D4;
+			productRefGroup = BDAA26C82404F3A80064C8D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BDAA26C62404F3A80064C8D4 /* PrayerMate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BDAA26C52404F3A80064C8D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDAA26D72404F3A90064C8D4 /* LaunchScreen.storyboard in Resources */,
+				BDCF6A6C240D1E8500DD46F7 /* AuthSettings.plist in Resources */,
+				BDAA26D42404F3A90064C8D4 /* Assets.xcassets in Resources */,
+				BDAA26E32405416B0064C8D4 /* GoogleService-Info.plist in Resources */,
+				BDAA26D22404F3A80064C8D4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		336388DE84B814DDCC6139A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrayerMate/Pods-PrayerMate-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrayerMate/Pods-PrayerMate-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrayerMate/Pods-PrayerMate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6A1D35E14AEF60C583EBC59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrayerMate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8246103EF4F139BDAF04CB8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrayerMate/Pods-PrayerMate-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrayerMate/Pods-PrayerMate-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrayerMate/Pods-PrayerMate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BDAA26C32404F3A80064C8D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDCF6A68240D13B500DD46F7 /* SignInViewController.swift in Sources */,
+				BD77215824165829008A8947 /* PrayerTime.swift in Sources */,
+				BDCF6A6A240D16D400DD46F7 /* WelcomeViewController.swift in Sources */,
+				BDAA26CF2404F3A80064C8D4 /* ViewController.swift in Sources */,
+				BDCF6A6F240D257A00DD46F7 /* AuthenticationManager.swift in Sources */,
+				BDAA26CB2404F3A80064C8D4 /* AppDelegate.swift in Sources */,
+				BDAA26CD2404F3A80064C8D4 /* SceneDelegate.swift in Sources */,
+				BDCF6A71240D273F00DD46F7 /* GraphManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BDAA26D02404F3A80064C8D4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDAA26D12404F3A80064C8D4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BDAA26D52404F3A90064C8D4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDAA26D62404F3A90064C8D4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BDAA26D92404F3A90064C8D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BDAA26DA2404F3A90064C8D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BDAA26DC2404F3A90064C8D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9165590C6B8B564D385D5DC /* Pods-PrayerMate.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PrayerMate/PrayerMate.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PU8FM4JDVA;
+				INFOPLIST_FILE = PrayerMate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "black-squares.com.PrayerMate";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BDAA26DD2404F3A90064C8D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99F20701864EACE850C8951F /* Pods-PrayerMate.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PrayerMate/PrayerMate.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PU8FM4JDVA;
+				INFOPLIST_FILE = PrayerMate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "black-squares.com.PrayerMate";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BDAA26C22404F3A80064C8D4 /* Build configuration list for PBXProject "PrayerMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDAA26D92404F3A90064C8D4 /* Debug */,
+				BDAA26DA2404F3A90064C8D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BDAA26DB2404F3A90064C8D4 /* Build configuration list for PBXNativeTarget "PrayerMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDAA26DC2404F3A90064C8D4 /* Debug */,
+				BDAA26DD2404F3A90064C8D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BDAA26BF2404F3A70064C8D4 /* Project object */;
+}
