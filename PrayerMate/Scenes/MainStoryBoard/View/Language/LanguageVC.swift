@@ -8,48 +8,64 @@
 
 import UIKit
 import DLRadioButton
-class LanguageVC: UIViewController {
-
+final class LanguageVC: UIViewController {
+    //MARK:- IBOUTLET
     @IBOutlet weak var englishRadioButton: DLRadioButton!
-    
-
     @IBOutlet weak var animatedImage: UIImageView!
-     @IBOutlet weak var animatedImage2: UIImageView!
+    @IBOutlet weak var animatedImage2: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-//        englishRadioButton.setTitle("Arabic", for: .normal)
         englishRadioButton.isSelected = true
-        //add gif image
-//        let jeremyGif = UIImage.gifImageWithName("funny")
-//           let imageView = UIImageView(image: jeremyGif)
-//           imageView.frame = CGRect(x: 20.0, y: 50.0, width: self.view.frame.size.width - 40, height: 150.0)
-//           view.addSubview(imageView)
-       
     }
+    
+    
     override func viewDidAppear(_ animated: Bool) {
-         UIView.animate(withDuration: 2.0, delay: 0.0, options: [.repeat, .autoreverse], animations: {
-                     self.animatedImage.frame = self.animatedImage.frame.offsetBy(dx: -1 * self.animatedImage.frame.size.width, dy: 0.0)
-                     self.animatedImage2.frame = self.animatedImage2.frame.offsetBy(dx: -1 * self.animatedImage2.frame.size.width, dy: 0.0)
-                 }, completion: nil)
+        animateBackGround()
     }
     
-    @IBAction func radioButtonPressed(_ sender: Any) {
-    }
-    @IBAction func arabicBtnPressed(_ sender: Any) {
-        AppSetting.shared.setCurrentLanguage(language: AppLanguages.ar)
-        LanguageManager.currentLanguage=AppLanguages.ar.rawValue
+    //MARK:- IBAction
+    
+
+//    @IBAction func radioButtonPressed(_ sender: DLRadioButton) {
+//        let tag = sender.tag
+//        switch tag {
+//        case 2 :
+//            AppSetting.shared.setCurrentLanguage(language: AppLanguages.ar)
+//            LanguageManager.currentLanguage=AppLanguages.ar.rawValue
+//        default:
+//            AppSetting.shared.setCurrentLanguage(language: AppLanguages.en)
+//            LanguageManager.currentLanguage=AppLanguages.en.rawValue
+//        }
+//        
+//    }
+//    @IBAction func arabicBtnPressed(_ sender: Any) {
+//        //        AppSetting.shared.setCurrentLanguage(language: AppLanguages.ar)
+//        //        LanguageManager.currentLanguage=AppLanguages.ar.rawValue
+//        //        self.reloadRootView()
+//        //        present(UIStoryboard.main.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController, animated: true, completion: nil)
+//    }
+    
+    @IBAction func nextBtnPressed(_ sender: Any) {
         self.reloadRootView()
-        present(UIStoryboard.main.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController, animated: true, completion: nil)
+        present(UIStoryboard.main.instantiateViewController(withIdentifier: "LocationVC") as! LocationVC, animated: true, completion: nil)
     }
     
-   private func reloadRootView() {
-       if let appDelegate = UIApplication.shared.delegate {
-        appDelegate.window??.rootViewController = UIStoryboard.main.instantiateInitialViewController()
-       }
-   }
-
-
+    //MARK:- Methods
+    
+    private func animateBackGround(){
+        UIView.animate(withDuration: 2.0, delay: 0.0, options: [.repeat, .autoreverse], animations: {
+            self.animatedImage.frame = self.animatedImage.frame.offsetBy(dx: -1 * self.animatedImage.frame.size.width, dy: 0.0)
+            self.animatedImage2.frame = self.animatedImage2.frame.offsetBy(dx: -1 * self.animatedImage2.frame.size.width, dy: 0.0)
+        }, completion: nil)
+    }
+    
+    private func reloadRootView() {
+        if let appDelegate = UIApplication.shared.delegate {
+            appDelegate.window??.rootViewController = UIStoryboard.main.instantiateInitialViewController()
+        }
+    }
+    
+    
 }

@@ -19,6 +19,13 @@
 "Language.nextBtnTitle" = "التالي";
 "Language.englishRadioButtonTitle" = "إنجليزي";
 "Language.arabicRadioButtonTitle" = "عربي";
+//Location view controller
+"Location.title" = "الموقع";
+"Location.subTitle" = "من فضلك اختر الموقع";
+"Location.finishBtnTitle" = "إنهاء";
+"Location.addressTxtPlaceHolder" = "اختر الموقع من الخريطة";
+"Location.locateMeButtonTitle" = "حدد موقعي";
+
 
 /*
 //home viewController

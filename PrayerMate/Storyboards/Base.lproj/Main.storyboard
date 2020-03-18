@@ -116,7 +116,7 @@ sadipscing elitr, sed diam.</string>
                                 <rect key="frame" x="0.0" y="250" width="375" height="397"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountain" translatesAutoresizingMaskIntoConstraints="NO" id="HrA-r3-hkn">
-                                <rect key="frame" x="-365" y="250" width="375" height="397"/>
+                                <rect key="frame" x="-365" y="250" width="370" height="397"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sO6-Gw-bX9">
                                 <rect key="frame" x="17" y="56" width="162" height="42"/>
@@ -140,6 +140,9 @@ sadipscing elitr, sed diam.</string>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Language.nextBtnTitle"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="Language.nextBtnTitle"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextBtnPressed:" destination="klf-WU-beb" eventType="touchUpInside" id="27i-o2-Jd3"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Please choose your language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bN-Tc-fRl">
                                 <rect key="frame" x="17" y="113" width="224" height="20.5"/>
@@ -150,8 +153,8 @@ sadipscing elitr, sed diam.</string>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Language.subTitle"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLp-kS-VMP" customClass="DLRadioButton">
-                                <rect key="frame" x="17" y="171.5" width="80" height="22"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLp-kS-VMP" userLabel="English " customClass="DLRadioButton">
+                                <rect key="frame" x="17" y="171.5" width="297" height="22"/>
                                 <state key="normal" title="English">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -162,12 +165,11 @@ sadipscing elitr, sed diam.</string>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="Language.englishRadioButtonTitle"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="radioButtonPressed:" destination="klf-WU-beb" eventType="touchUpInside" id="H5Z-X2-n6f"/>
-                                    <outletCollection property="otherButtons" destination="xSs-k2-hau" id="rvq-GJ-cW1"/>
+                                    <outletCollection property="otherButtons" destination="xSs-k2-hau" id="YL4-kQ-fe0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSs-k2-hau" customClass="DLRadioButton">
-                                <rect key="frame" x="17" y="209.5" width="73" height="22"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSs-k2-hau" customClass="DLRadioButton">
+                                <rect key="frame" x="17" y="209.5" width="289" height="22"/>
                                 <state key="normal" title="Arabic">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -180,12 +182,8 @@ sadipscing elitr, sed diam.</string>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Language.arabicRadioButtonTitle"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="Language.arabicRadioButtonTitle"/>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="radioButtonPressed:" destination="klf-WU-beb" eventType="touchUpInside" id="swV-uF-qJ2"/>
-                                    <outletCollection property="otherButtons" destination="uLp-kS-VMP" id="RUU-AR-oaR"/>
-                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="nAL-mp-Gyl">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="languageMan" translatesAutoresizingMaskIntoConstraints="NO" id="nAL-mp-Gyl">
                                 <rect key="frame" x="235" y="336" width="123" height="311"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="123" id="sji-r3-MDe"/>
@@ -202,12 +200,13 @@ sadipscing elitr, sed diam.</string>
                                         </constraints>
                                         <state key="normal" image="selectedBtn"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5I2-bo-ccZ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5I2-bo-ccZ">
                                         <rect key="frame" x="18" y="0.0" width="12" height="12"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="W3I-av-gx7"/>
                                             <constraint firstAttribute="width" constant="12" id="xzB-yl-zcv"/>
                                         </constraints>
+                                        <state key="normal" image="unselectedBtn"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -217,12 +216,15 @@ sadipscing elitr, sed diam.</string>
                             <constraint firstItem="nAL-mp-Gyl" firstAttribute="bottom" secondItem="WWH-3c-bKt" secondAttribute="bottom" constant="-20" id="1Ja-3n-V1I"/>
                             <constraint firstItem="QZX-j6-Hnv" firstAttribute="bottom" secondItem="Rou-GR-54s" secondAttribute="bottom" constant="-16" id="3eb-LH-NpQ"/>
                             <constraint firstItem="xSs-k2-hau" firstAttribute="top" secondItem="uLp-kS-VMP" secondAttribute="bottom" constant="16" id="6Qx-Cw-ZFJ"/>
+                            <constraint firstItem="WWH-3c-bKt" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uLp-kS-VMP" secondAttribute="trailing" symbolic="YES" id="6oc-4T-txc"/>
                             <constraint firstItem="WWH-3c-bKt" firstAttribute="bottom" secondItem="Rou-GR-54s" secondAttribute="bottom" constant="20" id="6pm-tm-lLC"/>
-                            <constraint firstItem="HrA-r3-hkn" firstAttribute="trailing" secondItem="Rou-GR-54s" secondAttribute="leading" constant="10" id="FvD-ta-6xF"/>
+                            <constraint firstItem="HrA-r3-hkn" firstAttribute="trailing" secondItem="Rou-GR-54s" secondAttribute="leading" constant="5" id="FvD-ta-6xF"/>
+                            <constraint firstItem="xSs-k2-hau" firstAttribute="leading" secondItem="uLp-kS-VMP" secondAttribute="leading" id="Gf8-hW-JGB"/>
                             <constraint firstItem="Rou-GR-54s" firstAttribute="trailing" secondItem="WWH-3c-bKt" secondAttribute="trailing" id="JBC-cM-wpd"/>
                             <constraint firstItem="eUY-eo-f5K" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sO6-Gw-bX9" secondAttribute="trailing" constant="8" symbolic="YES" id="Jc1-U0-Bu2"/>
                             <constraint firstItem="Rou-GR-54s" firstAttribute="height" secondItem="WWH-3c-bKt" secondAttribute="height" multiplier="0.595" id="L3a-ap-Mxr"/>
-                            <constraint firstItem="HrA-r3-hkn" firstAttribute="width" secondItem="Rou-GR-54s" secondAttribute="width" id="LDW-VM-d4b"/>
+                            <constraint firstItem="HrA-r3-hkn" firstAttribute="width" secondItem="Rou-GR-54s" secondAttribute="width" constant="-5" id="LDW-VM-d4b"/>
+                            <constraint firstItem="uLp-kS-VMP" firstAttribute="leading" secondItem="7bN-Tc-fRl" secondAttribute="leading" id="LIn-XE-QBQ"/>
                             <constraint firstItem="WWH-3c-bKt" firstAttribute="trailing" secondItem="eUY-eo-f5K" secondAttribute="trailing" constant="17" id="NOP-yu-K2g"/>
                             <constraint firstItem="7bN-Tc-fRl" firstAttribute="leading" secondItem="sO6-Gw-bX9" secondAttribute="leading" id="NUV-vS-EGk"/>
                             <constraint firstItem="uLp-kS-VMP" firstAttribute="top" secondItem="7bN-Tc-fRl" secondAttribute="bottom" constant="38" id="Vm5-dp-WVx"/>
@@ -231,13 +233,10 @@ sadipscing elitr, sed diam.</string>
                             <constraint firstItem="QZX-j6-Hnv" firstAttribute="centerX" secondItem="96c-Sr-C4t" secondAttribute="centerX" id="ZzQ-PV-G1g"/>
                             <constraint firstItem="WWH-3c-bKt" firstAttribute="trailing" secondItem="nAL-mp-Gyl" secondAttribute="trailing" constant="17" id="bEm-Ly-kzk"/>
                             <constraint firstItem="WWH-3c-bKt" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xSs-k2-hau" secondAttribute="trailing" symbolic="YES" id="kR5-n3-ruA"/>
-                            <constraint firstItem="xSs-k2-hau" firstAttribute="leading" secondItem="uLp-kS-VMP" secondAttribute="leading" id="mti-De-6GT"/>
                             <constraint firstItem="WWH-3c-bKt" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7bN-Tc-fRl" secondAttribute="trailing" symbolic="YES" id="oln-WE-BxM"/>
-                            <constraint firstItem="uLp-kS-VMP" firstAttribute="leading" secondItem="7bN-Tc-fRl" secondAttribute="leading" id="pie-50-TvC"/>
                             <constraint firstItem="7bN-Tc-fRl" firstAttribute="top" secondItem="sO6-Gw-bX9" secondAttribute="bottom" constant="15" id="sro-dq-eja"/>
                             <constraint firstItem="HrA-r3-hkn" firstAttribute="height" secondItem="Rou-GR-54s" secondAttribute="height" id="t3t-O5-waY"/>
                             <constraint firstItem="sO6-Gw-bX9" firstAttribute="leading" secondItem="96c-Sr-C4t" secondAttribute="leading" constant="17" id="vGJ-1a-ung"/>
-                            <constraint firstItem="WWH-3c-bKt" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uLp-kS-VMP" secondAttribute="trailing" symbolic="YES" id="w9M-eQ-bQJ"/>
                             <constraint firstItem="eUY-eo-f5K" firstAttribute="centerY" secondItem="sO6-Gw-bX9" secondAttribute="centerY" id="wyL-I9-qM4"/>
                             <constraint firstItem="sO6-Gw-bX9" firstAttribute="top" secondItem="WWH-3c-bKt" secondAttribute="top" constant="56" id="xI7-fd-Zvf"/>
                         </constraints>
@@ -417,15 +416,165 @@ sadipscing elitr, sed diam.</string>
             </objects>
             <point key="canvasLocation" x="2769" y="401"/>
         </scene>
+        <!--LocationVC-->
+        <scene sceneID="9hr-46-wWw">
+            <objects>
+                <viewController storyboardIdentifier="LocationVC" modalPresentationStyle="fullScreen" id="Y1W-UP-bzt" userLabel="LocationVC" customClass="LocationVC" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pto-KD-oUn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="mountain" translatesAutoresizingMaskIntoConstraints="NO" id="CkX-nU-9tD">
+                                <rect key="frame" x="0.0" y="250" width="375" height="397"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountain" translatesAutoresizingMaskIntoConstraints="NO" id="c5p-lC-Sdt">
+                                <rect key="frame" x="-365" y="250" width="370" height="397"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z01-9V-frP" userLabel="Location">
+                                <rect key="frame" x="17" y="56" width="141.5" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <color key="textColor" name="AppColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="letterSpace">
+                                        <real key="value" value="-0.83999999999999997"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Location.title"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDj-jW-QR1" userLabel="Finish">
+                                <rect key="frame" x="309" y="60" width="49" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleColor" name="AppColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Language.nextBtnTitle"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="Language.nextBtnTitle"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Location.subTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4Y-cJ-gOS">
+                                <rect key="frame" x="17" y="113" width="130" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AppGrayColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Language.subTitle"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locationMan" translatesAutoresizingMaskIntoConstraints="NO" id="3Qb-6m-9B8">
+                                <rect key="frame" x="235" y="378" width="123" height="269"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="703-Wo-3Jx"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="XHI-Dk-pYN">
+                                <rect key="frame" x="172.5" y="619" width="30" height="12"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unselectedBtn" translatesAutoresizingMaskIntoConstraints="NO" id="u88-iL-jzN">
+                                        <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="M0F-dZ-YeD"/>
+                                            <constraint firstAttribute="width" constant="12" id="OGC-Wk-p0B"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectedBtn" translatesAutoresizingMaskIntoConstraints="NO" id="hs9-a4-My3">
+                                        <rect key="frame" x="18" y="0.0" width="12" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="12" id="5nl-qB-EMF"/>
+                                            <constraint firstAttribute="height" constant="12" id="KJG-Hl-9gE"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Choose location from map" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zL3-et-ItW" customClass="RoundedTextField" customModule="PrayerMate" customModuleProvider="target">
+                                <rect key="frame" x="17" y="158.5" width="341" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="26a-hq-s2k"/>
+                                </constraints>
+                                <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Location.addressTxtPlaceHolder"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeftCustom">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3id-6z-Qm3" customClass="RoundedButton" customModule="PrayerMate" customModuleProvider="target">
+                                <rect key="frame" x="17" y="228.5" width="148" height="45"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="148" id="nEa-7G-nD0"/>
+                                    <constraint firstAttribute="height" constant="45" id="vQM-ot-bml"/>
+                                </constraints>
+                                <inset key="titleEdgeInsets" minX="11" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Locate me" image="location">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="22.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="letterSpace">
+                                        <real key="value" value="0.32000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6HD-Ev-fmO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3id-6z-Qm3" secondAttribute="trailing" symbolic="YES" id="1Au-u9-UiB"/>
+                            <constraint firstItem="zL3-et-ItW" firstAttribute="leading" secondItem="6HD-Ev-fmO" secondAttribute="leading" constant="17" id="1DK-0m-CHV"/>
+                            <constraint firstItem="y4Y-cJ-gOS" firstAttribute="top" secondItem="Z01-9V-frP" secondAttribute="bottom" constant="15" id="4RQ-a1-eZF"/>
+                            <constraint firstItem="6HD-Ev-fmO" firstAttribute="bottom" secondItem="CkX-nU-9tD" secondAttribute="bottom" constant="20" id="6q5-tE-Lhv"/>
+                            <constraint firstItem="3id-6z-Qm3" firstAttribute="top" secondItem="zL3-et-ItW" secondAttribute="bottom" constant="25" id="8DF-5V-u4M"/>
+                            <constraint firstItem="6HD-Ev-fmO" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="y4Y-cJ-gOS" secondAttribute="trailing" symbolic="YES" id="8YI-y9-S8F"/>
+                            <constraint firstItem="6HD-Ev-fmO" firstAttribute="trailing" secondItem="lDj-jW-QR1" secondAttribute="trailing" constant="17" id="ADb-A5-ZxO"/>
+                            <constraint firstItem="c5p-lC-Sdt" firstAttribute="bottom" secondItem="CkX-nU-9tD" secondAttribute="bottom" id="JMU-cm-Ib9"/>
+                            <constraint firstItem="lDj-jW-QR1" firstAttribute="centerY" secondItem="Z01-9V-frP" secondAttribute="centerY" id="KH0-9X-ing"/>
+                            <constraint firstItem="lDj-jW-QR1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Z01-9V-frP" secondAttribute="trailing" constant="8" symbolic="YES" id="Nqr-9s-4no"/>
+                            <constraint firstItem="CkX-nU-9tD" firstAttribute="height" secondItem="6HD-Ev-fmO" secondAttribute="height" multiplier="0.595" id="T7T-HQ-H52"/>
+                            <constraint firstItem="3id-6z-Qm3" firstAttribute="leading" secondItem="zL3-et-ItW" secondAttribute="leading" id="ZVg-rv-wBH"/>
+                            <constraint firstItem="y4Y-cJ-gOS" firstAttribute="leading" secondItem="Z01-9V-frP" secondAttribute="leading" id="aen-SU-r0W"/>
+                            <constraint firstItem="3Qb-6m-9B8" firstAttribute="bottom" secondItem="6HD-Ev-fmO" secondAttribute="bottom" constant="-20" id="bzB-ak-WAI"/>
+                            <constraint firstItem="c5p-lC-Sdt" firstAttribute="trailing" secondItem="CkX-nU-9tD" secondAttribute="leading" constant="5" id="dwU-uk-bb5"/>
+                            <constraint firstItem="6HD-Ev-fmO" firstAttribute="trailing" secondItem="zL3-et-ItW" secondAttribute="trailing" constant="17" id="dz0-Ze-dYN"/>
+                            <constraint firstItem="XHI-Dk-pYN" firstAttribute="bottom" secondItem="CkX-nU-9tD" secondAttribute="bottom" constant="-16" id="g1r-bR-JgP"/>
+                            <constraint firstItem="XHI-Dk-pYN" firstAttribute="centerX" secondItem="Pto-KD-oUn" secondAttribute="centerX" id="gRb-vY-mYl"/>
+                            <constraint firstItem="zL3-et-ItW" firstAttribute="top" secondItem="y4Y-cJ-gOS" secondAttribute="bottom" constant="25" id="n5b-dj-lsQ"/>
+                            <constraint firstItem="Z01-9V-frP" firstAttribute="leading" secondItem="Pto-KD-oUn" secondAttribute="leading" constant="17" id="pmT-kP-Ykb"/>
+                            <constraint firstItem="CkX-nU-9tD" firstAttribute="leading" secondItem="6HD-Ev-fmO" secondAttribute="leading" id="pww-wg-7rG"/>
+                            <constraint firstItem="CkX-nU-9tD" firstAttribute="trailing" secondItem="6HD-Ev-fmO" secondAttribute="trailing" id="qCI-xc-Q4J"/>
+                            <constraint firstItem="c5p-lC-Sdt" firstAttribute="width" secondItem="CkX-nU-9tD" secondAttribute="width" constant="-5" id="qMt-zj-8Sy"/>
+                            <constraint firstItem="6HD-Ev-fmO" firstAttribute="trailing" secondItem="3Qb-6m-9B8" secondAttribute="trailing" constant="17" id="qod-Lk-Zvl"/>
+                            <constraint firstItem="Z01-9V-frP" firstAttribute="top" secondItem="6HD-Ev-fmO" secondAttribute="top" constant="56" id="wFX-1A-6kJ"/>
+                            <constraint firstItem="c5p-lC-Sdt" firstAttribute="height" secondItem="CkX-nU-9tD" secondAttribute="height" id="z8g-FC-5Jf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6HD-Ev-fmO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JOv-ve-h0F"/>
+                    <connections>
+                        <outlet property="locateMeBtn" destination="3id-6z-Qm3" id="ceb-hB-dfZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q1j-jW-mmR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2046" y="387"/>
+        </scene>
     </scenes>
     <resources>
         <image name="google" width="63.5" height="63.5"/>
+        <image name="languageMan" width="124" height="311"/>
+        <image name="location" width="18" height="18"/>
+        <image name="locationMan" width="145.5" height="269"/>
         <image name="logo" width="100" height="117"/>
-        <image name="man" width="124" height="311"/>
         <image name="mountain" width="375" height="667"/>
         <image name="selectedBtn" width="12" height="12"/>
         <image name="selectedRadio" width="21" height="21"/>
         <image name="splachbg" width="375" height="418"/>
+        <image name="unselectedBtn" width="12" height="12"/>
         <image name="unselectedRadio" width="21" height="21"/>
         <namedColor name="AppColor">
             <color red="0.0" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -35,6 +35,7 @@ class SplashVC: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            UserDefaults.standard.set(nil, forKey:"appLanguage" )
             if let ـ = AppSetting.shared.getCurrentLanguage(){
                 let viewController = UIStoryboard.main.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
                 self.present(viewController, animated: true, completion:nil)

@@ -11,6 +11,8 @@ extension UIImage {
     static let splachBackGround = UIImage(named: "splachbg")
     static let logo = UIImage(named: "logo")
     static let loading = UIImage(named: "loading")
-    static let man = UIImage(named: "man")
-     static let mountain = UIImage(named: "mountain")
+    static let languageMan = UIImage(named: "languageMan")
+    static let locationMan = UIImage(named: "locationMan")
+    static let mountain = UIImage(named: "mountain")
+    static let location = UIImage(named: "location")
 }

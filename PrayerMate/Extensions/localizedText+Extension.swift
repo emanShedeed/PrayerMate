@@ -24,6 +24,19 @@ extension UIButton {
         get { return "" }
         set {
             self.setTitle(newValue.localized, for: .normal)
+            self.setTitle(newValue.localized, for: .selected)
         }
     }
+}
+extension UITextField{
+   @IBInspectable
+    var localizedText:String{
+        get{
+            return text ?? ""
+        }
+        set{
+            text = NSLocalizedString(newValue, tableName: nil, bundle: Bundle.main, comment: "")
+        }
+    }
+
 }
