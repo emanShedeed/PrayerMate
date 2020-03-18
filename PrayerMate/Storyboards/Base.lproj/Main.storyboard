@@ -112,15 +112,14 @@ sadipscing elitr, sed diam.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="mountain" translatesAutoresizingMaskIntoConstraints="NO" id="Rou-GR-54s">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="mountain" translatesAutoresizingMaskIntoConstraints="NO" id="Rou-GR-54s">
                                 <rect key="frame" x="0.0" y="250" width="375" height="397"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mountain" translatesAutoresizingMaskIntoConstraints="NO" id="HrA-r3-hkn">
-                                <rect key="frame" x="-373" y="250" width="375" height="397"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountain" translatesAutoresizingMaskIntoConstraints="NO" id="HrA-r3-hkn">
+                                <rect key="frame" x="-365" y="250" width="375" height="397"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sO6-Gw-bX9">
-                                <rect key="frame" x="17" y="55" width="162" height="42"/>
+                                <rect key="frame" x="17" y="56" width="162" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <color key="textColor" name="AppColor"/>
                                 <nil key="highlightedColor"/>
@@ -132,7 +131,7 @@ sadipscing elitr, sed diam.</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUY-eo-f5K">
-                                <rect key="frame" x="319" y="59" width="39" height="34"/>
+                                <rect key="frame" x="319" y="60" width="39" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" name="AppColor"/>
@@ -143,7 +142,7 @@ sadipscing elitr, sed diam.</string>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Please choose your language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bN-Tc-fRl">
-                                <rect key="frame" x="17" y="112" width="224" height="20.5"/>
+                                <rect key="frame" x="17" y="113" width="224" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="AppGrayColor"/>
                                 <nil key="highlightedColor"/>
@@ -152,7 +151,7 @@ sadipscing elitr, sed diam.</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLp-kS-VMP" customClass="DLRadioButton">
-                                <rect key="frame" x="17" y="173" width="297" height="22"/>
+                                <rect key="frame" x="17" y="171.5" width="80" height="22"/>
                                 <state key="normal" title="English">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -168,7 +167,7 @@ sadipscing elitr, sed diam.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSs-k2-hau" customClass="DLRadioButton">
-                                <rect key="frame" x="17" y="211" width="289" height="22"/>
+                                <rect key="frame" x="17" y="209.5" width="73" height="22"/>
                                 <state key="normal" title="Arabic">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -216,27 +215,31 @@ sadipscing elitr, sed diam.</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="nAL-mp-Gyl" firstAttribute="bottom" secondItem="WWH-3c-bKt" secondAttribute="bottom" constant="-20" id="1Ja-3n-V1I"/>
-                            <constraint firstItem="eUY-eo-f5K" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sO6-Gw-bX9" secondAttribute="trailing" constant="8" symbolic="YES" id="2BI-pF-xqI"/>
                             <constraint firstItem="QZX-j6-Hnv" firstAttribute="bottom" secondItem="Rou-GR-54s" secondAttribute="bottom" constant="-16" id="3eb-LH-NpQ"/>
-                            <constraint firstItem="7bN-Tc-fRl" firstAttribute="top" secondItem="sO6-Gw-bX9" secondAttribute="bottom" constant="15" id="3tT-74-xf6"/>
+                            <constraint firstItem="xSs-k2-hau" firstAttribute="top" secondItem="uLp-kS-VMP" secondAttribute="bottom" constant="16" id="6Qx-Cw-ZFJ"/>
                             <constraint firstItem="WWH-3c-bKt" firstAttribute="bottom" secondItem="Rou-GR-54s" secondAttribute="bottom" constant="20" id="6pm-tm-lLC"/>
+                            <constraint firstItem="HrA-r3-hkn" firstAttribute="trailing" secondItem="Rou-GR-54s" secondAttribute="leading" constant="10" id="FvD-ta-6xF"/>
                             <constraint firstItem="Rou-GR-54s" firstAttribute="trailing" secondItem="WWH-3c-bKt" secondAttribute="trailing" id="JBC-cM-wpd"/>
-                            <constraint firstItem="WWH-3c-bKt" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xSs-k2-hau" secondAttribute="trailing" symbolic="YES" id="KQI-dA-QCB"/>
+                            <constraint firstItem="eUY-eo-f5K" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sO6-Gw-bX9" secondAttribute="trailing" constant="8" symbolic="YES" id="Jc1-U0-Bu2"/>
                             <constraint firstItem="Rou-GR-54s" firstAttribute="height" secondItem="WWH-3c-bKt" secondAttribute="height" multiplier="0.595" id="L3a-ap-Mxr"/>
+                            <constraint firstItem="HrA-r3-hkn" firstAttribute="width" secondItem="Rou-GR-54s" secondAttribute="width" id="LDW-VM-d4b"/>
                             <constraint firstItem="WWH-3c-bKt" firstAttribute="trailing" secondItem="eUY-eo-f5K" secondAttribute="trailing" constant="17" id="NOP-yu-K2g"/>
-                            <constraint firstItem="WWH-3c-bKt" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uLp-kS-VMP" secondAttribute="trailing" symbolic="YES" id="Oek-Lz-ODP"/>
-                            <constraint firstItem="xSs-k2-hau" firstAttribute="top" secondItem="uLp-kS-VMP" secondAttribute="bottom" constant="16" id="U7e-po-cEg"/>
+                            <constraint firstItem="7bN-Tc-fRl" firstAttribute="leading" secondItem="sO6-Gw-bX9" secondAttribute="leading" id="NUV-vS-EGk"/>
+                            <constraint firstItem="uLp-kS-VMP" firstAttribute="top" secondItem="7bN-Tc-fRl" secondAttribute="bottom" constant="38" id="Vm5-dp-WVx"/>
                             <constraint firstItem="Rou-GR-54s" firstAttribute="leading" secondItem="WWH-3c-bKt" secondAttribute="leading" id="XrU-hb-1Fq"/>
-                            <constraint firstItem="uLp-kS-VMP" firstAttribute="leading" secondItem="7bN-Tc-fRl" secondAttribute="leading" id="YUz-Lh-JpM"/>
-                            <constraint firstItem="eUY-eo-f5K" firstAttribute="centerY" secondItem="sO6-Gw-bX9" secondAttribute="centerY" id="ZyJ-xC-PMU"/>
+                            <constraint firstItem="HrA-r3-hkn" firstAttribute="bottom" secondItem="Rou-GR-54s" secondAttribute="bottom" id="Zjj-ec-43r"/>
                             <constraint firstItem="QZX-j6-Hnv" firstAttribute="centerX" secondItem="96c-Sr-C4t" secondAttribute="centerX" id="ZzQ-PV-G1g"/>
                             <constraint firstItem="WWH-3c-bKt" firstAttribute="trailing" secondItem="nAL-mp-Gyl" secondAttribute="trailing" constant="17" id="bEm-Ly-kzk"/>
-                            <constraint firstItem="sO6-Gw-bX9" firstAttribute="leading" secondItem="WWH-3c-bKt" secondAttribute="leading" constant="17" id="fXp-Ij-SFT"/>
-                            <constraint firstItem="uLp-kS-VMP" firstAttribute="top" secondItem="7bN-Tc-fRl" secondAttribute="bottom" constant="40.5" id="fmV-sY-9Et"/>
-                            <constraint firstItem="xSs-k2-hau" firstAttribute="leading" secondItem="uLp-kS-VMP" secondAttribute="leading" id="q7J-tB-fFG"/>
-                            <constraint firstItem="sO6-Gw-bX9" firstAttribute="top" secondItem="WWH-3c-bKt" secondAttribute="top" constant="55" id="r9O-45-qNA"/>
-                            <constraint firstItem="WWH-3c-bKt" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7bN-Tc-fRl" secondAttribute="trailing" symbolic="YES" id="x6V-M8-SSC"/>
-                            <constraint firstItem="7bN-Tc-fRl" firstAttribute="leading" secondItem="sO6-Gw-bX9" secondAttribute="leading" id="ygt-in-3D3"/>
+                            <constraint firstItem="WWH-3c-bKt" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xSs-k2-hau" secondAttribute="trailing" symbolic="YES" id="kR5-n3-ruA"/>
+                            <constraint firstItem="xSs-k2-hau" firstAttribute="leading" secondItem="uLp-kS-VMP" secondAttribute="leading" id="mti-De-6GT"/>
+                            <constraint firstItem="WWH-3c-bKt" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7bN-Tc-fRl" secondAttribute="trailing" symbolic="YES" id="oln-WE-BxM"/>
+                            <constraint firstItem="uLp-kS-VMP" firstAttribute="leading" secondItem="7bN-Tc-fRl" secondAttribute="leading" id="pie-50-TvC"/>
+                            <constraint firstItem="7bN-Tc-fRl" firstAttribute="top" secondItem="sO6-Gw-bX9" secondAttribute="bottom" constant="15" id="sro-dq-eja"/>
+                            <constraint firstItem="HrA-r3-hkn" firstAttribute="height" secondItem="Rou-GR-54s" secondAttribute="height" id="t3t-O5-waY"/>
+                            <constraint firstItem="sO6-Gw-bX9" firstAttribute="leading" secondItem="96c-Sr-C4t" secondAttribute="leading" constant="17" id="vGJ-1a-ung"/>
+                            <constraint firstItem="WWH-3c-bKt" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uLp-kS-VMP" secondAttribute="trailing" symbolic="YES" id="w9M-eQ-bQJ"/>
+                            <constraint firstItem="eUY-eo-f5K" firstAttribute="centerY" secondItem="sO6-Gw-bX9" secondAttribute="centerY" id="wyL-I9-qM4"/>
+                            <constraint firstItem="sO6-Gw-bX9" firstAttribute="top" secondItem="WWH-3c-bKt" secondAttribute="top" constant="56" id="xI7-fd-Zvf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WWH-3c-bKt"/>
                     </view>
@@ -369,7 +372,7 @@ sadipscing elitr, sed diam.</string>
                                     <constraint firstAttribute="width" constant="100" id="bfM-Dq-6yk"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="google">
-                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="googleSignInBtnPressed:" destination="hx4-Lh-Y85" eventType="touchUpInside" id="bgj-jQ-KAm"/>
