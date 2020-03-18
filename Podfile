@@ -11,4 +11,7 @@ pod 'GoogleSignIn'
 pod 'MSAL', '~> 1.0.2'
 pod 'MSGraphClientSDK', ' ~> 1.0.0'
 pod 'MSGraphClientModels', '~> 1.3.0'
+pod 'JTAppleCalendar'
+pod 'Toaster'
+pod 'DLRadioButton'
 end

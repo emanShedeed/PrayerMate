@@ -10,18 +10,20 @@
 "loader.messageTitle" = "Loading";
 
 //custom Splach Screen
-"customSplash.weclomeLbl1" = "Welcome to";
+"customSplash.weclomeLbl1" = "Welcome to ";
 "customSplash.weclomeLbl2" = "Prayer Mate";
-"customSplash.descriptionLbl" = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.";
+"customSplash.descriptionLbl" = "Lorem ipsum dolor sit amet, consetetur
+ sadipscing elitr, sed diam.";
+
+//Language view controller
+"Language.title" = "Language";
+"Language.subTitle" = "Please choose your language";
+"Language.nextBtnTitle" = "Next";
+"Language.englishRadioButtonTitle" = "English";
+"Language.arabicRadioButtonTitle" = "Arabic";
 
 
 /*
-//verification view controller
-"verification.title" = "تاكيد رقم الهاتف";
-"verification.message" = "أدخل رمز OTP الخاص بك هنا";
-"verification.verifyBtn" = "تحقق الآن";
-
-
 //home viewController
 "home.title" = "الرئيسيه";
 "home.pickupLBL" = "مكان البدابه";

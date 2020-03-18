@@ -19,10 +19,10 @@ public class SYActivityIndicatorView: UIView {
     
     var isAnimating : Bool = false
     var hidesWhenStopped : Bool = true
-    
+    var titleLabel : UILabel!
     // MARK - Init
     
-    public init(image : UIImage?) {
+    public init(image : UIImage?,title :String) {
         
         var frame : CGRect
         var loadingImage: UIImage!
@@ -36,9 +36,14 @@ public class SYActivityIndicatorView: UIView {
             let image = UIImage(named: "loading.png", in: bundle, compatibleWith: nil)!
             loadingImage = image
             frame = CGRect(x: 0.0, y: 0.0, width: image.size.width, height: image.size.height)
+            
         }
-        
-
+        titleLabel = UILabel()
+        titleLabel.text = title
+        titleLabel.frame=CGRect(x: 0.0, y: loadingImage.size.height, width:titleLabel.intrinsicContentSize.width,height:titleLabel.intrinsicContentSize.height)
+        titleLabel.textColor = .gray
+        titleLabel.textAlignment = .center
+        titleLabel.center.x=frame.width/2
         super.init(frame: frame)
         
         animationLayer.frame = frame
@@ -47,7 +52,9 @@ public class SYActivityIndicatorView: UIView {
         
         self.layer.addSublayer(animationLayer)
         
+        
         addRotation(forLayer: animationLayer)
+        addLabel()
         pause(layer: animationLayer)
         self.isHidden = true
     }
@@ -61,16 +68,18 @@ public class SYActivityIndicatorView: UIView {
     public func addRotation(forLayer layer : CALayer) {
         let rotation : CABasicAnimation = CABasicAnimation(keyPath:"transform.rotation.z")
         
-        rotation.duration = 1.0
+        rotation.duration = 2.0
         rotation.isRemovedOnCompletion = false
         rotation.repeatCount = HUGE
-        rotation.fillMode = kCAFillModeForwards
+        rotation.fillMode = CAMediaTimingFillMode.forwards
         rotation.fromValue = NSNumber(value: 0.0)
         rotation.toValue = NSNumber(value: 3.14 * 2.0)
-        
+    
         layer.add(rotation, forKey: "rotate")
     }
-    
+    func addLabel(){
+        self.addSubview(titleLabel)
+    }
     public func pause(layer : CALayer) {
         let pausedTime = layer.convertTime(CACurrentMediaTime(), from: nil)
         

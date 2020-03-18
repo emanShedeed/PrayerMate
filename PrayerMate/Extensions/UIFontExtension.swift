@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+/*
 enum AppFontNames:String {
     
     case montserratRegular = "Montserrat-Regular" // font name
@@ -78,7 +79,7 @@ extension UIFont {
         return font ?? UIFont.systemFont(ofSize: size)
     }
 }
-
+*/
 extension UILabel{
     
     @IBInspectable
@@ -105,7 +106,7 @@ extension UILabel{
             }
         }
     }
-    
+  /*
     @IBInspectable
     var appRegularFontWithSize: CGFloat{
         set{
@@ -133,7 +134,7 @@ extension UILabel{
             return self.appBoldFontWithSize
         }
     }
-    ///////
+    ///
     @IBInspectable
     var appRobotoRegularFontWith: CGFloat{
         set{
@@ -160,7 +161,7 @@ extension UILabel{
         get{
             return self.approbotoMediumdFontWith
         }
-    }
+    }*/
  
 }
 extension UIButton{
@@ -188,6 +189,7 @@ extension UIButton{
             }
         }
     }
+    /*
     @IBInspectable
     var appRegularFontWithSize: CGFloat{
         set{
@@ -214,9 +216,10 @@ extension UIButton{
         get{
             return self.appBoldFontWithSize
         }
-    }
+    }*/
     
 }
+/*
 extension UITextField{
     
     @IBInspectable
@@ -253,4 +256,5 @@ extension UITextField{
          borderStyle = .none
          layer.addSublayer(bottomLine)
      }
-}
+ }
+*/

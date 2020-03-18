@@ -9,18 +9,39 @@
 /* Begin PBXBuildFile section */
 		673E7AA17F98FCA8BDCB85FF /* Pods_PrayerMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1AAC8FDC32641284F33D08 /* Pods_PrayerMate.framework */; };
 		BD77215824165829008A8947 /* PrayerTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77215724165829008A8947 /* PrayerTime.swift */; };
+		BDA3F868241F712400705569 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3F864241F712100705569 /* BundleExtension.swift */; };
+		BDA3F869241F712400705569 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3F865241F712200705569 /* main.swift */; };
+		BDA3F86A241F712400705569 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3F866241F712300705569 /* LanguageManager.swift */; };
+		BDA3F86B241F712400705569 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3F867241F712400705569 /* Application.swift */; };
+		BDA3F86D241F715D00705569 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3F86C241F715D00705569 /* AppSetting.swift */; };
+		BDA3F86F241F7AFC00705569 /* UserDefaultsUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3F86E241F7AFC00705569 /* UserDefaultsUtility.swift */; };
+		BDA3F871241F7E2B00705569 /* localizedText+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3F870241F7E2B00705569 /* localizedText+Extension.swift */; };
+		BDA3F876241F80D400705569 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDA3F878241F80D400705569 /* Localizable.strings */; };
+		BDA3F87F2420C86600705569 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3F87E2420C86600705569 /* UIStoryboard+Extension.swift */; };
+		BDA3F8822420CAAC00705569 /* LanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3F8812420CAAC00705569 /* LanguageVC.swift */; };
+		BDA3F8842420DE5A00705569 /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDA3F8832420DE5A00705569 /* ColorAssets.xcassets */; };
+		BDA3F88624211E7400705569 /* ImageGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3F88524211E7400705569 /* ImageGif.swift */; };
 		BDAA26CB2404F3A80064C8D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA26CA2404F3A80064C8D4 /* AppDelegate.swift */; };
 		BDAA26CD2404F3A80064C8D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA26CC2404F3A80064C8D4 /* SceneDelegate.swift */; };
-		BDAA26CF2404F3A80064C8D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA26CE2404F3A80064C8D4 /* ViewController.swift */; };
 		BDAA26D22404F3A80064C8D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDAA26D02404F3A80064C8D4 /* Main.storyboard */; };
 		BDAA26D42404F3A90064C8D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDAA26D32404F3A90064C8D4 /* Assets.xcassets */; };
 		BDAA26D72404F3A90064C8D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDAA26D52404F3A90064C8D4 /* LaunchScreen.storyboard */; };
 		BDAA26E32405416B0064C8D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDAA26E22405416B0064C8D4 /* GoogleService-Info.plist */; };
-		BDCF6A68240D13B500DD46F7 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF6A67240D13B500DD46F7 /* SignInViewController.swift */; };
+		BDCF6A68240D13B500DD46F7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF6A67240D13B500DD46F7 /* HomeViewController.swift */; };
 		BDCF6A6A240D16D400DD46F7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF6A69240D16D400DD46F7 /* WelcomeViewController.swift */; };
 		BDCF6A6C240D1E8500DD46F7 /* AuthSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDCF6A6B240D1E8500DD46F7 /* AuthSettings.plist */; };
 		BDCF6A6F240D257A00DD46F7 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF6A6E240D257A00DD46F7 /* AuthenticationManager.swift */; };
 		BDCF6A71240D273F00DD46F7 /* GraphManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF6A70240D273F00DD46F7 /* GraphManager.swift */; };
+		BDD1F7442417AA8A006B87B7 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1F7432417AA8A006B87B7 /* SplashVC.swift */; };
+		BDD1F7492417B5C7006B87B7 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1F7462417B5C5006B87B7 /* UIImage+Extension.swift */; };
+		BDD1F74A2417B5C7006B87B7 /* UIString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1F7472417B5C6006B87B7 /* UIString+Extension.swift */; };
+		BDD1F74B2417B5C7006B87B7 /* UIColor+Externsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1F7482417B5C7006B87B7 /* UIColor+Externsion.swift */; };
+		BDD1F74E2417B5E3006B87B7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1F74C2417B5E2006B87B7 /* Constants.swift */; };
+		BDD1F74F2417B5E3006B87B7 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1F74D2417B5E3006B87B7 /* Font.swift */; };
+		BDD1F7512417B60E006B87B7 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD1F7502417B60E006B87B7 /* Helper.swift */; };
+		BDFCFE432418E78A0033D031 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFCFE412418E78A0033D031 /* UIViewExtension.swift */; };
+		BDFCFE442418E78A0033D031 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFCFE422418E78A0033D031 /* UIFontExtension.swift */; };
+		BDFCFE49241E4B310033D031 /* SYActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFCFE48241E4B310033D031 /* SYActivityIndicatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,21 +49,45 @@
 		99F20701864EACE850C8951F /* Pods-PrayerMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerMate.release.xcconfig"; path = "Target Support Files/Pods-PrayerMate/Pods-PrayerMate.release.xcconfig"; sourceTree = "<group>"; };
 		B9165590C6B8B564D385D5DC /* Pods-PrayerMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerMate.debug.xcconfig"; path = "Target Support Files/Pods-PrayerMate/Pods-PrayerMate.debug.xcconfig"; sourceTree = "<group>"; };
 		BD77215724165829008A8947 /* PrayerTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTime.swift; sourceTree = "<group>"; };
+		BDA3F864241F712100705569 /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		BDA3F865241F712200705569 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		BDA3F866241F712300705569 /* LanguageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		BDA3F867241F712400705569 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		BDA3F86C241F715D00705569 /* AppSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetting.swift; sourceTree = "<group>"; };
+		BDA3F86E241F7AFC00705569 /* UserDefaultsUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtility.swift; sourceTree = "<group>"; };
+		BDA3F870241F7E2B00705569 /* localizedText+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "localizedText+Extension.swift"; sourceTree = "<group>"; };
+		BDA3F872241F7EF600705569 /* ar-SA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-SA"; path = "ar-SA.lproj/Main.strings"; sourceTree = "<group>"; };
+		BDA3F873241F7EF700705569 /* ar-SA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-SA"; path = "ar-SA.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		BDA3F877241F80D400705569 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BDA3F879241F80D800705569 /* ar-SA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-SA"; path = "ar-SA.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BDA3F87E2420C86600705569 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		BDA3F8812420CAAC00705569 /* LanguageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageVC.swift; sourceTree = "<group>"; };
+		BDA3F8832420DE5A00705569 /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
+		BDA3F88524211E7400705569 /* ImageGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGif.swift; sourceTree = "<group>"; };
 		BDAA26C72404F3A80064C8D4 /* PrayerMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrayerMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDAA26CA2404F3A80064C8D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDAA26CC2404F3A80064C8D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BDAA26CE2404F3A80064C8D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BDAA26D12404F3A80064C8D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDAA26D32404F3A90064C8D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDAA26D62404F3A90064C8D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDAA26D82404F3A90064C8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDAA26E22405416B0064C8D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BDCF6A67240D13B500DD46F7 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		BDCF6A67240D13B500DD46F7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BDCF6A69240D16D400DD46F7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		BDCF6A6B240D1E8500DD46F7 /* AuthSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AuthSettings.plist; sourceTree = "<group>"; };
 		BDCF6A6D240D216100DD46F7 /* PrayerMate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrayerMate.entitlements; sourceTree = "<group>"; };
 		BDCF6A6E240D257A00DD46F7 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		BDCF6A70240D273F00DD46F7 /* GraphManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphManager.swift; sourceTree = "<group>"; };
+		BDD1F7432417AA8A006B87B7 /* SplashVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		BDD1F7462417B5C5006B87B7 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		BDD1F7472417B5C6006B87B7 /* UIString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIString+Extension.swift"; sourceTree = "<group>"; };
+		BDD1F7482417B5C7006B87B7 /* UIColor+Externsion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Externsion.swift"; sourceTree = "<group>"; };
+		BDD1F74C2417B5E2006B87B7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BDD1F74D2417B5E3006B87B7 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		BDD1F7502417B60E006B87B7 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		BDFCFE412418E78A0033D031 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		BDFCFE422418E78A0033D031 /* UIFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		BDFCFE48241E4B310033D031 /* SYActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYActivityIndicatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +106,31 @@
 			isa = PBXGroup;
 			children = (
 				BD77215724165829008A8947 /* PrayerTime.swift */,
+				BDD1F73B2417A8EB006B87B7 /* MicrosoftCalendarSDKFiles */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BDA3F863241F70F600705569 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				BDA3F867241F712400705569 /* Application.swift */,
+				BDA3F864241F712100705569 /* BundleExtension.swift */,
+				BDA3F866241F712300705569 /* LanguageManager.swift */,
+				BDA3F865241F712200705569 /* main.swift */,
+				BDA3F86C241F715D00705569 /* AppSetting.swift */,
+				BDA3F86E241F7AFC00705569 /* UserDefaultsUtility.swift */,
+				BDA3F878241F80D400705569 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		BDA3F8802420CA9100705569 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				BDA3F8812420CAAC00705569 /* LanguageVC.swift */,
+			);
+			path = Language;
 			sourceTree = "<group>";
 		};
 		BDAA26BE2404F3A70064C8D4 = {
@@ -86,23 +154,141 @@
 		BDAA26C92404F3A80064C8D4 /* PrayerMate */ = {
 			isa = PBXGroup;
 			children = (
-				BD772156241657E3008A8947 /* Model */,
 				BDCF6A6D240D216100DD46F7 /* PrayerMate.entitlements */,
-				BDAA26CA2404F3A80064C8D4 /* AppDelegate.swift */,
-				BDAA26CC2404F3A80064C8D4 /* SceneDelegate.swift */,
-				BDAA26CE2404F3A80064C8D4 /* ViewController.swift */,
-				BDCF6A67240D13B500DD46F7 /* SignInViewController.swift */,
-				BDAA26D02404F3A80064C8D4 /* Main.storyboard */,
+				BDD1F7452417B5A4006B87B7 /* Fonts */,
+				BD772156241657E3008A8947 /* Model */,
+				BDD1F7372417A7CD006B87B7 /* Storyboards */,
+				BDD1F7362417A79A006B87B7 /* Scenes */,
+				BDD1F7382417A7DD006B87B7 /* Core */,
+				BDD1F7392417A7EE006B87B7 /* Resources */,
+				BDD1F73A2417A800006B87B7 /* Extensions */,
 				BDAA26D32404F3A90064C8D4 /* Assets.xcassets */,
+				BDA3F8832420DE5A00705569 /* ColorAssets.xcassets */,
 				BDAA26D52404F3A90064C8D4 /* LaunchScreen.storyboard */,
 				BDAA26D82404F3A90064C8D4 /* Info.plist */,
 				BDAA26E22405416B0064C8D4 /* GoogleService-Info.plist */,
-				BDCF6A69240D16D400DD46F7 /* WelcomeViewController.swift */,
 				BDCF6A6B240D1E8500DD46F7 /* AuthSettings.plist */,
+			);
+			path = PrayerMate;
+			sourceTree = "<group>";
+		};
+		BDD1F7362417A79A006B87B7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BDD1F73C2417A949006B87B7 /* MainStoryBoard */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BDD1F7372417A7CD006B87B7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BDAA26D02404F3A80064C8D4 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BDD1F7382417A7DD006B87B7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BDAA26CA2404F3A80064C8D4 /* AppDelegate.swift */,
+				BDAA26CC2404F3A80064C8D4 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BDD1F7392417A7EE006B87B7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BDD1F7502417B60E006B87B7 /* Helper.swift */,
+				BDD1F74C2417B5E2006B87B7 /* Constants.swift */,
+				BDD1F74D2417B5E3006B87B7 /* Font.swift */,
+				BDFCFE47241E4AF80033D031 /* Loader */,
+				BDA3F863241F70F600705569 /* Localization */,
+				BDA3F88524211E7400705569 /* ImageGif.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BDD1F73A2417A800006B87B7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BDA3F87E2420C86600705569 /* UIStoryboard+Extension.swift */,
+				BDFCFE422418E78A0033D031 /* UIFontExtension.swift */,
+				BDFCFE412418E78A0033D031 /* UIViewExtension.swift */,
+				BDD1F7482417B5C7006B87B7 /* UIColor+Externsion.swift */,
+				BDD1F7462417B5C5006B87B7 /* UIImage+Extension.swift */,
+				BDD1F7472417B5C6006B87B7 /* UIString+Extension.swift */,
+				BDA3F870241F7E2B00705569 /* localizedText+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BDD1F73B2417A8EB006B87B7 /* MicrosoftCalendarSDKFiles */ = {
+			isa = PBXGroup;
+			children = (
 				BDCF6A6E240D257A00DD46F7 /* AuthenticationManager.swift */,
 				BDCF6A70240D273F00DD46F7 /* GraphManager.swift */,
 			);
-			path = PrayerMate;
+			path = MicrosoftCalendarSDKFiles;
+			sourceTree = "<group>";
+		};
+		BDD1F73C2417A949006B87B7 /* MainStoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				BDD1F73E2417AA1B006B87B7 /* View */,
+				BDD1F73D2417AA10006B87B7 /* Presenter */,
+			);
+			path = MainStoryBoard;
+			sourceTree = "<group>";
+		};
+		BDD1F73D2417AA10006B87B7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BDD1F7402417AA38006B87B7 /* SplashScreen */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BDD1F73E2417AA1B006B87B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDCF6A67240D13B500DD46F7 /* HomeViewController.swift */,
+				BDCF6A69240D16D400DD46F7 /* WelcomeViewController.swift */,
+				BDD1F73F2417AA2E006B87B7 /* SplashScreen */,
+				BDA3F8802420CA9100705569 /* Language */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BDD1F73F2417AA2E006B87B7 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				BDD1F7432417AA8A006B87B7 /* SplashVC.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		BDD1F7402417AA38006B87B7 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		BDD1F7452417B5A4006B87B7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BDFCFE47241E4AF80033D031 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				BDFCFE48241E4B310033D031 /* SYActivityIndicatorView.swift */,
+			);
+			path = Loader;
 			sourceTree = "<group>";
 		};
 		C7827DD965501B07B1947142 /* Frameworks */ = {
@@ -167,6 +353,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"ar-SA",
 			);
 			mainGroup = BDAA26BE2404F3A70064C8D4;
 			productRefGroup = BDAA26C82404F3A80064C8D4 /* Products */;
@@ -185,8 +372,10 @@
 			files = (
 				BDAA26D72404F3A90064C8D4 /* LaunchScreen.storyboard in Resources */,
 				BDCF6A6C240D1E8500DD46F7 /* AuthSettings.plist in Resources */,
+				BDA3F876241F80D400705569 /* Localizable.strings in Resources */,
 				BDAA26D42404F3A90064C8D4 /* Assets.xcassets in Resources */,
 				BDAA26E32405416B0064C8D4 /* GoogleService-Info.plist in Resources */,
+				BDA3F8842420DE5A00705569 /* ColorAssets.xcassets in Resources */,
 				BDAA26D22404F3A80064C8D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,24 +446,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDCF6A68240D13B500DD46F7 /* SignInViewController.swift in Sources */,
+				BDFCFE432418E78A0033D031 /* UIViewExtension.swift in Sources */,
+				BDD1F74A2417B5C7006B87B7 /* UIString+Extension.swift in Sources */,
+				BDFCFE442418E78A0033D031 /* UIFontExtension.swift in Sources */,
+				BDD1F7512417B60E006B87B7 /* Helper.swift in Sources */,
+				BDCF6A68240D13B500DD46F7 /* HomeViewController.swift in Sources */,
 				BD77215824165829008A8947 /* PrayerTime.swift in Sources */,
 				BDCF6A6A240D16D400DD46F7 /* WelcomeViewController.swift in Sources */,
-				BDAA26CF2404F3A80064C8D4 /* ViewController.swift in Sources */,
+				BDFCFE49241E4B310033D031 /* SYActivityIndicatorView.swift in Sources */,
+				BDA3F871241F7E2B00705569 /* localizedText+Extension.swift in Sources */,
+				BDD1F7492417B5C7006B87B7 /* UIImage+Extension.swift in Sources */,
+				BDD1F74B2417B5C7006B87B7 /* UIColor+Externsion.swift in Sources */,
 				BDCF6A6F240D257A00DD46F7 /* AuthenticationManager.swift in Sources */,
+				BDA3F868241F712400705569 /* BundleExtension.swift in Sources */,
+				BDA3F8822420CAAC00705569 /* LanguageVC.swift in Sources */,
+				BDD1F74F2417B5E3006B87B7 /* Font.swift in Sources */,
 				BDAA26CB2404F3A80064C8D4 /* AppDelegate.swift in Sources */,
+				BDD1F7442417AA8A006B87B7 /* SplashVC.swift in Sources */,
+				BDA3F88624211E7400705569 /* ImageGif.swift in Sources */,
+				BDA3F86F241F7AFC00705569 /* UserDefaultsUtility.swift in Sources */,
+				BDA3F86B241F712400705569 /* Application.swift in Sources */,
+				BDA3F869241F712400705569 /* main.swift in Sources */,
+				BDA3F87F2420C86600705569 /* UIStoryboard+Extension.swift in Sources */,
+				BDA3F86D241F715D00705569 /* AppSetting.swift in Sources */,
 				BDAA26CD2404F3A80064C8D4 /* SceneDelegate.swift in Sources */,
 				BDCF6A71240D273F00DD46F7 /* GraphManager.swift in Sources */,
+				BDD1F74E2417B5E3006B87B7 /* Constants.swift in Sources */,
+				BDA3F86A241F712400705569 /* LanguageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		BDA3F878241F80D400705569 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDA3F877241F80D400705569 /* en */,
+				BDA3F879241F80D800705569 /* ar-SA */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		BDAA26D02404F3A80064C8D4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BDAA26D12404F3A80064C8D4 /* Base */,
+				BDA3F872241F7EF600705569 /* ar-SA */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -283,6 +501,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BDAA26D62404F3A90064C8D4 /* Base */,
+				BDA3F873241F7EF700705569 /* ar-SA */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -294,6 +513,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -354,6 +574,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

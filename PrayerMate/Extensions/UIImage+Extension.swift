@@ -8,8 +8,9 @@
 import UIKit
 extension UIImage {
     
-    static let back = UIImage(named: "Back-black")
-    static let checkedBox = UIImage(named: "checkedBox")
-    static let unCheckedBox = UIImage(named: "uncheckedBox")
-    static let downArrow = UIImage(named: "downArrow")
+    static let splachBackGround = UIImage(named: "splachbg")
+    static let logo = UIImage(named: "logo")
+    static let loading = UIImage(named: "loading")
+    static let man = UIImage(named: "man")
+     static let mountain = UIImage(named: "mountain")
 }

@@ -13,14 +13,14 @@
 "customSplash.weclomeLbl2" = "Prayer Mate";
 "customSplash.descriptionLbl" = "تسجيل الدخول برقم الهاتف";
 
+//Language view controller
+"Language.title" = "اللغة";
+"Language.subTitle" = "من فضلك اختر اللغة";
+"Language.nextBtnTitle" = "التالي";
+"Language.englishRadioButtonTitle" = "إنجليزي";
+"Language.arabicRadioButtonTitle" = "عربي";
 
 /*
-//verification view controller
-"verification.title" = "تاكيد رقم الهاتف";
-"verification.message" = "أدخل رمز OTP الخاص بك هنا";
-"verification.verifyBtn" = "تحقق الآن";
-
-
 //home viewController
 "home.title" = "الرئيسيه";
 "home.pickupLBL" = "مكان البدابه";

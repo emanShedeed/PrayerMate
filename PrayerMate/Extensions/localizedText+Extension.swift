@@ -18,6 +18,7 @@ extension UILabel{
     }
 
 }
+
 extension UIButton {
     @IBInspectable var localizedTitle: String {
         get { return "" }

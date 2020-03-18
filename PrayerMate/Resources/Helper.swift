@@ -9,7 +9,6 @@
 import UIKit
 import Toaster
 import Photos
-import Apollo
 import SystemConfiguration
 class Helper {
     
@@ -67,84 +66,6 @@ class Helper {
         UIGraphicsEndImageContext()
         
         return newImage!
-    }
-    class func saveUserDetails(userInfo: [String : Any]) {
-        
-        let userDefault = UserDefaults.standard
-        var user = [String: Any]()
-        
-        if Helper.getUserDetails().count != 0 {
-            
-            user = Helper.getUserDetails()
-        }
-        if let id = userInfo["userID"]{
-            user["userID"] = id
-        }
-        if let name = userInfo["userName"]{
-            user["userName"] = name
-        }
-        if let email = userInfo["userEmail"]{
-            user["userEmail"] = email
-        }
-        if let phone = userInfo["userPhone"]{
-            user["userPhone"] = phone
-        }
-        if let havePassword = userInfo["havePassword"]{
-            user["havePassword"] = havePassword
-        }
-        if let profileImage = userInfo["profileImage"]{
-            user["profileImage"] = profileImage
-        }
-        user["accessToken"]=userInfo["accessToken"]
-        user["refreshToken"]=userInfo["refreshToken"]
-        
-        userDefault.setValue(user, forKey: "user")
-        userDefault.synchronize()
-    }
-    class func getUserDetails() -> [String: Any] {
-        
-        let userDefault = UserDefaults.standard
-        var user = [String: Any]()
-        
-        if userDefault.value(forKey: "user") != nil {
-            
-            user = userDefault.value(forKey: "user") as! [String: Any]
-        }
-        return user
-    }
-    class func swipeCellAnimation(cell : UITableViewCell!, tableView:UITableView, lastBtnImageName:String){
-        cell.clipsToBounds = false
-        let editActionBtn = UIButton(frame: CGRect(x: (cell.frame.width) , y: 0, width: 70, height: cell.frame.height ))
-        let deleteActionBtn = UIButton(frame: CGRect(x: (cell.frame.width) + 70 , y: 0, width: 70, height: cell.frame.height ))
-        let hideActionBtn = UIButton(frame: CGRect(x: (cell.frame.width) + 140 , y: 0, width: 70, height: cell.frame.height ))
-        editActionBtn.setImage(UIImage(named: "edit"), for: .normal)
-        hideActionBtn.setImage(UIImage(named: lastBtnImageName), for: .normal)
-        deleteActionBtn.setImage(UIImage(named: "delete"), for: .normal)
-        editActionBtn.backgroundColor = UIColor(rgb: 0xEA961E)
-        deleteActionBtn.backgroundColor = UIColor(rgb: 0xEA961E)
-        hideActionBtn.backgroundColor = UIColor(rgb: 0xEA961E)
-        cell.addSubview(hideActionBtn)
-        cell.addSubview(deleteActionBtn)
-        cell.addSubview(editActionBtn)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
-            UIView.animate(withDuration: 0.7 , animations: {
-                tableView.isUserInteractionEnabled=false
-                cell.frame = CGRect(x: cell.frame.origin.x - 210, y: cell.frame.origin.y, width: cell.bounds.size.width , height: cell.bounds.size.height)
-                
-            }) { (finished) in
-                UIView.animate(withDuration: 0.7, delay: 0.3, options: .allowUserInteraction, animations: {
-                    cell.frame = CGRect(x: cell.frame.origin.x + 210, y: cell.frame.origin.y, width: cell.bounds.size.width , height: cell.bounds.size.height)
-                    
-                }) { (result) in
-                    hideActionBtn.removeFromSuperview()
-                    editActionBtn.removeFromSuperview()
-                    deleteActionBtn.removeFromSuperview()
-                    cell.clipsToBounds=true
-                    tableView.isUserInteractionEnabled=true
-                    
-                }
-            }
-        }
     }
     class func isConnectedToNetwork() -> Bool {
         
