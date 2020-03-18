@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Welcome to "; ObjectID = "8xs-Rb-7Ma"; */
+"8xs-Rb-7Ma.text" = "Welcome to ";
+
+/* Class = "UILabel"; text = "Loading"; ObjectID = "BwV-PC-p8O"; */
+"BwV-PC-p8O.text" = "Loading";
+
+/* Class = "UILabel"; text = "Prayer mate"; ObjectID = "Fcs-G4-IaL"; */
+"Fcs-G4-IaL.text" = "Prayer mate";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit amet, consetetur \nsadipscing elitr, sed diam."; ObjectID = "fHw-nl-cLq"; */
+"fHw-nl-cLq.text" = "Lorem ipsum dolor sit amet, consetetur \nsadipscing elitr, sed diam.";

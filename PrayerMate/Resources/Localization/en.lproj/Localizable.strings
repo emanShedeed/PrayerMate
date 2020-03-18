@@ -1,0 +1,99 @@
+/* 
+  Localization.strings
+  PrayerMate
+
+  Created by eman shedeed on 3/16/20.
+  Copyright © 2020 eman shedeed. All rights reserved.
+*/
+
+//Loader
+"loader.messageTitle" = "Loading";
+
+//custom Splach Screen
+"customSplash.weclomeLbl1" = "Welcome to";
+"customSplash.weclomeLbl2" = "Prayer Mate";
+"customSplash.descriptionLbl" = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.";
+
+
+/*
+//verification view controller
+"verification.title" = "تاكيد رقم الهاتف";
+"verification.message" = "أدخل رمز OTP الخاص بك هنا";
+"verification.verifyBtn" = "تحقق الآن";
+
+
+//home viewController
+"home.title" = "الرئيسيه";
+"home.pickupLBL" = "مكان البدابه";
+"home.pickupBTN" = "اختر مكان البدايه";
+"home.dropOffLBL" = "مكان الوصول";
+"home.dropOffBTN" = "اختر مكان الوصول";
+"home.tripDetails.justgo" = "انطلق الان";
+"home.tripDetails.nearbyyou" = "علي بعد خطوات";
+"home.tripDetails.paymentBtn" = "الدفع";
+"home.tripDetails.PromoCodeBtn" = "كود الخصم";
+"home.tripDetails.requestBtn" = "اطلب الان";
+"home.findRoutError.title" = "الخريطه";
+"home.findRoutError.message" = "لا يمكن تحديد الطريق بين مكان البدايه و مكان الوصول";
+"home.couponCode.viewTitle" = "كود الخصم";
+"home.couponCode.textPlaceHolder" = "ادخل كود الخصم";
+"home.createCustomerOrder.success.title" = "الرحله";
+"home.createCustomerOrder.waiting" = "في انتظار موافقه الكابتن";
+"home.createCustomerOrder.success.message" = "تم انشاء الرحله";
+"home.tripDetails.cancelBtn" = "الغاء الرحله";
+"home.tripDetails.cancel.message" = "تم الغاء الرحله";
+"home.tripDetails.CaptainArrived" = "وصل الكابتن .. رحلة سعيدة";
+"home.driverDetails.car.color" = "اللون";
+"home.driverDetails.car.model" = "الموديل";
+"home.driverDetails.car.year" = "السنه";
+"home.driverDetails.car.plate" = "اللوحه";
+
+
+//select location view controller
+"selectLocation.applyBtn" = "اختيار";
+"selectLocation.title" = "اختر المكان";
+"selectLocation.skipBtn" = "تخطي";
+
+//network error messages
+"network.error.OKBtnTitle" = "موافق";
+"network.error.dismissBtnTitle" = "الغاء";
+"network.error.noConnection.title" = "الاتصال";
+"network.error.noConnection.message" = "لا يوجد اتصال بالانترنت";
+"network.error.timedOut.title" = "انتهي وقت الاتصال";
+"network.error.timedOut.message" = "انتهي وقت الاتصال";
+"network.error.parse.title" = "  البيانات  ";
+"network.error.parse.message" = "خطآ في قراءه البيانات من الخادم";
+"network.error.unknown.title" = "خطآ  ";
+"network.error.timedOut.message" = "خطآ غير محدد";
+"network.error.retryBtnTitle" = "اعاده المحاوله";
+
+//coupon code
+"couponCode.message.title" = "كود الخصم";
+"couponCode.message.message.success" = "تم تطبيق كود الخصم";
+"couponCode.message.message.failure" = "لا يمكن التاكد من كود الخصم";
+
+
+//side menu view controller
+"sideMenu.home" = "الرئيسيه";
+"sideMenu.moneyOperation" = "عمليات الدفع";
+"sideMenu.history" = "سجل الرحلات";
+"sideMenu.language" = "اللغه";
+"sideMenu.complainAndSuggestions" = "الشكاوي و المقترحات";
+"sideMenu.logout" = "خروج";
+
+
+//verififcation view controller
+"verification.title" = "تحقق";
+"currency.symbol" = "جنيه";
+"home.callCaptain.message" = "سوف يتم الاتصال بهاتف %@";
+
+"home.request.cancelAlert.title" = "هل انت متاكد من الغاء الرحله";
+"home.request.cancelAlert.message" = "سوف يتم تطبيق غرامه وتضاف علي تكلفه الرحله القادمه";
+"home.request.cancelAlert.reason" = "اكتب سبب الالغاء";
+
+"error.generalError.message" = "حدث خطآ من فضل حاول مره اخري";
+ */
+"language.description" = "اللغه";
+"language.english" = "English";
+"language.arabic" = "العربيه";
+
