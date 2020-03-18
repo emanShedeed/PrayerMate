@@ -141,7 +141,7 @@ sadipscing elitr, sed diam.</string>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="Language.nextBtnTitle"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="nextBtnPressed:" destination="klf-WU-beb" eventType="touchUpInside" id="27i-o2-Jd3"/>
+                                    <action selector="nextBtnPressed:" destination="klf-WU-beb" eventType="touchUpInside" id="HsQ-ZK-ar6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Please choose your language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bN-Tc-fRl">
@@ -153,9 +153,9 @@ sadipscing elitr, sed diam.</string>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Language.subTitle"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLp-kS-VMP" userLabel="English " customClass="DLRadioButton">
-                                <rect key="frame" x="17" y="171.5" width="297" height="22"/>
-                                <state key="normal" title="English">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLp-kS-VMP" userLabel="English ">
+                                <rect key="frame" x="17" y="171.5" width="89" height="22"/>
+                                <state key="normal" title="  English" image="selectedRadio">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -165,12 +165,12 @@ sadipscing elitr, sed diam.</string>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="Language.englishRadioButtonTitle"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outletCollection property="otherButtons" destination="xSs-k2-hau" id="YL4-kQ-fe0"/>
+                                    <action selector="radioButtonPressed:" destination="klf-WU-beb" eventType="touchUpInside" id="fby-QM-OGO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSs-k2-hau" customClass="DLRadioButton">
-                                <rect key="frame" x="17" y="209.5" width="289" height="22"/>
-                                <state key="normal" title="Arabic">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSs-k2-hau">
+                                <rect key="frame" x="17" y="209.5" width="83" height="22"/>
+                                <state key="normal" title="  Arabic" image="unselectedRadio">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -182,6 +182,9 @@ sadipscing elitr, sed diam.</string>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Language.arabicRadioButtonTitle"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="Language.arabicRadioButtonTitle"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="radioButtonPressed:" destination="klf-WU-beb" eventType="touchUpInside" id="Qwz-0q-wY6"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="languageMan" translatesAutoresizingMaskIntoConstraints="NO" id="nAL-mp-Gyl">
                                 <rect key="frame" x="235" y="336" width="123" height="311"/>
@@ -246,12 +249,21 @@ sadipscing elitr, sed diam.</string>
                     <connections>
                         <outlet property="animatedImage" destination="Rou-GR-54s" id="ihZ-qc-jfg"/>
                         <outlet property="animatedImage2" destination="HrA-r3-hkn" id="HWW-4e-UdP"/>
-                        <outlet property="englishRadioButton" destination="uLp-kS-VMP" id="lBi-TN-vGH"/>
+                        <outlet property="arabicRadioButton" destination="xSs-k2-hau" id="rIQ-rr-rTb"/>
+                        <outlet property="englishRadioButton" destination="uLp-kS-VMP" id="VXR-kx-iVt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAF-OG-S3S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="mountain" id="DIb-jj-9jf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="397"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="mountain" id="vNe-CP-b3f">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="397"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </objects>
-            <point key="canvasLocation" x="1301.5999999999999" y="400.74962518740631"/>
+            <point key="canvasLocation" x="1406" y="401"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="Tm9-sV-JRY">
@@ -371,7 +383,7 @@ sadipscing elitr, sed diam.</string>
                                     <constraint firstAttribute="width" constant="100" id="bfM-Dq-6yk"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="google">
-                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="googleSignInBtnPressed:" destination="hx4-Lh-Y85" eventType="touchUpInside" id="bgj-jQ-KAm"/>
@@ -450,7 +462,7 @@ sadipscing elitr, sed diam.</string>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Language.nextBtnTitle"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="Language.nextBtnTitle"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="Location.finishBtnTitle"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Location.subTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4Y-cJ-gOS">
@@ -462,6 +474,21 @@ sadipscing elitr, sed diam.</string>
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Language.subTitle"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Choose location from map" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zL3-et-ItW" customClass="RoundedTextField" customModule="PrayerMate" customModuleProvider="target">
+                                <rect key="frame" x="17" y="158.5" width="341" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="26a-hq-s2k"/>
+                                </constraints>
+                                <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Location.addressTxtPlaceHolder"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeftCustom">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locationMan" translatesAutoresizingMaskIntoConstraints="NO" id="3Qb-6m-9B8">
                                 <rect key="frame" x="235" y="378" width="123" height="269"/>
                                 <constraints>
@@ -487,38 +514,20 @@ sadipscing elitr, sed diam.</string>
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Choose location from map" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zL3-et-ItW" customClass="RoundedTextField" customModule="PrayerMate" customModuleProvider="target">
-                                <rect key="frame" x="17" y="158.5" width="341" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="26a-hq-s2k"/>
-                                </constraints>
-                                <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Location.addressTxtPlaceHolder"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="paddingLeftCustom">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3id-6z-Qm3" customClass="RoundedButton" customModule="PrayerMate" customModuleProvider="target">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3id-6z-Qm3">
                                 <rect key="frame" x="17" y="228.5" width="148" height="45"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="148" id="nEa-7G-nD0"/>
                                     <constraint firstAttribute="height" constant="45" id="vQM-ot-bml"/>
                                 </constraints>
-                                <inset key="titleEdgeInsets" minX="11" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Locate me" image="location">
+                                <inset key="titleEdgeInsets" minX="11" minY="0.0" maxX="11" maxY="0.0"/>
+                                <state key="normal" title="Locate me">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="22.5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="letterSpace">
-                                        <real key="value" value="0.32000000000000001"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
@@ -556,18 +565,19 @@ sadipscing elitr, sed diam.</string>
                     </view>
                     <navigationItem key="navigationItem" id="JOv-ve-h0F"/>
                     <connections>
-                        <outlet property="locateMeBtn" destination="3id-6z-Qm3" id="ceb-hB-dfZ"/>
+                        <outlet property="animatedImage" destination="CkX-nU-9tD" id="uCz-X3-afh"/>
+                        <outlet property="animatedImage2" destination="c5p-lC-Sdt" id="QCz-tc-FgE"/>
+                        <outlet property="locateMeBtn" destination="3id-6z-Qm3" id="Iw2-Jp-PDw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1j-jW-mmR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2046" y="387"/>
+            <point key="canvasLocation" x="2060" y="335"/>
         </scene>
     </scenes>
     <resources>
         <image name="google" width="63.5" height="63.5"/>
         <image name="languageMan" width="124" height="311"/>
-        <image name="location" width="18" height="18"/>
         <image name="locationMan" width="145.5" height="269"/>
         <image name="logo" width="100" height="117"/>
         <image name="mountain" width="375" height="667"/>

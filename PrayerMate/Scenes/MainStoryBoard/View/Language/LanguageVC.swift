@@ -7,49 +7,60 @@
 //
 
 import UIKit
-import DLRadioButton
 final class LanguageVC: UIViewController {
     //MARK:- IBOUTLET
-    @IBOutlet weak var englishRadioButton: DLRadioButton!
+    @IBOutlet weak var englishRadioButton: UIButton!
+     @IBOutlet weak var arabicRadioButton: UIButton!
     @IBOutlet weak var animatedImage: UIImageView!
     @IBOutlet weak var animatedImage2: UIImageView!
-    
+    //MARK:- Var
+    var radioButtonTag = 1
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        englishRadioButton.isSelected = true
+        englishRadioButton.isSelected=true
+//        AppSetting.shared.setCurrentLanguage(language: AppLanguages.en)
+//        LanguageManager.currentLanguage=AppLanguages.en.rawValue
     }
     
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         animateBackGround()
     }
     
     //MARK:- IBAction
     
 
-//    @IBAction func radioButtonPressed(_ sender: DLRadioButton) {
-//        let tag = sender.tag
-//        switch tag {
-//        case 2 :
-//            AppSetting.shared.setCurrentLanguage(language: AppLanguages.ar)
-//            LanguageManager.currentLanguage=AppLanguages.ar.rawValue
-//        default:
-//            AppSetting.shared.setCurrentLanguage(language: AppLanguages.en)
-//            LanguageManager.currentLanguage=AppLanguages.en.rawValue
-//        }
-//        
-//    }
-//    @IBAction func arabicBtnPressed(_ sender: Any) {
-//        //        AppSetting.shared.setCurrentLanguage(language: AppLanguages.ar)
-//        //        LanguageManager.currentLanguage=AppLanguages.ar.rawValue
-//        //        self.reloadRootView()
-//        //        present(UIStoryboard.main.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController, animated: true, completion: nil)
-//    }
+    @IBAction func radioButtonPressed(_ sender: UIButton) {
+        let tag = sender.tag
+        sender.setImage(UIImage.selectedRadio, for: .normal)
+        switch tag {
+        case 2 :
+            radioButtonTag = 2
+            englishRadioButton.setImage(UIImage.unSelectedRadio, for: .normal)
+            AppSetting.shared.setCurrentLanguage(language: AppLanguages.ar)
+            LanguageManager.currentLanguage=AppLanguages.ar.rawValue
+        default:
+            radioButtonTag = 1
+             arabicRadioButton.setImage(UIImage.unSelectedRadio, for: .normal)
+            AppSetting.shared.setCurrentLanguage(language: AppLanguages.en)
+            LanguageManager.currentLanguage=AppLanguages.en.rawValue
+        }
+        
+    }
     
-    @IBAction func nextBtnPressed(_ sender: Any) {
-        self.reloadRootView()
-        present(UIStoryboard.main.instantiateViewController(withIdentifier: "LocationVC") as! LocationVC, animated: true, completion: nil)
+    @IBAction func nextBtnPressed(_ sender: UIButton) {
+        switch radioButtonTag {
+                     case 2 :
+                         AppSetting.shared.setCurrentLanguage(language: AppLanguages.ar)
+                         LanguageManager.currentLanguage=AppLanguages.ar.rawValue
+                     default:
+                         AppSetting.shared.setCurrentLanguage(language: AppLanguages.en)
+                         LanguageManager.currentLanguage=AppLanguages.en.rawValue
+                     }
+               self.reloadRootView()
+               present(UIStoryboard.main.instantiateViewController(withIdentifier: "LocationVC") as! LocationVC, animated: true, completion: nil)
     }
     
     //MARK:- Methods
@@ -59,7 +70,7 @@ final class LanguageVC: UIViewController {
             self.animatedImage.frame = self.animatedImage.frame.offsetBy(dx: -1 * self.animatedImage.frame.size.width, dy: 0.0)
             self.animatedImage2.frame = self.animatedImage2.frame.offsetBy(dx: -1 * self.animatedImage2.frame.size.width, dy: 0.0)
         }, completion: nil)
-    }
+        }
     
     private func reloadRootView() {
         if let appDelegate = UIApplication.shared.delegate {

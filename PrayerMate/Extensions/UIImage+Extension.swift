@@ -15,4 +15,6 @@ extension UIImage {
     static let locationMan = UIImage(named: "locationMan")
     static let mountain = UIImage(named: "mountain")
     static let location = UIImage(named: "location")
+    static let unSelectedRadio = UIImage(named: "unselectedRadio")
+    static let selectedRadio = UIImage(named: "selectedRadio")
 }

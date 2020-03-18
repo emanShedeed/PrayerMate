@@ -119,22 +119,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F50D1993-3D38-4EBF-9577-E0E4A110CD9C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Resources/Localization/AppSetting.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "setCurrentLanguage(language:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0A67D92B-DDCB-4747-9766-F280542281F7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -183,17 +167,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FF2213D1-F4C4-48D4-AB8C-E1E648CBF37C"
+            uuid = "D78C0FC0-3EB9-4F14-B8AC-297C57B1CBBF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PrayerMate/Scenes/MainStoryBoard/View/Language/LanguageVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "reloadRootView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9A8A8D3-C726-45F4-8EC0-BCB53E844F6E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PrayerMate/Scenes/MainStoryBoard/View/Language/LanguageVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "nextBtnPressed(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B9A8A8D3-C726-45F4-8EC0-BCB53E844F6E - 7a0676c3a3b6d00c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PrayerMate.LanguageVC.nextBtnPressed(__C.UIButton) -&gt; ()"
+                  moduleName = "PrayerMate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emanshedeed/Desktop/BSSProjects/PrayerMate_Localization/PrayerMate/Scenes/MainStoryBoard/View/Language/LanguageVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "98">
+               </Location>
+               <Location
+                  uuid = "B9A8A8D3-C726-45F4-8EC0-BCB53E844F6E - 7a0676c3a3b6d00c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PrayerMate.LanguageVC.nextBtnPressed(__C.UIButton) -&gt; ()"
+                  moduleName = "PrayerMate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emanshedeed/Desktop/BSSProjects/PrayerMate_Localization/PrayerMate/Scenes/MainStoryBoard/View/Language/LanguageVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "167">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

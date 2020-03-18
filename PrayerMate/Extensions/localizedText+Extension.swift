@@ -24,7 +24,6 @@ extension UIButton {
         get { return "" }
         set {
             self.setTitle(newValue.localized, for: .normal)
-            self.setTitle(newValue.localized, for: .selected)
         }
     }
 }
