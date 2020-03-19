@@ -27,8 +27,14 @@ final class LanguageVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         animateBackGround()
+        NotificationCenter.default.addObserver(self,
+                                                    selector: #selector(applicationDidBecomeActive),
+                                                    name: UIApplication.didBecomeActiveNotification,
+                                                    object: nil)
     }
-    
+    @objc func applicationDidBecomeActive(){
+       animateBackGround()
+      }
     //MARK:- IBAction
     
 
@@ -38,16 +44,12 @@ final class LanguageVC: UIViewController {
         switch tag {
         case 2 :
             radioButtonTag = 2
-            englishRadioButton.setImage(UIImage.unSelectedRadio, for: .normal)
-            AppSetting.shared.setCurrentLanguage(language: AppLanguages.ar)
-            LanguageManager.currentLanguage=AppLanguages.ar.rawValue
+           englishRadioButton.setImage(UIImage.unSelectedRadio, for: .normal)
         default:
             radioButtonTag = 1
              arabicRadioButton.setImage(UIImage.unSelectedRadio, for: .normal)
-            AppSetting.shared.setCurrentLanguage(language: AppLanguages.en)
-            LanguageManager.currentLanguage=AppLanguages.en.rawValue
         }
-        
+        animateBackGround()
     }
     
     @IBAction func nextBtnPressed(_ sender: UIButton) {
@@ -60,16 +62,18 @@ final class LanguageVC: UIViewController {
                          LanguageManager.currentLanguage=AppLanguages.en.rawValue
                      }
                self.reloadRootView()
-               present(UIStoryboard.main.instantiateViewController(withIdentifier: "LocationVC") as! LocationVC, animated: true, completion: nil)
+//               present(UIStoryboard.main.instantiateViewController(withIdentifier: "LocationVC") as! LocationVC, animated: true, completion: nil)
     }
     
     //MARK:- Methods
     
     private func animateBackGround(){
-        UIView.animate(withDuration: 2.0, delay: 0.0, options: [.repeat, .autoreverse], animations: {
-            self.animatedImage.frame = self.animatedImage.frame.offsetBy(dx: -1 * self.animatedImage.frame.size.width, dy: 0.0)
-            self.animatedImage2.frame = self.animatedImage2.frame.offsetBy(dx: -1 * self.animatedImage2.frame.size.width, dy: 0.0)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            UIView.animate(withDuration: 2.0, delay: 0.0, options: [.repeat, .autoreverse], animations: {
+            self.animatedImage.frame = self.animatedImage.frame.offsetBy(dx: 1 * self.animatedImage.frame.size.width, dy: 0.0)
+            self.animatedImage2.frame = self.animatedImage2.frame.offsetBy(dx: 1 * self.animatedImage2.frame.size.width, dy: 0.0)
         }, completion: nil)
+        }
         }
     
     private func reloadRootView() {

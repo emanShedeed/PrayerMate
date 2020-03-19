@@ -23,8 +23,8 @@
 "Location.title" = "الموقع";
 "Location.subTitle" = "من فضلك اختر الموقع";
 "Location.finishBtnTitle" = "إنهاء";
-"Location.addressTxtPlaceHolder" = "اختر الموقع من الخريطة";
-//"Location.locateMeButtonTitle" = "حدد موقعي  ";
+"Location.addressTxtPlaceHolder" = "اختر الموقع من الخريطة  ";
+"Location.locateMeBtnTitle" = "حدد موقعي  ";
 
 
 /*

@@ -26,8 +26,8 @@
  "Location.title" = "Location";
  "Location.subTitle" = "Please choose your location";
  "Location.finishBtnTitle" = "Finish";
-"Location.addressTxtPlaceHolder" = "Select location from map";
-//"Location.locateMeButtonTitle" = "  Locate me";
+"Location.addressTxtPlaceHolder" = "  Select location from map";
+"Location.locateMeBtnTitle" = "  Locate me";
 
 
 /*

@@ -26,7 +26,6 @@
 		BDA3F8842420DE5A00705569 /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDA3F8832420DE5A00705569 /* ColorAssets.xcassets */; };
 		BDA3F88624211E7400705569 /* ImageGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3F88524211E7400705569 /* ImageGif.swift */; };
 		BDAA26CB2404F3A80064C8D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA26CA2404F3A80064C8D4 /* AppDelegate.swift */; };
-		BDAA26CD2404F3A80064C8D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAA26CC2404F3A80064C8D4 /* SceneDelegate.swift */; };
 		BDAA26D22404F3A80064C8D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDAA26D02404F3A80064C8D4 /* Main.storyboard */; };
 		BDAA26D42404F3A90064C8D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDAA26D32404F3A90064C8D4 /* Assets.xcassets */; };
 		BDAA26D72404F3A90064C8D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDAA26D52404F3A90064C8D4 /* LaunchScreen.storyboard */; };
@@ -74,7 +73,6 @@
 		BDA3F88524211E7400705569 /* ImageGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGif.swift; sourceTree = "<group>"; };
 		BDAA26C72404F3A80064C8D4 /* PrayerMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrayerMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDAA26CA2404F3A80064C8D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BDAA26CC2404F3A80064C8D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BDAA26D12404F3A80064C8D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDAA26D32404F3A90064C8D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDAA26D62404F3A90064C8D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -216,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				BDAA26CA2404F3A80064C8D4 /* AppDelegate.swift */,
-				BDAA26CC2404F3A80064C8D4 /* SceneDelegate.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -500,7 +497,6 @@
 				BDA3F869241F712400705569 /* main.swift in Sources */,
 				BDA3F87F2420C86600705569 /* UIStoryboard+Extension.swift in Sources */,
 				BDA3F86D241F715D00705569 /* AppSetting.swift in Sources */,
-				BDAA26CD2404F3A80064C8D4 /* SceneDelegate.swift in Sources */,
 				BDCF6A71240D273F00DD46F7 /* GraphManager.swift in Sources */,
 				BD12EB46242225EB00001437 /* RoundedButton.swift in Sources */,
 				BDD1F74E2417B5E3006B87B7 /* Constants.swift in Sources */,

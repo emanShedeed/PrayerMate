@@ -20,7 +20,7 @@ extension UILabel{
 }
 
 extension UIButton {
-    @IBInspectable var localizedTitle: String {
+    @IBInspectable var localizedText: String {
         get { return "" }
         set {
             self.setTitle(newValue.localized, for: .normal)
