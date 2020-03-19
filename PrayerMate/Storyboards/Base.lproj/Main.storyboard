@@ -85,10 +85,10 @@ sadipscing elitr, sed diam.</string>
                             <constraint firstItem="MUF-cm-JTS" firstAttribute="centerX" secondItem="Jag-NA-ljv" secondAttribute="centerX" id="ME3-fL-aW9"/>
                             <constraint firstItem="WLO-rN-gNh" firstAttribute="height" secondItem="icx-hV-7XR" secondAttribute="height" multiplier="0.62" id="RKk-Ne-G2W"/>
                             <constraint firstItem="yd9-V1-FnK" firstAttribute="centerX" secondItem="Jag-NA-ljv" secondAttribute="centerX" id="TMD-DZ-hXV"/>
+                            <constraint firstItem="icx-hV-7XR" firstAttribute="bottom" secondItem="MUF-cm-JTS" secondAttribute="bottom" constant="16" id="Y6W-8d-LEH"/>
                             <constraint firstItem="yd9-V1-FnK" firstAttribute="top" secondItem="qWe-Pp-xBt" secondAttribute="bottom" constant="18" id="cnu-GF-aAj"/>
                             <constraint firstItem="WLO-rN-gNh" firstAttribute="top" secondItem="Jag-NA-ljv" secondAttribute="top" id="cud-1I-WKg"/>
                             <constraint firstItem="WLO-rN-gNh" firstAttribute="leading" secondItem="icx-hV-7XR" secondAttribute="leading" id="dR3-Wb-bM8"/>
-                            <constraint firstItem="icx-hV-7XR" firstAttribute="bottom" secondItem="MUF-cm-JTS" secondAttribute="bottom" constant="16" id="icg-ey-xcH"/>
                             <constraint firstItem="WLO-rN-gNh" firstAttribute="trailing" secondItem="icx-hV-7XR" secondAttribute="trailing" id="kPe-fk-o7X"/>
                             <constraint firstItem="qWe-Pp-xBt" firstAttribute="top" secondItem="cne-EH-vd8" secondAttribute="bottom" constant="33" id="u1V-rh-PeA"/>
                             <constraint firstItem="cne-EH-vd8" firstAttribute="bottom" secondItem="WLO-rN-gNh" secondAttribute="bottom" constant="20" id="xWI-cO-7yH"/>
@@ -185,22 +185,20 @@ sadipscing elitr, sed diam.</string>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="QZX-j6-Hnv">
                                 <rect key="frame" x="172.5" y="619" width="30" height="12"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTm-si-atd">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectedBtn" translatesAutoresizingMaskIntoConstraints="NO" id="aoQ-t3-nXe" userLabel="selectedImg">
                                         <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="12" id="FKI-pn-UBK"/>
-                                            <constraint firstAttribute="width" constant="12" id="cn4-xj-usv"/>
+                                            <constraint firstAttribute="height" constant="12" id="38Z-wR-sEZ"/>
+                                            <constraint firstAttribute="width" constant="12" id="XrG-eX-s0w"/>
                                         </constraints>
-                                        <state key="normal" image="selectedBtn"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5I2-bo-ccZ">
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unselectedBtn" translatesAutoresizingMaskIntoConstraints="NO" id="Dcz-be-5Nm" userLabel="unselectedImg">
                                         <rect key="frame" x="18" y="0.0" width="12" height="12"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="12" id="W3I-av-gx7"/>
-                                            <constraint firstAttribute="width" constant="12" id="xzB-yl-zcv"/>
+                                            <constraint firstAttribute="height" constant="12" id="ZlM-e2-Pco"/>
+                                            <constraint firstAttribute="width" constant="12" id="j84-c3-NuW"/>
                                         </constraints>
-                                        <state key="normal" image="unselectedBtn"/>
-                                    </button>
+                                    </imageView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -490,14 +488,14 @@ sadipscing elitr, sed diam.</string>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="XHI-Dk-pYN">
                                 <rect key="frame" x="172.5" y="619" width="30" height="12"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unselectedBtn" translatesAutoresizingMaskIntoConstraints="NO" id="u88-iL-jzN">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unselectedBtn" translatesAutoresizingMaskIntoConstraints="NO" id="u88-iL-jzN" userLabel="unselectedImg">
                                         <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="12" id="M0F-dZ-YeD"/>
                                             <constraint firstAttribute="width" constant="12" id="OGC-Wk-p0B"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectedBtn" translatesAutoresizingMaskIntoConstraints="NO" id="hs9-a4-My3">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectedBtn" translatesAutoresizingMaskIntoConstraints="NO" id="hs9-a4-My3" userLabel="selectedImg">
                                         <rect key="frame" x="18" y="0.0" width="12" height="12"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="12" id="5nl-qB-EMF"/>

@@ -21,17 +21,20 @@ class SplashVC: UIViewController {
         // Do any additional setup after loading the view.
         //        print(UIFont.systemFont(ofSize: 15).fontName)
         //  getUIFonts()
-        self.view.addSubview(activityIndicator)
-        activityIndicator.center = self.loadingView.center
-        activityIndicator.startAnimating()
+
         ///
         
         
     }
-    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.view.addSubview(activityIndicator)
+        activityIndicator.center = self.loadingView.center
+        activityIndicator.startAnimating()
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
     }
     override func viewDidAppear(_ animated: Bool) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
