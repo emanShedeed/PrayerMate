@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Home.storyboard">
+   </FileRef>
+   <FileRef
       location = "group:PrayerMate.xcodeproj">
    </FileRef>
    <FileRef

@@ -36,6 +36,8 @@ class LocationVC: UIViewController {
     
     @IBAction func finishBtnPressed(_ sender: Any) {
         UserDefaults.standard.set(true, forKey:"userLocation" )
+        let viewController = UIStoryboard.Home.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+        self.present(viewController, animated: true, completion:nil)
     }
     
     @IBAction func locateMeBtnPressed(_ sender: Any) {

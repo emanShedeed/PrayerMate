@@ -13,9 +13,9 @@ import UIKit.UIStoryboard
 extension UIStoryboard {
     
     static var main: UIStoryboard { .init(name: "Main", bundle: nil) }
-    static var bookmark: UIStoryboard { .init(name: "BookMark", bundle: nil) }
+    static var Home: UIStoryboard { .init(name: "Home", bundle: nil) }
     
-    static var Settings: UIStoryboard { .init(name: "Settings", bundle: nil) }
+//    static var Settings: UIStoryboard { .init(name: "Settings", bundle: nil) }
 }
 
 

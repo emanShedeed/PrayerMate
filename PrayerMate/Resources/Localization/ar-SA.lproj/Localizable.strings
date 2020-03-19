@@ -26,6 +26,13 @@
 "Location.addressTxtPlaceHolder" = "اختر الموقع من الخريطة  ";
 "Location.locateMeBtnTitle" = "حدد موقعي  ";
 
+//home viewController
+"Home.fajrPrayerLblTitle" = "فجر";
+"Home.sunrisePrayerLblTitle" = "شروق";
+"Home.zuhrPrayerLblTitle" = "ظهر";
+"Home.asrPrayerLblTitle" = "عصر";
+"Home.maghribPrayerLblTitle" = "مغرب";
+"Home.ishaPrayerLblTitle" = "عشاء";
 
 /*
 //home viewController

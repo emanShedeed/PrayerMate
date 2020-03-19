@@ -9,7 +9,7 @@
  //Apple
  import EventKit
  
- class HomeViewController: UIViewController {
+ class MainViewController: UIViewController {
     private let scopes = [kGTLRAuthScopeCalendar]
      private let service = GTLRCalendarService()
     // private let spinner = SpinnerViewController()
@@ -388,7 +388,7 @@
         }
  }
      //MARK:Google SignIn 
- extension HomeViewController:GIDSignInDelegate{
+ extension MainViewController:GIDSignInDelegate{
      //MARK:Google SignIn Delegate
      func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
          // myActivityIndicator.stopAnimating()
@@ -425,7 +425,7 @@
          }
  }
  //Apple Calendare
- extension HomeViewController{
+ extension MainViewController{
     func addEventoToAppleCalendar(title: String, description: String?, eventStartDate: Date, eventEndDate: Date,tillDate:Date){
         let eventStore : EKEventStore = EKEventStore()
         

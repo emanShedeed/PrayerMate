@@ -17,4 +17,10 @@ extension UIImage {
     static let location = UIImage(named: "location")
     static let unSelectedRadio = UIImage(named: "unselectedRadio")
     static let selectedRadio = UIImage(named: "selectedRadio")
+    static let setting = UIImage(named: "setting")
+    static let fajrBackGround = UIImage(named: "fajrbg")
+    static let selectedPrayerTime = UIImage(named: "selectedPrayerTime")
+    static let unselectedPrayerTime = UIImage(named: "unselectedPrayerTime")
+    static let calendar = UIImage(named: "calendar")
+    //    static let fajrBackGround = UIImage(named: "fajrbg")
 }

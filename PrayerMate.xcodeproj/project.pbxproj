@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		673E7AA17F98FCA8BDCB85FF /* Pods_PrayerMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1AAC8FDC32641284F33D08 /* Pods_PrayerMate.framework */; };
+		BD0C9043242358D5000B8EAC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0C9042242358D5000B8EAC /* Home.storyboard */; };
+		BD0C90482423A161000B8EAC /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C90472423A161000B8EAC /* HomeVC.swift */; };
+		BD0C904A2423A4C8000B8EAC /* PrayerTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C90492423A4C8000B8EAC /* PrayerTimeCell.swift */; };
+		BD0C904E2423A620000B8EAC /* HomeVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C904D2423A620000B8EAC /* HomeVCPresenter.swift */; };
+		BD0C90502423B175000B8EAC /* HomeVC+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C904F2423B175000B8EAC /* HomeVC+PresenterDelegate.swift */; };
+		BD0C90532423B49D000B8EAC /* HomeVC+PrayerTimeCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C90522423B49D000B8EAC /* HomeVC+PrayerTimeCellDelegate.swift */; };
 		BD12EB4424221B9D00001437 /* LanguageVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB4324221B9D00001437 /* LanguageVCPresenter.swift */; };
 		BD12EB46242225EB00001437 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB45242225EA00001437 /* RoundedButton.swift */; };
 		BD12EB492422267F00001437 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB482422267F00001437 /* LocationVC.swift */; };
@@ -30,7 +36,7 @@
 		BDAA26D42404F3A90064C8D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDAA26D32404F3A90064C8D4 /* Assets.xcassets */; };
 		BDAA26D72404F3A90064C8D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDAA26D52404F3A90064C8D4 /* LaunchScreen.storyboard */; };
 		BDAA26E32405416B0064C8D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDAA26E22405416B0064C8D4 /* GoogleService-Info.plist */; };
-		BDCF6A68240D13B500DD46F7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF6A67240D13B500DD46F7 /* HomeViewController.swift */; };
+		BDCF6A68240D13B500DD46F7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF6A67240D13B500DD46F7 /* MainViewController.swift */; };
 		BDCF6A6A240D16D400DD46F7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF6A69240D16D400DD46F7 /* WelcomeViewController.swift */; };
 		BDCF6A6C240D1E8500DD46F7 /* AuthSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDCF6A6B240D1E8500DD46F7 /* AuthSettings.plist */; };
 		BDCF6A6F240D257A00DD46F7 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF6A6E240D257A00DD46F7 /* AuthenticationManager.swift */; };
@@ -51,6 +57,12 @@
 		7E1AAC8FDC32641284F33D08 /* Pods_PrayerMate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrayerMate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F20701864EACE850C8951F /* Pods-PrayerMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerMate.release.xcconfig"; path = "Target Support Files/Pods-PrayerMate/Pods-PrayerMate.release.xcconfig"; sourceTree = "<group>"; };
 		B9165590C6B8B564D385D5DC /* Pods-PrayerMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerMate.debug.xcconfig"; path = "Target Support Files/Pods-PrayerMate/Pods-PrayerMate.debug.xcconfig"; sourceTree = "<group>"; };
+		BD0C9042242358D5000B8EAC /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		BD0C90472423A161000B8EAC /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		BD0C90492423A4C8000B8EAC /* PrayerTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeCell.swift; sourceTree = "<group>"; };
+		BD0C904D2423A620000B8EAC /* HomeVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCPresenter.swift; sourceTree = "<group>"; };
+		BD0C904F2423B175000B8EAC /* HomeVC+PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		BD0C90522423B49D000B8EAC /* HomeVC+PrayerTimeCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+PrayerTimeCellDelegate.swift"; sourceTree = "<group>"; };
 		BD12EB4324221B9D00001437 /* LanguageVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageVCPresenter.swift; sourceTree = "<group>"; };
 		BD12EB45242225EA00001437 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		BD12EB482422267F00001437 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
@@ -78,7 +90,7 @@
 		BDAA26D62404F3A90064C8D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDAA26D82404F3A90064C8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDAA26E22405416B0064C8D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BDCF6A67240D13B500DD46F7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BDCF6A67240D13B500DD46F7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BDCF6A69240D16D400DD46F7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		BDCF6A6B240D1E8500DD46F7 /* AuthSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AuthSettings.plist; sourceTree = "<group>"; };
 		BDCF6A6D240D216100DD46F7 /* PrayerMate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrayerMate.entitlements; sourceTree = "<group>"; };
@@ -108,6 +120,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD0C90442423A122000B8EAC /* HomeStoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				BD0C90462423A143000B8EAC /* View */,
+				BD0C90452423A13B000B8EAC /* Presenter */,
+			);
+			path = HomeStoryBoard;
+			sourceTree = "<group>";
+		};
+		BD0C90452423A13B000B8EAC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BD0C904C2423A60C000B8EAC /* Home */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BD0C90462423A143000B8EAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD0C90492423A4C8000B8EAC /* PrayerTimeCell.swift */,
+				BD0C904B2423A5E8000B8EAC /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD0C904B2423A5E8000B8EAC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BD0C90472423A161000B8EAC /* HomeVC.swift */,
+				BD0C904F2423B175000B8EAC /* HomeVC+PresenterDelegate.swift */,
+				BD0C90522423B49D000B8EAC /* HomeVC+PrayerTimeCellDelegate.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BD0C904C2423A60C000B8EAC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BD0C904D2423A620000B8EAC /* HomeVCPresenter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		BD12EB4224221B8000001437 /* Language */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				BDD1F73C2417A949006B87B7 /* MainStoryBoard */,
+				BD0C90442423A122000B8EAC /* HomeStoryBoard */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -206,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				BDAA26D02404F3A80064C8D4 /* Main.storyboard */,
+				BD0C9042242358D5000B8EAC /* Home.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -277,7 +335,7 @@
 		BDD1F73E2417AA1B006B87B7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BDCF6A67240D13B500DD46F7 /* HomeViewController.swift */,
+				BDCF6A67240D13B500DD46F7 /* MainViewController.swift */,
 				BDCF6A69240D16D400DD46F7 /* WelcomeViewController.swift */,
 				BDD1F73F2417AA2E006B87B7 /* SplashScreen */,
 				BDA3F8802420CA9100705569 /* Language */,
@@ -402,6 +460,7 @@
 				BDAA26E32405416B0064C8D4 /* GoogleService-Info.plist in Resources */,
 				BDA3F8842420DE5A00705569 /* ColorAssets.xcassets in Resources */,
 				BDAA26D22404F3A80064C8D4 /* Main.storyboard in Resources */,
+				BD0C9043242358D5000B8EAC /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +534,7 @@
 				BDD1F74A2417B5C7006B87B7 /* UIString+Extension.swift in Sources */,
 				BDFCFE442418E78A0033D031 /* UIFontExtension.swift in Sources */,
 				BDD1F7512417B60E006B87B7 /* Helper.swift in Sources */,
-				BDCF6A68240D13B500DD46F7 /* HomeViewController.swift in Sources */,
+				BDCF6A68240D13B500DD46F7 /* MainViewController.swift in Sources */,
 				BD12EB492422267F00001437 /* LocationVC.swift in Sources */,
 				BD77215824165829008A8947 /* PrayerTime.swift in Sources */,
 				BDCF6A6A240D16D400DD46F7 /* WelcomeViewController.swift in Sources */,
@@ -486,8 +545,13 @@
 				BDD1F74B2417B5C7006B87B7 /* UIColor+Externsion.swift in Sources */,
 				BDCF6A6F240D257A00DD46F7 /* AuthenticationManager.swift in Sources */,
 				BDA3F868241F712400705569 /* BundleExtension.swift in Sources */,
+				BD0C90502423B175000B8EAC /* HomeVC+PresenterDelegate.swift in Sources */,
+				BD0C90482423A161000B8EAC /* HomeVC.swift in Sources */,
 				BD12EB4424221B9D00001437 /* LanguageVCPresenter.swift in Sources */,
+				BD0C904A2423A4C8000B8EAC /* PrayerTimeCell.swift in Sources */,
 				BDA3F8822420CAAC00705569 /* LanguageVC.swift in Sources */,
+				BD0C90532423B49D000B8EAC /* HomeVC+PrayerTimeCellDelegate.swift in Sources */,
+				BD0C904E2423A620000B8EAC /* HomeVCPresenter.swift in Sources */,
 				BDD1F74F2417B5E3006B87B7 /* Font.swift in Sources */,
 				BDAA26CB2404F3A80064C8D4 /* AppDelegate.swift in Sources */,
 				BDD1F7442417AA8A006B87B7 /* SplashVC.swift in Sources */,

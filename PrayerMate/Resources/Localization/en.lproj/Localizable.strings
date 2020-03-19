@@ -29,6 +29,14 @@
 "Location.addressTxtPlaceHolder" = "  Select location from map";
 "Location.locateMeBtnTitle" = "  Locate me";
 
+//home viewController
+"Home.fajrPrayerLblTitle" = "Fajr";
+"Home.sunrisePrayerLblTitle" = "Sunrise";
+"Home.zuhrPrayerLblTitle" = "zuhr";
+"Home.asrPrayerLblTitle" = "Asr";
+"Home.maghribPrayerLblTitle" = "Maghrib";
+"Home.ishaPrayerLblTitle" = "Isha";
+
 
 /*
 //home viewController
