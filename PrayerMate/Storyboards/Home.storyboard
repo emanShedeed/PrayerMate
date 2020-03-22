@@ -30,6 +30,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Home.titleLbl"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeI-lp-Ejv">
                                                 <rect key="frame" x="17" y="32.5" width="24" height="24"/>
@@ -43,18 +46,27 @@
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Home.prayerTimeLbl"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time remains" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CW3-h8-laE">
                                                         <rect key="frame" x="0.0" y="52" width="87" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Home.timeRemainsLbl"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01:25:51" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Py3-bf-sLa">
                                                         <rect key="frame" x="0.0" y="71" width="156" height="45.5"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Home.remainsTimeLbl"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,13 +102,13 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqP-3N-Cub">
-                                                                    <rect key="frame" x="228" y="9.5" width="80" height="21"/>
+                                                                    <rect key="frame" x="207" y="9.5" width="80" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmR-IZ-FWh">
-                                                                    <rect key="frame" x="337" y="9" width="21" height="22"/>
+                                                                    <rect key="frame" x="316" y="-1" width="42" height="42"/>
                                                                     <state key="normal" image="unselectedPrayerTime"/>
                                                                     <connections>
                                                                         <action selector="checkPrayerTimeBtnPressed:" destination="ghI-vk-eh4" eventType="touchUpInside" id="3Gl-WW-ENC"/>
@@ -125,15 +137,22 @@
                                                     <outlet property="delegate" destination="hRK-ZJ-BbG" id="I7u-eN-1A4"/>
                                                 </connections>
                                             </tableView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfE-U2-afT">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfE-U2-afT" customClass="RoundedButton" customModule="PrayerMate" customModuleProvider="target">
                                                 <rect key="frame" x="17" y="584" width="341" height="45"/>
-                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" white="1" alpha="0.73999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="Lho-sf-KAV"/>
                                                 </constraints>
-                                                <state key="normal" title="Import">
-                                                    <color key="titleColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Import" image="calendar">
+                                                    <color key="titleColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.40000000000000002" alpha="0.73999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.16078431369999999" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -180,6 +199,7 @@
                     </view>
                     <connections>
                         <outlet property="dateLBL" destination="mP5-F7-rng" id="UXW-zw-UZM"/>
+                        <outlet property="importBtn" destination="JfE-U2-afT" id="KJc-TL-a0b"/>
                         <outlet property="prayerTimestableView" destination="CqQ-3d-Vzw" id="9Io-gT-2Ob"/>
                         <outlet property="remainingTimeLbl" destination="Py3-bf-sLa" id="LeD-ZP-9pQ"/>
                         <outlet property="selectedPrayerTimeName" destination="m5p-e6-XhV" id="oxN-kE-vhN"/>
@@ -191,6 +211,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" width="21" height="21"/>
         <image name="fajrbg" width="375" height="667"/>
         <image name="setting" width="24" height="24"/>
         <image name="unselectedPrayerTime" width="21" height="21"/>

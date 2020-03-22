@@ -44,7 +44,8 @@
              GIDSignIn.sharedInstance().scopes = scopes
              GIDSignIn.sharedInstance()?.presentingViewController = self
         /////
-        let url = URL(string: "http://api.aladhan.com/v1/calendar?latitude=30.052932&longitude=31.235802&method=5&month=4&year=2020")
+//        let url = URL(string: "http://api.aladhan.com/v1/calendar?latitude=30.052932&longitude=31.235802&method=5&month=4&year=2020")
+        let url = URL(string: "https://muslimsalat.com/cairo/yearly/22-03-2020/true/1.json?key=48ae8106ef6b55e5dac258c0c8d2e224")
         if let final_url = url{
         dataRequest(FINAL_URL:final_url)
         }
@@ -65,8 +66,8 @@
                 if let URLdata = data {
                     print(URLdata)
                     do{
-                        let prayerTimes = try JSONDecoder().decode(PrayerTime.self, from: URLdata)
-                        print(prayerTimes.data?[0].timings?.fajr)
+                        let prayerTimes = try JSONDecoder().decode(PrayerTimes.self, from: URLdata)
+                        print(prayerTimes.items?[0].dateFor)
                       
                     }catch {
                         print("Error: \(error)")

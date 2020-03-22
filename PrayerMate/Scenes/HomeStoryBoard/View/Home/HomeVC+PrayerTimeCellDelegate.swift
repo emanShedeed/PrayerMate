@@ -9,7 +9,7 @@
 import UIKit
 extension HomeVC:PrayerTimeCellDelegate{
     func customCell(cell: PrayerTimeCell, checkedButonatCellIndex: Int) {
-        prayerTimesArray[checkedButonatCellIndex].isBtnChecked=true
+        prayerTimesArray[checkedButonatCellIndex].isBtnChecked = !(prayerTimesArray[checkedButonatCellIndex].isBtnChecked)
         prayerTimestableView.reloadData()
         
     }

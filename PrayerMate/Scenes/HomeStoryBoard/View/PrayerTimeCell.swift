@@ -37,6 +37,7 @@ class PrayerTimeCell: UITableViewCell {
 }
 extension PrayerTimeCell:PrayerTimeCellView{
     func displayData(prayerTimeName: String, prayerTime: String, isCellSelected: Bool,isBtnChecked:Bool,cellIndex:Int) {
+        self.cellIndex = cellIndex
         prayerTimeNameLbl.text=prayerTimeName
         prayerTimeLbl.text=prayerTime
         isSelectedPrayerTimeBtn.setImage((isBtnChecked ? UIImage.selectedPrayerTime : UIImage.unselectedPrayerTime) , for: .normal)

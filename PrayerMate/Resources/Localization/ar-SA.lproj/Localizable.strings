@@ -25,8 +25,12 @@
 "Location.finishBtnTitle" = "إنهاء";
 "Location.addressTxtPlaceHolder" = "اختر الموقع من الخريطة  ";
 "Location.locateMeBtnTitle" = "حدد موقعي  ";
-
+"Location.alertMessage" = "من فضلك اسمح للتطبيق بمعرفة موقعه او اضغط -تحديد الموقع -لاختيار مووقعك" ;
 //home viewController
+"Home.titleLbl" = "١٠ اكتوبر ، ٢٠١٩";
+"Home.prayerTimeLbl" = "فجر";
+"Home.timeRemainsLbl" = "الوقت المتبقي";
+"Home.remainsTimeLbl" = "01:25:51";
 "Home.fajrPrayerLblTitle" = "فجر";
 "Home.sunrisePrayerLblTitle" = "شروق";
 "Home.zuhrPrayerLblTitle" = "ظهر";

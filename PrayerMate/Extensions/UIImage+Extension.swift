@@ -22,5 +22,5 @@ extension UIImage {
     static let selectedPrayerTime = UIImage(named: "selectedPrayerTime")
     static let unselectedPrayerTime = UIImage(named: "unselectedPrayerTime")
     static let calendar = UIImage(named: "calendar")
-    //    static let fajrBackGround = UIImage(named: "fajrbg")
+    static let backwhiteArrow = UIImage(named: "back-white")
 }

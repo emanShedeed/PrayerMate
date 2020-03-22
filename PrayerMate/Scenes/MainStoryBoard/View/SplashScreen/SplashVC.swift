@@ -38,10 +38,10 @@ class SplashVC: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-//            UserDefaults.standard.set(nil, forKey:"appLanguage" )
-//            UserDefaults.standard.set(false, forKey:"userLocation" )
-            if let ـ = AppSetting.shared.getCurrentLanguage(){
-                if(UserDefaults.standard.bool(forKey: "userLocation")){
+            UserDefaults.standard.set(nil, forKey:"appLanguage" )
+            UserDefaults.standard.set(false, forKey:"userLocation" )
+            if AppSetting.shared.getCurrentLanguage() != nil{
+                 if let _ = UserDefaults.standard.value(forKey: "userLocation") as? [String:Double]{
                     let viewController = UIStoryboard.Home.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
                             self.present(viewController, animated: true, completion:nil)
                 }
