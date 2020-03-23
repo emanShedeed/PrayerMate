@@ -371,7 +371,7 @@ sadipscing elitr, sed diam.</string>
                                     <constraint firstAttribute="width" constant="100" id="bfM-Dq-6yk"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="google">
-                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="googleSignInBtnPressed:" destination="hx4-Lh-Y85" eventType="touchUpInside" id="bgj-jQ-KAm"/>
@@ -505,7 +505,7 @@ sadipscing elitr, sed diam.</string>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9p6-T6-Vc0" customClass="RoundedButton" customModule="PrayerMate" customModuleProvider="target">
-                                <rect key="frame" x="17" y="228.5" width="238" height="45"/>
+                                <rect key="frame" x="17" y="228.5" width="170" height="45"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="Bg4-uZ-oiL"/>
@@ -570,7 +570,7 @@ sadipscing elitr, sed diam.</string>
         <!--Location Search Table-->
         <scene sceneID="x4e-EX-9aN">
             <objects>
-                <tableViewController storyboardIdentifier="LocationSearchTable" modalPresentationStyle="fullScreen" id="pr7-ph-LtJ" customClass="LocationSearchTable" customModule="Ataba" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LocationSearchTable" modalPresentationStyle="fullScreen" id="pr7-ph-LtJ" customClass="LocationSearchTable" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8n4-Lk-Nck">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -614,7 +614,7 @@ sadipscing elitr, sed diam.</string>
         <!--MapVC-->
         <scene sceneID="0KZ-sg-0Iy">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="K8Q-fo-FGj" customClass="MapVC" customModule="Ataba" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="K8Q-fo-FGj" customClass="MapVC" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oMT-cO-gOM"/>
                         <viewControllerLayoutGuide type="bottom" id="cmU-Zo-7Bh"/>

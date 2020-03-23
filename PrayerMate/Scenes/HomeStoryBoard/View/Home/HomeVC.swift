@@ -15,6 +15,12 @@ class HomeVC: UIViewController {
     @IBOutlet weak var remainingTimeLbl: UILabel!
     @IBOutlet weak var prayerTimestableView: UITableView!
     @IBOutlet weak var importBtn: UIButton!
+    
+    let calendar = Calendar.current
+    var futureDate: Date!
+    var currentTime:String = ""
+    var countdown: DateComponents!
+    
     var addressTitle : String!
     var presenter:HomeVCPresenter!
     var prayerTimesArray: [(isCellSelected: Bool, isBtnChecked:Bool)] = .init()
@@ -32,7 +38,20 @@ class HomeVC: UIViewController {
         if let final_url = url{
             presenter.dataRequest(FINAL_URL:final_url)
         }
-    }
+        ////
+        futureDate = {
+                var future = DateComponents(
+//                    year: calendar.component(.year, from: <#T##Date#>),
+//                    month: 1,
+//                    day: 1,
+                    hour: 0,
+                    minute: 0,
+                    second: 0
+                )
+                return Calendar.current.date(from: future)!
+            }()
+     
+        }
     
     
     func formateDate(){
@@ -85,4 +104,19 @@ extension HomeVC:UITableViewDelegate,UITableViewDataSource{
     
     
     
+}
+extension HomeVC{
+    @objc func updateTime() {
+        if let countdown = self.countdown{ //only compute once per call
+//        let days = countdown.day!
+        let hours = countdown.hour!
+        let minutes = countdown.minute!
+        let seconds = countdown.second!
+        remainingTimeLbl.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+        }
+    }
+
+    func runCountdown() {
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+    }
 }

@@ -99,6 +99,25 @@ class Helper {
         
         
     }
+    class func findDateDiff(time1Str: String, time2Str: String) -> String {
+        let timeformatter = DateFormatter()
+        timeformatter.dateFormat = "hh:mm:ss a"
+        
+        guard let time1 = timeformatter.date(from: time1Str),
+            let time2 = timeformatter.date(from: time2Str) else { return "" }
+        
+        //You can directly use from here if you have two dates
+        
+        let interval = time2.timeIntervalSince(time1)
+        let hour = interval / 3600;
+        let minute = interval.truncatingRemainder(dividingBy: 3600) / 60
+         let second = (interval.truncatingRemainder(dividingBy: 60))
+        let intervalInt = Int(interval)
+        let hourString = String(Int(hour)).count == 1 ? "0" + String(Int(hour)) : String(Int(hour))
+        let minuteString = String(Int(minute)).count == 1 ? "0" + String(Int(minute)) : String(Int(minute))
+         let secondString = String(Int(second)).count == 1 ? "0" + String(Int(second)) : String(Int(second))
+        return "\(hourString):\(minuteString):\(secondString)"
+    }
 }
 class TintedSegmentedControl: UISegmentedControl {
     

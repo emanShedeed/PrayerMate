@@ -46,9 +46,13 @@ class HomeVCPresenter{
                         print(URLdata)
                         do{
                             let prayerTimes = try JSONDecoder().decode(PrayerTimes.self, from: URLdata)
-                            print(prayerTimes.items?[0].dateFor)
+                            if(prayerTimes.statusValid == 1){
+//                            print(prayerTimes.items?[0].dateFor)
                             self.todayParyerTimes=[(prayerTimes.items?[0].fajr ?? ""),(prayerTimes.items?[0].shurooq ?? ""),(prayerTimes.items?[0].dhuhr ?? ""),(prayerTimes.items?[0].asr ?? ""),(prayerTimes.items?[0].maghrib ?? ""),(prayerTimes.items?[0].isha ?? "")]
                             self.view?.fetchDataSucess()
+                            }else{
+                                self.view?.showError(error: prayerTimes.statusDescription ?? "can't get data")
+                            }
                           
                         }catch {
                             print("Error: \(error)")

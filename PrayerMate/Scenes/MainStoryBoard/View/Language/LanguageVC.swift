@@ -49,7 +49,7 @@ final class LanguageVC: UIViewController {
             radioButtonTag = 1
              arabicRadioButton.setImage(UIImage.unSelectedRadio, for: .normal)
         }
-        animateBackGround()
+//        animateBackGround()
     }
     
     @IBAction func nextBtnPressed(_ sender: UIButton) {
