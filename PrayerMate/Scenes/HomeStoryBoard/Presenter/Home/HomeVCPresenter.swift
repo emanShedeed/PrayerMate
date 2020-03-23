@@ -22,7 +22,7 @@ class HomeVCPresenter{
         self.view=view
     }
     let prayerTimesNames=["Home.fajrPrayerLblTitle","Home.sunrisePrayerLblTitle","Home.zuhrPrayerLblTitle","Home.asrPrayerLblTitle","Home.maghribPrayerLblTitle","Home.ishaPrayerLblTitle"]
-    var todayParyerTimes = [String?]()
+    var todayParyerTimes = [String]()
     
     func ConfigureCell(cell:PrayerTimeCellView,isCellSelected:Bool,isChecked:Bool,cellIndex:Int){
          
@@ -47,7 +47,7 @@ class HomeVCPresenter{
                         do{
                             let prayerTimes = try JSONDecoder().decode(PrayerTimes.self, from: URLdata)
                             print(prayerTimes.items?[0].dateFor)
-                            self.todayParyerTimes=[prayerTimes.items?[0].fajr,prayerTimes.items?[0].shurooq,prayerTimes.items?[0].dhuhr,prayerTimes.items?[0].asr,prayerTimes.items?[0].maghrib,prayerTimes.items?[0].isha]
+                            self.todayParyerTimes=[(prayerTimes.items?[0].fajr ?? ""),(prayerTimes.items?[0].shurooq ?? ""),(prayerTimes.items?[0].dhuhr ?? ""),(prayerTimes.items?[0].asr ?? ""),(prayerTimes.items?[0].maghrib ?? ""),(prayerTimes.items?[0].isha ?? "")]
                             self.view?.fetchDataSucess()
                           
                         }catch {
