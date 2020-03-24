@@ -39,11 +39,11 @@ extension PrayerTimeCell:PrayerTimeCellView{
     func displayData(prayerTimeName: String, prayerTime: String, isCellSelected: Bool,isBtnChecked:Bool,cellIndex:Int) {
         self.cellIndex = cellIndex
         prayerTimeNameLbl.text=prayerTimeName
-        if(AppSetting.shared.getCurrentLanguage() == .ar){
-            prayerTimeLbl.text=prayerTime.EnToARDigits.replacingOccurrences(of: "pm", with: "مساءا").replacingOccurrences(of: "am", with: "صباحا")
-        }else{
+//        if(AppSetting.shared.getCurrentLanguage() == .ar){
+//            prayerTimeLbl.text=prayerTime.EnToARDigits.replacingOccurrences(of: "pm", with: "مساءا").replacingOccurrences(of: "am", with: "صباحا")
+//        }else{
             prayerTimeLbl.text=prayerTime
-        }
+//        }
         isSelectedPrayerTimeBtn.setImage((isBtnChecked ? UIImage.selectedPrayerTime : UIImage.unselectedPrayerTime) , for: .normal)
         if(isCellSelected){
             prayerTimeNameLbl.textColor=UIColor(rgb: 0x20DF7F)

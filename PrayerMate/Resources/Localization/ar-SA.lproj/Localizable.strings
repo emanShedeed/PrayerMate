@@ -32,12 +32,12 @@
 "Home.timeRemainsLbl" = "الوقت المتبقي";
 //"Home.remainsTimeLbl" = "01:25:51";
 "Home.importBtnTitle" = "تصدير  ";
-"Home.fajrPrayerLblTitle" = "فجر";
-"Home.sunrisePrayerLblTitle" = "شروق";
-"Home.zuhrPrayerLblTitle" = "ظهر";
-"Home.asrPrayerLblTitle" = "عصر";
-"Home.maghribPrayerLblTitle" = "مغرب";
-"Home.ishaPrayerLblTitle" = "عشاء";
+"Home.fajrPrayerLblTitle" = "الفجر";
+"Home.sunrisePrayerLblTitle" = "الشروق";
+"Home.zuhrPrayerLblTitle" = "الظهر";
+"Home.asrPrayerLblTitle" = "العصر";
+"Home.maghribPrayerLblTitle" = "المغرب";
+"Home.ishaPrayerLblTitle" = "العشاء";
 
 /*
 //home viewController

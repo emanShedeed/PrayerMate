@@ -112,11 +112,11 @@ extension HomeVC{
         let minutes = countdown.minute!
         let seconds = countdown.second!
         print( String(format: "%02d:%02d:%02d",  hours, minutes, seconds))
-        if(AppSetting.shared.getCurrentLanguage() == .ar){
-            remainingTimeLbl.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds).EnToARDigits
-        }else{
+//        if(AppSetting.shared.getCurrentLanguage() == .ar){
+//            remainingTimeLbl.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds).EnToARDigits
+//        }else{
             remainingTimeLbl.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
-        }
+//        }
         
     }
     
