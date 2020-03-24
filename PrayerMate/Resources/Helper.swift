@@ -101,8 +101,9 @@ class Helper {
     }
     class func findDateDiff(time1Str: String, time2Str: String) -> String {
         let timeformatter = DateFormatter()
+        timeformatter.locale = NSLocale(localeIdentifier: "en") as Locale?
         timeformatter.dateFormat = "hh:mm:ss a"
-        
+
         guard let time1 = timeformatter.date(from: time1Str),
             let time2 = timeformatter.date(from: time2Str) else { return "" }
         

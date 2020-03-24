@@ -16,6 +16,8 @@ class HomeVC: UIViewController {
     @IBOutlet weak var prayerTimestableView: UITableView!
     @IBOutlet weak var importBtn: UIButton!
     
+    let formatter = DateFormatter()
+    var dateAsString = ""
     let calendar = Calendar.current
     var futureDate: Date!
     var currentTime:String = ""
@@ -28,30 +30,25 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        formatter.locale = NSLocale(localeIdentifier: "en") as Locale?
+        formatter.dateFormat = "hh:mm:ss a"
+        dateAsString = formatter.string(from: Date())
+        
         presenter = HomeVCPresenter(view: self)
-//        prayerTimesArray=[(isCellSelected: Bool,Bool)]
+        //        prayerTimesArray=[(isCellSelected: Bool,Bool)]
         prayerTimestableView.backgroundColor = UIColor.clear
         importBtn.addBlurEffect()
         formateDate()
-        let urlString="https://muslimsalat.com/"+addressTitle+"/yearly/22-03-2020/false/1.json?key=48ae8106ef6b55e5dac258c0c8d2e224"
-        let url = URL(string: urlString)
+        let urlString="https://muslimsalat.com/" + addressTitle + "/yearly/22-03-2020/false/1.json?key=48ae8106ef6b55e5dac258c0c8d2e224"
+        
+        let ecnodingString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let url = URL(string: ecnodingString ?? "")
         if let final_url = url{
             presenter.dataRequest(FINAL_URL:final_url)
         }
-        ////
-        futureDate = {
-                var future = DateComponents(
-//                    year: calendar.component(.year, from: <#T##Date#>),
-//                    month: 1,
-//                    day: 1,
-                    hour: 0,
-                    minute: 0,
-                    second: 0
-                )
-                return Calendar.current.date(from: future)!
-            }()
-     
-        }
+    }
+    
+    
     
     
     func formateDate(){
@@ -67,7 +64,7 @@ class HomeVC: UIViewController {
             
             // set locale to "ar_DZ" and format as per your specifications
             if AppSetting.shared.getCurrentLanguage() == AppLanguages.ar{
-                formatter.locale = NSLocale(localeIdentifier: "ar_DZ") as Locale
+                formatter.locale = NSLocale(localeIdentifier: "ar") as Locale
             }
             formatter.dateFormat = "MMMM dd, yyyy "
             let outputDate = formatter.string(from: date)
@@ -107,15 +104,22 @@ extension HomeVC:UITableViewDelegate,UITableViewDataSource{
 }
 extension HomeVC{
     @objc func updateTime() {
-        if let countdown = self.countdown{ //only compute once per call
-//        let days = countdown.day!
+        dateAsString = formatter.string(from: Date())
+        self.countdown = Calendar.current.dateComponents([.day, .hour, .minute, .second], from: formatter.date(from: dateAsString) ?? Date() , to: self.futureDate)
+        //only compute once per call
+        //       let days = countdown1.day!
         let hours = countdown.hour!
         let minutes = countdown.minute!
         let seconds = countdown.second!
-        remainingTimeLbl.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+        print( String(format: "%02d:%02d:%02d",  hours, minutes, seconds))
+        if(AppSetting.shared.getCurrentLanguage() == .ar){
+            remainingTimeLbl.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds).EnToARDigits
+        }else{
+            remainingTimeLbl.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
         }
+        
     }
-
+    
     func runCountdown() {
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }

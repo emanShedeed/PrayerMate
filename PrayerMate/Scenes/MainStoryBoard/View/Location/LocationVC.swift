@@ -132,22 +132,21 @@ extension LocationVC:CLLocationManagerDelegate{
                 
             }
             // city
-            if let name=placeMark.locality{
-                title += name + " , "
-                self.addressTitle += name
+            if let city=placeMark.locality{
+                title += city + " , "
+                self.addressTitle = city
             }
             
             if let country = placeMark.country{
                 title +=  country
-                self.addressTitle += country
+//                self.addressTitle += " \(country)"
             }
             self.addressLbl.text=title
-            self.addressTitle=self.addressTitle.replacingOccurrences(of: " ", with: "")
         })
     }
 }
 extension LocationVC:maplLocationView{
-    func locationIsSeleted(at lat: Double, lng: Double, selectedPlace: String) {
+    func locationIsSeleted(at lat: Double, lng: Double, selectedPlace: String,cityName:String) {
         //          latitude=lat
         //          longitude=lng
         if(selectedPlace != ""){
@@ -155,7 +154,7 @@ extension LocationVC:maplLocationView{
             UserDefaults.standard.set(dect, forKey: "userLocation")
         }
         addressLbl.text=selectedPlace
-        addressTitle=selectedPlace.replacingOccurrences(of: " ", with: "")
+        addressTitle=cityName
     }
     
 }

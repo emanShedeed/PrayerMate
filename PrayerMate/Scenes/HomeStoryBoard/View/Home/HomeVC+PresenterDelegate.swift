@@ -9,7 +9,7 @@
 import Foundation
 extension HomeVC:HomeView{
     func showError(error: String) {
-        
+        Helper.showAlert(title: "", message: error, VC: self)
     }
     
     func fetchDataSucess() {
@@ -17,13 +17,7 @@ extension HomeVC:HomeView{
         DispatchQueue.main.async {
             self.prayerTimestableView.reloadData()
         }
-        let formatter = DateFormatter()
-        formatter.dateFormat = "hh:mm:ss a"
-//        let date = Date()
-        let myString = formatter.string(from: Date())
-        // read input date string as NSDate instance
-        //        let currentDate = formatter.date(from: myString)
-        //        var prayerDate : Date
+
         var nextPrayerIndex = 0
         var accurateString :String = ""
         for  i in 0..<presenter.todayParyerTimes.count {
@@ -33,27 +27,42 @@ extension HomeVC:HomeView{
             accurateString = accurateString.replacingOccurrences(of: " ", with: ":00 ")
             //            if let prayerDate = formatter.date(from: accurateString){
             //            let result = currentDate?.compare(prayerDate)
-            let dateDiff = Helper.findDateDiff(time1Str: myString, time2Str: accurateString)
+            let dateDiff = Helper.findDateDiff(time1Str: dateAsString, time2Str: accurateString)
             if(!dateDiff.contains("-") ){
                 nextPrayerIndex = i
                 break
             }
-        }
-        let dateDiff = Helper.findDateDiff(time1Str: myString, time2Str: accurateString)
-        
-        print(dateDiff)
-        DispatchQueue.main.async {
-            self.selectedPrayerTimeName.text=self.presenter.prayerTimesNames[nextPrayerIndex].localized
-            self.remainingTimeLbl.text = dateDiff
-            let timeFormatter = DateFormatter()
-            timeFormatter.dateFormat = "hh:mm:ss"
             
-            if let currentDate = timeFormatter.date(from: dateDiff){
-                print(self.countdown)
-                self.countdown = Calendar.current.dateComponents([.hour, .minute, .second], from: currentDate, to: self.futureDate)
-              self.runCountdown()
-                
+        }
+
+        
+      var tempString = accurateString.replacingOccurrences(of: " PM", with: "")
+        tempString = tempString.replacingOccurrences(of: " AM", with: "")
+        var dateComponent = tempString.split(separator: ":")
+        
+        if(accurateString.contains("PM")){
+            let hours = Int(dateComponent[0]) ?? 0
+            if (hours < 12) {
+                dateComponent[0] = "\(hours + 12)"
             }
         }
+        futureDate = {
+            let future = DateComponents(
+                year: calendar.component(.year, from: Date()),
+                month: calendar.component(.month, from: Date()),
+                day: calendar.component(.day, from: Date()),
+                hour: Int(dateComponent[0]),
+                minute: Int(dateComponent[1]),
+                second: Int(dateComponent[2])
+            )
+            return Calendar.current.date(from: future)!
+        }()
+
+        DispatchQueue.main.async {
+  self.selectedPrayerTimeName.text=self.presenter.prayerTimesNames[nextPrayerIndex].localized
+            
+        self.runCountdown()
+        }
+        
     }
 }

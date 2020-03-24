@@ -13,12 +13,13 @@ protocol HandleMapSearch: class {
     func dropPinZoomIn(placemark:MKPlacemark)
 }
 protocol maplLocationView:class {
-    func locationIsSeleted(at lat:Double,lng:Double,selectedPlace:String)
+    func locationIsSeleted(at lat:Double,lng:Double,selectedPlace:String,cityName:String)
 }
 class MapVC: UIViewController {
     
     var selectedPin: MKPlacemark?
     var selectedPlaceTitle:String?
+    var cityName:String?
     var resultSearchController: UISearchController!
     
     let locationManager = CLLocationManager()
@@ -156,6 +157,7 @@ extension MapVC: HandleMapSearch {
         }
         if let city=placemark.locality{
             title += city + " , "
+            cityName = city
         }
         if let country = placemark.country{
             title +=  country 
@@ -221,7 +223,7 @@ extension MapVC{
         
     }
     @objc func okBtnPressed(){
-        delegate?.locationIsSeleted(at: selectedPin?.coordinate.latitude ?? 0.0, lng: selectedPin?.coordinate.longitude ?? 0.0,selectedPlace:selectedPlaceTitle ?? "")
+        delegate?.locationIsSeleted(at: selectedPin?.coordinate.latitude ?? 0.0, lng: selectedPin?.coordinate.longitude ?? 0.0,selectedPlace:selectedPlaceTitle ?? "",cityName:cityName ?? "")
         
         self.dismiss(animated: true, completion: nil)
     }

@@ -22,24 +22,28 @@ class PrayerTimeCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         isSelectedPrayerTimeBtn.setImage(UIImage.unselectedPrayerTime, for: .normal)
-         isSelectedPrayerTimeBtn.setImage(UIImage.selectedPrayerTime, for: .selected)
+        isSelectedPrayerTimeBtn.setImage(UIImage.selectedPrayerTime, for: .selected)
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     @IBAction func checkPrayerTimeBtnPressed(_ sender: Any) {
-         cellDelegate?.customCell(cell: self, checkedButonatCellIndex: cellIndex)
-     }
-
+        cellDelegate?.customCell(cell: self, checkedButonatCellIndex: cellIndex)
+    }
+    
 }
 extension PrayerTimeCell:PrayerTimeCellView{
     func displayData(prayerTimeName: String, prayerTime: String, isCellSelected: Bool,isBtnChecked:Bool,cellIndex:Int) {
         self.cellIndex = cellIndex
         prayerTimeNameLbl.text=prayerTimeName
-        prayerTimeLbl.text=prayerTime
+        if(AppSetting.shared.getCurrentLanguage() == .ar){
+            prayerTimeLbl.text=prayerTime.EnToARDigits.replacingOccurrences(of: "pm", with: "مساءا").replacingOccurrences(of: "am", with: "صباحا")
+        }else{
+            prayerTimeLbl.text=prayerTime
+        }
         isSelectedPrayerTimeBtn.setImage((isBtnChecked ? UIImage.selectedPrayerTime : UIImage.unselectedPrayerTime) , for: .normal)
         if(isCellSelected){
             prayerTimeNameLbl.textColor=UIColor(rgb: 0x20DF7F)
