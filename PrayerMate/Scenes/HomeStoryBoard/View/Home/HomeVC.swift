@@ -147,8 +147,8 @@ extension HomeVC:JTACMonthViewDataSource{
         //        let startDate=calendarFormatter.date(from: "2020 03 24")!
         //        let endDate=calendarFormatter.date(from: "2020 04 24")!
         let endDate = Calendar.current.date(byAdding: .month, value: 1, to: Date()) ?? Date()
-        let parameters = ConfigurationParameters(startDate:startDate , endDate:endDate)
-//        let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate, numberOfRows: 5, calendar: Calendar(identifier: .islamic) , generateInDates: .forFirstMonthOnly, generateOutDates: .tillEndOfRow, firstDayOfWeek: .sunday, hasStrictBoundaries: .none)
+//        let parameters = ConfigurationParameters(startDate:startDate , endDate:endDate)
+       let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate, numberOfRows: 5, generateInDates: .off, generateOutDates: .off , firstDayOfWeek: .sunday)
         return parameters
     }
 }
