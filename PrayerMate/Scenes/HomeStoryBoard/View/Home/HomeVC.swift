@@ -31,11 +31,12 @@ class HomeVC: UIViewController {
     var presenter:HomeVCPresenter!
     var prayerTimesArray: [(isCellSelected: Bool, isBtnChecked:Bool)] = .init()
     ////Calendar
-   let testCalendar = Calendar(identifier: .gregorian)
-       var firstDate: Date?
-       var twoDatesAlreadySelected: Bool {
-           return firstDate != nil && calendarView.selectedDates.count > 1
-       }
+    let calendareFormatter = DateFormatter()
+    let testCalendar = Calendar(identifier: .gregorian)
+    var firstDate: Date?
+    var twoDatesAlreadySelected: Bool {
+        return firstDate != nil && calendarView.selectedDates.count > 1
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +59,7 @@ class HomeVC: UIViewController {
             presenter.dataRequest(FINAL_URL:final_url)
         }
         setupCalendarView()
-      
+        
     }
     
     
@@ -139,16 +140,14 @@ extension HomeVC{
 }
 extension HomeVC:JTACMonthViewDataSource{
     func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "yyyy MM dd"
         
         let startDate = Date()
         //        let endDate = Date()
         //        let startDate=calendarFormatter.date(from: "2020 03 24")!
         //        let endDate=calendarFormatter.date(from: "2020 04 24")!
         let endDate = Calendar.current.date(byAdding: .month, value: 1, to: Date()) ?? Date()
-//        let parameters = ConfigurationParameters(startDate:startDate , endDate:endDate)
-       let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate, numberOfRows: 5, generateInDates: .off, generateOutDates: .off , firstDayOfWeek: .sunday)
+        //        let parameters = ConfigurationParameters(startDate:startDate , endDate:endDate)
+        let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate, numberOfRows: 5, generateInDates: .off, generateOutDates: .off , firstDayOfWeek: .sunday)
         return parameters
     }
 }
@@ -156,7 +155,7 @@ extension HomeVC:JTACMonthViewDelegate{
     //Display the Cell
     func calendar(_ calendar: JTACMonthView, willDisplay cell: JTACDayCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
         let cell = cell as! CustomJTAppleCalendarCell
-     configureCell(view: cell, cellState: cellState)
+        configureCell(view: cell, cellState: cellState)
     }
     
     func calendar(_ calendar: JTACMonthView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTACDayCell {
@@ -168,7 +167,7 @@ extension HomeVC:JTACMonthViewDelegate{
     }
     
     func calendar(_ calendar: JTACMonthView, didSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
-       if firstDate != nil {
+        if firstDate != nil {
             calendar.selectDates(from: firstDate!, to: date,  triggerSelectionDelegate: false, keepSelectionIfMultiSelectionAllowed: true)
         } else {
             firstDate = date
@@ -177,46 +176,63 @@ extension HomeVC:JTACMonthViewDelegate{
     }
     
     func calendar(_ calendar: JTACMonthView, didDeselectDate date: Date, cell: JTACDayCell?, cellState: CellState) {
-          configureCell(view: cell, cellState: cellState)
-      }
-      
+        configureCell(view: cell, cellState: cellState)
+    }
+    
     func calendar(_ calendar: JTACMonthView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
-      setupViewsOfCalendar(from: visibleDates)
+        setupViewsOfCalendar(from: visibleDates)
     }
     func calendar(_ calendar: JTACMonthView, shouldSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) -> Bool{
-           if twoDatesAlreadySelected && cellState.selectionType != .programatic || firstDate != nil && date < calendarView.selectedDates[0] {
-               firstDate = nil
-               let retval = !calendarView.selectedDates.contains(date)
-               calendarView.deselectAllDates(triggerSelectionDelegate: false)
-               return retval
-           }
-           return true
-       }
-       
+        let dateAsString = calendareFormatter.string(from: date)
+        let currentDateAsString=calendareFormatter.string(from: Date())
+        if(calendareFormatter.date(from: dateAsString)! < calendareFormatter.date(from: currentDateAsString)!){
+            return false
+        }
+//        if(firstDate != nil){
+//            let firstDateAsString = calendareFormatter.string(from: firstDate!)
+//            let MaxDate =  Calendar.current.date(byAdding: .month, value: 1, to: calendareFormatter.date(from: firstDateAsString)!) ?? Date()
+//            let maxDateAsString = calendareFormatter.string(from: MaxDate)
+//            if(calendareFormatter.date(from: dateAsString)! > calendareFormatter.date(from: maxDateAsString)!){
+//               
+//                return false
+//            }
+//        }
+        if twoDatesAlreadySelected && cellState.selectionType != .programatic || firstDate != nil && date < calendarView.selectedDates[0] {
+            firstDate = nil
+            let retval = !calendarView.selectedDates.contains(date)
+            calendarView.deselectAllDates(triggerSelectionDelegate: false)
+            return retval
+        }
+        return true
+    }
+    
     func calendar(_ calendar: JTACMonthView, shouldDeselectDate date: Date, cell: JTACDayCell?, cellState: CellState) -> Bool {
-           if twoDatesAlreadySelected && cellState.selectionType != .programatic {
-               firstDate = nil
-               calendarView.deselectAllDates(triggerSelectionDelegate: false)
-               return false
-           }
-           return true
-       }
-
+        if twoDatesAlreadySelected && cellState.selectionType != .programatic {
+            firstDate = nil
+            calendarView.deselectAllDates(triggerSelectionDelegate: false)
+            return false
+        }
+        return true
+    }
+    
 }
 
 
 extension HomeVC{
     func setupCalendarView(){
-      //
+        //
+        calendareFormatter.dateFormat="yyyy MM dd"
+        calendareFormatter.timeZone = Calendar.current.timeZone
+        calendareFormatter.locale = Calendar.current.locale
         calendarView.allowsMultipleSelection = true
         calendarView.allowsRangedSelection = true
         //make top rounded calendar
-          calenadrIncludingHeaderView.roundCorners([.topLeft,.topRight], radius: 20)
+        calenadrIncludingHeaderView.roundCorners([.topLeft,.topRight], radius: 20)
         //setup calendarSpacing
         calendarView.minimumLineSpacing=0
         calendarView.minimumInteritemSpacing=0
         //setup header Date Label
-       
+        
         calendarView.visibleDates { (visableDates) in
             self.setupViewsOfCalendar(from: visableDates)
         }
@@ -230,49 +246,49 @@ extension HomeVC{
         calendarDateTitleLbl.text = month + " " + year
     }
     func handelCellSelectedColor(cell:JTACDayCell?,celssState:CellState){
-          guard let validCell = cell as? CustomJTAppleCalendarCell else{return}
-          if(validCell.isSelected){
-              validCell.selectedView.isHidden=false
-          }else{
-              validCell.selectedView.isHidden=true
-          }
-      }
-      func handleCellTextColor(cell:JTACDayCell?,cellState:CellState){
-            guard let validCell = cell as? CustomJTAppleCalendarCell else{return}
-            if(validCell.isSelected){
-              validCell.dayLabel.textColor = .black
+        guard let validCell = cell as? CustomJTAppleCalendarCell else{return}
+        if(validCell.isSelected){
+            validCell.selectedView.isHidden=false
+        }else{
+            validCell.selectedView.isHidden=true
+        }
+    }
+    func handleCellTextColor(cell:JTACDayCell?,cellState:CellState){
+        guard let validCell = cell as? CustomJTAppleCalendarCell else{return}
+        if(validCell.isSelected){
+            validCell.dayLabel.textColor = .black
+        }else{
+            if cellState.dateBelongsTo == .thisMonth{
+                validCell.dayLabel.textColor = .black
             }else{
-              if cellState.dateBelongsTo == .thisMonth{
-                    validCell.dayLabel.textColor = .black
-              }else{
-                  validCell.dayLabel.textColor = UIColor(rgb:0xDEE3E7)
-              }
+                validCell.dayLabel.textColor = UIColor(rgb:0xDEE3E7)
             }
         }
+    }
     func handleCellSelected(cell: CustomJTAppleCalendarCell, cellState: CellState) {
-          cell.selectedView.isHidden = !cellState.isSelected
-          switch cellState.selectedPosition() {
-          case .left:
-//              cell.selectedView.layer.cornerRadius = 20
-              cell.selectedView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
-          case .middle:
-//              cell.selectedView.layer.cornerRadius = 0
-              cell.selectedView.layer.maskedCorners = []
-          case .right:
-//              cell.selectedView.layer.cornerRadius = 20
-              cell.selectedView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
-          case .full:
-//              cell.selectedView.layer.cornerRadius = 20
-              cell.selectedView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
-          default: break
-          }
-      }
+        cell.selectedView.isHidden = !cellState.isSelected
+        switch cellState.selectedPosition() {
+        case .left:
+            //              cell.selectedView.layer.cornerRadius = 20
+            cell.selectedView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
+        case .middle:
+            //              cell.selectedView.layer.cornerRadius = 0
+            cell.selectedView.layer.maskedCorners = []
+        case .right:
+            //              cell.selectedView.layer.cornerRadius = 20
+            cell.selectedView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
+        case .full:
+            //              cell.selectedView.layer.cornerRadius = 20
+            cell.selectedView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
+        default: break
+        }
+    }
     func configureCell(view: JTACDayCell?, cellState: CellState) {
-           guard let cell = view as? CustomJTAppleCalendarCell  else { return }
-           cell.dayLabel.text = cellState.text
-           handleCellTextColor(cell: cell, cellState: cellState)
-           handleCellSelected(cell: cell, cellState: cellState)
-       }
+        guard let cell = view as? CustomJTAppleCalendarCell  else { return }
+        cell.dayLabel.text = cellState.text
+        handleCellTextColor(cell: cell, cellState: cellState)
+        handleCellSelected(cell: cell, cellState: cellState)
+    }
 }
 
 
