@@ -30,11 +30,12 @@
 "Location.locateMeBtnTitle" = "  Locate me";
 "Location.alertMessage" = "please allow app to know your location or Press Locate me to choose location" ;
 
+//Map view controller
+"map.searchBarPlaceHolderTitle" = "Search for places";
+"map.okBtnTitle" = "Ok";
+
 //home viewController
-//"Home.titleLbl" = "October 10, 2019";
-//"Home.prayerTimeLbl" = "Fajr";
 "Home.timeRemainsLbl" = "Time Remains";
-//"Home.remainsTimeLbl" = "01:25:51";
 "Home.importBtnTitle" = "  Import";
 "Home.fajrPrayerLblTitle" = "Fajr";
 "Home.sunrisePrayerLblTitle" = "Sunrise";

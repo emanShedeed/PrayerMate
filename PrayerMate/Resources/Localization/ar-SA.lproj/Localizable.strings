@@ -26,11 +26,13 @@
 "Location.addressTxtPlaceHolder" = "اختر الموقع من الخريطة  ";
 "Location.locateMeBtnTitle" = "حدد موقعي  ";
 "Location.alertMessage" = "من فضلك اسمح للتطبيق بمعرفة موقعه او اضغط -تحديد الموقع -لاختيار مووقعك" ;
+
+//Map view controller
+"map.searchBarPlaceHolderTitle" = "ابحث عن الأماكن";
+"map.okBtnTitle" = "تم";
+
 //home viewController
-//"Home.titleLbl" = "١٠ اكتوبر ، ٢٠١٩";
-//"Home.prayerTimeLbl" = "فجر";
 "Home.timeRemainsLbl" = "الوقت المتبقي";
-//"Home.remainsTimeLbl" = "01:25:51";
 "Home.importBtnTitle" = "تصدير  ";
 "Home.fajrPrayerLblTitle" = "الفجر";
 "Home.sunrisePrayerLblTitle" = "الشروق";

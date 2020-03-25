@@ -22,6 +22,7 @@
 		BD12EB46242225EB00001437 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB45242225EA00001437 /* RoundedButton.swift */; };
 		BD12EB492422267F00001437 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB482422267F00001437 /* LocationVC.swift */; };
 		BD12EB4B2422290C00001437 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB4A2422290B00001437 /* RoundedTextField.swift */; };
+		BD42746D242A4459007DE9AC /* CustomJTAppleCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD42746C242A4459007DE9AC /* CustomJTAppleCalendarCell.swift */; };
 		BD77215824165829008A8947 /* PrayerTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77215724165829008A8947 /* PrayerTime.swift */; };
 		BDA3F868241F712400705569 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3F864241F712100705569 /* BundleExtension.swift */; };
 		BDA3F869241F712400705569 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3F865241F712200705569 /* main.swift */; };
@@ -75,6 +76,7 @@
 		BD12EB45242225EA00001437 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		BD12EB482422267F00001437 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		BD12EB4A2422290B00001437 /* RoundedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		BD42746C242A4459007DE9AC /* CustomJTAppleCalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomJTAppleCalendarCell.swift; sourceTree = "<group>"; };
 		BD77215724165829008A8947 /* PrayerTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTime.swift; sourceTree = "<group>"; };
 		BDA3F864241F712100705569 /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		BDA3F865241F712200705569 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -148,7 +150,6 @@
 		BD0C90462423A143000B8EAC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BD0C90492423A4C8000B8EAC /* PrayerTimeCell.swift */,
 				BD0C904B2423A5E8000B8EAC /* Home */,
 			);
 			path = View;
@@ -160,6 +161,8 @@
 				BD0C90472423A161000B8EAC /* HomeVC.swift */,
 				BD0C904F2423B175000B8EAC /* HomeVC+PresenterDelegate.swift */,
 				BD0C90522423B49D000B8EAC /* HomeVC+PrayerTimeCellDelegate.swift */,
+				BD751ADD242A42CF005A9764 /* PrayerCell */,
+				BD751ADE242A42F5005A9764 /* JTAppleCalendar Cell */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -195,6 +198,22 @@
 				BD12EB482422267F00001437 /* LocationVC.swift */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		BD751ADD242A42CF005A9764 /* PrayerCell */ = {
+			isa = PBXGroup;
+			children = (
+				BD0C90492423A4C8000B8EAC /* PrayerTimeCell.swift */,
+			);
+			path = PrayerCell;
+			sourceTree = "<group>";
+		};
+		BD751ADE242A42F5005A9764 /* JTAppleCalendar Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BD42746C242A4459007DE9AC /* CustomJTAppleCalendarCell.swift */,
+			);
+			path = "JTAppleCalendar Cell";
 			sourceTree = "<group>";
 		};
 		BD772156241657E3008A8947 /* Model */ = {
@@ -573,6 +592,7 @@
 				BD12EB4424221B9D00001437 /* LanguageVCPresenter.swift in Sources */,
 				BD0C905924276C13000B8EAC /* LocationSearchtable.swift in Sources */,
 				BD0C904A2423A4C8000B8EAC /* PrayerTimeCell.swift in Sources */,
+				BD42746D242A4459007DE9AC /* CustomJTAppleCalendarCell.swift in Sources */,
 				BDA3F8822420CAAC00705569 /* LanguageVC.swift in Sources */,
 				BD0C90532423B49D000B8EAC /* HomeVC+PrayerTimeCellDelegate.swift in Sources */,
 				BD0C904E2423A620000B8EAC /* HomeVCPresenter.swift in Sources */,

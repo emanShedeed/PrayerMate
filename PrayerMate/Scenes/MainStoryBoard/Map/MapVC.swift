@@ -52,7 +52,7 @@ class MapVC: UIViewController {
         ///
         let searchBar=resultSearchController?.searchBar
         searchBar?.sizeToFit()
-        searchBar?.placeholder = "Search for places"
+        searchBar?.placeholder = "map.searchBarPlaceHolderTitle".localized
         navigationItem.titleView = resultSearchController?.searchBar
         resultSearchController.hidesNavigationBarDuringPresentation = false
         resultSearchController.dimsBackgroundDuringPresentation = true
@@ -63,6 +63,7 @@ class MapVC: UIViewController {
         /////
         let gestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotation))
         mapView.addGestureRecognizer(gestureRecognizer)
+        searchBar?.semanticContentAttribute = .forceLeftToRight
         
     }
     @objc func addAnnotation(gestureRecognizer:UIGestureRecognizer){
@@ -203,6 +204,7 @@ extension MapVC{
         
         // self.navigationItem.leftBarButtonItems = UIBarButtonItem(customView: button)
         //  button.setAttributedTitle(([ NSAttributedString.Key.font: UIFont(name: "Montserrat-Medium", size: 15 )!], for: .normal), for: .normal)
+        self.navigationController?.navigationBar.semanticContentAttribute = .forceLeftToRight
         let button = UIButton.init(type: .custom)
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 12, height: 20))
         imageView.image = UIImage.backwhiteArrow
@@ -216,10 +218,10 @@ extension MapVC{
         barButton.tintColor=UIColor.white
         self.navigationItem.leftBarButtonItem = barButton
         ////
-        let save = UIBarButtonItem(title: "OK".localized, style: .done, target: self, action:#selector(okBtnPressed))
-        save.setTitleTextAttributes([ NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)], for: .normal)
-        self.navigationItem.rightBarButtonItems = [save]
-        save.tintColor=UIColor.white
+        let okBtn = UIBarButtonItem(title: "map.okBtnTitle".localized, style: .done, target: self, action:#selector(okBtnPressed))
+        okBtn.setTitleTextAttributes([ NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)], for: .normal)
+        self.navigationItem.rightBarButtonItems = [okBtn]
+        okBtn.tintColor=UIColor.white
         
     }
     @objc func okBtnPressed(){
