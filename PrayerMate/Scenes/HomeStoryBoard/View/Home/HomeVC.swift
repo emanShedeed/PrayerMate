@@ -10,31 +10,31 @@ import UIKit
 import JTAppleCalendar
 class HomeVC: UIViewController {
     
+  //MARK:- IBOUTLET
     @IBOutlet weak var dateLBL: UILabel!
     @IBOutlet weak var selectedPrayerTimeName: UILabel!
     @IBOutlet weak var remainingTimeLbl: UILabel!
     @IBOutlet weak var prayerTimestableView: UITableView!
     @IBOutlet weak var importBtn: UIButton!
-    
-    ////Calendar
+    //// Calendar IBOUTLET
     @IBOutlet weak var calendarDateTitleLbl: UILabel!
     @IBOutlet weak var calendarView: JTACMonthView!
     @IBOutlet weak var calenadrIncludingHeaderView: UIView!
     @IBOutlet weak var hideCalendareView: UIView!
     
-    let formatter = DateFormatter()
+    //MARK:VARiIABLES
+    let countDownTimerFormatter = DateFormatter()
     var dateAsString = ""
     let calendar = Calendar.current
-    var futureDate: Date!
-    var currentTime:String = ""
+    var nextPrayerDateDate: Date!
+//    var currentTime:String = ""
     var countdown: DateComponents!
-    
     var addressTitle : String!
     var presenter:HomeVCPresenter!
     var prayerTimesArray: [(isCellSelected: Bool, isBtnChecked:Bool)] = .init()
-    ////Calendar
+    ////Calendar VARiIABLES
     let calendareFormatter = DateFormatter()
-    let testCalendar = Calendar(identifier: .gregorian)
+//    let testCalendar = Calendar(identifier: .gregorian)
     var firstDate: Date?
     var twoDatesAlreadySelected: Bool {
         return firstDate != nil && calendarView.selectedDates.count > 1
@@ -44,15 +44,15 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        formatter.locale = NSLocale(localeIdentifier: "en") as Locale?
-        formatter.dateFormat = "hh:mm:ss a"
-        dateAsString = formatter.string(from: Date())
+        
+        countDownTimerFormatter.locale = NSLocale(localeIdentifier: "en") as Locale?
+        countDownTimerFormatter.dateFormat = "hh:mm:ss a"
+        dateAsString = countDownTimerFormatter.string(from: Date())
         
         presenter = HomeVCPresenter(view: self)
-        //        prayerTimesArray=[(isCellSelected: Bool,Bool)]
         prayerTimestableView.backgroundColor = UIColor.clear
         importBtn.addBlurEffect()
-        formateDate()
+        formateTodayDate()
         let urlString="https://muslimsalat.com/" + addressTitle + "/yearly/22-03-2020/false/1.json?key=48ae8106ef6b55e5dac258c0c8d2e224"
         
         let ecnodingString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
@@ -72,8 +72,9 @@ class HomeVC: UIViewController {
         calenadrIncludingHeaderView.isHidden=false
     }
     
-    
-    func formateDate(){
+    // to display at date label
+    func formateTodayDate(){
+        // formate as March 23, 2018
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let myString = formatter.string(from: Date())
@@ -122,8 +123,8 @@ extension HomeVC:UITableViewDelegate,UITableViewDataSource{
 }
 extension HomeVC{
     @objc func updateTime() {
-        dateAsString = formatter.string(from: Date())
-        self.countdown = Calendar.current.dateComponents([.day, .hour, .minute, .second], from: formatter.date(from: dateAsString) ?? Date() , to: self.futureDate)
+        dateAsString = countDownTimerFormatter.string(from: Date())
+        self.countdown = Calendar.current.dateComponents([.day, .hour, .minute, .second], from: countDownTimerFormatter.date(from: dateAsString) ?? Date() , to: self.nextPrayerDateDate)
         //only compute once per call
         //       let days = countdown1.day!
         let hours = countdown.hour!
@@ -245,10 +246,11 @@ extension HomeVC{
     }
     func setupViewsOfCalendar(from visibleDates:DateSegmentInfo){
         let date = visibleDates.monthDates.first!.date
-        formatter.dateFormat="yyyy"
-        let year=formatter.string(from: date)
-        formatter.dateFormat="MMMM"
-        let month=formatter.string(from: date)
+        let calenderTitleFormatter = DateFormatter()
+        calenderTitleFormatter.dateFormat="yyyy"
+        let year=calenderTitleFormatter.string(from: date)
+        calenderTitleFormatter.dateFormat="MMMM"
+        let month=calenderTitleFormatter.string(from: date)
         calendarDateTitleLbl.text = month + " " + year
     }
     func handelCellSelectedColor(cell:JTACDayCell?,celssState:CellState){

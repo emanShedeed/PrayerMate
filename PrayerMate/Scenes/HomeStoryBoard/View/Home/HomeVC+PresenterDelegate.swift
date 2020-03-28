@@ -27,6 +27,7 @@ extension HomeVC:HomeView{
             accurateString = accurateString.replacingOccurrences(of: " ", with: ":00 ")
             //            if let prayerDate = formatter.date(from: accurateString){
             //            let result = currentDate?.compare(prayerDate)
+            let dateAsString = countDownTimerFormatter.string(from: Date())
             let dateDiff = Helper.findDateDiff(time1Str: dateAsString, time2Str: accurateString)
             if(!dateDiff.contains("-") ){
                 nextPrayerIndex = i
@@ -46,7 +47,7 @@ extension HomeVC:HomeView{
                 dateComponent[0] = "\(hours + 12)"
             }
         }
-        futureDate = {
+        nextPrayerDateDate = {
             let future = DateComponents(
                 year: calendar.component(.year, from: Date()),
                 month: calendar.component(.month, from: Date()),
