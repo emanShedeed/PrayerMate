@@ -15,10 +15,12 @@ class HomeVC: UIViewController {
     @IBOutlet weak var remainingTimeLbl: UILabel!
     @IBOutlet weak var prayerTimestableView: UITableView!
     @IBOutlet weak var importBtn: UIButton!
-    @IBOutlet weak var calendarDateTitleLbl: UILabel!
     
+    ////Calendar
+    @IBOutlet weak var calendarDateTitleLbl: UILabel!
     @IBOutlet weak var calendarView: JTACMonthView!
     @IBOutlet weak var calenadrIncludingHeaderView: UIView!
+    @IBOutlet weak var hideCalendareView: UIView!
     
     let formatter = DateFormatter()
     var dateAsString = ""
@@ -59,17 +61,19 @@ class HomeVC: UIViewController {
             presenter.dataRequest(FINAL_URL:final_url)
         }
         setupCalendarView()
-        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+         hideCalendareView.addGestureRecognizer(tap)
+    }
+    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
+        calenadrIncludingHeaderView.isHidden = true
+    }
+    
+    @IBAction func importBtnPressed(_ sender: Any) {
+        calenadrIncludingHeaderView.isHidden=false
     }
     
     
-    
-    
     func formateDate(){
-        // input date in given format (as string)
-        //        let inputDateAsString = "2016-03-09 10:33:59"
-        
-        // initialize formatter and set input date format
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let myString = formatter.string(from: Date())
@@ -145,7 +149,7 @@ extension HomeVC:JTACMonthViewDataSource{
         //        let endDate = Date()
         //        let startDate=calendarFormatter.date(from: "2020 03 24")!
         //        let endDate=calendarFormatter.date(from: "2020 04 24")!
-        let endDate = Calendar.current.date(byAdding: .month, value: 1, to: Date()) ?? Date()
+        let endDate = Calendar.current.date(byAdding: .year, value: 1, to: Date()) ?? Date()
         //        let parameters = ConfigurationParameters(startDate:startDate , endDate:endDate)
         let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate, numberOfRows: 5, generateInDates: .off, generateOutDates: .off , firstDayOfWeek: .sunday)
         return parameters
@@ -186,22 +190,24 @@ extension HomeVC:JTACMonthViewDelegate{
         let dateAsString = calendareFormatter.string(from: date)
         let currentDateAsString=calendareFormatter.string(from: Date())
         if(calendareFormatter.date(from: dateAsString)! < calendareFormatter.date(from: currentDateAsString)!){
+            Helper.showToast(message: "can't select date before today")
             return false
         }
-//        if(firstDate != nil){
-//            let firstDateAsString = calendareFormatter.string(from: firstDate!)
-//            let MaxDate =  Calendar.current.date(byAdding: .month, value: 1, to: calendareFormatter.date(from: firstDateAsString)!) ?? Date()
-//            let maxDateAsString = calendareFormatter.string(from: MaxDate)
-//            if(calendareFormatter.date(from: dateAsString)! > calendareFormatter.date(from: maxDateAsString)!){
-//               
-//                return false
-//            }
-//        }
+        
         if twoDatesAlreadySelected && cellState.selectionType != .programatic || firstDate != nil && date < calendarView.selectedDates[0] {
             firstDate = nil
             let retval = !calendarView.selectedDates.contains(date)
             calendarView.deselectAllDates(triggerSelectionDelegate: false)
             return retval
+        }
+        if( firstDate != nil && date > calendarView.selectedDates[0]){
+            let firstDateAsString = calendareFormatter.string(from: firstDate!)
+            let MaxDate =  Calendar.current.date(byAdding: .month, value: 1, to: calendareFormatter.date(from: firstDateAsString)!) ?? Date()
+            let maxDateAsString = calendareFormatter.string(from: MaxDate)
+            if(calendareFormatter.date(from: dateAsString)! > calendareFormatter.date(from: maxDateAsString)!){
+                Helper.showToast(message: "import Period can'r exceed one Month")
+                return false
+            }
         }
         return true
     }
@@ -263,6 +269,12 @@ extension HomeVC{
             }else{
                 validCell.dayLabel.textColor = UIColor(rgb:0xDEE3E7)
             }
+        }
+        let currentDateAsString=calendareFormatter.string(from: Date())
+        let cellDateAsString=calendareFormatter.string(from: cellState.date)
+        if(calendareFormatter.date(from: cellDateAsString)! < calendareFormatter.date(from: currentDateAsString)!){
+            //  Helper.showToast(message: "can't select date before today")
+            validCell.dayLabel.textColor = UIColor(rgb:0xDEE3E7)
         }
     }
     func handleCellSelected(cell: CustomJTAppleCalendarCell, cellState: CellState) {
