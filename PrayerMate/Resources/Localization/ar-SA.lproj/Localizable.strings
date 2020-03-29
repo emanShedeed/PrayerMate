@@ -40,7 +40,8 @@
 "Home.asrPrayerLblTitle" = "العصر";
 "Home.maghribPrayerLblTitle" = "المغرب";
 "Home.ishaPrayerLblTitle" = "العشاء";
-
+"Home.PreviousDateToasterMessage"="لا يمكن اختيار تاريخ سابق لتاريخ اليوم";
+"Home.moreThanMonthToasterMessage"= "مدة تصدير مواعيد الصلاة لا يمكنها تجاوز شهر";
 /*
 //home viewController
 "home.title" = "الرئيسيه";

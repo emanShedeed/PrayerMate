@@ -13,8 +13,11 @@ extension HomeVC:HomeView{
     }
     
     func fetchDataSucess() {
+        
+      
         prayerTimesArray=[(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false)]
         DispatchQueue.main.async {
+            self.calendarDateTitleLbl.text = self.presenter.calendarDateTitle
             self.prayerTimestableView.reloadData()
         }
 

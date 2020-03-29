@@ -43,7 +43,8 @@
 "Home.asrPrayerLblTitle" = "Asr";
 "Home.maghribPrayerLblTitle" = "Maghrib";
 "Home.ishaPrayerLblTitle" = "Isha";
-
+"Home.PreviousDateToasterMessage"="can't select date before today";
+"Home.moreThanMonthToasterMessage"= "import Period can't exceed one Month";
 
 /*
 //home viewController

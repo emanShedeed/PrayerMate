@@ -376,6 +376,7 @@
                         <outlet property="calendarDateTitleLbl" destination="e01-h6-dOV" id="5Uh-Hh-i3E"/>
                         <outlet property="calendarView" destination="4NI-Rb-VNC" id="dxh-UK-Orz"/>
                         <outlet property="dateLBL" destination="mP5-F7-rng" id="UXW-zw-UZM"/>
+                        <outlet property="daysStackView" destination="8xe-0w-ffI" id="QaX-Ae-K5H"/>
                         <outlet property="hideCalendareView" destination="LCQ-DG-O9t" id="vgM-DK-NBz"/>
                         <outlet property="importBtn" destination="JfE-U2-afT" id="KJc-TL-a0b"/>
                         <outlet property="prayerTimestableView" destination="CqQ-3d-Vzw" id="9Io-gT-2Ob"/>
