@@ -105,39 +105,40 @@ extension LocationVC:CLLocationManagerDelegate{
         geoCoder.reverseGeocodeLocation(CLLocation(latitude: lat, longitude:long), completionHandler: { (placemarks, error) -> Void in
             
             // Place details
-            var placeMark: CLPlacemark!
+            var placeMark: CLPlacemark?
             placeMark = placemarks?[0]
             
             // Complete address as PostalAddress
             // print(placeMark.postalAddress as Any)  //  Import Contacts
             
             // Location name
-            if let locationName = placeMark.name  {
+            
+            if let locationName = placeMark?.name  {
                 print(locationName)
             }
             
             // Street address
-            if let street = placeMark.thoroughfare {
+            if let street = placeMark?.thoroughfare {
                 print(street)
             }
             
             // Country
-            if let country = placeMark.country {
+            if let country = placeMark?.country {
                 print(country)
             }
             var title=""
             // street
-            if let thoroughfare = placeMark.thoroughfare {
+            if let thoroughfare = placeMark?.thoroughfare {
                 title +=  thoroughfare + " , "
                 
             }
             // city
-            if let city=placeMark.locality{
+            if let city=placeMark?.locality{
                 title += city + " , "
                 self.addressTitle = city
             }
             
-            if let country = placeMark.country{
+            if let country = placeMark?.country{
                 title +=  country
 //                self.addressTitle += " \(country)"
             }

@@ -69,7 +69,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="SettingsTV" id="Pmg-p5-KPm" customClass="SettingsTV" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Uf1-rD-EY3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="468.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="480.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <sections>
@@ -445,6 +445,7 @@
                     <connections>
                         <outlet property="settingsTableView" destination="Uf1-rD-EY3" id="YCg-5m-sO5"/>
                         <segue destination="DrV-qK-Cmn" kind="show" identifier="goToFrequentlyQuestionsVC" id="sf3-0F-eba"/>
+                        <segue destination="mJb-ZO-skV" kind="presentation" identifier="goToAboutC" id="VvX-hc-z3a"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5aa-yt-dR7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -456,11 +457,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="DrV-qK-Cmn" customClass="FrequentlyQuestionsVC" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yvB-32-8P4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="468.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="480.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="icu-5U-Dg1">
-                                <rect key="frame" x="0.0" y="81" width="375" height="387.5"/>
+                                <rect key="frame" x="0.0" y="81" width="375" height="399.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -546,7 +547,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N7F-8m-oMU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4452" y="135.38230884557723"/>
+            <point key="canvasLocation" x="4441" y="609"/>
         </scene>
         <!--Settings Nav Bar-->
         <scene sceneID="dad-Zy-JKi">
@@ -567,6 +568,118 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Krs-uR-BfF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2004" y="100.29985007496252"/>
+        </scene>
+        <!--AboutVC-->
+        <scene sceneID="Ygt-wd-G5p">
+            <objects>
+                <viewController storyboardIdentifier="MovesVC" modalPresentationStyle="overCurrentContext" id="mJb-ZO-skV" customClass="AboutVC" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KUl-4z-RKC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="480.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vsa-ra-d83">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.23000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="closeViewBtnPressed:" destination="mJb-ZO-skV" eventType="touchUpInside" id="KHd-sb-ZTO"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFQ-DI-3Kn" userLabel="container view" customClass="RoundedView" customModule="PrayerMate" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="49.5" width="375" height="451"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcL-xo-43g">
+                                        <rect key="frame" x="17" y="37" width="0.0" height="0.0"/>
+                                        <attributedString key="attributedText"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="About.titleLbl"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjY-R5-4Jy">
+                                        <rect key="frame" x="17" y="57" width="341" height="25"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="sdgfhjkl">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.37647058823529411" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="13" name="SFProText-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.6499999999999999" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="About.descriptionLbl"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T23-EA-pCQ">
+                                        <rect key="frame" x="17" y="102" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <color key="textColor" red="0.039215686274509803" green="0.039215686274509803" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="About.contactUs"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PrayerMate@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5q-h5-dK8">
+                                        <rect key="frame" x="17" y="113" width="153" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="AppColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMt-a2-Vc7">
+                                        <rect key="frame" x="120.5" y="160" width="134" height="5"/>
+                                        <color key="backgroundColor" red="0.81960784313725488" green="0.83921568627450982" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="134" id="6Ds-0F-ZYG"/>
+                                            <constraint firstAttribute="height" constant="5" id="TBV-R6-9es"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="BjY-R5-4Jy" firstAttribute="top" secondItem="RcL-xo-43g" secondAttribute="bottom" constant="20" id="4H7-Cu-9Bw"/>
+                                    <constraint firstItem="RMt-a2-Vc7" firstAttribute="centerX" secondItem="sFQ-DI-3Kn" secondAttribute="centerX" id="Aeu-3j-Kmt"/>
+                                    <constraint firstItem="RMt-a2-Vc7" firstAttribute="top" secondItem="r5q-h5-dK8" secondAttribute="bottom" constant="30" id="Ala-xT-tES"/>
+                                    <constraint firstAttribute="height" constant="451" id="Bct-Xs-Mze"/>
+                                    <constraint firstItem="BjY-R5-4Jy" firstAttribute="leading" secondItem="RcL-xo-43g" secondAttribute="leading" id="FfZ-8N-LhK"/>
+                                    <constraint firstItem="RcL-xo-43g" firstAttribute="leading" secondItem="sFQ-DI-3Kn" secondAttribute="leading" constant="17" id="Fti-JB-zEL"/>
+                                    <constraint firstItem="RcL-xo-43g" firstAttribute="top" secondItem="sFQ-DI-3Kn" secondAttribute="top" constant="37" id="Kvm-59-Wki"/>
+                                    <constraint firstItem="T23-EA-pCQ" firstAttribute="top" secondItem="BjY-R5-4Jy" secondAttribute="bottom" constant="20" id="V4X-Go-61K"/>
+                                    <constraint firstItem="r5q-h5-dK8" firstAttribute="leading" secondItem="RcL-xo-43g" secondAttribute="leading" id="je5-6C-9Al"/>
+                                    <constraint firstItem="r5q-h5-dK8" firstAttribute="top" secondItem="T23-EA-pCQ" secondAttribute="bottom" constant="11" id="ogJ-2a-Hx1"/>
+                                    <constraint firstItem="T23-EA-pCQ" firstAttribute="leading" secondItem="RcL-xo-43g" secondAttribute="leading" id="rD9-lU-Zg5"/>
+                                    <constraint firstAttribute="trailing" secondItem="BjY-R5-4Jy" secondAttribute="trailing" constant="17" id="zl8-Qe-0Lr"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.2538527397" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sFQ-DI-3Kn" firstAttribute="leading" secondItem="vMo-Cu-ziZ" secondAttribute="leading" id="2sU-rK-wl3"/>
+                            <constraint firstItem="Vsa-ra-d83" firstAttribute="leading" secondItem="vMo-Cu-ziZ" secondAttribute="leading" id="3Lg-md-J3E"/>
+                            <constraint firstItem="sFQ-DI-3Kn" firstAttribute="top" secondItem="Vsa-ra-d83" secondAttribute="bottom" constant="-20" id="4PR-aj-KMv"/>
+                            <constraint firstItem="Vsa-ra-d83" firstAttribute="top" secondItem="vMo-Cu-ziZ" secondAttribute="top" id="7iv-Fp-w3E"/>
+                            <constraint firstItem="vMo-Cu-ziZ" firstAttribute="bottom" secondItem="sFQ-DI-3Kn" secondAttribute="bottom" constant="-20" id="9GZ-cC-q8r"/>
+                            <constraint firstItem="Vsa-ra-d83" firstAttribute="leading" secondItem="vMo-Cu-ziZ" secondAttribute="leading" id="9H7-XS-csm"/>
+                            <constraint firstItem="Vsa-ra-d83" firstAttribute="trailing" secondItem="vMo-Cu-ziZ" secondAttribute="trailing" id="LNw-HN-6qI"/>
+                            <constraint firstItem="Vsa-ra-d83" firstAttribute="top" secondItem="vMo-Cu-ziZ" secondAttribute="top" id="M0v-vs-Wee"/>
+                            <constraint firstItem="sFQ-DI-3Kn" firstAttribute="trailing" secondItem="vMo-Cu-ziZ" secondAttribute="trailing" id="Uv6-m2-zQC"/>
+                            <constraint firstItem="vMo-Cu-ziZ" firstAttribute="trailing" secondItem="Vsa-ra-d83" secondAttribute="trailing" id="myC-MK-UoC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vMo-Cu-ziZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerViewHeight" destination="Bct-Xs-Mze" id="SQT-Lr-iIJ"/>
+                        <outlet property="roundedView" destination="sFQ-DI-3Kn" id="wWO-vE-tX0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ho8-tC-afa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4441" y="53"/>
         </scene>
     </scenes>
     <resources>

@@ -56,6 +56,32 @@
 "Settings.faqs" = "Faqs";
 "Settings.inviteFriends" = "Invite friends";
 
+//FAQC viewController
+"FAQC.titleLbl" = "FAQC";
+"FAQC.firstQuestionTitle" = "What is Prayer mate?";
+"FAQC.firstQuestionDescription" = "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.";
+
+"FAQC.secondQuestionTitle" = "Why would I use prayer mate?";
+"FAQC.secondQuestionDescription" = "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.";
+
+"FAQC.thirdQuestionTitle" = "How can I enable notification on the app?";
+"FAQC.thirdQuestionDescription" = "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.";
+
+"FAQC.fourthQuestionTitle" = "How can I be safe while using prayer mate?";
+"FAQC.fourthQuestionDescription" = "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.";
+
+"FAQC.fifthQuestionTitle" = "How prayer mate works?";
+"FAQC.fifthQuestionDescription" = "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.";
+
+"FAQC.sixthQuestionTitle" = "Where is prayer mate available?";
+"FAQC.sixthQuestionDescription" = "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.";
+
+
+//About viewController
+"About.titleLbl" = "About Prayer Mate";
+"About.descriptionLbl" = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam .";
+"About.contactUs" ="Contact us :";
+
 
 /*
 "language.description" = "اللغه";

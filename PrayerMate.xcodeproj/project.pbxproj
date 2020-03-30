@@ -22,6 +22,7 @@
 		BD12EB46242225EB00001437 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB45242225EA00001437 /* RoundedButton.swift */; };
 		BD12EB492422267F00001437 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB482422267F00001437 /* LocationVC.swift */; };
 		BD12EB4B2422290C00001437 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB4A2422290B00001437 /* RoundedTextField.swift */; };
+		BD2E0BF12431D64800D2B6E6 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2E0BF02431D64800D2B6E6 /* AboutVC.swift */; };
 		BD42746D242A4459007DE9AC /* CustomJTAppleCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD42746C242A4459007DE9AC /* CustomJTAppleCalendarCell.swift */; };
 		BD65890F24307CA300FEE06C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD65890E24307CA300FEE06C /* Settings.storyboard */; };
 		BD6589152430944500FEE06C /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6589142430944500FEE06C /* SettingVC.swift */; };
@@ -81,6 +82,7 @@
 		BD12EB45242225EA00001437 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		BD12EB482422267F00001437 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		BD12EB4A2422290B00001437 /* RoundedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		BD2E0BF02431D64800D2B6E6 /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		BD42746C242A4459007DE9AC /* CustomJTAppleCalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomJTAppleCalendarCell.swift; sourceTree = "<group>"; };
 		BD65890E24307CA300FEE06C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		BD6589142430944500FEE06C /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
@@ -210,6 +212,14 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
+		BD2E0BEF2431D5F800D2B6E6 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				BD2E0BF02431D64800D2B6E6 /* AboutVC.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		BD658910243093FF00FEE06C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,19 +231,20 @@
 		BD6589112430941100FEE06C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BD6589162430C7BA00FEE06C /* SettingsVC */,
+				BD6589162430C7BA00FEE06C /* Settings */,
 				BD6589172430C7CA00FEE06C /* SettingsVCContainerView */,
 				BD6589182430D09200FEE06C /* FAQ */,
+				BD2E0BEF2431D5F800D2B6E6 /* About */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		BD6589162430C7BA00FEE06C /* SettingsVC */ = {
+		BD6589162430C7BA00FEE06C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
 				BD6589142430944500FEE06C /* SettingVC.swift */,
 			);
-			path = SettingsVC;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		BD6589172430C7CA00FEE06C /* SettingsVCContainerView */ = {
@@ -636,6 +647,7 @@
 				BDFCFE432418E78A0033D031 /* UIViewExtension.swift in Sources */,
 				BDD1F74A2417B5C7006B87B7 /* UIString+Extension.swift in Sources */,
 				BD65891E2430D0EC00FEE06C /* FrequentlyQuestionsVC.swift in Sources */,
+				BD2E0BF12431D64800D2B6E6 /* AboutVC.swift in Sources */,
 				BDFCFE442418E78A0033D031 /* UIFontExtension.swift in Sources */,
 				BDD1F7512417B60E006B87B7 /* Helper.swift in Sources */,
 				BDCF6A68240D13B500DD46F7 /* MainViewController.swift in Sources */,

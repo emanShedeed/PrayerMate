@@ -45,26 +45,26 @@ class FrequentlyQuestionsVC: UIViewController {
     }
     func loadArray(){
         //1
-        questionsArray.append((questionTitle: "What is Prayer mate?", questionAnswer: "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.", isExpanded: false))
+        questionsArray.append((questionTitle: "FAQC.firstQuestionTitle".localized, questionAnswer: "FAQC.firstQuestionDescription".localized, isExpanded: false))
         //2
-           questionsArray.append((questionTitle: "Why would I use prayer mate?", questionAnswer: "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.", isExpanded: false))
+         questionsArray.append((questionTitle: "FAQC.secondQuestionTitle".localized, questionAnswer: "FAQC.secondQuestionDescription".localized, isExpanded: false))
         
         //3
-           questionsArray.append((questionTitle: "How can I enable notification on the app?", questionAnswer: "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.", isExpanded: false))
+           questionsArray.append((questionTitle: "FAQC.thirdQuestionTitle".localized, questionAnswer: "FAQC.thirdQuestionDescription".localized, isExpanded: false))
         
         //4
-           questionsArray.append((questionTitle: "How can I be safe while using prayer mate?", questionAnswer: "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.", isExpanded: false))
+        questionsArray.append((questionTitle: "FAQC.fourthQuestionTitle".localized, questionAnswer: "FAQC.fourthQuestionDescription".localized, isExpanded: false))
         
         //5
-           questionsArray.append((questionTitle: "How prayer mate works?", questionAnswer: "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.", isExpanded: false))
+          questionsArray.append((questionTitle: "FAQC.fifthQuestionTitle".localized, questionAnswer: "FAQC.fifthQuestionDescription".localized, isExpanded: false))
         
         //6
-           questionsArray.append((questionTitle: "Where is prayer mate available?", questionAnswer: "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.", isExpanded: false))
+          questionsArray.append((questionTitle: "FAQC.sixthQuestionTitle".localized, questionAnswer: "FAQC.sixthQuestionDescription".localized, isExpanded: false))
     }
  
     func setUpNavBar(){
         let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18),NSAttributedString.Key.foregroundColor:UIColor.white]
-        titleLabel.attributedText = NSAttributedString(string: "FAQS".localized, attributes: attributes as [NSAttributedString.Key : Any])
+        titleLabel.attributedText = NSAttributedString(string: "FAQC.titleLbl".localized, attributes: attributes as [NSAttributedString.Key : Any])
       
         titleLabel.letterSpace=1.08
         titleLabel.sizeToFit()
