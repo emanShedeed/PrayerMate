@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FrequentlyQuestionsVC: UIViewController {
+class FrequentlyQuestionsVC: BaseVC {
     
     @IBOutlet weak var questionsTV: UITableView!
     
@@ -41,6 +41,7 @@ class FrequentlyQuestionsVC: UIViewController {
         cellHeight = UITableView.automaticDimension
         questionsTV.estimatedRowHeight = 63.0;
         setUpNavBar()
+//        TransparentNavBar()
         loadArray()
     }
     func loadArray(){
@@ -80,6 +81,9 @@ class FrequentlyQuestionsVC: UIViewController {
         searchbarBtnIcon = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchButtonPressed))
         navigationItem.rightBarButtonItem = searchbarBtnIcon
     }
+//    func TransparentNavBar(){ self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//    }
     @objc func searchButtonPressed(sender: AnyObject) {
         showSearchBar()
     }

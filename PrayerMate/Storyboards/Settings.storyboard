@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovg-YT-xC3">
-                                <rect key="frame" x="17" y="108" width="14" height="24.5"/>
+                                <rect key="frame" x="17" y="108" width="28" height="49"/>
                                 <state key="normal" image="back-AppColor"/>
                                 <connections>
                                     <action selector="backButtinPressed:" destination="yME-Lw-VOr" eventType="touchUpInside" id="ay9-kA-RX6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNU-b6-5Gc">
-                                <rect key="frame" x="48" y="102.5" width="118" height="36"/>
+                                <rect key="frame" x="62" y="114.5" width="118" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" name="AppColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,7 +37,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FlR-5Q-Rrp">
-                                <rect key="frame" x="0.0" y="186.5" width="375" height="480.5"/>
+                                <rect key="frame" x="0.0" y="198.5" width="375" height="468.5"/>
                                 <connections>
                                     <segue destination="Pmg-p5-KPm" kind="embed" id="Qfk-JY-cQr"/>
                                 </connections>
@@ -558,7 +558,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
-                        <color key="barTintColor" name="AppColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -567,7 +566,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Krs-uR-BfF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2004" y="100.29985007496252"/>
+            <point key="canvasLocation" x="2127" y="90"/>
         </scene>
         <!--AboutVC-->
         <scene sceneID="Ygt-wd-G5p">
