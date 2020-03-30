@@ -98,6 +98,7 @@ class HomeVCPresenter{
         return outputDate
     }
 }
+
 extension HomeVCPresenter{
     func setupCalendarView(calendarView:JTACMonthView,calenadrIncludingHeaderView:UIView,calendareFormatter:DateFormatter){
         //

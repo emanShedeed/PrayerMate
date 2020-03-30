@@ -26,16 +26,20 @@ class SplashVC: UIViewController {
         
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNeedsStatusBarAppearanceUpdate()
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.view.addSubview(activityIndicator)
         activityIndicator.center = self.loadingView.center
         activityIndicator.startAnimating()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-    }
+  
     override func viewDidAppear(_ animated: Bool) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
             UserDefaults.standard.set(nil, forKey:"appLanguage" )

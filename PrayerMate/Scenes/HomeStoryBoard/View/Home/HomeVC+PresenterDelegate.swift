@@ -28,8 +28,6 @@ extension HomeVC:HomeView{
             accurateString = accurateString.replacingOccurrences(of: "am", with: "AM")
             accurateString = accurateString.replacingOccurrences(of: "pm", with: "PM")
             accurateString = accurateString.replacingOccurrences(of: " ", with: ":00 ")
-            //            if let prayerDate = formatter.date(from: accurateString){
-            //            let result = currentDate?.compare(prayerDate)
             let dateAsString = countDownTimerFormatter.string(from: Date())
             let dateDiff = Helper.findDateDiff(time1Str: dateAsString, time2Str: accurateString)
             if(!dateDiff.contains("-") ){
@@ -65,7 +63,7 @@ extension HomeVC:HomeView{
         DispatchQueue.main.async {
   self.selectedPrayerTimeName.text=self.presenter.prayerTimesNames[nextPrayerIndex].localized
             
-        self.runCountdown()
+            self.runCountdown()
         }
         
     }

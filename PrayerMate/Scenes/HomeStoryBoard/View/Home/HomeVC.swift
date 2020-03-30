@@ -25,10 +25,10 @@ class HomeVC: UIViewController {
     @IBOutlet weak var daysStackView: UIStackView!
     //MARK:VARiIABLES
     let countDownTimerFormatter = DateFormatter()
-
+    var countdown: DateComponents!
     let calendar = Calendar.current
     var nextPrayerDateDate: Date!
-    var countdown: DateComponents!
+
     var addressTitle : String!
     var presenter:HomeVCPresenter!
     var prayerTimesArray: [(isCellSelected: Bool, isBtnChecked:Bool)] = .init()
@@ -72,26 +72,12 @@ class HomeVC: UIViewController {
         calenadrIncludingHeaderView.isHidden=false
     }
     
-    // to display at date label
-    func formateTodayDate(){
-        // formate as March 23, 2018
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let myString = formatter.string(from: Date())
-        // read input date string as NSDate instance
-        if let date = formatter.date(from: myString) {
-            
-            // set locale to "ar_DZ" and format as per your specifications
-            if AppSetting.shared.getCurrentLanguage() == AppLanguages.ar{
-                formatter.locale = NSLocale(localeIdentifier: "ar") as Locale
-            }
-            formatter.dateFormat = "MMMM dd, yyyy "
-            let outputDate = formatter.string(from: date)
-            
-            print(outputDate)
-            dateLBL.text = outputDate
+    @IBAction func settingBtnPressed(_ sender: Any) {
+        if let viewController = UIStoryboard.Settings.instantiateInitialViewController(){
+        self.show(viewController, sender: self)
         }
     }
+    
 }
 extension HomeVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -125,17 +111,11 @@ extension HomeVC{
     @objc func updateTime() {
         let dateAsString = countDownTimerFormatter.string(from: Date())
         self.countdown = Calendar.current.dateComponents([.day, .hour, .minute, .second], from: countDownTimerFormatter.date(from: dateAsString) ?? Date() , to: self.nextPrayerDateDate)
-        //only compute once per call
-        //       let days = countdown1.day!
         let hours = countdown.hour!
         let minutes = countdown.minute!
         let seconds = countdown.second!
         print( String(format: "%02d:%02d:%02d",  hours, minutes, seconds))
-        //        if(AppSetting.shared.getCurrentLanguage() == .ar){
-        //            remainingTimeLbl.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds).EnToARDigits
-        //        }else{
         remainingTimeLbl.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
-        //        }
         
     }
     
@@ -145,14 +125,8 @@ extension HomeVC{
 }
 extension HomeVC:JTACMonthViewDataSource{
     func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
-        
         let startDate = Date()
-        //        let endDate = Date()
-        //        let startDate=calendarFormatter.date(from: "2020 03 24")!
-        //        let endDate=calendarFormatter.date(from: "2020 04 24")!
         let endDate = Calendar.current.date(byAdding: .year, value: 1, to: Date()) ?? Date()
-        //        let parameters = ConfigurationParameters(startDate:startDate , endDate:endDate)
-       // (startDate: startDate, endDate: endDate, numberOfRows: 5, generateInDates: .off, generateOutDates: .off , firstDayOfWeek: .sunday)
         let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate, numberOfRows: 5, calendar: Calendar(identifier: .gregorian), generateInDates: .off, generateOutDates: .off, firstDayOfWeek: .sunday)
         return parameters
     }
@@ -226,85 +200,5 @@ extension HomeVC:JTACMonthViewDelegate{
     
 }
 
-
-//extension HomeVC{
-//    func setupCalendarView(){
-//        //
-//        calendareFormatter.dateFormat="yyyy MM dd"
-//        calendareFormatter.timeZone = Calendar.current.timeZone
-//        calendareFormatter.locale = Calendar.current.locale
-//        calendarView.allowsMultipleSelection = true
-//        calendarView.allowsRangedSelection = true
-//        //make top rounded calendar
-//        calenadrIncludingHeaderView.roundCorners([.topLeft,.topRight], radius: 20)
-//        //setup calendarSpacing
-//        calendarView.minimumLineSpacing=0
-//        calendarView.minimumInteritemSpacing=0
-//        //setup header Date Label
-//
-//        calendarView.visibleDates { (visableDates) in
-//            self.setupViewsOfCalendar(from: visableDates)
-//        }
-//    }
-//    func setupViewsOfCalendar(from visibleDates:DateSegmentInfo){
-//        let date = visibleDates.monthDates.first!.date
-//        let calenderTitleFormatter = DateFormatter()
-//        calenderTitleFormatter.dateFormat="yyyy"
-//        let year=calenderTitleFormatter.string(from: date)
-//        calenderTitleFormatter.dateFormat="MMMM"
-//        let month=calenderTitleFormatter.string(from: date)
-//        calendarDateTitleLbl.text = month + " " + year
-//    }
-//    func handelCellSelectedColor(cell:JTACDayCell?,celssState:CellState){
-//        guard let validCell = cell as? CustomJTAppleCalendarCell else{return}
-//        if(validCell.isSelected){
-//            validCell.selectedView.isHidden=false
-//        }else{
-//            validCell.selectedView.isHidden=true
-//        }
-//    }
-//    func handleCellTextColor(cell:JTACDayCell?,cellState:CellState){
-//        guard let validCell = cell as? CustomJTAppleCalendarCell else{return}
-//        if(validCell.isSelected){
-//            validCell.dayLabel.textColor = .black
-//        }else{
-//            if cellState.dateBelongsTo == .thisMonth{
-//                validCell.dayLabel.textColor = .black
-//            }else{
-//                validCell.dayLabel.textColor = UIColor(rgb:0xDEE3E7)
-//            }
-//        }
-//        let currentDateAsString=calendareFormatter.string(from: Date())
-//        let cellDateAsString=calendareFormatter.string(from: cellState.date)
-//        if(calendareFormatter.date(from: cellDateAsString)! < calendareFormatter.date(from: currentDateAsString)!){
-//            //  Helper.showToast(message: "can't select date before today")
-//            validCell.dayLabel.textColor = UIColor(rgb:0xDEE3E7)
-//        }
-//    }
-//    func handleCellSelected(cell: CustomJTAppleCalendarCell, cellState: CellState) {
-//        cell.selectedView.isHidden = !cellState.isSelected
-//        switch cellState.selectedPosition() {
-//        case .left:
-//            //              cell.selectedView.layer.cornerRadius = 20
-//            cell.selectedView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
-//        case .middle:
-//            //              cell.selectedView.layer.cornerRadius = 0
-//            cell.selectedView.layer.maskedCorners = []
-//        case .right:
-//            //              cell.selectedView.layer.cornerRadius = 20
-//            cell.selectedView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
-//        case .full:
-//            //              cell.selectedView.layer.cornerRadius = 20
-//            cell.selectedView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
-//        default: break
-//        }
-//    }
-//    func configureCell(view: JTACDayCell?, cellState: CellState) {
-//        guard let cell = view as? CustomJTAppleCalendarCell  else { return }
-//        cell.dayLabel.text = cellState.text
-//        handleCellTextColor(cell: cell, cellState: cellState)
-//        handleCellSelected(cell: cell, cellState: cellState)
-//    }
-//}
 
 

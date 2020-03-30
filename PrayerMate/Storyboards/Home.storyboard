@@ -26,6 +26,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRR-5l-1BR" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCQ-DG-O9t" userLabel="hideCalendareView">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mP5-F7-rng">
                                                 <rect key="frame" x="187.5" y="36" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -35,6 +39,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeI-lp-Ejv">
                                                 <rect key="frame" x="17" y="24" width="24" height="24"/>
                                                 <state key="normal" image="setting"/>
+                                                <connections>
+                                                    <action selector="settingBtnPressed:" destination="hRK-ZJ-BbG" eventType="touchUpInside" id="oGB-nG-8Cz"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzV-wR-9is" userLabel="titleView">
                                                 <rect key="frame" x="188" y="94" width="142" height="115"/>
@@ -148,10 +155,6 @@
                                                     <action selector="importBtnPressed:" destination="hRK-ZJ-BbG" eventType="touchUpInside" id="Ye2-az-RLp"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCQ-DG-O9t" userLabel="hideCalendareView">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
-                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gE9-fh-Lok" userLabel="CalenadarView">
                                                 <rect key="frame" x="0.0" y="219" width="375" height="433"/>
                                                 <subviews>
@@ -263,15 +266,15 @@
                                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomJTAppleCalendarCell" id="L5E-UL-RiK" customClass="CustomJTAppleCalendarCell" customModule="PrayerMate" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="CMm-Ja-VoK">
+                                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CMm-Ja-VoK">
                                                                             <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <subviews>
-                                                                                <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e1j-N0-njO">
+                                                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1j-N0-njO">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                                                                                     <color key="backgroundColor" red="0.70588235294117641" green="0.8784313725490196" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 </view>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P3-tK-X4d">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P3-tK-X4d">
                                                                                     <rect key="frame" x="-3.5" y="7.5" width="42" height="20.5"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                     <nil key="textColor"/>
