@@ -23,4 +23,12 @@ extension UIImage {
     static let unselectedPrayerTime = UIImage(named: "unselectedPrayerTime")
     static let calendar = UIImage(named: "calendar")
     static let backwhiteArrow = UIImage(named: "back-white")
+    /////
+    static let settingsLocation = UIImage(named: "location-appColor")
+    static let language = UIImage(named: "language")
+    static let clock = UIImage(named: "clock")
+    static let method = UIImage(named: "method")
+    static let hourclock = UIImage(named: "24hourclock")
+    static let faq = UIImage(named: "faq")
+    static let invite = UIImage(named: "invite")
 }

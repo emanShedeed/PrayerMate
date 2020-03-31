@@ -29,7 +29,6 @@
 		BD6589152430944500FEE06C /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6589142430944500FEE06C /* SettingVC.swift */; };
 		BD65891E2430D0EC00FEE06C /* FrequentlyQuestionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65891B2430D0EC00FEE06C /* FrequentlyQuestionsVC.swift */; };
 		BD6589212430D2B100FEE06C /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6589202430D2B100FEE06C /* QuestionCell.swift */; };
-		BD6589232430D36000FEE06C /* SettingsTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6589222430D36000FEE06C /* SettingsTV.swift */; };
 		BD77215824165829008A8947 /* PrayerTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77215724165829008A8947 /* PrayerTime.swift */; };
 		BDA3F868241F712400705569 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3F864241F712100705569 /* BundleExtension.swift */; };
 		BDA3F869241F712400705569 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3F865241F712200705569 /* main.swift */; };
@@ -63,6 +62,10 @@
 		BDFCFE432418E78A0033D031 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFCFE412418E78A0033D031 /* UIViewExtension.swift */; };
 		BDFCFE442418E78A0033D031 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFCFE422418E78A0033D031 /* UIFontExtension.swift */; };
 		BDFCFE49241E4B310033D031 /* SYActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFCFE48241E4B310033D031 /* SYActivityIndicatorView.swift */; };
+		BDFFDA56243252B70066F493 /* CalendarMethodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA55243252B70066F493 /* CalendarMethodVC.swift */; };
+		BDFFDA5F2432E07D0066F493 /* CalendarMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA5E2432E07D0066F493 /* CalendarMethodCell.swift */; };
+		BDFFDA622432EEDD0066F493 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA612432EEDD0066F493 /* SettingCell.swift */; };
+		BDFFDA662432F5B80066F493 /* SettingVC+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA652432F5B80066F493 /* SettingVC+delegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,7 +93,6 @@
 		BD6589142430944500FEE06C /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		BD65891B2430D0EC00FEE06C /* FrequentlyQuestionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequentlyQuestionsVC.swift; sourceTree = "<group>"; };
 		BD6589202430D2B100FEE06C /* QuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
-		BD6589222430D36000FEE06C /* SettingsTV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTV.swift; sourceTree = "<group>"; };
 		BD77215724165829008A8947 /* PrayerTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTime.swift; sourceTree = "<group>"; };
 		BDA3F864241F712100705569 /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		BDA3F865241F712200705569 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -130,6 +132,10 @@
 		BDFCFE412418E78A0033D031 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		BDFCFE422418E78A0033D031 /* UIFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
 		BDFCFE48241E4B310033D031 /* SYActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SYActivityIndicatorView.swift; sourceTree = "<group>"; };
+		BDFFDA55243252B70066F493 /* CalendarMethodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMethodVC.swift; sourceTree = "<group>"; };
+		BDFFDA5E2432E07D0066F493 /* CalendarMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMethodCell.swift; sourceTree = "<group>"; };
+		BDFFDA612432EEDD0066F493 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		BDFFDA652432F5B80066F493 /* SettingVC+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingVC+delegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,9 +240,9 @@
 			isa = PBXGroup;
 			children = (
 				BD6589162430C7BA00FEE06C /* Settings */,
-				BD6589172430C7CA00FEE06C /* SettingsVCContainerView */,
 				BD6589182430D09200FEE06C /* FAQ */,
 				BD2E0BEF2431D5F800D2B6E6 /* About */,
+				BDFFDA542432526F0066F493 /* CalendarMethod */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -245,16 +251,10 @@
 			isa = PBXGroup;
 			children = (
 				BD6589142430944500FEE06C /* SettingVC.swift */,
+				BDFFDA652432F5B80066F493 /* SettingVC+delegate.swift */,
+				BDFFDA602432EEBA0066F493 /* SettingCell */,
 			);
 			path = Settings;
-			sourceTree = "<group>";
-		};
-		BD6589172430C7CA00FEE06C /* SettingsVCContainerView */ = {
-			isa = PBXGroup;
-			children = (
-				BD6589222430D36000FEE06C /* SettingsTV.swift */,
-			);
-			path = SettingsVCContainerView;
 			sourceTree = "<group>";
 		};
 		BD6589182430D09200FEE06C /* FAQ */ = {
@@ -490,6 +490,31 @@
 			path = Loader;
 			sourceTree = "<group>";
 		};
+		BDFFDA542432526F0066F493 /* CalendarMethod */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFDA55243252B70066F493 /* CalendarMethodVC.swift */,
+				BDFFDA5D2432E0270066F493 /* CalendarMethodCell */,
+			);
+			path = CalendarMethod;
+			sourceTree = "<group>";
+		};
+		BDFFDA5D2432E0270066F493 /* CalendarMethodCell */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFDA5E2432E07D0066F493 /* CalendarMethodCell.swift */,
+			);
+			path = CalendarMethodCell;
+			sourceTree = "<group>";
+		};
+		BDFFDA602432EEBA0066F493 /* SettingCell */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFDA612432EEDD0066F493 /* SettingCell.swift */,
+			);
+			path = SettingCell;
+			sourceTree = "<group>";
+		};
 		C7827DD965501B07B1947142 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -653,6 +678,7 @@
 				BD5FC48D24320C5D0033BCCE /* BaseVC.swift in Sources */,
 				BD2E0BF12431D64800D2B6E6 /* AboutVC.swift in Sources */,
 				BDFCFE442418E78A0033D031 /* UIFontExtension.swift in Sources */,
+				BDFFDA662432F5B80066F493 /* SettingVC+delegate.swift in Sources */,
 				BDD1F7512417B60E006B87B7 /* Helper.swift in Sources */,
 				BDCF6A68240D13B500DD46F7 /* MainViewController.swift in Sources */,
 				BD0C905524273A8B000B8EAC /* UIButton+Extension.swift in Sources */,
@@ -661,15 +687,17 @@
 				BDCF6A6A240D16D400DD46F7 /* WelcomeViewController.swift in Sources */,
 				BDFCFE49241E4B310033D031 /* SYActivityIndicatorView.swift in Sources */,
 				BD12EB4B2422290C00001437 /* RoundedTextField.swift in Sources */,
+				BDFFDA5F2432E07D0066F493 /* CalendarMethodCell.swift in Sources */,
 				BD0C905A24276C13000B8EAC /* MapVC.swift in Sources */,
 				BDA3F871241F7E2B00705569 /* localizedText+Extension.swift in Sources */,
 				BDD1F7492417B5C7006B87B7 /* UIImage+Extension.swift in Sources */,
 				BDD1F74B2417B5C7006B87B7 /* UIColor+Externsion.swift in Sources */,
 				BD0C905C242787E9000B8EAC /* PrayerTimeAnnual.swift in Sources */,
 				BDCF6A6F240D257A00DD46F7 /* AuthenticationManager.swift in Sources */,
-				BD6589232430D36000FEE06C /* SettingsTV.swift in Sources */,
 				BDA3F868241F712400705569 /* BundleExtension.swift in Sources */,
+				BDFFDA56243252B70066F493 /* CalendarMethodVC.swift in Sources */,
 				BD0C90502423B175000B8EAC /* HomeVC+PresenterDelegate.swift in Sources */,
+				BDFFDA622432EEDD0066F493 /* SettingCell.swift in Sources */,
 				BD0C90482423A161000B8EAC /* HomeVC.swift in Sources */,
 				BD12EB4424221B9D00001437 /* LanguageVCPresenter.swift in Sources */,
 				BD0C905924276C13000B8EAC /* LocationSearchtable.swift in Sources */,

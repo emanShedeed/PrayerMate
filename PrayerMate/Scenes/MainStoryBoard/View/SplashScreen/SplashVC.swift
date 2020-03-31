@@ -23,7 +23,11 @@ class SplashVC: UIViewController {
         //  getUIFonts()
 
         ///
-        
+        UserDefaults.standard.set(nil, forKey:"calendarMethod" )
+        if  UserDefaults.standard.value(forKey: "calendarMethod") == nil{
+        let dect:[String:String]=["methodName":"CalendarMethod.ummAlQura".localized ,"methdID":"\(6)"]
+            UserDefaults.standard.set(dect, forKey: "calendarMethod")
+        }
         
     }
     override func viewWillAppear(_ animated: Bool) {

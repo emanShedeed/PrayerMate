@@ -48,11 +48,21 @@
 "Settings.location" = "الموقع";
 "Settings.language" ="اللغة";
 "Settings.prayerTimeBuffer" = "مواعيد الصلاة";
-"Settings.lmportToCalendar" = "التصدير ل النتيجة";
+"Settings.importToCalendar" = "التصدير ل النتيجة";
 "Settings.calendarMethod" = "نوع التقويم";
 "Settings.about" = "عن";
 "Settings.faqs" = "الاسئلة المتكررة";
 "Settings.inviteFriends" = "دعوة الأصدقاء";
+
+//CalendarMethod viewController
+"CalendarMethod.titleLbl" = "نوع التقويم";
+"CalendarMethod.egyptianGeneralAuthorityOfSurveyTitle" = "مصر";
+"CalendarMethod.universityOfIslamicSciencesShafi" = "اسلاميه مذهب الشافعي";
+"CalendarMethod.universityOfIslamicSciencesHanafi" = "اسلاميه مذهل ابو حنيفه";
+"CalendarMethod.islamicCircleOfNorthAmerica" = "شمال امريكا";
+"CalendarMethod.muslimWorldLeague" = "عالمية";
+"CalendarMethod.ummAlQura" = "ام القري";
+"CalendarMethod.fixedIsha" = "عشاء ثابت";
 
 //FAQC viewController
 "FAQC.titleLbl" = "الأسئلة المتكررة";

@@ -50,11 +50,21 @@
 "Settings.location" = "Location";
 "Settings.language" ="Language";
 "Settings.prayerTimeBuffer" = "Prayer time buffer";
-"Settings.lmportToCalendar" = "Import to calendar";
+"Settings.importToCalendar" = "Import to calendar";
 "Settings.calendarMethod" = "Calendar method";
 "Settings.about" = "About";
 "Settings.faqs" = "Faqs";
 "Settings.inviteFriends" = "Invite friends";
+
+//CalendarMethod viewController
+"CalendarMethod.titleLbl" = "Calender Method";
+"CalendarMethod.egyptianGeneralAuthorityOfSurveyTitle" = "Egyptian General Authority of Survey";
+"CalendarMethod.universityOfIslamicSciencesShafi" = "EUniversity Of Islamic Sciences, Karachi (Shafi)";
+"CalendarMethod.universityOfIslamicSciencesHanafi" = "EUniversity Of Islamic Sciences, Karachi (Hanafi)";
+"CalendarMethod.islamicCircleOfNorthAmerica" = "Islamic Circle of North America";
+"CalendarMethod.muslimWorldLeague" = "Muslim World League";
+"CalendarMethod.ummAlQura" = "Umm Al-Qura";
+"CalendarMethod.fixedIsha" = "Fixed Isha";
 
 //FAQC viewController
 "FAQC.titleLbl" = "FAQC";

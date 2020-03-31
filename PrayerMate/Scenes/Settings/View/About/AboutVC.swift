@@ -27,7 +27,6 @@ class AboutVC: UIViewController {
 //          }
 //      }
 
-    var itemID:String!
     override func viewDidLoad() {
         super.viewDidLoad()
 
