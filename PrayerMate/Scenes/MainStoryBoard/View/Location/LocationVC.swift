@@ -19,6 +19,7 @@ class LocationVC: UIViewController {
     var userLocation:CLLocation?
     let locationManager=CLLocationManager()
     var addressTitle :String = ""
+    var completeAddressTitle : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -48,6 +49,8 @@ class LocationVC: UIViewController {
             Helper.showAlert(title: "", message: "Location.alertMessage".localized, VC: self)
         }
      UserDefaults.standard.set(addressTitle, forKey: "addressTitle")
+        UserDefaults.standard.set(addressLbl.text, forKey: "completeAddressTitle")
+//         addressTitle = UserDefaults.standard.value(forKey: "completeAddressTitle") as? String ?? ""
     }
     
     @IBAction func locateMeBtnPressed(_ sender: Any) {
@@ -144,6 +147,7 @@ extension LocationVC:CLLocationManagerDelegate{
 //                self.addressTitle += " \(country)"
             }
             self.addressLbl.text=title
+            self.completeAddressTitle = title
         })
     }
 }
@@ -156,6 +160,7 @@ extension LocationVC:maplLocationView{
             UserDefaults.standard.set(dect, forKey: "userLocation")
         }
         addressLbl.text=selectedPlace
+        completeAddressTitle = selectedPlace
         addressTitle=cityName
        
     }

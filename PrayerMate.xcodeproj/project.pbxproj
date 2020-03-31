@@ -66,6 +66,8 @@
 		BDFFDA5F2432E07D0066F493 /* CalendarMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA5E2432E07D0066F493 /* CalendarMethodCell.swift */; };
 		BDFFDA622432EEDD0066F493 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA612432EEDD0066F493 /* SettingCell.swift */; };
 		BDFFDA662432F5B80066F493 /* SettingVC+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA652432F5B80066F493 /* SettingVC+delegate.swift */; };
+		BDFFDA69243359180066F493 /* SettingsLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA68243359180066F493 /* SettingsLocationVC.swift */; };
+		BDFFDA6B2433721B0066F493 /* SearchLocationAuomatically.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA6A2433721B0066F493 /* SearchLocationAuomatically.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +138,8 @@
 		BDFFDA5E2432E07D0066F493 /* CalendarMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMethodCell.swift; sourceTree = "<group>"; };
 		BDFFDA612432EEDD0066F493 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		BDFFDA652432F5B80066F493 /* SettingVC+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingVC+delegate.swift"; sourceTree = "<group>"; };
+		BDFFDA68243359180066F493 /* SettingsLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLocationVC.swift; sourceTree = "<group>"; };
+		BDFFDA6A2433721B0066F493 /* SearchLocationAuomatically.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationAuomatically.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +247,7 @@
 				BD6589182430D09200FEE06C /* FAQ */,
 				BD2E0BEF2431D5F800D2B6E6 /* About */,
 				BDFFDA542432526F0066F493 /* CalendarMethod */,
+				BDFFDA67243358F20066F493 /* SettingsLocation */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -432,6 +437,7 @@
 		BDD1F73C2417A949006B87B7 /* MainStoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				BDFFDA6A2433721B0066F493 /* SearchLocationAuomatically.swift */,
 				BDD1F73E2417AA1B006B87B7 /* View */,
 				BD0C905624276BD2000B8EAC /* Map */,
 				BDD1F73D2417AA10006B87B7 /* Presenter */,
@@ -513,6 +519,14 @@
 				BDFFDA612432EEDD0066F493 /* SettingCell.swift */,
 			);
 			path = SettingCell;
+			sourceTree = "<group>";
+		};
+		BDFFDA67243358F20066F493 /* SettingsLocation */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFDA68243359180066F493 /* SettingsLocationVC.swift */,
+			);
+			path = SettingsLocation;
 			sourceTree = "<group>";
 		};
 		C7827DD965501B07B1947142 /* Frameworks */ = {
@@ -704,6 +718,8 @@
 				BD0C904A2423A4C8000B8EAC /* PrayerTimeCell.swift in Sources */,
 				BD42746D242A4459007DE9AC /* CustomJTAppleCalendarCell.swift in Sources */,
 				BD6589152430944500FEE06C /* SettingVC.swift in Sources */,
+				BDFFDA69243359180066F493 /* SettingsLocationVC.swift in Sources */,
+				BDFFDA6B2433721B0066F493 /* SearchLocationAuomatically.swift in Sources */,
 				BDA3F8822420CAAC00705569 /* LanguageVC.swift in Sources */,
 				BD0C90532423B49D000B8EAC /* HomeVC+PrayerTimeCellDelegate.swift in Sources */,
 				BD6589212430D2B100FEE06C /* QuestionCell.swift in Sources */,
