@@ -57,9 +57,9 @@
 "Settings.inviteFriends" = "Invite friends";
 
 //Settings Location viewController
-"SettingsLocation.title" = "الموقع";
-"SettingsLocation.changeLocationLblTitle" = "موقع البحث تلقائيًا";
-"SettingsLocation.changeLocationBtnTitle" = "تغيير الموقع";
+"SettingsLocation.title" = "Location";
+"SettingsLocation.changeLocationLblTitle" = "Search location automatically";
+"SettingsLocation.changeLocationBtnTitle" = "Change location";
 
 //Language viewController
 "Language.en" = "English";

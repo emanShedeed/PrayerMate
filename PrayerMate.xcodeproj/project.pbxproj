@@ -68,6 +68,7 @@
 		BDFFDA662432F5B80066F493 /* SettingVC+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA652432F5B80066F493 /* SettingVC+delegate.swift */; };
 		BDFFDA69243359180066F493 /* SettingsLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA68243359180066F493 /* SettingsLocationVC.swift */; };
 		BDFFDA6B2433721B0066F493 /* SearchLocationAuomatically.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA6A2433721B0066F493 /* SearchLocationAuomatically.swift */; };
+		BDFFDA6D24338A9C0066F493 /* MapNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA6C24338A9C0066F493 /* MapNavVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +141,7 @@
 		BDFFDA652432F5B80066F493 /* SettingVC+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingVC+delegate.swift"; sourceTree = "<group>"; };
 		BDFFDA68243359180066F493 /* SettingsLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLocationVC.swift; sourceTree = "<group>"; };
 		BDFFDA6A2433721B0066F493 /* SearchLocationAuomatically.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationAuomatically.swift; sourceTree = "<group>"; };
+		BDFFDA6C24338A9C0066F493 /* MapNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNavVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 			children = (
 				BD0C905724276C12000B8EAC /* LocationSearchtable.swift */,
 				BD0C905824276C13000B8EAC /* MapVC.swift */,
+				BDFFDA6C24338A9C0066F493 /* MapNavVC.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -720,6 +723,7 @@
 				BD6589152430944500FEE06C /* SettingVC.swift in Sources */,
 				BDFFDA69243359180066F493 /* SettingsLocationVC.swift in Sources */,
 				BDFFDA6B2433721B0066F493 /* SearchLocationAuomatically.swift in Sources */,
+				BDFFDA6D24338A9C0066F493 /* MapNavVC.swift in Sources */,
 				BDA3F8822420CAAC00705569 /* LanguageVC.swift in Sources */,
 				BD0C90532423B49D000B8EAC /* HomeVC+PrayerTimeCellDelegate.swift in Sources */,
 				BD6589212430D2B100FEE06C /* QuestionCell.swift in Sources */,

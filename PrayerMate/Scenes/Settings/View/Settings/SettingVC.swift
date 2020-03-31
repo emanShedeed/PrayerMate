@@ -52,6 +52,9 @@ extension SettingVC:UITableViewDataSource,UITableViewDelegate{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if(indexPath.row == 0){
+            performSegue(withIdentifier: "goToSettingsLocationVC", sender: nil)
+        }
         if(indexPath.row == 1){
             createActionSheet()
         }
@@ -71,6 +74,10 @@ extension SettingVC:UITableViewDataSource,UITableViewDelegate{
             let dVC=segue.destination as! CalendarMethodVC
             dVC.toSettingelegate=self
         }
+        if(segue.identifier == "goToSettingsLocationVC"){
+                   let dVC=segue.destination as! SettingsLocationVC
+                   dVC.toSettingelegate=self
+               }
     }
 }
 extension SettingVC{
@@ -79,18 +86,18 @@ extension SettingVC{
         // create an action
         let englishAction = UIAlertAction(title: "Language.en".localized, style: .default) { action -> Void in
             if(AppSetting.shared.getCurrentLanguage() == AppLanguages.ar){
-            AppSetting.shared.setCurrentLanguage(language: AppLanguages.en)
-            LanguageManager.currentLanguage=AppLanguages.en.rawValue
-            self.reloadRootView()
-        }
+                AppSetting.shared.setCurrentLanguage(language: AppLanguages.en)
+                LanguageManager.currentLanguage=AppLanguages.en.rawValue
+                self.reloadRootView()
+            }
         }
         englishAction.setValue(UIColor.black, forKey: "titleTextColor")
         // create an action
         let arabicAction = UIAlertAction(title: "Language.ar".localized, style: .default) { action -> Void in
-              if(AppSetting.shared.getCurrentLanguage() == AppLanguages.en){
-            AppSetting.shared.setCurrentLanguage(language: AppLanguages.ar)
-            LanguageManager.currentLanguage=AppLanguages.ar.rawValue
-            self.reloadRootView()
+            if(AppSetting.shared.getCurrentLanguage() == AppLanguages.en){
+                AppSetting.shared.setCurrentLanguage(language: AppLanguages.ar)
+                LanguageManager.currentLanguage=AppLanguages.ar.rawValue
+                self.reloadRootView()
             }
         }
         arabicAction.setValue(UIColor.black, forKey: "titleTextColor")

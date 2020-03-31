@@ -511,10 +511,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-gray" translatesAutoresizingMaskIntoConstraints="NO" id="0y6-kn-izH">
-                                        <rect key="frame" x="17" y="123" width="21" height="29.5"/>
+                                        <rect key="frame" x="17" y="123" width="42" height="59"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDg-EM-6xn">
-                                        <rect key="frame" x="53" y="121" width="4.5" height="33.5"/>
+                                        <rect key="frame" x="74" y="136" width="4.5" height="33.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33.5" id="YRt-2b-Hsr"/>
                                         </constraints>
@@ -529,23 +529,6 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H1L-K2-xmC">
-                                        <rect key="frame" x="17" y="170.5" width="30" height="43"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content=" ">
-                                                    <attributes>
-                                                        <color key="NSColor" name="AppColor"/>
-                                                        <font key="NSFont" size="16" name="SFProText-Semibold"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.6499999999999999" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="SettingsLocation.changeLocationBtnTitle"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tBS-r6-GIx">
                                         <rect key="frame" x="309" y="57" width="51" height="31"/>
                                         <color key="onTintColor" name="AppColor"/>
@@ -553,18 +536,31 @@
                                             <action selector="switchBtnPressed:" destination="8A9-Xj-GKM" eventType="valueChanged" id="4Mw-4K-eIV"/>
                                         </connections>
                                     </switch>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gh-I0-q7t">
+                                        <rect key="frame" x="17" y="185.5" width="30" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.0" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="SettingsLocation.changeLocationBtnTitle"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="changeLocationBtnPressed:" destination="8A9-Xj-GKM" eventType="touchUpInside" id="441-eT-XTi"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="257" id="0rc-SQ-yaD"/>
                                     <constraint firstItem="SDg-EM-6xn" firstAttribute="centerY" secondItem="0y6-kn-izH" secondAttribute="centerY" id="0x5-kf-1r0"/>
-                                    <constraint firstItem="H1L-K2-xmC" firstAttribute="leading" secondItem="0y6-kn-izH" secondAttribute="leading" id="8d1-ld-E37"/>
+                                    <constraint firstItem="8Gh-I0-q7t" firstAttribute="leading" secondItem="0y6-kn-izH" secondAttribute="leading" id="27T-6m-8E5"/>
                                     <constraint firstItem="j5T-Vp-hqs" firstAttribute="leading" secondItem="3sH-xx-kR8" secondAttribute="leading" constant="17" id="91d-RL-tPn"/>
                                     <constraint firstItem="tBS-r6-GIx" firstAttribute="centerY" secondItem="7wW-C8-DeK" secondAttribute="centerY" id="Dc3-el-suN"/>
-                                    <constraint firstItem="H1L-K2-xmC" firstAttribute="top" secondItem="SDg-EM-6xn" secondAttribute="bottom" constant="16" id="EAI-Fv-2Ki"/>
                                     <constraint firstItem="0y6-kn-izH" firstAttribute="leading" secondItem="7wW-C8-DeK" secondAttribute="leading" id="Inw-v6-GYe"/>
                                     <constraint firstItem="SDg-EM-6xn" firstAttribute="leading" secondItem="0y6-kn-izH" secondAttribute="trailing" constant="15" id="Kl5-CV-IAY"/>
                                     <constraint firstItem="7wW-C8-DeK" firstAttribute="leading" secondItem="j5T-Vp-hqs" secondAttribute="leading" id="PbJ-Lu-HUp"/>
+                                    <constraint firstItem="8Gh-I0-q7t" firstAttribute="top" secondItem="SDg-EM-6xn" secondAttribute="bottom" constant="16" id="Uwt-IK-CxD"/>
                                     <constraint firstItem="j5T-Vp-hqs" firstAttribute="top" secondItem="3sH-xx-kR8" secondAttribute="top" constant="37" id="eIY-GI-UWv"/>
                                     <constraint firstAttribute="trailing" secondItem="7wW-C8-DeK" secondAttribute="trailing" constant="17" id="krQ-Q3-xMI"/>
                                     <constraint firstAttribute="trailing" secondItem="tBS-r6-GIx" secondAttribute="trailing" constant="17" id="mfi-vf-uPO"/>

@@ -41,16 +41,15 @@ class LocationVC: UIViewController {
     }
     
     @IBAction func finishBtnPressed(_ sender: Any) {
-        if let _ = UserDefaults.standard.value(forKey: "userLocation") as? [String:Double]{
+        if let _ = UserDefaults.standard.value(forKey: "userLocation") as? [String:Double] , addressTitle != "" {
             let viewController = UIStoryboard.Home.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-            viewController.addressTitle=addressTitle
+              UserDefaults.standard.set(addressTitle, forKey: "addressTitle")
+                  UserDefaults.standard.set(completeAddressTitle, forKey: "completeAddressTitle")
             self.present(viewController, animated: true, completion:nil)
         }else{
             Helper.showAlert(title: "", message: "Location.alertMessage".localized, VC: self)
         }
-     UserDefaults.standard.set(addressTitle, forKey: "addressTitle")
-        UserDefaults.standard.set(addressLbl.text, forKey: "completeAddressTitle")
-//         addressTitle = UserDefaults.standard.value(forKey: "completeAddressTitle") as? String ?? ""
+   
     }
     
     @IBAction func locateMeBtnPressed(_ sender: Any) {
@@ -58,13 +57,13 @@ class LocationVC: UIViewController {
     }
     
     //MARK:- Methods
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if(segue.identifier=="goToMapVC"){
-//            let dVC=((segue.destination) as! UINavigationController).viewControllers[0] as!MapVC
-//            dVC.delegate=self
-//        }
-//
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier=="goToMapVC"){
+            let dVC=((segue.destination) as! UINavigationController).viewControllers[0] as!MapVC
+            dVC.delegate=self
+        }
+
+    }
     private func animateBackGround(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             UIView.animate(withDuration: 2.0, delay: 0.0, options: [.repeat, .autoreverse], animations: {
@@ -100,6 +99,8 @@ extension LocationVC:CLLocationManagerDelegate{
                 let lon = l.coordinate.longitude
                 let dect:[String:Double]=["lat":lat,"long":lon]
                 UserDefaults.standard.set(dect, forKey: "userLocation")
+                
+                 UserDefaults.standard.set(true, forKey: "isLocatedAutomatically")
                 getAddressFromLocation(lat:l.coordinate.latitude,long:l.coordinate.longitude)
             }
         }
@@ -146,6 +147,9 @@ extension LocationVC:CLLocationManagerDelegate{
                 title +=  country
 //                self.addressTitle += " \(country)"
             }
+            if self.addressTitle == "" {
+                self.addressTitle = title.components(separatedBy: " ").first ?? title
+            }
             self.addressLbl.text=title
             self.completeAddressTitle = title
         })
@@ -158,10 +162,11 @@ extension LocationVC:maplLocationView{
         if(selectedPlace != ""){
             let dect:[String:Double]=["lat":lat,"long":lng]
             UserDefaults.standard.set(dect, forKey: "userLocation")
+              UserDefaults.standard.set(false, forKey: "isLocatedAutomatically")
         }
         addressLbl.text=selectedPlace
         completeAddressTitle = selectedPlace
-        addressTitle=cityName
+        addressTitle = cityName != "" ? cityName :  completeAddressTitle.components(separatedBy: " ").first ?? completeAddressTitle
        
     }
     

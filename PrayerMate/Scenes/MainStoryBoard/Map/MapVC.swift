@@ -77,27 +77,27 @@ class MapVC: UIViewController {
             geoCoder.reverseGeocodeLocation(CLLocation(latitude: newCoordinates.latitude, longitude: newCoordinates.longitude), completionHandler: { (placemarks, error) -> Void in
                 
                 // Place details
-                var placeMark: CLPlacemark!
+                var placeMark: CLPlacemark?
                 placeMark = placemarks?[0]
                 
                 // Complete address as PostalAddress
                 // print(placeMark.postalAddress as Any)  //  Import Contacts
                 
                 // Location name
-                if let locationName = placeMark.name  {
+                if let locationName = placeMark?.name  {
                     print(locationName)
                 }
                 
                 // Street address
-                if let street = placeMark.thoroughfare {
+                if let street = placeMark?.thoroughfare {
                     print(street)
                 }
                 
                 // Country
-                if let country = placeMark.country {
+                if let country = placeMark?.country {
                     print(country)
                 }
-                if let addressDict = placeMark.addressDictionary, let coordinate = placeMark.location?.coordinate {
+                if let addressDict = placeMark?.addressDictionary, let coordinate = placeMark?.location?.coordinate {
                     mark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDict as? [String : Any])
                 }
                 self.dropPinZoomIn(placemark: mark)

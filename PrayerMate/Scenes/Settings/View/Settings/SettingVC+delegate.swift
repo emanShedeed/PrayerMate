@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-extension SettingVC:CalendarMethodVCView{
+extension SettingVC:CalendarMethodVCView,SettingsLocationVCView{
     func didSelectMethod() {
         let method = UserDefaults.standard.value(forKey: "calendarMethod") as? [String:String]
         let methodName = method?["methodName"]?.localized
