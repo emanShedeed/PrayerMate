@@ -47,6 +47,7 @@ class LocationVC: UIViewController {
         }else{
             Helper.showAlert(title: "", message: "Location.alertMessage".localized, VC: self)
         }
+     UserDefaults.standard.set(addressTitle, forKey: "addressTitle")
     }
     
     @IBAction func locateMeBtnPressed(_ sender: Any) {
@@ -54,13 +55,13 @@ class LocationVC: UIViewController {
     }
     
     //MARK:- Methods
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier=="goToMapVC"){
-            let dVC=((segue.destination) as! UINavigationController).viewControllers[0] as!MapVC
-            dVC.delegate=self
-        }
-        
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if(segue.identifier=="goToMapVC"){
+//            let dVC=((segue.destination) as! UINavigationController).viewControllers[0] as!MapVC
+//            dVC.delegate=self
+//        }
+//
+//    }
     private func animateBackGround(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             UIView.animate(withDuration: 2.0, delay: 0.0, options: [.repeat, .autoreverse], animations: {
@@ -156,6 +157,7 @@ extension LocationVC:maplLocationView{
         }
         addressLbl.text=selectedPlace
         addressTitle=cityName
+       
     }
     
 }

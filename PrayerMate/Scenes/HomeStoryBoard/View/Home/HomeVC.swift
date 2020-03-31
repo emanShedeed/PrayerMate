@@ -52,8 +52,8 @@ class HomeVC: UIViewController {
         prayerTimestableView.backgroundColor = UIColor.clear
         importBtn.addBlurEffect()
         dateLBL.text = presenter.formateTodayDate()
-        
-        let urlString="https://muslimsalat.com/" + addressTitle + "/yearly/22-03-2020/false/1.json?key=48ae8106ef6b55e5dac258c0c8d2e224"
+        addressTitle = UserDefaults.standard.value(forKey: "addressTitle") as? String ?? ""
+        let urlString="https://muslimsalat.com/" +  addressTitle + "/yearly/22-03-2020/false/1.json?key=48ae8106ef6b55e5dac258c0c8d2e224"
         
         let ecnodingString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         let url = URL(string: ecnodingString ?? "")

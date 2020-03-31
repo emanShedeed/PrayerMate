@@ -23,7 +23,7 @@ class SplashVC: UIViewController {
         //  getUIFonts()
 
         ///
-        UserDefaults.standard.set(nil, forKey:"calendarMethod" )
+//        UserDefaults.standard.set(nil, forKey:"calendarMethod" )
         if  UserDefaults.standard.value(forKey: "calendarMethod") == nil{
         let dect:[String:String]=["methodName":"CalendarMethod.ummAlQura".localized ,"methdID":"\(6)"]
             UserDefaults.standard.set(dect, forKey: "calendarMethod")
@@ -46,8 +46,8 @@ class SplashVC: UIViewController {
   
     override func viewDidAppear(_ animated: Bool) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-            UserDefaults.standard.set(nil, forKey:"appLanguage" )
-            UserDefaults.standard.set(false, forKey:"userLocation" )
+//            UserDefaults.standard.set(nil, forKey:"appLanguage" )
+//            UserDefaults.standard.set(false, forKey:"userLocation" )
             if AppSetting.shared.getCurrentLanguage() != nil{
                  if let _ = UserDefaults.standard.value(forKey: "userLocation") as? [String:Double]{
                     let viewController = UIStoryboard.Home.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC

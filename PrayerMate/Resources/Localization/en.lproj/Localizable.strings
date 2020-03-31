@@ -56,6 +56,11 @@
 "Settings.faqs" = "Faqs";
 "Settings.inviteFriends" = "Invite friends";
 
+//Language viewController
+"Language.en" = "English";
+"Language.ar" = "Arabic";
+"Language.done" = "Done";
+
 //CalendarMethod viewController
 "CalendarMethod.titleLbl" = "Calender Method";
 "CalendarMethod.egyptianGeneralAuthorityOfSurveyTitle" = "Egyptian General Authority of Survey";
@@ -93,8 +98,8 @@
 "About.contactUs" ="Contact us :";
 
 
-/*
-"language.description" = "اللغه";
-"language.english" = "English";
-"language.arabic" = "العربيه";*/
+
+//"language.description" = "اللغه";
+
+"language" = "English";
 

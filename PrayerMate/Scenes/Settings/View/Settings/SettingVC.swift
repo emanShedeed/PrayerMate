@@ -22,7 +22,7 @@ class SettingVC: UIViewController {
         
         let method = UserDefaults.standard.value(forKey: "calendarMethod") as? [String:String]
         let methodName = method?["methodName"]
-        SettingsArray = [(image:UIImage.settingsLocation!,name:"Settings.location".localized,value:""),(image:UIImage.language!,name:"Settings.language".localized,value:""),(image:UIImage.clock!,name:"Settings.prayerTimeBuffer".localized,value:""),(image:UIImage.calendar!,name:"Settings.importToCalendar".localized,value:""),(image:UIImage.method!,name:"Settings.calendarMethod".localized,value:methodName ?? ""),(image:UIImage.hourclock!,name:"Settings.about".localized,value:""),(image:UIImage.faq!,name:"Settings.faqs".localized,value:""),(image:UIImage.invite!,name:"Settings.inviteFriends".localized,value:"")]
+        SettingsArray = [(image:UIImage.settingsLocation!,name:"Settings.location".localized,value:""),(image:UIImage.language!,name:"Settings.language".localized,value:"language".localized),(image:UIImage.clock!,name:"Settings.prayerTimeBuffer".localized,value:""),(image:UIImage.calendar!,name:"Settings.importToCalendar".localized,value:""),(image:UIImage.method!,name:"Settings.calendarMethod".localized,value:methodName ?? ""),(image:UIImage.hourclock!,name:"Settings.about".localized,value:""),(image:UIImage.faq!,name:"Settings.faqs".localized,value:""),(image:UIImage.invite!,name:"Settings.inviteFriends".localized,value:"")]
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -51,6 +51,9 @@ extension SettingVC:UITableViewDataSource,UITableViewDelegate{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if(indexPath.row == 1){
+            createActionSheet()
+        }
         if(indexPath.row == 4){
             performSegue(withIdentifier: "goToCalendarMethod", sender: nil)
         }
@@ -64,8 +67,50 @@ extension SettingVC:UITableViewDataSource,UITableViewDelegate{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "goToCalendarMethod"){
-           let dVC=segue.destination as! CalendarMethodVC
+            let dVC=segue.destination as! CalendarMethodVC
             dVC.toSettingelegate=self
+        }
+    }
+}
+extension SettingVC{
+    func createActionSheet(){
+        let actionSheetController=UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
+        // create an action
+        let englishAction = UIAlertAction(title: "Language.en".localized, style: .default) { action -> Void in
+            if(AppSetting.shared.getCurrentLanguage() == AppLanguages.ar){
+            AppSetting.shared.setCurrentLanguage(language: AppLanguages.en)
+            LanguageManager.currentLanguage=AppLanguages.en.rawValue
+            self.reloadRootView()
+        }
+        }
+        englishAction.setValue(UIColor.black, forKey: "titleTextColor")
+        // create an action
+        let arabicAction = UIAlertAction(title: "Language.ar".localized, style: .default) { action -> Void in
+              if(AppSetting.shared.getCurrentLanguage() == AppLanguages.en){
+            AppSetting.shared.setCurrentLanguage(language: AppLanguages.ar)
+            LanguageManager.currentLanguage=AppLanguages.ar.rawValue
+            self.reloadRootView()
+            }
+        }
+        arabicAction.setValue(UIColor.black, forKey: "titleTextColor")
+        
+        
+        // create an action
+        let doneAction = UIAlertAction(title: "Language.done".localized, style: .cancel) { action -> Void in }
+        doneAction.setValue(UIColor(rgb: 0xEA961E), forKey: "titleTextColor")
+        
+        // add actions
+        actionSheetController.addAction(englishAction)
+        actionSheetController.addAction(arabicAction)
+        actionSheetController.addAction(doneAction)
+        
+        self.present(actionSheetController, animated: true) {
+            print("option menu presented")
+        }
+    }
+    private func reloadRootView() {
+        if let appDelegate = UIApplication.shared.delegate {
+            appDelegate.window??.rootViewController = UIStoryboard.main.instantiateInitialViewController()
         }
     }
 }
