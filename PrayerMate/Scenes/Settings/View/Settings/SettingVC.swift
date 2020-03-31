@@ -21,7 +21,7 @@ class SettingVC: UIViewController {
         settingsTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: settingsTableView.frame.size.width, height: 1))
         
         let method = UserDefaults.standard.value(forKey: "calendarMethod") as? [String:String]
-        let methodName = method?["methodName"]
+        let methodName = method?["methodName"]?.localized
         SettingsArray = [(image:UIImage.settingsLocation!,name:"Settings.location".localized,value:""),(image:UIImage.language!,name:"Settings.language".localized,value:"language".localized),(image:UIImage.clock!,name:"Settings.prayerTimeBuffer".localized,value:""),(image:UIImage.calendar!,name:"Settings.importToCalendar".localized,value:""),(image:UIImage.method!,name:"Settings.calendarMethod".localized,value:methodName ?? ""),(image:UIImage.hourclock!,name:"Settings.about".localized,value:""),(image:UIImage.faq!,name:"Settings.faqs".localized,value:""),(image:UIImage.invite!,name:"Settings.inviteFriends".localized,value:"")]
     }
     override func viewWillAppear(_ animated: Bool) {

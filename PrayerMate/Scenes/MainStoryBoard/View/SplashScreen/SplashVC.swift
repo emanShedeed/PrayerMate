@@ -25,7 +25,7 @@ class SplashVC: UIViewController {
         ///
 //        UserDefaults.standard.set(nil, forKey:"calendarMethod" )
         if  UserDefaults.standard.value(forKey: "calendarMethod") == nil{
-        let dect:[String:String]=["methodName":"CalendarMethod.ummAlQura".localized ,"methdID":"\(6)"]
+        let dect:[String:String]=["methodName":"CalendarMethod.ummAlQura" ,"methdID":"\(6)"]
             UserDefaults.standard.set(dect, forKey: "calendarMethod")
         }
         

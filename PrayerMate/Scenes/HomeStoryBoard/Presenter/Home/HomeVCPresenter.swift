@@ -11,7 +11,7 @@ import JTAppleCalendar
 protocol  HomeView :class{
     func showError(error:String)
     func fetchDataSucess()
-
+    
 }
 protocol PrayerTimeCellView {
     func displayData(prayerTimeName: String, prayerTime: String, isCellSelected: Bool,isBtnChecked:Bool,cellIndex:Int)
@@ -24,71 +24,72 @@ class HomeVCPresenter{
     }
     let prayerTimesNames=["Home.fajrPrayerLblTitle","Home.sunrisePrayerLblTitle","Home.zuhrPrayerLblTitle","Home.asrPrayerLblTitle","Home.maghribPrayerLblTitle","Home.ishaPrayerLblTitle"]
     var todayParyerTimes = [String]()
-
+    
     var calendarDateTitle = ""
     func ConfigureCell(cell:PrayerTimeCellView,isCellSelected:Bool,isChecked:Bool,cellIndex:Int){
-         
+        
         cell.displayData(prayerTimeName: prayerTimesNames[cellIndex].localized, prayerTime: todayParyerTimes[cellIndex] ?? "", isCellSelected:isCellSelected,isBtnChecked:isChecked,cellIndex:cellIndex)
-          
-      }
-      func dataRequest (FINAL_URL : URL) {
+        
+    }
+    func dataRequest (FINAL_URL : URL) {
+        
+        if Helper.isConnectedToNetwork(){
             
-         if Helper.isConnectedToNetwork(){
+            let task = URLSession.shared.dataTask(with: FINAL_URL){
+                (data,response,error) in
                 
-                let task = URLSession.shared.dataTask(with: FINAL_URL){
-                    (data,response,error) in
-                    
-                    if let URLresponse = response {
-                        print(URLresponse)
-                    }
-                    if let URLerror = error {
-                        print(URLerror)
-                    }
-                    if let URLdata = data {
-                        print(URLdata)
-                        do{
-                            let prayerTimes = try JSONDecoder().decode(PrayerTimes.self, from: URLdata)
-                            if(prayerTimes.statusValid == 1){
-//                            print(prayerTimes.items?[0].dateFor)
+                if let URLresponse = response {
+                    print(URLresponse)
+                }
+                if let URLerror = error {
+                    print(URLerror)
+                }
+                if let URLdata = data {
+                    print(URLdata)
+                    do{
+                        let prayerTimes = try JSONDecoder().decode(PrayerTimes.self, from: URLdata)
+                        if(prayerTimes.statusValid == 1){
+                            //                            print(prayerTimes.items?[0].dateFor)
                             self.todayParyerTimes=[(prayerTimes.items?[0].fajr ?? ""),(prayerTimes.items?[0].shurooq ?? ""),(prayerTimes.items?[0].dhuhr ?? ""),(prayerTimes.items?[0].asr ?? ""),(prayerTimes.items?[0].maghrib ?? ""),(prayerTimes.items?[0].isha ?? "")]
                             self.view?.fetchDataSucess()
-                            }else{
-                                self.view?.showError(error: prayerTimes.statusDescription ?? "can't get data")
-                            }
-                          
-                        }catch {
-                            print("Error: \(error)")
+                        }else{
+                            self.view?.showError(error: prayerTimes.statusDescription ?? "can't get data")
                         }
-    //                    self.PRAYER_DATA_HANDLEROB = PrayerTimeHandler.init(_data: URLdata)
-    //                    self.PRAYER_DATA_HANDLEROB.decodeData()
-    //
-    //                    let delay = DispatchTime.now() + 1
-    //                    DispatchQueue.main.asyncAfter(deadline: delay, execute: {
-    //                        self.wayToDisplayData()
-    //                    })
                         
+                    }catch {
+                        print("Error: \(error)")
                     }
+                    //                    self.PRAYER_DATA_HANDLEROB = PrayerTimeHandler.init(_data: URLdata)
+                    //                    self.PRAYER_DATA_HANDLEROB.decodeData()
+                    //
+                    //                    let delay = DispatchTime.now() + 1
+                    //                    DispatchQueue.main.asyncAfter(deadline: delay, execute: {
+                    //                        self.wayToDisplayData()
+                    //                    })
+                    
                 }
-                
-                task.resume()
-                
-            }else{
-            self.view?.showError(error: "Please check your internet connection")
             }
+            
+            task.resume()
+            
+        }else{
+            self.view?.showError(error: "Please check your internet connection")
         }
+    }
     func formateTodayDate() -> String {
         // formate as March 23, 2018
         let formatter = DateFormatter()
-         let outputDate = ""
+        // set locale to "ar_DZ" and format as per your specifications
+        if AppSetting.shared.getCurrentLanguage() == AppLanguages.ar{
+            formatter.locale = NSLocale(localeIdentifier: "ar") as Locale
+        }
+        let outputDate = ""
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let myString = formatter.string(from: Date())
         // read input date string as NSDate instance
         if let date = formatter.date(from: myString) {
             
-            // set locale to "ar_DZ" and format as per your specifications
-            if AppSetting.shared.getCurrentLanguage() == AppLanguages.ar{
-                formatter.locale = NSLocale(localeIdentifier: "ar") as Locale
-            }
+            
             formatter.dateFormat = "MMMM dd, yyyy "
             let outputDate = formatter.string(from: date)
             
@@ -102,7 +103,7 @@ class HomeVCPresenter{
 extension HomeVCPresenter{
     func setupCalendarView(calendarView:JTACMonthView,calenadrIncludingHeaderView:UIView,calendareFormatter:DateFormatter){
         //
-      
+        
         calendareFormatter.dateFormat="yyyy MM dd"
         calendareFormatter.timeZone = Calendar.current.timeZone
         calendareFormatter.locale = NSLocale(localeIdentifier: "en") as Locale?
@@ -116,9 +117,9 @@ extension HomeVCPresenter{
         //setup header Date Label
         
         calendarView.visibleDates { (visableDates)  in
-         self.setupViewsOfCalendar(from: visableDates)
+            self.setupViewsOfCalendar(from: visableDates)
         }
-      
+        
     }
     func setupViewsOfCalendar(from visibleDates:DateSegmentInfo) {
         let date = visibleDates.monthDates.first!.date
@@ -129,7 +130,7 @@ extension HomeVCPresenter{
         calenderTitleFormatter.dateFormat="MMMM"
         let month=calenderTitleFormatter.string(from: date)
         calendarDateTitle = month + " " + year
-       // return (month + " " + year)
+        // return (month + " " + year)
     }
     func handelCellSelectedColor(cell:JTACDayCell?,celssState:CellState){
         guard let validCell = cell as? CustomJTAppleCalendarCell else{return}
@@ -151,21 +152,21 @@ extension HomeVCPresenter{
             }
         }
         let currentDateAsString=calendareFormatter.string(from: Date())
-//        if(AppSetting.shared.getCurrentLanguage() == .ar){
-//
-//            let dateFormatter = DateFormatter()
-//
-//             dateFormatter.dateFormat = "dd-MM-yyyy"
-//
-//            dateFormatter.locale = NSLocale(localeIdentifier: "ar_SA") as Locale
-//
-//            let islamicDate = dateFormatter.date(from: "8-10-1437")
-//
-//            let gregorian = NSCalendar(identifier: NSCalendar.Identifier.gregorian)
-//
-//            let components = gregorian?.components(NSCalendar.Unit(rawValue: UInt.max), from: islamicDate!)
-//            print("\(components!.year) - \(components!.month) - \(components!.day)")
-//        }
+        //        if(AppSetting.shared.getCurrentLanguage() == .ar){
+        //
+        //            let dateFormatter = DateFormatter()
+        //
+        //             dateFormatter.dateFormat = "dd-MM-yyyy"
+        //
+        //            dateFormatter.locale = NSLocale(localeIdentifier: "ar_SA") as Locale
+        //
+        //            let islamicDate = dateFormatter.date(from: "8-10-1437")
+        //
+        //            let gregorian = NSCalendar(identifier: NSCalendar.Identifier.gregorian)
+        //
+        //            let components = gregorian?.components(NSCalendar.Unit(rawValue: UInt.max), from: islamicDate!)
+        //            print("\(components!.year) - \(components!.month) - \(components!.day)")
+        //        }
         let cellDateAsString=calendareFormatter.string(from: cellState.date)
         if(calendareFormatter.date(from: cellDateAsString)! < calendareFormatter.date(from: currentDateAsString)!){
             //  Helper.showToast(message: "can't select date before today")

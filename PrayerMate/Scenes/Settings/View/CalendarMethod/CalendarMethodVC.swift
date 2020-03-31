@@ -16,7 +16,7 @@ class CalendarMethodVC: UIViewController {
     @IBOutlet weak var calendarMethodTV:UITableView!
     
      weak var toSettingelegate : CalendarMethodVCView?
-    let calendarMethodArray :[String] = ["CalendarMethod.egyptianGeneralAuthorityOfSurveyTitle".localized,"CalendarMethod.universityOfIslamicSciencesShafi".localized,"CalendarMethod.universityOfIslamicSciencesHanafi".localized,"CalendarMethod.islamicCircleOfNorthAmerica".localized,"CalendarMethod.muslimWorldLeague".localized,"CalendarMethod.ummAlQura".localized,"CalendarMethod.fixedIsha".localized]
+    let calendarMethodArray :[String] = ["CalendarMethod.egyptianGeneralAuthorityOfSurveyTitle","CalendarMethod.universityOfIslamicSciencesShafi","CalendarMethod.universityOfIslamicSciencesHanafi","CalendarMethod.islamicCircleOfNorthAmerica","CalendarMethod.muslimWorldLeague","CalendarMethod.ummAlQura","CalendarMethod.fixedIsha"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,7 +38,7 @@ extension CalendarMethodVC:UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CalendarMethodCell", for: indexPath) as! CalendarMethodCell
-        cell.methodNameLbl.text=calendarMethodArray[indexPath.row]
+        cell.methodNameLbl.text=calendarMethodArray[indexPath.row].localized
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
