@@ -11,7 +11,7 @@ import UIKit
 class SettingVC: UIViewController {
     @IBOutlet var settingsTableView: UITableView!
     var SettingsArray :[(image: UIImage, name: String , value:String)] = .init()
-    
+    var delegateToHome:settingsVCView?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +35,7 @@ class SettingVC: UIViewController {
     }
     
     @IBAction func backButtinPressed(_ sender: UIButton) {
+        delegateToHome?.APIParameterChanged()
         self.dismiss(animated: true, completion: nil)
     }
     

@@ -10,7 +10,7 @@ import UIKit
 import JTAppleCalendar
 class HomeVC: UIViewController {
     
-  //MARK:- IBOUTLET
+    //MARK:- IBOUTLET
     @IBOutlet weak var dateLBL: UILabel!
     @IBOutlet weak var selectedPrayerTimeName: UILabel!
     @IBOutlet weak var remainingTimeLbl: UILabel!
@@ -28,7 +28,7 @@ class HomeVC: UIViewController {
     var countdown: DateComponents!
     let calendar = Calendar.current
     var nextPrayerDateDate: Date!
-
+    
     var addressTitle : String!
     var presenter:HomeVCPresenter!
     var prayerTimesArray: [(isCellSelected: Bool, isBtnChecked:Bool)] = .init()
@@ -44,7 +44,7 @@ class HomeVC: UIViewController {
         
         // Do any additional setup after loading the view.
         calendarView.semanticContentAttribute = .forceRightToLeft
-         daysStackView.semanticContentAttribute = .forceLeftToRight
+        daysStackView.semanticContentAttribute = .forceLeftToRight
         presenter = HomeVCPresenter(view: self)
         countDownTimerFormatter.locale = NSLocale(localeIdentifier: "en") as Locale?
         countDownTimerFormatter.dateFormat = "hh:mm:ss a"
@@ -52,17 +52,27 @@ class HomeVC: UIViewController {
         prayerTimestableView.backgroundColor = UIColor.clear
         importBtn.addBlurEffect()
         dateLBL.text = presenter.formateTodayDate()
+        requestPrayerTimesAPI()
+        presenter.setupCalendarView(calendarView: calendarView, calenadrIncludingHeaderView: calenadrIncludingHeaderView, calendareFormatter: calendareFormatter)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        hideCalendareView.addGestureRecognizer(tap)
+    }
+    func requestPrayerTimesAPI(){
+        let dateFormatterForAPI = DateFormatter()
+        dateFormatterForAPI.locale = NSLocale(localeIdentifier: "en")  as Locale
+        dateFormatterForAPI.dateFormat = "dd-MM-YYYY"
+        let date = dateFormatterForAPI.string(from: Date())
         addressTitle = UserDefaults.standard.value(forKey: "addressTitle") as? String ?? ""
-        let urlString="https://muslimsalat.com/" +  addressTitle + "/yearly/22-03-2020/false/1.json?key=48ae8106ef6b55e5dac258c0c8d2e224"
+        let method = UserDefaults.standard.value(forKey: "calendarMethod") as! [String:String]
+        let methodID = method["methdID"] ?? "6"
+        let basicURL = "https://muslimsalat.com/" +  addressTitle + "/yearly/" + date
+        let urlString = basicURL + "/false/" + methodID + ".json?key=48ae8106ef6b55e5dac258c0c8d2e224"
         print(urlString)
         let ecnodingString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         let url = URL(string: ecnodingString ?? "")
         if let final_url = url{
             presenter.dataRequest(FINAL_URL:final_url)
         }
-        presenter.setupCalendarView(calendarView: calendarView, calenadrIncludingHeaderView: calenadrIncludingHeaderView, calendareFormatter: calendareFormatter)
-        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-         hideCalendareView.addGestureRecognizer(tap)
     }
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         calenadrIncludingHeaderView.isHidden = true
@@ -73,8 +83,10 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func settingBtnPressed(_ sender: Any) {
-        if let viewController = UIStoryboard.Settings.instantiateInitialViewController(){
-        self.show(viewController, sender: self)
+        if let viewController = UIStoryboard.Settings.instantiateInitialViewController() as? UINavigationController {
+            let settingsVC = viewController.viewControllers[0] as? SettingVC
+            settingsVC?.delegateToHome = self
+            self.show(viewController, sender: self)
         }
     }
     
@@ -116,11 +128,60 @@ extension HomeVC{
         let seconds = countdown.second!
         print( String(format: "%02d:%02d:%02d",  hours, minutes, seconds))
         remainingTimeLbl.text = String(format: "%02d:%02d:%02d", hours, minutes, seconds)
+        if(remainingTimeLbl.text == "00:00:00" ){
+            getNextPrayerTime()
+        }
         
     }
     
     func runCountdown() {
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+    }
+    func getNextPrayerTime(){
+        var nextPrayerIndex = 0
+        var accurateString :String = ""
+        for  i in 0..<presenter.todayParyerTimes.count {
+            accurateString = presenter.todayParyerTimes[i].count == 7 ? "0" + presenter.todayParyerTimes[i] : presenter.todayParyerTimes[i]
+            accurateString = accurateString.replacingOccurrences(of: "am", with: "AM")
+            accurateString = accurateString.replacingOccurrences(of: "pm", with: "PM")
+            accurateString = accurateString.replacingOccurrences(of: " ", with: ":00 ")
+            let dateAsString = countDownTimerFormatter.string(from: Date())
+            let dateDiff = Helper.findDateDiff(time1Str: dateAsString, time2Str: accurateString)
+            if(!dateDiff.contains("-") ){
+                nextPrayerIndex = i
+                break
+            }
+            
+        }
+        
+        
+        var tempString = accurateString.replacingOccurrences(of: " PM", with: "")
+        tempString = tempString.replacingOccurrences(of: " AM", with: "")
+        var dateComponent = tempString.split(separator: ":")
+        
+        if(accurateString.contains("PM")){
+            let hours = Int(dateComponent[0]) ?? 0
+            if (hours < 12) {
+                dateComponent[0] = "\(hours + 12)"
+            }
+        }
+        nextPrayerDateDate = {
+            let future = DateComponents(
+                year: calendar.component(.year, from: Date()),
+                month: calendar.component(.month, from: Date()),
+                day: calendar.component(.day, from: Date()),
+                hour: Int(dateComponent[0]),
+                minute: Int(dateComponent[1]),
+                second: Int(dateComponent[2])
+            )
+            return Calendar.current.date(from: future)!
+        }()
+        
+        DispatchQueue.main.async {
+            self.selectedPrayerTimeName.text=self.presenter.prayerTimesNames[nextPrayerIndex].localized
+            
+            self.runCountdown()
+        }
     }
 }
 extension HomeVC:JTACMonthViewDataSource{
