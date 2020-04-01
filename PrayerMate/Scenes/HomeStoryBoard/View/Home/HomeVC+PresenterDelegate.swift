@@ -13,12 +13,14 @@ extension HomeVC:HomeView{
     }
     
     func fetchDataSucess() {
-        prayerTimesArray=[(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false)]
+         prayerTimesArray=[(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false)]
         DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
             self.calendarDateTitleLbl.text = self.presenter.calendarDateTitle
             self.prayerTimestableView.reloadData()
+            self.getNextPrayerTime()
         }
-        getNextPrayerTime()
+     
     }
 }
 extension HomeVC:settingsVCView{

@@ -11,6 +11,8 @@ import JTAppleCalendar
 class HomeVC: UIViewController {
     
     //MARK:- IBOUTLET
+    
+    @IBOutlet weak var backGroundImageView: UIImageView!
     @IBOutlet weak var dateLBL: UILabel!
     @IBOutlet weak var selectedPrayerTimeName: UILabel!
     @IBOutlet weak var remainingTimeLbl: UILabel!
@@ -32,13 +34,17 @@ class HomeVC: UIViewController {
     var addressTitle : String!
     var presenter:HomeVCPresenter!
     var prayerTimesArray: [(isCellSelected: Bool, isBtnChecked:Bool)] = .init()
+    var backGroundImagesArray = [UIImage.fajrBackGround,UIImage.sunriseBackGround,UIImage.zuhrBackGround,UIImage.asrBackGround,UIImage.maghribBackGround,UIImage.ishaBackGround]
     ////Calendar VARiIABLES
     let calendareFormatter = DateFormatter()
     var firstDate: Date?
     var twoDatesAlreadySelected: Bool {
         return firstDate != nil && calendarView.selectedDates.count > 1
     }
-    
+    lazy var activityIndicator : SYActivityIndicatorView = {
+         let image = UIImage.loading
+         return SYActivityIndicatorView(image: UIImage.loading,title: "loader.messageTitle".localized)
+     }()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,6 +77,9 @@ class HomeVC: UIViewController {
         let ecnodingString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         let url = URL(string: ecnodingString ?? "")
         if let final_url = url{
+            self.view.addSubview(activityIndicator)
+            activityIndicator.center = self.view.center
+            activityIndicator.startAnimating()
             presenter.dataRequest(FINAL_URL:final_url)
         }
     }
@@ -107,6 +116,7 @@ extension HomeVC:UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        performSegue(withIdentifier: "goToRoomDetailsVC", sender: self)
+        backGroundImageView.image=backGroundImagesArray[indexPath.row]
         for index in 0 ..< prayerTimesArray.count {
             prayerTimesArray[index].isCellSelected = false
         }
@@ -149,6 +159,7 @@ extension HomeVC{
             let dateDiff = Helper.findDateDiff(time1Str: dateAsString, time2Str: accurateString)
             if(!dateDiff.contains("-") ){
                 nextPrayerIndex = i
+                backGroundImageView.image=backGroundImagesArray[i]
                 break
             }
             

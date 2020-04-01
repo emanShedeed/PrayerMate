@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fajrbg" translatesAutoresizingMaskIntoConstraints="NO" id="lQc-ov-W3c">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fajrbg" translatesAutoresizingMaskIntoConstraints="NO" id="lQc-ov-W3c">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odr-J5-TIR">
@@ -79,7 +79,7 @@
                                                     <constraint firstAttribute="width" constant="142" id="t1P-nX-oaM"/>
                                                 </constraints>
                                             </view>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CqQ-3d-Vzw">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CqQ-3d-Vzw">
                                                 <rect key="frame" x="0.0" y="277" width="375" height="240"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
@@ -223,7 +223,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
-                                                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.5" id="2mY-y4-EIa"/>
                                                                             <constraint firstAttribute="height" constant="20.5" id="yUL-hG-Jqs"/>
@@ -266,15 +266,15 @@
                                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomJTAppleCalendarCell" id="L5E-UL-RiK" customClass="CustomJTAppleCalendarCell" customModule="PrayerMate" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CMm-Ja-VoK">
+                                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="CMm-Ja-VoK">
                                                                             <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <subviews>
-                                                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1j-N0-njO">
+                                                                                <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e1j-N0-njO">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                                                                                     <color key="backgroundColor" red="0.70588235294117641" green="0.8784313725490196" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 </view>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P3-tK-X4d">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P3-tK-X4d">
                                                                                     <rect key="frame" x="-3.5" y="7.5" width="42" height="20.5"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                     <nil key="textColor"/>
@@ -375,6 +375,7 @@
                         <viewLayoutGuide key="safeArea" id="9E8-H4-Wf2"/>
                     </view>
                     <connections>
+                        <outlet property="backGroundImageView" destination="lQc-ov-W3c" id="2EH-ad-4md"/>
                         <outlet property="calenadrIncludingHeaderView" destination="gE9-fh-Lok" id="TcQ-UA-Ylk"/>
                         <outlet property="calendarDateTitleLbl" destination="e01-h6-dOV" id="5Uh-Hh-i3E"/>
                         <outlet property="calendarView" destination="4NI-Rb-VNC" id="dxh-UK-Orz"/>

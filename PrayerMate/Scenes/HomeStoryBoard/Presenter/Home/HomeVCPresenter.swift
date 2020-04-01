@@ -32,7 +32,7 @@ class HomeVCPresenter{
         
     }
     func dataRequest (FINAL_URL : URL) {
-        
+      
         if Helper.isConnectedToNetwork(){
             
             let task = URLSession.shared.dataTask(with: FINAL_URL){
