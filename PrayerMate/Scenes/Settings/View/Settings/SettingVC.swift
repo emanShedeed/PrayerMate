@@ -68,6 +68,17 @@ extension SettingVC:UITableViewDataSource,UITableViewDelegate{
         else if(indexPath.row == 6){
             performSegue(withIdentifier: "goToFrequentlyQuestionsVC", sender: nil)
         }
+        else if(indexPath.row == 7){
+           if let urlStr = URL(string: "https://itunes.apple.com/us/app/myapp/id1505753464?ls=1&mt=8"), !urlStr.absoluteString.isEmpty {
+            let objectsToShare = [urlStr]
+                                    let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                           activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
+
+               self.present(activityVC, animated: true, completion: nil)
+           }else  {
+               // show alert for not available
+           }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -76,9 +87,9 @@ extension SettingVC:UITableViewDataSource,UITableViewDelegate{
             dVC.toSettingelegate=self
         }
         if(segue.identifier == "goToSettingsLocationVC"){
-                   let dVC=segue.destination as! SettingsLocationVC
-                   dVC.toSettingelegate=self
-               }
+            let dVC=segue.destination as! SettingsLocationVC
+            dVC.toSettingelegate=self
+        }
     }
 }
 extension SettingVC{
