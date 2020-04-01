@@ -64,6 +64,14 @@
 "Language.ar" = "العربيه";
 "Language.done" = "تأكيد";
 
+//ImportToCalendar viewController
+"ImportToCalendarVC.titleLbl" = "التقويم";
+"ImportToCalendarVC.subTitleLbl" = "اختر تقويمك المفضل";
+"ImportToCalendarVC.appleLbl" = "تقويم ابل";
+"ImportToCalendarVC.googleLbl" = "تقويم جوجل";
+"ImportToCalendarVC.MSLbl" = "تقويم مايكروسوفت";
+"ImportToCalendarVC.donebtntitle" = "تأكيد";
+
 //CalendarMethod viewController
 "CalendarMethod.titleLbl" = "التقويم";
 "CalendarMethod.egyptianGeneralAuthorityOfSurveyTitle" = "مصر";

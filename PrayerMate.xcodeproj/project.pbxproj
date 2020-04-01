@@ -69,6 +69,7 @@
 		BDFFDA69243359180066F493 /* SettingsLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA68243359180066F493 /* SettingsLocationVC.swift */; };
 		BDFFDA6B2433721B0066F493 /* SearchLocationAuomatically.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA6A2433721B0066F493 /* SearchLocationAuomatically.swift */; };
 		BDFFDA6D24338A9C0066F493 /* MapNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA6C24338A9C0066F493 /* MapNavVC.swift */; };
+		BDFFDA702434C44A0066F493 /* ImportToCalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA6F2434C44A0066F493 /* ImportToCalendarVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +143,7 @@
 		BDFFDA68243359180066F493 /* SettingsLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLocationVC.swift; sourceTree = "<group>"; };
 		BDFFDA6A2433721B0066F493 /* SearchLocationAuomatically.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationAuomatically.swift; sourceTree = "<group>"; };
 		BDFFDA6C24338A9C0066F493 /* MapNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNavVC.swift; sourceTree = "<group>"; };
+		BDFFDA6F2434C44A0066F493 /* ImportToCalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportToCalendarVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 				BD2E0BEF2431D5F800D2B6E6 /* About */,
 				BDFFDA542432526F0066F493 /* CalendarMethod */,
 				BDFFDA67243358F20066F493 /* SettingsLocation */,
+				BDFFDA6E2434C4270066F493 /* ImportToCalendar */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -532,6 +535,14 @@
 			path = SettingsLocation;
 			sourceTree = "<group>";
 		};
+		BDFFDA6E2434C4270066F493 /* ImportToCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFDA6F2434C44A0066F493 /* ImportToCalendarVC.swift */,
+			);
+			path = ImportToCalendar;
+			sourceTree = "<group>";
+		};
 		C7827DD965501B07B1947142 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -715,6 +726,7 @@
 				BDFFDA56243252B70066F493 /* CalendarMethodVC.swift in Sources */,
 				BD0C90502423B175000B8EAC /* HomeVC+PresenterDelegate.swift in Sources */,
 				BDFFDA622432EEDD0066F493 /* SettingCell.swift in Sources */,
+				BDFFDA702434C44A0066F493 /* ImportToCalendarVC.swift in Sources */,
 				BD0C90482423A161000B8EAC /* HomeVC.swift in Sources */,
 				BD12EB4424221B9D00001437 /* LanguageVCPresenter.swift in Sources */,
 				BD0C905924276C13000B8EAC /* LocationSearchtable.swift in Sources */,

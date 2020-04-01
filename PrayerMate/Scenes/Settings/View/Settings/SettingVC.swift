@@ -59,6 +59,9 @@ extension SettingVC:UITableViewDataSource,UITableViewDelegate{
         if(indexPath.row == 1){
             createActionSheet()
         }
+        if(indexPath.row == 3){
+        performSegue(withIdentifier: "goToImportToCalendarVC", sender: nil)
+               }
         if(indexPath.row == 4){
             performSegue(withIdentifier: "goToCalendarMethod", sender: nil)
         }

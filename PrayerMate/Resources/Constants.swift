@@ -12,6 +12,7 @@ struct Constants {
     static let domain = "",
     appName = "",
     appLink = "https://ataba.blacksquaressolutions.com/"
+
     
     struct Defaults {
         

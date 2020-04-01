@@ -66,6 +66,14 @@
 "Language.ar" = "Arabic";
 "Language.done" = "Done";
 
+//ImportToCalendar viewController
+"ImportToCalendarVC.titleLbl" = "Calendar";
+"ImportToCalendarVC.subTitleLbl" = "Choose your preferred calendar";
+"ImportToCalendarVC.appleLbl" = "Apple Calendar";
+"ImportToCalendarVC.googleLbl" = "Google Calendar";
+"ImportToCalendarVC.MSLbl" = "MS Calendar";
+"ImportToCalendarVC.donebtntitle" = "Done";
+
 //CalendarMethod viewController
 "CalendarMethod.titleLbl" = "Calender Method";
 "CalendarMethod.egyptianGeneralAuthorityOfSurveyTitle" = "Egyptian General Authority of Survey";

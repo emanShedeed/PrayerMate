@@ -117,6 +117,7 @@
                         <segue destination="mJb-ZO-skV" kind="presentation" identifier="goToAboutC" id="Uij-1S-K7N"/>
                         <segue destination="DrV-qK-Cmn" kind="show" identifier="goToFrequentlyQuestionsVC" id="mRP-pm-Gch"/>
                         <segue destination="8A9-Xj-GKM" kind="presentation" identifier="goToSettingsLocationVC" id="HYs-v0-0Rd"/>
+                        <segue destination="mbf-uW-LmF" kind="presentation" identifier="goToImportToCalendarVC" id="Sxk-R6-0Lb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5w-3c-M97" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -601,11 +602,216 @@
             </objects>
             <point key="canvasLocation" x="3641" y="-1433"/>
         </scene>
+        <!--Import To CalendarVC-->
+        <scene sceneID="R8v-sG-S5Z">
+            <objects>
+                <viewController storyboardIdentifier="ImportToCalendarVC" modalPresentationStyle="overCurrentContext" id="mbf-uW-LmF" customClass="ImportToCalendarVC" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WKK-bT-OgA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mz-ub-YzG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="337"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.23000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="closeViewBtnPressed:" destination="mbf-uW-LmF" eventType="touchUpInside" id="mTi-n9-0qs"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOB-hX-P72" userLabel="container view" customClass="RoundedView" customModule="PrayerMate" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="317" width="375" height="350"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJn-qG-2qI">
+                                        <rect key="frame" x="17" y="37" width="45" height="28"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content=" fight">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="20" name="SFProText-Semibold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="ImportToCalendarVC.titleLbl"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9N-rO-cEY">
+                                        <rect key="frame" x="17" y="69" width="341" height="31"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="  hh">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.45490196078431372" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="16" name="SFProText-Semibold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.6499999999999999" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="ImportToCalendarVC.subTitleLbl"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0d-0f-JtU">
+                                        <rect key="frame" x="17" y="135" width="22" height="22"/>
+                                        <state key="normal" image="uncheckCalendar"/>
+                                        <connections>
+                                            <action selector="checkBtnPressed:" destination="mbf-uW-LmF" eventType="touchUpInside" id="vRn-Zq-QqS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4R-Ua-XRL">
+                                        <rect key="frame" x="64" y="126" width="39.5" height="31"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Label">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="16" name="SFProText-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.6499999999999999" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="ImportToCalendarVC.appleLbl"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNr-lv-LKf">
+                                        <rect key="frame" x="17" y="182" width="22" height="22"/>
+                                        <state key="normal" image="uncheckCalendar"/>
+                                        <connections>
+                                            <action selector="checkBtnPressed:" destination="mbf-uW-LmF" eventType="touchUpInside" id="N0T-Mg-wqb"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsl-iT-AlP">
+                                        <rect key="frame" x="64" y="173" width="39.5" height="31"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Label">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="16" name="SFProText-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.6499999999999999" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="ImportToCalendarVC.googleLbl"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gev-KT-xgo">
+                                        <rect key="frame" x="17" y="229" width="22" height="22"/>
+                                        <state key="normal" image="uncheckCalendar"/>
+                                        <connections>
+                                            <action selector="checkBtnPressed:" destination="mbf-uW-LmF" eventType="touchUpInside" id="N2W-mZ-kYo"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtS-z8-nc8">
+                                        <rect key="frame" x="64" y="220" width="39.5" height="31"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Label">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="16" name="SFProText-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.6499999999999999" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="ImportToCalendarVC.MSLbl"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5L-Xc-OEr" customClass="RoundedButton" customModule="PrayerMate" customModuleProvider="target">
+                                        <rect key="frame" x="17" y="281" width="341" height="57"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="57" id="3Bx-ew-due"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="ImportToCalendarVC.donebtntitle"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="letterSpace">
+                                                <real key="value" value="0.38"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="DoneBtnPressed:" destination="mbf-uW-LmF" eventType="touchUpInside" id="awF-zR-sUK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="F5L-Xc-OEr" secondAttribute="trailing" constant="17" id="1a6-2B-tSf"/>
+                                    <constraint firstItem="K4R-Ua-XRL" firstAttribute="leading" secondItem="S0d-0f-JtU" secondAttribute="trailing" constant="25" id="3vp-ab-fHX"/>
+                                    <constraint firstItem="X9N-rO-cEY" firstAttribute="top" secondItem="WJn-qG-2qI" secondAttribute="bottom" constant="4" id="4TB-Oi-KwY"/>
+                                    <constraint firstItem="S0d-0f-JtU" firstAttribute="leading" secondItem="X9N-rO-cEY" secondAttribute="leading" id="9Df-VW-Uwu"/>
+                                    <constraint firstItem="jNr-lv-LKf" firstAttribute="leading" secondItem="S0d-0f-JtU" secondAttribute="leading" id="Eh4-Zu-bFS"/>
+                                    <constraint firstItem="WJn-qG-2qI" firstAttribute="top" secondItem="IOB-hX-P72" secondAttribute="top" constant="37" id="Fbm-Th-viK"/>
+                                    <constraint firstItem="WJn-qG-2qI" firstAttribute="leading" secondItem="IOB-hX-P72" secondAttribute="leading" constant="17" id="Klq-RH-04k"/>
+                                    <constraint firstItem="K4R-Ua-XRL" firstAttribute="bottom" secondItem="S0d-0f-JtU" secondAttribute="bottom" id="MhO-ft-TsI"/>
+                                    <constraint firstItem="tsl-iT-AlP" firstAttribute="bottom" secondItem="jNr-lv-LKf" secondAttribute="bottom" id="N1t-Wr-bRE"/>
+                                    <constraint firstAttribute="height" constant="350" id="QBG-7s-wPQ"/>
+                                    <constraint firstItem="qtS-z8-nc8" firstAttribute="leading" secondItem="Gev-KT-xgo" secondAttribute="trailing" constant="25" id="bB0-E3-9IN"/>
+                                    <constraint firstItem="jNr-lv-LKf" firstAttribute="top" secondItem="S0d-0f-JtU" secondAttribute="bottom" constant="25" id="eSN-Cs-wsR"/>
+                                    <constraint firstItem="S0d-0f-JtU" firstAttribute="top" secondItem="X9N-rO-cEY" secondAttribute="bottom" constant="35" id="f51-Nl-Aq3"/>
+                                    <constraint firstItem="X9N-rO-cEY" firstAttribute="leading" secondItem="WJn-qG-2qI" secondAttribute="leading" id="fLn-4a-IUf"/>
+                                    <constraint firstItem="F5L-Xc-OEr" firstAttribute="top" secondItem="qtS-z8-nc8" secondAttribute="bottom" constant="30" id="l2f-GR-Mnp"/>
+                                    <constraint firstItem="qtS-z8-nc8" firstAttribute="bottom" secondItem="Gev-KT-xgo" secondAttribute="bottom" id="l33-LN-qap"/>
+                                    <constraint firstAttribute="trailing" secondItem="X9N-rO-cEY" secondAttribute="trailing" constant="17" id="mO6-8K-phP"/>
+                                    <constraint firstItem="Gev-KT-xgo" firstAttribute="leading" secondItem="jNr-lv-LKf" secondAttribute="leading" id="n0C-0e-ODM"/>
+                                    <constraint firstItem="F5L-Xc-OEr" firstAttribute="leading" secondItem="IOB-hX-P72" secondAttribute="leading" constant="17" id="rO3-7f-Oig"/>
+                                    <constraint firstItem="Gev-KT-xgo" firstAttribute="top" secondItem="jNr-lv-LKf" secondAttribute="bottom" constant="25" id="tet-Lk-79l"/>
+                                    <constraint firstItem="tsl-iT-AlP" firstAttribute="leading" secondItem="jNr-lv-LKf" secondAttribute="trailing" constant="25" id="veQ-TS-zw4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.2538527397" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IOB-hX-P72" firstAttribute="leading" secondItem="s8x-qe-Lfk" secondAttribute="leading" id="INJ-fb-c29"/>
+                            <constraint firstItem="s8x-qe-Lfk" firstAttribute="bottom" secondItem="IOB-hX-P72" secondAttribute="bottom" id="Jq4-Xr-gRi"/>
+                            <constraint firstItem="7Mz-ub-YzG" firstAttribute="top" secondItem="s8x-qe-Lfk" secondAttribute="top" id="SPh-MF-Zqg"/>
+                            <constraint firstItem="s8x-qe-Lfk" firstAttribute="trailing" secondItem="7Mz-ub-YzG" secondAttribute="trailing" id="bL1-WG-8PW"/>
+                            <constraint firstItem="7Mz-ub-YzG" firstAttribute="leading" secondItem="s8x-qe-Lfk" secondAttribute="leading" id="hh6-qn-bYG"/>
+                            <constraint firstItem="IOB-hX-P72" firstAttribute="top" secondItem="7Mz-ub-YzG" secondAttribute="bottom" constant="-20" id="irG-gn-VVx"/>
+                            <constraint firstItem="7Mz-ub-YzG" firstAttribute="trailing" secondItem="s8x-qe-Lfk" secondAttribute="trailing" id="nXc-h9-X2j"/>
+                            <constraint firstItem="IOB-hX-P72" firstAttribute="trailing" secondItem="s8x-qe-Lfk" secondAttribute="trailing" id="qBX-VP-xOh"/>
+                            <constraint firstItem="7Mz-ub-YzG" firstAttribute="leading" secondItem="s8x-qe-Lfk" secondAttribute="leading" id="txY-iG-mP1"/>
+                            <constraint firstItem="7Mz-ub-YzG" firstAttribute="top" secondItem="s8x-qe-Lfk" secondAttribute="top" id="uyp-DS-MRa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s8x-qe-Lfk"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerViewHeight" destination="QBG-7s-wPQ" id="fPL-YM-8is"/>
+                        <outlet property="doneBtn" destination="F5L-Xc-OEr" id="fKf-8x-dqm"/>
+                        <outlet property="roundedView" destination="IOB-hX-P72" id="kJT-bi-s1W"/>
+                        <outletCollection property="checkBtns" destination="S0d-0f-JtU" collectionClass="NSMutableArray" id="CWm-kB-BCI"/>
+                        <outletCollection property="checkBtns" destination="jNr-lv-LKf" collectionClass="NSMutableArray" id="zRO-fn-bzY"/>
+                        <outletCollection property="checkBtns" destination="Gev-KT-xgo" collectionClass="NSMutableArray" id="ynh-uX-dS9"/>
+                        <outletCollection property="checkTitleLbl" destination="K4R-Ua-XRL" collectionClass="NSMutableArray" id="42P-Yc-7TU"/>
+                        <outletCollection property="checkTitleLbl" destination="tsl-iT-AlP" collectionClass="NSMutableArray" id="9j6-cK-e7R"/>
+                        <outletCollection property="checkTitleLbl" destination="qtS-z8-nc8" collectionClass="NSMutableArray" id="usL-MF-W0y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbp-gs-poN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2472.8000000000002" y="-1387.5562218890557"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Arrow" width="7" height="13"/>
         <image name="back-AppColor" width="14" height="24.5"/>
         <image name="location-gray" width="21" height="29.5"/>
+        <image name="uncheckCalendar" width="22" height="22"/>
         <namedColor name="AppColor">
             <color red="0.0" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

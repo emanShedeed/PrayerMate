@@ -36,4 +36,7 @@ extension UIImage {
     static let hourclock = UIImage(named: "24hourclock")
     static let faq = UIImage(named: "faq")
     static let invite = UIImage(named: "invite")
+    
+    static let checkCalendar = UIImage(named: "checkCalendar")
+    static let uncheckCalendar = UIImage(named: "uncheckCalendar")
 }
