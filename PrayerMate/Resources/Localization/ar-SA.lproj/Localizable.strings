@@ -48,7 +48,7 @@
 "Settings.location" = "الموقع";
 "Settings.language" ="اللغة";
 "Settings.prayerTimeBuffer" = "مدة مواقيت الصلاة";
-"Settings.importToCalendar" = "التصدير ل النتيجة";
+"Settings.importToCalendar" = "استيراد إلى التقويم";
 "Settings.calendarMethod" = "التقويم";
 "Settings.about" = "عن التطبيق";
 "Settings.faqs" = "الأسئلة الشائعة";
@@ -62,7 +62,7 @@
 //Language viewController
 "Language.en" = "الإنجليزية";
 "Language.ar" = "العربيه";
-"Language.done" = "تم";
+"Language.done" = "تأكيد";
 
 //CalendarMethod viewController
 "CalendarMethod.titleLbl" = "التقويم";
@@ -75,7 +75,7 @@
 "CalendarMethod.fixedIsha" = "عشاء ثابت";
 
 //FAQC viewController
-"FAQC.titleLbl" = "الأسئلة المتكررة";
+"FAQC.titleLbl" = "الأسئلة الشائعة";
 "FAQC.firstQuestionTitle" = "ماذا عن prayer Mate؟";
 "FAQC.firstQuestionDescription" = "يقدم جوجل حزمة أدوات مكتبية إلكترونية قوية ضمن حساب غوغل الخاص بك، حيث يمكنك الوصول إلى تطبيق محرّر مستندات غوغل Google Docs، وتطبيق الملاحظات Google Keep، بالإضافة إلى خدمة تخزين سحابي مجانية عبر منصة جوجل درايف، ولا شك أن هذه مجموعة ممتازة من التطبيقات للكتابيعتبر تطبيق مستندات غوغل Google Docs ";
 
