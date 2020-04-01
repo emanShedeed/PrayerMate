@@ -21,8 +21,8 @@
 "Language.arabicRadioButtonTitle" = "عربي  ";
 //Location view controller
 "Location.title" = "الموقع";
-"Location.subTitle" = "من فضلك اختر الموقع";
-"Location.finishBtnTitle" = "إنهاء";
+"Location.subTitle" = "من فضلك اختر موقعك";
+"Location.finishBtnTitle" = "إكمال";
 "Location.addressTxtPlaceHolder" = "اختر الموقع من الخريطة  ";
 "Location.locateMeBtnTitle" = "حدد موقعي  ";
 "Location.alertMessage" = "من فضلك اسمح للتطبيق بمعرفة موقعه او اضغط -تحديد الموقع -لاختيار مووقعك" ;
@@ -47,16 +47,16 @@
 "Settings.titleLbl" = "الاعدادات";
 "Settings.location" = "الموقع";
 "Settings.language" ="اللغة";
-"Settings.prayerTimeBuffer" = "مواعيد الصلاة";
+"Settings.prayerTimeBuffer" = "مدة مواقيت الصلاة";
 "Settings.importToCalendar" = "التصدير ل النتيجة";
-"Settings.calendarMethod" = "نوع التقويم";
-"Settings.about" = "عن";
-"Settings.faqs" = "الاسئلة المتكررة";
+"Settings.calendarMethod" = "التقويم";
+"Settings.about" = "عن التطبيق";
+"Settings.faqs" = "الأسئلة الشائعة";
 "Settings.inviteFriends" = "دعوة الأصدقاء";
 
 //Settings Location viewController
 "SettingsLocation.title" = "الموقع";
-"SettingsLocation.changeLocationLblTitle" = "موقع البحث تلقائيًا";
+"SettingsLocation.changeLocationLblTitle" = "تحديد الموقع تلقائيا";
 "SettingsLocation.changeLocationBtnTitle" = "تغيير الموقع";
 
 //Language viewController
@@ -65,7 +65,7 @@
 "Language.done" = "تم";
 
 //CalendarMethod viewController
-"CalendarMethod.titleLbl" = "نوع التقويم";
+"CalendarMethod.titleLbl" = "التقويم";
 "CalendarMethod.egyptianGeneralAuthorityOfSurveyTitle" = "مصر";
 "CalendarMethod.universityOfIslamicSciencesShafi" = "اسلاميه مذهب الشافعي";
 "CalendarMethod.universityOfIslamicSciencesHanafi" = "اسلاميه مذهل ابو حنيفه";
