@@ -382,7 +382,7 @@
                         <outlet property="dateLBL" destination="mP5-F7-rng" id="UXW-zw-UZM"/>
                         <outlet property="daysStackView" destination="8xe-0w-ffI" id="QaX-Ae-K5H"/>
                         <outlet property="hideCalendareView" destination="LCQ-DG-O9t" id="vgM-DK-NBz"/>
-                        <outlet property="importBtn" destination="JfE-U2-afT" id="KJc-TL-a0b"/>
+                        <outlet property="importBtn" destination="JfE-U2-afT" id="tP3-tW-aDm"/>
                         <outlet property="prayerTimestableView" destination="CqQ-3d-Vzw" id="9Io-gT-2Ob"/>
                         <outlet property="remainingTimeLbl" destination="Py3-bf-sLa" id="LeD-ZP-9pQ"/>
                         <outlet property="selectedPrayerTimeName" destination="m5p-e6-XhV" id="oxN-kE-vhN"/>

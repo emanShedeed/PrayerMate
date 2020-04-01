@@ -30,7 +30,7 @@ class HomeVC: UIViewController {
     var countdown: DateComponents!
     let calendar = Calendar.current
     var nextPrayerDateDate: Date!
-    
+    var numberOfSelectedPrayerTimes : Int = 0
     var addressTitle : String!
     var presenter:HomeVCPresenter!
     var prayerTimesArray: [(isCellSelected: Bool, isBtnChecked:Bool)] = .init()
@@ -88,7 +88,9 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func importBtnPressed(_ sender: Any) {
+        if(numberOfSelectedPrayerTimes > 0){
         calenadrIncludingHeaderView.isHidden=false
+        }
     }
     
     @IBAction func settingBtnPressed(_ sender: Any) {
@@ -108,6 +110,7 @@ extension HomeVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=tableView.dequeueReusableCell(withIdentifier: "PrayerTimeCell", for: indexPath)as! PrayerTimeCell
         presenter.ConfigureCell(cell:cell, isCellSelected: prayerTimesArray[indexPath.row].isCellSelected,isChecked:prayerTimesArray[indexPath.row].isBtnChecked,cellIndex:indexPath.row)
+        numberOfSelectedPrayerTimes = prayerTimesArray[indexPath.row].isBtnChecked ? numberOfSelectedPrayerTimes + 1 : numberOfSelectedPrayerTimes
         cell.cellDelegate=self
         return cell
     }
@@ -116,6 +119,7 @@ extension HomeVC:UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        performSegue(withIdentifier: "goToRoomDetailsVC", sender: self)
+       numberOfSelectedPrayerTimes += 1
         backGroundImageView.image=backGroundImagesArray[indexPath.row]
         for index in 0 ..< prayerTimesArray.count {
             prayerTimesArray[index].isCellSelected = false
