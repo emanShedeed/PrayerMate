@@ -64,6 +64,19 @@
 "Language.ar" = "العربيه";
 "Language.done" = "تأكيد";
 
+//PrayerTimeBuffer viewController
+"PrayerTimeBufferVC.titleLbl" = "أضافة مدة  افتراضية لكل مواقيت الصلاة";
+"PrayerTimeBufferVC.minsBefore" = " د قبل & ";
+"PrayerTimeBufferVC.minsAfter" = " د بعد";
+"PrayerTimeBufferVC.hoursBefore" = " س قبل & ";
+"PrayerTimeBufferVC.hoursAfter" = " س بعد";
+"PrayerTimeBufferVC.fajrPrayerLblTitle" = "الفجر";
+"PrayerTimeBufferVC.sunrisePrayerLblTitle" = "الشروق";
+"PrayerTimeBufferVC.zuhrPrayerLblTitle" = "الظهر";
+"PrayerTimeBufferVC.asrPrayerLblTitle" = "العصر";
+"PrayerTimeBufferVC.maghribPrayerLblTitle" = "المغرب";
+"PrayerTimeBufferVC.ishaPrayerLblTitle" = "العشاء";
+
 //ImportToCalendar viewController
 "ImportToCalendarVC.titleLbl" = "التقويم";
 "ImportToCalendarVC.subTitleLbl" = "اختر تقويمك المفضل";

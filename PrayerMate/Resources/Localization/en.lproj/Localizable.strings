@@ -45,6 +45,7 @@
 "Home.ishaPrayerLblTitle" = "Isha";
 "Home.PreviousDateToasterMessage"="can't select date before today";
 "Home.moreThanMonthToasterMessage"= "import Period can't exceed one Month";
+
 //Settings viewController
 "Settings.titleLbl" = "Settings";
 "Settings.location" = "Location";
@@ -65,6 +66,19 @@
 "Language.en" = "English";
 "Language.ar" = "Arabic";
 "Language.done" = "Done";
+
+//PrayerTimeBuffer viewController
+"PrayerTimeBufferVC.titleLbl" = "Adjust a default buffer to all prayer times";
+"PrayerTimeBufferVC.minsBefore" = " M before & ";
+"PrayerTimeBufferVC.minsAfter" = " M after";
+"PrayerTimeBufferVC.hoursBefore" = " H before & ";
+"PrayerTimeBufferVC.hoursAfter" = " H after";
+"PrayerTimeBufferVC.fajrPrayerLblTitle" = "Fajr";
+"PrayerTimeBufferVC.sunrisePrayerLblTitle" = "Sunrise";
+"PrayerTimeBufferVC.zuhrPrayerLblTitle" = "zuhr";
+"PrayerTimeBufferVC.asrPrayerLblTitle" = "Asr";
+"PrayerTimeBufferVC.maghribPrayerLblTitle" = "Maghrib";
+"PrayerTimeBufferVC.ishaPrayerLblTitle" = "Isha";
 
 //ImportToCalendar viewController
 "ImportToCalendarVC.titleLbl" = "Calendar";

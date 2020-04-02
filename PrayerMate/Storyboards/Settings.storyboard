@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovg-YT-xC3">
-                                <rect key="frame" x="17" y="108" width="28" height="49"/>
+                                <rect key="frame" x="17" y="108" width="14" height="24.5"/>
                                 <state key="normal" image="back-AppColor"/>
                                 <connections>
                                     <action selector="backButtinPressed:" destination="yME-Lw-VOr" eventType="touchUpInside" id="ay9-kA-RX6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNU-b6-5Gc">
-                                <rect key="frame" x="62" y="114.5" width="118" height="36"/>
+                                <rect key="frame" x="48" y="102.5" width="118" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" name="AppColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,7 +37,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UTt-bb-1CP">
-                                <rect key="frame" x="0.0" y="198.5" width="375" height="468.5"/>
+                                <rect key="frame" x="0.0" y="186.5" width="375" height="480.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SettingCell" id="5Ea-jg-13M" customClass="SettingCell" customModule="PrayerMate" customModuleProvider="target">
@@ -61,13 +61,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJM-mz-NBV">
-                                                    <rect key="frame" x="282" y="11.5" width="42" height="21"/>
+                                                    <rect key="frame" x="289" y="11.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.5490196078431373" green="0.5490196078431373" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="4oq-D0-TGQ">
-                                                    <rect key="frame" x="341" y="9" width="14" height="26"/>
+                                                    <rect key="frame" x="348" y="15.5" width="7" height="13"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -109,7 +109,7 @@
                         <viewLayoutGuide key="safeArea" id="V1V-U1-oZ1"/>
                     </view>
                     <navigationItem key="navigationItem" id="SLR-Pd-2hQ">
-                        <barButtonItem key="backBarButtonItem" title=" " id="y8I-xX-SWG"/>
+                        <barButtonItem key="backBarButtonItem" title="Prayer time buffer" id="5Ct-lX-7sk"/>
                     </navigationItem>
                     <connections>
                         <outlet property="settingsTableView" destination="UTt-bb-1CP" id="XmH-wM-jXp"/>
@@ -118,6 +118,7 @@
                         <segue destination="DrV-qK-Cmn" kind="show" identifier="goToFrequentlyQuestionsVC" id="mRP-pm-Gch"/>
                         <segue destination="8A9-Xj-GKM" kind="presentation" identifier="goToSettingsLocationVC" id="HYs-v0-0Rd"/>
                         <segue destination="mbf-uW-LmF" kind="presentation" identifier="goToImportToCalendarVC" id="Sxk-R6-0Lb"/>
+                        <segue destination="4LD-oo-u4c" kind="show" identifier="goToPrayerTimeBufferVC" id="J1X-xa-Tzl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5w-3c-M97" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -601,6 +602,165 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zej-qM-piM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3641" y="-1433"/>
+        </scene>
+        <!--Prayer Time BufferVC-->
+        <scene sceneID="hEf-yf-9tF">
+            <objects>
+                <viewController storyboardIdentifier="PrayerTimeBufferVC" id="4LD-oo-u4c" customClass="PrayerTimeBufferVC" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y4M-BF-2Il">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0R-Gc-9ep">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
+                                <color key="backgroundColor" name="AppColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="3dd-Yo-8hh"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kaw-P0-j1Q">
+                                <rect key="frame" x="17" y="114.5" width="39.5" height="30"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="16" name="SFProText-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.6000000000000001" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="PrayerTimeBufferVC.titleLbl"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKU-L3-VK7">
+                                <rect key="frame" x="17" y="153.5" width="34.5" height="26"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <color key="NSColor" red="0.60784313725490191" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.6000000000000001" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SRS-DJ-OO4">
+                                <rect key="frame" x="309" y="114" width="51" height="31"/>
+                                <color key="onTintColor" red="0.0" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="automaticAdjustBufferSwichPressed:" destination="4LD-oo-u4c" eventType="valueChanged" id="CRy-OL-ThM"/>
+                                </connections>
+                            </switch>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v0j-tH-TeW">
+                                <rect key="frame" x="0.0" y="209.5" width="375" height="457.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <inset key="separatorInset" minX="77" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PrayerTimeBufferCell" rowHeight="57" id="OsC-wa-k3h" customClass="PrayerTimeBufferCell" customModule="PrayerMate" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="57"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OsC-wa-k3h" id="WRc-vh-5fy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QLj-z2-HAC">
+                                                    <rect key="frame" x="17" y="7.5" width="42" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="uDS-DM-BFI"/>
+                                                        <constraint firstAttribute="height" constant="42" id="xho-Qy-AOJ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ZN-LU-Z7Q">
+                                                    <rect key="frame" x="77" y="3" width="39.5" height="31"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Label">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.039215686274509803" green="0.039215686274509803" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="16" name="SFProText-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.6499999999999999" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ln3-w8-Y5y">
+                                                    <rect key="frame" x="358" y="21" width="7" height="13"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pq-vj-zxJ">
+                                                    <rect key="frame" x="299" y="1" width="42" height="33"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Label">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.5490196078431373" green="0.5490196078431373" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="17" name="SFProText-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.6499999999999999" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="letterSpace">
+                                                            <real key="value" value="-0.40999999999999998"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7pq-vj-zxJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1ZN-LU-Z7Q" secondAttribute="trailing" constant="20" id="4gP-NF-SJV"/>
+                                                <constraint firstItem="QLj-z2-HAC" firstAttribute="centerY" secondItem="WRc-vh-5fy" secondAttribute="centerY" id="ArD-FF-Iqw"/>
+                                                <constraint firstItem="ln3-w8-Y5y" firstAttribute="bottom" secondItem="1ZN-LU-Z7Q" secondAttribute="bottom" id="B4e-VB-g95"/>
+                                                <constraint firstItem="1ZN-LU-Z7Q" firstAttribute="leading" secondItem="QLj-z2-HAC" secondAttribute="trailing" constant="18" id="D7B-sA-o6n"/>
+                                                <constraint firstAttribute="trailing" secondItem="ln3-w8-Y5y" secondAttribute="trailing" constant="10" id="G0d-mI-CB7"/>
+                                                <constraint firstItem="ln3-w8-Y5y" firstAttribute="leading" secondItem="7pq-vj-zxJ" secondAttribute="trailing" constant="17" id="Kwt-cT-n9K"/>
+                                                <constraint firstItem="1ZN-LU-Z7Q" firstAttribute="centerY" secondItem="QLj-z2-HAC" secondAttribute="centerY" constant="-10" id="NAM-D0-T8h"/>
+                                                <constraint firstItem="QLj-z2-HAC" firstAttribute="leading" secondItem="WRc-vh-5fy" secondAttribute="leading" constant="17" id="f3x-Co-7Yr"/>
+                                                <constraint firstItem="7pq-vj-zxJ" firstAttribute="bottom" secondItem="1ZN-LU-Z7Q" secondAttribute="bottom" id="zao-vN-dTA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="prayerTimeIcon" destination="QLj-z2-HAC" id="LxH-dS-UD9"/>
+                                            <outlet property="prayerTimeNameLbl" destination="1ZN-LU-Z7Q" id="mCP-PZ-Lgj"/>
+                                            <outlet property="prayerTimebufferLbl" destination="7pq-vj-zxJ" id="C5m-Yw-2jr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="4LD-oo-u4c" id="ISG-D2-5Kp"/>
+                                    <outlet property="delegate" destination="4LD-oo-u4c" id="1R2-oJ-ayy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SRS-DJ-OO4" firstAttribute="top" secondItem="c0R-Gc-9ep" secondAttribute="bottom" constant="28" id="0TS-X9-YYl"/>
+                            <constraint firstItem="v0j-tH-TeW" firstAttribute="trailing" secondItem="XF7-Bd-bi3" secondAttribute="trailing" id="2ua-eT-Zs9"/>
+                            <constraint firstItem="c0R-Gc-9ep" firstAttribute="top" secondItem="Y4M-BF-2Il" secondAttribute="top" id="4ht-vf-tR5"/>
+                            <constraint firstItem="c0R-Gc-9ep" firstAttribute="trailing" secondItem="XF7-Bd-bi3" secondAttribute="trailing" id="6hm-7e-100"/>
+                            <constraint firstItem="Kaw-P0-j1Q" firstAttribute="leading" secondItem="XF7-Bd-bi3" secondAttribute="leading" constant="17" id="9Ij-vV-0uA"/>
+                            <constraint firstItem="QKU-L3-VK7" firstAttribute="top" secondItem="Kaw-P0-j1Q" secondAttribute="bottom" constant="9" id="DOs-Pa-HoA"/>
+                            <constraint firstItem="XF7-Bd-bi3" firstAttribute="trailing" secondItem="SRS-DJ-OO4" secondAttribute="trailing" constant="17" id="Swr-9v-RX5"/>
+                            <constraint firstItem="QKU-L3-VK7" firstAttribute="leading" secondItem="Kaw-P0-j1Q" secondAttribute="leading" id="ZL3-iW-ZUH"/>
+                            <constraint firstItem="Kaw-P0-j1Q" firstAttribute="centerY" secondItem="SRS-DJ-OO4" secondAttribute="centerY" id="aGd-md-C2u"/>
+                            <constraint firstItem="v0j-tH-TeW" firstAttribute="top" secondItem="QKU-L3-VK7" secondAttribute="bottom" constant="30" id="bUI-l8-IyT"/>
+                            <constraint firstItem="v0j-tH-TeW" firstAttribute="bottom" secondItem="XF7-Bd-bi3" secondAttribute="bottom" id="dcP-b1-As9"/>
+                            <constraint firstItem="c0R-Gc-9ep" firstAttribute="leading" secondItem="XF7-Bd-bi3" secondAttribute="leading" id="oxG-gy-rfg"/>
+                            <constraint firstItem="v0j-tH-TeW" firstAttribute="leading" secondItem="XF7-Bd-bi3" secondAttribute="leading" id="xub-HT-MJk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XF7-Bd-bi3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bqJ-7d-Maw"/>
+                    <connections>
+                        <outlet property="PrayerTimeBufferTableView" destination="v0j-tH-TeW" id="ffa-1L-Ts4"/>
+                        <outlet property="automaticAdjustBufferLbl" destination="QKU-L3-VK7" id="ORQ-DT-XFE"/>
+                        <outlet property="automaticAdjustBufferSwitch" destination="SRS-DJ-OO4" id="jPe-cE-yVd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PE1-St-d3Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1196" y="-1052.0239880059971"/>
         </scene>
         <!--Import To CalendarVC-->
         <scene sceneID="R8v-sG-S5Z">

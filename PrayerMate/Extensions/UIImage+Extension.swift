@@ -39,4 +39,11 @@ extension UIImage {
     
     static let checkCalendar = UIImage(named: "checkCalendar")
     static let uncheckCalendar = UIImage(named: "uncheckCalendar")
+    
+    static let fajrIcon = UIImage(named: "fajrIcon")
+    static let sunriseIcon = UIImage(named: "sunriseIcon")
+    static let zuhrIcon = UIImage(named: "zuhrIcon")
+    static let asrIcon = UIImage(named: "asrIcon")
+    static let maghribIcon = UIImage(named: "maghribIcon")
+    static let ishaIcon = UIImage(named: "ishaIcon")
 }

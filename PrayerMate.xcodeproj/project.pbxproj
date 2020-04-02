@@ -70,6 +70,11 @@
 		BDFFDA6B2433721B0066F493 /* SearchLocationAuomatically.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA6A2433721B0066F493 /* SearchLocationAuomatically.swift */; };
 		BDFFDA6D24338A9C0066F493 /* MapNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA6C24338A9C0066F493 /* MapNavVC.swift */; };
 		BDFFDA702434C44A0066F493 /* ImportToCalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA6F2434C44A0066F493 /* ImportToCalendarVC.swift */; };
+		BDFFDA7324360D7F0066F493 /* PrayerTimeBufferVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA7224360D7F0066F493 /* PrayerTimeBufferVC.swift */; };
+		BDFFDA7624361D660066F493 /* PrayerTimeBufferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA7524361D660066F493 /* PrayerTimeBufferCell.swift */; };
+		BDFFDA7A24361E5C0066F493 /* PrayerTimeBufferVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA7924361E5C0066F493 /* PrayerTimeBufferVCPresenter.swift */; };
+		BDFFDA7C243622400066F493 /* PrayerTimeBufferVC+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA7B243622400066F493 /* PrayerTimeBufferVC+PresenterDelegate.swift */; };
+		BDFFDA7E243635870066F493 /* PrayerTimeBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA7D243635860066F493 /* PrayerTimeBuffer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +149,11 @@
 		BDFFDA6A2433721B0066F493 /* SearchLocationAuomatically.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationAuomatically.swift; sourceTree = "<group>"; };
 		BDFFDA6C24338A9C0066F493 /* MapNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNavVC.swift; sourceTree = "<group>"; };
 		BDFFDA6F2434C44A0066F493 /* ImportToCalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportToCalendarVC.swift; sourceTree = "<group>"; };
+		BDFFDA7224360D7F0066F493 /* PrayerTimeBufferVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeBufferVC.swift; sourceTree = "<group>"; };
+		BDFFDA7524361D660066F493 /* PrayerTimeBufferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeBufferCell.swift; sourceTree = "<group>"; };
+		BDFFDA7924361E5C0066F493 /* PrayerTimeBufferVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeBufferVCPresenter.swift; sourceTree = "<group>"; };
+		BDFFDA7B243622400066F493 /* PrayerTimeBufferVC+PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrayerTimeBufferVC+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		BDFFDA7D243635860066F493 /* PrayerTimeBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeBuffer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				BD6589112430941100FEE06C /* View */,
+				BDFFDA7724361E0F0066F493 /* Presenter */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -254,6 +265,7 @@
 				BDFFDA542432526F0066F493 /* CalendarMethod */,
 				BDFFDA67243358F20066F493 /* SettingsLocation */,
 				BDFFDA6E2434C4270066F493 /* ImportToCalendar */,
+				BDFFDA7124360D5D0066F493 /* PrayerTimeBuffer */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,6 +319,7 @@
 				BD77215724165829008A8947 /* PrayerTime.swift */,
 				BDD1F73B2417A8EB006B87B7 /* MicrosoftCalendarSDKFiles */,
 				BD0C905B242787E9000B8EAC /* PrayerTimeAnnual.swift */,
+				BDFFDA7D243635860066F493 /* PrayerTimeBuffer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -543,6 +556,40 @@
 			path = ImportToCalendar;
 			sourceTree = "<group>";
 		};
+		BDFFDA7124360D5D0066F493 /* PrayerTimeBuffer */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFDA7224360D7F0066F493 /* PrayerTimeBufferVC.swift */,
+				BDFFDA7B243622400066F493 /* PrayerTimeBufferVC+PresenterDelegate.swift */,
+				BDFFDA7424361D460066F493 /* PrayerTimeBufferCell */,
+			);
+			path = PrayerTimeBuffer;
+			sourceTree = "<group>";
+		};
+		BDFFDA7424361D460066F493 /* PrayerTimeBufferCell */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFDA7524361D660066F493 /* PrayerTimeBufferCell.swift */,
+			);
+			path = PrayerTimeBufferCell;
+			sourceTree = "<group>";
+		};
+		BDFFDA7724361E0F0066F493 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFDA7824361E3C0066F493 /* PrayerTimeBuffer */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BDFFDA7824361E3C0066F493 /* PrayerTimeBuffer */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFDA7924361E5C0066F493 /* PrayerTimeBufferVCPresenter.swift */,
+			);
+			path = PrayerTimeBuffer;
+			sourceTree = "<group>";
+		};
 		C7827DD965501B07B1947142 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -703,7 +750,9 @@
 				BDFCFE432418E78A0033D031 /* UIViewExtension.swift in Sources */,
 				BDD1F74A2417B5C7006B87B7 /* UIString+Extension.swift in Sources */,
 				BD65891E2430D0EC00FEE06C /* FrequentlyQuestionsVC.swift in Sources */,
+				BDFFDA7A24361E5C0066F493 /* PrayerTimeBufferVCPresenter.swift in Sources */,
 				BD5FC48D24320C5D0033BCCE /* BaseVC.swift in Sources */,
+				BDFFDA7C243622400066F493 /* PrayerTimeBufferVC+PresenterDelegate.swift in Sources */,
 				BD2E0BF12431D64800D2B6E6 /* AboutVC.swift in Sources */,
 				BDFCFE442418E78A0033D031 /* UIFontExtension.swift in Sources */,
 				BDFFDA662432F5B80066F493 /* SettingVC+delegate.swift in Sources */,
@@ -721,6 +770,7 @@
 				BDD1F7492417B5C7006B87B7 /* UIImage+Extension.swift in Sources */,
 				BDD1F74B2417B5C7006B87B7 /* UIColor+Externsion.swift in Sources */,
 				BD0C905C242787E9000B8EAC /* PrayerTimeAnnual.swift in Sources */,
+				BDFFDA7E243635870066F493 /* PrayerTimeBuffer.swift in Sources */,
 				BDCF6A6F240D257A00DD46F7 /* AuthenticationManager.swift in Sources */,
 				BDA3F868241F712400705569 /* BundleExtension.swift in Sources */,
 				BDFFDA56243252B70066F493 /* CalendarMethodVC.swift in Sources */,
@@ -738,6 +788,8 @@
 				BDFFDA6D24338A9C0066F493 /* MapNavVC.swift in Sources */,
 				BDA3F8822420CAAC00705569 /* LanguageVC.swift in Sources */,
 				BD0C90532423B49D000B8EAC /* HomeVC+PrayerTimeCellDelegate.swift in Sources */,
+				BDFFDA7324360D7F0066F493 /* PrayerTimeBufferVC.swift in Sources */,
+				BDFFDA7624361D660066F493 /* PrayerTimeBufferCell.swift in Sources */,
 				BD6589212430D2B100FEE06C /* QuestionCell.swift in Sources */,
 				BD0C904E2423A620000B8EAC /* HomeVCPresenter.swift in Sources */,
 				BDD1F74F2417B5E3006B87B7 /* Font.swift in Sources */,

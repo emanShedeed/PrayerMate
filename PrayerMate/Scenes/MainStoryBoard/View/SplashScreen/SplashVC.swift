@@ -24,6 +24,22 @@ class SplashVC: UIViewController {
 
         ///
 //        UserDefaults.standard.set(nil, forKey:"calendarMethod" )
+         if  UserDefaults.standard.value(forKey: "automaticAdjustBufferToggle") == nil{
+             UserDefaults.standard.set(false, forKey: "automaticAdjustBufferToggle")
+        }
+        let prayerTimesBufferArray =
+            [
+            PrayerTimeBuffer(type:"M",before:15,after:15),
+            PrayerTimeBuffer(type:"M",before:15,after:15),
+            PrayerTimeBuffer(type:"M",before:15,after:15),
+            PrayerTimeBuffer(type:"M",before:15,after:15),
+            PrayerTimeBuffer(type:"M",before:15,after:15),
+            PrayerTimeBuffer(type:"M",before:15,after:15)
+        ]
+        let prayerTimesBufferData = try! PropertyListEncoder().encode(prayerTimesBufferArray)
+        if  UserDefaults.standard.value(forKey: "prayerTimesBufferArray") == nil{
+                    UserDefaults.standard.set(prayerTimesBufferData, forKey: "prayerTimesBufferArray")
+               }
         if  UserDefaults.standard.value(forKey: "calendarMethod") == nil{
         let dect:[String:String]=["methodName":"CalendarMethod.ummAlQura" ,"methdID":"\(6)"]
             UserDefaults.standard.set(dect, forKey: "calendarMethod")

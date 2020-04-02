@@ -70,6 +70,9 @@ extension SettingVC:UITableViewDataSource,UITableViewDelegate{
         if(indexPath.row == 1){
             createActionSheet()
         }
+        if(indexPath.row == 2){
+            performSegue(withIdentifier: "goToPrayerTimeBufferVC", sender: nil)
+        }
         if(indexPath.row == 3){
             performSegue(withIdentifier: "goToImportToCalendarVC", sender: nil)
         }
