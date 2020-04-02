@@ -21,9 +21,20 @@ class SettingVC: UIViewController {
         settingsTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: settingsTableView.frame.size.width, height: 1))
         
         let method = UserDefaults.standard.value(forKey: "calendarMethod") as? [String:String]
+        let calendars = UserDefaults.standard.value(forKey: "choosenCalendars") as? [Int]
+        var calendarName = ""
+        if(calendars?.count ?? 0 > 0){
+            if (calendars?.first == 0){
+                calendarName =  "ImportToCalendarVC.appleLbl".localized
+            } else if calendars?.first == 1{
+                calendarName = "ImportToCalendarVC.googleLbl".localized
+            } else if calendars?.first == 2 {
+                calendarName = "ImportToCalendarVC.MSLbl".localized
+            }
+        }
         let methodName = method?["methodName"]?.localized
         let addressTitle = UserDefaults.standard.value(forKey: "addressTitle") as? String ?? ""
-        SettingsArray = [(image:UIImage.settingsLocation!,name:"Settings.location".localized,value:addressTitle),(image:UIImage.language!,name:"Settings.language".localized,value:"language".localized),(image:UIImage.clock!,name:"Settings.prayerTimeBuffer".localized,value:""),(image:UIImage.calendar!,name:"Settings.importToCalendar".localized,value:""),(image:UIImage.method!,name:"Settings.calendarMethod".localized,value:methodName ?? ""),(image:UIImage.hourclock!,name:"Settings.about".localized,value:""),(image:UIImage.faq!,name:"Settings.faqs".localized,value:""),(image:UIImage.invite!,name:"Settings.inviteFriends".localized,value:"")]
+        SettingsArray = [(image:UIImage.settingsLocation!,name:"Settings.location".localized,value:addressTitle),(image:UIImage.language!,name:"Settings.language".localized,value:"language".localized),(image:UIImage.clock!,name:"Settings.prayerTimeBuffer".localized,value:""),(image:UIImage.calendar!,name:"Settings.importToCalendar".localized,value:calendarName),(image:UIImage.method!,name:"Settings.calendarMethod".localized,value:methodName ?? ""),(image:UIImage.hourclock!,name:"Settings.about".localized,value:""),(image:UIImage.faq!,name:"Settings.faqs".localized,value:""),(image:UIImage.invite!,name:"Settings.inviteFriends".localized,value:"")]
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -60,8 +71,8 @@ extension SettingVC:UITableViewDataSource,UITableViewDelegate{
             createActionSheet()
         }
         if(indexPath.row == 3){
-        performSegue(withIdentifier: "goToImportToCalendarVC", sender: nil)
-               }
+            performSegue(withIdentifier: "goToImportToCalendarVC", sender: nil)
+        }
         if(indexPath.row == 4){
             performSegue(withIdentifier: "goToCalendarMethod", sender: nil)
         }
@@ -72,15 +83,15 @@ extension SettingVC:UITableViewDataSource,UITableViewDelegate{
             performSegue(withIdentifier: "goToFrequentlyQuestionsVC", sender: nil)
         }
         else if(indexPath.row == 7){
-           if let urlStr = URL(string: "https://itunes.apple.com/us/app/myapp/id1505753464?ls=1&mt=8"), !urlStr.absoluteString.isEmpty {
-            let objectsToShare = [urlStr]
-                                    let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-                           activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
-
-               self.present(activityVC, animated: true, completion: nil)
-           }else  {
-               // show alert for not available
-           }
+            if let urlStr = URL(string: "https://itunes.apple.com/us/app/myapp/id1505753464?ls=1&mt=8"), !urlStr.absoluteString.isEmpty {
+                let objectsToShare = [urlStr]
+                let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
+                
+                self.present(activityVC, animated: true, completion: nil)
+            }else  {
+                // show alert for not available
+            }
         }
     }
     
@@ -91,6 +102,10 @@ extension SettingVC:UITableViewDataSource,UITableViewDelegate{
         }
         if(segue.identifier == "goToSettingsLocationVC"){
             let dVC=segue.destination as! SettingsLocationVC
+            dVC.toSettingelegate=self
+        }
+        if(segue.identifier == "goToImportToCalendarVC"){
+            let dVC=segue.destination as! ImportToCalendarVC
             dVC.toSettingelegate=self
         }
     }

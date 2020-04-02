@@ -14,31 +14,42 @@ import GTMSessionFetcher
 //Microsoft Calendar
 import MSGraphClientSDK
 import MSGraphClientModels
+
 class ImportToCalendarVC: UIViewController {
     @IBOutlet weak var containerViewHeight: NSLayoutConstraint!
     @IBOutlet weak var roundedView: UIView!
-    
     @IBOutlet weak var doneBtn: RoundedButton!
     @IBOutlet var checkBtns: [UIButton]!
-    
     @IBOutlet var checkTitleLbl: [UILabel]!
-     private let scopes = [kGTLRAuthScopeCalendar]
-      private let service = GTLRCalendarService()
+    
+    //Google
+    private let scopes = [kGTLRAuthScopeCalendar]
+    private let service = GTLRCalendarService()
+    ///
+    var filteredIndices = [Int].init()
+    var choosenCalendars = [Int].init()
+     weak var toSettingelegate : SettingsLocationVCView?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         roundedView.roundCorners([.topLeft,.topRight], radius: 20)
         doneBtn.applyGradient(with:  [UIColor.init(rgb: 0x006666), UIColor.init(rgb: 0x339966)], gradient: .topLeftBottomRight)
-        checkBtns.forEach { (button) in
+        let calendars = UserDefaults.standard.value(forKey: "choosenCalendars") as? [Int]
+        for (index, button) in checkBtns.enumerated() {
+            if(calendars?.contains(index) ?? false){
+                button.isSelected = true
+                checkTitleLbl[index].textColor=UIColor.appColor
+            }
             button.setImage(UIImage.uncheckCalendar, for: .normal)
             button.setImage(UIImage.checkCalendar, for: .selected)
         }
         /// google
         GIDSignIn.sharedInstance().clientID = "869556618508-cfup3e2uapcih6kcanfeacq7rl0hpri9.apps.googleusercontent.com"
-                   GIDSignIn.sharedInstance().delegate = self
-                   GIDSignIn.sharedInstance().scopes = scopes
-                   GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().scopes = scopes
+        GIDSignIn.sharedInstance()?.presentingViewController = self
         /////
     }
     
@@ -56,19 +67,32 @@ class ImportToCalendarVC: UIViewController {
     }
     
     @IBAction func DoneBtnPressed(_ sender: Any) {
-        let filteredIndices = checkBtns.indices.filter {checkBtns[$0].isSelected == true}
+        choosenCalendars = [Int].init()
+        filteredIndices = checkBtns.indices.filter {checkBtns[$0].isSelected == true}
         print(filteredIndices)
+        
         if filteredIndices.contains(0) {
             print("Apple Checked")
+            choosenCalendars.append(0)
+            if filteredIndices.contains(1) {
+                GIDSignIn.sharedInstance().signIn()
+            }else if filteredIndices.contains(2){
+                signInMicrosoftAccount()
+            }else {
+                UserDefaults.standard.set(choosenCalendars, forKey: "choosenCalendars")
+                  toSettingelegate?.didSelectMethod()
+                self.dismiss(animated: true, completion: nil)
+            }
         }
-        if filteredIndices.contains(1) {
+        else if filteredIndices.contains(1) {
             print("Google Checked")
             GIDSignIn.sharedInstance().signIn()
         }
-        if filteredIndices.contains(2) {
+        else if filteredIndices.contains(2) {
             print("MS Checked")
             signInMicrosoftAccount()
         }
+        
     }
     @IBAction func closeViewBtnPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -95,51 +119,69 @@ extension ImportToCalendarVC:GIDSignInDelegate{
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
               withError error: Error!) {
         if let error = error {
-//            showAlert(title: "Authentication Error", message: )
+            //            showAlert(title: "Authentication Error", message: )
             Helper.showAlert(title: "Authentication Error", message: error.localizedDescription, VC: self)
-//            self.service.authorizer = nil
+            //            self.service.authorizer = nil
         } else {
             print("signed into google")
-           self.service.authorizer = user.authentication.fetcherAuthorizer()
-//            UserDefaults.standard.set(service, forKey: "googleAuthentaication")
-           
-//            addEventoToGoogleCalendar(summary: "test repetation", description: "description", startTime: "08/03/2020 15:00", endTime: "08/03/2020 17:00")
+            choosenCalendars.append(1)
+            self.service.authorizer = user.authentication.fetcherAuthorizer()
+            if filteredIndices.contains(2) {
+                print("MS Checked")
+                signInMicrosoftAccount()
+            }else{
+                UserDefaults.standard.set(choosenCalendars, forKey: "choosenCalendars")
+                  toSettingelegate?.didSelectMethod()
+                self.dismiss(animated: true, completion: nil)
+            }
+            //            UserDefaults.standard.set(service, forKey: "googleAuthentaication")
+            
+            //            addEventoToGoogleCalendar(summary: "test repetation", description: "description", startTime: "08/03/2020 15:00", endTime: "08/03/2020 17:00")
         }
     }
-  
+    
 }
 //MARK:Microsoft SignIn
 extension ImportToCalendarVC{
-  func signInMicrosoftAccount() {
-            //         spinner.start(container: self)
+    func signInMicrosoftAccount() {
+        //         spinner.start(container: self)
+        
+        // Do an interactive sign in
+        //        signOut()
+        AuthenticationManager.instance.getTokenInteractively(parentView: self) {
+            (token: String?, error: Error?) in
             
-            // Do an interactive sign in
-            AuthenticationManager.instance.getTokenInteractively(parentView: self) {
-                (token: String?, error: Error?) in
+            DispatchQueue.main.async {
+                //                 self.spinner.stop()
                 
-                DispatchQueue.main.async {
-                    //                 self.spinner.stop()
+                guard let _ = token, error == nil else {
+                    // Show the error and stay on the sign-in page
+                    let alert = UIAlertController(title: "Error signing in",
+                                                  message: error.debugDescription,
+                                                  preferredStyle: .alert)
                     
-                    guard let _ = token, error == nil else {
-                        // Show the error and stay on the sign-in page
-                        let alert = UIAlertController(title: "Error signing in",
-                                                      message: error.debugDescription,
-                                                      preferredStyle: .alert)
-                        
-                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                        self.present(alert, animated: true)
-                        return
-                    }
-                    
-                    // Signed in successfully
-                    // Go to welcome page
-//                    self.token = token!
-                    UserDefaults.standard.set(token!, forKey: "icrosoftAuthorization")
-                    print("MS signed in")
-    //                self.createEvent(token:token!)
-//                    self.getCalenderID(token: self.token)
-//                    self.performSegue(withIdentifier: "userSignedIn", sender: nil)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true)
+                    return
                 }
+                
+                // Signed in successfully
+                // Go to welcome page
+                //                    self.token = token!
+                self.choosenCalendars.append(2)
+                UserDefaults.standard.set(token!, forKey: "icrosoftAuthorization")
+                print("MS signed in")
+                UserDefaults.standard.set(self.choosenCalendars, forKey: "choosenCalendars")
+                self.toSettingelegate?.didSelectMethod()
+                self.dismiss(animated: true, completion: nil)
+                //                self.createEvent(token:token!)
+                //                    self.getCalenderID(token: self.token)
+                //                    self.performSegue(withIdentifier: "userSignedIn", sender: nil)
             }
         }
+    }
+    func signOut() {
+        AuthenticationManager.instance.signOut()
+        //        self.performSegue(withIdentifier: "userSignedOut", sender: nil)
+    }
 }
