@@ -13,8 +13,9 @@ class LocationVC: UIViewController {
     @IBOutlet weak var locateMeBtn: UIButton!
     @IBOutlet weak var animatedImage: UIImageView!
     @IBOutlet weak var animatedImage2: UIImageView!
-    
     @IBOutlet weak var addressLbl: RoundedTextField!
+    @IBOutlet weak var animatedImageLeading: NSLayoutConstraint!
+    @IBOutlet weak var animatedImageTrailing: NSLayoutConstraint!
     //MARK:- Variables
     var userLocation:CLLocation?
     let locationManager=CLLocationManager()
@@ -27,13 +28,17 @@ class LocationVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        animateBackGround()
+        //        animateBackGround()
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(applicationDidBecomeActive),
                                                name: UIApplication.didBecomeActiveNotification,
                                                object: nil)
     }
     @objc func applicationDidBecomeActive(){
+        animateBackGround()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         animateBackGround()
     }
     override func viewDidLayoutSubviews() {
@@ -43,13 +48,13 @@ class LocationVC: UIViewController {
     @IBAction func finishBtnPressed(_ sender: Any) {
         if let _ = UserDefaults.standard.value(forKey: "userLocation") as? [String:Double] , addressTitle != "" {
             let viewController = UIStoryboard.Home.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-              UserDefaults.standard.set(addressTitle, forKey: "addressTitle")
-                  UserDefaults.standard.set(completeAddressTitle, forKey: "completeAddressTitle")
+            UserDefaults.standard.set(addressTitle, forKey: "addressTitle")
+            UserDefaults.standard.set(completeAddressTitle, forKey: "completeAddressTitle")
             self.present(viewController, animated: true, completion:nil)
         }else{
             Helper.showAlert(title: "", message: "Location.alertMessage".localized, VC: self)
         }
-   
+        
     }
     
     @IBAction func locateMeBtnPressed(_ sender: Any) {
@@ -62,15 +67,17 @@ class LocationVC: UIViewController {
             let dVC=((segue.destination) as! UINavigationController).viewControllers[0] as!MapVC
             dVC.delegate=self
         }
-
+        
     }
     private func animateBackGround(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            UIView.animate(withDuration: 2.0, delay: 0.0, options: [.repeat, .autoreverse], animations: {
-                self.animatedImage.frame = self.animatedImage.frame.offsetBy(dx: 1 * self.animatedImage.frame.size.width, dy: 0.0)
-                self.animatedImage2.frame = self.animatedImage2.frame.offsetBy(dx: 1 * self.animatedImage2.frame.size.width, dy: 0.0)
-            }, completion: nil)
-        }
+        UIView.animate(withDuration: 2.0, delay: 0.2, options: [.repeat, .autoreverse], animations: {
+            //                self.animatedImage.frame = self.animatedImage.frame.offsetBy(dx: 1 * self.animatedImage.frame.size.width, dy: 0.0)
+            //                self.animatedImage2.frame = self.animatedImage2.frame.offsetBy(dx: 1 * self.animatedImage2.frame.size.width, dy: 0.0)
+            self.animatedImageLeading.constant += self.animatedImage.frame.width
+            self.animatedImageTrailing.constant += self.animatedImage.frame.width
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
     }
     
     
@@ -100,7 +107,7 @@ extension LocationVC:CLLocationManagerDelegate{
                 let dect:[String:Double]=["lat":lat,"long":lon]
                 UserDefaults.standard.set(dect, forKey: "userLocation")
                 
-                 UserDefaults.standard.set(true, forKey: "isLocatedAutomatically")
+                UserDefaults.standard.set(true, forKey: "isLocatedAutomatically")
                 getAddressFromLocation(lat:l.coordinate.latitude,long:l.coordinate.longitude)
             }
         }
@@ -145,7 +152,7 @@ extension LocationVC:CLLocationManagerDelegate{
             
             if let country = placeMark?.country{
                 title +=  country
-//                self.addressTitle += " \(country)"
+                //                self.addressTitle += " \(country)"
             }
             if self.addressTitle == "" {
                 self.addressTitle = title.components(separatedBy: " ").first ?? title
@@ -162,12 +169,12 @@ extension LocationVC:maplLocationView{
         if(selectedPlace != ""){
             let dect:[String:Double]=["lat":lat,"long":lng]
             UserDefaults.standard.set(dect, forKey: "userLocation")
-              UserDefaults.standard.set(false, forKey: "isLocatedAutomatically")
+            UserDefaults.standard.set(false, forKey: "isLocatedAutomatically")
         }
         addressLbl.text=selectedPlace
         completeAddressTitle = selectedPlace
         addressTitle = cityName != "" ? cityName :  completeAddressTitle.components(separatedBy: " ").first ?? completeAddressTitle
-       
+        
     }
     
 }

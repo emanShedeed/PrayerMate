@@ -102,7 +102,7 @@ sadipscing elitr, sed diam.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHU-eg-4yn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-538" y="401"/>
+            <point key="canvasLocation" x="-1926" y="438"/>
         </scene>
         <!--LanguageVC-->
         <scene sceneID="hH0-hh-n7d">
@@ -237,6 +237,8 @@ sadipscing elitr, sed diam.</string>
                     <connections>
                         <outlet property="animatedImage" destination="Rou-GR-54s" id="ihZ-qc-jfg"/>
                         <outlet property="animatedImage2" destination="HrA-r3-hkn" id="HWW-4e-UdP"/>
+                        <outlet property="animatedImageLeading" destination="XrU-hb-1Fq" id="U6V-gA-ALA"/>
+                        <outlet property="animatedImageTrailing" destination="JBC-cM-wpd" id="ok8-1u-IeN"/>
                         <outlet property="arabicRadioButton" destination="xSs-k2-hau" id="rIQ-rr-rTb"/>
                         <outlet property="englishRadioButton" destination="uLp-kS-VMP" id="VXR-kx-iVt"/>
                     </connections>
@@ -559,6 +561,8 @@ sadipscing elitr, sed diam.</string>
                         <outlet property="addressLbl" destination="zL3-et-ItW" id="Qhw-cn-uHX"/>
                         <outlet property="animatedImage" destination="CkX-nU-9tD" id="uCz-X3-afh"/>
                         <outlet property="animatedImage2" destination="c5p-lC-Sdt" id="QCz-tc-FgE"/>
+                        <outlet property="animatedImageLeading" destination="pww-wg-7rG" id="Hnv-Xd-KLB"/>
+                        <outlet property="animatedImageTrailing" destination="qCI-xc-Q4J" id="Aay-KL-ho3"/>
                         <outlet property="locateMeBtn" destination="9p6-T6-Vc0" id="ZSI-21-scq"/>
                         <segue destination="Rs5-UX-hNj" kind="show" identifier="goToMapVC" id="HMv-Wp-NlQ"/>
                     </connections>

@@ -13,6 +13,10 @@ final class LanguageVC: UIViewController {
      @IBOutlet weak var arabicRadioButton: UIButton!
     @IBOutlet weak var animatedImage: UIImageView!
     @IBOutlet weak var animatedImage2: UIImageView!
+    
+    @IBOutlet weak var animatedImageLeading: NSLayoutConstraint!
+    
+    @IBOutlet weak var animatedImageTrailing: NSLayoutConstraint!
     //MARK:- Var
     var radioButtonTag = 1
     override func viewDidLoad() {
@@ -26,11 +30,15 @@ final class LanguageVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        animateBackGround()
+    
         NotificationCenter.default.addObserver(self,
                                                     selector: #selector(applicationDidBecomeActive),
                                                     name: UIApplication.didBecomeActiveNotification,
                                                     object: nil)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animateBackGround()
     }
     @objc func applicationDidBecomeActive(){
        animateBackGround()
@@ -68,12 +76,13 @@ final class LanguageVC: UIViewController {
     //MARK:- Methods
     
     private func animateBackGround(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             UIView.animate(withDuration: 2.0, delay: 0.0, options: [.repeat, .autoreverse], animations: {
-            self.animatedImage.frame = self.animatedImage.frame.offsetBy(dx: 1 * self.animatedImage.frame.size.width, dy: 0.0)
-            self.animatedImage2.frame = self.animatedImage2.frame.offsetBy(dx: 1 * self.animatedImage2.frame.size.width, dy: 0.0)
+//            self.animatedImage.frame = self.animatedImage.frame.offsetBy(dx: 1 * self.animatedImage.frame.size.width, dy: 0.0)
+//            self.animatedImage2.frame = self.animatedImage2.frame.offsetBy(dx: 1 * self.animatedImage2.frame.size.width, dy: 0.0)
+                self.animatedImageLeading.constant += self.animatedImage.frame.width
+                self.animatedImageTrailing.constant += self.animatedImage.frame.width
+                self.view.layoutIfNeeded()
         }, completion: nil)
-        }
         }
     
     private func reloadRootView() {

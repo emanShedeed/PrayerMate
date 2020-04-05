@@ -62,8 +62,8 @@
             filePath = "PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "locationIsSeleted(at:lng:selectedPlace:cityName:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "locationIsSeleted(at:lng:selectedPlace:cityName:)"
             landmarkType = "7">
          </BreakpointContent>
