@@ -11,8 +11,8 @@ import UIKit
 protocol settingsVCView {
     func APIParameterChanged()
 }
-extension SettingVC:CalendarMethodVCView,SettingsLocationVCView{
-    func didSelectMethod() {
+extension SettingVC:UpdateSettingsView{
+    func didUpdateSettings() {
         let method = UserDefaults.standard.value(forKey: "calendarMethod") as? [String:String]
         let methodName = method?["methodName"]?.localized
         let calendars = UserDefaults.standard.value(forKey: "choosenCalendars") as? [Int]

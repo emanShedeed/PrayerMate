@@ -23,6 +23,7 @@
 		BD12EB492422267F00001437 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB482422267F00001437 /* LocationVC.swift */; };
 		BD12EB4B2422290C00001437 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB4A2422290B00001437 /* RoundedTextField.swift */; };
 		BD2E0BF12431D64800D2B6E6 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2E0BF02431D64800D2B6E6 /* AboutVC.swift */; };
+		BD371D902439DA3B00ED2874 /* CustomActionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD371D8F2439DA3B00ED2874 /* CustomActionVC.swift */; };
 		BD42746D242A4459007DE9AC /* CustomJTAppleCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD42746C242A4459007DE9AC /* CustomJTAppleCalendarCell.swift */; };
 		BD5FC48D24320C5D0033BCCE /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5FC48C24320C5D0033BCCE /* BaseVC.swift */; };
 		BD65890F24307CA300FEE06C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD65890E24307CA300FEE06C /* Settings.storyboard */; };
@@ -96,6 +97,7 @@
 		BD12EB482422267F00001437 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		BD12EB4A2422290B00001437 /* RoundedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		BD2E0BF02431D64800D2B6E6 /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		BD371D8F2439DA3B00ED2874 /* CustomActionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActionVC.swift; sourceTree = "<group>"; };
 		BD42746C242A4459007DE9AC /* CustomJTAppleCalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomJTAppleCalendarCell.swift; sourceTree = "<group>"; };
 		BD5FC48C24320C5D0033BCCE /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		BD65890E24307CA300FEE06C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -247,6 +249,14 @@
 			path = About;
 			sourceTree = "<group>";
 		};
+		BD371D8E2439DA0D00ED2874 /* CustomAction */ = {
+			isa = PBXGroup;
+			children = (
+				BD371D8F2439DA3B00ED2874 /* CustomActionVC.swift */,
+			);
+			path = CustomAction;
+			sourceTree = "<group>";
+		};
 		BD658910243093FF00FEE06C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +276,7 @@
 				BDFFDA67243358F20066F493 /* SettingsLocation */,
 				BDFFDA6E2434C4270066F493 /* ImportToCalendar */,
 				BDFFDA7124360D5D0066F493 /* PrayerTimeBuffer */,
+				BD371D8E2439DA0D00ED2874 /* CustomAction */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -794,6 +805,7 @@
 				BD0C904E2423A620000B8EAC /* HomeVCPresenter.swift in Sources */,
 				BDD1F74F2417B5E3006B87B7 /* Font.swift in Sources */,
 				BDAA26CB2404F3A80064C8D4 /* AppDelegate.swift in Sources */,
+				BD371D902439DA3B00ED2874 /* CustomActionVC.swift in Sources */,
 				BDD1F7442417AA8A006B87B7 /* SplashVC.swift in Sources */,
 				BDA3F88624211E7400705569 /* ImageGif.swift in Sources */,
 				BDA3F86F241F7AFC00705569 /* UserDefaultsUtility.swift in Sources */,

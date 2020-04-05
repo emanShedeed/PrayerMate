@@ -23,6 +23,10 @@ class PrayerTimeBufferVC: BaseVC {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        let backButton = UIBarButtonItem()
+        backButton.title = "PrayerTimeBufferVC.navBackButtonText".localized
+       self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        
          presenter = PrayerTimeBufferVCPresenter(view: self)
         PrayerTimeBufferTableView.tableFooterView=UIView()
         // For remove last separator
@@ -57,13 +61,22 @@ class PrayerTimeBufferVC: BaseVC {
         defaultMinuteBeforeAndAfter.setValue(UIColor.black, forKey: "titleTextColor")
         // create an action
         let customAction = UIAlertAction(title: "PrayerTimeBufferVC.actionSheetCustom".localized, style: .default) { action -> Void in
-          
+            
+             let viewController = UIStoryboard.Settings.instantiateViewController(withIdentifier: "CustomActionVC") as! CustomActionVC
+            viewController.delegate = self
+            viewController.forall = forAll
+            viewController.index=index
+            self.present(viewController, animated: true, completion: nil)
         }
         customAction.setValue(UIColor.black, forKey: "titleTextColor")
         
         
         // create an action
-        let doneAction = UIAlertAction(title: "Language.done".localized, style: .cancel) { action -> Void in }
+        let doneAction = UIAlertAction(title: "Language.done".localized, style: .cancel) { action -> Void in
+            if(forAll){
+            self.automaticAdjustBufferSwitch.isOn = false
+            }
+        }
         doneAction.setValue(UIColor(rgb: 0xEA961E), forKey: "titleTextColor")
         
         // add actions

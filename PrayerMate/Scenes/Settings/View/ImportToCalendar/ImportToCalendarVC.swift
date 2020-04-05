@@ -28,7 +28,7 @@ class ImportToCalendarVC: UIViewController {
     ///
     var filteredIndices = [Int].init()
     var choosenCalendars = [Int].init()
-     weak var toSettingelegate : SettingsLocationVCView?
+     weak var toSettingelegate : UpdateSettingsView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,7 +80,7 @@ class ImportToCalendarVC: UIViewController {
                 signInMicrosoftAccount()
             }else {
                 UserDefaults.standard.set(choosenCalendars, forKey: "choosenCalendars")
-                  toSettingelegate?.didSelectMethod()
+                toSettingelegate?.didUpdateSettings()
                 self.dismiss(animated: true, completion: nil)
             }
         }
@@ -124,6 +124,7 @@ extension ImportToCalendarVC:GIDSignInDelegate{
             //            self.service.authorizer = nil
         } else {
             print("signed into google")
+                Helper.showToast(message: "ImportToCalendarVC.GoogleSignInSuccessMessage".localized)
             choosenCalendars.append(1)
             self.service.authorizer = user.authentication.fetcherAuthorizer()
             if filteredIndices.contains(2) {
@@ -131,7 +132,7 @@ extension ImportToCalendarVC:GIDSignInDelegate{
                 signInMicrosoftAccount()
             }else{
                 UserDefaults.standard.set(choosenCalendars, forKey: "choosenCalendars")
-                  toSettingelegate?.didSelectMethod()
+                toSettingelegate?.didUpdateSettings()
                 self.dismiss(animated: true, completion: nil)
             }
             //            UserDefaults.standard.set(service, forKey: "googleAuthentaication")
@@ -168,11 +169,12 @@ extension ImportToCalendarVC{
                 // Signed in successfully
                 // Go to welcome page
                 //                    self.token = token!
+                Helper.showToast(message: "ImportToCalendarVC.MSSignInSuccessMessage".localized)
                 self.choosenCalendars.append(2)
                 UserDefaults.standard.set(token!, forKey: "icrosoftAuthorization")
                 print("MS signed in")
                 UserDefaults.standard.set(self.choosenCalendars, forKey: "choosenCalendars")
-                self.toSettingelegate?.didSelectMethod()
+                self.toSettingelegate?.didUpdateSettings()
                 self.dismiss(animated: true, completion: nil)
                 //                self.createEvent(token:token!)
                 //                    self.getCalenderID(token: self.token)

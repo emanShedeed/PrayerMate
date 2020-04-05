@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 protocol  PrayerTimeBufferView :class{
     func showError(error:String)
-    func setBufferSucess()
+    func setBufferSucess(forAll : Bool)
     
 }
 protocol PrayerTimeBufferCellView {
@@ -26,7 +26,7 @@ class PrayerTimeBufferVCPresenter{
        var automaticAdjustBufferAfterText = ""
        var prayerTimesBufferArray : [PrayerTimeBuffer]?
     
-    init(view:PrayerTimeBufferView) {
+    init(view:PrayerTimeBufferView?) {
         self.view=view
         let fetchedData = UserDefaults.standard.data(forKey: "prayerTimesBufferArray")!
         prayerTimesBufferArray = try! PropertyListDecoder().decode([PrayerTimeBuffer].self, from: fetchedData)
@@ -37,7 +37,9 @@ class PrayerTimeBufferVCPresenter{
     func getbufferText(index : Int) -> String {
       automaticAdjustBufferBeforeText = ""
         automaticAdjustBufferAfterText = ""
-            if let type = prayerTimesBufferArray?.first?.type{
+        let fetchedData = UserDefaults.standard.data(forKey: "prayerTimesBufferArray")!
+        prayerTimesBufferArray = try! PropertyListDecoder().decode([PrayerTimeBuffer].self, from: fetchedData)
+            if let type = prayerTimesBufferArray?[index].type{
                 if(type == "M"){
                     
                     automaticAdjustBufferBeforeText = "\(prayerTimesBufferArray?[index].before ?? 15 )" + "PrayerTimeBufferVC.minsBefore".localized
@@ -68,7 +70,9 @@ class PrayerTimeBufferVCPresenter{
             prayerTimesBufferArray?[index].before = beforeValue
             prayerTimesBufferArray?[index].after = afterValue
         }
-        view?.setBufferSucess()
+        let prayerTimesBufferData = try! PropertyListEncoder().encode(prayerTimesBufferArray)
+          UserDefaults.standard.set(prayerTimesBufferData, forKey: "prayerTimesBufferArray")
+        view?.setBufferSucess(forAll: forAll)
     }
     func getToggleValue() -> Bool{
         return UserDefaults.standard.value(forKey: "automaticAdjustBufferToggle") as? Bool ?? false

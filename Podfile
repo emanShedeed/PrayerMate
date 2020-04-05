@@ -14,4 +14,5 @@ pod 'MSGraphClientModels', '~> 1.3.0'
 pod 'JTAppleCalendar', '~> 8.0'
 pod 'Toaster'
 pod 'DLRadioButton'
+pod 'IQKeyboardManager'
 end

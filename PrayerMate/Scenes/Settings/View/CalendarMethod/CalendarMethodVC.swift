@@ -7,14 +7,14 @@
 //
 
 import UIKit
-protocol CalendarMethodVCView:class {
-    func didSelectMethod()
+protocol UpdateSettingsView:class {
+    func didUpdateSettings()
 }
 class CalendarMethodVC: UIViewController {
     @IBOutlet weak var containerViewHeight: NSLayoutConstraint!
     @IBOutlet weak var roundedView: UIView!
     @IBOutlet weak var calendarMethodTV:UITableView!
-     weak var toSettingelegate : CalendarMethodVCView?
+     weak var toSettingelegate : UpdateSettingsView?
     let calendarMethodArray :[String] = ["CalendarMethod.egyptianGeneralAuthorityOfSurveyTitle","CalendarMethod.universityOfIslamicSciencesShafi","CalendarMethod.universityOfIslamicSciencesHanafi","CalendarMethod.islamicCircleOfNorthAmerica","CalendarMethod.muslimWorldLeague","CalendarMethod.ummAlQura","CalendarMethod.fixedIsha"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +44,7 @@ extension CalendarMethodVC:UITableViewDataSource,UITableViewDelegate{
         let name = calendarMethodArray[indexPath.row]
         let dect:[String:String]=["methodName":name ,"methdID":"\(indexPath.row+1)"]
         UserDefaults.standard.set(dect, forKey: "calendarMethod")
-        toSettingelegate?.didSelectMethod()
+        toSettingelegate?.didUpdateSettings()
         self.dismiss(animated: true, completion: nil)
     }
     

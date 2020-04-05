@@ -69,6 +69,7 @@
 
 //PrayerTimeBuffer viewController
 "PrayerTimeBufferVC.titleLbl" = "Adjust a default buffer to all prayer times";
+"PrayerTimeBufferVC.navBackButtonText" = "Prayer time buffer";
 "PrayerTimeBufferVC.minsBefore" = " M before & ";
 "PrayerTimeBufferVC.minsAfter" = " M after";
 "PrayerTimeBufferVC.hoursBefore" = " H before & ";
@@ -82,12 +83,25 @@
 "PrayerTimeBufferVC.maghribPrayerLblTitle" = "Maghrib";
 "PrayerTimeBufferVC.ishaPrayerLblTitle" = "Isha";
 
+//customAction viewController
+"customActionVC.titleLbl" = "Custom Buffer";
+"customActionVC.beforeTxtPlaceHolder" = "Time";
+"customActionVC.afterTxtPlaceHolder" = "Time";
+"customActionVC.beforeTitleLbl" = "Before";
+"customActionVC.afterTitleLbl" = "After";
+"customActionVC.minutesTitleLbl" = "Minutes";
+"customActionVC.hoursTitleLbl" = "Hours";
+"customActionVC.donebtntitle" = "Done";
+
+
 //ImportToCalendar viewController
 "ImportToCalendarVC.titleLbl" = "Calendar";
 "ImportToCalendarVC.subTitleLbl" = "Choose your preferred calendar";
 "ImportToCalendarVC.appleLbl" = "Apple Calendar";
 "ImportToCalendarVC.googleLbl" = "Google Calendar";
 "ImportToCalendarVC.MSLbl" = "MS Calendar";
+"ImportToCalendarVC.MSSignInSuccessMessage"="successfully signed in microsoft";
+"ImportToCalendarVC.GoogleSignInSuccessMessage"="successfully signed in Google";
 "ImportToCalendarVC.donebtntitle" = "Done";
 
 //CalendarMethod viewController

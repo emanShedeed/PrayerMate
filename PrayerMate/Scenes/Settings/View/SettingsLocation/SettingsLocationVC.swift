@@ -8,9 +8,7 @@
 
 import UIKit
 import CoreLocation
-protocol SettingsLocationVCView:class {
-    func didSelectMethod()
-}
+
 class SettingsLocationVC: UIViewController {
     @IBOutlet weak var containerViewHeight: NSLayoutConstraint!
     @IBOutlet weak var roundedView: UIView!
@@ -23,7 +21,7 @@ class SettingsLocationVC: UIViewController {
     var addressTitle :String = ""
     var completeAddressTitle : String = ""
     var isLocatedAutomatically = false
-    weak var toSettingelegate : SettingsLocationVCView?
+    weak var toSettingelegate : UpdateSettingsView?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,7 +37,7 @@ class SettingsLocationVC: UIViewController {
     @IBAction func closeViewBtnPressed(_ sender: Any) {
         if(addressTitle != ""){
         UserDefaults.standard.set(addressTitle, forKey: "addressTitle")
-        toSettingelegate?.didSelectMethod()
+        toSettingelegate?.didUpdateSettings()
         }
         self.dismiss(animated: true, completion: nil)
     }

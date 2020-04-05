@@ -29,6 +29,9 @@ class FrequentlyQuestionsVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         // For remove extra cells
         questionsTV.tableFooterView=UIView()
          // For remove last separator

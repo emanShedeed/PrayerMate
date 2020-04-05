@@ -82,6 +82,8 @@ class HomeVCPresenter{
         // set locale to "ar_DZ" and format as per your specifications
         if AppSetting.shared.getCurrentLanguage() == AppLanguages.ar{
             formatter.locale = NSLocale(localeIdentifier: "ar") as Locale
+        }else{
+            formatter.locale = NSLocale(localeIdentifier: "en") as Locale
         }
         let outputDate = ""
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
