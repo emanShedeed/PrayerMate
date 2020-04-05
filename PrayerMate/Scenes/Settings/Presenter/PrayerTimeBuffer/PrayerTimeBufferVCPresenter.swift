@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 protocol  PrayerTimeBufferView :class{
     func showError(error:String)
-    func fetchDataSucess()
+    func setBufferSucess()
     
 }
 protocol PrayerTimeBufferCellView {
@@ -54,9 +54,28 @@ class PrayerTimeBufferVCPresenter{
             }
             return automaticAdjustBufferBeforeText + automaticAdjustBufferAfterText
     }
+    func setbuffer(forAll: Bool = false, index : Int, type:String, beforeValue:Int, afterValue:Int){
+    
+        if (forAll){
+            let count = prayerTimesBufferArray?.count ?? 0
+            for i in 0..<count{
+                prayerTimesBufferArray?[i].type = type
+                prayerTimesBufferArray?[i].before = beforeValue
+                prayerTimesBufferArray?[i].after = afterValue
+            }
+        }else{
+            prayerTimesBufferArray?[index].type = type
+            prayerTimesBufferArray?[index].before = beforeValue
+            prayerTimesBufferArray?[index].after = afterValue
+        }
+        view?.setBufferSucess()
+    }
     func getToggleValue() -> Bool{
         return UserDefaults.standard.value(forKey: "automaticAdjustBufferToggle") as? Bool ?? false
     }
+    func setToggleValue(value:Bool){
+        UserDefaults.standard.set(value, forKey: "automaticAdjustBufferToggle")
+       }
     func ConfigureCell(cell:PrayerTimeBufferCellView,cellIndex:Int){
         let text = getbufferText(index: cellIndex)
         cell.displayData(prayerTimeName: prayerTimesNames[cellIndex].localized, prayerTimeBuffer: text,iconImage: iconImagesArray[cellIndex]!)

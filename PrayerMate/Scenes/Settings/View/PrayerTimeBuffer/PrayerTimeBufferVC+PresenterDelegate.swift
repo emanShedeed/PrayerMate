@@ -12,8 +12,13 @@ extension PrayerTimeBufferVC:PrayerTimeBufferView{
         
     }
     
-    func fetchDataSucess() {
-        
+    func setBufferSucess() {
+        if(presenter.getToggleValue()){
+            automaticAdjustBufferLbl.text = presenter.getbufferText(index: 0)
+        }else{
+            automaticAdjustBufferLbl.text = ""
+        }
+        PrayerTimeBufferTableView.reloadData()
     }
     
     

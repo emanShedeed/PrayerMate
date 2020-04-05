@@ -70,6 +70,8 @@
 "PrayerTimeBufferVC.minsAfter" = " د بعد";
 "PrayerTimeBufferVC.hoursBefore" = " س قبل & ";
 "PrayerTimeBufferVC.hoursAfter" = " س بعد";
+"PrayerTimeBufferVC.actionSheetDefault" = "15 دقيقة قبل وبعد";
+"PrayerTimeBufferVC.actionSheetCustom" = "محدد";
 "PrayerTimeBufferVC.fajrPrayerLblTitle" = "الفجر";
 "PrayerTimeBufferVC.sunrisePrayerLblTitle" = "الشروق";
 "PrayerTimeBufferVC.zuhrPrayerLblTitle" = "الظهر";

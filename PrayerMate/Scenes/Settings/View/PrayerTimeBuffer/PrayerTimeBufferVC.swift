@@ -27,7 +27,7 @@ class PrayerTimeBufferVC: BaseVC {
         PrayerTimeBufferTableView.tableFooterView=UIView()
         // For remove last separator
         PrayerTimeBufferTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: PrayerTimeBufferTableView.frame.size.width, height: 1))
-        if( presenter.getToggleValue()){
+        if(presenter.getToggleValue()){
         automaticAdjustBufferLbl.text = presenter.getbufferText(index: 0)
         }else{
            automaticAdjustBufferLbl.text = ""
@@ -36,7 +36,44 @@ class PrayerTimeBufferVC: BaseVC {
     }
     
     
-    @IBAction func automaticAdjustBufferSwichPressed(_ sender: Any) {
+    @IBAction func automaticAdjustBufferSwichPressed(_ sender: UISwitch) {
+        if(sender.isOn){
+        createActionSheet(forAll: true, index: 0, type: "M", before: 15, after: 15)
+        }else{
+            presenter.setToggleValue(value: false)
+            automaticAdjustBufferLbl.text = ""
+        }
+    }
+    func createActionSheet(forAll:Bool = false, index: Int , type:String,  before:Int, after:Int){
+        let actionSheetController=UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
+        // create an action
+        let defaultMinuteBeforeAndAfter = UIAlertAction(title: "PrayerTimeBufferVC.actionSheetDefault".localized, style: .default) { action -> Void in
+            if(forAll){
+                self.presenter.setToggleValue(value: true)
+            }
+            self.presenter.setbuffer(forAll: forAll, index: index, type: type, beforeValue: before, afterValue: after)
+           
+            }
+        defaultMinuteBeforeAndAfter.setValue(UIColor.black, forKey: "titleTextColor")
+        // create an action
+        let customAction = UIAlertAction(title: "PrayerTimeBufferVC.actionSheetCustom".localized, style: .default) { action -> Void in
+          
+        }
+        customAction.setValue(UIColor.black, forKey: "titleTextColor")
+        
+        
+        // create an action
+        let doneAction = UIAlertAction(title: "Language.done".localized, style: .cancel) { action -> Void in }
+        doneAction.setValue(UIColor(rgb: 0xEA961E), forKey: "titleTextColor")
+        
+        // add actions
+        actionSheetController.addAction(defaultMinuteBeforeAndAfter)
+        actionSheetController.addAction(customAction)
+        actionSheetController.addAction(doneAction)
+        
+        self.present(actionSheetController, animated: true) {
+            print("option menu presented")
+        }
     }
     
 }
@@ -51,6 +88,7 @@ extension PrayerTimeBufferVC:UITableViewDataSource,UITableViewDelegate{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        createActionSheet(forAll: false, index:indexPath.row, type: "M", before: 15, after: 15)
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -73,6 +73,8 @@
 "PrayerTimeBufferVC.minsAfter" = " M after";
 "PrayerTimeBufferVC.hoursBefore" = " H before & ";
 "PrayerTimeBufferVC.hoursAfter" = " H after";
+"PrayerTimeBufferVC.actionSheetDefault" = "15 minutes before & after";
+"PrayerTimeBufferVC.actionSheetCustom" = "Custom";
 "PrayerTimeBufferVC.fajrPrayerLblTitle" = "Fajr";
 "PrayerTimeBufferVC.sunrisePrayerLblTitle" = "Sunrise";
 "PrayerTimeBufferVC.zuhrPrayerLblTitle" = "zuhr";
