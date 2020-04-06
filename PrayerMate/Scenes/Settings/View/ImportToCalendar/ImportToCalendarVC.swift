@@ -15,17 +15,22 @@ import GTMSessionFetcher
 import MSGraphClientSDK
 import MSGraphClientModels
 
+/// This is a class created for choosing Calenders User need to import to
 class ImportToCalendarVC: UIViewController {
+     //MARK:- IBOUTLET
     @IBOutlet weak var containerViewHeight: NSLayoutConstraint!
     @IBOutlet weak var roundedView: UIView!
     @IBOutlet weak var doneBtn: RoundedButton!
     @IBOutlet var checkBtns: [UIButton]!
     @IBOutlet var checkTitleLbl: [UILabel]!
     
+    //MARK:VARiIABLES
+    
     //Google
     private let scopes = [kGTLRAuthScopeCalendar]
     private let service = GTLRCalendarService()
     ///
+    
     var filteredIndices = [Int].init()
     var choosenCalendars = [Int].init()
      weak var toSettingelegate : UpdateSettingsView?
@@ -34,25 +39,68 @@ class ImportToCalendarVC: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+      
+      setupView()
+      displaySelectedCalendars()
+      setupGoogleConfiguration()
+    
+    }
+    /**
+                   Call this function setup UI
+                  
+                     
+                   ### Usage Example: ###
+                   ````
+                 setupView()
+                   
+                   ````
+               - Parameters:
+                   */
+    func setupView(){
         roundedView.roundCorners([.topLeft,.topRight], radius: 20)
-        doneBtn.applyGradient(with:  [UIColor.init(rgb: 0x006666), UIColor.init(rgb: 0x339966)], gradient: .topLeftBottomRight)
+              doneBtn.applyGradient(with:  [UIColor.init(rgb: 0x006666), UIColor.init(rgb: 0x339966)], gradient: .topLeftBottomRight)
+    }
+    /**
+                     Call this function to display selected Calendars if any
+                    
+                       
+                     ### Usage Example: ###
+                     ````
+                   displaySelectedCalendars()
+                     
+                     ````
+                 - Parameters:
+                     */
+    func displaySelectedCalendars(){
         let calendars = UserDefaults.standard.value(forKey: "choosenCalendars") as? [Int]
-        for (index, button) in checkBtns.enumerated() {
-            if(calendars?.contains(index) ?? false){
-                button.isSelected = true
-                checkTitleLbl[index].textColor=UIColor.appColor
-            }
-            button.setImage(UIImage.uncheckCalendar, for: .normal)
-            button.setImage(UIImage.checkCalendar, for: .selected)
-        }
-        /// google
+             for (index, button) in checkBtns.enumerated() {
+                 if(calendars?.contains(index) ?? false){
+                     button.isSelected = true
+                     checkTitleLbl[index].textColor=UIColor.appColor
+                 }
+                 button.setImage(UIImage.uncheckCalendar, for: .normal)
+                 button.setImage(UIImage.checkCalendar, for: .selected)
+             }
+    }
+    /**
+        Call this function to setup Google Configuration
+       
+          
+        ### Usage Example: ###
+        ````
+      setupGoogleConfiguration()
+        
+        ````
+    - Parameters:
+        */
+    func setupGoogleConfiguration(){
         GIDSignIn.sharedInstance().clientID = "869556618508-cfup3e2uapcih6kcanfeacq7rl0hpri9.apps.googleusercontent.com"
-        GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance().scopes = scopes
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        /////
+               GIDSignIn.sharedInstance().delegate = self
+               GIDSignIn.sharedInstance().scopes = scopes
+               GIDSignIn.sharedInstance()?.presentingViewController = self
     }
     
+      //MARK:- IBActions
     
     @IBAction func checkBtnPressed(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected

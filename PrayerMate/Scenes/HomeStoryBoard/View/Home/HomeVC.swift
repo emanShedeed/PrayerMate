@@ -37,7 +37,7 @@ final class HomeVC: UIViewController {
     var presenter:HomeVCPresenter!
     var prayerTimesArray: [(isCellSelected: Bool, isBtnChecked:Bool)] = .init()
     var backGroundImagesArray = [UIImage.fajrBackGround,UIImage.sunriseBackGround,UIImage.zuhrBackGround,UIImage.asrBackGround,UIImage.maghribBackGround,UIImage.ishaBackGround]
-    
+   
     ////Calendar VARiIABLES
     let calendareFormatter = DateFormatter()
     var firstDate: Date?

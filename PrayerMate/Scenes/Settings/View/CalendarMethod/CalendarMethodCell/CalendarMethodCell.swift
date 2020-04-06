@@ -8,8 +8,11 @@
 
 import UIKit
 
+/// This is a class created for Calendar Method Cell At CalendarMethodVC
 class CalendarMethodCell: UITableViewCell {
+//MARK:- IBOUTLET
   @IBOutlet weak var methodNameLbl:UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

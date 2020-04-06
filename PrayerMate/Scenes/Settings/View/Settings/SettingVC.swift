@@ -7,43 +7,46 @@
 //
 
 import UIKit
-
+/// This is a class created for handling App Settings
 class SettingVC: UIViewController {
+    
+    //MARK:- IBOUTLET
     @IBOutlet var settingsTableView: UITableView!
+    
+    //MARK:VARiIABLES
+    
     var SettingsArray :[(image: UIImage, name: String , value:String)] = .init()
+    
     var delegateToHome:settingsVCView?
+    
+    let presenter = SettingVCPresenter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
         settingsTableView.tableFooterView=UIView()
+        
         // For remove last separator
         settingsTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: settingsTableView.frame.size.width, height: 1))
         
-        let method = UserDefaults.standard.value(forKey: "calendarMethod") as? [String:String]
-        let calendars = UserDefaults.standard.value(forKey: "choosenCalendars") as? [Int]
-        var calendarName = ""
-        if(calendars?.count ?? 0 > 0){
-            if (calendars?.first == 0){
-                calendarName =  "ImportToCalendarVC.appleLbl".localized
-            } else if calendars?.first == 1{
-                calendarName = "ImportToCalendarVC.googleLbl".localized
-            } else if calendars?.first == 2 {
-                calendarName = "ImportToCalendarVC.MSLbl".localized
-            }
-        }
-        let methodName = method?["methodName"]?.localized
-        let addressTitle = UserDefaults.standard.value(forKey: "addressTitle") as? String ?? ""
-        SettingsArray = [(image:UIImage.settingsLocation!,name:"Settings.location".localized,value:addressTitle),(image:UIImage.language!,name:"Settings.language".localized,value:"language".localized),(image:UIImage.clock!,name:"Settings.prayerTimeBuffer".localized,value:""),(image:UIImage.calendar!,name:"Settings.importToCalendar".localized,value:calendarName),(image:UIImage.method!,name:"Settings.calendarMethod".localized,value:methodName ?? ""),(image:UIImage.hourclock!,name:"Settings.about".localized,value:""),(image:UIImage.faq!,name:"Settings.faqs".localized,value:""),(image:UIImage.invite!,name:"Settings.inviteFriends".localized,value:"")]
+        SettingsArray = presenter.setDefaultValues()
+        
+        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+    
+    //MARK:- IBActions
     
     @IBAction func backButtinPressed(_ sender: UIButton) {
         delegateToHome?.APIParameterChanged()
@@ -51,6 +54,7 @@ class SettingVC: UIViewController {
     }
     
 }
+/// This is a class created for handling table View delegate and data source delegate functions
 extension SettingVC:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return SettingsArray.count
@@ -68,7 +72,9 @@ extension SettingVC:UITableViewDataSource,UITableViewDelegate{
             performSegue(withIdentifier: "goToSettingsLocationVC", sender: nil)
         }
         if(indexPath.row == 1){
-            createActionSheet()
+            self.present(self.presenter.createActionSheet(), animated: true) {
+                print("option menu presented")
+            }
         }
         if(indexPath.row == 2){
             performSegue(withIdentifier: "goToPrayerTimeBufferVC", sender: nil)
@@ -113,45 +119,5 @@ extension SettingVC:UITableViewDataSource,UITableViewDelegate{
         }
     }
 }
-extension SettingVC{
-    func createActionSheet(){
-        let actionSheetController=UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
-        // create an action
-        let englishAction = UIAlertAction(title: "Language.en".localized, style: .default) { action -> Void in
-            if(AppSetting.shared.getCurrentLanguage() == AppLanguages.ar){
-                AppSetting.shared.setCurrentLanguage(language: AppLanguages.en)
-                LanguageManager.currentLanguage=AppLanguages.en.rawValue
-                self.reloadRootView()
-            }
-        }
-        englishAction.setValue(UIColor.black, forKey: "titleTextColor")
-        // create an action
-        let arabicAction = UIAlertAction(title: "Language.ar".localized, style: .default) { action -> Void in
-            if(AppSetting.shared.getCurrentLanguage() == AppLanguages.en){
-                AppSetting.shared.setCurrentLanguage(language: AppLanguages.ar)
-                LanguageManager.currentLanguage=AppLanguages.ar.rawValue
-                self.reloadRootView()
-            }
-        }
-        arabicAction.setValue(UIColor.black, forKey: "titleTextColor")
-        
-        
-        // create an action
-        let doneAction = UIAlertAction(title: "Language.done".localized, style: .cancel) { action -> Void in }
-        doneAction.setValue(UIColor(rgb: 0xEA961E), forKey: "titleTextColor")
-        
-        // add actions
-        actionSheetController.addAction(englishAction)
-        actionSheetController.addAction(arabicAction)
-        actionSheetController.addAction(doneAction)
-        
-        self.present(actionSheetController, animated: true) {
-            print("option menu presented")
-        }
-    }
-    private func reloadRootView() {
-        if let appDelegate = UIApplication.shared.delegate {
-            appDelegate.window??.rootViewController = UIStoryboard.main.instantiateInitialViewController()
-        }
-    }
-}
+
+

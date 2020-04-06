@@ -10,15 +10,17 @@ import UIKit
 
 class FrequentlyQuestionsVC: BaseVC {
     
+    //MARK:- IBOUTLET
     @IBOutlet weak var questionsTV: UITableView!
     
+    //MARK:VARiIABLES
     var searchBar = UISearchBar()
     var searchbarBtnIcon = UIBarButtonItem()
     let titleLabel=UILabel()
     var cellHeight :CGFloat = 63.0
     var searchBarIsActive = false
     var isSearchBarEmpty: Bool {
-      return searchBar.text?.isEmpty ?? true
+        return searchBar.text?.isEmpty ?? true
     }
     var isFiltering: Bool {
         return searchBarIsActive && !isSearchBarEmpty
@@ -29,47 +31,98 @@ class FrequentlyQuestionsVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backButton = UIBarButtonItem()
-        backButton.title = ""
-        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        
+        // Do any additional setup after loading the view.
+        setupView()
+        setUpNavBar()
+        
+        loadArray()
+    }
+    //MARK:- Methods
+    
+    /**
+                        Call this function for setup UI
+                        
+                        
+                          
+                        ### Usage Example: ###
+                        ````
+                         setupView()
+                        
+                        ````
+                  - Parameters:
+                        */
+    func setupView(){
+        
         // For remove extra cells
         questionsTV.tableFooterView=UIView()
-         // For remove last separator
+        
+        // For remove last separator
         questionsTV.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: questionsTV.frame.size.width, height: 1))
+        
         // For add space at bottom of table view
         let insets = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
         self.questionsTV.contentInset = insets
-        // Do any additional setup after loading the view.
+        
+        
         questionsTV.rowHeight = UITableView.automaticDimension
+        
         cellHeight = UITableView.automaticDimension
+        
         questionsTV.estimatedRowHeight = 63.0;
-        setUpNavBar()
-//        TransparentNavBar()
-        loadArray()
     }
+    /**
+                        Call this function for set Questions Array
+                        
+                        
+                          
+                        ### Usage Example: ###
+                        ````
+                         loadArray()
+                        
+                        ````
+                  - Parameters:
+                        */
     func loadArray(){
         //1
         questionsArray.append((questionTitle: "FAQC.firstQuestionTitle".localized, questionAnswer: "FAQC.firstQuestionDescription".localized, isExpanded: false))
         //2
-         questionsArray.append((questionTitle: "FAQC.secondQuestionTitle".localized, questionAnswer: "FAQC.secondQuestionDescription".localized, isExpanded: false))
+        questionsArray.append((questionTitle: "FAQC.secondQuestionTitle".localized, questionAnswer: "FAQC.secondQuestionDescription".localized, isExpanded: false))
         
         //3
-           questionsArray.append((questionTitle: "FAQC.thirdQuestionTitle".localized, questionAnswer: "FAQC.thirdQuestionDescription".localized, isExpanded: false))
+        questionsArray.append((questionTitle: "FAQC.thirdQuestionTitle".localized, questionAnswer: "FAQC.thirdQuestionDescription".localized, isExpanded: false))
         
         //4
         questionsArray.append((questionTitle: "FAQC.fourthQuestionTitle".localized, questionAnswer: "FAQC.fourthQuestionDescription".localized, isExpanded: false))
         
         //5
-          questionsArray.append((questionTitle: "FAQC.fifthQuestionTitle".localized, questionAnswer: "FAQC.fifthQuestionDescription".localized, isExpanded: false))
+        questionsArray.append((questionTitle: "FAQC.fifthQuestionTitle".localized, questionAnswer: "FAQC.fifthQuestionDescription".localized, isExpanded: false))
         
         //6
-          questionsArray.append((questionTitle: "FAQC.sixthQuestionTitle".localized, questionAnswer: "FAQC.sixthQuestionDescription".localized, isExpanded: false))
+        questionsArray.append((questionTitle: "FAQC.sixthQuestionTitle".localized, questionAnswer: "FAQC.sixthQuestionDescription".localized, isExpanded: false))
     }
- 
+    
+    /**
+                           Call this function for setup navigation Controller
+                           
+                           
+                             
+                           ### Usage Example: ###
+                           ````
+                            setUpNavBar()
+                           
+                           ````
+                     - Parameters:
+                           */
+    
     func setUpNavBar(){
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        
         let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18),NSAttributedString.Key.foregroundColor:UIColor.white]
         titleLabel.attributedText = NSAttributedString(string: "FAQC.titleLbl".localized, attributes: attributes as [NSAttributedString.Key : Any])
-      
+        
         titleLabel.letterSpace=1.08
         titleLabel.sizeToFit()
         
@@ -84,12 +137,22 @@ class FrequentlyQuestionsVC: BaseVC {
         searchbarBtnIcon = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchButtonPressed))
         navigationItem.rightBarButtonItem = searchbarBtnIcon
     }
-//    func TransparentNavBar(){ self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
-//    }
+
     @objc func searchButtonPressed(sender: AnyObject) {
         showSearchBar()
     }
+    /**
+                              Call this function to show search bar
+                              
+                              
+                                
+                              ### Usage Example: ###
+                              ````
+                               showSearchBar()
+                              
+                              ````
+                        - Parameters:
+                              */
     
     func showSearchBar() {
         searchBar.showsCancelButton=true
@@ -104,7 +167,18 @@ class FrequentlyQuestionsVC: BaseVC {
             self.searchBar.becomeFirstResponder()
         })
     }
-    
+    /**
+                                Call this function to hide search bar
+                                
+                                
+                                  
+                                ### Usage Example: ###
+                                ````
+                                 hideSearchBar()
+                                
+                                ````
+                          - Parameters:
+                                */
     func hideSearchBar() {
         navigationItem.hidesBackButton=false
         UIView.animate(withDuration: 0.5, animations: {
@@ -123,20 +197,21 @@ class FrequentlyQuestionsVC: BaseVC {
     
     //MARK: UISearchBarDelegate
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-         searchBarIsActive = false
+        searchBarIsActive = false
         searchBar.text=""
         questionsTV.reloadData()
         hideSearchBar()
     }
     func filterContentForSearchText(_ searchText: String){
-      filteredQuestions = questionsArray.filter { (question) -> Bool in
-        return (question.questionTitle.lowercased().contains(searchText.lowercased())) ||
-        (question.questionAnswer.lowercased().contains(searchText.lowercased()))
-      }
-      
-      questionsTV.reloadData()
+        filteredQuestions = questionsArray.filter { (question) -> Bool in
+            return (question.questionTitle.lowercased().contains(searchText.lowercased())) ||
+                (question.questionAnswer.lowercased().contains(searchText.lowercased()))
+        }
+        
+        questionsTV.reloadData()
     }
     
+    //MARK:- IBActions
     @IBAction func haveAnotherQuestionBtnPressed(_ sender: Any) {
         performSegue(withIdentifier: "goToHaveAnotherQuestion", sender: self)
     }
@@ -176,10 +251,10 @@ extension FrequentlyQuestionsVC:UITableViewDelegate,UITableViewDataSource{
     }
     
 }
-
+//MARK: UISearchBarDelegate functions
 extension FrequentlyQuestionsVC:UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchBarIsActive = true
-       filterContentForSearchText(searchBar.text!)
+        filterContentForSearchText(searchBar.text!)
     }
 }

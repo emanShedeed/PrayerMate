@@ -8,20 +8,25 @@
 
 import UIKit
 import CoreLocation
-
+/// This is a class created for handling the user Location
 class SettingsLocationVC: UIViewController {
+    
+    //MARK:- IBOUTLET
     @IBOutlet weak var containerViewHeight: NSLayoutConstraint!
     @IBOutlet weak var roundedView: UIView!
     @IBOutlet weak var switchLocation: UISwitch!
     @IBOutlet weak var addressLbl: UILabel!
     
     //MARK:- Variables
+    
     var userLocation:CLLocation?
     let locationManager=CLLocationManager()
     var addressTitle :String = ""
     var completeAddressTitle : String = ""
     var isLocatedAutomatically = false
     weak var toSettingelegate : UpdateSettingsView?
+     let presenter = SettingsLocationVCPresenter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,10 +34,11 @@ class SettingsLocationVC: UIViewController {
         roundedView.roundCorners([.topLeft,.topRight], radius: 20)
         isLocatedAutomatically=UserDefaults.standard.value(forKey: "isLocatedAutomatically") as? Bool ?? false
         //user aloow acess and use the return address and not use LocateMeBtn
-        switchLocation.isOn = detectlocationServicesEnabled() && isLocatedAutomatically
+        switchLocation.isOn = presenter.detectlocationServicesEnabled() && isLocatedAutomatically
         self.addressLbl.text = UserDefaults.standard.value(forKey: "completeAddressTitle") as? String ?? ""
     }
     
+    //MARK:- IBActions
     
     @IBAction func closeViewBtnPressed(_ sender: Any) {
         if(addressTitle != ""){
@@ -44,13 +50,13 @@ class SettingsLocationVC: UIViewController {
     
     @IBAction func switchBtnPressed(_ sender: UISwitch) {
         if(sender.isOn){
-            if(detectlocationServicesEnabled()){
+            if(presenter.detectlocationServicesEnabled()){
                 setupLocationManager()
             }else{
                 //redirect to settings
                 let settingsUrl = URL(string: UIApplication.openSettingsURLString)!
                        UIApplication.shared.open(settingsUrl)
-                if(!detectlocationServicesEnabled()){
+                if(!presenter.detectlocationServicesEnabled()){
                     sender.isOn = false
                 }
             }
@@ -67,27 +73,9 @@ class SettingsLocationVC: UIViewController {
         self.show(viewController, sender: self)
     }
     
-    func detectlocationServicesEnabled() -> Bool{
-        var haveAccess = false
-        if CLLocationManager.locationServicesEnabled() {
-            switch CLLocationManager.authorizationStatus() {
-            case .notDetermined, .restricted, .denied:
-                print("No access")
-                haveAccess = false
-            case .authorizedAlways, .authorizedWhenInUse:
-                print("Access")
-                haveAccess = true
-            @unknown default:
-                // return false
-                break
-            }
-        } else {
-            print("Location services are not enabled")
-            haveAccess = false
-        }
-        return haveAccess
-    }
+   
 }
+/// This is a class created for handling CLLocationManager delegate  functions
 extension SettingsLocationVC:CLLocationManagerDelegate{
     func setupLocationManager(){
         //TODO:Set up the location manager here.
@@ -169,10 +157,9 @@ extension SettingsLocationVC:CLLocationManagerDelegate{
         })
     }
 }
+/// This is a class created for handling maplLocation to display Location Address
 extension SettingsLocationVC:maplLocationView{
     func locationIsSeleted(at lat: Double, lng: Double, selectedPlace: String,cityName:String) {
-        //          latitude=lat
-        //          longitude=lng
         if(selectedPlace != ""){
             let dect:[String:Double]=["lat":lat,"long":lng]
             UserDefaults.standard.set(dect, forKey: "userLocation")

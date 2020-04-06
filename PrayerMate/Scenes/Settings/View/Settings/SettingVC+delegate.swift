@@ -11,7 +11,12 @@ import UIKit
 protocol settingsVCView {
     func APIParameterChanged()
 }
+/// This is a class created to conform to UpdateSettingsView to reload settings view if any change
 extension SettingVC:UpdateSettingsView{
+    /**
+           protcol delegate function called when any parameter at settings change
+           - Parameters:
+           */
     func didUpdateSettings() {
         let method = UserDefaults.standard.value(forKey: "calendarMethod") as? [String:String]
         let methodName = method?["methodName"]?.localized

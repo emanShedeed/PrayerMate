@@ -12,6 +12,7 @@ protocol UpdatePrayerTimesBufferView:class {
 }
 
 class CustomActionVC: UIViewController {
+    //MARK:- IBOUTLET
     @IBOutlet weak var containerViewHeight: NSLayoutConstraint!
     @IBOutlet weak var roundedView: UIView!
     @IBOutlet weak var beforeRoundedView: UIView!
@@ -22,17 +23,29 @@ class CustomActionVC: UIViewController {
     @IBOutlet weak var MinutesBtn: UIButton!
     @IBOutlet weak var HoursBtn: UIButton!
     
-    
+    //MARK:VARiIABLES
     var delegate:UpdatePrayerTimesBufferView?
     var bufferType:String = "M"
     var index : Int = 0
     var forall : Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         setupView()
     }
+    /**
+         Call this function for setup the View UI
+       
+           
+         ### Usage Example: ###
+         ````
+         setupView()
+         
+         ````
+       - Parameters:
+         */
     func setupView(){
         MinutesBtn.isSelected = true
         MinutesBtn.setImage(UIImage.unSelectedRadio, for: .normal)
@@ -49,6 +62,7 @@ class CustomActionVC: UIViewController {
         afterRoundedView.layer.borderColor = UIColor(rgb: 0xEFEFEF).cgColor
         afterRoundedView.roundCorners([.topLeft,.topRight,.bottomLeft,.bottomRight], radius: 5)
     }
+    
     override func viewDidLayoutSubviews() {
         doneBtn.applyGradient(with:  [UIColor.init(rgb: 0x336666), UIColor.init(rgb: 0x339966)], gradient: .horizontal)
     }

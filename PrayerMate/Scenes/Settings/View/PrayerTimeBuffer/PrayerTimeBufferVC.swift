@@ -10,13 +10,12 @@ import UIKit
 
 class PrayerTimeBufferVC: BaseVC {
     
+     //MARK:- IBOUTLET
     @IBOutlet weak var PrayerTimeBufferTableView: UITableView!
-    
     @IBOutlet weak var automaticAdjustBufferLbl: UILabel!
-    
     @IBOutlet weak var automaticAdjustBufferSwitch: UISwitch!
     
-    
+    //MARK:VARiIABLES
     var presenter:PrayerTimeBufferVCPresenter!
     
     override func viewDidLoad() {
@@ -39,6 +38,7 @@ class PrayerTimeBufferVC: BaseVC {
         automaticAdjustBufferSwitch.isOn = presenter.getToggleValue()
     }
     
+    //MARK:- IBActions
     
     @IBAction func automaticAdjustBufferSwichPressed(_ sender: UISwitch) {
         if(sender.isOn){
@@ -48,6 +48,24 @@ class PrayerTimeBufferVC: BaseVC {
             automaticAdjustBufferLbl.text = ""
         }
     }
+   
+    //MARK:- Methods
+    /**
+                Call this function to create prayer time buffer action sheet
+               
+                  
+                ### Usage Example: ###
+                ````
+                   createActionSheet(forAll: false, index:indexPath.row, type: "M", before: 15, after: 15)
+                
+                ````
+            - Parameters:
+                    - forAll: bool variable to set buffer for all prayer times or not.
+                     - index : to set buffer for specific prayer time.
+                     - type : buffer type Minutes or Hours.
+                     - before : time before prayer.
+                     - after : time after prayer.
+                */
     func createActionSheet(forAll:Bool = false, index: Int , type:String,  before:Int, after:Int){
         let actionSheetController=UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
         // create an action
@@ -90,6 +108,7 @@ class PrayerTimeBufferVC: BaseVC {
     }
     
 }
+/// This is a class created for handling table View delegate and data source delegate functions
 extension PrayerTimeBufferVC:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.iconImagesArray.count
