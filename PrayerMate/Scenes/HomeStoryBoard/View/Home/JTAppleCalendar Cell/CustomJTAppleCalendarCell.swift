@@ -8,6 +8,7 @@
 
 import UIKit
 import JTAppleCalendar
+/// This is a class created for JTAppleCalendarCell at calendar view
 class CustomJTAppleCalendarCell: JTACDayCell {
     @IBOutlet weak var dayLabel:UILabel!
     @IBOutlet weak var selectedView:UIView!

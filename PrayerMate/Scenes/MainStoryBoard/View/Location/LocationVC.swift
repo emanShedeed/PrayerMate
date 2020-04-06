@@ -8,19 +8,25 @@
 
 import UIKit
 import CoreLocation
-class LocationVC: UIViewController {
+/// This is a class created for handling the user Location for the first use
+final class LocationVC: UIViewController {
+    
     //MARK:- IBOUTLET
+    
     @IBOutlet weak var locateMeBtn: UIButton!
     @IBOutlet weak var animatedImage: UIImageView!
     @IBOutlet weak var animatedImage2: UIImageView!
     @IBOutlet weak var addressLbl: RoundedTextField!
     @IBOutlet weak var animatedImageLeading: NSLayoutConstraint!
     @IBOutlet weak var animatedImageTrailing: NSLayoutConstraint!
+    
     //MARK:- Variables
+    
     var userLocation:CLLocation?
     let locationManager=CLLocationManager()
     var addressTitle :String = ""
     var completeAddressTitle : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -46,15 +52,22 @@ class LocationVC: UIViewController {
     }
     
     @IBAction func finishBtnPressed(_ sender: Any) {
-        if let _ = UserDefaults.standard.value(forKey: "userLocation") as? [String:Double] , addressTitle != "" {
-            let viewController = UIStoryboard.Home.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-            UserDefaults.standard.set(addressTitle, forKey: "addressTitle")
-            UserDefaults.standard.set(completeAddressTitle, forKey: "completeAddressTitle")
-            self.present(viewController, animated: true, completion:nil)
-        }else{
-            Helper.showAlert(title: "", message: "Location.alertMessage".localized, VC: self)
-        }
         
+        if let _ = UserDefaults.standard.value(forKey: "userLocation") as? [String:Double] , addressTitle != "" {
+            
+            let viewController = UIStoryboard.Home.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+            
+            UserDefaults.standard.set(addressTitle, forKey: "addressTitle")
+            
+            UserDefaults.standard.set(completeAddressTitle, forKey: "completeAddressTitle")
+            
+            self.present(viewController, animated: true, completion:nil)
+            
+        }else{
+            
+            Helper.showAlert(title: "", message: "Location.alertMessage".localized, VC: self)
+            
+        }
     }
     
     @IBAction func locateMeBtnPressed(_ sender: Any) {
@@ -74,15 +87,20 @@ class LocationVC: UIViewController {
             //                self.animatedImage.frame = self.animatedImage.frame.offsetBy(dx: 1 * self.animatedImage.frame.size.width, dy: 0.0)
             //                self.animatedImage2.frame = self.animatedImage2.frame.offsetBy(dx: 1 * self.animatedImage2.frame.size.width, dy: 0.0)
             self.animatedImageLeading.constant += self.animatedImage.frame.width
+            
             self.animatedImageTrailing.constant += self.animatedImage.frame.width
+            
             self.view.layoutIfNeeded()
+            
         }, completion: nil)
         
     }
     
     
 }
+//MARK:- Location Manger Deglegate Functions
 extension LocationVC:CLLocationManagerDelegate{
+    
     func setupLocationManager(){
         //TODO:Set up the location manager here.
         self.locationManager.startUpdatingLocation()
@@ -94,7 +112,6 @@ extension LocationVC:CLLocationManagerDelegate{
     //Write the didUpdateLocations method here:
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         userLocation = locations[locations.count-1]
-        
         if let l=userLocation
         {
             if(l.horizontalAccuracy>0)
@@ -112,6 +129,7 @@ extension LocationVC:CLLocationManagerDelegate{
             }
         }
     }
+    
     func getAddressFromLocation(lat:Double,long:Double){
         let geoCoder = CLGeocoder()
         geoCoder.reverseGeocodeLocation(CLLocation(latitude: lat, longitude:long), completionHandler: { (placemarks, error) -> Void in
@@ -162,7 +180,10 @@ extension LocationVC:CLLocationManagerDelegate{
         })
     }
 }
+//MARK:- Location ViewController Confirm to maplLocationView to Display Addrees
+
 extension LocationVC:maplLocationView{
+    
     func locationIsSeleted(at lat: Double, lng: Double, selectedPlace: String,cityName:String) {
         //          latitude=lat
         //          longitude=lng

@@ -48,23 +48,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "104"
             endingLineNumber = "104"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A1FF5D90-1399-4E14-81FF-27743BAED93A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "locationIsSeleted(at:lng:selectedPlace:cityName:)"
+            landmarkName = "dataRequest(FINAL_URL:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -81,22 +65,6 @@
             startingLineNumber = "52"
             endingLineNumber = "52"
             landmarkName = "switchBtnPressed(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E01E516B-31E5-467D-9968-C208A30532B7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
-            landmarkName = "locationIsSeleted(at:lng:selectedPlace:cityName:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -192,22 +160,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
             endingLineNumber = "39"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5D984D2B-EB0C-406E-8499-7889FA95EA3C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/MainStoryBoard/View/SplashScreen/SplashVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -407,16 +359,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C6767DE7-3AB3-420E-9EEB-6371A117174A"
+            uuid = "8C10BB98-6DC1-49B5-BFB0-AA7B7FA72EB7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift"
+            filePath = "PrayerMate/Scenes/MainStoryBoard/Presenter/SplashScreen/SplashVCPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "formateTodayDate()"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "setupUserDefaults()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

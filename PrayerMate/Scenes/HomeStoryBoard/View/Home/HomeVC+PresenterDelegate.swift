@@ -7,11 +7,19 @@
 //
 
 import Foundation
+/// This is a class created for conform to HomeView to display prayer times after fetching from API
 extension HomeVC:HomeView{
+    /**
+            protcol delegate function called when there was an error fetching  data
+            - Parameters:
+            */
     func showError(error: String) {
         Helper.showAlert(title: "", message: error, VC: self)
     }
-    
+    /**
+          protcol delegate function called when success to fetch data
+          - Parameters:
+          */
     func fetchDataSucess() {
         numberOfSelectedPrayerTimes = 0
         prayerTimesArray=[(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false)]
@@ -24,10 +32,10 @@ extension HomeVC:HomeView{
      
     }
 }
+/// This is a class created for conform to settingsVCView to recall the API if there is any change at settings Parameters
 extension HomeVC:settingsVCView{
     func APIParameterChanged() {
         requestPrayerTimesAPI()
     }
-    
     
 }

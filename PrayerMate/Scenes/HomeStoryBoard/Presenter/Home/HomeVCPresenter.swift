@@ -8,6 +8,7 @@
 
 import Foundation
 import JTAppleCalendar
+
 protocol  HomeView :class{
     func showError(error:String)
     func fetchDataSucess()
@@ -16,8 +17,9 @@ protocol  HomeView :class{
 protocol PrayerTimeCellView {
     func displayData(prayerTimeName: String, prayerTime: String, isCellSelected: Bool,isBtnChecked:Bool,cellIndex:Int)
 }
-/// This is a presenter class created for handling MovesHomeVC Functions.
+/// This is a presenter class created for handling HomeVC Functions.
 class HomeVCPresenter{
+    //MARK:VARiIABLES
     private weak var view : HomeView?
     init(view:HomeView) {
         self.view=view
@@ -26,11 +28,39 @@ class HomeVCPresenter{
     var todayParyerTimes = [String]()
     
     var calendarDateTitle = ""
+    
+//MARK:- Methods
+
+    /**
+           Call this function to configure each cell at Home VC.
+ 
+        ### Usage Example: ###
+        ````
+          presenter.ConfigureCell(cell:cell, isCellSelected: prayerTimesArray[indexPath.row].isCellSelected,isChecked:prayerTimesArray[indexPath.row].isBtnChecked,cellIndex:indexPath.row)
+        ````
+     - Parameters:
+              - cell : the cell to be configured.
+              - isCellSelected : is this cell Selected or Not.
+              - isChecked : is the radio button at the cell is Checked or Not.
+              - cellIndex : the Cell Index At tableView.
+        */
     func ConfigureCell(cell:PrayerTimeCellView,isCellSelected:Bool,isChecked:Bool,cellIndex:Int){
         
-        cell.displayData(prayerTimeName: prayerTimesNames[cellIndex].localized, prayerTime: todayParyerTimes[cellIndex] ?? "", isCellSelected:isCellSelected,isBtnChecked:isChecked,cellIndex:cellIndex)
+        cell.displayData(prayerTimeName: prayerTimesNames[cellIndex].localized, prayerTime: todayParyerTimes[cellIndex] , isCellSelected:isCellSelected,isBtnChecked:isChecked,cellIndex:cellIndex)
         
     }
+
+       /**
+              Call this function to call the API.
+    
+           ### Usage Example: ###
+           ````
+             presenter.dataRequest(FINAL_URL:final_url)
+           ````
+        - Parameters:
+                 - FINAL_URL : the API URL.
+               
+           */
     func dataRequest (FINAL_URL : URL) {
       
         if Helper.isConnectedToNetwork(){
@@ -76,6 +106,17 @@ class HomeVCPresenter{
             self.view?.showError(error: "Please check your internet connection")
         }
     }
+    /**
+                 Call this function to formate today date to display at Home vc date label.
+       
+              ### Usage Example: ###
+              ````
+             dateLBL.text = presenter.formateTodayDate()
+              ````
+           - Parameters:
+                   
+                  
+              */
     func formateTodayDate() -> String {
         // formate as March 23, 2018
         let formatter = DateFormatter()
@@ -101,8 +142,9 @@ class HomeVCPresenter{
         return outputDate
     }
 }
-
+/// This is a presenter class created for handling HomeVC JTAppleCalendar helper Functions.
 extension HomeVCPresenter{
+    
     func setupCalendarView(calendarView:JTACMonthView,calenadrIncludingHeaderView:UIView,calendareFormatter:DateFormatter){
         //
         
@@ -123,6 +165,7 @@ extension HomeVCPresenter{
         }
         
     }
+    
     func setupViewsOfCalendar(from visibleDates:DateSegmentInfo) {
         let date = visibleDates.monthDates.first!.date
         let calenderTitleFormatter = DateFormatter()
@@ -134,6 +177,7 @@ extension HomeVCPresenter{
         calendarDateTitle = month + " " + year
         // return (month + " " + year)
     }
+    
     func handelCellSelectedColor(cell:JTACDayCell?,celssState:CellState){
         guard let validCell = cell as? CustomJTAppleCalendarCell else{return}
         if(validCell.isSelected){
@@ -142,6 +186,7 @@ extension HomeVCPresenter{
             validCell.selectedView.isHidden=true
         }
     }
+    
     func handleCellTextColor(cell:JTACDayCell?,cellState:CellState,calendareFormatter:DateFormatter){
         guard let validCell = cell as? CustomJTAppleCalendarCell else{return}
         if(validCell.isSelected){
@@ -154,27 +199,13 @@ extension HomeVCPresenter{
             }
         }
         let currentDateAsString=calendareFormatter.string(from: Date())
-        //        if(AppSetting.shared.getCurrentLanguage() == .ar){
-        //
-        //            let dateFormatter = DateFormatter()
-        //
-        //             dateFormatter.dateFormat = "dd-MM-yyyy"
-        //
-        //            dateFormatter.locale = NSLocale(localeIdentifier: "ar_SA") as Locale
-        //
-        //            let islamicDate = dateFormatter.date(from: "8-10-1437")
-        //
-        //            let gregorian = NSCalendar(identifier: NSCalendar.Identifier.gregorian)
-        //
-        //            let components = gregorian?.components(NSCalendar.Unit(rawValue: UInt.max), from: islamicDate!)
-        //            print("\(components!.year) - \(components!.month) - \(components!.day)")
-        //        }
         let cellDateAsString=calendareFormatter.string(from: cellState.date)
         if(calendareFormatter.date(from: cellDateAsString)! < calendareFormatter.date(from: currentDateAsString)!){
             //  Helper.showToast(message: "can't select date before today")
             validCell.dayLabel.textColor = UIColor(rgb:0xDEE3E7)
         }
     }
+    
     func handleCellSelected(cell: CustomJTAppleCalendarCell, cellState: CellState) {
         cell.selectedView.isHidden = !cellState.isSelected
         switch cellState.selectedPosition() {
@@ -193,6 +224,7 @@ extension HomeVCPresenter{
         default: break
         }
     }
+    
     func configureCell(view: JTACDayCell?, cellState: CellState,calendareFormatter:DateFormatter) {
         guard let cell = view as? CustomJTAppleCalendarCell  else { return }
         cell.dayLabel.text = cellState.text

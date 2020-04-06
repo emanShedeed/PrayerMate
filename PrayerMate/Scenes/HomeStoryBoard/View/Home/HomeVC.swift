@@ -8,7 +8,8 @@
 
 import UIKit
 import JTAppleCalendar
-class HomeVC: UIViewController {
+/// This is a class created for handling the Home View of the app , displaying Prayer Times and Import to calendar Function
+final class HomeVC: UIViewController {
     
     //MARK:- IBOUTLET
     
@@ -23,9 +24,10 @@ class HomeVC: UIViewController {
     @IBOutlet weak var calendarView: JTACMonthView!
     @IBOutlet weak var calenadrIncludingHeaderView: UIView!
     @IBOutlet weak var hideCalendareView: UIView!
-    
     @IBOutlet weak var daysStackView: UIStackView!
+    
     //MARK:VARiIABLES
+    
     let countDownTimerFormatter = DateFormatter()
     var countdown: DateComponents!
     let calendar = Calendar.current
@@ -35,6 +37,7 @@ class HomeVC: UIViewController {
     var presenter:HomeVCPresenter!
     var prayerTimesArray: [(isCellSelected: Bool, isBtnChecked:Bool)] = .init()
     var backGroundImagesArray = [UIImage.fajrBackGround,UIImage.sunriseBackGround,UIImage.zuhrBackGround,UIImage.asrBackGround,UIImage.maghribBackGround,UIImage.ishaBackGround]
+    
     ////Calendar VARiIABLES
     let calendareFormatter = DateFormatter()
     var firstDate: Date?
@@ -42,13 +45,40 @@ class HomeVC: UIViewController {
         return firstDate != nil && calendarView.selectedDates.count > 1
     }
     lazy var activityIndicator : SYActivityIndicatorView = {
-         let image = UIImage.loading
-         return SYActivityIndicatorView(image: UIImage.loading,title: "loader.messageTitle".localized)
-     }()
+        let image = UIImage.loading
+        return SYActivityIndicatorView(image: UIImage.loading,title: "loader.messageTitle".localized)
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        setupView()
+        
+        requestPrayerTimesAPI()
+        
+        presenter.setupCalendarView(calendarView: calendarView, calenadrIncludingHeaderView: calenadrIncludingHeaderView, calendareFormatter: calendareFormatter)
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        
+        hideCalendareView.addGestureRecognizer(tap)
+    }
+    
+//MARK:- Methods
+    
+    /**
+         Call this function for setup the View UI
+       
+           
+         ### Usage Example: ###
+         ````
+         setupView()
+         
+         ````
+       - Parameters:
+         */
+    func setupView(){
         calendarView.semanticContentAttribute = .forceRightToLeft
         daysStackView.semanticContentAttribute = .forceLeftToRight
         presenter = HomeVCPresenter(view: self)
@@ -58,24 +88,20 @@ class HomeVC: UIViewController {
         prayerTimestableView.backgroundColor = UIColor.clear
         importBtn.addBlurEffect()
         dateLBL.text = presenter.formateTodayDate()
-        requestPrayerTimesAPI()
-        presenter.setupCalendarView(calendarView: calendarView, calenadrIncludingHeaderView: calenadrIncludingHeaderView, calendareFormatter: calendareFormatter)
-        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-        hideCalendareView.addGestureRecognizer(tap)
     }
+    /**
+          Call this function for request Prayer Times API
+       
+            
+          ### Usage Example: ###
+          ````
+          requestPrayerTimesAPI()
+          
+          ````
+        - Parameters:
+          */
     func requestPrayerTimesAPI(){
-        let dateFormatterForAPI = DateFormatter()
-        dateFormatterForAPI.locale = NSLocale(localeIdentifier: "en")  as Locale
-        dateFormatterForAPI.dateFormat = "dd-MM-YYYY"
-        let date = dateFormatterForAPI.string(from: Date())
-        addressTitle = UserDefaults.standard.value(forKey: "addressTitle") as? String ?? ""
-        let method = UserDefaults.standard.value(forKey: "calendarMethod") as! [String:String]
-        let methodID = method["methdID"] ?? "6"
-        let basicURL = "https://muslimsalat.com/" +  addressTitle + "/yearly/" + date
-        let urlString = basicURL + "/false/" + methodID + ".json?key=48ae8106ef6b55e5dac258c0c8d2e224"
-        print(urlString)
-        let ecnodingString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        let url = URL(string: ecnodingString ?? "")
+       let url = generateURL()
         if let final_url = url{
             self.view.addSubview(activityIndicator)
             activityIndicator.center = self.view.center
@@ -83,13 +109,72 @@ class HomeVC: UIViewController {
             presenter.dataRequest(FINAL_URL:final_url)
         }
     }
+    /**
+           Call this function for generate URL required to call the API
+         
+             
+           ### Usage Example: ###
+           ````
+           generateURL()
+           
+           ````
+     - Parameters:
+        - Return Type: URL
+           */
+    func generateURL() -> URL?{
+     let date = generateDateStringSendToAPI()
+       addressTitle = UserDefaults.standard.value(forKey: "addressTitle") as? String ?? ""
+       let method = UserDefaults.standard.value(forKey: "calendarMethod") as! [String:String]
+       let methodID = method["methdID"] ?? "6"
+       let basicURL = "https://muslimsalat.com/" +  addressTitle + "/yearly/" + date
+       let urlString = basicURL + "/false/" + methodID + ".json?key=48ae8106ef6b55e5dac258c0c8d2e224"
+       print(urlString)
+       let ecnodingString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+       let url = URL(string: ecnodingString ?? "")
+        return url
+    }
+    /**
+             Call this function for generate Date String required to call the API
+            
+               
+             ### Usage Example: ###
+             ````
+             generateDateStringSendToAPI()
+             
+             ````
+           - Parameters:
+            - Return Type : String
+             */
+    func generateDateStringSendToAPI() -> String{
+        let dateFormatterForAPI = DateFormatter()
+             dateFormatterForAPI.locale = NSLocale(localeIdentifier: "en")  as Locale
+             dateFormatterForAPI.dateFormat = "dd-MM-YYYY"
+             let date = dateFormatterForAPI.string(from: Date())
+        return date
+    }
+    /**
+                Call this function for hide calendare view
+               
+                  
+                ### Usage Example: ###
+                ````
+               let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+                       
+               hideCalendareView.addGestureRecognizer(tap)
+                
+                ````
+            - Parameters:
+                    - sender: the tap Gesture Recognizer
+                     - Return Type :
+                */
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         calenadrIncludingHeaderView.isHidden = true
     }
     
+    //MARK:- IBActions
     @IBAction func importBtnPressed(_ sender: Any) {
         if(numberOfSelectedPrayerTimes > 0){
-        calenadrIncludingHeaderView.isHidden=false
+            calenadrIncludingHeaderView.isHidden=false
         }
     }
     
@@ -102,6 +187,7 @@ class HomeVC: UIViewController {
     }
     
 }
+/// This is a class created for handling table View delegate and data source delegate functions
 extension HomeVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return prayerTimesArray.count
@@ -119,7 +205,7 @@ extension HomeVC:UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        performSegue(withIdentifier: "goToRoomDetailsVC", sender: self)
-       numberOfSelectedPrayerTimes += 1
+        numberOfSelectedPrayerTimes += 1
         backGroundImageView.image=backGroundImagesArray[indexPath.row]
         for index in 0 ..< prayerTimesArray.count {
             prayerTimesArray[index].isCellSelected = false
@@ -133,7 +219,20 @@ extension HomeVC:UITableViewDelegate,UITableViewDataSource{
     
     
 }
+/// This is a class created for handling Methods for update counter
 extension HomeVC{
+    /**
+                   Call this function for update Time remain for the next Prayer Time
+                   
+                   
+                     
+                   ### Usage Example: ###
+                   ````
+                    Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+                   
+                   ````
+            - Parameters:
+                   */
     @objc func updateTime() {
         let dateAsString = countDownTimerFormatter.string(from: Date())
         self.countdown = Calendar.current.dateComponents([.day, .hour, .minute, .second], from: countDownTimerFormatter.date(from: dateAsString) ?? Date() , to: self.nextPrayerDateDate)
@@ -147,10 +246,33 @@ extension HomeVC{
         }
         
     }
-    
+    /**
+                      Call this function for create timer to call updateTime function every one Second
+                      
+                      
+                        
+                      ### Usage Example: ###
+                      ````
+                       runCountdown()
+                      
+                      ````
+                - Parameters:
+                      */
     func runCountdown() {
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
+    /**
+                       Call this function for get Next Prayer Time
+                      
+                       
+                         
+                       ### Usage Example: ###
+                       ````
+                        getNextPrayerTime()
+                       
+                       ````
+              - Parameters:
+                       */
     func getNextPrayerTime(){
         var nextPrayerIndex = 0
         var accurateString :String = ""
@@ -199,6 +321,7 @@ extension HomeVC{
         }
     }
 }
+/// This is a class created for handling JTAppleCalendar dataSource functions
 extension HomeVC:JTACMonthViewDataSource{
     func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
         let startDate = Date()
@@ -207,6 +330,7 @@ extension HomeVC:JTACMonthViewDataSource{
         return parameters
     }
 }
+/// This is a class created for handling JTAppleCalendar delegate functions
 extension HomeVC:JTACMonthViewDelegate{
     //Display the Cell
     func calendar(_ calendar: JTACMonthView, willDisplay cell: JTACDayCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {

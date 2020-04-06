@@ -7,6 +7,7 @@
 //
 
 import UIKit
+/// This is a class created for conform to PrayerTimeCellDelegate to Update Home UI when radio button checked 
 extension HomeVC:PrayerTimeCellDelegate{
     func customCell(cell: PrayerTimeCell, checkedButonatCellIndex: Int) {
         prayerTimesArray[checkedButonatCellIndex].isBtnChecked = !(prayerTimesArray[checkedButonatCellIndex].isBtnChecked)
