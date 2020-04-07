@@ -83,7 +83,7 @@ class HomeVCPresenter{
                             self.todayParyerTimes=[(prayerTimes.items?[0].fajr ?? ""),(prayerTimes.items?[0].shurooq ?? ""),(prayerTimes.items?[0].dhuhr ?? ""),(prayerTimes.items?[0].asr ?? ""),(prayerTimes.items?[0].maghrib ?? ""),(prayerTimes.items?[0].isha ?? "")]
                             self.view?.fetchDataSucess()
                         }else{
-                            self.view?.showError(error: prayerTimes.statusDescription ?? "can't get data")
+                            self.view?.showError(error: prayerTimes.statusError?.invalidQuery ?? "can't get data")
                         }
                         
                     }catch {

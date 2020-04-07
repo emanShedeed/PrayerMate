@@ -1,0 +1,3932 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Core/AppDelegate.swift",
+      "line": 14,
+      "symbol": "AppDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Core/AppDelegate.swift",
+      "line": 15,
+      "symbol": "AppDelegate.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Core/AppDelegate.swift",
+      "line": 16,
+      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Core/AppDelegate.swift",
+      "line": 21,
+      "symbol": "AppDelegate.application(_:open:sourceApplication:annotation:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Core/AppDelegate.swift",
+      "line": 27,
+      "symbol": "AppDelegate.application(_:open:options:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIButton+Extension.swift",
+      "line": 13,
+      "symbol": "UIButton.addBlurEffect()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIColor+Externsion.swift",
+      "line": 11,
+      "symbol": "UIColor.init(red:green:blue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIColor+Externsion.swift",
+      "line": 19,
+      "symbol": "UIColor.init(rgb:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIColor+Externsion.swift",
+      "line": 28,
+      "symbol": "UIColor.appGrayColor",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIFontExtension.swift",
+      "line": 86,
+      "symbol": "UILabel.letterSpace",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIFontExtension.swift",
+      "line": 169,
+      "symbol": "UILabel.setLineSpacing(lineSpacing:lineHeightMultiple:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIFontExtension.swift",
+      "line": 196,
+      "symbol": "UIButton.letterSpace",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 11,
+      "symbol": "UIImage.splachBackGround",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 12,
+      "symbol": "UIImage.logo",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 13,
+      "symbol": "UIImage.loading",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 14,
+      "symbol": "UIImage.languageMan",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 15,
+      "symbol": "UIImage.locationMan",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 16,
+      "symbol": "UIImage.mountain",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 17,
+      "symbol": "UIImage.location",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 18,
+      "symbol": "UIImage.unSelectedRadio",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 19,
+      "symbol": "UIImage.selectedRadio",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 20,
+      "symbol": "UIImage.setting",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 21,
+      "symbol": "UIImage.fajrBackGround",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 22,
+      "symbol": "UIImage.sunriseBackGround",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 23,
+      "symbol": "UIImage.zuhrBackGround",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 24,
+      "symbol": "UIImage.asrBackGround",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 25,
+      "symbol": "UIImage.maghribBackGround",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 26,
+      "symbol": "UIImage.ishaBackGround",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 27,
+      "symbol": "UIImage.selectedPrayerTime",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 28,
+      "symbol": "UIImage.unselectedPrayerTime",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 29,
+      "symbol": "UIImage.calendar",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 30,
+      "symbol": "UIImage.backwhiteArrow",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 33,
+      "symbol": "UIImage.language",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 34,
+      "symbol": "UIImage.clock",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 35,
+      "symbol": "UIImage.method",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 36,
+      "symbol": "UIImage.hourclock",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 37,
+      "symbol": "UIImage.faq",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 38,
+      "symbol": "UIImage.invite",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 40,
+      "symbol": "UIImage.checkCalendar",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 41,
+      "symbol": "UIImage.uncheckCalendar",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 43,
+      "symbol": "UIImage.fajrIcon",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 44,
+      "symbol": "UIImage.sunriseIcon",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 45,
+      "symbol": "UIImage.zuhrIcon",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 46,
+      "symbol": "UIImage.asrIcon",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 47,
+      "symbol": "UIImage.maghribIcon",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIImage+Extension.swift",
+      "line": 48,
+      "symbol": "UIImage.ishaIcon",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIStoryboard+Extension.swift",
+      "line": 15,
+      "symbol": "UIStoryboard.main",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIStoryboard+Extension.swift",
+      "line": 16,
+      "symbol": "UIStoryboard.Home",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIStoryboard+Extension.swift",
+      "line": 17,
+      "symbol": "UIStoryboard.Settings",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIStoryboard+Extension.swift",
+      "line": 27,
+      "symbol": "UIStoryboard.bring(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIString+Extension.swift",
+      "line": 10,
+      "symbol": "String.capitalizingFirstLetter()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIString+Extension.swift",
+      "line": 14,
+      "symbol": "String.capitalizeFirstLetter()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIString+Extension.swift",
+      "line": 18,
+      "symbol": "String.localized",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIString+Extension.swift",
+      "line": 21,
+      "symbol": "String.EnToARDigits",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIViewExtension.swift",
+      "line": 10,
+      "symbol": "GradientPoints",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIViewExtension.swift",
+      "line": 12,
+      "symbol": "GradientOrientation",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIViewExtension.swift",
+      "line": 13,
+      "symbol": "GradientOrientation.topRightBottomLeft",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIViewExtension.swift",
+      "line": 14,
+      "symbol": "GradientOrientation.topLeftBottomRight",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIViewExtension.swift",
+      "line": 15,
+      "symbol": "GradientOrientation.horizontal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIViewExtension.swift",
+      "line": 16,
+      "symbol": "GradientOrientation.vertical",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIViewExtension.swift",
+      "line": 18,
+      "symbol": "GradientOrientation.startPoint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIViewExtension.swift",
+      "line": 22,
+      "symbol": "GradientOrientation.endPoint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIViewExtension.swift",
+      "line": 26,
+      "symbol": "GradientOrientation.points",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIViewExtension.swift",
+      "line": 42,
+      "symbol": "UIView.applyGradient(with:locations:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIViewExtension.swift",
+      "line": 50,
+      "symbol": "UIView.applyGradient(with:gradient:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/UIViewExtension.swift",
+      "line": 58,
+      "symbol": "UIView.roundCorners(_:radius:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/localizedText+Extension.swift",
+      "line": 11,
+      "symbol": "UILabel.localizedText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/localizedText+Extension.swift",
+      "line": 23,
+      "symbol": "UIButton.localizedText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Extensions/localizedText+Extension.swift",
+      "line": 32,
+      "symbol": "UITextField.localizedText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/MicrosoftCalendarSDKFiles/AuthenticationManager.swift",
+      "line": 15,
+      "symbol": "AuthenticationManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/MicrosoftCalendarSDKFiles/AuthenticationManager.swift",
+      "line": 18,
+      "symbol": "AuthenticationManager.instance",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/MicrosoftCalendarSDKFiles/AuthenticationManager.swift",
+      "line": 43,
+      "symbol": "AuthenticationManager.getAccessToken(for:andCompletion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/MicrosoftCalendarSDKFiles/AuthenticationManager.swift",
+      "line": 47,
+      "symbol": "AuthenticationManager.getTokenInteractively(parentView:completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/MicrosoftCalendarSDKFiles/AuthenticationManager.swift",
+      "line": 66,
+      "symbol": "AuthenticationManager.getTokenSilently(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/MicrosoftCalendarSDKFiles/AuthenticationManager.swift",
+      "line": 97,
+      "symbol": "AuthenticationManager.signOut()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/MicrosoftCalendarSDKFiles/GraphManager.swift",
+      "line": 13,
+      "symbol": "GraphManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/MicrosoftCalendarSDKFiles/GraphManager.swift",
+      "line": 16,
+      "symbol": "GraphManager.instance",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/MicrosoftCalendarSDKFiles/GraphManager.swift",
+      "line": 24,
+      "symbol": "GraphManager.getMe(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 9,
+      "symbol": "PrayerTime",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 10,
+      "symbol": "PrayerTime.code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 11,
+      "symbol": "PrayerTime.status",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 12,
+      "symbol": "PrayerTime.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 16,
+      "symbol": "Datum",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 17,
+      "symbol": "Datum.timings",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 24,
+      "symbol": "Timings",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 25,
+      "symbol": "Timings.dhuhr",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 25,
+      "symbol": "Timings.fajr",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 25,
+      "symbol": "Timings.sunrise",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 26,
+      "symbol": "Timings.asr",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 27,
+      "symbol": "Timings.imsak",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 27,
+      "symbol": "Timings.isha",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 27,
+      "symbol": "Timings.maghrib",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 27,
+      "symbol": "Timings.sunset",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 28,
+      "symbol": "Timings.midnight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 30,
+      "symbol": "Timings.CodingKeys",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 31,
+      "symbol": "Timings.CodingKeys.fajr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 32,
+      "symbol": "Timings.CodingKeys.sunrise",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 33,
+      "symbol": "Timings.CodingKeys.dhuhr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 34,
+      "symbol": "Timings.CodingKeys.asr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 35,
+      "symbol": "Timings.CodingKeys.sunset",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 36,
+      "symbol": "Timings.CodingKeys.maghrib",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 37,
+      "symbol": "Timings.CodingKeys.isha",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 38,
+      "symbol": "Timings.CodingKeys.imsak",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 39,
+      "symbol": "Timings.CodingKeys.midnight",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 43,
+      "symbol": "ASR",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 44,
+      "symbol": "ASR.the1529Eet",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTime.swift",
+      "line": 45,
+      "symbol": "ASR.the1530Eet",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 12,
+      "symbol": "PrayerTimes",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 13,
+      "symbol": "PrayerTimes.items",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 14,
+      "symbol": "PrayerTimes.statusCode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 14,
+      "symbol": "PrayerTimes.statusValid",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 15,
+      "symbol": "PrayerTimes.statusDescription",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 17,
+      "symbol": "PrayerTimes.CodingKeys",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 18,
+      "symbol": "PrayerTimes.CodingKeys.items",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 19,
+      "symbol": "PrayerTimes.CodingKeys.statusValid",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 20,
+      "symbol": "PrayerTimes.CodingKeys.statusCode",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 21,
+      "symbol": "PrayerTimes.CodingKeys.statusDescription",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 26,
+      "symbol": "Item",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 27,
+      "symbol": "Item.dateFor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 27,
+      "symbol": "Item.dhuhr",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 27,
+      "symbol": "Item.fajr",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 27,
+      "symbol": "Item.shurooq",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 28,
+      "symbol": "Item.asr",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 28,
+      "symbol": "Item.isha",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 28,
+      "symbol": "Item.maghrib",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 30,
+      "symbol": "Item.CodingKeys",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 31,
+      "symbol": "Item.CodingKeys.dateFor",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 32,
+      "symbol": "Item.CodingKeys.asr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 32,
+      "symbol": "Item.CodingKeys.dhuhr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 32,
+      "symbol": "Item.CodingKeys.fajr",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 32,
+      "symbol": "Item.CodingKeys.isha",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 32,
+      "symbol": "Item.CodingKeys.maghrib",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeAnnual.swift",
+      "line": 32,
+      "symbol": "Item.CodingKeys.shurooq",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeBuffer.swift",
+      "line": 10,
+      "symbol": "PrayerTimeBuffer",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeBuffer.swift",
+      "line": 11,
+      "symbol": "PrayerTimeBuffer.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeBuffer.swift",
+      "line": 12,
+      "symbol": "PrayerTimeBuffer.before",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Model/PrayerTimeBuffer.swift",
+      "line": 13,
+      "symbol": "PrayerTimeBuffer.after",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/BaseVC.swift",
+      "line": 11,
+      "symbol": "BaseVC",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/BaseVC.swift",
+      "line": 12,
+      "symbol": "BaseVC.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/BaseVC.swift",
+      "line": 19,
+      "symbol": "BaseVC.TransparentNavBar()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/BaseVC.swift",
+      "line": 23,
+      "symbol": "BaseVC.styleNavBar()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Constants.swift",
+      "line": 10,
+      "symbol": "Constants",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Constants.swift",
+      "line": 12,
+      "symbol": "Constants.appLink",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Constants.swift",
+      "line": 12,
+      "symbol": "Constants.appName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Constants.swift",
+      "line": 12,
+      "symbol": "Constants.domain",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Constants.swift",
+      "line": 17,
+      "symbol": "Constants.Defaults",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Constants.swift",
+      "line": 19,
+      "symbol": "Constants.Defaults.userLoggedIn",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 9,
+      "symbol": "isFont",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 10,
+      "symbol": "isFont.family",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 12,
+      "symbol": "isFont.style",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 14,
+      "symbol": "isFont",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 15,
+      "symbol": "isFont.size(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 20,
+      "symbol": "FontBook",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 22,
+      "symbol": "FontBook.Montserrat",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 23,
+      "symbol": "FontBook.Montserrat.family",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 27,
+      "symbol": "FontBook.Montserrat.style",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 31,
+      "symbol": "FontBook.Montserrat.bold",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 34,
+      "symbol": "FontBook.Montserrat.medium",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 35,
+      "symbol": "FontBook.Montserrat.regular",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 39,
+      "symbol": "FontBook.Roboto",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 40,
+      "symbol": "FontBook.Roboto.family",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 44,
+      "symbol": "FontBook.Roboto.style",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 48,
+      "symbol": "FontBook.Roboto.bold",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 51,
+      "symbol": "FontBook.Roboto.medium",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 52,
+      "symbol": "FontBook.Roboto.regular",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 56,
+      "symbol": "FontBook",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 57,
+      "symbol": "FontBook.subTitle",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Font.swift",
+      "line": 58,
+      "symbol": "FontBook.title",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Helper.swift",
+      "line": 13,
+      "symbol": "Helper",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Helper.swift",
+      "line": 15,
+      "symbol": "Helper.showAlert(title:message:VC:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Helper.swift",
+      "line": 24,
+      "symbol": "Helper.showToast(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Helper.swift",
+      "line": 29,
+      "symbol": "Helper.getUIImage(asset:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Helper.swift",
+      "line": 45,
+      "symbol": "Helper.resizeImage(image:targetSize:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Helper.swift",
+      "line": 70,
+      "symbol": "Helper.isConnectedToNetwork()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Helper.swift",
+      "line": 102,
+      "symbol": "Helper.findDateDiff(time1Str:time2Str:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Helper.swift",
+      "line": 123,
+      "symbol": "TintedSegmentedControl",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Helper.swift",
+      "line": 125,
+      "symbol": "TintedSegmentedControl.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/ImageGif.swift",
+      "line": 27,
+      "symbol": "UIImage.gifImageWithData(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/ImageGif.swift",
+      "line": 36,
+      "symbol": "UIImage.gifImageWithURL(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/ImageGif.swift",
+      "line": 50,
+      "symbol": "UIImage.gifImageWithName(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/ImageGif.swift",
+      "line": 64,
+      "symbol": "UIImage.delayForImageAtIndex(_:source:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/ImageGif.swift",
+      "line": 91,
+      "symbol": "UIImage.gcdForPair(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/ImageGif.swift",
+      "line": 123,
+      "symbol": "UIImage.gcdForArray(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/ImageGif.swift",
+      "line": 137,
+      "symbol": "UIImage.animatedImageWithSource(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Loader/SYActivityIndicatorView.swift",
+      "line": 12,
+      "symbol": "SYActivityIndicatorView",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Loader/SYActivityIndicatorView.swift",
+      "line": 20,
+      "symbol": "SYActivityIndicatorView.isAnimating",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Loader/SYActivityIndicatorView.swift",
+      "line": 21,
+      "symbol": "SYActivityIndicatorView.hidesWhenStopped",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Loader/SYActivityIndicatorView.swift",
+      "line": 22,
+      "symbol": "SYActivityIndicatorView.titleLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Loader/SYActivityIndicatorView.swift",
+      "line": 25,
+      "symbol": "SYActivityIndicatorView.init(image:title:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Loader/SYActivityIndicatorView.swift",
+      "line": 62,
+      "symbol": "SYActivityIndicatorView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Loader/SYActivityIndicatorView.swift",
+      "line": 68,
+      "symbol": "SYActivityIndicatorView.addRotation(forLayer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Loader/SYActivityIndicatorView.swift",
+      "line": 80,
+      "symbol": "SYActivityIndicatorView.addLabel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Loader/SYActivityIndicatorView.swift",
+      "line": 83,
+      "symbol": "SYActivityIndicatorView.pause(layer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Loader/SYActivityIndicatorView.swift",
+      "line": 92,
+      "symbol": "SYActivityIndicatorView.resume(layer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Loader/SYActivityIndicatorView.swift",
+      "line": 105,
+      "symbol": "SYActivityIndicatorView.startAnimating()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Loader/SYActivityIndicatorView.swift",
+      "line": 117,
+      "symbol": "SYActivityIndicatorView.stopAnimating()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/AppSetting.swift",
+      "line": 12,
+      "symbol": "AppLanguages",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/AppSetting.swift",
+      "line": 13,
+      "symbol": "AppLanguages.en",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/AppSetting.swift",
+      "line": 15,
+      "symbol": "AppLanguages.ar",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/AppSetting.swift",
+      "line": 18,
+      "symbol": "AppSetting",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/AppSetting.swift",
+      "line": 20,
+      "symbol": "AppSetting.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/AppSetting.swift",
+      "line": 25,
+      "symbol": "AppSetting.getCurrentLanguage()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/AppSetting.swift",
+      "line": 33,
+      "symbol": "AppSetting.setCurrentLanguage(language:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/Application.swift",
+      "line": 12,
+      "symbol": "Application",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/Application.swift",
+      "line": 14,
+      "symbol": "Application.userInterfaceLayoutDirection",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/BundleExtension.swift",
+      "line": 12,
+      "symbol": "BundleEx",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/BundleExtension.swift",
+      "line": 14,
+      "symbol": "BundleEx.localizedString(forKey:value:table:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/BundleExtension.swift",
+      "line": 25,
+      "symbol": "Bundle.once_action",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/BundleExtension.swift",
+      "line": 29,
+      "symbol": "Bundle.setLanguage(language:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/LanguageManager.swift",
+      "line": 12,
+      "symbol": "LanguageManager",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/LanguageManager.swift",
+      "line": 15,
+      "symbol": "LanguageManager.currentLanguage",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/LanguageManager.swift",
+      "line": 21,
+      "symbol": "LanguageManager.persistLanguage()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/LanguageManager.swift",
+      "line": 27,
+      "symbol": "LanguageManager.isCurrentLanguageRTL()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/UserDefaultsUtility.swift",
+      "line": 11,
+      "symbol": "UserDefaultsUtility",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/UserDefaultsUtility.swift",
+      "line": 13,
+      "symbol": "UserDefaultsUtility.saveAppLanguage(language:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/Localization/UserDefaultsUtility.swift",
+      "line": 17,
+      "symbol": "UserDefaultsUtility.loadAppCurrentLanguage()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/RoundedButton.swift",
+      "line": 12,
+      "symbol": "RoundedButton",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/RoundedButton.swift",
+      "line": 15,
+      "symbol": "RoundedButton.borderWidth",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/RoundedButton.swift",
+      "line": 18,
+      "symbol": "RoundedButton.borderColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/RoundedButton.swift",
+      "line": 20,
+      "symbol": "RoundedButton.cornerRadius",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/RoundedButton.swift",
+      "line": 23,
+      "symbol": "RoundedButton.draw(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/RoundedTextField.swift",
+      "line": 11,
+      "symbol": "RoundedTextField",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/RoundedTextField.swift",
+      "line": 14,
+      "symbol": "RoundedTextField.borderWidth",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/RoundedTextField.swift",
+      "line": 17,
+      "symbol": "RoundedTextField.borderColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/RoundedTextField.swift",
+      "line": 19,
+      "symbol": "RoundedTextField.cornerRadius",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/RoundedTextField.swift",
+      "line": 21,
+      "symbol": "RoundedTextField.paddingLeftCustom",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/RoundedTextField.swift",
+      "line": 22,
+      "symbol": "RoundedTextField.placeHolderColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/RoundedTextField.swift",
+      "line": 24,
+      "symbol": "RoundedTextField.paddingRightCustom",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Resources/RoundedTextField.swift",
+      "line": 35,
+      "symbol": "RoundedTextField.draw(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift",
+      "line": 12,
+      "symbol": "HomeView",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift",
+      "line": 13,
+      "symbol": "HomeView.showError(error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift",
+      "line": 14,
+      "symbol": "HomeView.fetchDataSucess()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift",
+      "line": 17,
+      "symbol": "PrayerTimeCellView",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift",
+      "line": 18,
+      "symbol": "PrayerTimeCellView.displayData(prayerTimeName:prayerTime:isCellSelected:isBtnChecked:cellIndex:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift",
+      "line": 24,
+      "symbol": "HomeVCPresenter.init(view:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift",
+      "line": 27,
+      "symbol": "HomeVCPresenter.prayerTimesNames",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift",
+      "line": 28,
+      "symbol": "HomeVCPresenter.todayParyerTimes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift",
+      "line": 30,
+      "symbol": "HomeVCPresenter.calendarDateTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift",
+      "line": 148,
+      "symbol": "HomeVCPresenter.setupCalendarView(calendarView:calenadrIncludingHeaderView:calendareFormatter:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift",
+      "line": 169,
+      "symbol": "HomeVCPresenter.setupViewsOfCalendar(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift",
+      "line": 181,
+      "symbol": "HomeVCPresenter.handelCellSelectedColor(cell:celssState:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift",
+      "line": 190,
+      "symbol": "HomeVCPresenter.handleCellTextColor(cell:cellState:calendareFormatter:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift",
+      "line": 209,
+      "symbol": "HomeVCPresenter.handleCellSelected(cell:cellState:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift",
+      "line": 228,
+      "symbol": "HomeVCPresenter.configureCell(view:cellState:calendareFormatter:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC+PrayerTimeCellDelegate.swift",
+      "line": 12,
+      "symbol": "HomeVC.customCell(cell:checkedButonatCellIndex:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC+PresenterDelegate.swift",
+      "line": 37,
+      "symbol": "HomeVC.APIParameterChanged()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 16,
+      "symbol": "HomeVC.backGroundImageView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 17,
+      "symbol": "HomeVC.dateLBL",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 18,
+      "symbol": "HomeVC.selectedPrayerTimeName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 19,
+      "symbol": "HomeVC.remainingTimeLbl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 20,
+      "symbol": "HomeVC.prayerTimestableView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 21,
+      "symbol": "HomeVC.importBtn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 24,
+      "symbol": "HomeVC.calendarView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 25,
+      "symbol": "HomeVC.calenadrIncludingHeaderView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 26,
+      "symbol": "HomeVC.hideCalendareView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 27,
+      "symbol": "HomeVC.daysStackView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 31,
+      "symbol": "HomeVC.countDownTimerFormatter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 32,
+      "symbol": "HomeVC.countdown",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 33,
+      "symbol": "HomeVC.calendar",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 34,
+      "symbol": "HomeVC.nextPrayerDateDate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 35,
+      "symbol": "HomeVC.numberOfSelectedPrayerTimes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 36,
+      "symbol": "HomeVC.addressTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 37,
+      "symbol": "HomeVC.presenter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 38,
+      "symbol": "HomeVC.prayerTimesArray",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 39,
+      "symbol": "HomeVC.backGroundImagesArray",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 43,
+      "symbol": "HomeVC.firstDate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 44,
+      "symbol": "HomeVC.twoDatesAlreadySelected",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 47,
+      "symbol": "HomeVC.activityIndicator",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 53,
+      "symbol": "HomeVC.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 175,
+      "symbol": "HomeVC.importBtnPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 181,
+      "symbol": "HomeVC.settingBtnPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 192,
+      "symbol": "HomeVC.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 196,
+      "symbol": "HomeVC.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 203,
+      "symbol": "HomeVC.tableView(_:heightForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 206,
+      "symbol": "HomeVC.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 358,
+      "symbol": "HomeVC.calendar(_:didDeselectDate:cell:cellState:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift",
+      "line": 392,
+      "symbol": "HomeVC.calendar(_:shouldDeselectDate:cell:cellState:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/JTAppleCalendar Cell/CustomJTAppleCalendarCell.swift",
+      "line": 13,
+      "symbol": "CustomJTAppleCalendarCell.dayLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/JTAppleCalendar Cell/CustomJTAppleCalendarCell.swift",
+      "line": 14,
+      "symbol": "CustomJTAppleCalendarCell.selectedView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/PrayerCell/PrayerTimeCell.swift",
+      "line": 11,
+      "symbol": "PrayerTimeCellDelegate",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/PrayerCell/PrayerTimeCell.swift",
+      "line": 12,
+      "symbol": "PrayerTimeCellDelegate.customCell(cell:checkedButonatCellIndex:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/PrayerCell/PrayerTimeCell.swift",
+      "line": 17,
+      "symbol": "PrayerTimeCell.prayerTimeNameLbl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/PrayerCell/PrayerTimeCell.swift",
+      "line": 18,
+      "symbol": "PrayerTimeCell.prayerTimeLbl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/PrayerCell/PrayerTimeCell.swift",
+      "line": 19,
+      "symbol": "PrayerTimeCell.isSelectedPrayerTimeBtn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/PrayerCell/PrayerTimeCell.swift",
+      "line": 21,
+      "symbol": "PrayerTimeCell.cellDelegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/PrayerCell/PrayerTimeCell.swift",
+      "line": 22,
+      "symbol": "PrayerTimeCell.cellIndex",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/PrayerCell/PrayerTimeCell.swift",
+      "line": 24,
+      "symbol": "PrayerTimeCell.awakeFromNib()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/PrayerCell/PrayerTimeCell.swift",
+      "line": 31,
+      "symbol": "PrayerTimeCell.checkPrayerTimeBtnPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/PrayerCell/PrayerTimeCell.swift",
+      "line": 38,
+      "symbol": "PrayerTimeCell.displayData(prayerTimeName:prayerTime:isCellSelected:isBtnChecked:cellIndex:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/Presenter/SplashScreen/SplashVCPresenter.swift",
+      "line": 10,
+      "symbol": "SplashVCPresenter",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Language/LanguageVC.swift",
+      "line": 15,
+      "symbol": "LanguageVC.englishRadioButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Language/LanguageVC.swift",
+      "line": 16,
+      "symbol": "LanguageVC.arabicRadioButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Language/LanguageVC.swift",
+      "line": 17,
+      "symbol": "LanguageVC.animatedImage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Language/LanguageVC.swift",
+      "line": 18,
+      "symbol": "LanguageVC.animatedImage2",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Language/LanguageVC.swift",
+      "line": 19,
+      "symbol": "LanguageVC.animatedImageLeading",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Language/LanguageVC.swift",
+      "line": 20,
+      "symbol": "LanguageVC.animatedImageTrailing",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Language/LanguageVC.swift",
+      "line": 23,
+      "symbol": "LanguageVC.radioButtonTag",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Language/LanguageVC.swift",
+      "line": 25,
+      "symbol": "LanguageVC.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Language/LanguageVC.swift",
+      "line": 33,
+      "symbol": "LanguageVC.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Language/LanguageVC.swift",
+      "line": 41,
+      "symbol": "LanguageVC.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Language/LanguageVC.swift",
+      "line": 45,
+      "symbol": "LanguageVC.applicationDidBecomeActive()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Language/LanguageVC.swift",
+      "line": 51,
+      "symbol": "LanguageVC.radioButtonPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Language/LanguageVC.swift",
+      "line": 67,
+      "symbol": "LanguageVC.nextBtnPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 16,
+      "symbol": "LocationVC.locateMeBtn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 17,
+      "symbol": "LocationVC.animatedImage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 18,
+      "symbol": "LocationVC.animatedImage2",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 19,
+      "symbol": "LocationVC.addressLbl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 20,
+      "symbol": "LocationVC.animatedImageLeading",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 21,
+      "symbol": "LocationVC.animatedImageTrailing",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 25,
+      "symbol": "LocationVC.userLocation",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 26,
+      "symbol": "LocationVC.locationManager",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 27,
+      "symbol": "LocationVC.addressTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 28,
+      "symbol": "LocationVC.completeAddressTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 30,
+      "symbol": "LocationVC.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 35,
+      "symbol": "LocationVC.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 43,
+      "symbol": "LocationVC.applicationDidBecomeActive()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 46,
+      "symbol": "LocationVC.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 50,
+      "symbol": "LocationVC.viewDidLayoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 54,
+      "symbol": "LocationVC.finishBtnPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 73,
+      "symbol": "LocationVC.locateMeBtnPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 78,
+      "symbol": "LocationVC.prepare(for:sender:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 104,
+      "symbol": "LocationVC.setupLocationManager()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 113,
+      "symbol": "LocationVC.locationManager(_:didUpdateLocations:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 133,
+      "symbol": "LocationVC.getAddressFromLocation(lat:long:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift",
+      "line": 187,
+      "symbol": "LocationVC.locationIsSeleted(at:lng:selectedPlace:cityName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/LocationSearchtable.swift",
+      "line": 12,
+      "symbol": "LocationSearchTable",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/LocationSearchtable.swift",
+      "line": 14,
+      "symbol": "LocationSearchTable.handleMapSearchDelegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/LocationSearchtable.swift",
+      "line": 15,
+      "symbol": "LocationSearchTable.matchingItems",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/LocationSearchtable.swift",
+      "line": 16,
+      "symbol": "LocationSearchTable.mapView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/LocationSearchtable.swift",
+      "line": 18,
+      "symbol": "LocationSearchTable.parseAddress(selectedItem:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/LocationSearchtable.swift",
+      "line": 52,
+      "symbol": "LocationSearchTable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/LocationSearchtable.swift",
+      "line": 53,
+      "symbol": "LocationSearchTable.updateSearchResults(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/LocationSearchtable.swift",
+      "line": 75,
+      "symbol": "LocationSearchTable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/LocationSearchtable.swift",
+      "line": 77,
+      "symbol": "LocationSearchTable.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/LocationSearchtable.swift",
+      "line": 81,
+      "symbol": "LocationSearchTable.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/LocationSearchtable.swift",
+      "line": 92,
+      "symbol": "LocationSearchTable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/LocationSearchtable.swift",
+      "line": 94,
+      "symbol": "LocationSearchTable.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapNavVC.swift",
+      "line": 11,
+      "symbol": "MapNavVC",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapNavVC.swift",
+      "line": 13,
+      "symbol": "MapNavVC.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 12,
+      "symbol": "HandleMapSearch",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 13,
+      "symbol": "HandleMapSearch.dropPinZoomIn(placemark:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 15,
+      "symbol": "maplLocationView",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 16,
+      "symbol": "maplLocationView.locationIsSeleted(at:lng:selectedPlace:cityName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 18,
+      "symbol": "MapVC",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 20,
+      "symbol": "MapVC.selectedPin",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 21,
+      "symbol": "MapVC.selectedPlaceTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 22,
+      "symbol": "MapVC.cityName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 23,
+      "symbol": "MapVC.resultSearchController",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 25,
+      "symbol": "MapVC.locationManager",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 27,
+      "symbol": "MapVC.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 29,
+      "symbol": "MapVC.mapView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 32,
+      "symbol": "MapVC.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 69,
+      "symbol": "MapVC.addAnnotation(gestureRecognizer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 109,
+      "symbol": "MapVC.getDirections()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 117,
+      "symbol": "MapVC",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 119,
+      "symbol": "MapVC.locationManager(_:didChangeAuthorization:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 126,
+      "symbol": "MapVC.locationManager(_:didUpdateLocations:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 136,
+      "symbol": "MapVC.locationManager(_:didFailWithError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 143,
+      "symbol": "MapVC",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 145,
+      "symbol": "MapVC.dropPinZoomIn(placemark:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 180,
+      "symbol": "MapVC",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 181,
+      "symbol": "MapVC.mapView(_:viewFor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 201,
+      "symbol": "MapVC",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 203,
+      "symbol": "MapVC.setupNavBar()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 227,
+      "symbol": "MapVC.okBtnPressed()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/Map/MapVC.swift",
+      "line": 232,
+      "symbol": "MapVC.backButtonPressed()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 12,
+      "symbol": "MainViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 16,
+      "symbol": "MainViewController.calendarId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 17,
+      "symbol": "MainViewController.token",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 18,
+      "symbol": "MainViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 53,
+      "symbol": "MainViewController.dataRequest(FINAL_URL:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 105,
+      "symbol": "MainViewController.signInMicrosoftAccount()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 135,
+      "symbol": "MainViewController.getCalenderID(token:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 171,
+      "symbol": "MainViewController.createEvent(token:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 240,
+      "symbol": "MainViewController.createEventList(token:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 329,
+      "symbol": "MainViewController.googleSignInBtnPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 333,
+      "symbol": "MainViewController.addEventoToGoogleCalendar(summary:description:startTime:endTime:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 367,
+      "symbol": "MainViewController.buildDate(date:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 376,
+      "symbol": "MainViewController.showAlert(title:message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 392,
+      "symbol": "MainViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 394,
+      "symbol": "MainViewController.sign(inWillDispatch:error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 398,
+      "symbol": "MainViewController.sign(_:present:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 404,
+      "symbol": "MainViewController.sign(_:dismiss:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 420,
+      "symbol": "MainViewController.addEventToAppleBtnPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 429,
+      "symbol": "MainViewController",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/MainViewController.swift",
+      "line": 430,
+      "symbol": "MainViewController.addEventoToAppleCalendar(title:description:eventStartDate:eventEndDate:tillDate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/SplashScreen/SplashVC.swift",
+      "line": 16,
+      "symbol": "SplashVC.loadingView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/SplashScreen/SplashVC.swift",
+      "line": 25,
+      "symbol": "SplashVC.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/SplashScreen/SplashVC.swift",
+      "line": 36,
+      "symbol": "SplashVC.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/SplashScreen/SplashVC.swift",
+      "line": 41,
+      "symbol": "SplashVC.preferredStatusBarStyle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/SplashScreen/SplashVC.swift",
+      "line": 45,
+      "symbol": "SplashVC.viewDidLayoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/SplashScreen/SplashVC.swift",
+      "line": 52,
+      "symbol": "SplashVC.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/WelcomeViewController.swift",
+      "line": 3,
+      "symbol": "WelcomeViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/WelcomeViewController.swift",
+      "line": 5,
+      "symbol": "WelcomeViewController.userProfilePhoto",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/WelcomeViewController.swift",
+      "line": 6,
+      "symbol": "WelcomeViewController.userDisplayName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/WelcomeViewController.swift",
+      "line": 7,
+      "symbol": "WelcomeViewController.userEmail",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/WelcomeViewController.swift",
+      "line": 9,
+      "symbol": "WelcomeViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/WelcomeViewController.swift",
+      "line": 42,
+      "symbol": "WelcomeViewController.signOut()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/PrayerTimeBuffer/PrayerTimeBufferVCPresenter.swift",
+      "line": 11,
+      "symbol": "PrayerTimeBufferView",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/PrayerTimeBuffer/PrayerTimeBufferVCPresenter.swift",
+      "line": 12,
+      "symbol": "PrayerTimeBufferView.showError(error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/PrayerTimeBuffer/PrayerTimeBufferVCPresenter.swift",
+      "line": 13,
+      "symbol": "PrayerTimeBufferView.setBufferSucess(forAll:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/PrayerTimeBuffer/PrayerTimeBufferVCPresenter.swift",
+      "line": 16,
+      "symbol": "PrayerTimeBufferCellView",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/PrayerTimeBuffer/PrayerTimeBufferVCPresenter.swift",
+      "line": 17,
+      "symbol": "PrayerTimeBufferCellView.displayData(prayerTimeName:prayerTimeBuffer:iconImage:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/PrayerTimeBuffer/PrayerTimeBufferVCPresenter.swift",
+      "line": 22,
+      "symbol": "PrayerTimeBufferVCPresenter.prayerTimesNames",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/PrayerTimeBuffer/PrayerTimeBufferVCPresenter.swift",
+      "line": 23,
+      "symbol": "PrayerTimeBufferVCPresenter.iconImagesArray",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/PrayerTimeBuffer/PrayerTimeBufferVCPresenter.swift",
+      "line": 25,
+      "symbol": "PrayerTimeBufferVCPresenter.automaticAdjustBufferBeforeText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/PrayerTimeBuffer/PrayerTimeBufferVCPresenter.swift",
+      "line": 26,
+      "symbol": "PrayerTimeBufferVCPresenter.automaticAdjustBufferAfterText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/PrayerTimeBuffer/PrayerTimeBufferVCPresenter.swift",
+      "line": 27,
+      "symbol": "PrayerTimeBufferVCPresenter.prayerTimesBufferArray",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/PrayerTimeBuffer/PrayerTimeBufferVCPresenter.swift",
+      "line": 29,
+      "symbol": "PrayerTimeBufferVCPresenter.init(view:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/PrayerTimeBuffer/PrayerTimeBufferVCPresenter.swift",
+      "line": 37,
+      "symbol": "PrayerTimeBufferVCPresenter.getbufferText(index:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/PrayerTimeBuffer/PrayerTimeBufferVCPresenter.swift",
+      "line": 59,
+      "symbol": "PrayerTimeBufferVCPresenter.setbuffer(forAll:index:type:beforeValue:afterValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/PrayerTimeBuffer/PrayerTimeBufferVCPresenter.swift",
+      "line": 77,
+      "symbol": "PrayerTimeBufferVCPresenter.getToggleValue()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/PrayerTimeBuffer/PrayerTimeBufferVCPresenter.swift",
+      "line": 80,
+      "symbol": "PrayerTimeBufferVCPresenter.setToggleValue(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/PrayerTimeBuffer/PrayerTimeBufferVCPresenter.swift",
+      "line": 83,
+      "symbol": "PrayerTimeBufferVCPresenter.ConfigureCell(cell:cellIndex:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/Settings/SettingVCPresenter.swift",
+      "line": 11,
+      "symbol": "SettingVCPresenter",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/SettingsLocation/SettingsLocationVCPresenter.swift",
+      "line": 10,
+      "symbol": "SettingsLocationVCPresenter",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/Presenter/SettingsLocation/SettingsLocationVCPresenter.swift",
+      "line": 11,
+      "symbol": "SettingsLocationVCPresenter.detectlocationServicesEnabled()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/About/AboutVC.swift",
+      "line": 11,
+      "symbol": "AboutVC",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/About/AboutVC.swift",
+      "line": 14,
+      "symbol": "AboutVC.containerViewHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/About/AboutVC.swift",
+      "line": 15,
+      "symbol": "AboutVC.roundedView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/About/AboutVC.swift",
+      "line": 18,
+      "symbol": "AboutVC.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/About/AboutVC.swift",
+      "line": 27,
+      "symbol": "AboutVC.closeViewBtnPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CalendarMethod/CalendarMethodCell/CalendarMethodCell.swift",
+      "line": 14,
+      "symbol": "CalendarMethodCell.methodNameLbl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CalendarMethod/CalendarMethodCell/CalendarMethodCell.swift",
+      "line": 16,
+      "symbol": "CalendarMethodCell.awakeFromNib()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CalendarMethod/CalendarMethodVC.swift",
+      "line": 12,
+      "symbol": "UpdateSettingsView.didUpdateSettings()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CalendarMethod/CalendarMethodVC.swift",
+      "line": 19,
+      "symbol": "CalendarMethodVC.containerViewHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CalendarMethod/CalendarMethodVC.swift",
+      "line": 20,
+      "symbol": "CalendarMethodVC.roundedView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CalendarMethod/CalendarMethodVC.swift",
+      "line": 21,
+      "symbol": "CalendarMethodVC.calendarMethodTV",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CalendarMethod/CalendarMethodVC.swift",
+      "line": 25,
+      "symbol": "CalendarMethodVC.toSettingelegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CalendarMethod/CalendarMethodVC.swift",
+      "line": 27,
+      "symbol": "CalendarMethodVC.calendarMethodArray",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CalendarMethod/CalendarMethodVC.swift",
+      "line": 30,
+      "symbol": "CalendarMethodVC.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CalendarMethod/CalendarMethodVC.swift",
+      "line": 42,
+      "symbol": "CalendarMethodVC.closeViewBtnPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CalendarMethod/CalendarMethodVC.swift",
+      "line": 49,
+      "symbol": "CalendarMethodVC.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CalendarMethod/CalendarMethodVC.swift",
+      "line": 53,
+      "symbol": "CalendarMethodVC.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CalendarMethod/CalendarMethodVC.swift",
+      "line": 58,
+      "symbol": "CalendarMethodVC.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 10,
+      "symbol": "UpdatePrayerTimesBufferView",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 11,
+      "symbol": "UpdatePrayerTimesBufferView.didUpdateBuffer(forAll:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 14,
+      "symbol": "CustomActionVC",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 16,
+      "symbol": "CustomActionVC.containerViewHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 17,
+      "symbol": "CustomActionVC.roundedView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 18,
+      "symbol": "CustomActionVC.beforeRoundedView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 19,
+      "symbol": "CustomActionVC.afterRoundedView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 20,
+      "symbol": "CustomActionVC.beforeTxt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 21,
+      "symbol": "CustomActionVC.afterTxt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 22,
+      "symbol": "CustomActionVC.doneBtn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 23,
+      "symbol": "CustomActionVC.MinutesBtn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 24,
+      "symbol": "CustomActionVC.HoursBtn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 27,
+      "symbol": "CustomActionVC.delegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 28,
+      "symbol": "CustomActionVC.bufferType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 29,
+      "symbol": "CustomActionVC.index",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 30,
+      "symbol": "CustomActionVC.forall",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 32,
+      "symbol": "CustomActionVC.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 66,
+      "symbol": "CustomActionVC.viewDidLayoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 70,
+      "symbol": "CustomActionVC.radioButtonPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 81,
+      "symbol": "CustomActionVC.closeViewBtnPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/CustomAction/CustomActionVC.swift",
+      "line": 88,
+      "symbol": "CustomActionVC.doneButtonPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 11,
+      "symbol": "FrequentlyQuestionsVC",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 14,
+      "symbol": "FrequentlyQuestionsVC.questionsTV",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 17,
+      "symbol": "FrequentlyQuestionsVC.searchBar",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 18,
+      "symbol": "FrequentlyQuestionsVC.searchbarBtnIcon",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 19,
+      "symbol": "FrequentlyQuestionsVC.titleLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 20,
+      "symbol": "FrequentlyQuestionsVC.cellHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 21,
+      "symbol": "FrequentlyQuestionsVC.searchBarIsActive",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 22,
+      "symbol": "FrequentlyQuestionsVC.isSearchBarEmpty",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 25,
+      "symbol": "FrequentlyQuestionsVC.isFiltering",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 28,
+      "symbol": "FrequentlyQuestionsVC.questionsArray",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 30,
+      "symbol": "FrequentlyQuestionsVC.filteredQuestions",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 32,
+      "symbol": "FrequentlyQuestionsVC.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 141,
+      "symbol": "FrequentlyQuestionsVC.searchButtonPressed(sender:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 199,
+      "symbol": "FrequentlyQuestionsVC.searchBarCancelButtonClicked(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 205,
+      "symbol": "FrequentlyQuestionsVC.filterContentForSearchText(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 215,
+      "symbol": "FrequentlyQuestionsVC.haveAnotherQuestionBtnPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 219,
+      "symbol": "FrequentlyQuestionsVC",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 221,
+      "symbol": "FrequentlyQuestionsVC.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 225,
+      "symbol": "FrequentlyQuestionsVC.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 237,
+      "symbol": "FrequentlyQuestionsVC.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 245,
+      "symbol": "FrequentlyQuestionsVC.tableView(_:heightForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 255,
+      "symbol": "FrequentlyQuestionsVC",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/FrequentlyQuestionsVC.swift",
+      "line": 256,
+      "symbol": "FrequentlyQuestionsVC.searchBar(_:textDidChange:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/QuestionCell/QuestionCell.swift",
+      "line": 13,
+      "symbol": "QuestionCell.questionTitleLbl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/QuestionCell/QuestionCell.swift",
+      "line": 14,
+      "symbol": "QuestionCell.questionAnswerLbl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/QuestionCell/QuestionCell.swift",
+      "line": 15,
+      "symbol": "QuestionCell.answerLblHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/QuestionCell/QuestionCell.swift",
+      "line": 17,
+      "symbol": "QuestionCell.awakeFromNib()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/FAQ/QuestionCell/QuestionCell.swift",
+      "line": 22,
+      "symbol": "QuestionCell.setSelected(_:animated:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/ImportToCalendar/ImportToCalendarVC.swift",
+      "line": 21,
+      "symbol": "ImportToCalendarVC.containerViewHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/ImportToCalendar/ImportToCalendarVC.swift",
+      "line": 22,
+      "symbol": "ImportToCalendarVC.roundedView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/ImportToCalendar/ImportToCalendarVC.swift",
+      "line": 23,
+      "symbol": "ImportToCalendarVC.doneBtn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/ImportToCalendar/ImportToCalendarVC.swift",
+      "line": 24,
+      "symbol": "ImportToCalendarVC.checkBtns",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/ImportToCalendar/ImportToCalendarVC.swift",
+      "line": 25,
+      "symbol": "ImportToCalendarVC.checkTitleLbl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/ImportToCalendar/ImportToCalendarVC.swift",
+      "line": 35,
+      "symbol": "ImportToCalendarVC.choosenCalendars",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/ImportToCalendar/ImportToCalendarVC.swift",
+      "line": 36,
+      "symbol": "ImportToCalendarVC.toSettingelegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/ImportToCalendar/ImportToCalendarVC.swift",
+      "line": 38,
+      "symbol": "ImportToCalendarVC.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/ImportToCalendar/ImportToCalendarVC.swift",
+      "line": 105,
+      "symbol": "ImportToCalendarVC.checkBtnPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/ImportToCalendar/ImportToCalendarVC.swift",
+      "line": 117,
+      "symbol": "ImportToCalendarVC.DoneBtnPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/ImportToCalendar/ImportToCalendarVC.swift",
+      "line": 145,
+      "symbol": "ImportToCalendarVC.closeViewBtnPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/ImportToCalendar/ImportToCalendarVC.swift",
+      "line": 152,
+      "symbol": "ImportToCalendarVC.sign(inWillDispatch:error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/ImportToCalendar/ImportToCalendarVC.swift",
+      "line": 156,
+      "symbol": "ImportToCalendarVC.sign(_:present:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/ImportToCalendar/ImportToCalendarVC.swift",
+      "line": 162,
+      "symbol": "ImportToCalendarVC.sign(_:dismiss:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/ImportToCalendar/ImportToCalendarVC.swift",
+      "line": 195,
+      "symbol": "ImportToCalendarVC.signInMicrosoftAccount()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/ImportToCalendar/ImportToCalendarVC.swift",
+      "line": 233,
+      "symbol": "ImportToCalendarVC.signOut()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferCell/PrayerTimeBufferCell.swift",
+      "line": 11,
+      "symbol": "PrayerTimeBufferCell",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferCell/PrayerTimeBufferCell.swift",
+      "line": 12,
+      "symbol": "PrayerTimeBufferCell.prayerTimeIcon",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferCell/PrayerTimeBufferCell.swift",
+      "line": 13,
+      "symbol": "PrayerTimeBufferCell.prayerTimeNameLbl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferCell/PrayerTimeBufferCell.swift",
+      "line": 14,
+      "symbol": "PrayerTimeBufferCell.prayerTimebufferLbl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferCell/PrayerTimeBufferCell.swift",
+      "line": 15,
+      "symbol": "PrayerTimeBufferCell.awakeFromNib()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferCell/PrayerTimeBufferCell.swift",
+      "line": 21,
+      "symbol": "PrayerTimeBufferCell",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferCell/PrayerTimeBufferCell.swift",
+      "line": 22,
+      "symbol": "PrayerTimeBufferCell.displayData(prayerTimeName:prayerTimeBuffer:iconImage:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferVC+PresenterDelegate.swift",
+      "line": 11,
+      "symbol": "PrayerTimeBufferVC.showError(error:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferVC+PresenterDelegate.swift",
+      "line": 15,
+      "symbol": "PrayerTimeBufferVC.setBufferSucess(forAll:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferVC+PresenterDelegate.swift",
+      "line": 29,
+      "symbol": "PrayerTimeBufferVC.didUpdateBuffer(forAll:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferVC.swift",
+      "line": 10,
+      "symbol": "PrayerTimeBufferVC",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferVC.swift",
+      "line": 11,
+      "symbol": "PrayerTimeBufferVC",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferVC.swift",
+      "line": 14,
+      "symbol": "PrayerTimeBufferVC.PrayerTimeBufferTableView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferVC.swift",
+      "line": 15,
+      "symbol": "PrayerTimeBufferVC.automaticAdjustBufferLbl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferVC.swift",
+      "line": 16,
+      "symbol": "PrayerTimeBufferVC.automaticAdjustBufferSwitch",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferVC.swift",
+      "line": 19,
+      "symbol": "PrayerTimeBufferVC.presenter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferVC.swift",
+      "line": 21,
+      "symbol": "PrayerTimeBufferVC.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferVC.swift",
+      "line": 28,
+      "symbol": "PrayerTimeBufferVC",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferVC.swift",
+      "line": 43,
+      "symbol": "PrayerTimeBufferVC.automaticAdjustBufferSwichPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferVC.swift",
+      "line": 112,
+      "symbol": "PrayerTimeBufferVC",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferVC.swift",
+      "line": 113,
+      "symbol": "PrayerTimeBufferVC.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferVC.swift",
+      "line": 117,
+      "symbol": "PrayerTimeBufferVC.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferVC.swift",
+      "line": 122,
+      "symbol": "PrayerTimeBufferVC.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/PrayerTimeBuffer/PrayerTimeBufferVC.swift",
+      "line": 126,
+      "symbol": "PrayerTimeBufferVC.tableView(_:heightForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/Settings/SettingCell/SettingCell.swift",
+      "line": 14,
+      "symbol": "SettingCell.settingIcon",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/Settings/SettingCell/SettingCell.swift",
+      "line": 15,
+      "symbol": "SettingCell.nameLbl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/Settings/SettingCell/SettingCell.swift",
+      "line": 16,
+      "symbol": "SettingCell.valueLbl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/Settings/SettingCell/SettingCell.swift",
+      "line": 17,
+      "symbol": "SettingCell.awakeFromNib()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/Settings/SettingVC+delegate.swift",
+      "line": 11,
+      "symbol": "settingsVCView",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/Settings/SettingVC+delegate.swift",
+      "line": 12,
+      "symbol": "settingsVCView.APIParameterChanged()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/Settings/SettingVC.swift",
+      "line": 14,
+      "symbol": "SettingVC.settingsTableView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/Settings/SettingVC.swift",
+      "line": 18,
+      "symbol": "SettingVC.SettingsArray",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/Settings/SettingVC.swift",
+      "line": 20,
+      "symbol": "SettingVC.delegateToHome",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/Settings/SettingVC.swift",
+      "line": 22,
+      "symbol": "SettingVC.presenter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/Settings/SettingVC.swift",
+      "line": 24,
+      "symbol": "SettingVC.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/Settings/SettingVC.swift",
+      "line": 39,
+      "symbol": "SettingVC.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/Settings/SettingVC.swift",
+      "line": 44,
+      "symbol": "SettingVC.viewWillDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/Settings/SettingVC.swift",
+      "line": 51,
+      "symbol": "SettingVC.backButtinPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/Settings/SettingVC.swift",
+      "line": 59,
+      "symbol": "SettingVC.tableView(_:numberOfRowsInSection:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/Settings/SettingVC.swift",
+      "line": 63,
+      "symbol": "SettingVC.tableView(_:cellForRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/Settings/SettingVC.swift",
+      "line": 70,
+      "symbol": "SettingVC.tableView(_:didSelectRowAt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/Settings/SettingVC.swift",
+      "line": 107,
+      "symbol": "SettingVC.prepare(for:sender:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 15,
+      "symbol": "SettingsLocationVC.containerViewHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 16,
+      "symbol": "SettingsLocationVC.roundedView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 17,
+      "symbol": "SettingsLocationVC.switchLocation",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 18,
+      "symbol": "SettingsLocationVC.addressLbl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 22,
+      "symbol": "SettingsLocationVC.userLocation",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 23,
+      "symbol": "SettingsLocationVC.locationManager",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 24,
+      "symbol": "SettingsLocationVC.addressTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 25,
+      "symbol": "SettingsLocationVC.completeAddressTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 26,
+      "symbol": "SettingsLocationVC.isLocatedAutomatically",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 27,
+      "symbol": "SettingsLocationVC.toSettingelegate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 28,
+      "symbol": "SettingsLocationVC.presenter",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 30,
+      "symbol": "SettingsLocationVC.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 43,
+      "symbol": "SettingsLocationVC.closeViewBtnPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 51,
+      "symbol": "SettingsLocationVC.switchBtnPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 69,
+      "symbol": "SettingsLocationVC.changeLocationBtnPressed(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 80,
+      "symbol": "SettingsLocationVC.setupLocationManager()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 89,
+      "symbol": "SettingsLocationVC.locationManager(_:didUpdateLocations:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 109,
+      "symbol": "SettingsLocationVC.getAddressFromLocation(lat:long:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift",
+      "line": 162,
+      "symbol": "SettingsLocationVC.locationIsSeleted(at:lng:selectedPlace:cityName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/emanshedeed/Desktop/BSSProjects/PrayerMate"
+}

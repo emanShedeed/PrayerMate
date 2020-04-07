@@ -89,7 +89,8 @@
 "customActionVC.minutesTitleLbl" = "دقائق";
 "customActionVC.hoursTitleLbl" = "ساعات";
 "customActionVC.donebtntitle" = "تأكيد";
-
+"customActionVC.minutesValidationMessage"="الدقائق من ٠ ل ٦٠ دقيقة";
+"customActionVC.hoursValidationMessage"="الساعات من ٠ ل ٢٤ ساعة";
 //ImportToCalendar viewController
 "ImportToCalendarVC.titleLbl" = "التقويم";
 "ImportToCalendarVC.subTitleLbl" = "اختر تقويمك المفضل";

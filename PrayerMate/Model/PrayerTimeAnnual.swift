@@ -13,15 +13,24 @@ struct PrayerTimes: Codable {
     let items: [Item]?
     let statusValid, statusCode: Int?
     let statusDescription: String?
-
+    let statusError: StatusError?
+    
     enum CodingKeys: String, CodingKey {
         case items
         case statusValid = "status_valid"
         case statusCode = "status_code"
         case statusDescription = "status_description"
+        case statusError = "status_error"
     }
 }
+// MARK: - StatusError
+struct StatusError: Codable {
+    let invalidQuery: String?
 
+    enum CodingKeys: String, CodingKey {
+        case invalidQuery = "invalid_query"
+    }
+}
 // MARK: - Item
 struct Item: Codable {
     let dateFor, fajr, shurooq, dhuhr: String?

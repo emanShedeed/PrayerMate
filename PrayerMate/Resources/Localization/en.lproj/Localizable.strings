@@ -92,6 +92,8 @@
 "customActionVC.minutesTitleLbl" = "Minutes";
 "customActionVC.hoursTitleLbl" = "Hours";
 "customActionVC.donebtntitle" = "Done";
+"customActionVC.minutesValidationMessage"="Minutes from 0 to 60 minute";
+"customActionVC.hoursValidationMessage"="Hours from 0 to 24 hour";
 
 
 //ImportToCalendar viewController

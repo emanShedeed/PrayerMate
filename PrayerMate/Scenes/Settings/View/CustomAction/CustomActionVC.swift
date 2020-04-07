@@ -22,7 +22,7 @@ class CustomActionVC: UIViewController {
     @IBOutlet weak var doneBtn: UIButton!
     @IBOutlet weak var MinutesBtn: UIButton!
     @IBOutlet weak var HoursBtn: UIButton!
-    
+    @IBOutlet var textFields: [UITextField]!
     //MARK:VARiIABLES
     var delegate:UpdatePrayerTimesBufferView?
     var bufferType:String = "M"
@@ -36,16 +36,16 @@ class CustomActionVC: UIViewController {
         setupView()
     }
     /**
-         Call this function for setup the View UI
-       
-           
-         ### Usage Example: ###
-         ````
-         setupView()
-         
-         ````
-       - Parameters:
-         */
+     Call this function for setup the View UI
+     
+     
+     ### Usage Example: ###
+     ````
+     setupView()
+     
+     ````
+     - Parameters:
+     */
     func setupView(){
         MinutesBtn.isSelected = true
         MinutesBtn.setImage(UIImage.unSelectedRadio, for: .normal)
@@ -61,6 +61,37 @@ class CustomActionVC: UIViewController {
         afterRoundedView.layer.borderWidth = 1
         afterRoundedView.layer.borderColor = UIColor(rgb: 0xEFEFEF).cgColor
         afterRoundedView.roundCorners([.topLeft,.topRight,.bottomLeft,.bottomRight], radius: 5)
+    }
+    // MARK: - Helper Methods
+    fileprivate func validate(_ textField: UITextField) -> (Bool, String?) {
+        guard let text = textField.text else {
+            return (false, nil)
+        }
+        if(bufferType == "M"){
+            
+            if textField == textFields[0] || textField == textFields[1]{
+                
+                let timeAsInt = Int(textField.text ?? "") ?? -1
+                
+                let test = timeAsInt >= 0 && timeAsInt <= 60
+                
+                return ( test, "customActionVC.minutesValidationMessage".localized)
+            }
+        }else if(bufferType == "H"){
+            
+            if textField == textFields[0] || textField == textFields[1]{
+                
+                let timeAsInt = Int(textField.text ?? "") ?? -1
+                
+                let test = timeAsInt >= 0 && timeAsInt <= 24
+                
+                return ( test, "customActionVC.hoursValidationMessage".localized)
+            }
+        }
+        
+        
+        
+        return (text.count > 0, "This field cannot be empty.")
     }
     
     override func viewDidLayoutSubviews() {
@@ -80,20 +111,33 @@ class CustomActionVC: UIViewController {
     }
     @IBAction func closeViewBtnPressed(_ sender: Any) {
         if(forall){
-        UserDefaults.standard.set(false, forKey: "automaticAdjustBufferToggle")
+            UserDefaults.standard.set(false, forKey: "automaticAdjustBufferToggle")
         }
         delegate?.didUpdateBuffer(forAll: forall)
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func doneButtonPressed(_ sender: UIButton) {
-        let presenter = PrayerTimeBufferVCPresenter(view: nil)
-        if(forall){
-            presenter.setToggleValue(value: true)
-        }else{
-            presenter.setToggleValue(value: false)
+        var isCompleted=true
+        for (index,textField) in textFields.enumerated(){
+            let (valid, message) = validate(textField)
+            //            validationLabels[index].text=message
+            if(!valid){
+                Helper.showToast(message: message ?? "")
+                isCompleted=false
+                // break
+                
+            }
         }
-        presenter.setbuffer(forAll: forall, index: index, type: bufferType, beforeValue: Int(beforeTxt?.text ?? "0") ?? 0, afterValue:Int(afterTxt?.text ?? "0") ?? 0)
-        delegate?.didUpdateBuffer(forAll: forall)
-        self.dismiss(animated: true, completion: nil)
+        if isCompleted{
+            let presenter = PrayerTimeBufferVCPresenter(view: nil)
+            if(forall){
+                presenter.setToggleValue(value: true)
+            }else{
+                presenter.setToggleValue(value: false)
+            }
+            presenter.setbuffer(forAll: forall, index: index, type: bufferType, beforeValue: Int(beforeTxt?.text ?? "0") ?? 0, afterValue:Int(afterTxt?.text ?? "0") ?? 0)
+            delegate?.didUpdateBuffer(forAll: forall)
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }
