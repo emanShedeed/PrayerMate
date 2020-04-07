@@ -71,7 +71,11 @@ final class LocationVC: UIViewController {
     }
     
     @IBAction func locateMeBtnPressed(_ sender: Any) {
+        if(Helper.isConnectedToNetwork()){
         performSegue(withIdentifier: "goToMapVC", sender: self)
+        }else{
+            Helper.showAlert(title: "", message: "internetFailMessage".localized, VC: self)
+        }
     }
     
     //MARK:- Methods
@@ -83,9 +87,8 @@ final class LocationVC: UIViewController {
         
     }
     private func animateBackGround(){
-        UIView.animate(withDuration: 2.0, delay: 0.2, options: [.repeat, .autoreverse], animations: {
-            //                self.animatedImage.frame = self.animatedImage.frame.offsetBy(dx: 1 * self.animatedImage.frame.size.width, dy: 0.0)
-            //                self.animatedImage2.frame = self.animatedImage2.frame.offsetBy(dx: 1 * self.animatedImage2.frame.size.width, dy: 0.0)
+        UIView.animate(withDuration: 2.0, delay: 0.0, options: [.repeat, .autoreverse], animations: {
+     
             self.animatedImageLeading.constant += self.animatedImage.frame.width
             
             self.animatedImageTrailing.constant += self.animatedImage.frame.width
@@ -111,6 +114,7 @@ extension LocationVC:CLLocationManagerDelegate{
     
     //Write the didUpdateLocations method here:
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if(Helper.isConnectedToNetwork()){
         userLocation = locations[locations.count-1]
         if let l=userLocation
         {
@@ -127,6 +131,9 @@ extension LocationVC:CLLocationManagerDelegate{
                 UserDefaults.standard.set(true, forKey: "isLocatedAutomatically")
                 getAddressFromLocation(lat:l.coordinate.latitude,long:l.coordinate.longitude)
             }
+        }
+        }else{
+            Helper.showAlert(title: "", message: "internetFailMessage".localized, VC: self)
         }
     }
     
@@ -191,11 +198,11 @@ extension LocationVC:maplLocationView{
             let dect:[String:Double]=["lat":lat,"long":lng]
             UserDefaults.standard.set(dect, forKey: "userLocation")
             UserDefaults.standard.set(false, forKey: "isLocatedAutomatically")
-        }
+        
         addressLbl.text=selectedPlace
         completeAddressTitle = selectedPlace
         addressTitle = cityName != "" ? cityName :  completeAddressTitle.components(separatedBy: " ").first ?? completeAddressTitle
-        
+        }
     }
     
 }

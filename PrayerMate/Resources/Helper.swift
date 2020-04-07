@@ -15,7 +15,7 @@ class Helper {
     class func showAlert(title: String, message: String, VC: UIViewController) {
         
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let ok = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        let ok = UIAlertAction(title: "alertBtnTitle".localized, style: .cancel, handler: nil)
         
         alertVC.addAction(ok)
         VC.present(alertVC, animated: true, completion: nil)

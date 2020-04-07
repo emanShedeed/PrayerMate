@@ -208,7 +208,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
                   endingLineNumber = "105"
-                  offsetFromSymbolStart = "1486">
+                  offsetFromSymbolStart = "1584">
                </Location>
                <Location
                   uuid = "C2303423-6615-419C-957B-CA53A36B07A1 - 6c4e5b5b9c7b5f73"
@@ -223,7 +223,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "106"
                   endingLineNumber = "106"
-                  offsetFromSymbolStart = "8">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -400,7 +400,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "29"
                   endingLineNumber = "29"
-                  offsetFromSymbolStart = "466">
+                  offsetFromSymbolStart = "424">
                </Location>
                <Location
                   uuid = "E22C4572-61B6-4109-A969-B4F4A8E61A65 - 5d64ab6c1b6abb48"
@@ -415,7 +415,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
                   endingLineNumber = "30"
-                  offsetFromSymbolStart = "44">
+                  offsetFromSymbolStart = "52">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -530,6 +530,54 @@
             endingLineNumber = "126"
             landmarkName = "doneButtonPressed(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5EFC076F-44EB-4667-B911-F80EC92F5188"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "animateBackGround()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5EFC076F-44EB-4667-B911-F80EC92F5188 - 4a6d228090fd1d6f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PrayerMate.LocationVC.(animateBackGround in _2C0BD8B863A238FA38029DB1EC386756)() -&gt; ()"
+                  moduleName = "PrayerMate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "5EFC076F-44EB-4667-B911-F80EC92F5188 - 8a4c9538e186be0b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in PrayerMate.LocationVC.(animateBackGround in _2C0BD8B863A238FA38029DB1EC386756)() -&gt; ()"
+                  moduleName = "PrayerMate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -7,7 +7,8 @@
 */
 //Loader
 "loader.messageTitle" = "تحميل";
-
+"internetFailMessage" = "من فضلك تأكد من اتصالك بالانترنت";
+"alertBtnTitle" = "تم";
 //custom Splach Screen
 "customSplash.weclomeLbl1" = "مرحبا بك";
 "customSplash.weclomeLbl2" = "Prayer Mate";

@@ -8,6 +8,8 @@
 
 //Loader
 "loader.messageTitle" = "Loading";
+"internetFailMessage" = "Please check your internet connection";
+"alertBtnTitle" = "OK";
 
 //custom Splach Screen
 "customSplash.weclomeLbl1" = "Welcome to ";

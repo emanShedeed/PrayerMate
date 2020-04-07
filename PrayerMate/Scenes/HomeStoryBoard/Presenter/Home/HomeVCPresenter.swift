@@ -103,7 +103,7 @@ class HomeVCPresenter{
             task.resume()
             
         }else{
-            self.view?.showError(error: "Please check your internet connection")
+            self.view?.showError(error: "internetFailMessage".localized)
         }
     }
     /**
