@@ -62,9 +62,9 @@ final class SplashVC: UIViewController {
                     self.present(viewController, animated: true, completion:nil)
                     
                 }else{
-                    
-                    let viewController = UIStoryboard.main.instantiateViewController(withIdentifier: "LocationVC") as! LocationVC
-                    
+        
+                    let viewController =  UIStoryboard.main.instantiateViewController(withIdentifier: "MainLocationVC") as! LocationVC
+
                     self.present(viewController, animated: true, completion:nil)
                 }
                 

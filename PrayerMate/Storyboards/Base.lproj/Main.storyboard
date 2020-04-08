@@ -274,7 +274,7 @@ sadipscing elitr, sed diam.</string>
         <!--Me-->
         <scene sceneID="Qe6-gU-gsn">
             <objects>
-                <viewController id="Nbp-ql-aIh" customClass="WelcomeViewController" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" id="Nbp-ql-aIh" customClass="WelcomeViewController" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d1A-4C-MpB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -373,7 +373,7 @@ sadipscing elitr, sed diam.</string>
                                     <constraint firstAttribute="width" constant="100" id="bfM-Dq-6yk"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="google">
-                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="googleSignInBtnPressed:" destination="hx4-Lh-Y85" eventType="touchUpInside" id="bgj-jQ-KAm"/>
@@ -421,7 +421,7 @@ sadipscing elitr, sed diam.</string>
         <!--LocationVC-->
         <scene sceneID="9hr-46-wWw">
             <objects>
-                <viewController storyboardIdentifier="LocationVC" modalPresentationStyle="fullScreen" id="Y1W-UP-bzt" userLabel="LocationVC" customClass="LocationVC" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainLocationVC" modalPresentationStyle="fullScreen" id="Y1W-UP-bzt" customClass="LocationVC" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pto-KD-oUn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -507,7 +507,7 @@ sadipscing elitr, sed diam.</string>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9p6-T6-Vc0" customClass="RoundedButton" customModule="PrayerMate" customModuleProvider="target">
-                                <rect key="frame" x="17" y="228.5" width="238" height="45"/>
+                                <rect key="frame" x="17" y="228.5" width="170" height="45"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="Bg4-uZ-oiL"/>
@@ -558,7 +558,7 @@ sadipscing elitr, sed diam.</string>
                     </view>
                     <navigationItem key="navigationItem" id="JOv-ve-h0F"/>
                     <connections>
-                        <outlet property="addressLbl" destination="zL3-et-ItW" id="Qhw-cn-uHX"/>
+                        <outlet property="addressTxt" destination="zL3-et-ItW" id="Qhw-cn-uHX"/>
                         <outlet property="animatedImage" destination="CkX-nU-9tD" id="uCz-X3-afh"/>
                         <outlet property="animatedImage2" destination="c5p-lC-Sdt" id="QCz-tc-FgE"/>
                         <outlet property="animatedImageLeading" destination="pww-wg-7rG" id="Hnv-Xd-KLB"/>
@@ -695,6 +695,6 @@ sadipscing elitr, sed diam.</string>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OyW-wZ-Ggo"/>
+        <segue reference="lIO-w6-0XR"/>
     </inferredMetricsTieBreakers>
 </document>

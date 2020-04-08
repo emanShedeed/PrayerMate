@@ -48,8 +48,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "145"
             endingLineNumber = "145"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "HomeVCPresenter"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -208,7 +208,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
                   endingLineNumber = "105"
-                  offsetFromSymbolStart = "1584">
+                  offsetFromSymbolStart = "1486">
                </Location>
                <Location
                   uuid = "C2303423-6615-419C-957B-CA53A36B07A1 - 6c4e5b5b9c7b5f73"
@@ -223,7 +223,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "106"
                   endingLineNumber = "106"
-                  offsetFromSymbolStart = "12">
+                  offsetFromSymbolStart = "8">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -375,102 +375,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E22C4572-61B6-4109-A969-B4F4A8E61A65"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC+PresenterDelegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "fetchDataSucess()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E22C4572-61B6-4109-A969-B4F4A8E61A65 - e77891a1d1044948"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PrayerMate.HomeVC.fetchDataSucess() -&gt; ()"
-                  moduleName = "PrayerMate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC+PresenterDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "424">
-               </Location>
-               <Location
-                  uuid = "E22C4572-61B6-4109-A969-B4F4A8E61A65 - 5d64ab6c1b6abb48"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in PrayerMate.HomeVC.fetchDataSucess() -&gt; ()"
-                  moduleName = "PrayerMate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC+PresenterDelegate.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "52">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "375AF295-256A-4F6D-81E5-4B8455A9B920"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A862A83E-9A7F-4991-BCDD-82EC722D718E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/HomeStoryBoard/View/Home/HomeVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "requestPrayerTimesAPI()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EF4CEEF1-1DA6-4173-ADBB-DBEF9832115F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "dataRequest(FINAL_URL:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "87B06483-C517-47B4-9BF8-CA6066E6FF45"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -481,38 +385,6 @@
             startingLineNumber = "18"
             endingLineNumber = "18"
             landmarkName = "showError(error:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5BCB7FE0-8647-4F08-8D1E-7F7C46B8B69D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "dataRequest(FINAL_URL:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F1CE1A2C-2686-4258-AC3E-2DB1BFA77C4A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/HomeStoryBoard/Presenter/Home/HomeVCPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "dataRequest(FINAL_URL:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -535,49 +407,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5EFC076F-44EB-4667-B911-F80EC92F5188"
+            uuid = "E775F0E8-F4BB-4C77-BA08-FA12C256F929"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift"
+            filePath = "PrayerMate/Scenes/MainStoryBoard/View/SplashScreen/SplashVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "animateBackGround()"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5EFC076F-44EB-4667-B911-F80EC92F5188 - 4a6d228090fd1d6f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PrayerMate.LocationVC.(animateBackGround in _2C0BD8B863A238FA38029DB1EC386756)() -&gt; ()"
-                  moduleName = "PrayerMate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "68">
-               </Location>
-               <Location
-                  uuid = "5EFC076F-44EB-4667-B911-F80EC92F5188 - 8a4c9538e186be0b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in PrayerMate.LocationVC.(animateBackGround in _2C0BD8B863A238FA38029DB1EC386756)() -&gt; ()"
-                  moduleName = "PrayerMate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92"
-                  offsetFromSymbolStart = "68">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -104,19 +104,25 @@ class Helper {
         timeformatter.locale = NSLocale(localeIdentifier: "en") as Locale?
         timeformatter.dateFormat = "hh:mm:ss a"
 
-        guard let time1 = timeformatter.date(from: time1Str),
+        guard let time1 = timeformatter.date(from:time1Str),
             let time2 = timeformatter.date(from: time2Str) else { return "" }
         
         //You can directly use from here if you have two dates
         
         let interval = time2.timeIntervalSince(time1)
-        let hour = interval / 3600;
-        let minute = interval.truncatingRemainder(dividingBy: 3600) / 60
-         let second = (interval.truncatingRemainder(dividingBy: 60))
+        var hour = interval / 3600;
+        var minute = interval.truncatingRemainder(dividingBy: 3600) / 60
+        var second = (interval.truncatingRemainder(dividingBy: 60))
+        if(time1Str.contains("PM") && time2Str.contains("AM")){
+            hour = hour + 24
+            minute = minute + 60
+            second = second + 60
+        }
         let intervalInt = Int(interval)
         let hourString = String(Int(hour)).count == 1 ? "0" + String(Int(hour)) : String(Int(hour))
         let minuteString = String(Int(minute)).count == 1 ? "0" + String(Int(minute)) : String(Int(minute))
          let secondString = String(Int(second)).count == 1 ? "0" + String(Int(second)) : String(Int(second))
+     
         return "\(hourString):\(minuteString):\(secondString)"
     }
 }

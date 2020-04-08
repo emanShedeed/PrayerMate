@@ -88,6 +88,7 @@ class HomeVCPresenter{
                         
                     }catch {
                         print("Error: \(error)")
+                         self.view?.showError(error: "\(error)")
                     }
                     //                    self.PRAYER_DATA_HANDLEROB = PrayerTimeHandler.init(_data: URLdata)
                     //                    self.PRAYER_DATA_HANDLEROB.decodeData()

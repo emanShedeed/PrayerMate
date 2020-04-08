@@ -230,8 +230,8 @@
 		BD12EB472422266800001437 /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				BD0C905624276BD2000B8EAC /* Map */,
 				BD12EB482422267F00001437 /* LocationVC.swift */,
+				BD0C905624276BD2000B8EAC /* Map */,
 			);
 			path = Location;
 			sourceTree = "<group>";

@@ -16,7 +16,7 @@ final class LocationVC: UIViewController {
     @IBOutlet weak var locateMeBtn: UIButton!
     @IBOutlet weak var animatedImage: UIImageView!
     @IBOutlet weak var animatedImage2: UIImageView!
-    @IBOutlet weak var addressLbl: RoundedTextField!
+    @IBOutlet weak var addressTxt: RoundedTextField!
     @IBOutlet weak var animatedImageLeading: NSLayoutConstraint!
     @IBOutlet weak var animatedImageTrailing: NSLayoutConstraint!
     
@@ -26,7 +26,8 @@ final class LocationVC: UIViewController {
     let locationManager=CLLocationManager()
     var addressTitle :String = ""
     var completeAddressTitle : String = ""
-    
+    var isLocationSet = false
+    var dect:[String:Double]?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -45,16 +46,17 @@ final class LocationVC: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        locateMeBtn.applyGradient(with:  [UIColor.init(rgb: 0x336666), UIColor.init(rgb: 0x339966)], gradient: .horizontal)
         animateBackGround()
     }
     override func viewDidLayoutSubviews() {
-        locateMeBtn.applyGradient(with:  [UIColor.init(rgb: 0x336666), UIColor.init(rgb: 0x339966)], gradient: .horizontal)
+//
     }
     
     @IBAction func finishBtnPressed(_ sender: Any) {
         
-        if let _ = UserDefaults.standard.value(forKey: "userLocation") as? [String:Double] , addressTitle != "" {
-            
+        if (isLocationSet && addressTitle != "" ){
+            UserDefaults.standard.set(dect, forKey: "userLocation")
             let viewController = UIStoryboard.Home.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
             
             UserDefaults.standard.set(addressTitle, forKey: "addressTitle")
@@ -125,9 +127,9 @@ extension LocationVC:CLLocationManagerDelegate{
                 //save user location in user defaults
                 let lat = l.coordinate.latitude
                 let lon = l.coordinate.longitude
-                let dect:[String:Double]=["lat":lat,"long":lon]
-                UserDefaults.standard.set(dect, forKey: "userLocation")
-                
+                 dect=["lat":lat,"long":lon]
+              //  UserDefaults.standard.set(dect, forKey: "userLocation")
+                isLocationSet = true
                 UserDefaults.standard.set(true, forKey: "isLocatedAutomatically")
                 getAddressFromLocation(lat:l.coordinate.latitude,long:l.coordinate.longitude)
             }
@@ -182,7 +184,7 @@ extension LocationVC:CLLocationManagerDelegate{
             if self.addressTitle == "" {
                 self.addressTitle = title.components(separatedBy: " ").first ?? title
             }
-            self.addressLbl.text=title
+            self.addressTxt.text=title
             self.completeAddressTitle = title
         })
     }
@@ -195,11 +197,12 @@ extension LocationVC:maplLocationView{
         //          latitude=lat
         //          longitude=lng
         if(selectedPlace != ""){
-            let dect:[String:Double]=["lat":lat,"long":lng]
-            UserDefaults.standard.set(dect, forKey: "userLocation")
+           dect=["lat":lat,"long":lng]
+          //  UserDefaults.standard.set(dect, forKey: "userLocation")
+            isLocationSet = true
             UserDefaults.standard.set(false, forKey: "isLocatedAutomatically")
         
-        addressLbl.text=selectedPlace
+        addressTxt.text=selectedPlace
         completeAddressTitle = selectedPlace
         addressTitle = cityName != "" ? cityName :  completeAddressTitle.components(separatedBy: " ").first ?? completeAddressTitle
         }
