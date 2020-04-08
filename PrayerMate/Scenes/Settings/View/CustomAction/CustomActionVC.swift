@@ -95,8 +95,14 @@ class CustomActionVC: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        doneBtn.applyGradient(with:  [UIColor.init(rgb: 0x336666), UIColor.init(rgb: 0x339966)], gradient: .horizontal)
+        super.viewDidLayoutSubviews()
+            self.doneBtn.applyGradient(with:  [UIColor.init(rgb: 0x336666), UIColor.init(rgb: 0x339966)], gradient: .horizontal)
     }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//         doneBtn.applyGradient(with:  [UIColor.init(rgb: 0x336666), UIColor.init(rgb: 0x339966)], gradient: .horizontal)
+//    }
+    
     
     @IBAction func radioButtonPressed(_ sender: UIButton) {
         if(sender.tag == 1 ){

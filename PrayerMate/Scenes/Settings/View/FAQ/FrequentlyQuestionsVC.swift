@@ -13,6 +13,8 @@ class FrequentlyQuestionsVC: BaseVC {
     //MARK:- IBOUTLET
     @IBOutlet weak var questionsTV: UITableView!
     
+   
+    @IBOutlet weak var navigationViewHeight: NSLayoutConstraint!
     //MARK:VARiIABLES
     var searchBar = UISearchBar()
     var searchbarBtnIcon = UIBarButtonItem()
@@ -70,6 +72,11 @@ class FrequentlyQuestionsVC: BaseVC {
         cellHeight = UITableView.automaticDimension
         
         questionsTV.estimatedRowHeight = 63.0;
+          if(UIScreen.main.bounds.height>667){
+            navigationViewHeight.constant = 100.0
+          }else{
+            navigationViewHeight.constant = 66.0
+        }
     }
     /**
                         Call this function for set Questions Array

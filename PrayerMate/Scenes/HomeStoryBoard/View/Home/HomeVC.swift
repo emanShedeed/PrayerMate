@@ -64,6 +64,9 @@ final class HomeVC: UIViewController {
         
         hideCalendareView.addGestureRecognizer(tap)
     }
+    override func viewDidLayoutSubviews() {
+        importBtn.addBlurEffect()
+    }
     
 //MARK:- Methods
     
@@ -86,7 +89,6 @@ final class HomeVC: UIViewController {
         countDownTimerFormatter.dateFormat = "hh:mm:ss a"
         
         prayerTimestableView.backgroundColor = UIColor.clear
-        importBtn.addBlurEffect()
         dateLBL.text = presenter.formateTodayDate()
     }
     /**
@@ -282,10 +284,12 @@ extension HomeVC{
             accurateString = accurateString.replacingOccurrences(of: "pm", with: "PM")
             accurateString = accurateString.replacingOccurrences(of: " ", with: ":00 ")
             let dateAsString = countDownTimerFormatter.string(from: Date())
-            let dateDiff = Helper.findDateDiff(time1Str: dateAsString, time2Str: accurateString)
+            let dateDiff = Helper.findDateDiff(time1Str: dateAsString, time2Str: accurateString,index:i)
             if(!dateDiff.contains("-") ){
                 nextPrayerIndex = i
                 backGroundImageView.image=backGroundImagesArray[i]
+                prayerTimesArray[nextPrayerIndex].isCellSelected = true 
+                self.prayerTimestableView.reloadData()
                 break
             }
             
@@ -316,7 +320,7 @@ extension HomeVC{
         
         DispatchQueue.main.async {
             self.selectedPrayerTimeName.text=self.presenter.prayerTimesNames[nextPrayerIndex].localized
-            
+            self.prayerTimesArray[nextPrayerIndex].isCellSelected = true
             self.runCountdown()
         }
     }

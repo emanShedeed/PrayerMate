@@ -37,7 +37,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeI-lp-Ejv">
-                                                <rect key="frame" x="17" y="24" width="24" height="24"/>
+                                                <rect key="frame" x="17" y="12" width="48" height="48"/>
                                                 <state key="normal" image="setting"/>
                                                 <connections>
                                                     <action selector="settingBtnPressed:" destination="hRK-ZJ-BbG" eventType="touchUpInside" id="oGB-nG-8Cz"/>
@@ -100,13 +100,13 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqP-3N-Cub">
-                                                                    <rect key="frame" x="228" y="9.5" width="80" height="21.5"/>
+                                                                    <rect key="frame" x="207" y="9.5" width="80" height="21.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmR-IZ-FWh">
-                                                                    <rect key="frame" x="337" y="9" width="21" height="22"/>
+                                                                    <rect key="frame" x="316" y="-1" width="42" height="42"/>
                                                                     <state key="normal" image="unselectedPrayerTime"/>
                                                                     <connections>
                                                                         <action selector="checkPrayerTimeBtnPressed:" destination="ghI-vk-eh4" eventType="touchUpInside" id="3Gl-WW-ENC"/>
@@ -223,7 +223,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
-                                                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.5" id="2mY-y4-EIa"/>
                                                                             <constraint firstAttribute="height" constant="20.5" id="yUL-hG-Jqs"/>

@@ -10,9 +10,10 @@
 "internetFailMessage" = "من فضلك تأكد من اتصالك بالانترنت";
 "alertBtnTitle" = "تم";
 //custom Splach Screen
-"customSplash.weclomeLbl1" = "مرحبا بك";
-"customSplash.weclomeLbl2" = "Prayer Mate";
-"customSplash.descriptionLbl" = "تسجيل الدخول برقم الهاتف";
+"customSplash.weclomeLbl1" = " Prayer Mate";
+"customSplash.weclomeLbl2" = "Welcome to ";
+"customSplash.descriptionLbl" = "Lorem ipsum dolor sit amet, consetetur
+ sadipscing elitr, sed diam.";
 
 //Language view controller
 "Language.title" = "اللغة";
@@ -34,7 +35,7 @@
 
 //home viewController
 "Home.timeRemainsLbl" = "الوقت المتبقي";
-"Home.importBtnTitle" = "تصدير  ";
+"Home.importBtnTitle" = "إضافة اوقات الصلاة للتقويم  ";
 "Home.fajrPrayerLblTitle" = "الفجر";
 "Home.sunrisePrayerLblTitle" = "الشروق";
 "Home.zuhrPrayerLblTitle" = "الظهر";
@@ -104,13 +105,13 @@
 
 //CalendarMethod viewController
 "CalendarMethod.titleLbl" = "التقويم";
-"CalendarMethod.egyptianGeneralAuthorityOfSurveyTitle" = "مصر";
-"CalendarMethod.universityOfIslamicSciencesShafi" = "اسلاميه مذهب الشافعي";
-"CalendarMethod.universityOfIslamicSciencesHanafi" = "اسلاميه مذهل ابو حنيفه";
-"CalendarMethod.islamicCircleOfNorthAmerica" = "شمال امريكا";
-"CalendarMethod.muslimWorldLeague" = "عالمية";
-"CalendarMethod.ummAlQura" = "ام القري";
-"CalendarMethod.fixedIsha" = "عشاء ثابت";
+"CalendarMethod.egyptianGeneralAuthorityOfSurveyTitle" = "الهيئة المصرية العامة للمساحة";
+"CalendarMethod.universityOfIslamicSciencesShafi" = "جامعة العلوم الإسلامية ، كراتشي (شافعي)";
+"CalendarMethod.universityOfIslamicSciencesHanafi" = "جامعة العلوم الإسلامية ، كراتشي (ابو حنيفه)";
+"CalendarMethod.islamicCircleOfNorthAmerica" = "الدائرة الإسلامية لأمريكا الشمالية";
+"CalendarMethod.muslimWorldLeague" = "رابطة العالم الإسلامي";
+"CalendarMethod.ummAlQura" = "أم القرى";
+"CalendarMethod.fixedIsha" = "العشاء الثابت";
 
 //FAQC viewController
 "FAQC.titleLbl" = "الأسئلة الشائعة";

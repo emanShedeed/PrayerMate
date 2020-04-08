@@ -45,6 +45,10 @@ class ImportToCalendarVC: UIViewController {
       setupGoogleConfiguration()
     
     }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+         doneBtn.applyGradient(with:  [UIColor.init(rgb: 0x006666), UIColor.init(rgb: 0x339966)], gradient: .topLeftBottomRight)
+    }
     /**
                    Call this function setup UI
                   
@@ -58,7 +62,7 @@ class ImportToCalendarVC: UIViewController {
                    */
     func setupView(){
         roundedView.roundCorners([.topLeft,.topRight], radius: 20)
-              doneBtn.applyGradient(with:  [UIColor.init(rgb: 0x006666), UIColor.init(rgb: 0x339966)], gradient: .topLeftBottomRight)
+             
     }
     /**
                      Call this function to display selected Calendars if any
