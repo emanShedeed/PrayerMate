@@ -9,21 +9,23 @@
 import Foundation
 final class SplashVCPresenter{
     /**
-       Call this function for setup User Defaults for first use of the App
-       - Parameters:
-         
-       ### Usage Example: ###
-       ````
-       SplashVCPresenter().setupUserDefaults()
-       
-       ````
-       */
+     Call this function for setup User Defaults for first use of the App
+     - Parameters:
+     
+     ### Usage Example: ###
+     ````
+     SplashVCPresenter().setupUserDefaults()
+     
+     ````
+     */
     func setupUserDefaults(){
         if  UserDefaults.standard.value(forKey: "automaticAdjustBufferToggle") == nil{
             UserDefaults.standard.set(false, forKey: "automaticAdjustBufferToggle")
         }
-        
-        
+      
+        if  UserDefaults.standard.value(forKey: "choosenCalendars") == nil{
+            UserDefaults.standard.set([0], forKey: "choosenCalendars")
+        }
         
         if  UserDefaults.standard.value(forKey: "prayerTimesBufferArray") == nil{
             

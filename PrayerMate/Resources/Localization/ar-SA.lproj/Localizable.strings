@@ -102,6 +102,7 @@
 "ImportToCalendarVC.MSSignInSuccessMessage"="تم تسجيل الدخول بنجاح لحساب ميكروسوفت";
 "ImportToCalendarVC.GoogleSignInSuccessMessage"="تم تسجيل الدخول بنجاح لحساب جوجل";
 "ImportToCalendarVC.donebtntitle" = "تأكيد";
+"ImportToCalendarVC.toastLbl" = "يجب ان تختار تقويم واحد علي الأقل.";
 
 //CalendarMethod viewController
 "CalendarMethod.titleLbl" = "التقويم";
@@ -113,25 +114,25 @@
 "CalendarMethod.ummAlQura" = "أم القرى";
 "CalendarMethod.fixedIsha" = "العشاء الثابت";
 
-//FAQC viewController
-"FAQC.titleLbl" = "الأسئلة الشائعة";
-"FAQC.firstQuestionTitle" = "ماذا عن prayer Mate؟";
-"FAQC.firstQuestionDescription" = "يقدم جوجل حزمة أدوات مكتبية إلكترونية قوية ضمن حساب غوغل الخاص بك، حيث يمكنك الوصول إلى تطبيق محرّر مستندات غوغل Google Docs، وتطبيق الملاحظات Google Keep، بالإضافة إلى خدمة تخزين سحابي مجانية عبر منصة جوجل درايف، ولا شك أن هذه مجموعة ممتازة من التطبيقات للكتابيعتبر تطبيق مستندات غوغل Google Docs ";
+//FAQs viewController
+"FAQs.titleLbl" = "الأسئلة الشائعة";
+"FAQs.firstQuestionTitle" = "ماذا عن prayer Mate؟";
+"FAQs.firstQuestionDescription" = "يقدم جوجل حزمة أدوات مكتبية إلكترونية قوية ضمن حساب غوغل الخاص بك، حيث يمكنك الوصول إلى تطبيق محرّر مستندات غوغل Google Docs، وتطبيق الملاحظات Google Keep، بالإضافة إلى خدمة تخزين سحابي مجانية عبر منصة جوجل درايف، ولا شك أن هذه مجموعة ممتازة من التطبيقات للكتابيعتبر تطبيق مستندات غوغل Google Docs ";
 
-"FAQC.secondQuestionTitle" = "ماذا عن prayer Mate؟";
-"FAQC.secondQuestionDescription" = "يقدم جوجل حزمة أدوات مكتبية إلكترونية قوية ضمن حساب غوغل الخاص بك، حيث يمكنك الوصول إلى تطبيق محرّر مستندات غوغل Google Docs، وتطبيق الملاحظات Google Keep، بالإضافة إلى خدمة تخزين سحابي مجانية عبر منصة جوجل درايف، ولا شك أن هذه مجموعة ممتازة من التطبيقات للكتابيعتبر تطبيق مستندات غوغل Google Docs ";
+"FAQs.secondQuestionTitle" = "ماذا عن prayer Mate؟";
+"FAQs.secondQuestionDescription" = "يقدم جوجل حزمة أدوات مكتبية إلكترونية قوية ضمن حساب غوغل الخاص بك، حيث يمكنك الوصول إلى تطبيق محرّر مستندات غوغل Google Docs، وتطبيق الملاحظات Google Keep، بالإضافة إلى خدمة تخزين سحابي مجانية عبر منصة جوجل درايف، ولا شك أن هذه مجموعة ممتازة من التطبيقات للكتابيعتبر تطبيق مستندات غوغل Google Docs ";
 
-"FAQC.thirdQuestionTitle" = "ماذا عن prayer Mate؟";
-"FAQC.thirdQuestionDescription" = "يقدم جوجل حزمة أدوات مكتبية إلكترونية قوية ضمن حساب غوغل الخاص بك، حيث يمكنك الوصول إلى تطبيق محرّر مستندات غوغل Google Docs، وتطبيق الملاحظات Google Keep، بالإضافة إلى خدمة تخزين سحابي مجانية عبر منصة جوجل درايف، ولا شك أن هذه مجموعة ممتازة من التطبيقات للكتابيعتبر تطبيق مستندات غوغل Google Docs ";
+"FAQs.thirdQuestionTitle" = "ماذا عن prayer Mate؟";
+"FAQs.thirdQuestionDescription" = "يقدم جوجل حزمة أدوات مكتبية إلكترونية قوية ضمن حساب غوغل الخاص بك، حيث يمكنك الوصول إلى تطبيق محرّر مستندات غوغل Google Docs، وتطبيق الملاحظات Google Keep، بالإضافة إلى خدمة تخزين سحابي مجانية عبر منصة جوجل درايف، ولا شك أن هذه مجموعة ممتازة من التطبيقات للكتابيعتبر تطبيق مستندات غوغل Google Docs ";
 
-"FAQC.fourthQuestionTitle" = "ماذا عن prayer Mate؟";
-"FAQC.fourthQuestionDescription" = "يقدم جوجل حزمة أدوات مكتبية إلكترونية قوية ضمن حساب غوغل الخاص بك، حيث يمكنك الوصول إلى تطبيق محرّر مستندات غوغل Google Docs، وتطبيق الملاحظات Google Keep، بالإضافة إلى خدمة تخزين سحابي مجانية عبر منصة جوجل درايف، ولا شك أن هذه مجموعة ممتازة من التطبيقات للكتابيعتبر تطبيق مستندات غوغل Google Docs ";
+"FAQs.fourthQuestionTitle" = "ماذا عن prayer Mate؟";
+"FAQs.fourthQuestionDescription" = "يقدم جوجل حزمة أدوات مكتبية إلكترونية قوية ضمن حساب غوغل الخاص بك، حيث يمكنك الوصول إلى تطبيق محرّر مستندات غوغل Google Docs، وتطبيق الملاحظات Google Keep، بالإضافة إلى خدمة تخزين سحابي مجانية عبر منصة جوجل درايف، ولا شك أن هذه مجموعة ممتازة من التطبيقات للكتابيعتبر تطبيق مستندات غوغل Google Docs ";
 
-"FAQC.fifthQuestionTitle" = "ماذا عن prayer Mate؟";
-"FAQC.fifthQuestionDescription" = "يقدم جوجل حزمة أدوات مكتبية إلكترونية قوية ضمن حساب غوغل الخاص بك، حيث يمكنك الوصول إلى تطبيق محرّر مستندات غوغل Google Docs، وتطبيق الملاحظات Google Keep، بالإضافة إلى خدمة تخزين سحابي مجانية عبر منصة جوجل درايف، ولا شك أن هذه مجموعة ممتازة من التطبيقات للكتابيعتبر تطبيق مستندات غوغل Google Docs ";
+"FAQs.fifthQuestionTitle" = "ماذا عن prayer Mate؟";
+"FAQs.fifthQuestionDescription" = "يقدم جوجل حزمة أدوات مكتبية إلكترونية قوية ضمن حساب غوغل الخاص بك، حيث يمكنك الوصول إلى تطبيق محرّر مستندات غوغل Google Docs، وتطبيق الملاحظات Google Keep، بالإضافة إلى خدمة تخزين سحابي مجانية عبر منصة جوجل درايف، ولا شك أن هذه مجموعة ممتازة من التطبيقات للكتابيعتبر تطبيق مستندات غوغل Google Docs ";
 
-"FAQC.sixthQuestionTitle" = "ماذا عن prayer Mate؟";
-"FAQC.sixthQuestionDescription" = "يقدم جوجل حزمة أدوات مكتبية إلكترونية قوية ضمن حساب غوغل الخاص بك، حيث يمكنك الوصول إلى تطبيق محرّر مستندات غوغل Google Docs، وتطبيق الملاحظات Google Keep، بالإضافة إلى خدمة تخزين سحابي مجانية عبر منصة جوجل درايف، ولا شك أن هذه مجموعة ممتازة من التطبيقات للكتابيعتبر تطبيق مستندات غوغل Google Docs ";
+"FAQs.sixthQuestionTitle" = "ماذا عن prayer Mate؟";
+"FAQs.sixthQuestionDescription" = "يقدم جوجل حزمة أدوات مكتبية إلكترونية قوية ضمن حساب غوغل الخاص بك، حيث يمكنك الوصول إلى تطبيق محرّر مستندات غوغل Google Docs، وتطبيق الملاحظات Google Keep، بالإضافة إلى خدمة تخزين سحابي مجانية عبر منصة جوجل درايف، ولا شك أن هذه مجموعة ممتازة من التطبيقات للكتابيعتبر تطبيق مستندات غوغل Google Docs ";
 
 //About viewController
 "About.titleLbl" = "عن Prayer Mate";

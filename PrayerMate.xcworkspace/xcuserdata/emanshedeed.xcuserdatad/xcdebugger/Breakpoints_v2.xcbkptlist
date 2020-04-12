@@ -78,9 +78,9 @@
             filePath = "PrayerMate/Scenes/Settings/View/ImportToCalendar/ImportToCalendarVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
-            landmarkName = "sign(_:dismiss:)"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "sign(_:present:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -279,32 +279,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "40FF4C94-A75A-424A-960E-30CCBB107F06"
+            uuid = "7A926C4F-185C-44E7-A83A-77345F4C8A01"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Resources/Helper.swift"
+            filePath = "PrayerMate/Scenes/MainStoryBoard/View/Location/LocationVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
-            landmarkName = "findDateDiff(time1Str:time2Str:index:)"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "getAddressFromLocation(lat:long:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5B1F9CE5-19E8-481B-ADE2-872EC4F20E39"
+            uuid = "96A71176-116E-48A4-8652-E71C3F96F793"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/MainStoryBoard/View/SplashScreen/SplashVC.swift"
+            filePath = "PrayerMate/Scenes/Settings/View/SettingsLocation/SettingsLocationVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "viewDidAppear(_:)"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "getAddressFromLocation(lat:long:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

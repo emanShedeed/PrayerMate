@@ -799,7 +799,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9N-rO-cEY">
-                                        <rect key="frame" x="17" y="69" width="380" height="31"/>
+                                        <rect key="frame" x="17" y="69" width="27" height="31"/>
                                         <attributedString key="attributedText">
                                             <fragment content="  hh">
                                                 <attributes>
@@ -815,14 +815,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0d-0f-JtU">
-                                        <rect key="frame" x="17" y="135" width="22" height="22"/>
+                                        <rect key="frame" x="17" y="135" width="44" height="44"/>
                                         <state key="normal" image="uncheckCalendar"/>
                                         <connections>
                                             <action selector="checkBtnPressed:" destination="mbf-uW-LmF" eventType="touchUpInside" id="vRn-Zq-QqS"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4R-Ua-XRL">
-                                        <rect key="frame" x="64" y="126" width="39.666666666666657" height="31"/>
+                                        <rect key="frame" x="86" y="148" width="39.666666666666657" height="31"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Label">
                                                 <attributes>
@@ -838,14 +838,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNr-lv-LKf">
-                                        <rect key="frame" x="17" y="182" width="22" height="22"/>
+                                        <rect key="frame" x="17" y="204" width="44" height="44"/>
                                         <state key="normal" image="uncheckCalendar"/>
                                         <connections>
                                             <action selector="checkBtnPressed:" destination="mbf-uW-LmF" eventType="touchUpInside" id="N0T-Mg-wqb"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsl-iT-AlP">
-                                        <rect key="frame" x="64" y="173" width="39.666666666666657" height="31"/>
+                                        <rect key="frame" x="86" y="217" width="39.666666666666657" height="31"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Label">
                                                 <attributes>
@@ -861,14 +861,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gev-KT-xgo">
-                                        <rect key="frame" x="17" y="229" width="22" height="22"/>
+                                        <rect key="frame" x="17" y="273" width="44" height="44"/>
                                         <state key="normal" image="uncheckCalendar"/>
                                         <connections>
                                             <action selector="checkBtnPressed:" destination="mbf-uW-LmF" eventType="touchUpInside" id="N2W-mZ-kYo"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtS-z8-nc8">
-                                        <rect key="frame" x="64" y="220" width="39.666666666666657" height="31"/>
+                                        <rect key="frame" x="86" y="286" width="39.666666666666657" height="31"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Label">
                                                 <attributes>
@@ -884,7 +884,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5L-Xc-OEr" customClass="RoundedButton" customModule="PrayerMate" customModuleProvider="target">
-                                        <rect key="frame" x="17" y="281" width="380" height="57"/>
+                                        <rect key="frame" x="17" y="347" width="380" height="57"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="3Bx-ew-due"/>
                                         </constraints>
@@ -924,7 +924,7 @@
                                     <constraint firstItem="X9N-rO-cEY" firstAttribute="leading" secondItem="WJn-qG-2qI" secondAttribute="leading" id="fLn-4a-IUf"/>
                                     <constraint firstItem="F5L-Xc-OEr" firstAttribute="top" secondItem="qtS-z8-nc8" secondAttribute="bottom" constant="30" id="l2f-GR-Mnp"/>
                                     <constraint firstItem="qtS-z8-nc8" firstAttribute="bottom" secondItem="Gev-KT-xgo" secondAttribute="bottom" id="l33-LN-qap"/>
-                                    <constraint firstAttribute="trailing" secondItem="X9N-rO-cEY" secondAttribute="trailing" constant="17" id="mO6-8K-phP"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="X9N-rO-cEY" secondAttribute="trailing" constant="17" id="mO6-8K-phP"/>
                                     <constraint firstItem="Gev-KT-xgo" firstAttribute="leading" secondItem="jNr-lv-LKf" secondAttribute="leading" id="n0C-0e-ODM"/>
                                     <constraint firstItem="F5L-Xc-OEr" firstAttribute="leading" secondItem="IOB-hX-P72" secondAttribute="leading" constant="17" id="rO3-7f-Oig"/>
                                     <constraint firstItem="Gev-KT-xgo" firstAttribute="top" secondItem="jNr-lv-LKf" secondAttribute="bottom" constant="25" id="tet-Lk-79l"/>
@@ -1187,7 +1187,7 @@
                                     <constraint firstAttribute="height" constant="333" id="uwh-sl-uvn"/>
                                     <constraint firstItem="5dT-6K-Wbb" firstAttribute="leading" secondItem="w83-qr-8L9" secondAttribute="trailing" constant="18" id="wEI-QA-xtq"/>
                                     <constraint firstItem="9Ar-1y-F91" firstAttribute="top" secondItem="SNk-Y8-CBa" secondAttribute="top" constant="32" id="xM3-Ih-gWl"/>
-                                    <constraint firstAttribute="trailing" secondItem="xzw-bb-Jfj" secondAttribute="trailing" constant="17" id="yJv-YP-EQd"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xzw-bb-Jfj" secondAttribute="trailing" constant="17" id="yJv-YP-EQd"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

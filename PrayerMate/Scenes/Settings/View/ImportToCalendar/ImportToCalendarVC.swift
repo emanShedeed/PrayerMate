@@ -122,29 +122,38 @@ class ImportToCalendarVC: UIViewController {
         choosenCalendars = [Int].init()
         filteredIndices = checkBtns.indices.filter {checkBtns[$0].isSelected == true}
         print(filteredIndices)
-        
-        if filteredIndices.contains(0) {
-            print("Apple Checked")
-            choosenCalendars.append(0)
-            if filteredIndices.contains(1) {
-                GIDSignIn.sharedInstance().signIn()
-            }else if filteredIndices.contains(2){
-                signInMicrosoftAccount()
-            }else {
-                UserDefaults.standard.set(choosenCalendars, forKey: "choosenCalendars")
-                toSettingelegate?.didUpdateSettings()
-                self.dismiss(animated: true, completion: nil)
-            }
+//
+//        if filteredIndices.contains(0) {
+//            print("Apple Checked")
+//            choosenCalendars.append(0)
+//            if filteredIndices.contains(1) {
+//                GIDSignIn.sharedInstance().signIn()
+//            }else if filteredIndices.contains(2){
+//                signInMicrosoftAccount()
+//            }else {
+//                UserDefaults.standard.set(choosenCalendars, forKey: "choosenCalendars")
+//                toSettingelegate?.didUpdateSettings()
+//                self.dismiss(animated: true, completion: nil)
+//            }
+//        }
+//        else if filteredIndices.contains(1) {
+//            print("Google Checked")
+//            GIDSignIn.sharedInstance().signIn()
+//        }
+//        else if filteredIndices.contains(2) {
+//            print("MS Checked")
+//            signInMicrosoftAccount()
+//        }
+//
+        if(filteredIndices.count == 0){
+            Helper.showToast(message: "ImportToCalendarVC.toastLbl".localized)
+            return
         }
-        else if filteredIndices.contains(1) {
-            print("Google Checked")
-            GIDSignIn.sharedInstance().signIn()
-        }
-        else if filteredIndices.contains(2) {
-            print("MS Checked")
-            signInMicrosoftAccount()
-        }
-        
+     
+        choosenCalendars = filteredIndices
+        UserDefaults.standard.set(choosenCalendars, forKey: "choosenCalendars")
+        toSettingelegate?.didUpdateSettings()
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func closeViewBtnPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

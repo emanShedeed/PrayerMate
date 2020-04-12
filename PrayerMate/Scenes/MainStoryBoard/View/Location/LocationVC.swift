@@ -172,7 +172,7 @@ extension LocationVC:CLLocationManagerDelegate{
                 
             }
             // city
-            if let city=placeMark?.locality{
+            if let city=placeMark?.administrativeArea {
                 title += city + " , "
                 self.addressTitle = city
             }

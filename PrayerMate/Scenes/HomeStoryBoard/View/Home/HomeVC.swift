@@ -277,14 +277,18 @@ extension HomeVC{
                        */
     func getNextPrayerTime(){
         var nextPrayerIndex = 0
-        var accurateString :String = ""
+        var IsfajrOfNextDate = false
+       var accurateString :String = ""
         for  i in 0..<presenter.todayParyerTimes.count {
-            accurateString = presenter.todayParyerTimes[i].count == 7 ? "0" + presenter.todayParyerTimes[i] : presenter.todayParyerTimes[i]
-            accurateString = accurateString.replacingOccurrences(of: "am", with: "AM")
-            accurateString = accurateString.replacingOccurrences(of: "pm", with: "PM")
-            accurateString = accurateString.replacingOccurrences(of: " ", with: ":00 ")
+         accurateString = getPrayerTimeAccurateString(index: i)
             let dateAsString = countDownTimerFormatter.string(from: Date())
-            let dateDiff = Helper.findDateDiff(time1Str: dateAsString, time2Str: accurateString,index:i)
+            if(i == 0 ){
+                let diff = Helper.findDateDiff(time1Str: getPrayerTimeAccurateString(index: 5), time2Str: dateAsString, isNextDayFajr: IsfajrOfNextDate)
+                if(!diff.contains("-") ){
+                    IsfajrOfNextDate = true
+                }
+            }
+            let dateDiff = Helper.findDateDiff(time1Str: dateAsString, time2Str: accurateString, isNextDayFajr: IsfajrOfNextDate)
             if(!dateDiff.contains("-") ){
                 nextPrayerIndex = i
                 backGroundImageView.image=backGroundImagesArray[i]
@@ -323,6 +327,14 @@ extension HomeVC{
             self.prayerTimesArray[nextPrayerIndex].isCellSelected = true
             self.runCountdown()
         }
+    }
+    func getPrayerTimeAccurateString(index : Int) -> String{
+        var accurateString :String = ""
+        accurateString = presenter.todayParyerTimes[index].count == 7 ? "0" + presenter.todayParyerTimes[index] : presenter.todayParyerTimes[index]
+                   accurateString = accurateString.replacingOccurrences(of: "am", with: "AM")
+                   accurateString = accurateString.replacingOccurrences(of: "pm", with: "PM")
+                   accurateString = accurateString.replacingOccurrences(of: " ", with: ":00 ")
+        return accurateString
     }
 }
 /// This is a class created for handling JTAppleCalendar dataSource functions

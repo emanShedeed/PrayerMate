@@ -156,7 +156,7 @@ extension MapVC: HandleMapSearch {
         if let thoroughfare = placemark.thoroughfare {
             title +=  thoroughfare + " , "
         }
-        if let city=placemark.locality{
+        if let city=placemark.administrativeArea{
             title += city + " , "
             cityName = city
         }

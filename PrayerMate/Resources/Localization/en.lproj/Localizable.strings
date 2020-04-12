@@ -107,6 +107,7 @@
 "ImportToCalendarVC.MSSignInSuccessMessage"="successfully signed in microsoft";
 "ImportToCalendarVC.GoogleSignInSuccessMessage"="successfully signed in Google";
 "ImportToCalendarVC.donebtntitle" = "Done";
+"ImportToCalendarVC.toastLbl" = "You must select at Least one calendar.";
 
 //CalendarMethod viewController
 "CalendarMethod.titleLbl" = "Calender Method";
@@ -118,25 +119,25 @@
 "CalendarMethod.ummAlQura" = "Umm Al-Qura";
 "CalendarMethod.fixedIsha" = "Fixed Isha";
 
-//FAQC viewController
-"FAQC.titleLbl" = "FAQC";
-"FAQC.firstQuestionTitle" = "What is Prayer mate?";
-"FAQC.firstQuestionDescription" = "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.";
+//FAQs viewController
+"FAQs.titleLbl" = "FAQs";
+"FAQs.firstQuestionTitle" = "What is Prayer mate?";
+"FAQs.firstQuestionDescription" = "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.";
 
-"FAQC.secondQuestionTitle" = "Why would I use prayer mate?";
-"FAQC.secondQuestionDescription" = "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.";
+"FAQs.secondQuestionTitle" = "Why would I use prayer mate?";
+"FAQs.secondQuestionDescription" = "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.";
 
-"FAQC.thirdQuestionTitle" = "How can I enable notification on the app?";
-"FAQC.thirdQuestionDescription" = "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.";
+"FAQs.thirdQuestionTitle" = "How can I enable notification on the app?";
+"FAQs.thirdQuestionDescription" = "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.";
 
-"FAQC.fourthQuestionTitle" = "How can I be safe while using prayer mate?";
-"FAQC.fourthQuestionDescription" = "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.";
+"FAQs.fourthQuestionTitle" = "How can I be safe while using prayer mate?";
+"FAQs.fourthQuestionDescription" = "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.";
 
-"FAQC.fifthQuestionTitle" = "How prayer mate works?";
-"FAQC.fifthQuestionDescription" = "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.";
+"FAQs.fifthQuestionTitle" = "How prayer mate works?";
+"FAQs.fifthQuestionDescription" = "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.";
 
-"FAQC.sixthQuestionTitle" = "Where is prayer mate available?";
-"FAQC.sixthQuestionDescription" = "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.";
+"FAQs.sixthQuestionTitle" = "Where is prayer mate available?";
+"FAQs.sixthQuestionDescription" = "Lorem ipsum dolor sit amet, consetetur sadips elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.";
 
 
 //About viewController

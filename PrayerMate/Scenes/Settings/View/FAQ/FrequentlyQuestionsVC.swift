@@ -92,21 +92,21 @@ class FrequentlyQuestionsVC: BaseVC {
                         */
     func loadArray(){
         //1
-        questionsArray.append((questionTitle: "FAQC.firstQuestionTitle".localized, questionAnswer: "FAQC.firstQuestionDescription".localized, isExpanded: false))
+        questionsArray.append((questionTitle: "FAQs.firstQuestionTitle".localized, questionAnswer: "FAQs.firstQuestionDescription".localized, isExpanded: false))
         //2
-        questionsArray.append((questionTitle: "FAQC.secondQuestionTitle".localized, questionAnswer: "FAQC.secondQuestionDescription".localized, isExpanded: false))
+        questionsArray.append((questionTitle: "FAQs.secondQuestionTitle".localized, questionAnswer: "FAQs.secondQuestionDescription".localized, isExpanded: false))
         
         //3
-        questionsArray.append((questionTitle: "FAQC.thirdQuestionTitle".localized, questionAnswer: "FAQC.thirdQuestionDescription".localized, isExpanded: false))
+        questionsArray.append((questionTitle: "FAQs.thirdQuestionTitle".localized, questionAnswer: "FAQs.thirdQuestionDescription".localized, isExpanded: false))
         
         //4
-        questionsArray.append((questionTitle: "FAQC.fourthQuestionTitle".localized, questionAnswer: "FAQC.fourthQuestionDescription".localized, isExpanded: false))
+        questionsArray.append((questionTitle: "FAQs.fourthQuestionTitle".localized, questionAnswer: "FAQs.fourthQuestionDescription".localized, isExpanded: false))
         
         //5
-        questionsArray.append((questionTitle: "FAQC.fifthQuestionTitle".localized, questionAnswer: "FAQC.fifthQuestionDescription".localized, isExpanded: false))
+        questionsArray.append((questionTitle: "FAQs.fifthQuestionTitle".localized, questionAnswer: "FAQs.fifthQuestionDescription".localized, isExpanded: false))
         
         //6
-        questionsArray.append((questionTitle: "FAQC.sixthQuestionTitle".localized, questionAnswer: "FAQC.sixthQuestionDescription".localized, isExpanded: false))
+        questionsArray.append((questionTitle: "FAQs.sixthQuestionTitle".localized, questionAnswer: "FAQs.sixthQuestionDescription".localized, isExpanded: false))
     }
     
     /**
@@ -128,7 +128,7 @@ class FrequentlyQuestionsVC: BaseVC {
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         
         let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18),NSAttributedString.Key.foregroundColor:UIColor.white]
-        titleLabel.attributedText = NSAttributedString(string: "FAQC.titleLbl".localized, attributes: attributes as [NSAttributedString.Key : Any])
+        titleLabel.attributedText = NSAttributedString(string: "FAQs.titleLbl".localized, attributes: attributes as [NSAttributedString.Key : Any])
         
         titleLabel.letterSpace=1.08
         titleLabel.sizeToFit()

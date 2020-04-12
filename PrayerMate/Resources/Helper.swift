@@ -99,7 +99,7 @@ class Helper {
         
         
     }
-    class func findDateDiff(time1Str: String, time2Str: String,index:Int) -> String {
+    class func findDateDiff(time1Str: String, time2Str: String,isNextDayFajr: Bool) -> String {
         let timeformatter = DateFormatter()
         timeformatter.locale = NSLocale(localeIdentifier: "en") as Locale?
         timeformatter.dateFormat = "hh:mm:ss a"
@@ -113,7 +113,7 @@ class Helper {
         var hour = interval / 3600;
         var minute = interval.truncatingRemainder(dividingBy: 3600) / 60
         var second = (interval.truncatingRemainder(dividingBy: 60))
-        if(index == 5){
+        if(isNextDayFajr){
             hour = hour + 24
             minute = minute + 60
             second = second + 60
