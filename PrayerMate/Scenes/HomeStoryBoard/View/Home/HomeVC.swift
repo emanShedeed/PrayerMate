@@ -41,6 +41,7 @@ final class HomeVC: UIViewController {
     ////Calendar VARiIABLES
     let calendareFormatter = DateFormatter()
     var firstDate: Date?
+     var secondDate: Date?
     var twoDatesAlreadySelected: Bool {
         return firstDate != nil && calendarView.selectedDates.count > 1
     }
@@ -186,6 +187,11 @@ final class HomeVC: UIViewController {
             settingsVC?.delegateToHome = self
             self.show(viewController, sender: self)
         }
+    }
+    
+    @IBAction func calendarDoneBtnPressed(_ sender: Any) {
+         calenadrIncludingHeaderView.isHidden = true
+        print("firstDate \(calendareFormatter.string(from:firstDate ?? Date())) secondDate \(calendareFormatter.string(from:secondDate ?? Date()))" )
     }
     
 }
@@ -341,7 +347,14 @@ extension HomeVC{
 extension HomeVC:JTACMonthViewDataSource{
     func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
         let startDate = Date()
-        let endDate = Calendar.current.date(byAdding: .year, value: 1, to: Date()) ?? Date()
+        var endDate = Date()
+        // Get the current year
+        let year = Calendar.current.component(.year, from: Date())
+        if let firstOfNextYear = Calendar.current.date(from: DateComponents(year: year + 1, month: 1, day: 1)) {
+            // Get the last day of the current year
+            endDate = Calendar.current.date(byAdding: .day, value: -1, to: firstOfNextYear) ?? Date()
+        }
+//        let endDate = Calendar.current.date(byAdding: .year, value: 1, to: Date()) ?? Date()
         let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate, numberOfRows: 5, calendar: Calendar(identifier: .gregorian), generateInDates: .off, generateOutDates: .off, firstDayOfWeek: .sunday)
         return parameters
     }
@@ -365,6 +378,7 @@ extension HomeVC:JTACMonthViewDelegate{
     func calendar(_ calendar: JTACMonthView, didSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
         if firstDate != nil {
             calendar.selectDates(from: firstDate!, to: date,  triggerSelectionDelegate: false, keepSelectionIfMultiSelectionAllowed: true)
+            secondDate = date
         } else {
             firstDate = date
         }

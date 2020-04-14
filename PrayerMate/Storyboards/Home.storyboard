@@ -170,6 +170,13 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHq-tO-m8u">
+                                                                        <rect key="frame" x="321" y="25" width="37" height="30"/>
+                                                                        <state key="normal" title="Done"/>
+                                                                        <connections>
+                                                                            <action selector="calendarDoneBtnPressed:" destination="hRK-ZJ-BbG" eventType="touchUpInside" id="NLV-3k-GSw"/>
+                                                                        </connections>
+                                                                    </button>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XOj-qD-eTQ">
                                                                         <rect key="frame" x="0.0" y="78.5" width="375" height="1"/>
                                                                         <color key="backgroundColor" red="0.87058823529411766" green="0.8901960784313725" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -241,6 +248,7 @@
                                                                 <constraints>
                                                                     <constraint firstItem="Cxb-dH-fPR" firstAttribute="bottom" secondItem="8xe-0w-ffI" secondAttribute="bottom" id="23v-s1-TKR"/>
                                                                     <constraint firstAttribute="trailing" secondItem="Cxb-dH-fPR" secondAttribute="trailing" id="3a0-JO-cbv"/>
+                                                                    <constraint firstItem="gHq-tO-m8u" firstAttribute="centerY" secondItem="e01-h6-dOV" secondAttribute="centerY" id="418-eg-s21"/>
                                                                     <constraint firstItem="8xe-0w-ffI" firstAttribute="top" secondItem="XOj-qD-eTQ" secondAttribute="bottom" id="BLl-HW-Fby"/>
                                                                     <constraint firstAttribute="trailing" secondItem="8xe-0w-ffI" secondAttribute="trailing" id="Dky-QC-2w0"/>
                                                                     <constraint firstAttribute="height" constant="100" id="EQb-uJ-mbo"/>
@@ -249,6 +257,7 @@
                                                                     <constraint firstItem="Cxb-dH-fPR" firstAttribute="leading" secondItem="uqZ-XU-A6L" secondAttribute="leading" id="b0T-hC-ih0"/>
                                                                     <constraint firstAttribute="trailing" secondItem="XOj-qD-eTQ" secondAttribute="trailing" id="fap-SU-hZZ"/>
                                                                     <constraint firstAttribute="bottom" secondItem="8xe-0w-ffI" secondAttribute="bottom" id="nap-3D-NX5"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="gHq-tO-m8u" secondAttribute="trailing" constant="17" id="oDJ-yh-MnT"/>
                                                                     <constraint firstItem="XOj-qD-eTQ" firstAttribute="leading" secondItem="uqZ-XU-A6L" secondAttribute="leading" id="q91-o2-OKW"/>
                                                                     <constraint firstItem="e01-h6-dOV" firstAttribute="centerX" secondItem="uqZ-XU-A6L" secondAttribute="centerX" id="vxa-rS-AA5"/>
                                                                 </constraints>
