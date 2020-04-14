@@ -15,4 +15,5 @@ pod 'JTAppleCalendar', '~> 8.0'
 pod 'Toaster'
 pod 'DLRadioButton'
 pod 'IQKeyboardManager'
+pod 'RealmSwift'
 end
