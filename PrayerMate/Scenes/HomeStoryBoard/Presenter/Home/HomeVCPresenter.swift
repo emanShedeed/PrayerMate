@@ -9,6 +9,8 @@
 import Foundation
 import JTAppleCalendar
 import RealmSwift
+//Apple
+import EventKit
 protocol  HomeView :class{
     func showError(error:String)
     func fetchDataSucess()
@@ -29,7 +31,6 @@ class HomeVCPresenter{
     var annualPrayerTimes : HomeAPIResponseModel?
     
     var calendarDateTitle = ""
-    
     //MARK:- Methods
     
     /**
@@ -109,17 +110,18 @@ class HomeVCPresenter{
             self.view?.showError(error: "internetFailMessage".localized)
         }
     }
-    /**
-     Call this function to formate today date to display at Home vc date label.
-     
-     ### Usage Example: ###
-     ````
-     dateLBL.text = presenter.formateTodayDate()
-     ````
-     - Parameters:
-     
-     
-     */
+    
+   /**
+       Call this function to save Data To Realm.
+       
+       ### Usage Example: ###
+       ````
+      self.presenter.saveDataToRealm()
+       ````
+       - Parameters:
+       
+       
+       */
     func saveDataToRealm(){
         var realm : Realm!
         do{
@@ -130,9 +132,10 @@ class HomeVCPresenter{
         }catch{
             print("Error intialize Realm \(error)")
         }
-        print(realm.configuration.fileURL)
+       
         annualPrayerTimes?.items?.forEach { (item) in
             let prayerTimeObject = RealmPrayerTimeModel()
+            prayerTimeObject.id = prayerTimeObject.incrementID()
             prayerTimeObject.date = item.dateFor ?? ""
             prayerTimeObject.fajr = item.fajr ?? ""
             prayerTimeObject.shurooq = item.shurooq ?? ""
@@ -147,9 +150,105 @@ class HomeVCPresenter{
             }catch{
                 print("Error intialize Real \(error)")
             }
-            
+          
         }
+           print(realm.configuration.fileURL ?? "")
     }
+
+    
+    /**
+        Call this function to import PrayerTimes To SelectedCalendars.
+        
+        ### Usage Example: ###
+        ````
+       self.presenter.importPrayerTimesToSelectedCalendars()
+        ````
+        - Parameters:
+        
+        
+        */
+    func importPrayerTimesToSelectedCalendars(importStartDateAsString:String , importEndDateAsString:String){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-mm-dd"
+        let diffInDays = Calendar.current.dateComponents([.day], from: dateFormatter.date(from: importStartDateAsString) ?? Date(), to: dateFormatter.date(from: importEndDateAsString) ?? Date()).day
+      let calendars = UserDefaults.standard.value(forKey: "choosenCalendars") as? [Int]
+        //Import To Apple Calendar
+        if(calendars?.contains(0) ?? false){
+            for index in 0...Int(diffInDays ?? 0){
+                
+            }
+        }
+     }
+    /**
+          Call this function to import PrayerTimes To Apple Calendar.
+          
+          ### Usage Example: ###
+          ````
+         self.presenter.importPrayerTimesToSelectedCalendars()
+          ````
+          - Parameters:
+          
+          
+          */
+      func addEventoToAppleCalendar(title: String, description: String?, eventStartDate: Date, eventEndDate: Date,tillDate:Date){
+            let eventStore : EKEventStore = EKEventStore()
+            
+            // 'EKEntityTypeReminder' or 'EKEntityTypeEvent'
+            
+            eventStore.requestAccess(to: .event) { (granted, error) in
+                
+                if (granted) && (error == nil) {
+                    print("granted \(granted)")
+                    print("error \(String(describing: error))")
+                    
+                    var event:EKEvent = EKEvent(eventStore: eventStore)
+    //                for index in 1...5 {
+                        event = EKEvent(eventStore: eventStore)
+                        event.title = title
+                        event.startDate = eventStartDate
+                        event.endDate = eventEndDate
+                        event.notes = description
+                        event.calendar = eventStore.defaultCalendarForNewEvents
+                  
+                    let recurrenceRule = EKRecurrenceRule.init(
+                                     recurrenceWith: .daily,
+                                     interval: 1,
+                                     daysOfTheWeek: [EKRecurrenceDayOfWeek.init(EKWeekday.saturday),EKRecurrenceDayOfWeek.init(EKWeekday.sunday),EKRecurrenceDayOfWeek.init(EKWeekday.monday),EKRecurrenceDayOfWeek.init(EKWeekday.tuesday),EKRecurrenceDayOfWeek.init(EKWeekday.wednesday),EKRecurrenceDayOfWeek.init(EKWeekday.thursday),EKRecurrenceDayOfWeek.init(EKWeekday.friday)],
+                                     daysOfTheMonth: nil,
+                                     monthsOfTheYear: nil,
+                                     weeksOfTheYear: nil,
+                                     daysOfTheYear: nil,
+                                     setPositions: nil,
+                                     end: EKRecurrenceEnd.init(end:tillDate)
+                                 )
+
+                                 event.recurrenceRules = [recurrenceRule]
+                        do {
+                            try eventStore.save(event, span: .thisEvent)
+                        } catch let error as NSError {
+                            print("failed to save event with error : \(error)")
+                        }
+                        print("Saved Event")
+    //                }
+                }
+                else{
+                    
+                    print("failed to save event with error : \(String(describing: error)) or access not granted")
+                }
+            }
+        }
+    /**
+        Call this function to formate today date to display at Home vc date label.
+        
+        ### Usage Example: ###
+        ````
+        dateLBL.text = presenter.formateTodayDate()
+        ````
+        - Parameters:
+        
+        
+        */
+    
     func formateTodayDate() -> String {
         // formate as March 23, 2018
         let formatter = DateFormatter()

@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 class RealmPrayerTimeModel: Object{
+    @objc dynamic var id = 0
     @objc dynamic var date:String = ""
     @objc dynamic var fajr:String = ""
     @objc dynamic var shurooq:String = ""
@@ -16,4 +17,14 @@ class RealmPrayerTimeModel: Object{
     @objc dynamic var asr:String = ""
     @objc dynamic var maghrib:String = ""
     @objc dynamic var isha:String = ""
+    
+    override static func primaryKey() -> String? {
+          return "id"
+      }
+//    //Incrementa ID
+func incrementID() -> Int {
+    let realm = try! Realm()
+    return (realm.objects(RealmPrayerTimeModel.self).max(ofProperty: "id") as Int? ?? 0) + 1
 }
+}
+

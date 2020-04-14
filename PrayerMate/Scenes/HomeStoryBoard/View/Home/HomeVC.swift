@@ -191,7 +191,9 @@ final class HomeVC: UIViewController {
     
     @IBAction func calendarDoneBtnPressed(_ sender: Any) {
          calenadrIncludingHeaderView.isHidden = true
-        print("firstDate \(calendareFormatter.string(from:firstDate ?? Date())) secondDate \(calendareFormatter.string(from:secondDate ?? Date()))" )
+        let formatter=DateFormatter()
+        formatter.dateFormat = "yyyy-M-d"
+        print("firstDate \(formatter.string(from:firstDate ?? Date())) secondDate \(formatter.string(from:secondDate ?? Date()))" )
     }
     
 }
