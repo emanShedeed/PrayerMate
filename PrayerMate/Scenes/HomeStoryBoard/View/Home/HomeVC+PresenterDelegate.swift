@@ -31,6 +31,7 @@ extension HomeVC:HomeView{
             self.calendarDateTitleLbl.text = self.presenter.calendarDateTitle
             self.prayerTimestableView.reloadData()
             self.getNextPrayerTime()
+            self.presenter.saveDataToRealm()
         }
         
     }

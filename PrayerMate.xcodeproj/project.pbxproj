@@ -17,10 +17,11 @@
 		BD0C905524273A8B000B8EAC /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905424273A8B000B8EAC /* UIButton+Extension.swift */; };
 		BD0C905924276C13000B8EAC /* LocationSearchtable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905724276C12000B8EAC /* LocationSearchtable.swift */; };
 		BD0C905A24276C13000B8EAC /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905824276C13000B8EAC /* MapVC.swift */; };
-		BD0C905C242787E9000B8EAC /* PrayerTimeAnnual.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905B242787E9000B8EAC /* PrayerTimeAnnual.swift */; };
+		BD0C905C242787E9000B8EAC /* HomeAPIResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905B242787E9000B8EAC /* HomeAPIResponseModel.swift */; };
 		BD12EB46242225EB00001437 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB45242225EA00001437 /* RoundedButton.swift */; };
 		BD12EB492422267F00001437 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB482422267F00001437 /* LocationVC.swift */; };
 		BD12EB4B2422290C00001437 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB4A2422290B00001437 /* RoundedTextField.swift */; };
+		BD1FC1DD24458D3200540A2B /* RealmPrayerTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FC1DC24458D3200540A2B /* RealmPrayerTimeModel.swift */; };
 		BD287BCA243B0BD100373170 /* SplashVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD287BC9243B0BD100373170 /* SplashVCPresenter.swift */; };
 		BD287BCD243B466800373170 /* SettingVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD287BCC243B466800373170 /* SettingVCPresenter.swift */; };
 		BD287BD0243B50BA00373170 /* SettingsLocationVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD287BCF243B50BA00373170 /* SettingsLocationVCPresenter.swift */; };
@@ -92,10 +93,11 @@
 		BD0C905424273A8B000B8EAC /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		BD0C905724276C12000B8EAC /* LocationSearchtable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchtable.swift; sourceTree = "<group>"; };
 		BD0C905824276C13000B8EAC /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
-		BD0C905B242787E9000B8EAC /* PrayerTimeAnnual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeAnnual.swift; sourceTree = "<group>"; };
+		BD0C905B242787E9000B8EAC /* HomeAPIResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPIResponseModel.swift; sourceTree = "<group>"; };
 		BD12EB45242225EA00001437 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		BD12EB482422267F00001437 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		BD12EB4A2422290B00001437 /* RoundedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		BD1FC1DC24458D3200540A2B /* RealmPrayerTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPrayerTimeModel.swift; sourceTree = "<group>"; };
 		BD287BC9243B0BD100373170 /* SplashVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVCPresenter.swift; sourceTree = "<group>"; };
 		BD287BCC243B466800373170 /* SettingVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVCPresenter.swift; sourceTree = "<group>"; };
 		BD287BCF243B50BA00373170 /* SettingsLocationVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLocationVCPresenter.swift; sourceTree = "<group>"; };
@@ -339,7 +341,8 @@
 			isa = PBXGroup;
 			children = (
 				BD77215724165829008A8947 /* PrayerTime.swift */,
-				BD0C905B242787E9000B8EAC /* PrayerTimeAnnual.swift */,
+				BD0C905B242787E9000B8EAC /* HomeAPIResponseModel.swift */,
+				BD1FC1DC24458D3200540A2B /* RealmPrayerTimeModel.swift */,
 				BDFFDA7D243635860066F493 /* PrayerTimeBuffer.swift */,
 				BDD1F73B2417A8EB006B87B7 /* MicrosoftCalendarSDKFiles */,
 			);
@@ -783,6 +786,7 @@
 				BDCF6A68240D13B500DD46F7 /* MainViewController.swift in Sources */,
 				BD0C905524273A8B000B8EAC /* UIButton+Extension.swift in Sources */,
 				BD287BD0243B50BA00373170 /* SettingsLocationVCPresenter.swift in Sources */,
+				BD1FC1DD24458D3200540A2B /* RealmPrayerTimeModel.swift in Sources */,
 				BD12EB492422267F00001437 /* LocationVC.swift in Sources */,
 				BD77215824165829008A8947 /* PrayerTime.swift in Sources */,
 				BDCF6A6A240D16D400DD46F7 /* WelcomeViewController.swift in Sources */,
@@ -794,7 +798,7 @@
 				BDA3F871241F7E2B00705569 /* localizedText+Extension.swift in Sources */,
 				BDD1F7492417B5C7006B87B7 /* UIImage+Extension.swift in Sources */,
 				BDD1F74B2417B5C7006B87B7 /* UIColor+Externsion.swift in Sources */,
-				BD0C905C242787E9000B8EAC /* PrayerTimeAnnual.swift in Sources */,
+				BD0C905C242787E9000B8EAC /* HomeAPIResponseModel.swift in Sources */,
 				BDFFDA7E243635870066F493 /* PrayerTimeBuffer.swift in Sources */,
 				BDCF6A6F240D257A00DD46F7 /* AuthenticationManager.swift in Sources */,
 				BDA3F868241F712400705569 /* BundleExtension.swift in Sources */,

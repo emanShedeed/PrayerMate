@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - PrayerTimes
-struct PrayerTimes: Codable {
+struct HomeAPIResponseModel: Codable {
     let items: [Item]?
     let statusValid, statusCode: Int?
     let statusDescription: String?

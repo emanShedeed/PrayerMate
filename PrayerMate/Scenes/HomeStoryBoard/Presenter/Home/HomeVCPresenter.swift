@@ -8,7 +8,7 @@
 
 import Foundation
 import JTAppleCalendar
-
+import RealmSwift
 protocol  HomeView :class{
     func showError(error:String)
     func fetchDataSucess()
@@ -26,43 +26,44 @@ class HomeVCPresenter{
     }
     let prayerTimesNames=["Home.fajrPrayerLblTitle","Home.sunrisePrayerLblTitle","Home.zuhrPrayerLblTitle","Home.asrPrayerLblTitle","Home.maghribPrayerLblTitle","Home.ishaPrayerLblTitle"]
     var todayParyerTimes = [String]()
+    var annualPrayerTimes : HomeAPIResponseModel?
     
     var calendarDateTitle = ""
     
-//MARK:- Methods
-
+    //MARK:- Methods
+    
     /**
-           Call this function to configure each cell at Home VC.
- 
-        ### Usage Example: ###
-        ````
-          presenter.ConfigureCell(cell:cell, isCellSelected: prayerTimesArray[indexPath.row].isCellSelected,isChecked:prayerTimesArray[indexPath.row].isBtnChecked,cellIndex:indexPath.row)
-        ````
+     Call this function to configure each cell at Home VC.
+     
+     ### Usage Example: ###
+     ````
+     presenter.ConfigureCell(cell:cell, isCellSelected: prayerTimesArray[indexPath.row].isCellSelected,isChecked:prayerTimesArray[indexPath.row].isBtnChecked,cellIndex:indexPath.row)
+     ````
      - Parameters:
-              - cell : the cell to be configured.
-              - isCellSelected : is this cell Selected or Not.
-              - isChecked : is the radio button at the cell is Checked or Not.
-              - cellIndex : the Cell Index At tableView.
-        */
+     - cell : the cell to be configured.
+     - isCellSelected : is this cell Selected or Not.
+     - isChecked : is the radio button at the cell is Checked or Not.
+     - cellIndex : the Cell Index At tableView.
+     */
     func ConfigureCell(cell:PrayerTimeCellView,isCellSelected:Bool,isChecked:Bool,cellIndex:Int){
         
         cell.displayData(prayerTimeName: prayerTimesNames[cellIndex].localized, prayerTime: todayParyerTimes[cellIndex] , isCellSelected:isCellSelected,isBtnChecked:isChecked,cellIndex:cellIndex)
         
     }
-
-       /**
-              Call this function to call the API.
     
-           ### Usage Example: ###
-           ````
-             presenter.dataRequest(FINAL_URL:final_url)
-           ````
-        - Parameters:
-                 - FINAL_URL : the API URL.
-               
-           */
+    /**
+     Call this function to call the API.
+     
+     ### Usage Example: ###
+     ````
+     presenter.dataRequest(FINAL_URL:final_url)
+     ````
+     - Parameters:
+     - FINAL_URL : the API URL.
+     
+     */
     func dataRequest (FINAL_URL : URL) {
-      
+        
         if Helper.isConnectedToNetwork(){
             
             let task = URLSession.shared.dataTask(with: FINAL_URL){
@@ -77,10 +78,11 @@ class HomeVCPresenter{
                 if let URLdata = data {
                     print(URLdata)
                     do{
-                        let prayerTimes = try JSONDecoder().decode(PrayerTimes.self, from: URLdata)
+                        let prayerTimes = try JSONDecoder().decode(HomeAPIResponseModel.self, from: URLdata)
                         if(prayerTimes.statusValid == 1){
                             //                            print(prayerTimes.items?[0].dateFor)
                             self.todayParyerTimes=[(prayerTimes.items?[0].fajr ?? ""),(prayerTimes.items?[0].shurooq ?? ""),(prayerTimes.items?[0].dhuhr ?? ""),(prayerTimes.items?[0].asr ?? ""),(prayerTimes.items?[0].maghrib ?? ""),(prayerTimes.items?[0].isha ?? "")]
+                            self.annualPrayerTimes = prayerTimes
                             self.view?.fetchDataSucess()
                         }else{
                             self.view?.showError(error: prayerTimes.statusError?.invalidQuery ?? "can't get data")
@@ -88,7 +90,7 @@ class HomeVCPresenter{
                         
                     }catch {
                         print("Error: \(error)")
-                         self.view?.showError(error: "\(error)")
+                        self.view?.showError(error: "\(error)")
                     }
                     //                    self.PRAYER_DATA_HANDLEROB = PrayerTimeHandler.init(_data: URLdata)
                     //                    self.PRAYER_DATA_HANDLEROB.decodeData()
@@ -108,16 +110,46 @@ class HomeVCPresenter{
         }
     }
     /**
-                 Call this function to formate today date to display at Home vc date label.
-       
-              ### Usage Example: ###
-              ````
-             dateLBL.text = presenter.formateTodayDate()
-              ````
-           - Parameters:
-                   
-                  
-              */
+     Call this function to formate today date to display at Home vc date label.
+     
+     ### Usage Example: ###
+     ````
+     dateLBL.text = presenter.formateTodayDate()
+     ````
+     - Parameters:
+     
+     
+     */
+    func saveDataToRealm(){
+        var realm : Realm!
+        do{
+            realm = try Realm()
+            try realm.write{
+                realm.deleteAll()
+            }
+        }catch{
+            print("Error intialize Realm \(error)")
+        }
+        print(realm.configuration.fileURL)
+        annualPrayerTimes?.items?.forEach { (item) in
+            let prayerTimeObject = RealmPrayerTimeModel()
+            prayerTimeObject.date = item.dateFor ?? ""
+            prayerTimeObject.fajr = item.fajr ?? ""
+            prayerTimeObject.shurooq = item.shurooq ?? ""
+            prayerTimeObject.dhuhr = item.dhuhr ?? ""
+            prayerTimeObject.asr = item.asr ?? ""
+            prayerTimeObject.maghrib = item.maghrib ?? ""
+            prayerTimeObject.isha = item.isha ?? ""
+            do{
+                try realm.write{
+                    realm.add(prayerTimeObject)
+                }
+            }catch{
+                print("Error intialize Real \(error)")
+            }
+            
+        }
+    }
     func formateTodayDate() -> String {
         // formate as March 23, 2018
         let formatter = DateFormatter()

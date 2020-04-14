@@ -66,7 +66,7 @@
                 if let URLdata = data {
                     print(URLdata)
                     do{
-                        let prayerTimes = try JSONDecoder().decode(PrayerTimes.self, from: URLdata)
+                        let prayerTimes = try JSONDecoder().decode(HomeAPIResponseModel.self, from: URLdata)
                         print(prayerTimes.items?[0].dateFor)
                       
                     }catch {
