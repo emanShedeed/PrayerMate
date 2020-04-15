@@ -32,6 +32,8 @@ extension HomeVC:HomeView{
             self.prayerTimestableView.reloadData()
             self.getNextPrayerTime()
             self.presenter.saveDataToRealm()
+            self.selectedPrayerTimesIndicies = self.prayerTimesArray.indices.filter{self.prayerTimesArray[$0].isBtnChecked == true}
+            UserDefaults.standard.set(self.selectedPrayerTimesIndicies, forKey: "selectedPrayerTimesIndicies")
         }
         
     }

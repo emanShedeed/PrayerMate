@@ -11,6 +11,9 @@ import JTAppleCalendar
 import RealmSwift
 //Apple
 import EventKit
+//outlook
+import MSGraphClientSDK
+import MSGraphClientModels
 protocol  HomeView :class{
     func showError(error:String)
     func fetchDataSucess()
@@ -51,7 +54,14 @@ class HomeVCPresenter{
         cell.displayData(prayerTimeName: prayerTimesNames[cellIndex].localized, prayerTime: todayParyerTimes[cellIndex] , isCellSelected:isCellSelected,isBtnChecked:isChecked,cellIndex:cellIndex)
         
     }
-    
+    func getPrayerTimeAccurateString(time : String) -> String{
+        var accurateString :String = ""
+        accurateString = time.count == 7 ? "0" + time : time
+        accurateString = accurateString.replacingOccurrences(of: "am", with: "AM")
+        accurateString = accurateString.replacingOccurrences(of: "pm", with: "PM")
+        accurateString = accurateString.replacingOccurrences(of: " ", with: ":00 ")
+        return accurateString
+    }
     /**
      Call this function to call the API.
      
@@ -111,17 +121,17 @@ class HomeVCPresenter{
         }
     }
     
-   /**
-       Call this function to save Data To Realm.
-       
-       ### Usage Example: ###
-       ````
-      self.presenter.saveDataToRealm()
-       ````
-       - Parameters:
-       
-       
-       */
+    /**
+     Call this function to save Data To Realm.
+     
+     ### Usage Example: ###
+     ````
+     self.presenter.saveDataToRealm()
+     ````
+     - Parameters:
+     
+     
+     */
     func saveDataToRealm(){
         var realm : Realm!
         do{
@@ -132,7 +142,7 @@ class HomeVCPresenter{
         }catch{
             print("Error intialize Realm \(error)")
         }
-       
+        
         annualPrayerTimes?.items?.forEach { (item) in
             let prayerTimeObject = RealmPrayerTimeModel()
             prayerTimeObject.id = prayerTimeObject.incrementID()
@@ -150,49 +160,130 @@ class HomeVCPresenter{
             }catch{
                 print("Error intialize Real \(error)")
             }
-          
+            
         }
-           print(realm.configuration.fileURL ?? "")
+        print(realm.configuration.fileURL ?? "")
     }
-
+    
     
     /**
-        Call this function to import PrayerTimes To SelectedCalendars.
-        
-        ### Usage Example: ###
-        ````
-       self.presenter.importPrayerTimesToSelectedCalendars()
-        ````
-        - Parameters:
-        
-        
-        */
+     Call this function to import PrayerTimes To SelectedCalendars.
+     
+     ### Usage Example: ###
+     ````
+     self.presenter.importPrayerTimesToSelectedCalendars()
+     ````
+     - Parameters:
+     
+     
+     */
     func importPrayerTimesToSelectedCalendars(importStartDateAsString:String , importEndDateAsString:String){
+        let realm = try! Realm()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-mm-dd"
+        dateFormatter.dateFormat = "yyyy-M-d"
+        dateFormatter.timeZone =  TimeZone(secondsFromGMT: 0)
         let diffInDays = Calendar.current.dateComponents([.day], from: dateFormatter.date(from: importStartDateAsString) ?? Date(), to: dateFormatter.date(from: importEndDateAsString) ?? Date()).day
-      let calendars = UserDefaults.standard.value(forKey: "choosenCalendars") as? [Int]
+        
+        // Query using an NSPredicate to get the id of object that have the same start date
+        let predicate = NSPredicate(format: "date = %@ ", importStartDateAsString)
+        let firstImportDateObjFromRealm = realm.objects(RealmPrayerTimeModel.self).filter(predicate).first
+        //        print("\(equivalentDataFromeRealm?.date) with id \(equivalentDataFromeRealm?.id)")
+        
+        
+//        // Query using an NSPredicate to get all objects betwwen start and end date
+//        var pericateToGetAllObjects:NSPredicate!
+//        var objects: Results<RealmPrayerTimeModel>?
+//        if let id = equivalentDataFromeRealm?.id{
+//            pericateToGetAllObjects = NSPredicate(format: "id BETWEEN { %ld,  %ld}",id,Int(id + (diffInDays ?? 0)))
+//            objects = realm.objects(RealmPrayerTimeModel.self).filter(pericateToGetAllObjects)
+//        }
+        
+        ///get prayer buffer
+        let fetchedData = UserDefaults.standard.data(forKey: "prayerTimesBufferArray")!
+        let  prayerTimesBufferArray = try! PropertyListDecoder().decode([PrayerTimeBuffer].self, from: fetchedData)
+        
+        
+        let calendars = UserDefaults.standard.value(forKey: "choosenCalendars") as? [Int]
+        // get selected prayer times indicies
+        let selectedPrayerTimesIndicies = UserDefaults.standard.value(forKey: "selectedPrayerTimesIndicies") as? [Int]
         //Import To Apple Calendar
-        if(calendars?.contains(0) ?? false){
-            for index in 0...Int(diffInDays ?? 0){
-                
-            }
+    
+            let calendar = Calendar.current
+            let formatter = DateFormatter()
+            formatter.dateFormat="yyyy-M-dd hh:mm:ss a"
+//            formatter.timeZone =  TimeZone(secondsFromGMT: 0)
+            //
+            var eventStartDate:Date?
+            var eventEndDate:Date?
+//            objects?.forEach({ (day) in
+        if let obj = firstImportDateObjFromRealm{
+                selectedPrayerTimesIndicies?.forEach({ (index) in
+                    
+                    let timeBefore = prayerTimesBufferArray[index].before
+                    let timeAfter =  prayerTimesBufferArray[index].after
+                    let type =  prayerTimesBufferArray[index].type
+                    ////
+                    var prayerTime = ""
+                    var prayerName = ""
+                    if(index == 0){
+                        prayerTime = obj.fajr
+                        prayerName = "Fajr"
+                    }else if(index == 1){
+                        prayerTime = obj.shurooq
+                            prayerName = "Sunrise"
+                    }else if(index == 2){
+                        prayerTime = obj.dhuhr
+                          prayerName = "Zuhr"
+                    }else if(index == 3){
+                        prayerTime = obj.asr
+                             prayerName = "Asr"
+                    }else if(index == 4){
+                        prayerTime = obj.maghrib
+                             prayerName = "Maghrib"
+                    }else if(index == 5){
+                        prayerTime = obj.isha
+                         prayerName = "ISha"
+                    }
+                    let eventDate = obj.date + " " +
+                        getPrayerTimeAccurateString(time:prayerTime)
+                    let date = formatter.date(from: eventDate) ?? Date()
+                    if(type == "M"){
+                        eventStartDate = calendar.date(byAdding: .minute, value: (-1 * timeBefore), to: date)
+                        eventEndDate = calendar.date(byAdding: .minute, value: timeAfter, to: date)
+                        print("\(eventStartDate), \(eventEndDate)")
+                    }else if(type == "H"){
+                        eventStartDate = calendar.date(byAdding: .hour, value: (-1 * timeBefore), to: date)
+                        eventEndDate = calendar.date(byAdding: .hour, value: timeAfter, to: date)
+                        print("\(eventStartDate), \(eventEndDate)")
+                    }
+                    if(calendars?.contains(0) ?? false){
+                        self.addEventoToAppleCalendar(title: "it's \(prayerName) time", description: "", eventStartDate: eventStartDate ?? Date(), eventEndDate: eventEndDate ?? Date(), tillDate: dateFormatter.date(from: importEndDateAsString) ?? Date())
+                        sleep(1)
+                        }
+                     
+                    
+                })
         }
-     }
-    /**
-          Call this function to import PrayerTimes To Apple Calendar.
-          
-          ### Usage Example: ###
-          ````
-         self.presenter.importPrayerTimesToSelectedCalendars()
-          ````
-          - Parameters:
-          
-          
-          */
-      func addEventoToAppleCalendar(title: String, description: String?, eventStartDate: Date, eventEndDate: Date,tillDate:Date){
-            let eventStore : EKEventStore = EKEventStore()
+                
+//            })
             
+
+    }
+    /**
+     Call this function to import PrayerTimes To Apple Calendar.
+     
+     ### Usage Example: ###
+     ````
+     self.presenter.importPrayerTimesToSelectedCalendars()
+     ````
+     - Parameters:
+     
+     
+     */
+     func addEventoToAppleCalendar(title: String, description: String?, eventStartDate: Date, eventEndDate: Date,tillDate:Date){
+            let eventStore : EKEventStore = EKEventStore()
+        let repeatTillDate = Calendar.current.date(byAdding: .day, value: 1, to: tillDate) ?? Date()
+
             // 'EKEntityTypeReminder' or 'EKEntityTypeEvent'
             
             eventStore.requestAccess(to: .event) { (granted, error) in
@@ -219,7 +310,7 @@ class HomeVCPresenter{
                                      weeksOfTheYear: nil,
                                      daysOfTheYear: nil,
                                      setPositions: nil,
-                                     end: EKRecurrenceEnd.init(end:tillDate)
+                                     end: EKRecurrenceEnd.init(end:repeatTillDate)
                                  )
 
                                  event.recurrenceRules = [recurrenceRule]
@@ -238,16 +329,16 @@ class HomeVCPresenter{
             }
         }
     /**
-        Call this function to formate today date to display at Home vc date label.
-        
-        ### Usage Example: ###
-        ````
-        dateLBL.text = presenter.formateTodayDate()
-        ````
-        - Parameters:
-        
-        
-        */
+     Call this function to formate today date to display at Home vc date label.
+     
+     ### Usage Example: ###
+     ````
+     dateLBL.text = presenter.formateTodayDate()
+     ````
+     - Parameters:
+     
+     
+     */
     
     func formateTodayDate() -> String {
         // formate as March 23, 2018

@@ -37,11 +37,11 @@ final class HomeVC: UIViewController {
     var presenter:HomeVCPresenter!
     var prayerTimesArray: [(isCellSelected: Bool, isBtnChecked:Bool)] = .init()
     var backGroundImagesArray = [UIImage.fajrBackGround,UIImage.sunriseBackGround,UIImage.zuhrBackGround,UIImage.asrBackGround,UIImage.maghribBackGround,UIImage.ishaBackGround]
-   
+    
     ////Calendar VARiIABLES
     let calendareFormatter = DateFormatter()
     var firstDate: Date?
-     var secondDate: Date?
+    var secondDate: Date?
     var twoDatesAlreadySelected: Bool {
         return firstDate != nil && calendarView.selectedDates.count > 1
     }
@@ -50,7 +50,8 @@ final class HomeVC: UIViewController {
         return SYActivityIndicatorView(image: UIImage.loading,title: "loader.messageTitle".localized)
     }()
     
-    
+    ///
+    var selectedPrayerTimesIndicies: [Int] = .init()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -69,19 +70,19 @@ final class HomeVC: UIViewController {
         importBtn.addBlurEffect()
     }
     
-//MARK:- Methods
+    //MARK:- Methods
     
     /**
-         Call this function for setup the View UI
-       
-           
-         ### Usage Example: ###
-         ````
-         setupView()
-         
-         ````
-       - Parameters:
-         */
+     Call this function for setup the View UI
+     
+     
+     ### Usage Example: ###
+     ````
+     setupView()
+     
+     ````
+     - Parameters:
+     */
     func setupView(){
         calendarView.semanticContentAttribute = .forceRightToLeft
         daysStackView.semanticContentAttribute = .forceLeftToRight
@@ -93,18 +94,18 @@ final class HomeVC: UIViewController {
         dateLBL.text = presenter.formateTodayDate()
     }
     /**
-          Call this function for request Prayer Times API
-       
-            
-          ### Usage Example: ###
-          ````
-          requestPrayerTimesAPI()
-          
-          ````
-        - Parameters:
-          */
+     Call this function for request Prayer Times API
+     
+     
+     ### Usage Example: ###
+     ````
+     requestPrayerTimesAPI()
+     
+     ````
+     - Parameters:
+     */
     func requestPrayerTimesAPI(){
-       let url = generateURL()
+        let url = generateURL()
         if let final_url = url{
             self.view.addSubview(activityIndicator)
             activityIndicator.center = self.view.center
@@ -113,63 +114,63 @@ final class HomeVC: UIViewController {
         }
     }
     /**
-           Call this function for generate URL required to call the API
-         
-             
-           ### Usage Example: ###
-           ````
-           generateURL()
-           
-           ````
+     Call this function for generate URL required to call the API
+     
+     
+     ### Usage Example: ###
+     ````
+     generateURL()
+     
+     ````
      - Parameters:
-        - Return Type: URL
-           */
+     - Return Type: URL
+     */
     func generateURL() -> URL?{
-     let date = generateDateStringSendToAPI()
-       addressTitle = UserDefaults.standard.value(forKey: "addressTitle") as? String ?? ""
-       let method = UserDefaults.standard.value(forKey: "calendarMethod") as! [String:String]
-       let methodID = method["methdID"] ?? "6"
-       let basicURL = "https://muslimsalat.com/" +  addressTitle + "/yearly/" + date
-       let urlString = basicURL + "/false/" + methodID + ".json?key=48ae8106ef6b55e5dac258c0c8d2e224"
-       print(urlString)
-       let ecnodingString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-       let url = URL(string: ecnodingString ?? "")
+        let date = generateDateStringSendToAPI()
+        addressTitle = UserDefaults.standard.value(forKey: "addressTitle") as? String ?? ""
+        let method = UserDefaults.standard.value(forKey: "calendarMethod") as! [String:String]
+        let methodID = method["methdID"] ?? "6"
+        let basicURL = "https://muslimsalat.com/" +  addressTitle + "/yearly/" + date
+        let urlString = basicURL + "/false/" + methodID + ".json?key=48ae8106ef6b55e5dac258c0c8d2e224"
+        print(urlString)
+        let ecnodingString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let url = URL(string: ecnodingString ?? "")
         return url
     }
     /**
-             Call this function for generate Date String required to call the API
-            
-               
-             ### Usage Example: ###
-             ````
-             generateDateStringSendToAPI()
-             
-             ````
-           - Parameters:
-            - Return Type : String
-             */
+     Call this function for generate Date String required to call the API
+     
+     
+     ### Usage Example: ###
+     ````
+     generateDateStringSendToAPI()
+     
+     ````
+     - Parameters:
+     - Return Type : String
+     */
     func generateDateStringSendToAPI() -> String{
         let dateFormatterForAPI = DateFormatter()
-             dateFormatterForAPI.locale = NSLocale(localeIdentifier: "en")  as Locale
-             dateFormatterForAPI.dateFormat = "dd-MM-YYYY"
-             let date = dateFormatterForAPI.string(from: Date())
+        dateFormatterForAPI.locale = NSLocale(localeIdentifier: "en")  as Locale
+        dateFormatterForAPI.dateFormat = "dd-MM-YYYY"
+        let date = dateFormatterForAPI.string(from: Date())
         return date
     }
     /**
-                Call this function for hide calendare view
-               
-                  
-                ### Usage Example: ###
-                ````
-               let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-                       
-               hideCalendareView.addGestureRecognizer(tap)
-                
-                ````
-            - Parameters:
-                    - sender: the tap Gesture Recognizer
-                     - Return Type :
-                */
+     Call this function for hide calendare view
+     
+     
+     ### Usage Example: ###
+     ````
+     let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+     
+     hideCalendareView.addGestureRecognizer(tap)
+     
+     ````
+     - Parameters:
+     - sender: the tap Gesture Recognizer
+     - Return Type :
+     */
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         calenadrIncludingHeaderView.isHidden = true
     }
@@ -190,10 +191,11 @@ final class HomeVC: UIViewController {
     }
     
     @IBAction func calendarDoneBtnPressed(_ sender: Any) {
-         calenadrIncludingHeaderView.isHidden = true
+        calenadrIncludingHeaderView.isHidden = true
         let formatter=DateFormatter()
         formatter.dateFormat = "yyyy-M-d"
         print("firstDate \(formatter.string(from:firstDate ?? Date())) secondDate \(formatter.string(from:secondDate ?? Date()))" )
+        presenter.importPrayerTimesToSelectedCalendars(importStartDateAsString: formatter.string(from:firstDate ?? Date()), importEndDateAsString: formatter.string(from:secondDate ?? Date()))
     }
     
 }
@@ -222,6 +224,8 @@ extension HomeVC:UITableViewDelegate,UITableViewDataSource{
         }
         prayerTimesArray[indexPath.row].isCellSelected = true
         prayerTimesArray[indexPath.row].isBtnChecked = true
+        self.selectedPrayerTimesIndicies = self.prayerTimesArray.indices.filter{self.prayerTimesArray[$0].isBtnChecked == true}
+        UserDefaults.standard.set(self.selectedPrayerTimesIndicies, forKey: "selectedPrayerTimesIndicies")
         prayerTimestableView.reloadData()
     }
     
@@ -232,17 +236,17 @@ extension HomeVC:UITableViewDelegate,UITableViewDataSource{
 /// This is a class created for handling Methods for update counter
 extension HomeVC{
     /**
-                   Call this function for update Time remain for the next Prayer Time
-                   
-                   
-                     
-                   ### Usage Example: ###
-                   ````
-                    Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-                   
-                   ````
-            - Parameters:
-                   */
+     Call this function for update Time remain for the next Prayer Time
+     
+     
+     
+     ### Usage Example: ###
+     ````
+     Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+     
+     ````
+     - Parameters:
+     */
     @objc func updateTime() {
         let dateAsString = countDownTimerFormatter.string(from: Date())
         self.countdown = Calendar.current.dateComponents([.day, .hour, .minute, .second], from: countDownTimerFormatter.date(from: dateAsString) ?? Date() , to: self.nextPrayerDateDate)
@@ -257,41 +261,41 @@ extension HomeVC{
         
     }
     /**
-                      Call this function for create timer to call updateTime function every one Second
-                      
-                      
-                        
-                      ### Usage Example: ###
-                      ````
-                       runCountdown()
-                      
-                      ````
-                - Parameters:
-                      */
+     Call this function for create timer to call updateTime function every one Second
+     
+     
+     
+     ### Usage Example: ###
+     ````
+     runCountdown()
+     
+     ````
+     - Parameters:
+     */
     func runCountdown() {
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
     /**
-                       Call this function for get Next Prayer Time
-                      
-                       
-                         
-                       ### Usage Example: ###
-                       ````
-                        getNextPrayerTime()
-                       
-                       ````
-              - Parameters:
-                       */
+     Call this function for get Next Prayer Time
+     
+     
+     
+     ### Usage Example: ###
+     ````
+     getNextPrayerTime()
+     
+     ````
+     - Parameters:
+     */
     func getNextPrayerTime(){
         var nextPrayerIndex = 0
         var IsfajrOfNextDate = false
-       var accurateString :String = ""
+        var accurateString :String = ""
         for  i in 0..<presenter.todayParyerTimes.count {
-         accurateString = getPrayerTimeAccurateString(index: i)
+            accurateString = presenter.getPrayerTimeAccurateString(time: presenter.todayParyerTimes[i])
             let dateAsString = countDownTimerFormatter.string(from: Date())
             if(i == 0 ){
-                let diff = Helper.findDateDiff(time1Str: getPrayerTimeAccurateString(index: 5), time2Str: dateAsString, isNextDayFajr: IsfajrOfNextDate)
+                let diff = Helper.findDateDiff(time1Str: presenter.getPrayerTimeAccurateString(time: presenter.todayParyerTimes[5]), time2Str: dateAsString, isNextDayFajr: IsfajrOfNextDate)
                 if(!diff.contains("-") ){
                     IsfajrOfNextDate = true
                 }
@@ -336,14 +340,7 @@ extension HomeVC{
             self.runCountdown()
         }
     }
-    func getPrayerTimeAccurateString(index : Int) -> String{
-        var accurateString :String = ""
-        accurateString = presenter.todayParyerTimes[index].count == 7 ? "0" + presenter.todayParyerTimes[index] : presenter.todayParyerTimes[index]
-                   accurateString = accurateString.replacingOccurrences(of: "am", with: "AM")
-                   accurateString = accurateString.replacingOccurrences(of: "pm", with: "PM")
-                   accurateString = accurateString.replacingOccurrences(of: " ", with: ":00 ")
-        return accurateString
-    }
+    
 }
 /// This is a class created for handling JTAppleCalendar dataSource functions
 extension HomeVC:JTACMonthViewDataSource{
@@ -356,7 +353,7 @@ extension HomeVC:JTACMonthViewDataSource{
             // Get the last day of the current year
             endDate = Calendar.current.date(byAdding: .day, value: -1, to: firstOfNextYear) ?? Date()
         }
-//        let endDate = Calendar.current.date(byAdding: .year, value: 1, to: Date()) ?? Date()
+        //        let endDate = Calendar.current.date(byAdding: .year, value: 1, to: Date()) ?? Date()
         let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate, numberOfRows: 5, calendar: Calendar(identifier: .gregorian), generateInDates: .off, generateOutDates: .off, firstDayOfWeek: .sunday)
         return parameters
     }

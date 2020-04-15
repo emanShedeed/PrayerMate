@@ -11,11 +11,13 @@ import UIKit
 extension HomeVC:PrayerTimeCellDelegate{
     func customCell(cell: PrayerTimeCell, checkedButonatCellIndex: Int) {
         prayerTimesArray[checkedButonatCellIndex].isBtnChecked = !(prayerTimesArray[checkedButonatCellIndex].isBtnChecked)
-          numberOfSelectedPrayerTimes = 0
+        numberOfSelectedPrayerTimes = 0
         prayerTimestableView.reloadData()
+        self.selectedPrayerTimesIndicies = self.prayerTimesArray.indices.filter{self.prayerTimesArray[$0].isBtnChecked == true}
+        UserDefaults.standard.set(self.selectedPrayerTimesIndicies, forKey: "selectedPrayerTimesIndicies")
         
     }
-
     
-
+    
+    
 }
