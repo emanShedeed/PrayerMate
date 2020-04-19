@@ -122,29 +122,30 @@ class ImportToCalendarVC: UIViewController {
         choosenCalendars = [Int].init()
         filteredIndices = checkBtns.indices.filter {checkBtns[$0].isSelected == true}
         print(filteredIndices)
-//
-//        if filteredIndices.contains(0) {
-//            print("Apple Checked")
-//            choosenCalendars.append(0)
-//            if filteredIndices.contains(1) {
-//                GIDSignIn.sharedInstance().signIn()
-//            }else if filteredIndices.contains(2){
-//                signInMicrosoftAccount()
-//            }else {
+
+        if filteredIndices.contains(0) {
+            print("Apple Checked")
+            choosenCalendars.append(0)
+            if filteredIndices.contains(1) {
+                GIDSignIn.sharedInstance().signIn()
+            }else if filteredIndices.contains(2){
+                signInMicrosoftAccount()
+           }
+//            else {
 //                UserDefaults.standard.set(choosenCalendars, forKey: "choosenCalendars")
 //                toSettingelegate?.didUpdateSettings()
 //                self.dismiss(animated: true, completion: nil)
 //            }
-//        }
-//        else if filteredIndices.contains(1) {
-//            print("Google Checked")
-//            GIDSignIn.sharedInstance().signIn()
-//        }
-//        else if filteredIndices.contains(2) {
-//            print("MS Checked")
-//            signInMicrosoftAccount()
-//        }
-//
+        }
+        else if filteredIndices.contains(1) {
+            print("Google Checked")
+            GIDSignIn.sharedInstance().signIn()
+        }
+        else if filteredIndices.contains(2) {
+            print("MS Checked")
+            signInMicrosoftAccount()
+        }
+
         if(filteredIndices.count == 0){
             Helper.showToast(message: "ImportToCalendarVC.toastLbl".localized)
             return
@@ -232,17 +233,53 @@ extension ImportToCalendarVC{
                 //                    self.token = token!
                 Helper.showToast(message: "ImportToCalendarVC.MSSignInSuccessMessage".localized)
                 self.choosenCalendars.append(2)
-                UserDefaults.standard.set(token!, forKey: "icrosoftAuthorization")
+                UserDefaults.standard.set(token!, forKey: "microsoftAuthorization")
                 print("MS signed in")
                 UserDefaults.standard.set(self.choosenCalendars, forKey: "choosenCalendars")
                 self.toSettingelegate?.didUpdateSettings()
                 self.dismiss(animated: true, completion: nil)
                 //                self.createEvent(token:token!)
-                //                    self.getCalenderID(token: self.token)
+                self.getCalenderID(token: token!)
                 //                    self.performSegue(withIdentifier: "userSignedIn", sender: nil)
             }
         }
     }
+      func getCalenderID(token: String) {
+            let httpClient = MSClientFactory.createHTTPClient(with: AuthenticationManager.instance)
+            let token = UserDefaults.standard.value(forKey: "microsoftAuthorization") as! String
+            let MSGraphBaseURL = "https://graph.microsoft.com/v1.0/"
+            var urlRequest: NSMutableURLRequest? = nil
+            if let url = URL(string: MSGraphBaseURL + ("/me/calendar")) {
+                urlRequest = NSMutableURLRequest(url: url)
+            }
+            urlRequest?.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            urlRequest?.httpMethod = "GET"
+            
+            var meDataTask: MSURLSessionDataTask? = nil
+            if let urlRequest = urlRequest {
+                meDataTask = httpClient?.dataTask(with: urlRequest, completionHandler: { data, response, nserror in
+                    
+                    var calendar: MSGraphCalendar? = nil
+                    do {
+                        if let data = data {
+                            calendar = try MSGraphCalendar(data: data)
+                            if let id = calendar?.entityId{
+                                //                                self.calendarId = id
+//                                self.MicrosoftCalendarID = id
+                            UserDefaults.standard.set(id, forKey: "microsoftCalendarID")
+    //                            self.createEventToMicrosoftCalendar(calendarId: id, title: "it's Fajr time", description: "", eventStartDate:"" , eventEndDate: "" , tillDate: "")
+                            }
+                        }
+                    } catch let nserror {
+                        print(nserror)
+                    }
+                    
+                })
+            }
+            
+            meDataTask?.execute()
+         
+        }
     func signOut() {
         AuthenticationManager.instance.signOut()
         //        self.performSegue(withIdentifier: "userSignedOut", sender: nil)

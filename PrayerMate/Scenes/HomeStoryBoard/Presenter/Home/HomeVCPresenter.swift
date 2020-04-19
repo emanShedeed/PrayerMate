@@ -11,7 +11,7 @@ import JTAppleCalendar
 import RealmSwift
 //Apple
 import EventKit
-//outlook
+//Microsoft
 import MSGraphClientSDK
 import MSGraphClientModels
 protocol  HomeView :class{
@@ -179,10 +179,10 @@ class HomeVCPresenter{
      */
     func importPrayerTimesToSelectedCalendars(importStartDateAsString:String , importEndDateAsString:String){
         let realm = try! Realm()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-M-d"
-        dateFormatter.timeZone =  TimeZone(secondsFromGMT: 0)
-        let diffInDays = Calendar.current.dateComponents([.day], from: dateFormatter.date(from: importStartDateAsString) ?? Date(), to: dateFormatter.date(from: importEndDateAsString) ?? Date()).day
+        let AppleDateFormatter = DateFormatter()
+        AppleDateFormatter.dateFormat = "yyyy-M-d"
+        AppleDateFormatter.timeZone =  TimeZone(secondsFromGMT: 0)
+        let diffInDays = Calendar.current.dateComponents([.day], from: AppleDateFormatter.date(from: importStartDateAsString) ?? Date(), to: AppleDateFormatter.date(from: importEndDateAsString) ?? Date()).day
         
         // Query using an NSPredicate to get the id of object that have the same start date
         let predicate = NSPredicate(format: "date = %@ ", importStartDateAsString)
@@ -209,14 +209,22 @@ class HomeVCPresenter{
         //Import To Apple Calendar
     
             let calendar = Calendar.current
-            let formatter = DateFormatter()
-            formatter.dateFormat="yyyy-M-dd hh:mm:ss a"
+            let eventFormatter = DateFormatter()
+            eventFormatter.dateFormat="yyyy-M-dd hh:mm:ss a"
+        eventFormatter.locale=NSLocale(localeIdentifier: "en") as Locale
 //            formatter.timeZone =  TimeZone(secondsFromGMT: 0)
             //
+        let MSFormatter = DateFormatter()//"2020-03-03T9:00:00"
+        MSFormatter.dateFormat="yyyy-MM-dd hh:mm a"
+        MSFormatter.locale=NSLocale(localeIdentifier: "en") as Locale
+    
+  
+        ///
             var eventStartDate:Date?
             var eventEndDate:Date?
 //            objects?.forEach({ (day) in
         if let obj = firstImportDateObjFromRealm{
+        
                 selectedPrayerTimesIndicies?.forEach({ (index) in
                     
                     let timeBefore = prayerTimesBufferArray[index].before
@@ -246,21 +254,27 @@ class HomeVCPresenter{
                     }
                     let eventDate = obj.date + " " +
                         getPrayerTimeAccurateString(time:prayerTime)
-                    let date = formatter.date(from: eventDate) ?? Date()
+                    let date = eventFormatter.date(from: eventDate) ?? Date()
                     if(type == "M"){
                         eventStartDate = calendar.date(byAdding: .minute, value: (-1 * timeBefore), to: date)
                         eventEndDate = calendar.date(byAdding: .minute, value: timeAfter, to: date)
-                        print("\(eventStartDate), \(eventEndDate)")
+//                        print("\(eventStartDate), \(eventEndDate)")
                     }else if(type == "H"){
                         eventStartDate = calendar.date(byAdding: .hour, value: (-1 * timeBefore), to: date)
                         eventEndDate = calendar.date(byAdding: .hour, value: timeAfter, to: date)
-                        print("\(eventStartDate), \(eventEndDate)")
+//                        print("\(eventStartDate), \(eventEndDate)")
                     }
                     if(calendars?.contains(0) ?? false){
-                        self.addEventoToAppleCalendar(title: "it's \(prayerName) time", description: "", eventStartDate: eventStartDate ?? Date(), eventEndDate: eventEndDate ?? Date(), tillDate: dateFormatter.date(from: importEndDateAsString) ?? Date())
+                        self.addEventListToAppleCalendar(title: "it's \(prayerName) time", description: "", eventStartDate: eventStartDate ?? Date(), eventEndDate: eventEndDate ?? Date(), tillDate: AppleDateFormatter.date(from: importEndDateAsString) ?? Date())
                         sleep(1)
                         }
-                     
+                    if(calendars?.contains(2) ?? false){
+                        
+                       let id = UserDefaults.standard.value(forKey: "microsoftCalendarID") as! String
+                        
+                        self.addEventListToMicrosoftCalendar(calendarId:id , title: "it's \(prayerName) time", description: "", eventStartDate:MSFormatter.string(from: eventStartDate ?? Date()), eventEndDate: MSFormatter.string(from: eventEndDate ?? Date()) , tillDate: importEndDateAsString)
+                        sleep(1)
+                    }
                     
                 })
         }
@@ -269,6 +283,7 @@ class HomeVCPresenter{
             
 
     }
+    //Apple
     /**
      Call this function to import PrayerTimes To Apple Calendar.
      
@@ -280,7 +295,7 @@ class HomeVCPresenter{
      
      
      */
-     func addEventoToAppleCalendar(title: String, description: String?, eventStartDate: Date, eventEndDate: Date,tillDate:Date){
+     func addEventListToAppleCalendar(title: String, description: String?, eventStartDate: Date, eventEndDate: Date,tillDate:Date){
             let eventStore : EKEventStore = EKEventStore()
         let repeatTillDate = Calendar.current.date(byAdding: .day, value: 1, to: tillDate) ?? Date()
 
@@ -328,6 +343,48 @@ class HomeVCPresenter{
                 }
             }
         }
+    ///
+  
+    func  addEventListToMicrosoftCalendar(calendarId:String,title: String, description: String?, eventStartDate: String, eventEndDate: String,tillDate:String){
+        let token = UserDefaults.standard.value(forKey: "microsoftAuthorization") as! String
+        let httpClient = MSClientFactory.createHTTPClient(with: AuthenticationManager.instance)
+        let MSGraphBaseURL = "https://graph.microsoft.com/v1.0/"
+        var urlRequest: NSMutableURLRequest? = nil
+        if let url = URL(string: MSGraphBaseURL + ("me/calendars/" + "\(calendarId)" + "/events")) {
+            urlRequest = NSMutableURLRequest(url: url)
+        }
+        urlRequest?.httpMethod = "POST"
+        urlRequest?.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest?.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        let event2 = ["subject":title , "body":["contentType" : "text"],"start" :["dateTime":eventStartDate , "timeZone":"UTC"],"end" :["dateTime":eventEndDate , "timeZone":"UTC"],"recurrence":["pattern":["type":"daily","interval":"1"],"range":["type":"endDate","startDate":eventStartDate.split(separator: " ").first ?? "","endDate":tillDate]]] as [String : Any]
+        do{
+                  let eventData = try JSONSerialization.data(withJSONObject: event2, options: .prettyPrinted)
+                  print(eventData)
+                  urlRequest?.httpBody = eventData
+              }
+              catch {
+                  print(error)
+              }
+
+       var meDataTask: MSURLSessionDataTask? = nil
+        if let urlRequest = urlRequest {
+                   meDataTask = httpClient?.dataTask(with: urlRequest, completionHandler: { data, response, nserror in
+                       //Request Completed
+                    if let returneddata = data {
+                            print(returneddata)
+                                }
+                       print("event added")
+                       
+                   })
+               }
+
+        meDataTask?.execute()
+             
+         }
+    
+    
+    
+    
     /**
      Call this function to formate today date to display at Home vc date label.
      
