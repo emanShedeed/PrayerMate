@@ -31,7 +31,18 @@ extension HomeVC:HomeView{
             self.calendarDateTitleLbl.text = self.presenter.calendarDateTitle
             self.prayerTimestableView.reloadData()
             self.getNextPrayerTime()
+            
+            let isLaunchBefore = UserDefaults.standard.value(forKey: "isLaunchedBefore") as! Bool
+            let date = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd"
+            let day = dateFormatter.string(from: date)
+            dateFormatter.dateFormat = "MM"
+            let month = dateFormatter.string(from: date)
+            if(!isLaunchBefore || ( day == "01" && month == "01" )){
+            UserDefaults.standard.set(true, forKey: "isLaunchedBefore")
             self.presenter.saveDataToRealm()
+            }
             self.selectedPrayerTimesIndicies = self.prayerTimesArray.indices.filter{self.prayerTimesArray[$0].isBtnChecked == true}
             UserDefaults.standard.set(self.selectedPrayerTimesIndicies, forKey: "selectedPrayerTimesIndicies")
         }
@@ -42,6 +53,7 @@ extension HomeVC:HomeView{
 extension HomeVC:settingsVCView{
     func APIParameterChanged() {
         requestPrayerTimesAPI()
+        self.presenter.saveDataToRealm()
     }
     
 }

@@ -16,6 +16,9 @@ import MSGraphClientSDK
 import MSGraphClientModels
 
 /// This is a class created for choosing Calenders User need to import to
+protocol UpdateCalendarNameSettingsView:class {
+    func didUpdateCalendarName()
+}
 class ImportToCalendarVC: UIViewController {
      //MARK:- IBOUTLET
     @IBOutlet weak var containerViewHeight: NSLayoutConstraint!
@@ -33,7 +36,7 @@ class ImportToCalendarVC: UIViewController {
     
     var filteredIndices = [Int].init()
     var choosenCalendars = [Int].init()
-     weak var toSettingelegate : UpdateSettingsView?
+     weak var toSettingelegate : UpdateCalendarNameSettingsView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,11 +135,11 @@ class ImportToCalendarVC: UIViewController {
             }else if filteredIndices.contains(2){
                 signInMicrosoftAccount()
            }
-//            else {
-//                UserDefaults.standard.set(choosenCalendars, forKey: "choosenCalendars")
-//                toSettingelegate?.didUpdateSettings()
-//                self.dismiss(animated: true, completion: nil)
-//            }
+            else {
+                UserDefaults.standard.set(choosenCalendars, forKey: "choosenCalendars")
+                toSettingelegate?.didUpdateCalendarName()
+                self.dismiss(animated: true, completion: nil)
+            }
         }
         else if filteredIndices.contains(1) {
             GIDSignIn.sharedInstance().signIn()
@@ -198,7 +201,7 @@ extension ImportToCalendarVC:GIDSignInDelegate{
                 signInMicrosoftAccount()
             }else{
                 UserDefaults.standard.set(choosenCalendars, forKey: "choosenCalendars")
-                toSettingelegate?.didUpdateSettings()
+                toSettingelegate?.didUpdateCalendarName()
                 self.dismiss(animated: true, completion: nil)
             }
             //            UserDefaults.standard.set(service, forKey: "googleAuthentaication")
@@ -239,7 +242,7 @@ extension ImportToCalendarVC{
                 UserDefaults.standard.set(token!, forKey: "microsoftAuthorization")
                 print("MS signed in")
                 UserDefaults.standard.set(self.choosenCalendars, forKey: "choosenCalendars")
-                self.toSettingelegate?.didUpdateSettings()
+                self.toSettingelegate?.didUpdateCalendarName()
                 self.dismiss(animated: true, completion: nil)
                 //                self.createEvent(token:token!)
                 self.getCalenderID(token: token!)

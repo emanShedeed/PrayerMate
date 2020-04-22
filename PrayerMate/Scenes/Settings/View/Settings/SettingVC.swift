@@ -20,7 +20,7 @@ class SettingVC: UIViewController {
     var delegateToHome:settingsVCView?
     
     let presenter = SettingVCPresenter()
-    
+    var isApiParameterUpdated : Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,7 +49,9 @@ class SettingVC: UIViewController {
     //MARK:- IBActions
     
     @IBAction func backButtinPressed(_ sender: UIButton) {
+         if(isApiParameterUpdated){
         delegateToHome?.APIParameterChanged()
+        }
         self.dismiss(animated: true, completion: nil)
     }
     
