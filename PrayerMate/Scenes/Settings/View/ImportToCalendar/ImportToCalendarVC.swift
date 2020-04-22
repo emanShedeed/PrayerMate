@@ -98,10 +98,11 @@ class ImportToCalendarVC: UIViewController {
     - Parameters:
         */
     func setupGoogleConfiguration(){
-        GIDSignIn.sharedInstance().clientID = "869556618508-cfup3e2uapcih6kcanfeacq7rl0hpri9.apps.googleusercontent.com"
-               GIDSignIn.sharedInstance().delegate = self
-               GIDSignIn.sharedInstance().scopes = scopes
-               GIDSignIn.sharedInstance()?.presentingViewController = self
+//         GIDSignIn.sharedInstance().clientID = "869556618508-cfup3e2uapcih6kcanfeacq7rl0hpri9.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().clientID = "869556618508-am9aqj0pn1i39qdovfumf9imfcru9j6u.apps.googleusercontent.com"
+                  GIDSignIn.sharedInstance().delegate = self
+                  GIDSignIn.sharedInstance().scopes = scopes
+                  GIDSignIn.sharedInstance()?.presentingViewController = self
     }
     
       //MARK:- IBActions
@@ -138,7 +139,6 @@ class ImportToCalendarVC: UIViewController {
 //            }
         }
         else if filteredIndices.contains(1) {
-            print("Google Checked")
             GIDSignIn.sharedInstance().signIn()
         }
         else if filteredIndices.contains(2) {
@@ -151,10 +151,10 @@ class ImportToCalendarVC: UIViewController {
             return
         }
      
-        choosenCalendars = filteredIndices
-        UserDefaults.standard.set(choosenCalendars, forKey: "choosenCalendars")
-        toSettingelegate?.didUpdateSettings()
-        self.dismiss(animated: true, completion: nil)
+//        choosenCalendars = filteredIndices
+//        UserDefaults.standard.set(choosenCalendars, forKey: "choosenCalendars")
+//        toSettingelegate?.didUpdateSettings()
+//        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func closeViewBtnPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -189,6 +189,10 @@ extension ImportToCalendarVC:GIDSignInDelegate{
                 Helper.showToast(message: "ImportToCalendarVC.GoogleSignInSuccessMessage".localized)
             choosenCalendars.append(1)
             self.service.authorizer = user.authentication.fetcherAuthorizer()
+            let googleService = GoogleService(authorizers: user.authentication.fetcherAuthorizer())
+            let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: googleService)
+             UserDefaults.standard.set(encodedData, forKey: "googleService")
+             UserDefaults.standard.synchronize()
             if filteredIndices.contains(2) {
                 print("MS Checked")
                 signInMicrosoftAccount()
@@ -202,7 +206,6 @@ extension ImportToCalendarVC:GIDSignInDelegate{
             //            addEventoToGoogleCalendar(summary: "test repetation", description: "description", startTime: "08/03/2020 15:00", endTime: "08/03/2020 17:00")
         }
     }
-    
 }
 //MARK:Microsoft SignIn
 extension ImportToCalendarVC{
