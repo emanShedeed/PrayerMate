@@ -90,6 +90,7 @@ class HomeVCPresenter{
                 }
                 if let URLerror = error {
                     print(URLerror)
+                     self.view?.showError(error:"\(URLerror))")
                 }
                 if let URLdata = data {
                     print(URLdata)
@@ -146,6 +147,7 @@ class HomeVCPresenter{
             }
         }catch{
             print("Error intialize Realm \(error)")
+            view?.showError(error: "Error intialize Realm \(error)")
         }
         
         annualPrayerTimes?.items?.forEach { (item) in
@@ -164,6 +166,7 @@ class HomeVCPresenter{
                 }
             }catch{
                 print("Error intialize Real \(error)")
+                view?.showError(error: "Error intialize Real \(error)")
             }
             
         }
@@ -460,7 +463,7 @@ extension HomeVCPresenter{
             if (granted) && (error == nil) {
                 print("granted \(granted)")
                 print("error \(String(describing: error))")
-                
+                view?.showError(error: "error \(error)")
                 var event:EKEvent = EKEvent(eventStore: eventStore)
                 //                for index in 1...5 {
                 event = EKEvent(eventStore: eventStore)
@@ -487,6 +490,7 @@ extension HomeVCPresenter{
                     try eventStore.save(event, span: .thisEvent)
                 } catch let error as NSError {
                     print("failed to save event with error : \(error)")
+                    self.view?.showError(error: "failed to save event with error : \(error)")
                 }
                 print("Saved Event")
                 //                }
@@ -494,6 +498,8 @@ extension HomeVCPresenter{
             else{
                 
                 print("failed to save event with error : \(String(describing: error)) or access not granted")
+                
+                self.view?.showError(error:"failed to save event with error : \(String(describing: error)) or access not granted")
             }
         }
     }
@@ -518,6 +524,7 @@ extension HomeVCPresenter{
         }
         catch {
             print(error)
+             self.view?.showError(error:"error")
         }
         
         var meDataTask: MSURLSessionDataTask? = nil
@@ -548,10 +555,12 @@ extension HomeVCPresenter{
         
         guard let toBuildDateStart = startDate else {
             print("Error getting start date")
+             self.view?.showError(error:"Error getting start date")
             return
         }
         guard let toBuildDateEnd = endDate else {
             print("Error getting end date")
+            self.view?.showError(error:"Error getting end date")
             return
         }
         calendarEvent.start = buildDate(date: toBuildDateStart)
@@ -567,6 +576,8 @@ extension HomeVCPresenter{
                 print("Event inserted")
             } else {
                 print(error)
+                self.view?.showError(error:"\(error)")
+                
             }
         }
     }
