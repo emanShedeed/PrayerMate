@@ -18,6 +18,8 @@
 		BD0C905924276C13000B8EAC /* LocationSearchtable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905724276C12000B8EAC /* LocationSearchtable.swift */; };
 		BD0C905A24276C13000B8EAC /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905824276C13000B8EAC /* MapVC.swift */; };
 		BD0C905C242787E9000B8EAC /* HomeAPIResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905B242787E9000B8EAC /* HomeAPIResponseModel.swift */; };
+		BD0CFB9A2451BAA900177761 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0CFB992451BAA900177761 /* LocalNotification.swift */; };
+		BD0CFB9C2451BF7100177761 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0CFB9B2451BF7100177761 /* Notification.swift */; };
 		BD12EB46242225EB00001437 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB45242225EA00001437 /* RoundedButton.swift */; };
 		BD12EB492422267F00001437 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB482422267F00001437 /* LocationVC.swift */; };
 		BD12EB4B2422290C00001437 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB4A2422290B00001437 /* RoundedTextField.swift */; };
@@ -95,6 +97,8 @@
 		BD0C905724276C12000B8EAC /* LocationSearchtable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchtable.swift; sourceTree = "<group>"; };
 		BD0C905824276C13000B8EAC /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		BD0C905B242787E9000B8EAC /* HomeAPIResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPIResponseModel.swift; sourceTree = "<group>"; };
+		BD0CFB992451BAA900177761 /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
+		BD0CFB9B2451BF7100177761 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		BD12EB45242225EA00001437 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		BD12EB482422267F00001437 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		BD12EB4A2422290B00001437 /* RoundedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
@@ -346,8 +350,10 @@
 				BD0C905B242787E9000B8EAC /* HomeAPIResponseModel.swift */,
 				BD1FC1DC24458D3200540A2B /* RealmPrayerTimeModel.swift */,
 				BDFFDA7D243635860066F493 /* PrayerTimeBuffer.swift */,
-				BDD1F73B2417A8EB006B87B7 /* MicrosoftCalendarSDKFiles */,
 				BD88917F244CB33C00C58D5E /* GoogleService.swift */,
+				BD0CFB992451BAA900177761 /* LocalNotification.swift */,
+				BD0CFB9B2451BF7100177761 /* Notification.swift */,
+				BDD1F73B2417A8EB006B87B7 /* MicrosoftCalendarSDKFiles */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -795,6 +801,7 @@
 				BD77215824165829008A8947 /* PrayerTime.swift in Sources */,
 				BDCF6A6A240D16D400DD46F7 /* WelcomeViewController.swift in Sources */,
 				BDFCFE49241E4B310033D031 /* SYActivityIndicatorView.swift in Sources */,
+				BD0CFB9C2451BF7100177761 /* Notification.swift in Sources */,
 				BD12EB4B2422290C00001437 /* RoundedTextField.swift in Sources */,
 				BDFFDA5F2432E07D0066F493 /* CalendarMethodCell.swift in Sources */,
 				BD287BCA243B0BD100373170 /* SplashVCPresenter.swift in Sources */,
@@ -807,6 +814,7 @@
 				BDCF6A6F240D257A00DD46F7 /* AuthenticationManager.swift in Sources */,
 				BDA3F868241F712400705569 /* BundleExtension.swift in Sources */,
 				BDFFDA56243252B70066F493 /* CalendarMethodVC.swift in Sources */,
+				BD0CFB9A2451BAA900177761 /* LocalNotification.swift in Sources */,
 				BD0C90502423B175000B8EAC /* HomeVC+PresenterDelegate.swift in Sources */,
 				BDFFDA622432EEDD0066F493 /* SettingCell.swift in Sources */,
 				BDFFDA702434C44A0066F493 /* ImportToCalendarVC.swift in Sources */,

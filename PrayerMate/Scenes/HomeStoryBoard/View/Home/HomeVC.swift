@@ -65,6 +65,7 @@ final class HomeVC: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         
         hideCalendareView.addGestureRecognizer(tap)
+        let obj = LocalNotification()
     }
     override func viewDidLayoutSubviews() {
         importBtn.addBlurEffect()
