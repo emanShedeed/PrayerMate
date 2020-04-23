@@ -166,10 +166,10 @@
                                                 </connections>
                                             </button>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gE9-fh-Lok" userLabel="CalenadarView">
-                                                <rect key="frame" x="0.0" y="249" width="375" height="403"/>
+                                                <rect key="frame" x="0.0" y="249" width="375" height="418"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rbw-KY-pbA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="403"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="418"/>
                                                         <subviews>
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uqZ-XU-A6L" userLabel="HeaderView">
                                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
@@ -273,7 +273,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4NI-Rb-VNC" customClass="JTACMonthView" customModule="JTAppleCalendar">
-                                                                <rect key="frame" x="0.0" y="100" width="375" height="303"/>
+                                                                <rect key="frame" x="0.0" y="100" width="375" height="318"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="UxC-hn-AOr">
                                                                     <size key="itemSize" width="40" height="30"/>
@@ -355,7 +355,7 @@
                                             <constraint firstItem="LCQ-DG-O9t" firstAttribute="leading" secondItem="mRR-5l-1BR" secondAttribute="leading" id="HIf-sN-lqn"/>
                                             <constraint firstItem="CqQ-3d-Vzw" firstAttribute="top" secondItem="upr-lQ-ecb" secondAttribute="bottom" constant="7.5" id="LhI-1M-0Ia"/>
                                             <constraint firstAttribute="trailing" secondItem="JfE-U2-afT" secondAttribute="trailing" constant="17" id="NTU-3P-zUd"/>
-                                            <constraint firstAttribute="bottom" secondItem="gE9-fh-Lok" secondAttribute="bottom" constant="15" id="QOr-Xd-fSl"/>
+                                            <constraint firstAttribute="bottom" secondItem="gE9-fh-Lok" secondAttribute="bottom" id="QOr-Xd-fSl"/>
                                             <constraint firstItem="CqQ-3d-Vzw" firstAttribute="leading" secondItem="mRR-5l-1BR" secondAttribute="leading" id="TO8-TQ-j20"/>
                                             <constraint firstItem="upr-lQ-ecb" firstAttribute="top" secondItem="fzV-wR-9is" secondAttribute="bottom" constant="10" id="Tr8-Vr-4H0"/>
                                             <constraint firstItem="gE9-fh-Lok" firstAttribute="top" secondItem="LCQ-DG-O9t" secondAttribute="bottom" id="Va1-ZO-lUf"/>
