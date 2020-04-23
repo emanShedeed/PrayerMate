@@ -22,6 +22,7 @@ import GTMSessionFetcher
 protocol  HomeView :class{
     func showError(error:String)
     func fetchDataSucess()
+    func imoprtToCalendarsSuccess()
     
 }
 protocol PrayerTimeCellView {
@@ -329,7 +330,8 @@ extension HomeVCPresenter{
         - importEndDateAsString : end date at string format.
      
      */
-    func importPrayerTimesToSelectedCalendars(importStartDateAsString:String , importEndDateAsString:String){
+    func importPrayerTimesToSelectedCalendars(importStartDateAsString:String , importEndDateAsString:String,activityIndicator:SYActivityIndicatorView){
+        UIApplication.shared.beginIgnoringInteractionEvents()
         let realm = try! Realm()
         
         //
@@ -437,6 +439,8 @@ extension HomeVCPresenter{
                 
             })
         }
+         UIApplication.shared.endIgnoringInteractionEvents()
+        view?.imoprtToCalendarsSuccess()
     }
     
     /**

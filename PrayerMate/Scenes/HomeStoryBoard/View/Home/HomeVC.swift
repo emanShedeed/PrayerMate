@@ -178,6 +178,10 @@ final class HomeVC: UIViewController {
     //MARK:- IBActions
     @IBAction func importBtnPressed(_ sender: Any) {
         if(numberOfSelectedPrayerTimes > 0){
+            firstDate = nil
+            secondDate = nil
+            calendarView.deselectAllDates()
+            calendarView.reloadData()
             calenadrIncludingHeaderView.isHidden=false
         }
     }
@@ -191,11 +195,21 @@ final class HomeVC: UIViewController {
     }
     
     @IBAction func calendarDoneBtnPressed(_ sender: Any) {
-        calenadrIncludingHeaderView.isHidden = true
+        self.view.addSubview(activityIndicator)
+        activityIndicator.center = self.view.center
         let formatter=DateFormatter()
         formatter.dateFormat = "yyyy-M-d"
-        print("firstDate \(formatter.string(from:firstDate ?? Date())) secondDate \(formatter.string(from:secondDate ?? Date()))" )
-        presenter.importPrayerTimesToSelectedCalendars(importStartDateAsString: formatter.string(from:firstDate ?? Date()), importEndDateAsString: formatter.string(from:secondDate ?? Date()))
+        
+        if(self.firstDate == nil || self.secondDate == nil ){
+            Helper.showToast(message: "Home.chooseDateRangeToasterMessage".localized)
+            return
+        }else{
+            
+            self.calenadrIncludingHeaderView.isHidden = true
+            self.activityIndicator.startAnimating()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){ self.presenter.importPrayerTimesToSelectedCalendars(importStartDateAsString: formatter.string(from:self.firstDate ?? Date()), importEndDateAsString: formatter.string(from:self.secondDate ?? Date()),activityIndicator: self.activityIndicator)
+            }
+        }
     }
     
 }

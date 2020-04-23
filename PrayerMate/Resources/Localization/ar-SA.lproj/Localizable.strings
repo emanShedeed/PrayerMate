@@ -35,6 +35,7 @@
 
 //home viewController
 "Home.timeRemainsLbl" = "الوقت المتبقي";
+"Home.exportMessageLbl" = "اختر اي الأوقات تريد إضافتها للتقويم.";
 "Home.importBtnTitle" = "إضافة اوقات الصلاة للتقويم  ";
 "Home.fajrPrayerLblTitle" = "الفجر";
 "Home.sunrisePrayerLblTitle" = "الشروق";
@@ -42,8 +43,10 @@
 "Home.asrPrayerLblTitle" = "العصر";
 "Home.maghribPrayerLblTitle" = "المغرب";
 "Home.ishaPrayerLblTitle" = "العشاء";
-"Home.PreviousDateToasterMessage"="لا يمكن اختيار تاريخ سابق لتاريخ اليوم";
-"Home.moreThanMonthToasterMessage"= "مدة تصدير مواعيد الصلاة لا يمكنها تجاوز شهر";
+"Home.PreviousDateToasterMessage"="لا يمكن اختيار تاريخ سابق لتاريخ اليوم.";
+"Home.moreThanMonthToasterMessage"= "مدة تصدير مواعيد الصلاة لا يمكنها تجاوز شهر.";
+"Home.exportedSuccessfullyToasterMessage"= "تم إضافة أوقات الصلاة بنجاح إلى التقويم.";
+"Home.chooseDateRangeToasterMessage"= "يرجى تحديد نطاق التاريخ.";
 
 //Settings viewController
 "Settings.titleLbl" = "الاعدادات";

@@ -23,7 +23,7 @@ class MapVC: UIViewController {
     var resultSearchController: UISearchController!
     
     let locationManager = CLLocationManager()
-    
+    var searchBar : UISearchBar?
     weak var delegate:maplLocationView?
     
     @IBOutlet weak var mapView: MKMapView!
@@ -50,7 +50,7 @@ class MapVC: UIViewController {
          resultSearchController.searchBar.sizeToFit()
          resultSearchController.hidesNavigationBarDuringPresentation = false*/
         ///
-        let searchBar=resultSearchController?.searchBar
+        searchBar=resultSearchController?.searchBar
         searchBar?.sizeToFit()
         searchBar?.placeholder = "map.searchBarPlaceHolderTitle".localized
         navigationItem.titleView = resultSearchController?.searchBar
@@ -170,6 +170,7 @@ extension MapVC: HandleMapSearch {
         }
         
         mapView.addAnnotation(annotation)
+        searchBar?.text = selectedPlaceTitle
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let region = MKCoordinateRegion(center: placemark.coordinate, span: span)
         mapView.setRegion(region, animated: true)
