@@ -153,7 +153,7 @@ sadipscing elitr, sed diam.</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLp-kS-VMP" userLabel="English ">
-                                <rect key="frame" x="17" y="171.5" width="110" height="42"/>
+                                <rect key="frame" x="17" y="171.5" width="89" height="22"/>
                                 <state key="normal" title="  English" image="selectedRadio">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -165,7 +165,7 @@ sadipscing elitr, sed diam.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSs-k2-hau">
-                                <rect key="frame" x="17" y="229.5" width="104" height="42"/>
+                                <rect key="frame" x="17" y="209.5" width="83" height="22"/>
                                 <state key="normal" title="  Arabic" image="unselectedRadio">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -177,7 +177,7 @@ sadipscing elitr, sed diam.</string>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="languageMan" translatesAutoresizingMaskIntoConstraints="NO" id="nAL-mp-Gyl">
-                                <rect key="frame" x="235" y="25" width="123" height="622"/>
+                                <rect key="frame" x="235" y="336" width="123" height="311"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="123" id="sji-r3-MDe"/>
                                 </constraints>
@@ -319,7 +319,7 @@ sadipscing elitr, sed diam.</string>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locationMan" translatesAutoresizingMaskIntoConstraints="NO" id="3Qb-6m-9B8">
-                                <rect key="frame" x="235" y="109" width="123" height="538"/>
+                                <rect key="frame" x="235" y="378" width="123" height="269"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="123" id="703-Wo-3Jx"/>
                                 </constraints>
@@ -344,7 +344,7 @@ sadipscing elitr, sed diam.</string>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9p6-T6-Vc0" customClass="RoundedButton" customModule="PrayerMate" customModuleProvider="target">
-                                <rect key="frame" x="17" y="228.5" width="170" height="45"/>
+                                <rect key="frame" x="17" y="228.5" width="238" height="45"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="Bg4-uZ-oiL"/>
