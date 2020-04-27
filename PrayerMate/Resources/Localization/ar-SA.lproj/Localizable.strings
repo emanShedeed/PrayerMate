@@ -149,8 +149,11 @@
 "asrPrayerNotificationTitle" = "اذان العصر";
 "maghribPrayerNotificationTitle" = "اذان المغرب";
 "ishaPrayerNotificationTitle" = "اذان العشاء";
-"openAppNotificationTitle" = "عليك فتح التطبيق اذا كنت مازلت ترغب في تلقي اشعارات اوقات الصلاة";
+"openAppNotificationTitle" = "اشعارات اوقات الصلاة";
+"openAppNotificationDescription" = "عليك فتح التطبيق اذا كنت مازلت ترغب في تلقي اشعارات اوقات الصلاة";
 "alertToEnableNotifications" = "الرجاء تمكين الإشعارات إذا كنت تريد تلقي تنبيه لأوقات الصلاة";
+"alertToRenewImportPeriodTitle" = "تجديد فترة الاستيراد";
+"alertToRenewImportPeriodDescription" = "يرجى ملاحظة أن فترة إضافة أوقات الصلاة للتقويم ستنتهي غدًا";
 //"language.description" = "اللغه";
 
 

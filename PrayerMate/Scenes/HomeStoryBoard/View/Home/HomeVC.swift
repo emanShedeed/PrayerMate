@@ -209,6 +209,8 @@ final class HomeVC: UIViewController {
             self.calenadrIncludingHeaderView.isHidden = true
             self.activityIndicator.startAnimating()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){ self.presenter.importPrayerTimesToSelectedCalendars(importStartDateAsString: formatter.string(from:self.firstDate ?? Date()), importEndDateAsString: formatter.string(from:self.secondDate ?? Date()),activityIndicator: self.activityIndicator)
+                UserDefaults.standard.set(self.secondDate, forKey: "lastImportDate")
+               let _ = LocalNotification()
             }
         }
     }

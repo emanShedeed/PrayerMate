@@ -155,8 +155,11 @@
 "asrPrayerNotificationTitle" = "it's Asr time";
 "maghribPrayerNotificationTitle" = "it's Maghrib time";
 "ishaPrayerNotificationTitle" = "it's Isha time";
-"openAppNotificationTitle" = "you have to open the app if you still need to receive prayer time notifications";
+"openAppNotificationTitle" = "prayer times notifications";
+"openAppNotificationDescription" ="you have to open the app if you still need to receive prayer time notifications";
 "alertToEnableNotifications" = "please enable local Notification if you want to receive prayer times alert";
+"alertToRenewImportPeriodTitle" = "Renew Import Period";
+"alertToRenewImportPeriodDescription" = "please notice that the import period will end tommorow at one of your calendar";
 //"language.description" = "اللغه";
 
 "language" = "English";

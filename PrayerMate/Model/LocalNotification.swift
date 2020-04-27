@@ -24,14 +24,20 @@ class LocalNotification {
             var  notificationDate : Date? = Date()
             objects.forEach { (day) in
                 notificationDate = formatter.date(from: day.date)
-                notificationArray.append(Notification(name: "fajrPrayerNotificationTitle".localized, time: day.fajr, date: notificationDate))
-                notificationArray.append(Notification(name: "sunrisePrayerNotificationTitle".localized, time: day.shurooq, date: notificationDate))
-                notificationArray.append(Notification(name: "zuhrPrayerNotificationTitle".localized, time: day.dhuhr, date: notificationDate))
-                notificationArray.append(Notification(name: "asrPrayerNotificationTitle".localized, time: day.asr, date: notificationDate))
-                notificationArray.append(Notification(name: "maghribPrayerNotificationTitle".localized, time: day.maghrib, date: notificationDate))
-                notificationArray.append(Notification(name: "ishaPrayerNotificationTitle".localized, time: day.isha, date: notificationDate))
+                notificationArray.append(Notification(title: "fajrPrayerNotificationTitle".localized, description: "", time: day.fajr, date: notificationDate))
+                notificationArray.append(Notification(title: "sunrisePrayerNotificationTitle".localized, description: "", time: day.shurooq, date: notificationDate))
+                notificationArray.append(Notification(title: "zuhrPrayerNotificationTitle".localized, description: "", time: day.dhuhr, date: notificationDate))
+                notificationArray.append(Notification(title: "asrPrayerNotificationTitle".localized, description: "", time: day.asr, date: notificationDate))
+                notificationArray.append(Notification(title: "maghribPrayerNotificationTitle".localized, description: "", time: day.maghrib, date: notificationDate))
+                notificationArray.append(Notification(title: "ishaPrayerNotificationTitle".localized, description: "", time: day.isha, date: notificationDate))
             }
-            notificationArray.append(Notification(name: "openAppNotificationTitle".localized, time: objects[9].isha, date: notificationDate))
+            notificationArray.append(Notification(title: "openAppNotificationTitle".localized, description: "openAppNotificationDescription".localized, time: objects[9].isha, date: notificationDate))
+            
+            //The app will remind the user a day before the selected duration ends.
+            if let lastImportDate = UserDefaults.standard.value(forKey: "lastImportDate") as? Date{
+                let dateBefore = Calendar.current.date(byAdding: .day, value: -1, to: lastImportDate)
+                notificationArray.append(Notification(title: "alertToRenewImportPeriodTitle".localized, description: "alertToRenewImportPeriodDescription".localized, time:"2:00 pm" , date: dateBefore))
+            }
            registerLocal()
         }
     }
@@ -53,8 +59,8 @@ class LocalNotification {
         notificationArray.forEach { (notification) in
    
         let content = UNMutableNotificationContent()
-            content.title = notification.name
-//        content.body = "The early bird catches the worm, but the second mouse gets the cheese."
+            content.title = notification.title
+            content.body = notification.description
 //        content.categoryIdentifier = "alarm"
 //        content.userInfo = ["customData": "fizzbuzz"]
         content.sound = UNNotificationSound.default
