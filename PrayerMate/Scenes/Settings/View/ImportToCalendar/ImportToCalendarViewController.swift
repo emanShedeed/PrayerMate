@@ -185,7 +185,7 @@ extension ImportToCalendarViewController:GIDSignInDelegate{
               withError error: Error!) {
         if let error = error {
             //            showAlert(title: "Authentication Error", message: )
-            Helper.showAlert(title: "Authentication Error", message: error.localizedDescription, VC: self)
+            Helper.showAlert(title: "ImportToCalendarVC.SigningInproblemAlertTitle".localized, message:"ImportToCalendarVC.GoogleSigningInproblemAlertDesc".localized, VC: self)
             //            self.service.authorizer = nil
         } else {
             print("signed into google")
@@ -225,8 +225,8 @@ extension ImportToCalendarViewController{
                 
                 guard let _ = token, error == nil else {
                     // Show the error and stay on the sign-in page
-                    let alert = UIAlertController(title: "Error signing in",
-                                                  message: error.debugDescription,
+                    let alert = UIAlertController(title: "ImportToCalendarVC.SigningInproblemAlertTitle".localized,
+                                                  message: "ImportToCalendarVC.MicrosoftSigningInproblemAlertDesc".localized ,
                                                   preferredStyle: .alert)
                     
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

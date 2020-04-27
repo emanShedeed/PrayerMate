@@ -102,10 +102,13 @@
 "ImportToCalendarVC.appleLbl" = "تقويم ابل";
 "ImportToCalendarVC.googleLbl" = "تقويم جوجل";
 "ImportToCalendarVC.MSLbl" = "تقويم مايكروسوفت";
-"ImportToCalendarVC.MSSignInSuccessMessage"="تم تسجيل الدخول بنجاح لحساب ميكروسوفت";
+"ImportToCalendarVC.MSSignInSuccessMessage"="تم تسجيل الدخول بنجاح لحساب مايكروسوفت";
 "ImportToCalendarVC.GoogleSignInSuccessMessage"="تم تسجيل الدخول بنجاح لحساب جوجل";
 "ImportToCalendarVC.donebtntitle" = "تأكيد";
 "ImportToCalendarVC.toastLbl" = "يجب ان تختار تقويم واحد علي الأقل.";
+"ImportToCalendarVC.SigningInproblemAlertTitle" = "خطأ في تسجيل الدخول.";
+"ImportToCalendarVC.MicrosoftSigningInproblemAlertDesc" = "الغى المستخدم متابعة تسجيل الدخول لحساب مايكروسوفت";
+"ImportToCalendarVC.GoogleSigningInproblemAlertDesc" = "الغى المستخدم متابعة تسجيل الدخول لحساب جوجل";
 
 //CalendarMethod viewController
 "CalendarMethod.titleLbl" = "التقويم";

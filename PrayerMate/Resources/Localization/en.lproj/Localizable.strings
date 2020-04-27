@@ -112,6 +112,10 @@
 "ImportToCalendarVC.GoogleSignInSuccessMessage"="successfully signed in Google";
 "ImportToCalendarVC.donebtntitle" = "Done";
 "ImportToCalendarVC.toastLbl" = "You must select at Least one calendar.";
+"ImportToCalendarVC.SigningInproblemAlertTitle" = "Error signing in";
+"ImportToCalendarVC.MicrosoftSigningInproblemAlertDesc" = "the user canceled the sign-in flow to Microsoft account.";
+
+"ImportToCalendarVC.GoogleSigningInproblemAlertDesc" = "the user canceled the sign-in flow to Google account.";
 
 //CalendarMethod viewController
 "CalendarMethod.titleLbl" = "Calender Method";
