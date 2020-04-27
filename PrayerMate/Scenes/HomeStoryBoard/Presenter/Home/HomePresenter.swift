@@ -19,22 +19,22 @@ import GoogleAPIClientForREST
 import GoogleSignIn
 import GTMSessionFetcher
 
-protocol  HomeView :class{
+protocol  HomeViewControllerProtocol :class{
     func showError(error:String)
     func fetchDataSucess()
     func imoprtToCalendarsSuccess()
     
 }
-protocol PrayerTimeCellView {
+protocol UpdatePrayerTimeCellProtcol {
     func displayData(prayerTimeName: String, prayerTime: String, isCellSelected: Bool,isBtnChecked:Bool,cellIndex:Int)
 }
 /// This is a presenter class created for handling HomeVC Functions.
-class HomeVCPresenter{
+class HomePresenter{
     
     //MARK:VARiIABLES
     
-    private weak var view : HomeView?
-    init(view:HomeView) {
+    private weak var view : HomeViewControllerProtocol?
+    init(view:HomeViewControllerProtocol) {
         self.view=view
     }
     let prayerTimesNames=["Home.fajrPrayerLblTitle","Home.sunrisePrayerLblTitle","Home.zuhrPrayerLblTitle","Home.asrPrayerLblTitle","Home.maghribPrayerLblTitle","Home.ishaPrayerLblTitle"]
@@ -57,7 +57,7 @@ class HomeVCPresenter{
      - isChecked : is the radio button at the cell is Checked or Not.
      - cellIndex : the Cell Index At tableView.
      */
-    func ConfigureCell(cell:PrayerTimeCellView,isCellSelected:Bool,isChecked:Bool,cellIndex:Int){
+    func ConfigureCell(cell:UpdatePrayerTimeCellProtcol,isCellSelected:Bool,isChecked:Bool,cellIndex:Int){
         
         cell.displayData(prayerTimeName: prayerTimesNames[cellIndex].localized, prayerTime: todayParyerTimes[cellIndex] , isCellSelected:isCellSelected,isBtnChecked:isChecked,cellIndex:cellIndex)
         
@@ -227,7 +227,7 @@ class HomeVCPresenter{
     }
 }
 /// This is a presenter class created for handling HomeVC JTAppleCalendar helper Functions.
-extension HomeVCPresenter{
+extension HomePresenter{
     
     func setupCalendarView(calendarView:JTACMonthView,calenadrIncludingHeaderView:UIView,calendareFormatter:DateFormatter){
         //
@@ -317,7 +317,7 @@ extension HomeVCPresenter{
     }
 }
 /// This is a presenter class created for handling importing prayerTimes To different Calendars
-extension HomeVCPresenter{
+extension HomePresenter{
     
     /**
      Call this function to import PrayerTimes To SelectedCalendars.

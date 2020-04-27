@@ -8,7 +8,7 @@
 
 import UIKit
 /// This is a class created for handling App Settings
-class SettingVC: UIViewController {
+class SettingViewController: UIViewController {
     
     //MARK:- IBOUTLET
     @IBOutlet var settingsTableView: UITableView!
@@ -19,7 +19,7 @@ class SettingVC: UIViewController {
     
     var delegateToHome:settingsVCView?
     
-    let presenter = SettingVCPresenter()
+    let presenter = SettingPresenter()
     var isApiParameterUpdated : Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +57,7 @@ class SettingVC: UIViewController {
     
 }
 /// This is a class created for handling table View delegate and data source delegate functions
-extension SettingVC:UITableViewDataSource,UITableViewDelegate{
+extension SettingViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return SettingsArray.count
     }
@@ -108,15 +108,15 @@ extension SettingVC:UITableViewDataSource,UITableViewDelegate{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "goToCalendarMethod"){
-            let dVC=segue.destination as! CalendarMethodVC
+            let dVC=segue.destination as! CalendarMethodViewController
             dVC.toSettingelegate=self
         }
         if(segue.identifier == "goToSettingsLocationVC"){
-            let dVC=segue.destination as! SettingsLocationVC
+            let dVC=segue.destination as! SettingsLocationViewController
             dVC.toSettingelegate=self
         }
         if(segue.identifier == "goToImportToCalendarVC"){
-            let dVC=segue.destination as! ImportToCalendarVC
+            let dVC=segue.destination as! ImportToCalendarViewController
             dVC.toSettingelegate=self
         }
     }

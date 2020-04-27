@@ -7,7 +7,7 @@
 //
 
 import CoreLocation
-class SettingsLocationVCPresenter{
+class SettingsLocationPresenter{
     func detectlocationServicesEnabled() -> Bool{
            var haveAccess = false
            if CLLocationManager.locationServicesEnabled() {

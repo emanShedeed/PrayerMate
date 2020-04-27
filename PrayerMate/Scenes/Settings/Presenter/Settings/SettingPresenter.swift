@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class SettingVCPresenter{
+class SettingPresenter{
     /**
                Call this function for read default Values from User Defaults
               

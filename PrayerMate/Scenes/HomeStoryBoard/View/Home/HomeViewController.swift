@@ -9,7 +9,7 @@
 import UIKit
 import JTAppleCalendar
 /// This is a class created for handling the Home View of the app , displaying Prayer Times and Import to calendar Function
-final class HomeVC: UIViewController {
+final class HomeViewController: UIViewController {
     
     //MARK:- IBOUTLET
     
@@ -34,7 +34,7 @@ final class HomeVC: UIViewController {
     var nextPrayerDateDate: Date!
     var numberOfSelectedPrayerTimes : Int = 0
     var addressTitle : String!
-    var presenter:HomeVCPresenter!
+    var presenter:HomePresenter!
     var prayerTimesArray: [(isCellSelected: Bool, isBtnChecked:Bool)] = .init()
     var backGroundImagesArray = [UIImage.fajrBackGround,UIImage.sunriseBackGround,UIImage.zuhrBackGround,UIImage.asrBackGround,UIImage.maghribBackGround,UIImage.ishaBackGround]
     
@@ -87,7 +87,7 @@ final class HomeVC: UIViewController {
     func setupView(){
         calendarView.semanticContentAttribute = .forceRightToLeft
         daysStackView.semanticContentAttribute = .forceLeftToRight
-        presenter = HomeVCPresenter(view: self)
+        presenter = HomePresenter(view: self)
         countDownTimerFormatter.locale = NSLocale(localeIdentifier: "en") as Locale?
         countDownTimerFormatter.dateFormat = "hh:mm:ss a"
         
@@ -189,7 +189,7 @@ final class HomeVC: UIViewController {
     
     @IBAction func settingBtnPressed(_ sender: Any) {
         if let viewController = UIStoryboard.Settings.instantiateInitialViewController() as? UINavigationController {
-            let settingsVC = viewController.viewControllers[0] as? SettingVC
+            let settingsVC = viewController.viewControllers[0] as? SettingViewController
             settingsVC?.delegateToHome = self
             self.show(viewController, sender: self)
         }
@@ -217,13 +217,13 @@ final class HomeVC: UIViewController {
     
 }
 /// This is a class created for handling table View delegate and data source delegate functions
-extension HomeVC:UITableViewDelegate,UITableViewDataSource{
+extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return prayerTimesArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell=tableView.dequeueReusableCell(withIdentifier: "PrayerTimeCell", for: indexPath)as! PrayerTimeCell
+        let cell=tableView.dequeueReusableCell(withIdentifier: "PrayerTimeCell", for: indexPath)as! HomePrayerTimeCell
         presenter.ConfigureCell(cell:cell, isCellSelected: prayerTimesArray[indexPath.row].isCellSelected,isChecked:prayerTimesArray[indexPath.row].isBtnChecked,cellIndex:indexPath.row)
         numberOfSelectedPrayerTimes = prayerTimesArray[indexPath.row].isBtnChecked ? numberOfSelectedPrayerTimes + 1 : numberOfSelectedPrayerTimes
         cell.cellDelegate=self
@@ -251,7 +251,7 @@ extension HomeVC:UITableViewDelegate,UITableViewDataSource{
     
 }
 /// This is a class created for handling Methods for update counter
-extension HomeVC{
+extension HomeViewController{
     /**
      Call this function for update Time remain for the next Prayer Time
      
@@ -360,7 +360,7 @@ extension HomeVC{
     
 }
 /// This is a class created for handling JTAppleCalendar dataSource functions
-extension HomeVC:JTACMonthViewDataSource{
+extension HomeViewController:JTACMonthViewDataSource{
     func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
         let startDate = Date()
         var endDate = Date()
@@ -376,7 +376,7 @@ extension HomeVC:JTACMonthViewDataSource{
     }
 }
 /// This is a class created for handling JTAppleCalendar delegate functions
-extension HomeVC:JTACMonthViewDelegate{
+extension HomeViewController:JTACMonthViewDelegate{
     //Display the Cell
     func calendar(_ calendar: JTACMonthView, willDisplay cell: JTACDayCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
         let cell = cell as! CustomJTAppleCalendarCell

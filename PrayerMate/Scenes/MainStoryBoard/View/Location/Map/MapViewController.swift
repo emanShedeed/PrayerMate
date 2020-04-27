@@ -12,10 +12,10 @@ import MapKit
 protocol HandleMapSearch: class {
     func dropPinZoomIn(placemark:MKPlacemark)
 }
-protocol maplLocationView:class {
+protocol maplLocationProtcol:class {
     func locationIsSeleted(at lat:Double,lng:Double,selectedPlace:String,cityName:String)
 }
-class MapVC: UIViewController {
+class MapViewController: UIViewController {
     
     var selectedPin: MKPlacemark?
     var selectedPlaceTitle:String?
@@ -24,7 +24,7 @@ class MapVC: UIViewController {
     
     let locationManager = CLLocationManager()
     var searchBar : UISearchBar?
-    weak var delegate:maplLocationView?
+    weak var delegate:maplLocationProtcol?
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -114,7 +114,7 @@ class MapVC: UIViewController {
     }
 }
 
-extension MapVC : CLLocationManagerDelegate {
+extension MapViewController : CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         
@@ -140,7 +140,7 @@ extension MapVC : CLLocationManagerDelegate {
     
 }
 
-extension MapVC: HandleMapSearch {
+extension MapViewController: HandleMapSearch {
     
     func dropPinZoomIn(placemark: MKPlacemark){
         // cache the pin
@@ -178,7 +178,7 @@ extension MapVC: HandleMapSearch {
     
 }
 
-extension MapVC : MKMapViewDelegate {
+extension MapViewController : MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         
@@ -199,7 +199,7 @@ extension MapVC : MKMapViewDelegate {
         return pinView
     }
 }
-extension MapVC{
+extension MapViewController{
     
     func setupNavBar(){
         

@@ -12,7 +12,7 @@ protocol settingsVCView {
     func APIParameterChanged()
 }
 /// This is a class created to conform to UpdateSettingsView to reload settings view if any change
-extension SettingVC:UpdateSettingsView{
+extension SettingViewController:UpdateSettingsProtcol{
     /**
            protcol delegate function called when any parameter at settings change
            - Parameters:
@@ -25,7 +25,7 @@ extension SettingVC:UpdateSettingsView{
     
     
 }
-extension SettingVC:UpdateCalendarNameSettingsView{
+extension SettingViewController:UpdateCalendarNameSettingsProtcol{
     func didUpdateCalendarName() {
     SettingsArray=presenter.setDefaultValues()
     settingsTableView.reloadData()

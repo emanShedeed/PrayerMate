@@ -8,17 +8,17 @@
 
 import UIKit
 
-protocol PrayerTimeCellDelegate:class {
-    func customCell(cell:PrayerTimeCell, checkedButonatCellIndex:Int)
+protocol HomePrayerTimeCellProtcol:class {
+    func customCell(cell:HomePrayerTimeCell, checkedButonatCellIndex:Int)
 }
 /// This is a class created for prayer time Cell At Home View
-class PrayerTimeCell: UITableViewCell {
+class HomePrayerTimeCell: UITableViewCell {
     //MARK:- IBOUTLET
     @IBOutlet weak var prayerTimeNameLbl:UILabel!
     @IBOutlet weak var prayerTimeLbl:UILabel!
     @IBOutlet weak var isSelectedPrayerTimeBtn:UIButton!
     //MARK:VARiIABLES
-    weak var cellDelegate:PrayerTimeCellDelegate?
+    weak var cellDelegate:HomePrayerTimeCellProtcol?
     var cellIndex:Int!
     
     override func awakeFromNib() {
@@ -33,8 +33,8 @@ class PrayerTimeCell: UITableViewCell {
     }
     
 }
-/// This is a class created  to conform to PrayerTimeCellView protcol to display data
-extension PrayerTimeCell:PrayerTimeCellView{
+/// This is a class created  to conform to UpdatePrayerTimeCellProtcol  to display data
+extension HomePrayerTimeCell:UpdatePrayerTimeCellProtcol{
     func displayData(prayerTimeName: String, prayerTime: String, isCellSelected: Bool,isBtnChecked:Bool,cellIndex:Int) {
         self.cellIndex = cellIndex
         prayerTimeNameLbl.text=prayerTimeName

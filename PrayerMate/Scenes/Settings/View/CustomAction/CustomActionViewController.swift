@@ -7,11 +7,11 @@
 //
 
 import UIKit
-protocol UpdatePrayerTimesBufferView:class {
+protocol UpdatePrayerTimesBufferProtcol:class {
     func didUpdateBuffer(forAll : Bool)
 }
 
-class CustomActionVC: UIViewController {
+class CustomActionViewController: UIViewController {
     //MARK:- IBOUTLET
     @IBOutlet weak var containerViewHeight: NSLayoutConstraint!
     @IBOutlet weak var roundedView: UIView!
@@ -24,7 +24,7 @@ class CustomActionVC: UIViewController {
     @IBOutlet weak var HoursBtn: UIButton!
     @IBOutlet var textFields: [UITextField]!
     //MARK:VARiIABLES
-    var delegate:UpdatePrayerTimesBufferView?
+    var delegate:UpdatePrayerTimesBufferProtcol?
     var bufferType:String = "M"
     var index : Int = 0
     var forall : Bool = false
@@ -135,7 +135,7 @@ class CustomActionVC: UIViewController {
             }
         }
         if isCompleted{
-            let presenter = PrayerTimeBufferVCPresenter(view: nil)
+            let presenter = PrayerTimeBufferPresenter(view: nil)
             if(forall){
                 presenter.setToggleValue(value: true)
             }else{

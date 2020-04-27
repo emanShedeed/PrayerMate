@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FrequentlyQuestionsVC: BaseVC {
+class FrequentlyQuestionsViewController: BaseViewController {
     
     //MARK:- IBOUTLET
     @IBOutlet weak var questionsTV: UITableView!
@@ -223,7 +223,7 @@ class FrequentlyQuestionsVC: BaseVC {
         performSegue(withIdentifier: "goToHaveAnotherQuestion", sender: self)
     }
 }
-extension FrequentlyQuestionsVC:UITableViewDelegate,UITableViewDataSource{
+extension FrequentlyQuestionsViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         isFiltering ? filteredQuestions.count : questionsArray.count
@@ -259,7 +259,7 @@ extension FrequentlyQuestionsVC:UITableViewDelegate,UITableViewDataSource{
     
 }
 //MARK: UISearchBarDelegate functions
-extension FrequentlyQuestionsVC:UISearchBarDelegate{
+extension FrequentlyQuestionsViewController:UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchBarIsActive = true
         filterContentForSearchText(searchBar.text!)

@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 /// This is a class created for handling the user Location for the first use
-final class LocationVC: UIViewController {
+final class LocationViewController: UIViewController {
     
     //MARK:- IBOUTLET
     
@@ -57,7 +57,7 @@ final class LocationVC: UIViewController {
         
         if (isLocationSet && addressTitle != "" ){
             UserDefaults.standard.set(dect, forKey: "userLocation")
-            let viewController = UIStoryboard.Home.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+            let viewController = UIStoryboard.Home.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
             
             UserDefaults.standard.set(addressTitle, forKey: "addressTitle")
             
@@ -83,7 +83,7 @@ final class LocationVC: UIViewController {
     //MARK:- Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier=="goToMapVC"){
-            let dVC=((segue.destination) as! UINavigationController).viewControllers[0] as!MapVC
+            let dVC=((segue.destination) as! UINavigationController).viewControllers[0] as!MapViewController
             dVC.delegate=self
         }
         
@@ -104,7 +104,7 @@ final class LocationVC: UIViewController {
     
 }
 //MARK:- Location Manger Deglegate Functions
-extension LocationVC:CLLocationManagerDelegate{
+extension LocationViewController:CLLocationManagerDelegate{
     
     func setupLocationManager(){
         //TODO:Set up the location manager here.
@@ -189,9 +189,9 @@ extension LocationVC:CLLocationManagerDelegate{
         })
     }
 }
-//MARK:- Location ViewController Confirm to maplLocationView to Display Addrees
+//MARK:- Location ViewController Confirm to maplLocationProtcol to Display Addrees
 
-extension LocationVC:maplLocationView{
+extension LocationViewController:maplLocationProtcol{
     
     func locationIsSeleted(at lat: Double, lng: Double, selectedPlace: String,cityName:String) {
         //          latitude=lat

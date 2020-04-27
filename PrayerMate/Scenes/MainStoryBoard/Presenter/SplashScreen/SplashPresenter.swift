@@ -7,7 +7,7 @@
 //
 
 import Foundation
-final class SplashVCPresenter{
+final class SplashPresenter{
     /**
      Call this function for setup User Defaults for first use of the App
      - Parameters:

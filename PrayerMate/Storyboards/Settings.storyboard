@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C40-Da-g83">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SettingVC-->
+        <!--Setting View Controller-->
         <scene sceneID="izW-dF-NPn">
             <objects>
-                <viewController storyboardIdentifier="SettingVC" modalPresentationStyle="fullScreen" id="yME-Lw-VOr" customClass="SettingVC" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingVC" modalPresentationStyle="fullScreen" id="yME-Lw-VOr" customClass="SettingViewController" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9b3-Iz-cEa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovg-YT-xC3">
@@ -37,14 +35,14 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UTt-bb-1CP">
-                                <rect key="frame" x="0.0" y="198.5" width="375" height="468.5"/>
+                                <rect key="frame" x="0.0" y="198.5" width="600" height="401.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SettingCell" id="5Ea-jg-13M" customClass="SettingCell" customModule="PrayerMate" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Ea-jg-13M" id="ZYs-Qp-QPv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xsw-U7-wyW">
@@ -61,13 +59,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJM-mz-NBV">
-                                                    <rect key="frame" x="282" y="11.5" width="42" height="21"/>
+                                                    <rect key="frame" x="507" y="11.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.5490196078431373" green="0.5490196078431373" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="4oq-D0-TGQ">
-                                                    <rect key="frame" x="341" y="9" width="14" height="26"/>
+                                                    <rect key="frame" x="566" y="9" width="14" height="26"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -125,10 +123,10 @@
             </objects>
             <point key="canvasLocation" x="2721" y="-596"/>
         </scene>
-        <!--Frequently QuestionsVC-->
+        <!--Frequently Questions View Controller-->
         <scene sceneID="jp9-l6-qDk">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="DrV-qK-Cmn" customClass="FrequentlyQuestionsVC" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="DrV-qK-Cmn" customClass="FrequentlyQuestionsViewController" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yvB-32-8P4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -243,23 +241,23 @@
             </objects>
             <point key="canvasLocation" x="2127" y="90"/>
         </scene>
-        <!--AboutVC-->
+        <!--About View Controller-->
         <scene sceneID="Ygt-wd-G5p">
             <objects>
-                <viewController storyboardIdentifier="AboutVC" modalPresentationStyle="overCurrentContext" id="mJb-ZO-skV" customClass="AboutVC" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutVC" modalPresentationStyle="overCurrentContext" id="mJb-ZO-skV" customClass="AboutViewController" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KUl-4z-RKC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vsa-ra-d83">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="236"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="169"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.23000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="closeViewBtnPressed:" destination="mJb-ZO-skV" eventType="touchUpInside" id="KHd-sb-ZTO"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFQ-DI-3Kn" userLabel="container view" customClass="RoundedView" customModule="PrayerMate" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="216" width="375" height="451"/>
+                                <rect key="frame" x="0.0" y="149" width="600" height="451"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcL-xo-43g">
                                         <rect key="frame" x="17" y="37" width="6" height="38.5"/>
@@ -277,7 +275,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjY-R5-4Jy">
-                                        <rect key="frame" x="17" y="95.5" width="341" height="25"/>
+                                        <rect key="frame" x="17" y="95.5" width="566" height="25"/>
                                         <attributedString key="attributedText">
                                             <fragment content="sdgfhjkl">
                                                 <attributes>
@@ -308,7 +306,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMt-a2-Vc7">
-                                        <rect key="frame" x="120.5" y="198.5" width="134" height="5"/>
+                                        <rect key="frame" x="233" y="198.5" width="134" height="5"/>
                                         <color key="backgroundColor" red="0.81960784313725488" green="0.83921568627450982" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="134" id="6Ds-0F-ZYG"/>
@@ -362,23 +360,23 @@
             </objects>
             <point key="canvasLocation" x="4138" y="100"/>
         </scene>
-        <!--Calendar MethodVC-->
+        <!--Calendar Method View Controller-->
         <scene sceneID="ez6-Hi-9mo">
             <objects>
-                <viewController storyboardIdentifier="CalendarMethodVC" modalPresentationStyle="overCurrentContext" id="gRE-tj-kdC" customClass="CalendarMethodVC" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalendarMethodVC" modalPresentationStyle="overCurrentContext" id="gRE-tj-kdC" customClass="CalendarMethodViewController" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IsJ-N5-oNz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1e-S0-l3a">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.23000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="closeViewBtnPressed:" destination="gRE-tj-kdC" eventType="touchUpInside" id="eyz-WW-dVz"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bO1-83-ha2" userLabel="container view" customClass="RoundedView" customModule="PrayerMate" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="247" width="375" height="420"/>
+                                <rect key="frame" x="0.0" y="180" width="600" height="420"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4A-fp-dQk">
                                         <rect key="frame" x="17" y="30" width="4.5" height="31"/>
@@ -397,14 +395,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ARx-U5-Pil">
-                                        <rect key="frame" x="0.0" y="76" width="375" height="344"/>
+                                        <rect key="frame" x="0.0" y="76" width="600" height="344"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CalendarMethodCell" id="0lA-4e-233" customClass="CalendarMethodCell" customModule="PrayerMate" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                                <rect key="frame" x="0.0" y="28" width="600" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0lA-4e-233" id="Mnw-b7-GZM">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vw7-mG-fIS">
@@ -472,23 +470,23 @@
             </objects>
             <point key="canvasLocation" x="3624.8000000000002" y="-555.47226386806597"/>
         </scene>
-        <!--Settings LocationVC-->
+        <!--Settings Location View Controller-->
         <scene sceneID="xBE-8e-OcZ">
             <objects>
-                <viewController storyboardIdentifier="SettingsLocationVC" modalPresentationStyle="overCurrentContext" id="8A9-Xj-GKM" customClass="SettingsLocationVC" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsLocationVC" modalPresentationStyle="overCurrentContext" id="8A9-Xj-GKM" customClass="SettingsLocationViewController" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A6u-W5-fIn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xi1-YT-4ET">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="430"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="363"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.23000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="closeViewBtnPressed:" destination="8A9-Xj-GKM" eventType="touchUpInside" id="tO9-6y-JIV"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sH-xx-kR8" userLabel="container view" customClass="RoundedView" customModule="PrayerMate" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="410" width="375" height="257"/>
+                                <rect key="frame" x="0.0" y="343" width="600" height="257"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5T-Vp-hqs">
                                         <rect key="frame" x="17" y="37" width="0.0" height="0.0"/>
@@ -534,7 +532,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tBS-r6-GIx">
-                                        <rect key="frame" x="309" y="57" width="51" height="31"/>
+                                        <rect key="frame" x="534" y="57" width="51" height="31"/>
                                         <color key="onTintColor" name="AppColor"/>
                                         <connections>
                                             <action selector="switchBtnPressed:" destination="8A9-Xj-GKM" eventType="valueChanged" id="4Mw-4K-eIV"/>
@@ -604,10 +602,10 @@
             </objects>
             <point key="canvasLocation" x="3641" y="-1433"/>
         </scene>
-        <!--Prayer Time BufferVC-->
+        <!--Prayer Time Buffer View Controller-->
         <scene sceneID="hEf-yf-9tF">
             <objects>
-                <viewController storyboardIdentifier="PrayerTimeBufferVC" id="4LD-oo-u4c" customClass="PrayerTimeBufferVC" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PrayerTimeBufferVC" id="4LD-oo-u4c" customClass="PrayerTimeBufferViewController" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y4M-BF-2Il">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -764,23 +762,23 @@
             </objects>
             <point key="canvasLocation" x="1196" y="-1052.0239880059971"/>
         </scene>
-        <!--Import To CalendarVC-->
+        <!--Import To Calendar View Controller-->
         <scene sceneID="R8v-sG-S5Z">
             <objects>
-                <viewController storyboardIdentifier="ImportToCalendarVC" modalPresentationStyle="overCurrentContext" id="mbf-uW-LmF" customClass="ImportToCalendarVC" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImportToCalendarVC" modalPresentationStyle="overCurrentContext" id="mbf-uW-LmF" customClass="ImportToCalendarViewController" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WKK-bT-OgA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mz-ub-YzG">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="337"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="270"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.23000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="closeViewBtnPressed:" destination="mbf-uW-LmF" eventType="touchUpInside" id="mTi-n9-0qs"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOB-hX-P72" userLabel="container view" customClass="RoundedView" customModule="PrayerMate" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="317" width="375" height="350"/>
+                                <rect key="frame" x="0.0" y="250" width="600" height="350"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJn-qG-2qI">
                                         <rect key="frame" x="17" y="37" width="45" height="28"/>
@@ -815,14 +813,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0d-0f-JtU">
-                                        <rect key="frame" x="17" y="135" width="22" height="22"/>
+                                        <rect key="frame" x="17" y="135" width="44" height="44"/>
                                         <state key="normal" image="uncheckCalendar"/>
                                         <connections>
                                             <action selector="checkBtnPressed:" destination="mbf-uW-LmF" eventType="touchUpInside" id="vRn-Zq-QqS"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4R-Ua-XRL">
-                                        <rect key="frame" x="64" y="126" width="39.5" height="31"/>
+                                        <rect key="frame" x="86" y="148" width="39.5" height="31"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Label">
                                                 <attributes>
@@ -838,14 +836,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNr-lv-LKf">
-                                        <rect key="frame" x="17" y="182" width="22" height="22"/>
+                                        <rect key="frame" x="17" y="204" width="44" height="44"/>
                                         <state key="normal" image="uncheckCalendar"/>
                                         <connections>
                                             <action selector="checkBtnPressed:" destination="mbf-uW-LmF" eventType="touchUpInside" id="N0T-Mg-wqb"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsl-iT-AlP">
-                                        <rect key="frame" x="64" y="173" width="39.5" height="31"/>
+                                        <rect key="frame" x="86" y="217" width="39.5" height="31"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Label">
                                                 <attributes>
@@ -861,14 +859,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gev-KT-xgo">
-                                        <rect key="frame" x="17" y="229" width="22" height="22"/>
+                                        <rect key="frame" x="17" y="273" width="44" height="44"/>
                                         <state key="normal" image="uncheckCalendar"/>
                                         <connections>
                                             <action selector="checkBtnPressed:" destination="mbf-uW-LmF" eventType="touchUpInside" id="N2W-mZ-kYo"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtS-z8-nc8">
-                                        <rect key="frame" x="64" y="220" width="39.5" height="31"/>
+                                        <rect key="frame" x="86" y="286" width="39.5" height="31"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Label">
                                                 <attributes>
@@ -884,7 +882,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5L-Xc-OEr" customClass="RoundedButton" customModule="PrayerMate" customModuleProvider="target">
-                                        <rect key="frame" x="17" y="281" width="341" height="57"/>
+                                        <rect key="frame" x="17" y="347" width="566" height="57"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="3Bx-ew-due"/>
                                         </constraints>
@@ -968,23 +966,23 @@
             </objects>
             <point key="canvasLocation" x="2472.8000000000002" y="-1387.5562218890557"/>
         </scene>
-        <!--Custom ActionVC-->
+        <!--Custom Action View Controller-->
         <scene sceneID="O8N-ym-FdM">
             <objects>
-                <viewController storyboardIdentifier="CustomActionVC" modalPresentationStyle="overCurrentContext" id="XEq-Cn-Fjb" customClass="CustomActionVC" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomActionVC" modalPresentationStyle="overCurrentContext" id="XEq-Cn-Fjb" customClass="CustomActionViewController" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fSt-qw-ytq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWP-oq-Y8e">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="354"/>
+                                <rect key="frame" x="0.0" y="0.0" width="64" height="287"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.23000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="closeViewBtnPressed:" destination="XEq-Cn-Fjb" eventType="touchUpInside" id="yOt-Nu-1dU"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNk-Y8-CBa" userLabel="container view" customClass="RoundedView" customModule="PrayerMate" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="334" width="375" height="333"/>
+                                <rect key="frame" x="0.0" y="267" width="64" height="333"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ar-1y-F91">
                                         <rect key="frame" x="17" y="32" width="17" height="37.5"/>
@@ -1103,14 +1101,14 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w83-qr-8L9">
-                                        <rect key="frame" x="17" y="163.5" width="21" height="22"/>
+                                        <rect key="frame" x="17" y="163.5" width="42" height="42"/>
                                         <state key="normal" image="selectedRadio"/>
                                         <connections>
                                             <action selector="radioButtonPressed:" destination="XEq-Cn-Fjb" eventType="touchUpInside" id="4JZ-Da-Wkl"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dT-6K-Wbb">
-                                        <rect key="frame" x="56" y="151.5" width="5.5" height="34"/>
+                                        <rect key="frame" x="77" y="171.5" width="5.5" height="34"/>
                                         <attributedString key="attributedText">
                                             <fragment content=" ">
                                                 <attributes>
@@ -1125,14 +1123,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbU-br-kgR">
-                                        <rect key="frame" x="17" y="207.5" width="21" height="22"/>
+                                        <rect key="frame" x="17" y="227.5" width="42" height="42"/>
                                         <state key="normal" image="unselectedRadio"/>
                                         <connections>
                                             <action selector="radioButtonPressed:" destination="XEq-Cn-Fjb" eventType="touchUpInside" id="ch4-nC-rAM"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVC-4z-Yw2">
-                                        <rect key="frame" x="56" y="195.5" width="5.5" height="34"/>
+                                        <rect key="frame" x="77" y="235.5" width="5.5" height="34"/>
                                         <attributedString key="attributedText">
                                             <fragment content=" ">
                                                 <attributes>
@@ -1147,7 +1145,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5HF-kz-raS" customClass="RoundedButton" customModule="PrayerMate" customModuleProvider="target">
-                                        <rect key="frame" x="17" y="260.5" width="341" height="55"/>
+                                        <rect key="frame" x="17" y="300.5" width="30" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="V93-ib-IJv"/>
                                         </constraints>

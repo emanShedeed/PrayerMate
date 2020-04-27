@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PrayerTimeBufferVC: BaseVC {
+class PrayerTimeBufferViewController: BaseViewController {
     
      //MARK:- IBOUTLET
     @IBOutlet weak var PrayerTimeBufferTableView: UITableView!
@@ -16,7 +16,7 @@ class PrayerTimeBufferVC: BaseVC {
     @IBOutlet weak var automaticAdjustBufferSwitch: UISwitch!
     
     //MARK:VARiIABLES
-    var presenter:PrayerTimeBufferVCPresenter!
+    var presenter:PrayerTimeBufferPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class PrayerTimeBufferVC: BaseVC {
         backButton.title = "PrayerTimeBufferVC.navBackButtonText".localized
        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         
-         presenter = PrayerTimeBufferVCPresenter(view: self)
+         presenter = PrayerTimeBufferPresenter(view: self)
         PrayerTimeBufferTableView.tableFooterView=UIView()
         // For remove last separator
         PrayerTimeBufferTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: PrayerTimeBufferTableView.frame.size.width, height: 1))
@@ -80,7 +80,7 @@ class PrayerTimeBufferVC: BaseVC {
         // create an action
         let customAction = UIAlertAction(title: "PrayerTimeBufferVC.actionSheetCustom".localized, style: .default) { action -> Void in
             
-             let viewController = UIStoryboard.Settings.instantiateViewController(withIdentifier: "CustomActionVC") as! CustomActionVC
+             let viewController = UIStoryboard.Settings.instantiateViewController(withIdentifier: "CustomActionVC") as! CustomActionViewController
             viewController.delegate = self
             viewController.forall = forAll
             viewController.index=index
@@ -109,7 +109,7 @@ class PrayerTimeBufferVC: BaseVC {
     
 }
 /// This is a class created for handling table View delegate and data source delegate functions
-extension PrayerTimeBufferVC:UITableViewDataSource,UITableViewDelegate{
+extension PrayerTimeBufferViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.iconImagesArray.count
     }

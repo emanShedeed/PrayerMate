@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AboutVC: UIViewController {
+class AboutViewController: UIViewController {
 
     //MARK:- IBOUTLET
     @IBOutlet weak var containerViewHeight: NSLayoutConstraint!

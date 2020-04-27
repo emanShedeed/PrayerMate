@@ -7,7 +7,7 @@
 //
 
 import Foundation
-extension PrayerTimeBufferVC:PrayerTimeBufferView{
+extension PrayerTimeBufferViewController:PrayerTimeBufferProtcol{
     func showError(error: String) {
         
     }
@@ -25,7 +25,7 @@ extension PrayerTimeBufferVC:PrayerTimeBufferView{
     
     
 }
-extension PrayerTimeBufferVC:UpdatePrayerTimesBufferView{
+extension PrayerTimeBufferViewController:UpdatePrayerTimesBufferProtcol{
     func didUpdateBuffer(forAll:Bool) {
         setBufferSucess(forAll: forAll)
     }

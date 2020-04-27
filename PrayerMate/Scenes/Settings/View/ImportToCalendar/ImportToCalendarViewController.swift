@@ -16,10 +16,10 @@ import MSGraphClientSDK
 import MSGraphClientModels
 
 /// This is a class created for choosing Calenders User need to import to
-protocol UpdateCalendarNameSettingsView:class {
+protocol UpdateCalendarNameSettingsProtcol:class {
     func didUpdateCalendarName()
 }
-class ImportToCalendarVC: UIViewController {
+class ImportToCalendarViewController: UIViewController {
      //MARK:- IBOUTLET
     @IBOutlet weak var containerViewHeight: NSLayoutConstraint!
     @IBOutlet weak var roundedView: UIView!
@@ -36,7 +36,7 @@ class ImportToCalendarVC: UIViewController {
     
     var filteredIndices = [Int].init()
     var choosenCalendars = [Int].init()
-     weak var toSettingelegate : UpdateCalendarNameSettingsView?
+     weak var toSettingelegate : UpdateCalendarNameSettingsProtcol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -164,7 +164,7 @@ class ImportToCalendarVC: UIViewController {
     }
 }
 //MARK:Google SignIn
-extension ImportToCalendarVC:GIDSignInDelegate{
+extension ImportToCalendarViewController:GIDSignInDelegate{
     //MARK:Google SignIn Delegate
     func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
         // myActivityIndicator.stopAnimating()
@@ -211,7 +211,7 @@ extension ImportToCalendarVC:GIDSignInDelegate{
     }
 }
 //MARK:Microsoft SignIn
-extension ImportToCalendarVC{
+extension ImportToCalendarViewController{
     func signInMicrosoftAccount() {
         //         spinner.start(container: self)
         

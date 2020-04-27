@@ -9,7 +9,7 @@
 import UIKit
 
 /// This is a class created for handling Custom Splash Screen
-final class SplashVC: UIViewController {
+final class SplashViewController: UIViewController {
     
     //MARK:- IBOUTLET
     
@@ -28,7 +28,7 @@ final class SplashVC: UIViewController {
         // Do any additional setup after loading the view.
         
         //   print(UIFont.systemFont(ofSize: 15).fontName)
-        let presenter = SplashVCPresenter()
+        let presenter = SplashPresenter()
         presenter.setupUserDefaults()
         //  presenter.getUIFonts()
     }
@@ -57,13 +57,13 @@ final class SplashVC: UIViewController {
                 
                 if let _ = UserDefaults.standard.value(forKey: "userLocation") as? [String:Double]{
                     
-                    let viewController = UIStoryboard.Home.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+                    let viewController = UIStoryboard.Home.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
                     
                     self.present(viewController, animated: true, completion:nil)
                     
                 }else{
         
-                    let viewController =  UIStoryboard.main.instantiateViewController(withIdentifier: "MainLocationVC") as! LocationVC
+                    let viewController =  UIStoryboard.main.instantiateViewController(withIdentifier: "MainLocationVC") as! LocationViewController
 
                     self.present(viewController, animated: true, completion:nil)
                 }

@@ -18,7 +18,7 @@ class PrayerTimeBufferCell: UITableViewCell {
     }
 
 }
-extension PrayerTimeBufferCell:PrayerTimeBufferCellView{
+extension PrayerTimeBufferCell:UpdatePrayerTimeBufferCellProtcol{
     func displayData(prayerTimeName: String, prayerTimeBuffer: String, iconImage: UIImage) {
         prayerTimeNameLbl.text = prayerTimeName
         prayerTimebufferLbl.text = prayerTimeBuffer

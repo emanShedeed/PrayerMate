@@ -8,11 +8,11 @@
 
 import UIKit
 /// This is a protcol created for update settings VC if any Parameter change
-protocol UpdateSettingsView:class {
+protocol UpdateSettingsProtcol:class {
     func didUpdateSettings()
 }
 /// This is a class created for handling the Calendar Method types
-class CalendarMethodVC: UIViewController {
+class CalendarMethodViewController: UIViewController {
     
      //MARK:- IBOUTLET
     
@@ -22,7 +22,7 @@ class CalendarMethodVC: UIViewController {
     
      //MARK:VARiIABLES
     
-    weak var toSettingelegate : UpdateSettingsView?
+    weak var toSettingelegate : UpdateSettingsProtcol?
     
     let calendarMethodArray :[String] = ["CalendarMethod.egyptianGeneralAuthorityOfSurveyTitle","CalendarMethod.universityOfIslamicSciencesShafi","CalendarMethod.universityOfIslamicSciencesHanafi","CalendarMethod.islamicCircleOfNorthAmerica","CalendarMethod.muslimWorldLeague","CalendarMethod.ummAlQura","CalendarMethod.fixedIsha"]
     
@@ -45,7 +45,7 @@ class CalendarMethodVC: UIViewController {
 }
 
 /// This is a class created for handling table View delegate and data source delegate functions
-extension CalendarMethodVC:UITableViewDataSource,UITableViewDelegate{
+extension CalendarMethodViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return calendarMethodArray.count
     }

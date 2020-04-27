@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 /// This is a class created for handling the user Location
-class SettingsLocationVC: UIViewController {
+class SettingsLocationViewController: UIViewController {
     
     //MARK:- IBOUTLET
     @IBOutlet weak var containerViewHeight: NSLayoutConstraint!
@@ -24,8 +24,8 @@ class SettingsLocationVC: UIViewController {
     var addressTitle :String = ""
     var completeAddressTitle : String = ""
     var isLocatedAutomatically = false
-    weak var toSettingelegate : UpdateSettingsView?
-     let presenter = SettingsLocationVCPresenter()
+    weak var toSettingelegate : UpdateSettingsProtcol?
+     let presenter = SettingsLocationPresenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,8 +67,8 @@ class SettingsLocationVC: UIViewController {
         
     }
     @IBAction func changeLocationBtnPressed(_ sender: Any) {
-        let viewController = UIStoryboard.main.instantiateViewController(withIdentifier: "MapNavVC") as! MapNavVC
-        let mapVC = viewController.viewControllers[0] as? MapVC
+        let viewController = UIStoryboard.main.instantiateViewController(withIdentifier: "MapNavVC") as! MapNavViewController
+        let mapVC = viewController.viewControllers[0] as? MapViewController
         mapVC?.delegate=self
         self.show(viewController, sender: self)
     }
@@ -76,7 +76,7 @@ class SettingsLocationVC: UIViewController {
    
 }
 /// This is a class created for handling CLLocationManager delegate  functions
-extension SettingsLocationVC:CLLocationManagerDelegate{
+extension SettingsLocationViewController:CLLocationManagerDelegate{
     func setupLocationManager(){
         //TODO:Set up the location manager here.
         self.locationManager.startUpdatingLocation()
@@ -159,7 +159,7 @@ extension SettingsLocationVC:CLLocationManagerDelegate{
     }
 }
 /// This is a class created for handling maplLocation to display Location Address
-extension SettingsLocationVC:maplLocationView{
+extension SettingsLocationViewController:maplLocationProtcol{
     func locationIsSeleted(at lat: Double, lng: Double, selectedPlace: String,cityName:String) {
         if(selectedPlace != ""){
             let dect:[String:Double]=["lat":lat,"long":lng]

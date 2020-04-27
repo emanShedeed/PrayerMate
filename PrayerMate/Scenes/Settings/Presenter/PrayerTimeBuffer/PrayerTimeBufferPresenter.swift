@@ -8,17 +8,17 @@
 
 import Foundation
 import UIKit
-protocol  PrayerTimeBufferView :class{
+protocol  PrayerTimeBufferProtcol :class{
     func showError(error:String)
     func setBufferSucess(forAll : Bool)
     
 }
-protocol PrayerTimeBufferCellView {
+protocol UpdatePrayerTimeBufferCellProtcol {
     func displayData(prayerTimeName: String, prayerTimeBuffer: String,iconImage: UIImage)
 }
 /// This is a presenter class created for handling MovesHomeVC Functions.
-class PrayerTimeBufferVCPresenter{
-    private weak var view : PrayerTimeBufferView?
+class PrayerTimeBufferPresenter{
+    private weak var view : PrayerTimeBufferProtcol?
     let prayerTimesNames=["PrayerTimeBufferVC.fajrPrayerLblTitle","PrayerTimeBufferVC.sunrisePrayerLblTitle","PrayerTimeBufferVC.zuhrPrayerLblTitle","PrayerTimeBufferVC.asrPrayerLblTitle","PrayerTimeBufferVC.maghribPrayerLblTitle","PrayerTimeBufferVC.ishaPrayerLblTitle"]
        let iconImagesArray = [UIImage.fajrIcon,UIImage.sunriseIcon,UIImage.zuhrIcon,UIImage.asrIcon,UIImage.maghribIcon,UIImage.ishaIcon]
        
@@ -26,7 +26,7 @@ class PrayerTimeBufferVCPresenter{
        var automaticAdjustBufferAfterText = ""
        var prayerTimesBufferArray : [PrayerTimeBuffer]?
     
-    init(view:PrayerTimeBufferView?) {
+    init(view:PrayerTimeBufferProtcol?) {
         self.view=view
         let fetchedData = UserDefaults.standard.data(forKey: "prayerTimesBufferArray")!
         prayerTimesBufferArray = try! PropertyListDecoder().decode([PrayerTimeBuffer].self, from: fetchedData)
@@ -80,7 +80,7 @@ class PrayerTimeBufferVCPresenter{
     func setToggleValue(value:Bool){
         UserDefaults.standard.set(value, forKey: "automaticAdjustBufferToggle")
        }
-    func ConfigureCell(cell:PrayerTimeBufferCellView,cellIndex:Int){
+    func ConfigureCell(cell:UpdatePrayerTimeBufferCellProtcol,cellIndex:Int){
         let text = getbufferText(index: cellIndex)
         cell.displayData(prayerTimeName: prayerTimesNames[cellIndex].localized, prayerTimeBuffer: text,iconImage: iconImagesArray[cellIndex]!)
           

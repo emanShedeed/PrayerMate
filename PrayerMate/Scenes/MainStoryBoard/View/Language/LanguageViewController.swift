@@ -8,7 +8,7 @@
 
 import UIKit
 /// This is a class created for handling the App Language  for the first use
-final class LanguageVC: UIViewController {
+final class LanguageViewController: UIViewController {
     
     //MARK:- IBOUTLET
     
