@@ -50,6 +50,7 @@
 "Home.moreThanMonthToasterMessage"= "import Period can't exceed one Month.";
 "Home.exportedSuccessfullyToasterMessage"= "Prayer times exported successfully to calendar.";
 "Home.chooseDateRangeToasterMessage"= "Please select date range.";
+"Home.CalendarDoneBtnTitle"= "Done";
 
 //Settings viewController
 "Settings.titleLbl" = "Settings";

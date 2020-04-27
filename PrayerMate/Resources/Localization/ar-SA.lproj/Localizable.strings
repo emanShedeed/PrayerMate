@@ -47,7 +47,7 @@
 "Home.moreThanMonthToasterMessage"= "مدة تصدير مواعيد الصلاة لا يمكنها تجاوز شهر.";
 "Home.exportedSuccessfullyToasterMessage"= "تم إضافة أوقات الصلاة بنجاح إلى التقويم.";
 "Home.chooseDateRangeToasterMessage"= "يرجى تحديد نطاق التاريخ.";
-
+"Home.CalendarDoneBtnTitle"= "تم";
 //Settings viewController
 "Settings.titleLbl" = "الاعدادات";
 "Settings.location" = "الموقع";
