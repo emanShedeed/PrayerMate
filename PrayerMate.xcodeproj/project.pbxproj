@@ -35,7 +35,6 @@
 		BD6589152430944500FEE06C /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6589142430944500FEE06C /* SettingVC.swift */; };
 		BD65891E2430D0EC00FEE06C /* FrequentlyQuestionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65891B2430D0EC00FEE06C /* FrequentlyQuestionsVC.swift */; };
 		BD6589212430D2B100FEE06C /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6589202430D2B100FEE06C /* QuestionCell.swift */; };
-		BD77215824165829008A8947 /* PrayerTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD77215724165829008A8947 /* PrayerTime.swift */; };
 		BD889180244CB33C00C58D5E /* GoogleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88917F244CB33C00C58D5E /* GoogleService.swift */; };
 		BDA1ED2E2450320B007C0206 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDA1ED2D2450320A007C0206 /* GoogleService-Info.plist */; };
 		BDA3F868241F712400705569 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3F864241F712100705569 /* BundleExtension.swift */; };
@@ -54,8 +53,6 @@
 		BDAA26D22404F3A80064C8D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDAA26D02404F3A80064C8D4 /* Main.storyboard */; };
 		BDAA26D42404F3A90064C8D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDAA26D32404F3A90064C8D4 /* Assets.xcassets */; };
 		BDAA26D72404F3A90064C8D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDAA26D52404F3A90064C8D4 /* LaunchScreen.storyboard */; };
-		BDCF6A68240D13B500DD46F7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF6A67240D13B500DD46F7 /* MainViewController.swift */; };
-		BDCF6A6A240D16D400DD46F7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF6A69240D16D400DD46F7 /* WelcomeViewController.swift */; };
 		BDCF6A6C240D1E8500DD46F7 /* AuthSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDCF6A6B240D1E8500DD46F7 /* AuthSettings.plist */; };
 		BDCF6A6F240D257A00DD46F7 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF6A6E240D257A00DD46F7 /* AuthenticationManager.swift */; };
 		BDCF6A71240D273F00DD46F7 /* GraphManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCF6A70240D273F00DD46F7 /* GraphManager.swift */; };
@@ -114,7 +111,6 @@
 		BD6589142430944500FEE06C /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		BD65891B2430D0EC00FEE06C /* FrequentlyQuestionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequentlyQuestionsVC.swift; sourceTree = "<group>"; };
 		BD6589202430D2B100FEE06C /* QuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
-		BD77215724165829008A8947 /* PrayerTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTime.swift; sourceTree = "<group>"; };
 		BD88917F244CB33C00C58D5E /* GoogleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleService.swift; sourceTree = "<group>"; };
 		BDA1ED2D2450320A007C0206 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BDA3F864241F712100705569 /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
@@ -138,8 +134,6 @@
 		BDAA26D32404F3A90064C8D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDAA26D62404F3A90064C8D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDAA26D82404F3A90064C8D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BDCF6A67240D13B500DD46F7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		BDCF6A69240D16D400DD46F7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		BDCF6A6B240D1E8500DD46F7 /* AuthSettings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AuthSettings.plist; sourceTree = "<group>"; };
 		BDCF6A6D240D216100DD46F7 /* PrayerMate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrayerMate.entitlements; sourceTree = "<group>"; };
 		BDCF6A6E240D257A00DD46F7 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
@@ -346,13 +340,12 @@
 		BD772156241657E3008A8947 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BD77215724165829008A8947 /* PrayerTime.swift */,
 				BD0C905B242787E9000B8EAC /* HomeAPIResponseModel.swift */,
 				BD1FC1DC24458D3200540A2B /* RealmPrayerTimeModel.swift */,
 				BDFFDA7D243635860066F493 /* PrayerTimeBuffer.swift */,
 				BD88917F244CB33C00C58D5E /* GoogleService.swift */,
-				BD0CFB992451BAA900177761 /* LocalNotification.swift */,
 				BD0CFB9B2451BF7100177761 /* Notification.swift */,
+				BD0CFB992451BAA900177761 /* LocalNotification.swift */,
 				BDD1F73B2417A8EB006B87B7 /* MicrosoftCalendarSDKFiles */,
 			);
 			path = Model;
@@ -507,8 +500,6 @@
 		BDD1F73E2417AA1B006B87B7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BDCF6A67240D13B500DD46F7 /* MainViewController.swift */,
-				BDCF6A69240D16D400DD46F7 /* WelcomeViewController.swift */,
 				BDD1F73F2417AA2E006B87B7 /* SplashScreen */,
 				BDA3F8802420CA9100705569 /* Language */,
 				BD12EB472422266800001437 /* Location */,
@@ -792,14 +783,11 @@
 				BDFCFE442418E78A0033D031 /* UIFontExtension.swift in Sources */,
 				BDFFDA662432F5B80066F493 /* SettingVC+delegate.swift in Sources */,
 				BDD1F7512417B60E006B87B7 /* Helper.swift in Sources */,
-				BDCF6A68240D13B500DD46F7 /* MainViewController.swift in Sources */,
 				BD0C905524273A8B000B8EAC /* UIButton+Extension.swift in Sources */,
 				BD287BD0243B50BA00373170 /* SettingsLocationVCPresenter.swift in Sources */,
 				BD889180244CB33C00C58D5E /* GoogleService.swift in Sources */,
 				BD1FC1DD24458D3200540A2B /* RealmPrayerTimeModel.swift in Sources */,
 				BD12EB492422267F00001437 /* LocationVC.swift in Sources */,
-				BD77215824165829008A8947 /* PrayerTime.swift in Sources */,
-				BDCF6A6A240D16D400DD46F7 /* WelcomeViewController.swift in Sources */,
 				BDFCFE49241E4B310033D031 /* SYActivityIndicatorView.swift in Sources */,
 				BD0CFB9C2451BF7100177761 /* Notification.swift in Sources */,
 				BD12EB4B2422290C00001437 /* RoundedTextField.swift in Sources */,
