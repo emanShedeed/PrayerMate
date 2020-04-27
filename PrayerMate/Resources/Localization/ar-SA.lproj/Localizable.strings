@@ -142,6 +142,15 @@
 "About.descriptionLbl" = "يقدم جوجل حزمة أدوات مكتبية إلكترونية قوية ضمن حساب غوغل الخاص بك، حيث يمكنك الوصول إلى تطبيق محرّر مستندات غوغل Google Docs، وتطبيق الملاحظات Google Keep، بالإضافة إلى خدمة تخزين سحابي مجانية عبر منصة جوجل درايف، ولا شك أن هذه مجموعة ممتازة من التطبيقات للكتابيعتبر تطبيق مستندات غوغل Google Docs من أفضل تطبيقات تحرير المستندات حسب أراء المستخدمين حيث بلغ عدد مرات تثبيت هذا التطبيق عبر متجر غوغل بلاي فقط أكثر من نصف مليار مرة، وأصبحت مستندات غوغل الآن هى البديل الأكثر مرن ";
 "About.contactUs" ="تواصل معنا :";
 
+//Local Notification
+"fajrPrayerNotificationTitle" = "اذان الفجر";
+"sunrisePrayerNotificationTitle" = "الشروق";
+"zuhrPrayerNotificationTitle" = "اذان الظهر";
+"asrPrayerNotificationTitle" = "اذان العصر";
+"maghribPrayerNotificationTitle" = "اذان المغرب";
+"ishaPrayerNotificationTitle" = "اذان العشاء";
+"openAppNotificationTitle" = "عليك فتح التطبيق اذا كنت مازلت ترغب في تلقي اشعارات اوقات الصلاة";
+"alertToEnableNotifications" = "الرجاء تمكين الإشعارات إذا كنت تريد تلقي تنبيه لأوقات الصلاة";
 //"language.description" = "اللغه";
 
 

@@ -183,6 +183,7 @@ class HomeVCPresenter{
             }
             
         }
+        let _ = LocalNotification()
         print(realm.configuration.fileURL ?? "")
     }
     

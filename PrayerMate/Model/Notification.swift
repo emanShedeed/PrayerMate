@@ -10,5 +10,6 @@ import Foundation
 struct Notification {
     var name:String
     var time:String
+    var date:Date?
   
 }

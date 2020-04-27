@@ -148,8 +148,15 @@
 "About.descriptionLbl" = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam .";
 "About.contactUs" ="Contact us :";
 
-
-
+//Local Notification
+"fajrPrayerNotificationTitle" = "it's Fajr time";
+"sunrisePrayerNotificationTitle" = "it's Sunrise time";
+"zuhrPrayerNotificationTitle" = "it's zuhr time";
+"asrPrayerNotificationTitle" = "it's Asr time";
+"maghribPrayerNotificationTitle" = "it's Maghrib time";
+"ishaPrayerNotificationTitle" = "it's Isha time";
+"openAppNotificationTitle" = "you have to open the app if you still need to receive prayer time notifications";
+"alertToEnableNotifications" = "please enable local Notification if you want to receive prayer times alert";
 //"language.description" = "اللغه";
 
 "language" = "English";

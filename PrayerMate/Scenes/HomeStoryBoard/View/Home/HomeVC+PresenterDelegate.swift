@@ -40,12 +40,13 @@ extension HomeVC:HomeView{
             let day = dateFormatter.string(from: date)
             dateFormatter.dateFormat = "MM"
             let month = dateFormatter.string(from: date)
-            if(!isLaunchBefore || ( day == "01" && month == "01" )){
-            UserDefaults.standard.set(true, forKey: "isLaunchedBefore")
+//            if(!isLaunchBefore || ( day == "01" && month == "01" )){
+//            UserDefaults.standard.set(true, forKey: "isLaunchedBefore")
             self.presenter.saveDataToRealm()
-            }
+//                 }
             self.selectedPrayerTimesIndicies = self.prayerTimesArray.indices.filter{self.prayerTimesArray[$0].isBtnChecked == true}
             UserDefaults.standard.set(self.selectedPrayerTimesIndicies, forKey: "selectedPrayerTimesIndicies")
+            
         }
         
     }
@@ -59,7 +60,7 @@ extension HomeVC:HomeView{
 extension HomeVC:settingsVCView{
     func APIParameterChanged() {
         requestPrayerTimesAPI()
-        self.presenter.saveDataToRealm()
+//        self.presenter.saveDataToRealm()
     }
     
 }
