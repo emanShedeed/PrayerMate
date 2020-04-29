@@ -21,6 +21,7 @@ import GTMSessionFetcher
 
 protocol  HomeViewControllerProtocol :class{
     func showError(error:String)
+    func showIndicator()
     func fetchDataSucess()
     func imoprtToCalendarsSuccess()
     
@@ -140,6 +141,67 @@ class HomePresenter{
         }
     }
     
+    /**
+     Call this function for request Prayer Times API
+     
+     
+     ### Usage Example: ###
+     ````
+     requestPrayerTimesAPI()
+     
+     ````
+     - Parameters:
+     */
+    func requestPrayerTimesAPI(){
+        let url = generateURL()
+        if let final_url = url{
+           view?.showIndicator()
+            dataRequest(FINAL_URL:final_url)
+        }
+    }
+    /**
+     Call this function for generate URL required to call the API
+     
+     
+     ### Usage Example: ###
+     ````
+     generateURL()
+     
+     ````
+     - Parameters:
+     - Return Type: URL
+     */
+    func generateURL() -> URL?{
+        let date = generateDateStringSendToAPI()
+        let addressTitle = UserDefaults.standard.value(forKey: "addressTitle") as? String ?? ""
+        let method = UserDefaults.standard.value(forKey: "calendarMethod") as! [String:String]
+        let methodID = method["methdID"] ?? "6"
+        let basicURL = "https://muslimsalat.com/" +  addressTitle + "/yearly/" + date
+        let urlString = basicURL + "/false/" + methodID + ".json?key=48ae8106ef6b55e5dac258c0c8d2e224"
+        print(urlString)
+        let ecnodingString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let url = URL(string: ecnodingString ?? "")
+        return url
+    }
+    /**
+     Call this function for generate Date String required to call the API
+     
+     
+     ### Usage Example: ###
+     ````
+     generateDateStringSendToAPI()
+     
+     ````
+     - Parameters:
+     - Return Type : String
+     */
+    func generateDateStringSendToAPI() -> String{
+        let dateFormatterForAPI = DateFormatter()
+        dateFormatterForAPI.locale = NSLocale(localeIdentifier: "en")  as Locale
+        dateFormatterForAPI.dateFormat = "dd-MM-YYYY"
+        let date = dateFormatterForAPI.string(from: Date())
+        return date
+    }
     /**
      Call this function to save Data To Realm.
      

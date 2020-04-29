@@ -10,6 +10,7 @@ import Foundation
 /// This is a class created for conform to HomeView to display prayer times after fetching from API
 extension HomeViewController:HomeViewControllerProtocol{
   
+  
     /**
      protcol delegate function called when there was an error fetching  data
      - Parameters:
@@ -50,6 +51,12 @@ extension HomeViewController:HomeViewControllerProtocol{
         }
         
     }
+    func showIndicator() {
+        self.view.addSubview(activityIndicator)
+        activityIndicator.center = self.view.center
+        activityIndicator.startAnimating()
+    }
+      
     func imoprtToCalendarsSuccess() {
         Helper.showToast(message: "Home.exportedSuccessfullyToasterMessage".localized)
         activityIndicator.stopAnimating()
@@ -59,7 +66,7 @@ extension HomeViewController:HomeViewControllerProtocol{
 /// This is a class created for conform to settingsVCView to recall the API if there is any change at settings Parameters
 extension HomeViewController:settingsVCView{
     func APIParameterChanged() {
-        requestPrayerTimesAPI()
+        presenter.requestPrayerTimesAPI()
 //        self.presenter.saveDataToRealm()
     }
     

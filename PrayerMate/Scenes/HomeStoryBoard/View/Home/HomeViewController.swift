@@ -33,7 +33,6 @@ final class HomeViewController: UIViewController {
     let calendar = Calendar.current
     var nextPrayerDateDate: Date!
     var numberOfSelectedPrayerTimes : Int = 0
-    var addressTitle : String!
     var presenter:HomePresenter!
     var prayerTimesArray: [(isCellSelected: Bool, isBtnChecked:Bool)] = .init()
     var backGroundImagesArray = [UIImage.fajrBackGround,UIImage.sunriseBackGround,UIImage.zuhrBackGround,UIImage.asrBackGround,UIImage.maghribBackGround,UIImage.ishaBackGround]
@@ -57,8 +56,7 @@ final class HomeViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         setupView()
-        
-        requestPrayerTimesAPI()
+        presenter.requestPrayerTimesAPI()
         
         presenter.setupCalendarView(calendarView: calendarView, calenadrIncludingHeaderView: calenadrIncludingHeaderView, calendareFormatter: calendareFormatter)
         
@@ -94,69 +92,7 @@ final class HomeViewController: UIViewController {
         prayerTimestableView.backgroundColor = UIColor.clear
         dateLBL.text = presenter.formateTodayDate()
     }
-    /**
-     Call this function for request Prayer Times API
-     
-     
-     ### Usage Example: ###
-     ````
-     requestPrayerTimesAPI()
-     
-     ````
-     - Parameters:
-     */
-    func requestPrayerTimesAPI(){
-        let url = generateURL()
-        if let final_url = url{
-            self.view.addSubview(activityIndicator)
-            activityIndicator.center = self.view.center
-            activityIndicator.startAnimating()
-            presenter.dataRequest(FINAL_URL:final_url)
-        }
-    }
-    /**
-     Call this function for generate URL required to call the API
-     
-     
-     ### Usage Example: ###
-     ````
-     generateURL()
-     
-     ````
-     - Parameters:
-     - Return Type: URL
-     */
-    func generateURL() -> URL?{
-        let date = generateDateStringSendToAPI()
-        addressTitle = UserDefaults.standard.value(forKey: "addressTitle") as? String ?? ""
-        let method = UserDefaults.standard.value(forKey: "calendarMethod") as! [String:String]
-        let methodID = method["methdID"] ?? "6"
-        let basicURL = "https://muslimsalat.com/" +  addressTitle + "/yearly/" + date
-        let urlString = basicURL + "/false/" + methodID + ".json?key=48ae8106ef6b55e5dac258c0c8d2e224"
-        print(urlString)
-        let ecnodingString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        let url = URL(string: ecnodingString ?? "")
-        return url
-    }
-    /**
-     Call this function for generate Date String required to call the API
-     
-     
-     ### Usage Example: ###
-     ````
-     generateDateStringSendToAPI()
-     
-     ````
-     - Parameters:
-     - Return Type : String
-     */
-    func generateDateStringSendToAPI() -> String{
-        let dateFormatterForAPI = DateFormatter()
-        dateFormatterForAPI.locale = NSLocale(localeIdentifier: "en")  as Locale
-        dateFormatterForAPI.dateFormat = "dd-MM-YYYY"
-        let date = dateFormatterForAPI.string(from: Date())
-        return date
-    }
+ 
     /**
      Call this function for hide calendare view
      
