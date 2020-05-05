@@ -28,7 +28,7 @@ class PrayerTimeBufferPresenter{
     
     init(view:PrayerTimeBufferProtcol?) {
         self.view=view
-        let fetchedData = UserDefaults.standard.data(forKey: "prayerTimesBufferArray")!
+        let fetchedData = UserDefaults.standard.data(forKey: UserDefaultsConstants.prayerTimesBufferArray)!
         prayerTimesBufferArray = try! PropertyListDecoder().decode([PrayerTimeBuffer].self, from: fetchedData)
 
     }
@@ -37,7 +37,7 @@ class PrayerTimeBufferPresenter{
     func getbufferText(index : Int) -> String {
       automaticAdjustBufferBeforeText = ""
         automaticAdjustBufferAfterText = ""
-        let fetchedData = UserDefaults.standard.data(forKey: "prayerTimesBufferArray")!
+        let fetchedData = UserDefaults.standard.data(forKey: UserDefaultsConstants.prayerTimesBufferArray)!
         prayerTimesBufferArray = try! PropertyListDecoder().decode([PrayerTimeBuffer].self, from: fetchedData)
             if let type = prayerTimesBufferArray?[index].type{
                 if(type == "M"){
@@ -71,14 +71,14 @@ class PrayerTimeBufferPresenter{
             prayerTimesBufferArray?[index].after = afterValue
         }
         let prayerTimesBufferData = try! PropertyListEncoder().encode(prayerTimesBufferArray)
-          UserDefaults.standard.set(prayerTimesBufferData, forKey: "prayerTimesBufferArray")
+        UserDefaults.standard.set(prayerTimesBufferData, forKey: UserDefaultsConstants.prayerTimesBufferArray)
         view?.setBufferSucess(forAll: forAll)
     }
     func getToggleValue() -> Bool{
-        return UserDefaults.standard.value(forKey: "automaticAdjustBufferToggle") as? Bool ?? false
+        return UserDefaults.standard.value(forKey: UserDefaultsConstants.automaticAdjustBufferToggle) as? Bool ?? false
     }
     func setToggleValue(value:Bool){
-        UserDefaults.standard.set(value, forKey: "automaticAdjustBufferToggle")
+        UserDefaults.standard.set(value, forKey: UserDefaultsConstants.automaticAdjustBufferToggle)
        }
     func ConfigureCell(cell:UpdatePrayerTimeBufferCellProtcol,cellIndex:Int){
         let text = getbufferText(index: cellIndex)

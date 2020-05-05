@@ -9,18 +9,12 @@
 import UIKit
 
 /// This is a class created for handling Custom Splash Screen
-final class SplashViewController: UIViewController {
+final class SplashViewController: BaseViewController {
     
     //MARK:- IBOUTLET
     
     @IBOutlet weak var loadingView: UIView!
     
-    //MARK:- Variables
-
-    lazy private var activityIndicator : SYActivityIndicatorView = {
-        let image = UIImage.loading
-        return SYActivityIndicatorView(image: UIImage.loading,title: "loader.messageTitle".localized)
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +49,7 @@ final class SplashViewController: UIViewController {
             //            UserDefaults.standard.set(false, forKey:"userLocation" )
             if AppSetting.shared.getCurrentLanguage() != nil{
                 
-                if let _ = UserDefaults.standard.value(forKey: "userLocation") as? [String:Double]{
+                if let _ = UserDefaults.standard.value(forKey: UserDefaultsConstants.userLocation) as? [String:Double]{
                     
                     let viewController = UIStoryboard.Home.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
                     

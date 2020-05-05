@@ -17,12 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
          IQKeyboardManager.shared().isEnabled = true
         //
-     let launchedBefore = UserDefaults.standard.bool(forKey: "isLaunchedBefore")
+        let launchedBefore = UserDefaults.standard.bool(forKey: UserDefaultsConstants.isLaunchedBefore)
      if launchedBefore  {
-        UserDefaults.standard.set(true, forKey: "isLaunchedBefore")
+        UserDefaults.standard.set(true, forKey: UserDefaultsConstants.isLaunchedBefore)
      } else {
          print("First launch, setting UserDefault.")
-         UserDefaults.standard.set(false, forKey: "isLaunchedBefore")
+         UserDefaults.standard.set(false, forKey: UserDefaultsConstants.isLaunchedBefore)
      }
         return true
     }

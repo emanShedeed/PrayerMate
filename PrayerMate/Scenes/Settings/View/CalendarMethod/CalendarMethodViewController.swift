@@ -58,7 +58,7 @@ extension CalendarMethodViewController:UITableViewDataSource,UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let name = calendarMethodArray[indexPath.row]
         let dect:[String:String]=["methodName":name ,"methdID":"\(indexPath.row+1)"]
-        UserDefaults.standard.set(dect, forKey: "calendarMethod")
+        UserDefaults.standard.set(dect, forKey:UserDefaultsConstants.calendarMethod)
         toSettingelegate?.didUpdateSettings()
         self.dismiss(animated: true, completion: nil)
     }

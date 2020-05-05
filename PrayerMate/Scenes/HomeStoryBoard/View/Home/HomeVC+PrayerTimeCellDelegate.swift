@@ -14,7 +14,7 @@ extension HomeViewController:HomePrayerTimeCellProtcol{
         numberOfSelectedPrayerTimes = 0
         prayerTimestableView.reloadData()
         self.selectedPrayerTimesIndicies = self.prayerTimesArray.indices.filter{self.prayerTimesArray[$0].isBtnChecked == true}
-        UserDefaults.standard.set(self.selectedPrayerTimesIndicies, forKey: "selectedPrayerTimesIndicies")
+        UserDefaults.standard.set(self.selectedPrayerTimesIndicies, forKey:UserDefaultsConstants.selectedPrayerTimesIndicies)
         
     }
     

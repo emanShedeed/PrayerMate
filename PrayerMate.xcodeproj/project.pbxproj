@@ -17,7 +17,7 @@
 		BD0C905524273A8B000B8EAC /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905424273A8B000B8EAC /* UIButton+Extension.swift */; };
 		BD0C905924276C13000B8EAC /* LocationSearchtable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905724276C12000B8EAC /* LocationSearchtable.swift */; };
 		BD0C905A24276C13000B8EAC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905824276C13000B8EAC /* MapViewController.swift */; };
-		BD0C905C242787E9000B8EAC /* HomeAPIResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905B242787E9000B8EAC /* HomeAPIResponseModel.swift */; };
+		BD0C905C242787E9000B8EAC /* PrayerTimesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905B242787E9000B8EAC /* PrayerTimesResponseModel.swift */; };
 		BD0CFB9A2451BAA900177761 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0CFB992451BAA900177761 /* LocalNotification.swift */; };
 		BD0CFB9C2451BF7100177761 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0CFB9B2451BF7100177761 /* Notification.swift */; };
 		BD12EB46242225EB00001437 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB45242225EA00001437 /* RoundedButton.swift */; };
@@ -27,6 +27,10 @@
 		BD287BCA243B0BD100373170 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD287BC9243B0BD100373170 /* SplashPresenter.swift */; };
 		BD287BCD243B466800373170 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD287BCC243B466800373170 /* SettingPresenter.swift */; };
 		BD287BD0243B50BA00373170 /* SettingsLocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD287BCF243B50BA00373170 /* SettingsLocationPresenter.swift */; };
+		BD28C05F2461673A00E97EC6 /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28C05E2461673A00E97EC6 /* UserDefaultsConstants.swift */; };
+		BD28C062246171BC00E97EC6 /* LocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28C061246171BC00E97EC6 /* LocationPresenter.swift */; };
+		BD28C06424617A9700E97EC6 /* Location+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28C06324617A9700E97EC6 /* Location+PresenterDelegate.swift */; };
+		BD28C06624618A9200E97EC6 /* SettingLocation+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28C06524618A9200E97EC6 /* SettingLocation+PresenterDelegate.swift */; };
 		BD2E0BF12431D64800D2B6E6 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2E0BF02431D64800D2B6E6 /* AboutViewController.swift */; };
 		BD371D902439DA3B00ED2874 /* CustomActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD371D8F2439DA3B00ED2874 /* CustomActionViewController.swift */; };
 		BD42746D242A4459007DE9AC /* CustomJTAppleCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD42746C242A4459007DE9AC /* CustomJTAppleCalendarCell.swift */; };
@@ -93,7 +97,7 @@
 		BD0C905424273A8B000B8EAC /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		BD0C905724276C12000B8EAC /* LocationSearchtable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchtable.swift; sourceTree = "<group>"; };
 		BD0C905824276C13000B8EAC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		BD0C905B242787E9000B8EAC /* HomeAPIResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPIResponseModel.swift; sourceTree = "<group>"; };
+		BD0C905B242787E9000B8EAC /* PrayerTimesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimesResponseModel.swift; sourceTree = "<group>"; };
 		BD0CFB992451BAA900177761 /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
 		BD0CFB9B2451BF7100177761 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		BD12EB45242225EA00001437 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -103,6 +107,10 @@
 		BD287BC9243B0BD100373170 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		BD287BCC243B466800373170 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
 		BD287BCF243B50BA00373170 /* SettingsLocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLocationPresenter.swift; sourceTree = "<group>"; };
+		BD28C05E2461673A00E97EC6 /* UserDefaultsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstants.swift; sourceTree = "<group>"; };
+		BD28C061246171BC00E97EC6 /* LocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPresenter.swift; sourceTree = "<group>"; };
+		BD28C06324617A9700E97EC6 /* Location+PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		BD28C06524618A9200E97EC6 /* SettingLocation+PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingLocation+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		BD2E0BF02431D64800D2B6E6 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		BD371D8F2439DA3B00ED2874 /* CustomActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActionViewController.swift; sourceTree = "<group>"; };
 		BD42746C242A4459007DE9AC /* CustomJTAppleCalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomJTAppleCalendarCell.swift; sourceTree = "<group>"; };
@@ -233,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				BD12EB482422267F00001437 /* LocationViewController.swift */,
+				BD28C06324617A9700E97EC6 /* Location+PresenterDelegate.swift */,
 				BD0C905624276BD2000B8EAC /* Map */,
 			);
 			path = Location;
@@ -252,6 +261,14 @@
 				BD287BCF243B50BA00373170 /* SettingsLocationPresenter.swift */,
 			);
 			path = SettingsLocation;
+			sourceTree = "<group>";
+		};
+		BD28C0602461719800E97EC6 /* LocationPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				BD28C061246171BC00E97EC6 /* LocationPresenter.swift */,
+			);
+			path = LocationPresenter;
 			sourceTree = "<group>";
 		};
 		BD2E0BEF2431D5F800D2B6E6 /* About */ = {
@@ -340,7 +357,7 @@
 		BD772156241657E3008A8947 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BD0C905B242787E9000B8EAC /* HomeAPIResponseModel.swift */,
+				BD0C905B242787E9000B8EAC /* PrayerTimesResponseModel.swift */,
 				BD1FC1DC24458D3200540A2B /* RealmPrayerTimeModel.swift */,
 				BDFFDA7D243635860066F493 /* PrayerTimeBuffer.swift */,
 				BD88917F244CB33C00C58D5E /* GoogleService.swift */,
@@ -448,6 +465,7 @@
 				BD12EB45242225EA00001437 /* RoundedButton.swift */,
 				BDD1F7502417B60E006B87B7 /* Helper.swift */,
 				BDD1F74C2417B5E2006B87B7 /* Constants.swift */,
+				BD28C05E2461673A00E97EC6 /* UserDefaultsConstants.swift */,
 				BDD1F74D2417B5E3006B87B7 /* Font.swift */,
 				BDFCFE47241E4AF80033D031 /* Loader */,
 				BDA3F863241F70F600705569 /* Localization */,
@@ -493,6 +511,7 @@
 			isa = PBXGroup;
 			children = (
 				BDD1F7402417AA38006B87B7 /* SplashScreen */,
+				BD28C0602461719800E97EC6 /* LocationPresenter */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -567,6 +586,7 @@
 			isa = PBXGroup;
 			children = (
 				BDFFDA68243359180066F493 /* SettingsLocationViewController.swift */,
+				BD28C06524618A9200E97EC6 /* SettingLocation+PresenterDelegate.swift */,
 			);
 			path = SettingsLocation;
 			sourceTree = "<group>";
@@ -776,6 +796,8 @@
 				BDD1F74A2417B5C7006B87B7 /* UIString+Extension.swift in Sources */,
 				BD65891E2430D0EC00FEE06C /* FrequentlyQuestionsViewController.swift in Sources */,
 				BDFFDA7A24361E5C0066F493 /* PrayerTimeBufferPresenter.swift in Sources */,
+				BD28C062246171BC00E97EC6 /* LocationPresenter.swift in Sources */,
+				BD28C05F2461673A00E97EC6 /* UserDefaultsConstants.swift in Sources */,
 				BD5FC48D24320C5D0033BCCE /* BaseViewController.swift in Sources */,
 				BDFFDA7C243622400066F493 /* PrayerTimeBufferVC+PresenterDelegate.swift in Sources */,
 				BD2E0BF12431D64800D2B6E6 /* AboutViewController.swift in Sources */,
@@ -790,6 +812,7 @@
 				BD12EB492422267F00001437 /* LocationViewController.swift in Sources */,
 				BDFCFE49241E4B310033D031 /* SYActivityIndicatorView.swift in Sources */,
 				BD0CFB9C2451BF7100177761 /* Notification.swift in Sources */,
+				BD28C06624618A9200E97EC6 /* SettingLocation+PresenterDelegate.swift in Sources */,
 				BD12EB4B2422290C00001437 /* RoundedTextField.swift in Sources */,
 				BDFFDA5F2432E07D0066F493 /* CalendarMethodCell.swift in Sources */,
 				BD287BCA243B0BD100373170 /* SplashPresenter.swift in Sources */,
@@ -797,7 +820,7 @@
 				BDA3F871241F7E2B00705569 /* localizedText+Extension.swift in Sources */,
 				BDD1F7492417B5C7006B87B7 /* UIImage+Extension.swift in Sources */,
 				BDD1F74B2417B5C7006B87B7 /* UIColor+Externsion.swift in Sources */,
-				BD0C905C242787E9000B8EAC /* HomeAPIResponseModel.swift in Sources */,
+				BD0C905C242787E9000B8EAC /* PrayerTimesResponseModel.swift in Sources */,
 				BDFFDA7E243635870066F493 /* PrayerTimeBuffer.swift in Sources */,
 				BDCF6A6F240D257A00DD46F7 /* AuthenticationManager.swift in Sources */,
 				BDA3F868241F712400705569 /* BundleExtension.swift in Sources */,
@@ -806,6 +829,7 @@
 				BD0C90502423B175000B8EAC /* HomeVC+PresenterDelegate.swift in Sources */,
 				BDFFDA622432EEDD0066F493 /* SettingCell.swift in Sources */,
 				BDFFDA702434C44A0066F493 /* ImportToCalendarViewController.swift in Sources */,
+				BD28C06424617A9700E97EC6 /* Location+PresenterDelegate.swift in Sources */,
 				BD0C90482423A161000B8EAC /* HomeViewController.swift in Sources */,
 				BD0C905924276C13000B8EAC /* LocationSearchtable.swift in Sources */,
 				BD0C904A2423A4C8000B8EAC /* HomePrayerTimeCell.swift in Sources */,

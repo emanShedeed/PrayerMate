@@ -9,11 +9,16 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+    //MARK:- Variables
+    lazy var activityIndicator : SYActivityIndicatorView = {
+        let image = UIImage.loading
+        return SYActivityIndicatorView(image: UIImage.loading,title: "loader.messageTitle".localized)
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        styleNavBar()
-        TransparentNavBar()
+//        styleNavBar()
+//        TransparentNavBar()
     }
     
     func TransparentNavBar(){ self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)

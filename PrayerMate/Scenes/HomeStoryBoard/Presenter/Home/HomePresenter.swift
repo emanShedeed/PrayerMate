@@ -40,7 +40,7 @@ class HomePresenter{
     }
     let prayerTimesNames=["Home.fajrPrayerLblTitle","Home.sunrisePrayerLblTitle","Home.zuhrPrayerLblTitle","Home.asrPrayerLblTitle","Home.maghribPrayerLblTitle","Home.ishaPrayerLblTitle"]
     var todayParyerTimes = [String]()
-    var annualPrayerTimes : HomeAPIResponseModel?
+    var annualPrayerTimes : PrayerTimesResponseModel?
     var calendarDateTitle = ""
     
     //MARK:- Methods
@@ -109,10 +109,10 @@ class HomePresenter{
                 if let URLdata = data {
                     print(URLdata)
                     do{
-                        let prayerTimes = try JSONDecoder().decode(HomeAPIResponseModel.self, from: URLdata)
+                        let prayerTimes = try JSONDecoder().decode(PrayerTimesResponseModel.self, from: URLdata)
                         if(prayerTimes.statusValid == 1){
                             //                            print(prayerTimes.items?[0].dateFor)
-                            self.todayParyerTimes=[(prayerTimes.items?[0].fajr ?? ""),(prayerTimes.items?[0].shurooq ?? ""),(prayerTimes.items?[0].dhuhr ?? ""),(prayerTimes.items?[0].asr ?? ""),(prayerTimes.items?[0].maghrib ?? ""),(prayerTimes.items?[0].isha ?? "")]
+                            self.todayParyerTimes=[(prayerTimes.prayerTimeitems?[0].fajr ?? ""),(prayerTimes.prayerTimeitems?[0].shurooq ?? ""),(prayerTimes.prayerTimeitems?[0].dhuhr ?? ""),(prayerTimes.prayerTimeitems?[0].asr ?? ""),(prayerTimes.prayerTimeitems?[0].maghrib ?? ""),(prayerTimes.prayerTimeitems?[0].isha ?? "")]
                             self.annualPrayerTimes = prayerTimes
                             self.view?.fetchDataSucess()
                         }else{
@@ -173,8 +173,8 @@ class HomePresenter{
      */
     func generateURL() -> URL?{
         let date = generateDateStringSendToAPI()
-        let addressTitle = UserDefaults.standard.value(forKey: "addressTitle") as? String ?? ""
-        let method = UserDefaults.standard.value(forKey: "calendarMethod") as! [String:String]
+        let addressTitle = UserDefaults.standard.value(forKey: UserDefaultsConstants.addressTitle) as? String ?? ""
+        let method = UserDefaults.standard.value(forKey: UserDefaultsConstants.calendarMethod) as! [String:String]
         let methodID = method["methdID"] ?? "6"
         let basicURL = "https://muslimsalat.com/" +  addressTitle + "/yearly/" + date
         let urlString = basicURL + "/false/" + methodID + ".json?key=48ae8106ef6b55e5dac258c0c8d2e224"
@@ -225,7 +225,7 @@ class HomePresenter{
             view?.showError(error: "Error intialize Realm \(error)")
         }
         
-        annualPrayerTimes?.items?.forEach { (item) in
+        annualPrayerTimes?.prayerTimeitems?.forEach { (item) in
             let prayerTimeObject = RealmPrayerTimeModel()
             prayerTimeObject.id = prayerTimeObject.incrementID()
             prayerTimeObject.date = item.dateFor ?? ""
@@ -426,14 +426,14 @@ extension HomePresenter{
  
         
         ///get prayer buffer
-        let fetchedData = UserDefaults.standard.data(forKey: "prayerTimesBufferArray")!
+        let fetchedData = UserDefaults.standard.data(forKey: UserDefaultsConstants.prayerTimesBufferArray)!
         let  prayerTimesBufferArray = try! PropertyListDecoder().decode([PrayerTimeBuffer].self, from: fetchedData)
         
         //get selected calendars
-        let calendars = UserDefaults.standard.value(forKey: "choosenCalendars") as? [Int]
+        let calendars = UserDefaults.standard.value(forKey: UserDefaultsConstants.choosenCalendars) as? [Int]
         
         // get selected prayer times indicies
-        let selectedPrayerTimesIndicies = UserDefaults.standard.value(forKey: "selectedPrayerTimesIndicies") as? [Int]
+        let selectedPrayerTimesIndicies = UserDefaults.standard.value(forKey: UserDefaultsConstants.selectedPrayerTimesIndicies) as? [Int]
         
       
         
@@ -494,7 +494,7 @@ extension HomePresenter{
                 }
                 if(calendars?.contains(2) ?? false){
                     
-                    let id = UserDefaults.standard.value(forKey: "microsoftCalendarID") as! String
+                    let id = UserDefaults.standard.value(forKey: UserDefaultsConstants.microsoftCalendarID) as! String
                     
                     self.addEventListToMicrosoftCalendar(calendarId:id , title: "it's \(prayerName) time", description: "", eventStartDate:MSFormatter.string(from: eventStartDate ?? Date()), eventEndDate: MSFormatter.string(from: eventEndDate ?? Date()) , tillDate: importEndDateAsString)
                     sleep(1)
@@ -590,7 +590,7 @@ extension HomePresenter{
       
       */
     func  addEventListToMicrosoftCalendar(calendarId:String,title: String, description: String?, eventStartDate: String, eventEndDate: String,tillDate:String){
-        let token = UserDefaults.standard.value(forKey: "microsoftAuthorization") as! String
+        let token = UserDefaults.standard.value(forKey: UserDefaultsConstants.microsoftAuthorization) as! String
         let httpClient = MSClientFactory.createHTTPClient(with: AuthenticationManager.instance)
         let MSGraphBaseURL = "https://graph.microsoft.com/v1.0/"
         var urlRequest: NSMutableURLRequest? = nil

@@ -123,6 +123,8 @@ class FrequentlyQuestionsViewController: BaseViewController {
                            */
     
     func setUpNavBar(){
+        styleNavBar()
+        TransparentNavBar()
         let backButton = UIBarButtonItem()
         backButton.title = ""
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton

@@ -117,7 +117,7 @@ class CustomActionViewController: UIViewController {
     }
     @IBAction func closeViewBtnPressed(_ sender: Any) {
         if(forall){
-            UserDefaults.standard.set(false, forKey: "automaticAdjustBufferToggle")
+            UserDefaults.standard.set(false, forKey:UserDefaultsConstants.automaticAdjustBufferToggle)
         }
         delegate?.didUpdateBuffer(forAll: forall)
         self.dismiss(animated: true, completion: nil)

@@ -25,8 +25,8 @@ extension UIColor {
     }
     //////
     static let appColor = UIColor(named:"AppColor")
-     static let appGrayColor = UIColor(named:"AppGrayColor")
-//    static let checkedBox = UIImage(named: "checkedBox")
-//    static let unCheckedBox = UIImage(named: "uncheckedBox")
-//    static let downArrow = UIImage(named: "downArrow")
+      static let appGrayColor = UIColor(named:"AppGrayColor")
+    static let locatemeBtnG1 = UIColor(named: "locatemeBtnG1")
+    static let locatemeBtnG2 = UIColor(named: "locatemeBtnG1")
+
 }

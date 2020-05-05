@@ -28,10 +28,12 @@ final class LocationViewController: UIViewController {
     var completeAddressTitle : String = ""
     var isLocationSet = false
     var dect:[String:Double]?
+    var presenter:LocationPresenter!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupLocationManager()
+        presenter=LocationPresenter(view: self)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -46,7 +48,7 @@ final class LocationViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        locateMeBtn.applyGradient(with:  [UIColor.init(rgb: 0x336666), UIColor.init(rgb: 0x339966)], gradient: .horizontal)
+        locateMeBtn.applyGradient(with:  [UIColor.locatemeBtnG1!, UIColor.locatemeBtnG2!], gradient: .horizontal)
         animateBackGround()
     }
     override func viewDidLayoutSubviews() {
@@ -56,12 +58,12 @@ final class LocationViewController: UIViewController {
     @IBAction func finishBtnPressed(_ sender: Any) {
         
         if (isLocationSet && addressTitle != "" ){
-            UserDefaults.standard.set(dect, forKey: "userLocation")
+            UserDefaults.standard.set(dect, forKey: UserDefaultsConstants.userLocation)
             let viewController = UIStoryboard.Home.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
             
-            UserDefaults.standard.set(addressTitle, forKey: "addressTitle")
+            UserDefaults.standard.set(addressTitle, forKey: UserDefaultsConstants.addressTitle)
             
-            UserDefaults.standard.set(completeAddressTitle, forKey: "completeAddressTitle")
+            UserDefaults.standard.set(completeAddressTitle, forKey: UserDefaultsConstants.completeAddressTitle)
             
             self.present(viewController, animated: true, completion:nil)
             
@@ -118,20 +120,21 @@ extension LocationViewController:CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if(Helper.isConnectedToNetwork()){
         userLocation = locations[locations.count-1]
-        if let l=userLocation
+        if let location=userLocation
         {
-            if(l.horizontalAccuracy>0)
+            if(location.horizontalAccuracy>0)
             {
                 locationManager.stopUpdatingLocation()
                 locationManager.delegate=nil
                 //save user location in user defaults
-                let lat = l.coordinate.latitude
-                let lon = l.coordinate.longitude
+                let lat = location.coordinate.latitude
+                let lon = location.coordinate.longitude
                  dect=["lat":lat,"long":lon]
               //  UserDefaults.standard.set(dect, forKey: "userLocation")
                 isLocationSet = true
-                UserDefaults.standard.set(true, forKey: "isLocatedAutomatically")
-                getAddressFromLocation(lat:l.coordinate.latitude,long:l.coordinate.longitude)
+                UserDefaults.standard.set(true, forKey: UserDefaultsConstants.isLocatedAutomatically)
+                presenter.getAddressFromLocation(lat:location.coordinate.latitude,long:location.coordinate.longitude)
+                 
             }
         }
         }else{
@@ -139,55 +142,7 @@ extension LocationViewController:CLLocationManagerDelegate{
         }
     }
     
-    func getAddressFromLocation(lat:Double,long:Double){
-        let geoCoder = CLGeocoder()
-        geoCoder.reverseGeocodeLocation(CLLocation(latitude: lat, longitude:long), completionHandler: { (placemarks, error) -> Void in
-            
-            // Place details
-            var placeMark: CLPlacemark?
-            placeMark = placemarks?[0]
-            
-            // Complete address as PostalAddress
-            // print(placeMark.postalAddress as Any)  //  Import Contacts
-            
-            // Location name
-            
-            if let locationName = placeMark?.name  {
-                print(locationName)
-            }
-            
-            // Street address
-            if let street = placeMark?.thoroughfare {
-                print(street)
-            }
-            
-            // Country
-            if let country = placeMark?.country {
-                print(country)
-            }
-            var title=""
-            // street
-            if let thoroughfare = placeMark?.thoroughfare {
-                title +=  thoroughfare + " , "
-                
-            }
-            // city
-            if let city=placeMark?.administrativeArea {
-                title += city + " , "
-                self.addressTitle = city
-            }
-            
-            if let country = placeMark?.country{
-                title +=  country
-                //                self.addressTitle += " \(country)"
-            }
-            if self.addressTitle == "" {
-                self.addressTitle = title.components(separatedBy: " ").first ?? title
-            }
-            self.addressTxt.text=title
-            self.completeAddressTitle = title
-        })
-    }
+
 }
 //MARK:- Location ViewController Confirm to maplLocationProtcol to Display Addrees
 
@@ -200,7 +155,7 @@ extension LocationViewController:maplLocationProtcol{
            dect=["lat":lat,"long":lng]
           //  UserDefaults.standard.set(dect, forKey: "userLocation")
             isLocationSet = true
-            UserDefaults.standard.set(false, forKey: "isLocatedAutomatically")
+            UserDefaults.standard.set(false, forKey: UserDefaultsConstants.isLocatedAutomatically)
         
         addressTxt.text=selectedPlace
         completeAddressTitle = selectedPlace

@@ -25,24 +25,25 @@ class SettingsLocationViewController: UIViewController {
     var completeAddressTitle : String = ""
     var isLocatedAutomatically = false
     weak var toSettingelegate : UpdateSettingsProtcol?
-     let presenter = SettingsLocationPresenter()
+    var presenter : SettingsLocationPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        presenter = SettingsLocationPresenter(view: self)
         roundedView.roundCorners([.topLeft,.topRight], radius: 20)
         isLocatedAutomatically=UserDefaults.standard.value(forKey: "isLocatedAutomatically") as? Bool ?? false
         //user aloow acess and use the return address and not use LocateMeBtn
         switchLocation.isOn = presenter.detectlocationServicesEnabled() && isLocatedAutomatically
-        self.addressLbl.text = UserDefaults.standard.value(forKey: "completeAddressTitle") as? String ?? ""
+        self.addressLbl.text = UserDefaults.standard.value(forKey: UserDefaultsConstants.completeAddressTitle) as? String ?? ""
     }
     
     //MARK:- IBActions
     
     @IBAction func closeViewBtnPressed(_ sender: Any) {
         if(addressTitle != ""){
-        UserDefaults.standard.set(addressTitle, forKey: "addressTitle")
+            UserDefaults.standard.set(addressTitle, forKey:UserDefaultsConstants.addressTitle)
         toSettingelegate?.didUpdateSettings()
         }
         self.dismiss(animated: true, completion: nil)
@@ -89,87 +90,38 @@ extension SettingsLocationViewController:CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         userLocation = locations[locations.count-1]
         
-        if let l=userLocation
+        if let location=userLocation
         {
-            if(l.horizontalAccuracy>0)
+            if(location.horizontalAccuracy>0)
             {
                 locationManager.stopUpdatingLocation()
                 locationManager.delegate=nil
                 //save user location in user defaults
-                let lat = l.coordinate.latitude
-                let lon = l.coordinate.longitude
+                let lat = location.coordinate.latitude
+                let lon = location.coordinate.longitude
                 let dect:[String:Double]=["lat":lat,"long":lon]
-                UserDefaults.standard.set(dect, forKey: "userLocation")
+                UserDefaults.standard.set(dect, forKey: UserDefaultsConstants.userLocation)
                 
-                UserDefaults.standard.set(true, forKey: "isLocatedAutomatically")
-                getAddressFromLocation(lat:l.coordinate.latitude,long:l.coordinate.longitude)
+                UserDefaults.standard.set(true, forKey: UserDefaultsConstants.isLocatedAutomatically)
+                presenter.getAddressFromLocation(lat:location.coordinate.latitude,long:location.coordinate.longitude)
+                 
             }
         }
     }
-    func getAddressFromLocation(lat:Double,long:Double){
-        let geoCoder = CLGeocoder()
-        geoCoder.reverseGeocodeLocation(CLLocation(latitude: lat, longitude:long), completionHandler: { (placemarks, error) -> Void in
-            
-            // Place details
-            var placeMark: CLPlacemark?
-            placeMark = placemarks?[0]
-            
-            // Complete address as PostalAddress
-            // print(placeMark.postalAddress as Any)  //  Import Contacts
-            
-            // Location name
-            
-            if let locationName = placeMark?.name  {
-                print(locationName)
-            }
-            
-            // Street address
-            if let street = placeMark?.thoroughfare {
-                print(street)
-            }
-            
-            // Country
-            if let country = placeMark?.country {
-                print(country)
-            }
-            var title=""
-            // street
-            if let thoroughfare = placeMark?.thoroughfare {
-                title +=  thoroughfare + " , "
-                
-            }
-            // city
-//                  if let city=placeMark?.locality{
-            if let city=placeMark?.administrativeArea{
-                title += city + " , "
-                self.addressTitle = city
-            }
-            
-            if let country = placeMark?.country{
-                title +=  country
-                //                self.addressTitle += " \(country)"
-            }
-            self.addressLbl.text=title
-            
-            self.completeAddressTitle = title
-            if(self.completeAddressTitle != ""){
-             UserDefaults.standard.set(self.completeAddressTitle, forKey: "completeAddressTitle")
-            }
-        })
-    }
+
 }
 /// This is a class created for handling maplLocation to display Location Address
 extension SettingsLocationViewController:maplLocationProtcol{
     func locationIsSeleted(at lat: Double, lng: Double, selectedPlace: String,cityName:String) {
         if(selectedPlace != ""){
             let dect:[String:Double]=["lat":lat,"long":lng]
-            UserDefaults.standard.set(dect, forKey: "userLocation")
-            UserDefaults.standard.set(false, forKey: "isLocatedAutomatically")
+            UserDefaults.standard.set(dect, forKey:UserDefaultsConstants.userLocation)
+            UserDefaults.standard.set(false, forKey: UserDefaultsConstants.isLocatedAutomatically)
             switchLocation.isOn = false
         }
         addressLbl.text=selectedPlace
         if(addressLbl.text != ""){
-        UserDefaults.standard.set(addressLbl.text, forKey: "completeAddressTitle")
+            UserDefaults.standard.set(addressLbl.text, forKey: UserDefaultsConstants.completeAddressTitle)
         }
         
         completeAddressTitle = selectedPlace

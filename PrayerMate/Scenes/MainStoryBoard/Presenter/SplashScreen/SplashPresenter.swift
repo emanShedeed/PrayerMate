@@ -19,15 +19,15 @@ final class SplashPresenter{
      ````
      */
     func setupUserDefaults(){
-        if  UserDefaults.standard.value(forKey: "automaticAdjustBufferToggle") == nil{
-            UserDefaults.standard.set(false, forKey: "automaticAdjustBufferToggle")
+        if  UserDefaults.standard.value(forKey: UserDefaultsConstants.automaticAdjustBufferToggle) == nil{
+            UserDefaults.standard.set(false, forKey: UserDefaultsConstants.automaticAdjustBufferToggle)
         }
       
-        if  UserDefaults.standard.value(forKey: "choosenCalendars") == nil{
-            UserDefaults.standard.set([0], forKey: "choosenCalendars")
+        if  UserDefaults.standard.value(forKey: UserDefaultsConstants.choosenCalendars) == nil{
+            UserDefaults.standard.set([0], forKey: UserDefaultsConstants.choosenCalendars)
         }
         
-        if  UserDefaults.standard.value(forKey: "prayerTimesBufferArray") == nil{
+        if  UserDefaults.standard.value(forKey: UserDefaultsConstants.prayerTimesBufferArray) == nil{
             
             let prayerTimesBufferArray =
                 [
@@ -41,13 +41,13 @@ final class SplashPresenter{
             
             let prayerTimesBufferData = try! PropertyListEncoder().encode(prayerTimesBufferArray)
             
-            UserDefaults.standard.set(prayerTimesBufferData, forKey: "prayerTimesBufferArray")
+            UserDefaults.standard.set(prayerTimesBufferData, forKey:UserDefaultsConstants.prayerTimesBufferArray)
         }
         
-        if  UserDefaults.standard.value(forKey: "calendarMethod") == nil{
+        if  UserDefaults.standard.value(forKey: UserDefaultsConstants.calendarMethod) == nil{
             
             let dect:[String:String]=["methodName":"CalendarMethod.ummAlQura" ,"methdID":"\(6)"]
-            UserDefaults.standard.set(dect, forKey: "calendarMethod")
+            UserDefaults.standard.set(dect, forKey:UserDefaultsConstants.calendarMethod)
         }
         
     }

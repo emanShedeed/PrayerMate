@@ -79,7 +79,7 @@ class ImportToCalendarViewController: UIViewController {
                  - Parameters:
                      */
     func displaySelectedCalendars(){
-        let calendars = UserDefaults.standard.value(forKey: "choosenCalendars") as? [Int]
+        let calendars = UserDefaults.standard.value(forKey: UserDefaultsConstants.choosenCalendars) as? [Int]
              for (index, button) in checkBtns.enumerated() {
                  if(calendars?.contains(index) ?? false){
                      button.isSelected = true
@@ -136,7 +136,7 @@ class ImportToCalendarViewController: UIViewController {
                 signInMicrosoftAccount()
            }
             else {
-                UserDefaults.standard.set(choosenCalendars, forKey: "choosenCalendars")
+                UserDefaults.standard.set(choosenCalendars, forKey: UserDefaultsConstants.choosenCalendars)
                 toSettingelegate?.didUpdateCalendarName()
                 self.dismiss(animated: true, completion: nil)
             }
@@ -194,13 +194,13 @@ extension ImportToCalendarViewController:GIDSignInDelegate{
             self.service.authorizer = user.authentication.fetcherAuthorizer()
             let googleService = GoogleService(authorizers: user.authentication.fetcherAuthorizer())
             let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: googleService)
-             UserDefaults.standard.set(encodedData, forKey: "googleService")
+            UserDefaults.standard.set(encodedData, forKey: UserDefaultsConstants.googleService)
              UserDefaults.standard.synchronize()
             if filteredIndices.contains(2) {
                 print("MS Checked")
                 signInMicrosoftAccount()
             }else{
-                UserDefaults.standard.set(choosenCalendars, forKey: "choosenCalendars")
+                UserDefaults.standard.set(choosenCalendars, forKey: UserDefaultsConstants.choosenCalendars)
                 toSettingelegate?.didUpdateCalendarName()
                 self.dismiss(animated: true, completion: nil)
             }
@@ -239,9 +239,9 @@ extension ImportToCalendarViewController{
                 //                    self.token = token!
                 Helper.showToast(message: "ImportToCalendarVC.MSSignInSuccessMessage".localized)
                 self.choosenCalendars.append(2)
-                UserDefaults.standard.set(token!, forKey: "microsoftAuthorization")
+                UserDefaults.standard.set(token!, forKey: UserDefaultsConstants.microsoftAuthorization)
                 print("MS signed in")
-                UserDefaults.standard.set(self.choosenCalendars, forKey: "choosenCalendars")
+                UserDefaults.standard.set(self.choosenCalendars, forKey: UserDefaultsConstants.choosenCalendars)
                 self.toSettingelegate?.didUpdateCalendarName()
                 self.dismiss(animated: true, completion: nil)
                 //                self.createEvent(token:token!)
@@ -252,7 +252,7 @@ extension ImportToCalendarViewController{
     }
       func getCalenderID(token: String) {
             let httpClient = MSClientFactory.createHTTPClient(with: AuthenticationManager.instance)
-            let token = UserDefaults.standard.value(forKey: "microsoftAuthorization") as! String
+        let token = UserDefaults.standard.value(forKey: UserDefaultsConstants.microsoftAuthorization) as! String
             let MSGraphBaseURL = "https://graph.microsoft.com/v1.0/"
             var urlRequest: NSMutableURLRequest? = nil
             if let url = URL(string: MSGraphBaseURL + ("/me/calendar")) {
@@ -272,7 +272,7 @@ extension ImportToCalendarViewController{
                             if let id = calendar?.entityId{
                                 //                                self.calendarId = id
 //                                self.MicrosoftCalendarID = id
-                            UserDefaults.standard.set(id, forKey: "microsoftCalendarID")
+                                UserDefaults.standard.set(id, forKey: UserDefaultsConstants.microsoftCalendarID)
     //                            self.createEventToMicrosoftCalendar(calendarId: id, title: "it's Fajr time", description: "", eventStartDate:"" , eventEndDate: "" , tillDate: "")
                             }
                         }

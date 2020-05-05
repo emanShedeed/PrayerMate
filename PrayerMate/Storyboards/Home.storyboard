@@ -153,26 +153,52 @@
                                                     <outlet property="delegate" destination="hRK-ZJ-BbG" id="I7u-eN-1A4"/>
                                                 </connections>
                                             </tableView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfE-U2-afT" customClass="RoundedButton" customModule="PrayerMate" customModuleProvider="target">
+                                            <visualEffectView opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nA-bk-kES">
                                                 <rect key="frame" x="17" y="567" width="341" height="45"/>
-                                                <color key="backgroundColor" white="1" alpha="0.73999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ag8-ZW-Bug">
+                                                    <rect key="frame" x="0.0" y="0.0" width="341" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfE-U2-afT" customClass="RoundedButton" customModule="PrayerMate" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="341" height="45"/>
+                                                            <color key="backgroundColor" white="1" alpha="0.73999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <state key="normal" title="Import" image="calendar">
+                                                                <color key="titleColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.40000000000000002" alpha="0.73999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Home.importBtnTitle"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="importBtnPressed:" destination="hRK-ZJ-BbG" eventType="touchUpInside" id="Ye2-az-RLp"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="JfE-U2-afT" secondAttribute="trailing" id="8MD-q1-eND"/>
+                                                        <constraint firstAttribute="bottom" secondItem="JfE-U2-afT" secondAttribute="bottom" id="FAa-O4-gkU"/>
+                                                        <constraint firstItem="JfE-U2-afT" firstAttribute="top" secondItem="ag8-ZW-Bug" secondAttribute="top" id="ced-Bk-MHl"/>
+                                                        <constraint firstItem="JfE-U2-afT" firstAttribute="leading" secondItem="ag8-ZW-Bug" secondAttribute="leading" id="qK7-aY-IAu"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="Lho-sf-KAV"/>
+                                                    <constraint firstAttribute="height" constant="45" id="x6l-Hj-XKM"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <state key="normal" title="Import" image="calendar">
-                                                    <color key="titleColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.40000000000000002" alpha="0.73999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
+                                                <blurEffect style="extraLight"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="10"/>
+                                                        <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Home.importBtnTitle"/>
                                                 </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="importBtnPressed:" destination="hRK-ZJ-BbG" eventType="touchUpInside" id="Ye2-az-RLp"/>
-                                                </connections>
-                                            </button>
+                                            </visualEffectView>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gE9-fh-Lok" userLabel="CalenadarView">
                                                 <rect key="frame" x="0.0" y="249" width="375" height="418"/>
                                                 <subviews>
@@ -302,19 +328,25 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <subviews>
-                                                                                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e1j-N0-njO">
+                                                                                <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e1j-N0-njO">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
-                                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                     <color key="backgroundColor" red="0.70588235294117641" green="0.8784313725490196" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 </view>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P3-tK-X4d">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P3-tK-X4d">
                                                                                     <rect key="frame" x="-3.5" y="7.5" width="42" height="20.5"/>
-                                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
+                                                                            <constraints>
+                                                                                <constraint firstItem="7P3-tK-X4d" firstAttribute="centerX" secondItem="CMm-Ja-VoK" secondAttribute="centerX" id="4a9-AX-eEE"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="e1j-N0-njO" secondAttribute="trailing" id="5aH-ak-eXu"/>
+                                                                                <constraint firstItem="7P3-tK-X4d" firstAttribute="centerY" secondItem="CMm-Ja-VoK" secondAttribute="centerY" id="7EM-kI-sJE"/>
+                                                                                <constraint firstItem="e1j-N0-njO" firstAttribute="leading" secondItem="CMm-Ja-VoK" secondAttribute="leading" id="7WY-Lk-xo8"/>
+                                                                                <constraint firstItem="e1j-N0-njO" firstAttribute="top" secondItem="CMm-Ja-VoK" secondAttribute="top" id="8eU-9C-bZh"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="e1j-N0-njO" secondAttribute="bottom" id="rqO-HX-zEo"/>
+                                                                            </constraints>
                                                                         </collectionViewCellContentView>
                                                                         <size key="customSize" width="35" height="35"/>
                                                                         <connections>
@@ -352,8 +384,8 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.16078431369999999" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="0nA-bk-kES" secondAttribute="trailing" constant="17" id="0Eb-8Q-rs3"/>
                                             <constraint firstItem="mP5-F7-rng" firstAttribute="centerX" secondItem="mRR-5l-1BR" secondAttribute="centerX" id="1y2-j7-TTV"/>
-                                            <constraint firstAttribute="bottom" secondItem="JfE-U2-afT" secondAttribute="bottom" constant="55" id="23v-N8-zxd"/>
                                             <constraint firstItem="mP5-F7-rng" firstAttribute="top" secondItem="mRR-5l-1BR" secondAttribute="top" constant="36" id="5DA-Iq-HOI"/>
                                             <constraint firstItem="LCQ-DG-O9t" firstAttribute="top" secondItem="mRR-5l-1BR" secondAttribute="top" id="7Ww-WL-BW4"/>
                                             <constraint firstItem="CqQ-3d-Vzw" firstAttribute="height" secondItem="mRR-5l-1BR" secondAttribute="height" multiplier="0.3598" id="8xT-B0-gYQ"/>
@@ -361,8 +393,8 @@
                                             <constraint firstItem="gE9-fh-Lok" firstAttribute="top" secondItem="fzV-wR-9is" secondAttribute="bottom" constant="10" id="H25-NH-Bg1"/>
                                             <constraint firstItem="LCQ-DG-O9t" firstAttribute="leading" secondItem="mRR-5l-1BR" secondAttribute="leading" id="HIf-sN-lqn"/>
                                             <constraint firstItem="CqQ-3d-Vzw" firstAttribute="top" secondItem="upr-lQ-ecb" secondAttribute="bottom" constant="7.5" id="LhI-1M-0Ia"/>
-                                            <constraint firstAttribute="trailing" secondItem="JfE-U2-afT" secondAttribute="trailing" constant="17" id="NTU-3P-zUd"/>
                                             <constraint firstAttribute="bottom" secondItem="gE9-fh-Lok" secondAttribute="bottom" id="QOr-Xd-fSl"/>
+                                            <constraint firstAttribute="bottom" secondItem="0nA-bk-kES" secondAttribute="bottom" constant="55" id="SSP-Oi-Qft"/>
                                             <constraint firstItem="CqQ-3d-Vzw" firstAttribute="leading" secondItem="mRR-5l-1BR" secondAttribute="leading" id="TO8-TQ-j20"/>
                                             <constraint firstItem="upr-lQ-ecb" firstAttribute="top" secondItem="fzV-wR-9is" secondAttribute="bottom" constant="10" id="Tr8-Vr-4H0"/>
                                             <constraint firstItem="gE9-fh-Lok" firstAttribute="top" secondItem="LCQ-DG-O9t" secondAttribute="bottom" id="Va1-ZO-lUf"/>
@@ -370,12 +402,12 @@
                                             <constraint firstAttribute="trailing" secondItem="LCQ-DG-O9t" secondAttribute="trailing" id="WtB-kY-O6k"/>
                                             <constraint firstAttribute="trailing" secondItem="CqQ-3d-Vzw" secondAttribute="trailing" id="d9k-wt-vSv"/>
                                             <constraint firstItem="gE9-fh-Lok" firstAttribute="leading" secondItem="mRR-5l-1BR" secondAttribute="leading" id="f7W-0k-xn8"/>
+                                            <constraint firstItem="0nA-bk-kES" firstAttribute="top" secondItem="CqQ-3d-Vzw" secondAttribute="bottom" constant="50" id="nm6-H3-Knp"/>
                                             <constraint firstItem="GeI-lp-Ejv" firstAttribute="centerY" secondItem="mP5-F7-rng" secondAttribute="centerY" id="oPR-9A-RhL"/>
                                             <constraint firstItem="GeI-lp-Ejv" firstAttribute="leading" secondItem="mRR-5l-1BR" secondAttribute="leading" constant="17" id="qQq-jj-hBH"/>
-                                            <constraint firstItem="JfE-U2-afT" firstAttribute="leading" secondItem="mRR-5l-1BR" secondAttribute="leading" constant="17" id="r5Y-ps-Uhp"/>
-                                            <constraint firstItem="JfE-U2-afT" firstAttribute="top" secondItem="CqQ-3d-Vzw" secondAttribute="bottom" constant="50" id="vms-hK-Dvu"/>
                                             <constraint firstAttribute="right" secondItem="fzV-wR-9is" secondAttribute="right" constant="45" id="wak-ax-gue"/>
                                             <constraint firstItem="upr-lQ-ecb" firstAttribute="leading" secondItem="mRR-5l-1BR" secondAttribute="leading" constant="17" id="zPb-eM-bt8"/>
+                                            <constraint firstItem="0nA-bk-kES" firstAttribute="leading" secondItem="mRR-5l-1BR" secondAttribute="leading" constant="17" id="zlW-2O-G6W"/>
                                         </constraints>
                                     </view>
                                 </subviews>

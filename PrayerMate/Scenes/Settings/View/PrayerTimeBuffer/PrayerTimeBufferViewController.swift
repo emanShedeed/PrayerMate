@@ -22,6 +22,8 @@ class PrayerTimeBufferViewController: BaseViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        styleNavBar()
+        TransparentNavBar()
         let backButton = UIBarButtonItem()
         backButton.title = "PrayerTimeBufferVC.navBackButtonText".localized
        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton

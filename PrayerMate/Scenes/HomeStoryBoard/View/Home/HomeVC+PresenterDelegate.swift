@@ -34,7 +34,7 @@ extension HomeViewController:HomeViewControllerProtocol{
             self.prayerTimestableView.reloadData()
             self.getNextPrayerTime()
             
-            let isLaunchBefore = UserDefaults.standard.value(forKey: "isLaunchedBefore") as! Bool
+            let isLaunchBefore = UserDefaults.standard.value(forKey: UserDefaultsConstants.isLaunchedBefore) as! Bool
             let date = Date()
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd"
@@ -46,7 +46,7 @@ extension HomeViewController:HomeViewControllerProtocol{
             self.presenter.saveDataToRealm()
 //                 }
             self.selectedPrayerTimesIndicies = self.prayerTimesArray.indices.filter{self.prayerTimesArray[$0].isBtnChecked == true}
-            UserDefaults.standard.set(self.selectedPrayerTimesIndicies, forKey: "selectedPrayerTimesIndicies")
+            UserDefaults.standard.set(self.selectedPrayerTimesIndicies, forKey:UserDefaultsConstants.selectedPrayerTimesIndicies)
             
         }
         

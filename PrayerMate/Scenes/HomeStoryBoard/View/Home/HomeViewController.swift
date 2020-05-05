@@ -9,7 +9,7 @@
 import UIKit
 import JTAppleCalendar
 /// This is a class created for handling the Home View of the app , displaying Prayer Times and Import to calendar Function
-final class HomeViewController: UIViewController {
+final class HomeViewController: BaseViewController {
     
     //MARK:- IBOUTLET
     
@@ -44,10 +44,6 @@ final class HomeViewController: UIViewController {
     var twoDatesAlreadySelected: Bool {
         return firstDate != nil && calendarView.selectedDates.count > 1
     }
-    lazy var activityIndicator : SYActivityIndicatorView = {
-        let image = UIImage.loading
-        return SYActivityIndicatorView(image: UIImage.loading,title: "loader.messageTitle".localized)
-    }()
     
     ///
     var selectedPrayerTimesIndicies: [Int] = .init()
@@ -61,14 +57,16 @@ final class HomeViewController: UIViewController {
         presenter.setupCalendarView(calendarView: calendarView, calenadrIncludingHeaderView: calenadrIncludingHeaderView, calendareFormatter: calendareFormatter)
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-        
+        prayerTimestableView.estimatedRowHeight = 80.0
         hideCalendareView.addGestureRecognizer(tap)
-      
+        print(prayerTimestableView.frame.height)
+        
     }
     override func viewDidLayoutSubviews() {
+    }
+    override func viewDidAppear(_ animated: Bool) {
         importBtn.addBlurEffect()
     }
-    
     //MARK:- Methods
     
     /**
@@ -92,7 +90,7 @@ final class HomeViewController: UIViewController {
         prayerTimestableView.backgroundColor = UIColor.clear
         dateLBL.text = presenter.formateTodayDate()
     }
- 
+    
     /**
      Call this function for hide calendare view
      
@@ -145,8 +143,8 @@ final class HomeViewController: UIViewController {
             self.calenadrIncludingHeaderView.isHidden = true
             self.activityIndicator.startAnimating()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){ self.presenter.importPrayerTimesToSelectedCalendars(importStartDateAsString: formatter.string(from:self.firstDate ?? Date()), importEndDateAsString: formatter.string(from:self.secondDate ?? Date()),activityIndicator: self.activityIndicator)
-                UserDefaults.standard.set(self.secondDate, forKey: "lastImportDate")
-               let _ = LocalNotification()
+                UserDefaults.standard.set(self.secondDate, forKey:UserDefaultsConstants.lastImportDate)
+                let _ = LocalNotification()
             }
         }
     }
@@ -178,10 +176,17 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
         prayerTimesArray[indexPath.row].isCellSelected = true
         prayerTimesArray[indexPath.row].isBtnChecked = true
         self.selectedPrayerTimesIndicies = self.prayerTimesArray.indices.filter{self.prayerTimesArray[$0].isBtnChecked == true}
-        UserDefaults.standard.set(self.selectedPrayerTimesIndicies, forKey: "selectedPrayerTimesIndicies")
+        UserDefaults.standard.set(self.selectedPrayerTimesIndicies, forKey: UserDefaultsConstants.selectedPrayerTimesIndicies)
         prayerTimestableView.reloadData()
     }
-    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80.0
+        //        if(UIScreen.main.bounds.height>667){
+        //            return 80
+        //        }else{
+        //            return 44
+        //        }
+    }
     
     
     

@@ -9,14 +9,14 @@
 import Foundation
 
 // MARK: - PrayerTimes
-struct HomeAPIResponseModel: Codable {
-    let items: [Item]?
+struct PrayerTimesResponseModel: Codable {
+    let prayerTimeitems: [PrayerTimeItem]?
     let statusValid, statusCode: Int?
     let statusDescription: String?
     let statusError: StatusError?
     
     enum CodingKeys: String, CodingKey {
-        case items
+        case prayerTimeitems = "items"
         case statusValid = "status_valid"
         case statusCode = "status_code"
         case statusDescription = "status_description"
@@ -32,7 +32,7 @@ struct StatusError: Codable {
     }
 }
 // MARK: - Item
-struct Item: Codable {
+struct PrayerTimeItem: Codable {
     let dateFor, fajr, shurooq, dhuhr: String?
     let asr, maghrib, isha: String?
 

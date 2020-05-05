@@ -34,7 +34,7 @@ class LocalNotification {
             notificationArray.append(Notification(title: "openAppNotificationTitle".localized, description: "openAppNotificationDescription".localized, time: objects[9].isha, date: notificationDate))
             
             //The app will remind the user a day before the selected duration ends.
-            if let lastImportDate = UserDefaults.standard.value(forKey: "lastImportDate") as? Date{
+            if let lastImportDate = UserDefaults.standard.value(forKey: UserDefaultsConstants.lastImportDate) as? Date{
                 let dateBefore = Calendar.current.date(byAdding: .day, value: -1, to: lastImportDate)
                 notificationArray.append(Notification(title: "alertToRenewImportPeriodTitle".localized, description: "alertToRenewImportPeriodDescription".localized, time:"2:00 pm" , date: dateBefore))
             }
