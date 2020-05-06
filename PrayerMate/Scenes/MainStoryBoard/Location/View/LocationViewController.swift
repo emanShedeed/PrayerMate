@@ -39,11 +39,11 @@ final class LocationViewController: UIViewController {
         super.viewWillAppear(animated)
         //        animateBackGround()
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(applicationDidBecomeActive),
+                                               selector: #selector(applicationcomeFromBackGround),
                                                name: UIApplication.didBecomeActiveNotification,
                                                object: nil)
     }
-    @objc func applicationDidBecomeActive(){
+    @objc func applicationcomeFromBackGround(){
         animateBackGround()
     }
     override func viewDidAppear(_ animated: Bool) {

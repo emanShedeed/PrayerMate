@@ -21,10 +21,10 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fajrbg" translatesAutoresizingMaskIntoConstraints="NO" id="lQc-ov-W3c">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odr-J5-TIR">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odr-J5-TIR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRR-5l-1BR" userLabel="ContentView">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mRR-5l-1BR" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCQ-DG-O9t" userLabel="hideCalendareView">
@@ -100,7 +100,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Home.exportMessageLbl"/>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CqQ-3d-Vzw">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CqQ-3d-Vzw">
                                                 <rect key="frame" x="0.0" y="277" width="375" height="240"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <prototypes>
@@ -153,7 +153,7 @@
                                                     <outlet property="delegate" destination="hRK-ZJ-BbG" id="I7u-eN-1A4"/>
                                                 </connections>
                                             </tableView>
-                                            <visualEffectView opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nA-bk-kES">
+                                            <visualEffectView opaque="NO" contentMode="scaleAspectFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0nA-bk-kES">
                                                 <rect key="frame" x="17" y="567" width="341" height="45"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ag8-ZW-Bug">
                                                     <rect key="frame" x="0.0" y="0.0" width="341" height="45"/>
@@ -199,10 +199,10 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </visualEffectView>
-                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gE9-fh-Lok" userLabel="CalenadarView">
+                                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gE9-fh-Lok" userLabel="CalenadarView">
                                                 <rect key="frame" x="0.0" y="249" width="375" height="418"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rbw-KY-pbA">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rbw-KY-pbA">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="418"/>
                                                         <subviews>
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uqZ-XU-A6L" userLabel="HeaderView">
@@ -279,7 +279,7 @@
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
-                                                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.5" id="2mY-y4-EIa"/>
                                                                             <constraint firstAttribute="height" constant="20.5" id="yUL-hG-Jqs"/>
@@ -311,7 +311,7 @@
                                                                     <constraint firstItem="e01-h6-dOV" firstAttribute="centerX" secondItem="uqZ-XU-A6L" secondAttribute="centerX" id="vxa-rS-AA5"/>
                                                                 </constraints>
                                                             </view>
-                                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4NI-Rb-VNC" customClass="JTACMonthView" customModule="JTAppleCalendar">
+                                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4NI-Rb-VNC" customClass="JTACMonthView" customModule="JTAppleCalendar">
                                                                 <rect key="frame" x="0.0" y="100" width="375" height="318"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="UxC-hn-AOr">
@@ -402,7 +402,7 @@
                                             <constraint firstAttribute="trailing" secondItem="LCQ-DG-O9t" secondAttribute="trailing" id="WtB-kY-O6k"/>
                                             <constraint firstAttribute="trailing" secondItem="CqQ-3d-Vzw" secondAttribute="trailing" id="d9k-wt-vSv"/>
                                             <constraint firstItem="gE9-fh-Lok" firstAttribute="leading" secondItem="mRR-5l-1BR" secondAttribute="leading" id="f7W-0k-xn8"/>
-                                            <constraint firstItem="0nA-bk-kES" firstAttribute="top" secondItem="CqQ-3d-Vzw" secondAttribute="bottom" constant="50" id="nm6-H3-Knp"/>
+                                            <constraint firstItem="0nA-bk-kES" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CqQ-3d-Vzw" secondAttribute="bottom" constant="50" id="nm6-H3-Knp"/>
                                             <constraint firstItem="GeI-lp-Ejv" firstAttribute="centerY" secondItem="mP5-F7-rng" secondAttribute="centerY" id="oPR-9A-RhL"/>
                                             <constraint firstItem="GeI-lp-Ejv" firstAttribute="leading" secondItem="mRR-5l-1BR" secondAttribute="leading" constant="17" id="qQq-jj-hBH"/>
                                             <constraint firstAttribute="right" secondItem="fzV-wR-9is" secondAttribute="right" constant="45" id="wak-ax-gue"/>

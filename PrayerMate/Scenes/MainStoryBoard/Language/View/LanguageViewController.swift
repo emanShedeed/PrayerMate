@@ -34,7 +34,7 @@ final class LanguageViewController: UIViewController {
         super.viewWillAppear(animated)
         
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(applicationDidBecomeActive),
+                                               selector: #selector(applicationcomeFromBackGround),
                                                name: UIApplication.didBecomeActiveNotification,
                                                object: nil)
     }
@@ -42,7 +42,7 @@ final class LanguageViewController: UIViewController {
         super.viewDidAppear(animated)
         animateBackGround()
     }
-    @objc func applicationDidBecomeActive(){
+    @objc func applicationcomeFromBackGround(){
         animateBackGround()
     }
     

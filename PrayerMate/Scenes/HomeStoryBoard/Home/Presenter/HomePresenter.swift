@@ -19,12 +19,11 @@ import GoogleAPIClientForREST
 import GoogleSignIn
 import GTMSessionFetcher
 
-protocol  HomeViewControllerProtocol :class{
+protocol  HomeViewControllerProtocol :class {
     func showError(error:String)
     func showIndicator()
     func fetchDataSucess()
     func imoprtToCalendarsSuccess()
-    
 }
 protocol UpdatePrayerTimeCellProtcol {
     func displayData(prayerTimeName: String, prayerTime: String, isCellSelected: Bool,isBtnChecked:Bool,cellIndex:Int)
@@ -123,13 +122,6 @@ class HomePresenter{
                         print("Error: \(error)")
                         self.view?.showError(error: "\(error)")
                     }
-                    //                    self.PRAYER_DATA_HANDLEROB = PrayerTimeHandler.init(_data: URLdata)
-                    //                    self.PRAYER_DATA_HANDLEROB.decodeData()
-                    //
-                    //                    let delay = DispatchTime.now() + 1
-                    //                    DispatchQueue.main.asyncAfter(deadline: delay, execute: {
-                    //                        self.wayToDisplayData()
-                    //                    })
                     
                 }
             }
@@ -324,59 +316,7 @@ extension HomePresenter{
         // return (month + " " + year)
     }
     
-    func handelCellSelectedColor(cell:JTACDayCell?,celssState:CellState){
-        guard let validCell = cell as? CustomJTAppleCalendarCell else{return}
-        if(validCell.isSelected){
-            validCell.selectedView.isHidden=false
-        }else{
-            validCell.selectedView.isHidden=true
-        }
-    }
-    
-    func handleCellTextColor(cell:JTACDayCell?,cellState:CellState,calendareFormatter:DateFormatter){
-        guard let validCell = cell as? CustomJTAppleCalendarCell else{return}
-        if(validCell.isSelected){
-            validCell.dayLabel.textColor = .black
-        }else{
-            if cellState.dateBelongsTo == .thisMonth{
-                validCell.dayLabel.textColor = .black
-            }else{
-                validCell.dayLabel.textColor = UIColor(rgb:0xDEE3E7)
-            }
-        }
-        let currentDateAsString=calendareFormatter.string(from: Date())
-        let cellDateAsString=calendareFormatter.string(from: cellState.date)
-        if(calendareFormatter.date(from: cellDateAsString)! < calendareFormatter.date(from: currentDateAsString)!){
-            //  Helper.showToast(message: "can't select date before today")
-            validCell.dayLabel.textColor = UIColor(rgb:0xDEE3E7)
-        }
-    }
-    
-    func handleCellSelected(cell: CustomJTAppleCalendarCell, cellState: CellState) {
-        cell.selectedView.isHidden = !cellState.isSelected
-        switch cellState.selectedPosition() {
-        case .left:
-            //              cell.selectedView.layer.cornerRadius = 20
-            cell.selectedView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
-        case .middle:
-            //              cell.selectedView.layer.cornerRadius = 0
-            cell.selectedView.layer.maskedCorners = []
-        case .right:
-            //              cell.selectedView.layer.cornerRadius = 20
-            cell.selectedView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
-        case .full:
-            //              cell.selectedView.layer.cornerRadius = 20
-            cell.selectedView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
-        default: break
-        }
-    }
-    
-    func configureCell(view: JTACDayCell?, cellState: CellState,calendareFormatter:DateFormatter) {
-        guard let cell = view as? CustomJTAppleCalendarCell  else { return }
-        cell.dayLabel.text = cellState.text
-        handleCellTextColor(cell: cell, cellState: cellState,calendareFormatter:calendareFormatter)
-        handleCellSelected(cell: cell, cellState: cellState)
-    }
+
 }
 /// This is a presenter class created for handling importing prayerTimes To different Calendars
 extension HomePresenter{
@@ -666,7 +606,7 @@ extension HomePresenter{
         
         let insertQuery = GTLRCalendarQuery_EventsInsert.query(withObject: calendarEvent, calendarId: "primary")
         calendarEvent.recurrence = ["RRULE:FREQ=DAILY;UNTIL=\(tillDate)"]
-        let decoded  =  UserDefaults.standard.data(forKey: "googleService")
+        let decoded  =  UserDefaults.standard.data(forKey: UserDefaultsConstants.googleService)
         let decodedservice = NSKeyedUnarchiver.unarchiveObject(with: decoded! ) as! GoogleService
         
         decodedservice.executeQuery(insertQuery) { (ticket, object, error) in

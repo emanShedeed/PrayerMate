@@ -185,8 +185,7 @@
 		BD0C90442423A122000B8EAC /* HomeStoryBoard */ = {
 			isa = PBXGroup;
 			children = (
-				BD0C90462423A143000B8EAC /* View */,
-				BD0C90452423A13B000B8EAC /* Presenter */,
+				BD0C90462423A143000B8EAC /* Home */,
 			);
 			path = HomeStoryBoard;
 			sourceTree = "<group>";
@@ -194,20 +193,22 @@
 		BD0C90452423A13B000B8EAC /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				BD0C904C2423A60C000B8EAC /* Home */,
+				BD0C904D2423A620000B8EAC /* HomePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		BD0C90462423A143000B8EAC /* View */ = {
+		BD0C90462423A143000B8EAC /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				BD0C904B2423A5E8000B8EAC /* Home */,
+				BD14A7EE2462C3A300431D61 /* Model */,
+				BD0C904B2423A5E8000B8EAC /* View */,
+				BD0C90452423A13B000B8EAC /* Presenter */,
 			);
-			path = View;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		BD0C904B2423A5E8000B8EAC /* Home */ = {
+		BD0C904B2423A5E8000B8EAC /* View */ = {
 			isa = PBXGroup;
 			children = (
 				BD0C90472423A161000B8EAC /* HomeViewController.swift */,
@@ -216,15 +217,7 @@
 				BD751ADD242A42CF005A9764 /* HomeCellUIModel */,
 				BD751ADE242A42F5005A9764 /* JTAppleCalendar Cell */,
 			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		BD0C904C2423A60C000B8EAC /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				BD0C904D2423A620000B8EAC /* HomePresenter.swift */,
-			);
-			path = Home;
+			path = View;
 			sourceTree = "<group>";
 		};
 		BD0C905624276BD2000B8EAC /* Map */ = {
@@ -240,41 +233,163 @@
 		BD12EB472422266800001437 /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				BD12EB482422267F00001437 /* LocationViewController.swift */,
-				BD28C06324617A9700E97EC6 /* Location+PresenterDelegate.swift */,
-				BD0C905624276BD2000B8EAC /* Map */,
+				BD14A7FD2462C5B400431D61 /* View */,
+				BD14A7FE2462C5C000431D61 /* Presenter */,
 			);
 			path = Location;
 			sourceTree = "<group>";
 		};
-		BD287BCB243B464600373170 /* Settings */ = {
+		BD14A7EE2462C3A300431D61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD0C905B242787E9000B8EAC /* PrayerTimesResponseModel.swift */,
+				BD1FC1DC24458D3200540A2B /* RealmPrayerTimeModel.swift */,
+				BDFFDA7D243635860066F493 /* PrayerTimeBuffer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD14A7EF2462C44E00431D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD6589142430944500FEE06C /* SettingViewController.swift */,
+				BDFFDA652432F5B80066F493 /* SettingVC+delegate.swift */,
+				BDFFDA602432EEBA0066F493 /* SettingCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD14A7F02462C46200431D61 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
 				BD287BCC243B466800373170 /* SettingPresenter.swift */,
 			);
-			path = Settings;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
-		BD287BCE243B509D00373170 /* SettingsLocation */ = {
+		BD14A7F12462C47D00431D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD65891B2430D0EC00FEE06C /* FrequentlyQuestionsViewController.swift */,
+				BD65891F2430D28A00FEE06C /* QuestionCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD14A7F22462C49900431D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD2E0BF02431D64800D2B6E6 /* AboutViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD14A7F32462C4AB00431D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFDA55243252B70066F493 /* CalendarMethodViewController.swift */,
+				BDFFDA5D2432E0270066F493 /* CalendarMethodCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD14A7F42462C4D000431D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFDA68243359180066F493 /* SettingsLocationViewController.swift */,
+				BD28C06524618A9200E97EC6 /* SettingLocation+PresenterDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD14A7F52462C4E100431D61 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
 				BD287BCF243B50BA00373170 /* SettingsLocationPresenter.swift */,
 			);
-			path = SettingsLocation;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
-		BD28C0602461719800E97EC6 /* LocationPresenter */ = {
+		BD14A7F62462C51D00431D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFDA6F2434C44A0066F493 /* ImportToCalendarViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD14A7F72462C52800431D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFDA7224360D7F0066F493 /* PrayerTimeBufferViewController.swift */,
+				BDFFDA7B243622400066F493 /* PrayerTimeBufferVC+PresenterDelegate.swift */,
+				BDFFDA7424361D460066F493 /* PrayerTimeBufferCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD14A7F82462C53400431D61 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BDFFDA7924361E5C0066F493 /* PrayerTimeBufferPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BD14A7F92462C54500431D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD371D8F2439DA3B00ED2874 /* CustomActionViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD14A7FA2462C58200431D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDD1F7432417AA8A006B87B7 /* SplashViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD14A7FB2462C59200431D61 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BD287BC9243B0BD100373170 /* SplashPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BD14A7FC2462C5A800431D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDA3F8812420CAAC00705569 /* LanguageViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD14A7FD2462C5B400431D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD12EB482422267F00001437 /* LocationViewController.swift */,
+				BD28C06324617A9700E97EC6 /* Location+PresenterDelegate.swift */,
+				BD0C905624276BD2000B8EAC /* Map */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD14A7FE2462C5C000431D61 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
 				BD28C061246171BC00E97EC6 /* LocationPresenter.swift */,
 			);
-			path = LocationPresenter;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		BD2E0BEF2431D5F800D2B6E6 /* About */ = {
 			isa = PBXGroup;
 			children = (
-				BD2E0BF02431D64800D2B6E6 /* AboutViewController.swift */,
+				BD14A7F22462C49900431D61 /* View */,
 			);
 			path = About;
 			sourceTree = "<group>";
@@ -282,21 +397,12 @@
 		BD371D8E2439DA0D00ED2874 /* CustomAction */ = {
 			isa = PBXGroup;
 			children = (
-				BD371D8F2439DA3B00ED2874 /* CustomActionViewController.swift */,
+				BD14A7F92462C54500431D61 /* View */,
 			);
 			path = CustomAction;
 			sourceTree = "<group>";
 		};
-		BD658910243093FF00FEE06C /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				BD6589112430941100FEE06C /* View */,
-				BDFFDA7724361E0F0066F493 /* Presenter */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		BD6589112430941100FEE06C /* View */ = {
+		BD658910243093FF00FEE06C /* SettingsStoryBoard */ = {
 			isa = PBXGroup;
 			children = (
 				BD6589162430C7BA00FEE06C /* Settings */,
@@ -308,15 +414,14 @@
 				BDFFDA7124360D5D0066F493 /* PrayerTimeBuffer */,
 				BD371D8E2439DA0D00ED2874 /* CustomAction */,
 			);
-			path = View;
+			path = SettingsStoryBoard;
 			sourceTree = "<group>";
 		};
 		BD6589162430C7BA00FEE06C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				BD6589142430944500FEE06C /* SettingViewController.swift */,
-				BDFFDA652432F5B80066F493 /* SettingVC+delegate.swift */,
-				BDFFDA602432EEBA0066F493 /* SettingCell */,
+				BD14A7EF2462C44E00431D61 /* View */,
+				BD14A7F02462C46200431D61 /* Presenter */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -324,8 +429,7 @@
 		BD6589182430D09200FEE06C /* FAQ */ = {
 			isa = PBXGroup;
 			children = (
-				BD65891B2430D0EC00FEE06C /* FrequentlyQuestionsViewController.swift */,
-				BD65891F2430D28A00FEE06C /* QuestionCell */,
+				BD14A7F12462C47D00431D61 /* View */,
 			);
 			path = FAQ;
 			sourceTree = "<group>";
@@ -357,9 +461,6 @@
 		BD772156241657E3008A8947 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BD0C905B242787E9000B8EAC /* PrayerTimesResponseModel.swift */,
-				BD1FC1DC24458D3200540A2B /* RealmPrayerTimeModel.swift */,
-				BDFFDA7D243635860066F493 /* PrayerTimeBuffer.swift */,
 				BD88917F244CB33C00C58D5E /* GoogleService.swift */,
 				BD0CFB9B2451BF7100177761 /* Notification.swift */,
 				BD0CFB992451BAA900177761 /* LocalNotification.swift */,
@@ -385,7 +486,7 @@
 		BDA3F8802420CA9100705569 /* Language */ = {
 			isa = PBXGroup;
 			children = (
-				BDA3F8812420CAAC00705569 /* LanguageViewController.swift */,
+				BD14A7FC2462C5A800431D61 /* View */,
 			);
 			path = Language;
 			sourceTree = "<group>";
@@ -434,7 +535,7 @@
 			children = (
 				BDD1F73C2417A949006B87B7 /* MainStoryBoard */,
 				BD0C90442423A122000B8EAC /* HomeStoryBoard */,
-				BD658910243093FF00FEE06C /* Settings */,
+				BD658910243093FF00FEE06C /* SettingsStoryBoard */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -501,43 +602,18 @@
 		BDD1F73C2417A949006B87B7 /* MainStoryBoard */ = {
 			isa = PBXGroup;
 			children = (
-				BDD1F73E2417AA1B006B87B7 /* View */,
-				BDD1F73D2417AA10006B87B7 /* Presenter */,
-			);
-			path = MainStoryBoard;
-			sourceTree = "<group>";
-		};
-		BDD1F73D2417AA10006B87B7 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				BDD1F7402417AA38006B87B7 /* SplashScreen */,
-				BD28C0602461719800E97EC6 /* LocationPresenter */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		BDD1F73E2417AA1B006B87B7 /* View */ = {
-			isa = PBXGroup;
-			children = (
 				BDD1F73F2417AA2E006B87B7 /* SplashScreen */,
 				BDA3F8802420CA9100705569 /* Language */,
 				BD12EB472422266800001437 /* Location */,
 			);
-			path = View;
+			path = MainStoryBoard;
 			sourceTree = "<group>";
 		};
 		BDD1F73F2417AA2E006B87B7 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
-				BDD1F7432417AA8A006B87B7 /* SplashViewController.swift */,
-			);
-			path = SplashScreen;
-			sourceTree = "<group>";
-		};
-		BDD1F7402417AA38006B87B7 /* SplashScreen */ = {
-			isa = PBXGroup;
-			children = (
-				BD287BC9243B0BD100373170 /* SplashPresenter.swift */,
+				BD14A7FA2462C58200431D61 /* View */,
+				BD14A7FB2462C59200431D61 /* Presenter */,
 			);
 			path = SplashScreen;
 			sourceTree = "<group>";
@@ -560,8 +636,7 @@
 		BDFFDA542432526F0066F493 /* CalendarMethod */ = {
 			isa = PBXGroup;
 			children = (
-				BDFFDA55243252B70066F493 /* CalendarMethodViewController.swift */,
-				BDFFDA5D2432E0270066F493 /* CalendarMethodCell */,
+				BD14A7F32462C4AB00431D61 /* View */,
 			);
 			path = CalendarMethod;
 			sourceTree = "<group>";
@@ -585,8 +660,8 @@
 		BDFFDA67243358F20066F493 /* SettingsLocation */ = {
 			isa = PBXGroup;
 			children = (
-				BDFFDA68243359180066F493 /* SettingsLocationViewController.swift */,
-				BD28C06524618A9200E97EC6 /* SettingLocation+PresenterDelegate.swift */,
+				BD14A7F42462C4D000431D61 /* View */,
+				BD14A7F52462C4E100431D61 /* Presenter */,
 			);
 			path = SettingsLocation;
 			sourceTree = "<group>";
@@ -594,7 +669,7 @@
 		BDFFDA6E2434C4270066F493 /* ImportToCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				BDFFDA6F2434C44A0066F493 /* ImportToCalendarViewController.swift */,
+				BD14A7F62462C51D00431D61 /* View */,
 			);
 			path = ImportToCalendar;
 			sourceTree = "<group>";
@@ -602,9 +677,8 @@
 		BDFFDA7124360D5D0066F493 /* PrayerTimeBuffer */ = {
 			isa = PBXGroup;
 			children = (
-				BDFFDA7224360D7F0066F493 /* PrayerTimeBufferViewController.swift */,
-				BDFFDA7B243622400066F493 /* PrayerTimeBufferVC+PresenterDelegate.swift */,
-				BDFFDA7424361D460066F493 /* PrayerTimeBufferCell */,
+				BD14A7F72462C52800431D61 /* View */,
+				BD14A7F82462C53400431D61 /* Presenter */,
 			);
 			path = PrayerTimeBuffer;
 			sourceTree = "<group>";
@@ -615,24 +689,6 @@
 				BDFFDA7524361D660066F493 /* PrayerTimeBufferCell.swift */,
 			);
 			path = PrayerTimeBufferCell;
-			sourceTree = "<group>";
-		};
-		BDFFDA7724361E0F0066F493 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				BD287BCB243B464600373170 /* Settings */,
-				BD287BCE243B509D00373170 /* SettingsLocation */,
-				BDFFDA7824361E3C0066F493 /* PrayerTimeBuffer */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		BDFFDA7824361E3C0066F493 /* PrayerTimeBuffer */ = {
-			isa = PBXGroup;
-			children = (
-				BDFFDA7924361E5C0066F493 /* PrayerTimeBufferPresenter.swift */,
-			);
-			path = PrayerTimeBuffer;
 			sourceTree = "<group>";
 		};
 		C7827DD965501B07B1947142 /* Frameworks */ = {

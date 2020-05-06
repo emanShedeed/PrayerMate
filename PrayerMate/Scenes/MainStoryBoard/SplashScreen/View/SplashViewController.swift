@@ -1,9 +1,9 @@
 //
-//  LaunchVC.swift
-//  Ataba
+//  SplashVC.swift
+//  PrayerMate
 //
-//  Created by eman shedeed on 9/7/19.
-//  Copyright © 2019 eman shedeed. All rights reserved.
+//  Created by eman shedeed on 3/17/20.
+//  Copyright © 2020 eman shedeed. All rights reserved.
 //
 
 import UIKit
@@ -20,11 +20,8 @@ final class SplashViewController: BaseViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
-        //   print(UIFont.systemFont(ofSize: 15).fontName)
         let presenter = SplashPresenter()
         presenter.setupUserDefaults()
-        //  presenter.getUIFonts()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,8 +42,6 @@ final class SplashViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-            //            UserDefaults.standard.set(nil, forKey:"appLanguage" )
-            //            UserDefaults.standard.set(false, forKey:"userLocation" )
             if AppSetting.shared.getCurrentLanguage() != nil{
                 
                 if let _ = UserDefaults.standard.value(forKey: UserDefaultsConstants.userLocation) as? [String:Double]{
