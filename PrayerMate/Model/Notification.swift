@@ -9,7 +9,7 @@
 import Foundation
 struct Notification {
     var title:String
-    var description:String
+    var description:String?
     var time:String
     var date:Date?
   

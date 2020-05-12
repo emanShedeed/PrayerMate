@@ -39,17 +39,6 @@ class MapViewController: UIViewController {
         let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
         resultSearchController = UISearchController(searchResultsController: locationSearchTable)
         resultSearchController.searchResultsUpdater = locationSearchTable
-        //
-        //  let subView = UIView(frame: CGRect(x: 0, y: 64.0, width: 350.0, height: 45.0))
-        
-        //////
-        
-        //////
-        /* subView.addSubview((resultSearchController.searchBar))
-         view.addSubview(subView)
-         resultSearchController.searchBar.sizeToFit()
-         resultSearchController.hidesNavigationBarDuringPresentation = false*/
-        ///
         searchBar=resultSearchController?.searchBar
         searchBar?.sizeToFit()
         searchBar?.placeholder = "map.searchBarPlaceHolderTitle".localized
@@ -79,24 +68,6 @@ class MapViewController: UIViewController {
                 // Place details
                 var placeMark: CLPlacemark?
                 placeMark = placemarks?[0]
-                
-                // Complete address as PostalAddress
-                // print(placeMark.postalAddress as Any)  //  Import Contacts
-                
-                // Location name
-                if let locationName = placeMark?.name  {
-                    print(locationName)
-                }
-                
-                // Street address
-                if let street = placeMark?.thoroughfare {
-                    print(street)
-                }
-                
-                // Country
-                if let country = placeMark?.country {
-                    print(country)
-                }
                 if let addressDict = placeMark?.addressDictionary, let coordinate = placeMark?.location?.coordinate {
                     mark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDict as? [String : Any])
                 }

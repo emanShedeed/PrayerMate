@@ -51,10 +51,6 @@ final class LocationViewController: UIViewController {
         locateMeBtn.applyGradient(with:  [UIColor.locatemeBtnG1!, UIColor.locatemeBtnG2!], gradient: .horizontal)
         animateBackGround()
     }
-    override func viewDidLayoutSubviews() {
-//
-    }
-    
     @IBAction func finishBtnPressed(_ sender: Any) {
         
         if (isLocationSet && addressTitle != "" ){
@@ -130,7 +126,6 @@ extension LocationViewController:CLLocationManagerDelegate{
                 let lat = location.coordinate.latitude
                 let lon = location.coordinate.longitude
                  dect=["lat":lat,"long":lon]
-              //  UserDefaults.standard.set(dect, forKey: "userLocation")
                 isLocationSet = true
                 UserDefaults.standard.set(true, forKey: UserDefaultsConstants.isLocatedAutomatically)
                 presenter.getAddressFromLocation(lat:location.coordinate.latitude,long:location.coordinate.longitude)
@@ -149,11 +144,8 @@ extension LocationViewController:CLLocationManagerDelegate{
 extension LocationViewController:maplLocationProtcol{
     
     func locationIsSeleted(at lat: Double, lng: Double, selectedPlace: String,cityName:String) {
-        //          latitude=lat
-        //          longitude=lng
         if(selectedPlace != ""){
            dect=["lat":lat,"long":lng]
-          //  UserDefaults.standard.set(dect, forKey: "userLocation")
             isLocationSet = true
             UserDefaults.standard.set(false, forKey: UserDefaultsConstants.isLocatedAutomatically)
         

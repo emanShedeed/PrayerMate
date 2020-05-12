@@ -57,14 +57,9 @@ final class HomeViewController: BaseViewController {
         presenter.setupCalendarView(calendarView: calendarView, calenadrIncludingHeaderView: calenadrIncludingHeaderView, calendareFormatter: calendareFormatter)
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        tap.cancelsTouchesInView = false
         hideCalendareView.addGestureRecognizer(tap)
-        print(prayerTimestableView.frame.height)
         
-    }
-    override func viewDidLayoutSubviews() {
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        importBtn.addBlurEffect()
     }
     //MARK:- Methods
     
@@ -141,9 +136,10 @@ final class HomeViewController: BaseViewController {
             
             self.calenadrIncludingHeaderView.isHidden = true
             self.activityIndicator.startAnimating()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){ self.presenter.importPrayerTimesToSelectedCalendars(importStartDateAsString: formatter.string(from:self.firstDate ?? Date()), importEndDateAsString: formatter.string(from:self.secondDate ?? Date()),activityIndicator: self.activityIndicator)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                self.presenter.importPrayerTimesToSelectedCalendars(importStartDateAsString: formatter.string(from:self.firstDate ?? Date()), importEndDateAsString: formatter.string(from:self.secondDate ?? Date()),activityIndicator: self.activityIndicator)
                 UserDefaults.standard.set(self.secondDate, forKey:UserDefaultsConstants.lastImportDate)
-                let _ = LocalNotification()
+//                let _ = LocalNotification()
             }
         }
     }

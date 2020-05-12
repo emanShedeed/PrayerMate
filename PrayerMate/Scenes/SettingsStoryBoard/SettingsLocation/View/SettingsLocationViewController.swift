@@ -68,10 +68,13 @@ class SettingsLocationViewController: UIViewController {
         
     }
     @IBAction func changeLocationBtnPressed(_ sender: Any) {
-        let viewController = UIStoryboard.main.instantiateViewController(withIdentifier: "MapNavVC") as! MapNavViewController
-        let mapVC = viewController.viewControllers[0] as? MapViewController
-        mapVC?.delegate=self
-        self.show(viewController, sender: self)
+        let viewController = UIStoryboard.main.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+       // let mapVC = viewController.viewControllers[0] as? MapViewController
+        let nav = UINavigationController(rootViewController: viewController)
+        nav.navigationBar.barTintColor = UIColor.appColor
+        nav.modalPresentationStyle = .fullScreen
+        viewController.delegate=self
+        self.show(nav, sender: self)
     }
     
    

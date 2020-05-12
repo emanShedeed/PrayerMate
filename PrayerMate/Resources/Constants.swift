@@ -11,6 +11,7 @@ struct Constants {
     
     static let domain = "",
     appName = "",
+    apiKey = "AIzaSyCf6R_q6YPEBz64LR3LYCsiUu-JFGDTFnQ",
     appLink = "https://ataba.blacksquaressolutions.com/"
 
     

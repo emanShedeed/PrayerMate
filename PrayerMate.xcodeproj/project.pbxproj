@@ -75,7 +75,6 @@
 		BDFFDA622432EEDD0066F493 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA612432EEDD0066F493 /* SettingCell.swift */; };
 		BDFFDA662432F5B80066F493 /* SettingVC+delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA652432F5B80066F493 /* SettingVC+delegate.swift */; };
 		BDFFDA69243359180066F493 /* SettingsLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA68243359180066F493 /* SettingsLocationViewController.swift */; };
-		BDFFDA6D24338A9C0066F493 /* MapNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA6C24338A9C0066F493 /* MapNavViewController.swift */; };
 		BDFFDA702434C44A0066F493 /* ImportToCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA6F2434C44A0066F493 /* ImportToCalendarViewController.swift */; };
 		BDFFDA7324360D7F0066F493 /* PrayerTimeBufferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA7224360D7F0066F493 /* PrayerTimeBufferViewController.swift */; };
 		BDFFDA7624361D660066F493 /* PrayerTimeBufferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFFDA7524361D660066F493 /* PrayerTimeBufferCell.swift */; };
@@ -161,7 +160,6 @@
 		BDFFDA612432EEDD0066F493 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		BDFFDA652432F5B80066F493 /* SettingVC+delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingVC+delegate.swift"; sourceTree = "<group>"; };
 		BDFFDA68243359180066F493 /* SettingsLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLocationViewController.swift; sourceTree = "<group>"; };
-		BDFFDA6C24338A9C0066F493 /* MapNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNavViewController.swift; sourceTree = "<group>"; };
 		BDFFDA6F2434C44A0066F493 /* ImportToCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportToCalendarViewController.swift; sourceTree = "<group>"; };
 		BDFFDA7224360D7F0066F493 /* PrayerTimeBufferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeBufferViewController.swift; sourceTree = "<group>"; };
 		BDFFDA7524361D660066F493 /* PrayerTimeBufferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeBufferCell.swift; sourceTree = "<group>"; };
@@ -225,7 +223,6 @@
 			children = (
 				BD0C905724276C12000B8EAC /* LocationSearchtable.swift */,
 				BD0C905824276C13000B8EAC /* MapViewController.swift */,
-				BDFFDA6C24338A9C0066F493 /* MapNavViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -513,7 +510,6 @@
 			isa = PBXGroup;
 			children = (
 				BDCF6A6D240D216100DD46F7 /* PrayerMate.entitlements */,
-				BDD1F7452417B5A4006B87B7 /* Fonts */,
 				BD772156241657E3008A8947 /* Model */,
 				BDD1F7372417A7CD006B87B7 /* Storyboards */,
 				BDD1F7362417A79A006B87B7 /* Scenes */,
@@ -616,13 +612,6 @@
 				BD14A7FB2462C59200431D61 /* Presenter */,
 			);
 			path = SplashScreen;
-			sourceTree = "<group>";
-		};
-		BDD1F7452417B5A4006B87B7 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		BDFCFE47241E4AF80033D031 /* Loader */ = {
@@ -892,7 +881,6 @@
 				BD42746D242A4459007DE9AC /* CustomJTAppleCalendarCell.swift in Sources */,
 				BD6589152430944500FEE06C /* SettingViewController.swift in Sources */,
 				BDFFDA69243359180066F493 /* SettingsLocationViewController.swift in Sources */,
-				BDFFDA6D24338A9C0066F493 /* MapNavViewController.swift in Sources */,
 				BDA3F8822420CAAC00705569 /* LanguageViewController.swift in Sources */,
 				BD0C90532423B49D000B8EAC /* HomeVC+PrayerTimeCellDelegate.swift in Sources */,
 				BDFFDA7324360D7F0066F493 /* PrayerTimeBufferViewController.swift in Sources */,
@@ -1072,7 +1060,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PrayerMate/PrayerMate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1.3;
 				DEVELOPMENT_TEAM = PU8FM4JDVA;
 				INFOPLIST_FILE = PrayerMate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1094,7 +1082,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PrayerMate/PrayerMate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1.3;
 				DEVELOPMENT_TEAM = PU8FM4JDVA;
 				INFOPLIST_FILE = PrayerMate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

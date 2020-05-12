@@ -24,12 +24,12 @@ class LocalNotification {
             var  notificationDate : Date? = Date()
             objects.forEach { (day) in
                 notificationDate = formatter.date(from: day.date)
-                notificationArray.append(Notification(title: "fajrPrayerNotificationTitle".localized, description: "", time: day.fajr, date: notificationDate))
-                notificationArray.append(Notification(title: "sunrisePrayerNotificationTitle".localized, description: "", time: day.shurooq, date: notificationDate))
-                notificationArray.append(Notification(title: "zuhrPrayerNotificationTitle".localized, description: "", time: day.dhuhr, date: notificationDate))
-                notificationArray.append(Notification(title: "asrPrayerNotificationTitle".localized, description: "", time: day.asr, date: notificationDate))
-                notificationArray.append(Notification(title: "maghribPrayerNotificationTitle".localized, description: "", time: day.maghrib, date: notificationDate))
-                notificationArray.append(Notification(title: "ishaPrayerNotificationTitle".localized, description: "", time: day.isha, date: notificationDate))
+                notificationArray.append(Notification(title: "fajrPrayerNotificationTitle".localized, time: day.fajr, date: notificationDate))
+                notificationArray.append(Notification(title: "sunrisePrayerNotificationTitle".localized, time: day.shurooq, date: notificationDate))
+                notificationArray.append(Notification(title: "zuhrPrayerNotificationTitle".localized, time: day.dhuhr, date: notificationDate))
+                notificationArray.append(Notification(title: "asrPrayerNotificationTitle".localized, time: day.asr, date: notificationDate))
+                notificationArray.append(Notification(title: "maghribPrayerNotificationTitle".localized, time: day.maghrib, date: notificationDate))
+                notificationArray.append(Notification(title: "ishaPrayerNotificationTitle".localized, time: day.isha, date: notificationDate))
             }
             notificationArray.append(Notification(title: "openAppNotificationTitle".localized, description: "openAppNotificationDescription".localized, time: objects[9].isha, date: notificationDate))
             
@@ -44,9 +44,9 @@ class LocalNotification {
     func registerLocal() {
         let center = UNUserNotificationCenter.current()
 
-        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+        center.requestAuthorization(options: [.alert, .badge, .sound]) {[weak self] (granted, error) in
             if granted {
-                self.scheduleLocal()
+                self?.scheduleLocal()
             } else {
                 Helper.showToast(message:"alertToEnableNotifications".localized)
             }
@@ -60,7 +60,7 @@ class LocalNotification {
    
         let content = UNMutableNotificationContent()
             content.title = notification.title
-            content.body = notification.description
+            content.body = notification.description ?? ""
 //        content.categoryIdentifier = "alarm"
 //        content.userInfo = ["customData": "fizzbuzz"]
         content.sound = UNNotificationSound.default

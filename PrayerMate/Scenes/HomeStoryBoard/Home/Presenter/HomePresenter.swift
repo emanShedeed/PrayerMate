@@ -237,7 +237,7 @@ class HomePresenter{
             }
             
         }
-        let _ = LocalNotification()
+//       let _ = LocalNotification()
         print(realm.configuration.fileURL ?? "")
     }
     

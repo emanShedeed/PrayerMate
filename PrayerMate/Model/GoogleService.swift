@@ -16,7 +16,7 @@ class GoogleService: GTLRCalendarService,NSCoding {
     init(authorizers: GTMFetcherAuthorizationProtocol?) {
         self.authorizers = authorizers
         super.init()
-        self.apiKey = "AIzaSyCf6R_q6YPEBz64LR3LYCsiUu-JFGDTFnQ"
+        self.apiKey = Constants.apiKey // "AIzaSyCf6R_q6YPEBz64LR3LYCsiUu-JFGDTFnQ"
         self.authorizer = authorizers
     }
 

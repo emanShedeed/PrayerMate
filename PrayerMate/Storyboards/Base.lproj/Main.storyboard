@@ -455,7 +455,7 @@ sadipscing elitr, sed diam.</string>
         <!--Map View Controller-->
         <scene sceneID="0KZ-sg-0Iy">
             <objects>
-                <viewController storyboardIdentifier="MapVC" modalPresentationStyle="fullScreen" id="K8Q-fo-FGj" customClass="MapViewController" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" modalPresentationStyle="fullScreen" id="K8Q-fo-FGj" customClass="MapViewController" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oMT-cO-gOM"/>
                         <viewControllerLayoutGuide type="bottom" id="cmU-Zo-7Bh"/>
@@ -491,10 +491,10 @@ sadipscing elitr, sed diam.</string>
             </objects>
             <point key="canvasLocation" x="2924" y="365.66716641679164"/>
         </scene>
-        <!--Map Nav View Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="KFx-sD-XhK">
             <objects>
-                <navigationController storyboardIdentifier="MapNavVC" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Rs5-UX-hNj" customClass="MapNavViewController" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MapNavVC" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Rs5-UX-hNj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="t9S-wW-l7Z"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Z1-Nj-6rt">
