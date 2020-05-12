@@ -51,6 +51,7 @@
 "Home.exportedSuccessfullyToasterMessage"= "Prayer times exported successfully to calendar.";
 "Home.chooseDateRangeToasterMessage"= "Please select date range.";
 "Home.CalendarDoneBtnTitle"= "Done";
+"Home.CalendarLabelTitle"= "Please select start and end date for exporting";
 
 //Settings viewController
 "Settings.titleLbl" = "Settings";

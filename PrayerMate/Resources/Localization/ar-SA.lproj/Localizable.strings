@@ -48,6 +48,7 @@
 "Home.exportedSuccessfullyToasterMessage"= "تم إضافة أوقات الصلاة بنجاح إلى التقويم.";
 "Home.chooseDateRangeToasterMessage"= "يرجى تحديد نطاق التاريخ.";
 "Home.CalendarDoneBtnTitle"= "تم";
+"Home.CalendarLabelTitle"= "من فضلك اختر تاريخ البدء والانتهاء لاضافتها";
 //Settings viewController
 "Settings.titleLbl" = "الاعدادات";
 "Settings.location" = "الموقع";

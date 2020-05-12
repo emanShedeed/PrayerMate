@@ -129,11 +129,13 @@ final class HomeViewController: BaseViewController {
         let formatter=DateFormatter()
         formatter.dateFormat = "yyyy-M-d"
         
-        if(self.firstDate == nil || self.secondDate == nil ){
+        if(self.firstDate == nil ){
             Helper.showToast(message: "Home.chooseDateRangeToasterMessage".localized)
             return
         }else{
-            
+            if(self.secondDate == nil){
+                self.secondDate = self.firstDate
+            }
             self.calenadrIncludingHeaderView.isHidden = true
             self.activityIndicator.startAnimating()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
@@ -345,7 +347,7 @@ extension HomeViewController:JTACMonthViewDelegate{
             return false
         }
         
-        if twoDatesAlreadySelected && cellState.selectionType != .programatic || firstDate != nil && date < calendarView.selectedDates[0] {
+        if twoDatesAlreadySelected && cellState.selectionType != .programatic || firstDate != nil && ( date <= (calendarView.selectedDates.count > 0 ? calendarView.selectedDates[0] : date)) {
             firstDate = nil
             let retval = !calendarView.selectedDates.contains(date)
             calendarView.deselectAllDates(triggerSelectionDelegate: false)

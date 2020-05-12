@@ -114,13 +114,13 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqP-3N-Cub">
-                                                                    <rect key="frame" x="207" y="9.3333333333333339" width="80" height="21.666666666666664"/>
+                                                                    <rect key="frame" x="228" y="9.3333333333333339" width="80" height="21.666666666666664"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmR-IZ-FWh">
-                                                                    <rect key="frame" x="316" y="-1" width="42" height="42"/>
+                                                                    <rect key="frame" x="337" y="9" width="21" height="22"/>
                                                                     <state key="normal" image="unselectedPrayerTime"/>
                                                                     <connections>
                                                                         <action selector="checkPrayerTimeBtnPressed:" destination="ghI-vk-eh4" eventType="touchUpInside" id="3Gl-WW-ENC"/>
@@ -233,6 +233,15 @@
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uqZ-XU-A6L" userLabel="HeaderView">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                                 <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzr-eG-ocf">
+                                                        <rect key="frame" x="173.33333333333334" y="10" width="28.666666666666657" height="13.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Home.CalendarLabelTitle"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e01-h6-dOV">
                                                         <rect key="frame" x="187.66666666666666" y="40" width="0.0" height="0.0"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -328,8 +337,10 @@
                                                     <constraint firstAttribute="height" constant="100" id="EQb-uJ-mbo"/>
                                                     <constraint firstItem="e01-h6-dOV" firstAttribute="centerY" secondItem="uqZ-XU-A6L" secondAttribute="centerY" multiplier="0.8" id="M2o-Zb-5tX"/>
                                                     <constraint firstItem="8xe-0w-ffI" firstAttribute="leading" secondItem="uqZ-XU-A6L" secondAttribute="leading" id="aBA-5W-x95"/>
+                                                    <constraint firstItem="dzr-eG-ocf" firstAttribute="top" secondItem="uqZ-XU-A6L" secondAttribute="top" constant="10" id="aS0-1X-xML"/>
                                                     <constraint firstItem="Cxb-dH-fPR" firstAttribute="leading" secondItem="uqZ-XU-A6L" secondAttribute="leading" id="b0T-hC-ih0"/>
                                                     <constraint firstAttribute="trailing" secondItem="XOj-qD-eTQ" secondAttribute="trailing" id="fap-SU-hZZ"/>
+                                                    <constraint firstItem="dzr-eG-ocf" firstAttribute="centerX" secondItem="uqZ-XU-A6L" secondAttribute="centerX" id="mvR-cT-P0w"/>
                                                     <constraint firstAttribute="bottom" secondItem="8xe-0w-ffI" secondAttribute="bottom" id="nap-3D-NX5"/>
                                                     <constraint firstAttribute="trailing" secondItem="gHq-tO-m8u" secondAttribute="trailing" constant="17" id="oDJ-yh-MnT"/>
                                                     <constraint firstItem="XOj-qD-eTQ" firstAttribute="leading" secondItem="uqZ-XU-A6L" secondAttribute="leading" id="q91-o2-OKW"/>
