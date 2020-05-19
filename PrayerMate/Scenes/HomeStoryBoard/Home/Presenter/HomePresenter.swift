@@ -103,24 +103,24 @@ class HomePresenter{
                 }
                 if let URLerror = error {
                     print(URLerror)
-//                     self.view?.showError(error:"\(URLerror))")
+                    self.view?.showError(error:"\(URLerror))")
                 }
                 if let URLdata = data {
                     print(URLdata)
                     do{
-                        let prayerTimes = try JSONDecoder().decode(PrayerTimesResponseModel.self, from: URLdata)
-                        if(prayerTimes.statusValid == 1){
+                         let prayerTimes = try JSONDecoder().decode(PrayerTimesResponseModel.self, from: URLdata)
+                        if prayerTimes.prayerTimeitems?.count != 0{
                             //                            print(prayerTimes.items?[0].dateFor)
                             self.todayParyerTimes=[(prayerTimes.prayerTimeitems?[0].fajr ?? ""),(prayerTimes.prayerTimeitems?[0].shurooq ?? ""),(prayerTimes.prayerTimeitems?[0].dhuhr ?? ""),(prayerTimes.prayerTimeitems?[0].asr ?? ""),(prayerTimes.prayerTimeitems?[0].maghrib ?? ""),(prayerTimes.prayerTimeitems?[0].isha ?? "")]
                             self.annualPrayerTimes = prayerTimes
                             self.view?.fetchDataSucess()
                         }else{
-                            self.view?.showError(error: prayerTimes.statusError?.invalidQuery ?? "can't get data")
+                            self.view?.showError(error: "Home.errorGettingAPIdata".localized)
                         }
                         
                     }catch {
                         print("Error: \(error)")
-                        self.view?.showError(error: "\(error)")
+                        self.view?.showError(error: "Home.errorGettingAPIdata".localized)
                     }
                     
                 }
@@ -132,6 +132,7 @@ class HomePresenter{
             self.view?.showError(error: "internetFailMessage".localized)
         }
     }
+    
     
     /**
      Call this function for request Prayer Times API
@@ -168,12 +169,20 @@ class HomePresenter{
         let addressTitle = UserDefaults.standard.value(forKey: UserDefaultsConstants.addressTitle) as? String ?? ""
         let method = UserDefaults.standard.value(forKey: UserDefaultsConstants.calendarMethod) as! [String:String]
         let methodID = method["methdID"] ?? "6"
-        let basicURL = "https://muslimsalat.com/" +  addressTitle + "/yearly/" + date
-        let urlString = basicURL + "/false/" + methodID + ".json?key=48ae8106ef6b55e5dac258c0c8d2e224"
-        print(urlString)
-        let ecnodingString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        let url = URL(string: ecnodingString ?? "")
-        return url
+        let userLocation =   UserDefaults.standard.value(forKey: UserDefaultsConstants.userLocation) as! [String:Double]
+        let lat = userLocation["lat"]!
+        let long = userLocation["long"]!
+        let queryItems = [URLQueryItem(name: "method", value: methodID), URLQueryItem(name: "lat", value: "\(lat)"), URLQueryItem(name: "long", value: "\(long)"), URLQueryItem(name: "date", value: date), URLQueryItem(name: "location", value: addressTitle)]
+        
+//        let basicURL = Constants.apiBasicURL +  addressTitle + "/yearly/" + date + "\(lat)" + "\(long)"
+//        let urlString = basicURL + "/false/" + methodID
+//        print(urlString)
+//        let ecnodingString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+//        let url = URL(string: ecnodingString ?? "")
+        var urlComps = URLComponents(string: Constants.apiBasicURL)!
+        urlComps.queryItems=queryItems
+        print(urlComps.url)
+        return urlComps.url
     }
     /**
      Call this function for generate Date String required to call the API
@@ -220,7 +229,7 @@ class HomePresenter{
         annualPrayerTimes?.prayerTimeitems?.forEach { (item) in
             let prayerTimeObject = RealmPrayerTimeModel()
             prayerTimeObject.id = prayerTimeObject.incrementID()
-            prayerTimeObject.date = item.dateFor ?? ""
+            prayerTimeObject.date = item.date ?? ""
             prayerTimeObject.fajr = item.fajr ?? ""
             prayerTimeObject.shurooq = item.shurooq ?? ""
             prayerTimeObject.dhuhr = item.dhuhr ?? ""

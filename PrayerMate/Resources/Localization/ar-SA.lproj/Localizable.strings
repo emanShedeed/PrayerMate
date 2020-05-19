@@ -49,6 +49,8 @@
 "Home.chooseDateRangeToasterMessage"= "يرجى تحديد نطاق التاريخ.";
 "Home.CalendarDoneBtnTitle"= "تم";
 "Home.CalendarLabelTitle"= "من فضلك اختر تاريخ البدء والانتهاء لاضافتها";
+"Home.errorGettingAPIdata"= "لا نستطيع الحصول علي مواعيد الصلاة من الخادم.";
+
 //Settings viewController
 "Settings.titleLbl" = "الاعدادات";
 "Settings.location" = "الموقع";
@@ -115,11 +117,9 @@
 "CalendarMethod.titleLbl" = "التقويم";
 "CalendarMethod.egyptianGeneralAuthorityOfSurveyTitle" = "الهيئة المصرية العامة للمساحة";
 "CalendarMethod.universityOfIslamicSciencesShafi" = "جامعة العلوم الإسلامية ، كراتشي (شافعي)";
-"CalendarMethod.universityOfIslamicSciencesHanafi" = "جامعة العلوم الإسلامية ، كراتشي (ابو حنيفه)";
 "CalendarMethod.islamicCircleOfNorthAmerica" = "الدائرة الإسلامية لأمريكا الشمالية";
 "CalendarMethod.muslimWorldLeague" = "رابطة العالم الإسلامي";
 "CalendarMethod.ummAlQura" = "أم القرى";
-"CalendarMethod.fixedIsha" = "العشاء الثابت";
 
 //FAQs viewController
 "FAQs.titleLbl" = "الأسئلة الشائعة";

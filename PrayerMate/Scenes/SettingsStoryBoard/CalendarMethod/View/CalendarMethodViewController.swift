@@ -24,7 +24,8 @@ class CalendarMethodViewController: UIViewController {
     
     weak var toSettingelegate : UpdateSettingsProtcol?
     
-    let calendarMethodArray :[String] = ["CalendarMethod.egyptianGeneralAuthorityOfSurveyTitle","CalendarMethod.universityOfIslamicSciencesShafi","CalendarMethod.universityOfIslamicSciencesHanafi","CalendarMethod.islamicCircleOfNorthAmerica","CalendarMethod.muslimWorldLeague","CalendarMethod.ummAlQura","CalendarMethod.fixedIsha"]
+    let calendarMethodArray :[String] = ["CalendarMethod.egyptianGeneralAuthorityOfSurveyTitle","CalendarMethod.universityOfIslamicSciencesShafi","CalendarMethod.islamicCircleOfNorthAmerica","CalendarMethod.muslimWorldLeague","CalendarMethod.ummAlQura"]
+    let calendarMethoddictionary :[String:Int] = ["CalendarMethod.egyptianGeneralAuthorityOfSurveyTitle":1,"CalendarMethod.universityOfIslamicSciencesShafi":2,"CalendarMethod.islamicCircleOfNorthAmerica":4,"CalendarMethod.muslimWorldLeague":5,"CalendarMethod.ummAlQura":6]
     
     
     override func viewDidLoad() {
@@ -57,7 +58,7 @@ extension CalendarMethodViewController:UITableViewDataSource,UITableViewDelegate
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let name = calendarMethodArray[indexPath.row]
-        let dect:[String:String]=["methodName":name ,"methdID":"\(indexPath.row+1)"]
+        let dect:[String:String]=["methodName":name ,"methdID":"\(calendarMethoddictionary[name] ?? 1)"]
         UserDefaults.standard.set(dect, forKey:UserDefaultsConstants.calendarMethod)
         toSettingelegate?.didUpdateSettings()
         self.dismiss(animated: true, completion: nil)

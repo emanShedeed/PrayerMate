@@ -371,14 +371,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1e-S0-l3a">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.23000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="closeViewBtnPressed:" destination="gRE-tj-kdC" eventType="touchUpInside" id="eyz-WW-dVz"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bO1-83-ha2" userLabel="container view" customClass="RoundedView" customModule="PrayerMate" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="247" width="375" height="420"/>
+                                <rect key="frame" x="0.0" y="347" width="375" height="320"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4A-fp-dQk">
                                         <rect key="frame" x="17" y="30" width="4.5" height="31"/>
@@ -397,7 +397,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ARx-U5-Pil">
-                                        <rect key="frame" x="0.0" y="76" width="375" height="344"/>
+                                        <rect key="frame" x="0.0" y="76" width="375" height="244"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CalendarMethodCell" id="0lA-4e-233" customClass="CalendarMethodCell" customModule="PrayerMate" customModuleProvider="target">
@@ -433,7 +433,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="ARx-U5-Pil" secondAttribute="bottom" id="0cq-kh-amc"/>
-                                    <constraint firstAttribute="height" constant="420" id="Kas-qg-oV2"/>
+                                    <constraint firstAttribute="height" constant="320" id="Kas-qg-oV2"/>
                                     <constraint firstAttribute="trailing" secondItem="ARx-U5-Pil" secondAttribute="trailing" id="Mj5-u3-Mco"/>
                                     <constraint firstItem="ARx-U5-Pil" firstAttribute="top" secondItem="R4A-fp-dQk" secondAttribute="bottom" constant="15" id="Und-fm-PVx"/>
                                     <constraint firstItem="ARx-U5-Pil" firstAttribute="leading" secondItem="bO1-83-ha2" secondAttribute="leading" id="dXq-On-CLz"/>

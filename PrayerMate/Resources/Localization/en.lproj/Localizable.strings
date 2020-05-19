@@ -52,6 +52,8 @@
 "Home.chooseDateRangeToasterMessage"= "Please select date range.";
 "Home.CalendarDoneBtnTitle"= "Done";
 "Home.CalendarLabelTitle"= "Please select start and end date for exporting";
+"Home.errorGettingAPIdata"= "can't get data from the server.";
+
 
 //Settings viewController
 "Settings.titleLbl" = "Settings";
@@ -121,12 +123,10 @@
 //CalendarMethod viewController
 "CalendarMethod.titleLbl" = "Calender Method";
 "CalendarMethod.egyptianGeneralAuthorityOfSurveyTitle" = "Egyptian General Authority of Survey";
-"CalendarMethod.universityOfIslamicSciencesShafi" = "EUniversity Of Islamic Sciences, Karachi (Shafi)";
-"CalendarMethod.universityOfIslamicSciencesHanafi" = "EUniversity Of Islamic Sciences, Karachi (Hanafi)";
+"CalendarMethod.universityOfIslamicSciencesShafi" = "University Of Islamic Sciences, Karachi (Shafi)";
 "CalendarMethod.islamicCircleOfNorthAmerica" = "Islamic Circle of North America";
 "CalendarMethod.muslimWorldLeague" = "Muslim World League";
 "CalendarMethod.ummAlQura" = "Umm Al-Qura";
-"CalendarMethod.fixedIsha" = "Fixed Isha";
 
 //FAQs viewController
 "FAQs.titleLbl" = "FAQs";
