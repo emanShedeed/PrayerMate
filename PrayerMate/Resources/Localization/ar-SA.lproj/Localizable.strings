@@ -10,7 +10,7 @@
 "internetFailMessage" = "من فضلك تأكد من اتصالك بالانترنت";
 "alertBtnTitle" = "تم";
 //custom Splach Screen
-"customSplash.weclomeLbl1" = " Prayer Mate";
+"customSplash.weclomeLbl1" = " PrayerMate";
 "customSplash.weclomeLbl2" = "Welcome to ";
 "customSplash.descriptionLbl" = "Lorem ipsum dolor sit amet, consetetur
  sadipscing elitr, sed diam.";
@@ -35,7 +35,7 @@
 
 //home viewController
 "Home.timeRemainsLbl" = "الوقت المتبقي";
-"Home.exportMessageLbl" = "اختر اي الأوقات تريد إضافتها للتقويم.";
+"Home.exportMessageLbl" = "اختر أوقات الصلاة التي تريد إضافتها للتقويم.";
 "Home.importBtnTitle" = "إضافة اوقات الصلاة للتقويم  ";
 "Home.fajrPrayerLblTitle" = "الفجر";
 "Home.sunrisePrayerLblTitle" = "الشروق";
@@ -56,7 +56,7 @@
 "Settings.location" = "الموقع";
 "Settings.language" ="اللغة";
 "Settings.prayerTimeBuffer" = "مدة مواقيت الصلاة";
-"Settings.importToCalendar" = "استيراد إلى التقويم";
+"Settings.importToCalendar" = "اضافة أوقات الصلاة للتقويم";
 "Settings.calendarMethod" = "التقويم";
 "Settings.about" = "عن التطبيق";
 "Settings.faqs" = "الأسئلة الشائعة";

@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - PrayerTimes
 struct PrayerTimesResponseModel: Codable {
-    let prayerTimeitems: [PrayerTimeItem]?
+    let prayerTimeitems: PrayerTimeItem?
     
     enum CodingKeys: String, CodingKey {
         case prayerTimeitems = "items"
@@ -18,7 +18,11 @@ struct PrayerTimesResponseModel: Codable {
 }
 // MARK: - Item
 struct PrayerTimeItem: Codable {
-    let date, fajr, shurooq, dhuhr: String?
+    let dateFor, fajr, shurooq, dhuhr: String?
     let asr, maghrib, isha: String?
+    enum CodingKeys: String, CodingKey {
+         case dateFor = "date_for"
+         case fajr, shurooq, dhuhr, asr, maghrib, isha
+     }
 }
 

@@ -39,7 +39,7 @@ class HomePresenter{
     }
     let prayerTimesNames=["Home.fajrPrayerLblTitle","Home.sunrisePrayerLblTitle","Home.zuhrPrayerLblTitle","Home.asrPrayerLblTitle","Home.maghribPrayerLblTitle","Home.ishaPrayerLblTitle"]
     var todayParyerTimes = [String]()
-    var annualPrayerTimes : PrayerTimesResponseModel?
+    var annualPrayerTimes : [PrayerTimesResponseModel]?
     var calendarDateTitle = ""
     
     //MARK:- Methods
@@ -108,11 +108,12 @@ class HomePresenter{
                 if let URLdata = data {
                     print(URLdata)
                     do{
-                         let prayerTimes = try JSONDecoder().decode(PrayerTimesResponseModel.self, from: URLdata)
-                        if prayerTimes.prayerTimeitems?.count != 0{
+                         let times = try JSONDecoder().decode([PrayerTimesResponseModel].self, from: URLdata)
+                        if times.count != 0{
                             //                            print(prayerTimes.items?[0].dateFor)
-                            self.todayParyerTimes=[(prayerTimes.prayerTimeitems?[0].fajr ?? ""),(prayerTimes.prayerTimeitems?[0].shurooq ?? ""),(prayerTimes.prayerTimeitems?[0].dhuhr ?? ""),(prayerTimes.prayerTimeitems?[0].asr ?? ""),(prayerTimes.prayerTimeitems?[0].maghrib ?? ""),(prayerTimes.prayerTimeitems?[0].isha ?? "")]
-                            self.annualPrayerTimes = prayerTimes
+                            let todayTimes=times[0].prayerTimeitems
+                            self.todayParyerTimes = [(todayTimes?.fajr ?? ""),(todayTimes?.shurooq ?? ""),(todayTimes?.dhuhr ?? ""),(todayTimes?.asr ?? ""),(todayTimes?.maghrib ?? ""),(todayTimes?.isha ?? "")]
+                            self.annualPrayerTimes = times
                             self.view?.fetchDataSucess()
                         }else{
                             self.view?.showError(error: "Home.errorGettingAPIdata".localized)
@@ -226,16 +227,16 @@ class HomePresenter{
             view?.showError(error: "Error intialize Realm \(error)")
         }
         
-        annualPrayerTimes?.prayerTimeitems?.forEach { (item) in
+        annualPrayerTimes?.forEach { (item) in
             let prayerTimeObject = RealmPrayerTimeModel()
             prayerTimeObject.id = prayerTimeObject.incrementID()
-            prayerTimeObject.date = item.date ?? ""
-            prayerTimeObject.fajr = item.fajr ?? ""
-            prayerTimeObject.shurooq = item.shurooq ?? ""
-            prayerTimeObject.dhuhr = item.dhuhr ?? ""
-            prayerTimeObject.asr = item.asr ?? ""
-            prayerTimeObject.maghrib = item.maghrib ?? ""
-            prayerTimeObject.isha = item.isha ?? ""
+            prayerTimeObject.date = item.prayerTimeitems?.dateFor ?? ""
+            prayerTimeObject.fajr = item.prayerTimeitems?.fajr ?? ""
+            prayerTimeObject.shurooq = item.prayerTimeitems?.shurooq ?? ""
+            prayerTimeObject.dhuhr = item.prayerTimeitems?.dhuhr ?? ""
+            prayerTimeObject.asr = item.prayerTimeitems?.asr ?? ""
+            prayerTimeObject.maghrib = item.prayerTimeitems?.maghrib ?? ""
+            prayerTimeObject.isha = item.prayerTimeitems?.isha ?? ""
             do{
                 try realm.write{
                     realm.add(prayerTimeObject)

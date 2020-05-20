@@ -36,7 +36,7 @@ final class HomeViewController: BaseViewController {
     var presenter:HomePresenter!
     var prayerTimesArray: [(isCellSelected: Bool, isBtnChecked:Bool)] = .init()
     var backGroundImagesArray = [UIImage.fajrBackGround,UIImage.sunriseBackGround,UIImage.zuhrBackGround,UIImage.asrBackGround,UIImage.maghribBackGround,UIImage.ishaBackGround]
-    
+    var getNextDayTimes = false
     ////Calendar VARiIABLES
     let calendareFormatter = DateFormatter()
     var firstDate: Date?
@@ -143,6 +143,8 @@ final class HomeViewController: BaseViewController {
                 UserDefaults.standard.set(self.secondDate, forKey:UserDefaultsConstants.lastImportDate)
 //                let _ = LocalNotification()
             }
+            prayerTimesArray=[(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false)]
+            self.prayerTimestableView.reloadData()
         }
     }
     
@@ -238,6 +240,11 @@ extension HomeViewController{
         var nextPrayerIndex = 0
         var IsfajrOfNextDate = false
         var accurateString :String = ""
+      
+        if(getNextDayTimes){
+            presenter.requestPrayerTimesAPI()
+            getNextDayTimes = false
+        }
         for  i in 0..<presenter.todayParyerTimes.count {
             accurateString = presenter.getPrayerTimeAccurateString(time: presenter.todayParyerTimes[i])
             let dateAsString = countDownTimerFormatter.string(from: Date())
@@ -245,6 +252,7 @@ extension HomeViewController{
                 let diff = Helper.findDateDiff(time1Str: presenter.getPrayerTimeAccurateString(time: presenter.todayParyerTimes[5]), time2Str: dateAsString, isNextDayFajr: IsfajrOfNextDate)
                 if(!diff.contains("-") ){
                     IsfajrOfNextDate = true
+                    getNextDayTimes = true
                 }
             }
             let dateDiff = Helper.findDateDiff(time1Str: dateAsString, time2Str: accurateString, isNextDayFajr: IsfajrOfNextDate)
@@ -301,7 +309,7 @@ extension HomeViewController:JTACMonthViewDataSource{
             endDate = Calendar.current.date(byAdding: .day, value: -1, to: firstOfNextYear) ?? Date()
         }
         //        let endDate = Calendar.current.date(byAdding: .year, value: 1, to: Date()) ?? Date()
-        let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate, numberOfRows: 5, calendar: Calendar(identifier: .gregorian), generateInDates: .off, generateOutDates: .off, firstDayOfWeek: .sunday)
+    let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate, numberOfRows: 5, calendar: Calendar(identifier: .gregorian), generateInDates: .forAllMonths, generateOutDates: .tillEndOfRow, firstDayOfWeek: .sunday)
         return parameters
     }
 }

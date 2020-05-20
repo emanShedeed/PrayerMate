@@ -12,7 +12,7 @@ struct Constants {
     static let domain = "",
     appName = "",
     apiKey = "AIzaSyCf6R_q6YPEBz64LR3LYCsiUu-JFGDTFnQ",
-    apiBasicURL="https://prayermate.black-squares.com/prayermate/public/api/prayerTimesAPI",
+    apiBasicURL="https://prayermate.black-squares.com/api/prayerTimesAPI",
     appLink = "https://ataba.blacksquaressolutions.com/"
     
     

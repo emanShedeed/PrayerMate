@@ -13,7 +13,7 @@
 
 //custom Splach Screen
 "customSplash.weclomeLbl1" = "Welcome to ";
-"customSplash.weclomeLbl2" = "Prayer Mate";
+"customSplash.weclomeLbl2" = "PrayerMate";
 "customSplash.descriptionLbl" = "Lorem ipsum dolor sit amet, consetetur
  sadipscing elitr, sed diam.";
 
@@ -60,7 +60,7 @@
 "Settings.location" = "Location";
 "Settings.language" ="Language";
 "Settings.prayerTimeBuffer" = "Prayer time buffer";
-"Settings.importToCalendar" = "Import to calendar";
+"Settings.importToCalendar" = "Export to calendar";
 "Settings.calendarMethod" = "Calendar method";
 "Settings.about" = "About";
 "Settings.faqs" = "Faqs";
