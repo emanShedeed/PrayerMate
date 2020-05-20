@@ -140,9 +140,16 @@ class FrequentlyQuestionsViewController: BaseViewController {
         searchBar.delegate = self
         searchBar.searchBarStyle = UISearchBar.Style.minimal
         searchBar.frame=CGRect(x:  UIScreen.main.bounds.width, y: 0, width: searchBar.frame.width, height: searchBar.frame.height)
-        searchBar.searchTextField.borderStyle = .none
-        searchBar.searchTextField.backgroundColor  = .none
-        searchBar.searchTextField.textColor = .white
+        var searchText : UITextField?
+        if #available(iOS 13.0, *) {
+           searchText  = searchBar.searchTextField
+        }
+        else {
+            searchText = searchBar.value(forKey: "_searchField") as? UITextField
+        }
+        searchText?.borderStyle = .none
+        searchText?.backgroundColor  = .none
+        searchText?.textColor = .white
         searchbarBtnIcon = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchButtonPressed))
         navigationItem.rightBarButtonItem = searchbarBtnIcon
     }
