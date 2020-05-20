@@ -36,7 +36,7 @@ final class HomeViewController: BaseViewController {
     var presenter:HomePresenter!
     var prayerTimesArray: [(isCellSelected: Bool, isBtnChecked:Bool)] = .init()
     var backGroundImagesArray = [UIImage.fajrBackGround,UIImage.sunriseBackGround,UIImage.zuhrBackGround,UIImage.asrBackGround,UIImage.maghribBackGround,UIImage.ishaBackGround]
-    var getNextDayTimes = false
+//    var getNextDayTimes = false
     ////Calendar VARiIABLES
     let calendareFormatter = DateFormatter()
     var firstDate: Date?
@@ -241,10 +241,10 @@ extension HomeViewController{
         var IsfajrOfNextDate = false
         var accurateString :String = ""
       
-        if(getNextDayTimes){
-            presenter.requestPrayerTimesAPI()
-            getNextDayTimes = false
-        }
+//        if(getNextDayTimes){
+//            presenter.requestPrayerTimesAPI()
+//            getNextDayTimes = false
+//        }
         for  i in 0..<presenter.todayParyerTimes.count {
             accurateString = presenter.getPrayerTimeAccurateString(time: presenter.todayParyerTimes[i])
             let dateAsString = countDownTimerFormatter.string(from: Date())
@@ -252,7 +252,7 @@ extension HomeViewController{
                 let diff = Helper.findDateDiff(time1Str: presenter.getPrayerTimeAccurateString(time: presenter.todayParyerTimes[5]), time2Str: dateAsString, isNextDayFajr: IsfajrOfNextDate)
                 if(!diff.contains("-") ){
                     IsfajrOfNextDate = true
-                    getNextDayTimes = true
+//                    getNextDayTimes = true
                 }
             }
             let dateDiff = Helper.findDateDiff(time1Str: dateAsString, time2Str: accurateString, isNextDayFajr: IsfajrOfNextDate)
