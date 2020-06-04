@@ -39,7 +39,7 @@
 //home viewController
 "Home.timeRemainsLbl" = "Time Remains";
 "Home.exportMessageLbl" = " Choose which prayer times to export.";
-"Home.importBtnTitle" = "  Export to Calendar";
+"Home.importBtnTitle" = "  Export prayer times to calendar";
 "Home.fajrPrayerLblTitle" = "Fajr";
 "Home.sunrisePrayerLblTitle" = "Sunrise";
 "Home.zuhrPrayerLblTitle" = "zuhr";

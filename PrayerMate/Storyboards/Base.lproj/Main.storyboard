@@ -344,7 +344,7 @@ sadipscing elitr, sed diam.</string>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9p6-T6-Vc0" customClass="RoundedButton" customModule="PrayerMate" customModuleProvider="target">
-                                <rect key="frame" x="17" y="272.5" width="170" height="45"/>
+                                <rect key="frame" x="17" y="272.5" width="256" height="45"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="Bg4-uZ-oiL"/>

@@ -8,8 +8,8 @@
 
 import UIKit
 /// This is a class created for conform to PrayerTimeCellDelegate to Update Home UI when radio button checked 
-extension HomeViewController:HomePrayerTimeCellProtcol{
-    func customCell(cell: HomePrayerTimeCell, checkedButonatCellIndex: Int) {
+extension ExportingViewController:ExportingPrayerTimeCellProtcol{
+    func customCell(cell: ExportingPrayerTimeCell, checkedButonatCellIndex: Int) {
         prayerTimesArray[checkedButonatCellIndex].isBtnChecked = !(prayerTimesArray[checkedButonatCellIndex].isBtnChecked)
         numberOfSelectedPrayerTimes = 0
         prayerTimestableView.reloadData()

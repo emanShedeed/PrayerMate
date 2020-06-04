@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eJp-Y5-lAR">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -10,19 +10,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Exporting-->
         <scene sceneID="lWl-rK-rAJ">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" modalPresentationStyle="fullScreen" id="hRK-ZJ-BbG" userLabel="Home" customClass="HomeViewController" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExportingViewController" modalPresentationStyle="fullScreen" id="hRK-ZJ-BbG" userLabel="Exporting" customClass="ExportingViewController" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uPh-q4-8uO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fajrbg" translatesAutoresizingMaskIntoConstraints="NO" id="lQc-ov-W3c">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odr-J5-TIR">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRR-5l-1BR" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="733.66666666666663"/>
@@ -43,9 +40,6 @@
                                                     <constraint firstAttribute="height" constant="24" id="b2d-Vr-2UL"/>
                                                 </constraints>
                                                 <state key="normal" image="setting"/>
-                                                <connections>
-                                                    <action selector="settingBtnPressed:" destination="hRK-ZJ-BbG" eventType="touchUpInside" id="oGB-nG-8Cz"/>
-                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzV-wR-9is" userLabel="titleView">
                                                 <rect key="frame" x="188" y="124" width="142" height="115"/>
@@ -100,7 +94,7 @@
                                                     <constraint firstAttribute="height" constant="240" id="HS1-w5-gQe"/>
                                                 </constraints>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PrayerTimeCell" rowHeight="40" id="ghI-vk-eh4" customClass="HomePrayerTimeCell" customModule="PrayerMate" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ExportingPrayerTimeCell" rowHeight="40" id="ghI-vk-eh4" customClass="ExportingPrayerTimeCell" customModule="PrayerMate" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="375" height="40"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ghI-vk-eh4" id="PLq-Ib-iVP">
@@ -108,19 +102,19 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fajr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cE6-Ye-Hwp">
-                                                                    <rect key="frame" x="17.000000000000004" y="9.3333333333333339" width="32.333333333333343" height="21.666666666666664"/>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <rect key="frame" x="17" y="9.3333333333333339" width="29.333333333333329" height="21.666666666666664"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                    <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqP-3N-Cub">
-                                                                    <rect key="frame" x="207" y="9.3333333333333339" width="80" height="21.666666666666664"/>
+                                                                    <rect key="frame" x="227" y="9.3333333333333339" width="80" height="21.666666666666664"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmR-IZ-FWh">
-                                                                    <rect key="frame" x="316" y="-1" width="42" height="42"/>
+                                                                    <rect key="frame" x="336" y="9" width="22" height="22"/>
                                                                     <state key="normal" image="unselectedPrayerTime"/>
                                                                     <connections>
                                                                         <action selector="checkPrayerTimeBtnPressed:" destination="ghI-vk-eh4" eventType="touchUpInside" id="3Gl-WW-ENC"/>
@@ -150,7 +144,6 @@
                                                 </connections>
                                             </tableView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.16078431369999999" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="mP5-F7-rng" firstAttribute="centerX" secondItem="mRR-5l-1BR" secondAttribute="centerX" id="1y2-j7-TTV"/>
                                             <constraint firstItem="mP5-F7-rng" firstAttribute="top" secondItem="mRR-5l-1BR" secondAttribute="top" constant="36" id="5DA-Iq-HOI"/>
@@ -310,7 +303,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.5" id="2mY-y4-EIa"/>
                                                             <constraint firstAttribute="height" constant="20.5" id="yUL-hG-Jqs"/>
@@ -357,15 +350,15 @@
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomJTAppleCalendarCell" id="L5E-UL-RiK" customClass="CustomJTAppleCalendarCell" customModule="PrayerMate" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gBS-KU-GoD">
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="gBS-KU-GoD">
                                                             <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1j-N0-njO">
+                                                                <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e1j-N0-njO">
                                                                     <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
                                                                     <color key="backgroundColor" red="0.70588235294117641" green="0.8784313725490196" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </view>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P3-tK-X4d">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P3-tK-X4d">
                                                                     <rect key="frame" x="-3.3333333333333321" y="7.3333333333333339" width="41.666666666666657" height="20.333333333333329"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -419,7 +412,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="gE9-fh-Lok" firstAttribute="leading" secondItem="9E8-H4-Wf2" secondAttribute="leading" id="2GN-2X-pd9"/>
-                            <constraint firstAttribute="bottom" secondItem="lQc-ov-W3c" secondAttribute="bottom" id="62C-Tm-1Ge"/>
                             <constraint firstItem="0nA-bk-kES" firstAttribute="leading" secondItem="9E8-H4-Wf2" secondAttribute="leading" constant="17" id="AYl-J2-aIG"/>
                             <constraint firstItem="9E8-H4-Wf2" firstAttribute="trailing" secondItem="0nA-bk-kES" secondAttribute="trailing" constant="17" id="V1A-bo-D6X"/>
                             <constraint firstItem="Odr-J5-TIR" firstAttribute="bottom" secondItem="9E8-H4-Wf2" secondAttribute="bottom" id="Vmc-Rw-TtL"/>
@@ -427,38 +419,274 @@
                             <constraint firstItem="Odr-J5-TIR" firstAttribute="top" secondItem="9E8-H4-Wf2" secondAttribute="top" id="bZP-hz-ib9"/>
                             <constraint firstItem="gE9-fh-Lok" firstAttribute="trailing" secondItem="9E8-H4-Wf2" secondAttribute="trailing" id="bad-uX-k1s"/>
                             <constraint firstItem="Odr-J5-TIR" firstAttribute="trailing" secondItem="9E8-H4-Wf2" secondAttribute="trailing" id="eQs-jM-TAU"/>
-                            <constraint firstItem="lQc-ov-W3c" firstAttribute="top" secondItem="uPh-q4-8uO" secondAttribute="top" id="ekS-Lj-YBp"/>
                             <constraint firstItem="9E8-H4-Wf2" firstAttribute="bottom" secondItem="gE9-fh-Lok" secondAttribute="bottom" id="lNa-pJ-LU9"/>
                             <constraint firstItem="Odr-J5-TIR" firstAttribute="leading" secondItem="9E8-H4-Wf2" secondAttribute="leading" id="mRQ-Vj-Zwl"/>
-                            <constraint firstAttribute="trailing" secondItem="lQc-ov-W3c" secondAttribute="trailing" id="uYX-Ux-k0m"/>
-                            <constraint firstItem="lQc-ov-W3c" firstAttribute="leading" secondItem="uPh-q4-8uO" secondAttribute="leading" id="ufG-Q9-5GW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9E8-H4-Wf2"/>
                     </view>
+                    <navigationItem key="navigationItem" id="De8-lI-wx7"/>
                     <connections>
-                        <outlet property="backGroundImageView" destination="lQc-ov-W3c" id="2EH-ad-4md"/>
                         <outlet property="calenadrIncludingHeaderView" destination="gE9-fh-Lok" id="TcQ-UA-Ylk"/>
                         <outlet property="calendarDateTitleLbl" destination="e01-h6-dOV" id="5Uh-Hh-i3E"/>
                         <outlet property="calendarView" destination="4NI-Rb-VNC" id="dxh-UK-Orz"/>
-                        <outlet property="dateLBL" destination="mP5-F7-rng" id="UXW-zw-UZM"/>
                         <outlet property="daysStackView" destination="8xe-0w-ffI" id="QaX-Ae-K5H"/>
                         <outlet property="hideCalendareView" destination="mRR-5l-1BR" id="Spk-z4-7fJ"/>
                         <outlet property="importBtn" destination="JfE-U2-afT" id="tP3-tW-aDm"/>
                         <outlet property="prayerTimestableView" destination="CqQ-3d-Vzw" id="9Io-gT-2Ob"/>
-                        <outlet property="remainingTimeLbl" destination="Py3-bf-sLa" id="LeD-ZP-9pQ"/>
-                        <outlet property="selectedPrayerTimeName" destination="m5p-e6-XhV" id="oxN-kE-vhN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56t-Kb-OBH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="47"/>
+            <point key="canvasLocation" x="2016.8" y="46.551724137931039"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="goA-nr-Ixf">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" modalPresentationStyle="fullScreen" id="CeI-Vh-3Yj" userLabel="Home" customClass="HomeViewController" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ihr-dk-hdG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fajrbg" translatesAutoresizingMaskIntoConstraints="NO" id="2Ic-28-7ux">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fm-Ip-u7L">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZuG-q2-Bc2" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="734"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WF0-RN-iBF">
+                                                <rect key="frame" x="187.66666666666666" y="36" width="0.0" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="s6k-BA-WAY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B70-Rw-o4j">
+                                                <rect key="frame" x="17" y="39" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="4XJ-WS-QVs"/>
+                                                    <constraint firstAttribute="height" constant="24" id="eRI-AY-3if"/>
+                                                </constraints>
+                                                <state key="normal" image="setting"/>
+                                                <connections>
+                                                    <action selector="settingBtnPressed:" destination="CeI-Vh-3Yj" eventType="touchUpInside" id="Bm4-P9-9XJ"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0n5-Qz-SMf" userLabel="titleView">
+                                                <rect key="frame" x="188" y="124" width="142" height="115"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IA-X8-Bhl">
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time remains" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfr-yv-qhp">
+                                                        <rect key="frame" x="0.0" y="15" width="86.666666666666671" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Home.timeRemainsLbl"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVJ-gN-CxK">
+                                                        <rect key="frame" x="0.0" y="34" width="0.0" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="mVJ-gN-CxK" firstAttribute="leading" secondItem="0n5-Qz-SMf" secondAttribute="leading" id="0z9-fI-bxm"/>
+                                                    <constraint firstItem="mVJ-gN-CxK" firstAttribute="top" secondItem="lfr-yv-qhp" secondAttribute="bottom" constant="2" id="AlF-lQ-p9D"/>
+                                                    <constraint firstAttribute="height" constant="115" id="JeI-5f-sXt"/>
+                                                    <constraint firstItem="4IA-X8-Bhl" firstAttribute="top" secondItem="0n5-Qz-SMf" secondAttribute="top" id="bLu-yJ-ufh"/>
+                                                    <constraint firstItem="lfr-yv-qhp" firstAttribute="top" secondItem="4IA-X8-Bhl" secondAttribute="bottom" constant="15" id="ban-Q6-IL6"/>
+                                                    <constraint firstItem="lfr-yv-qhp" firstAttribute="leading" secondItem="0n5-Qz-SMf" secondAttribute="leading" id="cK5-Db-COd"/>
+                                                    <constraint firstAttribute="width" constant="142" id="d1W-Np-HHU"/>
+                                                    <constraint firstItem="4IA-X8-Bhl" firstAttribute="leading" secondItem="0n5-Qz-SMf" secondAttribute="leading" id="hig-p2-tEn"/>
+                                                </constraints>
+                                            </view>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aWI-jL-dTh">
+                                                <rect key="frame" x="0.0" y="256.66666666666669" width="375" height="240"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="240" id="d5c-EN-bGX"/>
+                                                </constraints>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomePrayerTimeCell" rowHeight="40" id="tuf-uE-KV6" customClass="HomePrayerTimeCell" customModule="PrayerMate" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="28" width="375" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tuf-uE-KV6" id="5CN-dv-2Bz">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fajr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9e7-AJ-arD">
+                                                                    <rect key="frame" x="17.000000000000004" y="9.3333333333333339" width="32.333333333333343" height="21.666666666666664"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbU-1U-aFL">
+                                                                    <rect key="frame" x="278" y="9.3333333333333339" width="80" height="21.666666666666664"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="wbU-1U-aFL" firstAttribute="centerY" secondItem="5CN-dv-2Bz" secondAttribute="centerY" id="KuM-G8-DDm"/>
+                                                                <constraint firstAttribute="trailing" secondItem="wbU-1U-aFL" secondAttribute="trailing" constant="17" id="SpO-qd-NCQ"/>
+                                                                <constraint firstItem="9e7-AJ-arD" firstAttribute="leading" secondItem="5CN-dv-2Bz" secondAttribute="leading" constant="17" id="XL9-FJ-eUw"/>
+                                                                <constraint firstItem="9e7-AJ-arD" firstAttribute="centerY" secondItem="5CN-dv-2Bz" secondAttribute="centerY" id="Yk4-nz-DRK"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <connections>
+                                                            <outlet property="prayerTimeLbl" destination="wbU-1U-aFL" id="IsH-Pe-UXH"/>
+                                                            <outlet property="prayerTimeNameLbl" destination="9e7-AJ-arD" id="obk-GB-OvP"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="CeI-Vh-3Yj" id="zAx-sf-RHJ"/>
+                                                    <outlet property="delegate" destination="CeI-Vh-3Yj" id="CRk-B2-odw"/>
+                                                </connections>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.16078431369999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="aWI-jL-dTh" secondAttribute="trailing" id="2bB-cE-Agk"/>
+                                            <constraint firstItem="aWI-jL-dTh" firstAttribute="leading" secondItem="ZuG-q2-Bc2" secondAttribute="leading" id="4V8-Dv-GVK"/>
+                                            <constraint firstAttribute="right" secondItem="0n5-Qz-SMf" secondAttribute="right" constant="45" id="Fng-3X-prZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="aWI-jL-dTh" secondAttribute="bottom" constant="237.33000000000001" id="GsE-HS-kga"/>
+                                            <constraint firstItem="B70-Rw-o4j" firstAttribute="centerY" secondItem="WF0-RN-iBF" secondAttribute="centerY" id="TTk-2e-NCo"/>
+                                            <constraint firstItem="0n5-Qz-SMf" firstAttribute="top" secondItem="WF0-RN-iBF" secondAttribute="bottom" constant="58" id="bjm-lR-W1e"/>
+                                            <constraint firstItem="WF0-RN-iBF" firstAttribute="top" secondItem="ZuG-q2-Bc2" secondAttribute="top" constant="36" id="iUX-GF-A9u"/>
+                                            <constraint firstItem="WF0-RN-iBF" firstAttribute="centerX" secondItem="ZuG-q2-Bc2" secondAttribute="centerX" id="v62-ru-IX5"/>
+                                            <constraint firstItem="aWI-jL-dTh" firstAttribute="top" secondItem="0n5-Qz-SMf" secondAttribute="bottom" constant="17.670000000000002" id="vhs-nl-i8e"/>
+                                            <constraint firstItem="B70-Rw-o4j" firstAttribute="leading" secondItem="ZuG-q2-Bc2" secondAttribute="leading" constant="17" id="yST-9T-3az"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ZuG-q2-Bc2" secondAttribute="trailing" id="5Lz-Pe-Bj3"/>
+                                    <constraint firstItem="ZuG-q2-Bc2" firstAttribute="top" secondItem="3Fm-Ip-u7L" secondAttribute="top" id="gKA-C4-Njo"/>
+                                    <constraint firstItem="ZuG-q2-Bc2" firstAttribute="leading" secondItem="3Fm-Ip-u7L" secondAttribute="leading" id="lK4-1a-Vz5"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZuG-q2-Bc2" secondAttribute="bottom" id="o2e-8r-axQ"/>
+                                    <constraint firstItem="ZuG-q2-Bc2" firstAttribute="width" secondItem="3Fm-Ip-u7L" secondAttribute="width" id="xfb-dO-gKS"/>
+                                </constraints>
+                            </scrollView>
+                            <visualEffectView opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfD-z2-PH7">
+                                <rect key="frame" x="17" y="713" width="341" height="45"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Unl-se-mAM">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="45"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMG-0Z-Nhk" customClass="RoundedButton" customModule="PrayerMate" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="45"/>
+                                            <color key="backgroundColor" white="1" alpha="0.73999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <state key="normal" title="Import" image="calendar">
+                                                <color key="titleColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.40000000000000002" alpha="0.73999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Home.importBtnTitle"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="importBtnPressed:" destination="CeI-Vh-3Yj" eventType="touchUpInside" id="yhL-hA-Emd"/>
+                                                <segue destination="hRK-ZJ-BbG" kind="show" identifier="" id="1CE-bf-gxU"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="WMG-0Z-Nhk" secondAttribute="trailing" id="4t1-j0-gvr"/>
+                                        <constraint firstItem="WMG-0Z-Nhk" firstAttribute="top" secondItem="Unl-se-mAM" secondAttribute="top" id="AHK-gW-hHc"/>
+                                        <constraint firstItem="WMG-0Z-Nhk" firstAttribute="leading" secondItem="Unl-se-mAM" secondAttribute="leading" id="B6a-Dw-XFm"/>
+                                        <constraint firstAttribute="bottom" secondItem="WMG-0Z-Nhk" secondAttribute="bottom" id="fg0-F7-MIq"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <integer key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="9Ou-G6-jbZ"/>
+                                </constraints>
+                                <blurEffect style="extraLight"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2Ic-28-7ux" secondAttribute="bottom" id="6Kh-XL-dLg"/>
+                            <constraint firstItem="3Fm-Ip-u7L" firstAttribute="top" secondItem="SeI-Wr-CuA" secondAttribute="top" id="Bf0-MA-LTe"/>
+                            <constraint firstItem="SeI-Wr-CuA" firstAttribute="bottom" secondItem="jfD-z2-PH7" secondAttribute="bottom" constant="20" id="DUg-KC-JSF"/>
+                            <constraint firstItem="jfD-z2-PH7" firstAttribute="leading" secondItem="SeI-Wr-CuA" secondAttribute="leading" constant="17" id="IoA-ml-MrS"/>
+                            <constraint firstItem="2Ic-28-7ux" firstAttribute="top" secondItem="ihr-dk-hdG" secondAttribute="top" id="OgU-Ao-8St"/>
+                            <constraint firstItem="2Ic-28-7ux" firstAttribute="leading" secondItem="ihr-dk-hdG" secondAttribute="leading" id="VBT-MT-1DP"/>
+                            <constraint firstItem="3Fm-Ip-u7L" firstAttribute="trailing" secondItem="SeI-Wr-CuA" secondAttribute="trailing" id="ZBy-Wd-Hbw"/>
+                            <constraint firstAttribute="trailing" secondItem="2Ic-28-7ux" secondAttribute="trailing" id="gwe-af-gsd"/>
+                            <constraint firstItem="SeI-Wr-CuA" firstAttribute="trailing" secondItem="jfD-z2-PH7" secondAttribute="trailing" constant="17" id="hXa-FJ-bX8"/>
+                            <constraint firstItem="3Fm-Ip-u7L" firstAttribute="leading" secondItem="SeI-Wr-CuA" secondAttribute="leading" id="vCG-SN-JCi"/>
+                            <constraint firstItem="3Fm-Ip-u7L" firstAttribute="bottom" secondItem="SeI-Wr-CuA" secondAttribute="bottom" id="wMa-7G-xqc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SeI-Wr-CuA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5b5-he-9se">
+                        <barButtonItem key="backBarButtonItem" title=" Export Prayer times" id="1lr-Kd-iBf"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backGroundImageView" destination="2Ic-28-7ux" id="ogn-wV-JNb"/>
+                        <outlet property="dateLBL" destination="WF0-RN-iBF" id="Pen-VL-3VK"/>
+                        <outlet property="importBtn" destination="WMG-0Z-Nhk" id="Mtd-yA-ldx"/>
+                        <outlet property="prayerTimestableView" destination="aWI-jL-dTh" id="d42-bc-pm2"/>
+                        <outlet property="remainingTimeLbl" destination="mVJ-gN-CxK" id="3bK-XK-PVx"/>
+                        <outlet property="selectedPrayerTimeName" destination="4IA-X8-Bhl" id="0JS-aH-7zB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zt1-hP-TUG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1236" y="91.625615763546804"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BWJ-9H-jeh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="eJp-Y5-lAR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tLf-Oc-fdC">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="AppColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CeI-Vh-3Yj" kind="relationship" relationship="rootViewController" id="CpO-dr-LOy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dvg-06-8DU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="293.60000000000002" y="91.625615763546804"/>
         </scene>
     </scenes>
     <resources>
         <image name="calendar" width="21" height="21"/>
         <image name="fajrbg" width="375" height="667"/>
         <image name="setting" width="24" height="24"/>
-        <image name="unselectedPrayerTime" width="21" height="21"/>
+        <image name="unselectedPrayerTime" width="22" height="22"/>
         <namedColor name="AppColor">
             <color red="0.0" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -22,6 +22,7 @@ struct UserDefaultsConstants {
     googleService = "googleService",
     microsoftAuthorization = "microsoftAuthorization",
     microsoftCalendarID = "microsoftCalendarID",
-    isLaunchedBefore = "isLaunchedBefore"
+    isLaunchedBefore = "isLaunchedBefore",
+    todayParyerTimes = "todayParyerTimes"
     
 }

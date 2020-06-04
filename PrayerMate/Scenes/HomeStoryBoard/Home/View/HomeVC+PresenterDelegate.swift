@@ -26,11 +26,9 @@ extension HomeViewController:HomeViewControllerProtocol{
      - Parameters:
      */
     func fetchDataSucess() {
-        numberOfSelectedPrayerTimes = 0
-        prayerTimesArray=[(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false)]
+        prayerTimesArray = [Bool]( repeating: false, count: 6 )
         DispatchQueue.main.async {
             self.activityIndicator.stopAnimating()
-            self.calendarDateTitleLbl.text = self.presenter.calendarDateTitle
             self.prayerTimestableView.reloadData()
             self.getNextPrayerTime()
             
@@ -45,9 +43,7 @@ extension HomeViewController:HomeViewControllerProtocol{
 //            UserDefaults.standard.set(true, forKey: "isLaunchedBefore")
             self.presenter.saveDataToRealm()
 //                 }
-            self.selectedPrayerTimesIndicies = self.prayerTimesArray.indices.filter{self.prayerTimesArray[$0].isBtnChecked == true}
-            UserDefaults.standard.set(self.selectedPrayerTimesIndicies, forKey:UserDefaultsConstants.selectedPrayerTimesIndicies)
-            
+ 
         }
         
     }

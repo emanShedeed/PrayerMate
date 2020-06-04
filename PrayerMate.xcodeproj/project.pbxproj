@@ -13,7 +13,7 @@
 		BD0C904A2423A4C8000B8EAC /* HomePrayerTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C90492423A4C8000B8EAC /* HomePrayerTimeCell.swift */; };
 		BD0C904E2423A620000B8EAC /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C904D2423A620000B8EAC /* HomePresenter.swift */; };
 		BD0C90502423B175000B8EAC /* HomeVC+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C904F2423B175000B8EAC /* HomeVC+PresenterDelegate.swift */; };
-		BD0C90532423B49D000B8EAC /* HomeVC+PrayerTimeCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C90522423B49D000B8EAC /* HomeVC+PrayerTimeCellDelegate.swift */; };
+		BD0C90532423B49D000B8EAC /* ExportingVC+PrayerTimeCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C90522423B49D000B8EAC /* ExportingVC+PrayerTimeCellDelegate.swift */; };
 		BD0C905524273A8B000B8EAC /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905424273A8B000B8EAC /* UIButton+Extension.swift */; };
 		BD0C905924276C13000B8EAC /* LocationSearchtable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905724276C12000B8EAC /* LocationSearchtable.swift */; };
 		BD0C905A24276C13000B8EAC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905824276C13000B8EAC /* MapViewController.swift */; };
@@ -24,6 +24,10 @@
 		BD12EB492422267F00001437 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB482422267F00001437 /* LocationViewController.swift */; };
 		BD12EB4B2422290C00001437 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB4A2422290B00001437 /* RoundedTextField.swift */; };
 		BD1FC1DD24458D3200540A2B /* RealmPrayerTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FC1DC24458D3200540A2B /* RealmPrayerTimeModel.swift */; };
+		BD21C9C8248874D300BA9BA1 /* ExportingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD21C9C7248874D300BA9BA1 /* ExportingViewController.swift */; };
+		BD21C9CD24887E8300BA9BA1 /* ExportingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD21C9CC24887E8300BA9BA1 /* ExportingPresenter.swift */; };
+		BD21C9CF2488DEC600BA9BA1 /* ExportingPrayerTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD21C9CE2488DEC600BA9BA1 /* ExportingPrayerTimeCell.swift */; };
+		BD21C9D12488DF8D00BA9BA1 /* ExportingVC+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD21C9D02488DF8D00BA9BA1 /* ExportingVC+PresenterDelegate.swift */; };
 		BD287BCA243B0BD100373170 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD287BC9243B0BD100373170 /* SplashPresenter.swift */; };
 		BD287BCD243B466800373170 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD287BCC243B466800373170 /* SettingPresenter.swift */; };
 		BD287BD0243B50BA00373170 /* SettingsLocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD287BCF243B50BA00373170 /* SettingsLocationPresenter.swift */; };
@@ -92,7 +96,7 @@
 		BD0C90492423A4C8000B8EAC /* HomePrayerTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrayerTimeCell.swift; sourceTree = "<group>"; };
 		BD0C904D2423A620000B8EAC /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		BD0C904F2423B175000B8EAC /* HomeVC+PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+PresenterDelegate.swift"; sourceTree = "<group>"; };
-		BD0C90522423B49D000B8EAC /* HomeVC+PrayerTimeCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+PrayerTimeCellDelegate.swift"; sourceTree = "<group>"; };
+		BD0C90522423B49D000B8EAC /* ExportingVC+PrayerTimeCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExportingVC+PrayerTimeCellDelegate.swift"; sourceTree = "<group>"; };
 		BD0C905424273A8B000B8EAC /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		BD0C905724276C12000B8EAC /* LocationSearchtable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchtable.swift; sourceTree = "<group>"; };
 		BD0C905824276C13000B8EAC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +107,10 @@
 		BD12EB482422267F00001437 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		BD12EB4A2422290B00001437 /* RoundedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		BD1FC1DC24458D3200540A2B /* RealmPrayerTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPrayerTimeModel.swift; sourceTree = "<group>"; };
+		BD21C9C7248874D300BA9BA1 /* ExportingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportingViewController.swift; sourceTree = "<group>"; };
+		BD21C9CC24887E8300BA9BA1 /* ExportingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportingPresenter.swift; sourceTree = "<group>"; };
+		BD21C9CE2488DEC600BA9BA1 /* ExportingPrayerTimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExportingPrayerTimeCell.swift; path = ../../../../../../../../ExportingPrayerTimeCell.swift; sourceTree = "<group>"; };
+		BD21C9D02488DF8D00BA9BA1 /* ExportingVC+PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExportingVC+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		BD287BC9243B0BD100373170 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		BD287BCC243B466800373170 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
 		BD287BCF243B50BA00373170 /* SettingsLocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLocationPresenter.swift; sourceTree = "<group>"; };
@@ -184,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				BD0C90462423A143000B8EAC /* Home */,
+				BD21C9C3248873F300BA9BA1 /* Exporting */,
 			);
 			path = HomeStoryBoard;
 			sourceTree = "<group>";
@@ -211,7 +220,6 @@
 			children = (
 				BD0C90472423A161000B8EAC /* HomeViewController.swift */,
 				BD0C904F2423B175000B8EAC /* HomeVC+PresenterDelegate.swift */,
-				BD0C90522423B49D000B8EAC /* HomeVC+PrayerTimeCellDelegate.swift */,
 				BD751ADD242A42CF005A9764 /* HomeCellUIModel */,
 				BD751ADE242A42F5005A9764 /* JTAppleCalendar Cell */,
 			);
@@ -381,6 +389,50 @@
 				BD28C061246171BC00E97EC6 /* LocationPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BD21C9C3248873F300BA9BA1 /* Exporting */ = {
+			isa = PBXGroup;
+			children = (
+				BD21C9C62488748500BA9BA1 /* Model */,
+				BD21C9C52488747F00BA9BA1 /* View */,
+				BD21C9C42488747600BA9BA1 /* Presenter */,
+			);
+			path = Exporting;
+			sourceTree = "<group>";
+		};
+		BD21C9C42488747600BA9BA1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BD21C9CC24887E8300BA9BA1 /* ExportingPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BD21C9C52488747F00BA9BA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD21C9C7248874D300BA9BA1 /* ExportingViewController.swift */,
+				BD21C9D02488DF8D00BA9BA1 /* ExportingVC+PresenterDelegate.swift */,
+				BD0C90522423B49D000B8EAC /* ExportingVC+PrayerTimeCellDelegate.swift */,
+				BD21C9C924887B4C00BA9BA1 /* ExportingCellUIModel */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD21C9C62488748500BA9BA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD21C9C924887B4C00BA9BA1 /* ExportingCellUIModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD21C9CE2488DEC600BA9BA1 /* ExportingPrayerTimeCell.swift */,
+			);
+			path = ExportingCellUIModel;
 			sourceTree = "<group>";
 		};
 		BD2E0BEF2431D5F800D2B6E6 /* About */ = {
@@ -870,6 +922,7 @@
 				BDCF6A6F240D257A00DD46F7 /* AuthenticationManager.swift in Sources */,
 				BDA3F868241F712400705569 /* BundleExtension.swift in Sources */,
 				BDFFDA56243252B70066F493 /* CalendarMethodViewController.swift in Sources */,
+				BD21C9D12488DF8D00BA9BA1 /* ExportingVC+PresenterDelegate.swift in Sources */,
 				BD0CFB9A2451BAA900177761 /* LocalNotification.swift in Sources */,
 				BD0C90502423B175000B8EAC /* HomeVC+PresenterDelegate.swift in Sources */,
 				BDFFDA622432EEDD0066F493 /* SettingCell.swift in Sources */,
@@ -877,12 +930,14 @@
 				BD28C06424617A9700E97EC6 /* Location+PresenterDelegate.swift in Sources */,
 				BD0C90482423A161000B8EAC /* HomeViewController.swift in Sources */,
 				BD0C905924276C13000B8EAC /* LocationSearchtable.swift in Sources */,
+				BD21C9C8248874D300BA9BA1 /* ExportingViewController.swift in Sources */,
+				BD21C9CF2488DEC600BA9BA1 /* ExportingPrayerTimeCell.swift in Sources */,
 				BD0C904A2423A4C8000B8EAC /* HomePrayerTimeCell.swift in Sources */,
 				BD42746D242A4459007DE9AC /* CustomJTAppleCalendarCell.swift in Sources */,
 				BD6589152430944500FEE06C /* SettingViewController.swift in Sources */,
 				BDFFDA69243359180066F493 /* SettingsLocationViewController.swift in Sources */,
 				BDA3F8822420CAAC00705569 /* LanguageViewController.swift in Sources */,
-				BD0C90532423B49D000B8EAC /* HomeVC+PrayerTimeCellDelegate.swift in Sources */,
+				BD0C90532423B49D000B8EAC /* ExportingVC+PrayerTimeCellDelegate.swift in Sources */,
 				BDFFDA7324360D7F0066F493 /* PrayerTimeBufferViewController.swift in Sources */,
 				BDFFDA7624361D660066F493 /* PrayerTimeBufferCell.swift in Sources */,
 				BD6589212430D2B100FEE06C /* QuestionCell.swift in Sources */,
@@ -897,6 +952,7 @@
 				BDA3F869241F712400705569 /* main.swift in Sources */,
 				BDA3F87F2420C86600705569 /* UIStoryboard+Extension.swift in Sources */,
 				BDA3F86D241F715D00705569 /* AppSetting.swift in Sources */,
+				BD21C9CD24887E8300BA9BA1 /* ExportingPresenter.swift in Sources */,
 				BDCF6A71240D273F00DD46F7 /* GraphManager.swift in Sources */,
 				BD12EB46242225EB00001437 /* RoundedButton.swift in Sources */,
 				BDD1F74E2417B5E3006B87B7 /* Constants.swift in Sources */,

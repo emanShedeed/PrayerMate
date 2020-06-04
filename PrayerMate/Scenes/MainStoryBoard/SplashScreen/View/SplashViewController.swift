@@ -46,7 +46,7 @@ final class SplashViewController: BaseViewController {
                 
                 if let _ = UserDefaults.standard.value(forKey: UserDefaultsConstants.userLocation) as? [String:Double]{
                     
-                    let viewController = UIStoryboard.Home.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
+                    let viewController = UIStoryboard.Home.instantiateInitialViewController() as! UINavigationController
                     
                     self.present(viewController, animated: true, completion:nil)
                     
