@@ -95,7 +95,7 @@ class ExportingPresenter{
 /// This is a presenter class created for handling HomeVC JTAppleCalendar helper Functions.
 extension ExportingPresenter{
     
-    func setupCalendarView(calendarView:JTACMonthView,calenadrIncludingHeaderView:UIView,calendareFormatter:DateFormatter){
+    func setupCalendarView(calendarView:JTACMonthView,calendareFormatter:DateFormatter){
         //
         
         calendareFormatter.dateFormat="yyyy MM dd"
@@ -104,7 +104,7 @@ extension ExportingPresenter{
         calendarView.allowsMultipleSelection = true
         calendarView.allowsRangedSelection = true
         //make top rounded calendar
-        calenadrIncludingHeaderView.roundCorners([.topLeft,.topRight], radius: 20)
+        
         //setup calendarSpacing
         calendarView.minimumLineSpacing=0
         calendarView.minimumInteritemSpacing=0

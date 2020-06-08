@@ -28,6 +28,8 @@ extension UIColor {
       static let appGrayColor = UIColor(named:"AppGrayColor")
     static let locatemeBtnG1 = UIColor(named: "locatemeBtnG1")
     static let locatemeBtnG2 = UIColor(named: "locatemeBtnG1")
+    static let exportBtnG1 = UIColor(named: "exportBtnG1")
+      static let exportBtnG2 = UIColor(named: "exportBtnG2")
     static let dayCellGrayTextColor = UIColor(named: "dayCellGrayTextColor")
 
 }

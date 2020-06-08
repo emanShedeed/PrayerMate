@@ -51,6 +51,11 @@
 "Home.CalendarLabelTitle"= "من فضلك اختر تاريخ البدء والانتهاء لاضافتها";
 "Home.errorGettingAPIdata"= "لا نستطيع الحصول علي مواعيد الصلاة من الخادم.";
 
+//Exporting viewController
+"Exporting.switchTitleLbl" = "Export all times to calender";
+"Exporting.switchDetailLbl" = "You can export it manually";
+"Exporting.ExportBtn" = "Export";
+
 //Settings viewController
 "Settings.titleLbl" = "الاعدادات";
 "Settings.location" = "الموقع";

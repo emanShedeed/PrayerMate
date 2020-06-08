@@ -23,6 +23,7 @@ class ExportingViewController: BaseViewController {
     @IBOutlet weak var hideCalendareView: UIView!
     @IBOutlet weak var daysStackView: UIStackView!
     
+    @IBOutlet weak var closeCalendarViewBtn: UIButton!
     //MARK:VARiIABLES
     
     let countDownTimerFormatter = DateFormatter()
@@ -49,8 +50,10 @@ class ExportingViewController: BaseViewController {
         
         // Do any additional setup after loading the view.
         setupView()
-        presenter.setupCalendarView(calendarView: calendarView, calenadrIncludingHeaderView: calenadrIncludingHeaderView, calendareFormatter: calendareFormatter)
+    calenadrIncludingHeaderView.roundCorners([.topLeft,.topRight], radius: 20)
         
+        presenter.setupCalendarView(calendarView: calendarView, calendareFormatter: calendareFormatter)
+       
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         tap.cancelsTouchesInView = false
         hideCalendareView.addGestureRecognizer(tap)
@@ -59,6 +62,11 @@ class ExportingViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
          prayerTimesArray=[(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false)]
+    }
+    override func viewDidAppear(_ animated: Bool) {
+          super.viewDidAppear(animated)
+        
+          importBtn.applyGradient(with:  [UIColor.exportBtnG2!, UIColor.exportBtnG1!], gradient: .horizontal)
     }
     //MARK:- Methods
     
@@ -101,19 +109,40 @@ class ExportingViewController: BaseViewController {
      */
     @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
         calenadrIncludingHeaderView.isHidden = true
+//        shadowView.isHidden = true
     }
     
+    
     //MARK:- IBActions
+    @IBAction func closeCalendarViewBtnPressed(_ sender: Any) {
+           calenadrIncludingHeaderView.isHidden = true
+        closeCalendarViewBtn.isEnabled = false
+        closeCalendarViewBtn.isHidden = true
+      }
     @IBAction func importBtnPressed(_ sender: Any) {
         if(numberOfSelectedPrayerTimes > 0){
             firstDate = nil
             secondDate = nil
             calendarView.deselectAllDates()
+             calendarDateTitleLbl.text = presenter.calendarDateTitle
             calendarView.reloadData()
             calenadrIncludingHeaderView.isHidden=false
+            closeCalendarViewBtn.isEnabled = true
+            closeCalendarViewBtn.isHidden = false
         }
     }
     
+    @IBAction func automaticSelectPrayerTimeswichPressed(_ sender: UISwitch) {
+        if(sender.isOn){
+     prayerTimesArray = [(Bool,Bool)]( repeating: (true,true), count: 6 )
+            numberOfSelectedPrayerTimes = 6
+        }else{
+          prayerTimesArray = [(Bool,Bool)]( repeating: (false,false), count: 6 )
+            numberOfSelectedPrayerTimes = 0
+        }
+        saveSelectedPrayerTimesIndicies()
+        prayerTimestableView.reloadData()
+    }
     
     
     @IBAction func calendarDoneBtnPressed(_ sender: Any) {
@@ -130,6 +159,8 @@ class ExportingViewController: BaseViewController {
                 self.secondDate = self.firstDate
             }
             self.calenadrIncludingHeaderView.isHidden = true
+            closeCalendarViewBtn.isEnabled = false
+            closeCalendarViewBtn.isHidden = true
             self.activityIndicator.startAnimating()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
                 self.presenter.importPrayerTimesToSelectedCalendars(importStartDateAsString: formatter.string(from:self.firstDate ?? Date()), importEndDateAsString: formatter.string(from:self.secondDate ?? Date()),activityIndicator: self.activityIndicator)
@@ -139,6 +170,10 @@ class ExportingViewController: BaseViewController {
             prayerTimesArray=[(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false)]
             self.prayerTimestableView.reloadData()
         }
+    }
+    func saveSelectedPrayerTimesIndicies(){
+        self.selectedPrayerTimesIndicies = self.prayerTimesArray.indices.filter{self.prayerTimesArray[$0].isBtnChecked == true}
+        UserDefaults.standard.set(self.selectedPrayerTimesIndicies, forKey: UserDefaultsConstants.selectedPrayerTimesIndicies)
     }
     
 }
@@ -150,8 +185,8 @@ extension ExportingViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell=tableView.dequeueReusableCell(withIdentifier: "ExportingPrayerTimeCell", for: indexPath)as! ExportingPrayerTimeCell
-        presenter.ConfigureCell(cell:cell, isCellSelected: prayerTimesArray[indexPath.row].isCellSelected,isChecked:prayerTimesArray[indexPath.row].isBtnChecked,cellIndex:indexPath.row)
-        numberOfSelectedPrayerTimes = prayerTimesArray[indexPath.row].isBtnChecked ? numberOfSelectedPrayerTimes + 1 : numberOfSelectedPrayerTimes
+        presenter.ConfigureCell(cell:cell, isCellSelected: prayerTimesArray[indexPath.row].isBtnChecked,isChecked:prayerTimesArray[indexPath.row].isBtnChecked,cellIndex:indexPath.row)
+       numberOfSelectedPrayerTimes = prayerTimesArray[indexPath.row].isBtnChecked ? numberOfSelectedPrayerTimes + 1 : numberOfSelectedPrayerTimes
         cell.cellDelegate=self
         return cell
     }
@@ -160,14 +195,17 @@ extension ExportingViewController:UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        performSegue(withIdentifier: "goToRoomDetailsVC", sender: self)
-        numberOfSelectedPrayerTimes += 1
-        for index in 0 ..< prayerTimesArray.count {
-            prayerTimesArray[index].isCellSelected = false
-        }
-        prayerTimesArray[indexPath.row].isCellSelected = true
-        prayerTimesArray[indexPath.row].isBtnChecked = true
-        self.selectedPrayerTimesIndicies = self.prayerTimesArray.indices.filter{self.prayerTimesArray[$0].isBtnChecked == true}
-        UserDefaults.standard.set(self.selectedPrayerTimesIndicies, forKey: UserDefaultsConstants.selectedPrayerTimesIndicies)
+//        numberOfSelectedPrayerTimes += 1
+//        for index in 0 ..< prayerTimesArray.count {
+//            prayerTimesArray[index].isCellSelected = false
+//        }
+        prayerTimesArray[indexPath.row].isCellSelected =  !(prayerTimesArray[indexPath.row].isCellSelected)
+        
+        prayerTimesArray[indexPath.row].isBtnChecked = !(prayerTimesArray[indexPath.row].isBtnChecked)
+        
+         
+        
+      saveSelectedPrayerTimesIndicies()
         prayerTimestableView.reloadData()
     }
     

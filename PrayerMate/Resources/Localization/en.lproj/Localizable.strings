@@ -54,6 +54,11 @@
 "Home.CalendarLabelTitle"= "Please select start and end date for exporting";
 "Home.errorGettingAPIdata"= "can't get data from the server.";
 
+//Exporting viewController
+"Exporting.switchTitleLbl" = "Export all times to calender";
+"Exporting.switchDetailLbl" = "You can export it manually";
+"Exporting.ExportBtn" = "Export";
+
 
 //Settings viewController
 "Settings.titleLbl" = "Settings";
