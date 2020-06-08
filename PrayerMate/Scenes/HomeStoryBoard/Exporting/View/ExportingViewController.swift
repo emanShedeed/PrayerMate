@@ -24,6 +24,7 @@ class ExportingViewController: BaseViewController {
     @IBOutlet weak var daysStackView: UIStackView!
     
     @IBOutlet weak var closeCalendarViewBtn: UIButton!
+    @IBOutlet weak var navigationViewHeight: NSLayoutConstraint!
     //MARK:VARiIABLES
     let titleLabel=UILabel()
     let countDownTimerFormatter = DateFormatter()
@@ -90,6 +91,11 @@ class ExportingViewController: BaseViewController {
         countDownTimerFormatter.dateFormat = "hh:mm:ss a"
 
        styleNavBar()
+        if(UIScreen.main.bounds.height>667){
+                 navigationViewHeight.constant = 100.0
+               }else{
+                 navigationViewHeight.constant = 66.0
+             }
 //        prayerTimestableView.backgroundColor = UIColor.clear
     }
     

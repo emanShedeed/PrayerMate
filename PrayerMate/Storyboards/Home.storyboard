@@ -407,6 +407,7 @@
                         <outlet property="daysStackView" destination="8xe-0w-ffI" id="QaX-Ae-K5H"/>
                         <outlet property="hideCalendareView" destination="mRR-5l-1BR" id="Spk-z4-7fJ"/>
                         <outlet property="importBtn" destination="JfE-U2-afT" id="tP3-tW-aDm"/>
+                        <outlet property="navigationViewHeight" destination="uQj-Z3-kjK" id="FyR-gW-ek4"/>
                         <outlet property="prayerTimestableView" destination="CqQ-3d-Vzw" id="9Io-gT-2Ob"/>
                     </connections>
                 </viewController>
