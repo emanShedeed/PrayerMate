@@ -43,6 +43,7 @@
 		BD6589152430944500FEE06C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6589142430944500FEE06C /* SettingViewController.swift */; };
 		BD65891E2430D0EC00FEE06C /* FrequentlyQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65891B2430D0EC00FEE06C /* FrequentlyQuestionsViewController.swift */; };
 		BD6589212430D2B100FEE06C /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6589202430D2B100FEE06C /* QuestionCell.swift */; };
+		BD78EDBC248E6D21000271D5 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD78EDBB248E6D21000271D5 /* CalendarViewController.swift */; };
 		BD889180244CB33C00C58D5E /* GoogleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD88917F244CB33C00C58D5E /* GoogleService.swift */; };
 		BDA1ED2E2450320B007C0206 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDA1ED2D2450320A007C0206 /* GoogleService-Info.plist */; };
 		BDA3F868241F712400705569 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3F864241F712100705569 /* BundleExtension.swift */; };
@@ -126,6 +127,7 @@
 		BD6589142430944500FEE06C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		BD65891B2430D0EC00FEE06C /* FrequentlyQuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequentlyQuestionsViewController.swift; sourceTree = "<group>"; };
 		BD6589202430D2B100FEE06C /* QuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		BD78EDBB248E6D21000271D5 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		BD88917F244CB33C00C58D5E /* GoogleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleService.swift; sourceTree = "<group>"; };
 		BDA1ED2D2450320A007C0206 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BDA3F864241F712100705569 /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
@@ -518,6 +520,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BD78EDB9248E6CDC000271D5 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				BD78EDBA248E6CF0000271D5 /* View */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		BD78EDBA248E6CF0000271D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD78EDBB248E6D21000271D5 /* CalendarViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		BDA3F863241F70F600705569 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -653,6 +671,7 @@
 				BDD1F73F2417AA2E006B87B7 /* SplashScreen */,
 				BDA3F8802420CA9100705569 /* Language */,
 				BD12EB472422266800001437 /* Location */,
+				BD78EDB9248E6CDC000271D5 /* Calendar */,
 			);
 			path = MainStoryBoard;
 			sourceTree = "<group>";
@@ -916,6 +935,7 @@
 				BD0C905A24276C13000B8EAC /* MapViewController.swift in Sources */,
 				BDA3F871241F7E2B00705569 /* localizedText+Extension.swift in Sources */,
 				BDD1F7492417B5C7006B87B7 /* UIImage+Extension.swift in Sources */,
+				BD78EDBC248E6D21000271D5 /* CalendarViewController.swift in Sources */,
 				BDD1F74B2417B5C7006B87B7 /* UIColor+Externsion.swift in Sources */,
 				BD0C905C242787E9000B8EAC /* PrayerTimesResponseModel.swift in Sources */,
 				BDFFDA7E243635870066F493 /* PrayerTimeBuffer.swift in Sources */,

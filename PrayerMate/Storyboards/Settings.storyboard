@@ -815,14 +815,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0d-0f-JtU">
-                                        <rect key="frame" x="17" y="135" width="22" height="22"/>
+                                        <rect key="frame" x="17" y="135" width="44" height="44"/>
                                         <state key="normal" image="uncheckCalendar"/>
                                         <connections>
                                             <action selector="checkBtnPressed:" destination="mbf-uW-LmF" eventType="touchUpInside" id="vRn-Zq-QqS"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4R-Ua-XRL">
-                                        <rect key="frame" x="64" y="126" width="39.5" height="31"/>
+                                        <rect key="frame" x="86" y="148" width="39.5" height="31"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Label">
                                                 <attributes>
@@ -838,14 +838,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNr-lv-LKf">
-                                        <rect key="frame" x="17" y="182" width="22" height="22"/>
+                                        <rect key="frame" x="17" y="204" width="44" height="44"/>
                                         <state key="normal" image="uncheckCalendar"/>
                                         <connections>
                                             <action selector="checkBtnPressed:" destination="mbf-uW-LmF" eventType="touchUpInside" id="N0T-Mg-wqb"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsl-iT-AlP">
-                                        <rect key="frame" x="64" y="173" width="39.5" height="31"/>
+                                        <rect key="frame" x="86" y="217" width="39.5" height="31"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Label">
                                                 <attributes>
@@ -861,14 +861,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gev-KT-xgo">
-                                        <rect key="frame" x="17" y="229" width="22" height="22"/>
+                                        <rect key="frame" x="17" y="273" width="44" height="44"/>
                                         <state key="normal" image="uncheckCalendar"/>
                                         <connections>
                                             <action selector="checkBtnPressed:" destination="mbf-uW-LmF" eventType="touchUpInside" id="N2W-mZ-kYo"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtS-z8-nc8">
-                                        <rect key="frame" x="64" y="220" width="39.5" height="31"/>
+                                        <rect key="frame" x="86" y="286" width="39.5" height="31"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Label">
                                                 <attributes>
@@ -884,7 +884,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5L-Xc-OEr" customClass="RoundedButton" customModule="PrayerMate" customModuleProvider="target">
-                                        <rect key="frame" x="17" y="281" width="341" height="57"/>
+                                        <rect key="frame" x="17" y="347" width="341" height="57"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="3Bx-ew-due"/>
                                         </constraints>
@@ -1103,14 +1103,14 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w83-qr-8L9">
-                                        <rect key="frame" x="17" y="163.5" width="21" height="22"/>
+                                        <rect key="frame" x="17" y="163.5" width="42" height="42"/>
                                         <state key="normal" image="selectedRadio"/>
                                         <connections>
                                             <action selector="radioButtonPressed:" destination="XEq-Cn-Fjb" eventType="touchUpInside" id="4JZ-Da-Wkl"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dT-6K-Wbb">
-                                        <rect key="frame" x="56" y="151.5" width="5.5" height="34"/>
+                                        <rect key="frame" x="77" y="171.5" width="5.5" height="34"/>
                                         <attributedString key="attributedText">
                                             <fragment content=" ">
                                                 <attributes>
@@ -1125,14 +1125,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbU-br-kgR">
-                                        <rect key="frame" x="17" y="207.5" width="21" height="22"/>
+                                        <rect key="frame" x="17" y="227.5" width="42" height="42"/>
                                         <state key="normal" image="unselectedRadio"/>
                                         <connections>
                                             <action selector="radioButtonPressed:" destination="XEq-Cn-Fjb" eventType="touchUpInside" id="ch4-nC-rAM"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVC-4z-Yw2">
-                                        <rect key="frame" x="56" y="195.5" width="5.5" height="34"/>
+                                        <rect key="frame" x="77" y="235.5" width="5.5" height="34"/>
                                         <attributedString key="attributedText">
                                             <fragment content=" ">
                                                 <attributes>
@@ -1147,7 +1147,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5HF-kz-raS" customClass="RoundedButton" customModule="PrayerMate" customModuleProvider="target">
-                                        <rect key="frame" x="17" y="260.5" width="341" height="55"/>
+                                        <rect key="frame" x="17" y="300.5" width="341" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="V93-ib-IJv"/>
                                         </constraints>

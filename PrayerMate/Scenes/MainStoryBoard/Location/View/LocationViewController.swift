@@ -55,13 +55,14 @@ final class LocationViewController: UIViewController {
         
         if (isLocationSet && addressTitle != "" ){
             UserDefaults.standard.set(dect, forKey: UserDefaultsConstants.userLocation)
-            let viewController = UIStoryboard.Home.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
+    //            let viewController = UIStoryboard.Home.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
             
             UserDefaults.standard.set(addressTitle, forKey: UserDefaultsConstants.addressTitle)
             
             UserDefaults.standard.set(completeAddressTitle, forKey: UserDefaultsConstants.completeAddressTitle)
             
-            self.present(viewController, animated: true, completion:nil)
+//            self.present(viewController, animated: true, completion:nil)
+            performSegue(withIdentifier: "goToCalendarVC", sender: self)
             
         }else{
             

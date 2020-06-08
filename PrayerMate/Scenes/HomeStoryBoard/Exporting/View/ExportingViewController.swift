@@ -25,7 +25,7 @@ class ExportingViewController: BaseViewController {
     
     @IBOutlet weak var closeCalendarViewBtn: UIButton!
     //MARK:VARiIABLES
-    
+    let titleLabel=UILabel()
     let countDownTimerFormatter = DateFormatter()
     var countdown: DateComponents!
     let calendar = Calendar.current
@@ -50,6 +50,7 @@ class ExportingViewController: BaseViewController {
         
         // Do any additional setup after loading the view.
         setupView()
+        setUpNavBar()
     calenadrIncludingHeaderView.roundCorners([.topLeft,.topRight], radius: 20)
         
         presenter.setupCalendarView(calendarView: calendarView, calendareFormatter: calendareFormatter)
@@ -112,7 +113,20 @@ class ExportingViewController: BaseViewController {
 //        shadowView.isHidden = true
     }
     
-    
+    func setUpNavBar(){
+          styleNavBar()
+          TransparentNavBar()
+          let backButton = UIBarButtonItem()
+          backButton.title = "ExportingVC.navigationBackButton".localized
+          self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+          
+//          let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18),NSAttributedString.Key.foregroundColor:UIColor.white]
+//          titleLabel.attributedText = NSAttributedString(string: "FAQs.titleLbl".localized, attributes: attributes as [NSAttributedString.Key : Any])
+//
+//          titleLabel.letterSpace=1.08
+//          titleLabel.sizeToFit()
+//        navigationItem.titleView = titleLabel
+    }
     //MARK:- IBActions
     @IBAction func closeCalendarViewBtnPressed(_ sender: Any) {
            calenadrIncludingHeaderView.isHidden = true

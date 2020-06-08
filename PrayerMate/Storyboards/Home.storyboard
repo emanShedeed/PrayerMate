@@ -18,6 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kAU-3e-5B7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                                <color key="backgroundColor" name="AppColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="uQj-Z3-kjK"/>
+                                </constraints>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odr-J5-TIR">
                                 <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <subviews>
@@ -33,7 +40,7 @@
                                                 <color key="textColor" red="0.039215686274509803" green="0.039215686274509803" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Exporting.switchTitleLbl"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="ExportingVC.switchTitleLbl"/>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KMv-8H-ZRJ">
@@ -53,7 +60,7 @@
                                                 <color key="textColor" red="0.60784313725490191" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Exporting.switchDetailLbl"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="ExportingVC.switchDetailLbl"/>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upr-lQ-ecb">
@@ -161,7 +168,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="Exporting.ExportBtn"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="ExportingVC.ExportBtn"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="importBtnPressed:" destination="hRK-ZJ-BbG" eventType="touchUpInside" id="Ye2-az-RLp"/>
@@ -263,7 +270,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.5" id="2mY-y4-EIa"/>
                                                             <constraint firstAttribute="height" constant="20.5" id="yUL-hG-Jqs"/>
@@ -375,15 +382,18 @@
                             <constraint firstItem="gE9-fh-Lok" firstAttribute="leading" secondItem="9E8-H4-Wf2" secondAttribute="leading" id="2GN-2X-pd9"/>
                             <constraint firstItem="c7A-Cg-az8" firstAttribute="top" secondItem="uPh-q4-8uO" secondAttribute="topMargin" id="EKK-ES-TbI"/>
                             <constraint firstItem="Odr-J5-TIR" firstAttribute="bottom" secondItem="9E8-H4-Wf2" secondAttribute="bottom" id="Vmc-Rw-TtL"/>
+                            <constraint firstItem="kAU-3e-5B7" firstAttribute="leading" secondItem="9E8-H4-Wf2" secondAttribute="leading" id="Vrj-Vg-cVK"/>
                             <constraint firstItem="JfE-U2-afT" firstAttribute="leading" secondItem="9E8-H4-Wf2" secondAttribute="leading" constant="17" id="Y8R-yS-rbg"/>
                             <constraint firstItem="Odr-J5-TIR" firstAttribute="top" secondItem="9E8-H4-Wf2" secondAttribute="top" id="bZP-hz-ib9"/>
                             <constraint firstItem="gE9-fh-Lok" firstAttribute="trailing" secondItem="9E8-H4-Wf2" secondAttribute="trailing" id="bad-uX-k1s"/>
                             <constraint firstItem="Odr-J5-TIR" firstAttribute="trailing" secondItem="9E8-H4-Wf2" secondAttribute="trailing" id="eQs-jM-TAU"/>
                             <constraint firstAttribute="bottomMargin" secondItem="JfE-U2-afT" secondAttribute="bottom" constant="20" id="iTd-wW-yhR"/>
                             <constraint firstItem="9E8-H4-Wf2" firstAttribute="trailing" secondItem="c7A-Cg-az8" secondAttribute="trailing" id="j8e-0O-Af7"/>
+                            <constraint firstItem="kAU-3e-5B7" firstAttribute="trailing" secondItem="9E8-H4-Wf2" secondAttribute="trailing" id="k4v-W2-HIm"/>
                             <constraint firstItem="9E8-H4-Wf2" firstAttribute="bottom" secondItem="gE9-fh-Lok" secondAttribute="bottom" id="lNa-pJ-LU9"/>
                             <constraint firstItem="9E8-H4-Wf2" firstAttribute="trailing" secondItem="JfE-U2-afT" secondAttribute="trailing" constant="17" id="lif-VE-yfX"/>
                             <constraint firstItem="Odr-J5-TIR" firstAttribute="leading" secondItem="9E8-H4-Wf2" secondAttribute="leading" id="mRQ-Vj-Zwl"/>
+                            <constraint firstItem="kAU-3e-5B7" firstAttribute="top" secondItem="uPh-q4-8uO" secondAttribute="top" id="oNU-Wi-3Q9"/>
                             <constraint firstItem="c7A-Cg-az8" firstAttribute="leading" secondItem="9E8-H4-Wf2" secondAttribute="leading" id="xdZ-5z-K93"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9E8-H4-Wf2"/>

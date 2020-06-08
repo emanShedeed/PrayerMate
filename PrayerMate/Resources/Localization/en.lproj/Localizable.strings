@@ -25,12 +25,27 @@
 "Language.arabicRadioButtonTitle" = "  Arabic";
 
  //Location view controller
- "Location.title" = "Location";
- "Location.subTitle" = "Please choose your location";
- "Location.finishBtnTitle" = "Finish";
+"Location.title" = "Location";
+"Location.subTitle" = "Please choose your location";
+"Location.finishBtnTitle" = "Next";
 "Location.addressTxtPlaceHolder" = "  Select location from map";
 "Location.locateMeBtnTitle" = "  Locate me";
 "Location.alertMessage" = "please allow app to know your location or Press Locate me to choose location" ;
+
+//Calendar viewController
+"CalendarVC.titleLbl" = "Calendar";
+"CalendarVC.subTitleLbl" = "Please choose your preferred calendar";
+"CalendarVC.appleLbl" = "Apple Calendar";
+"CalendarVC.googleLbl" = "Google Calendar";
+"CalendarVC.MSLbl" = "MS Calendar";
+"CalendarVC.MSSignInSuccessMessage"="successfully signed in microsoft";
+"CalendarVC.GoogleSignInSuccessMessage"="successfully signed in Google";
+"CalendarVC.finishbtntitle" = "Finish";
+"CalendarVC.toastLbl" = "You must select at Least one calendar.";
+"CalendarVC.SigningInproblemAlertTitle" = "Error signing in";
+"CalendarVC.MicrosoftSigningInproblemAlertDesc" = "the user canceled the sign-in flow to Microsoft account.";
+
+"CalendarVC.GoogleSigningInproblemAlertDesc" = "the user canceled the sign-in flow to Google account.";
 
 //Map view controller
 "map.searchBarPlaceHolderTitle" = "Search for places";
@@ -55,9 +70,12 @@
 "Home.errorGettingAPIdata"= "can't get data from the server.";
 
 //Exporting viewController
-"Exporting.switchTitleLbl" = "Export all times to calender";
-"Exporting.switchDetailLbl" = "You can export it manually";
-"Exporting.ExportBtn" = "Export";
+"ExportingVC.navigationBackButton" = "Export Prayer times";
+"ExportingVC.switchTitleLbl" = "Export all times to calender";
+"ExportingVC.switchDetailLbl" = "You can export it manually";
+"ExportingVC.ExportBtn" = "Export";
+
+
 
 
 //Settings viewController

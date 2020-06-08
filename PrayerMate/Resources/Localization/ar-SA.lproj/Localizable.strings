@@ -24,10 +24,24 @@
 //Location view controller
 "Location.title" = "الموقع";
 "Location.subTitle" = "من فضلك اختر موقعك";
-"Location.finishBtnTitle" = "إكمال";
+"Location.finishBtnTitle" = "التالي";
 "Location.addressTxtPlaceHolder" = "اختر الموقع من الخريطة  ";
 "Location.locateMeBtnTitle" = "حدد موقعي  ";
 "Location.alertMessage" = "من فضلك اسمح للتطبيق بمعرفة موقعه او اضغط -تحديد الموقع -لاختيار مووقعك" ;
+
+//Calendar viewController
+"CalendarVC.titleLbl" = "التقويم";
+"CalendarVC.subTitleLbl" = "من فضلك اختر تقويمك المفضل";
+"CalendarVC.appleLbl" = "تقويم ابل";
+"CalendarVC.googleLbl" = "تقويم جوجل";
+"CalendarVC.MSLbl" = "تقويم مايكروسوفت";
+"CalendarVC.MSSignInSuccessMessage"="تم تسجيل الدخول بنجاح لحساب مايكروسوفت";
+"CalendarVC.GoogleSignInSuccessMessage"="تم تسجيل الدخول بنجاح لحساب جوجل";
+"CalendarVC.finishbtntitle" = "إكمال";
+"CalendarVC.toastLbl" = "يجب ان تختار تقويم واحد علي الأقل.";
+"CalendarVC.SigningInproblemAlertTitle" = "خطأ في تسجيل الدخول.";
+"CalendarVC.MicrosoftSigningInproblemAlertDesc" = "الغى المستخدم متابعة تسجيل الدخول لحساب مايكروسوفت";
+"CalendarVC.GoogleSigningInproblemAlertDesc" = "الغى المستخدم متابعة تسجيل الدخول لحساب جوجل";
 
 //Map view controller
 "map.searchBarPlaceHolderTitle" = "ابحث عن الأماكن";
@@ -52,9 +66,10 @@
 "Home.errorGettingAPIdata"= "لا نستطيع الحصول علي مواعيد الصلاة من الخادم.";
 
 //Exporting viewController
-"Exporting.switchTitleLbl" = "Export all times to calender";
-"Exporting.switchDetailLbl" = "You can export it manually";
-"Exporting.ExportBtn" = "Export";
+"ExportingVC.navigationBackButton" = "إضافة مواقيت الصلاة للتقويم";
+"ExportingVC.switchTitleLbl" = "إضافة جميع مواقيت الصلاة للتقويم";
+"ExportingVC.switchDetailLbl" = "يمكنك اختيار المواقيت";
+"ExportingVC.ExportBtn" = "إضافة اوقات الصلاة للتقويم";
 
 //Settings viewController
 "Settings.titleLbl" = "الاعدادات";
@@ -104,6 +119,7 @@
 "customActionVC.donebtntitle" = "تأكيد";
 "customActionVC.minutesValidationMessage"="الدقائق من ٠ ل ٦٠ دقيقة";
 "customActionVC.hoursValidationMessage"="الساعات من ٠ ل ٢٤ ساعة";
+
 //ImportToCalendar viewController
 "ImportToCalendarVC.titleLbl" = "التقويم";
 "ImportToCalendarVC.subTitleLbl" = "اختر تقويمك المفضل";

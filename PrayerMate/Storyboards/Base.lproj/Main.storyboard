@@ -244,16 +244,8 @@ sadipscing elitr, sed diam.</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAF-OG-S3S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="mountain" id="DIb-jj-9jf">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="397"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="mountain" id="vNe-CP-b3f">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="397"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
             </objects>
-            <point key="canvasLocation" x="-650" y="366"/>
+            <point key="canvasLocation" x="-1561" y="491"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="9hr-46-wWw">
@@ -282,9 +274,9 @@ sadipscing elitr, sed diam.</string>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDj-jW-QR1" userLabel="Finish">
-                                <rect key="frame" x="348" y="104" width="49" height="34"/>
+                                <rect key="frame" x="358" y="104" width="39" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <state key="normal" title="Finish">
+                                <state key="normal" title="Next">
                                     <color key="titleColor" name="AppColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -402,11 +394,12 @@ sadipscing elitr, sed diam.</string>
                         <outlet property="animatedImageTrailing" destination="qCI-xc-Q4J" id="Aay-KL-ho3"/>
                         <outlet property="locateMeBtn" destination="9p6-T6-Vc0" id="ZSI-21-scq"/>
                         <segue destination="Rs5-UX-hNj" kind="show" identifier="goToMapVC" id="HMv-Wp-NlQ"/>
+                        <segue destination="7q2-Vs-63K" kind="show" identifier="goToCalendarVC" id="y8o-Qo-6Qk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1j-jW-mmR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1210" y="401"/>
+            <point key="canvasLocation" x="-909" y="277"/>
         </scene>
         <!--Location Search Table-->
         <scene sceneID="x4e-EX-9aN">
@@ -511,8 +504,225 @@ sadipscing elitr, sed diam.</string>
             </objects>
             <point key="canvasLocation" x="1984.8" y="365.66716641679164"/>
         </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="UTM-z5-7BB">
+            <objects>
+                <viewController storyboardIdentifier="CalendarViewController" modalPresentationStyle="fullScreen" id="7q2-Vs-63K" customClass="CalendarViewController" customModule="PrayerMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7eB-dk-Dng">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="mountain" translatesAutoresizingMaskIntoConstraints="NO" id="tls-fU-7gE">
+                                <rect key="frame" x="0.0" y="355.5" width="414" height="486.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountain" translatesAutoresizingMaskIntoConstraints="NO" id="dHv-Wu-dv2">
+                                <rect key="frame" x="-404" y="355.5" width="409" height="486.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWF-TL-bgo">
+                                <rect key="frame" x="17" y="100" width="148" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <color key="textColor" name="AppColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="letterSpace">
+                                        <real key="value" value="-0.83999999999999997"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="CalendarVC.titleLbl"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3M-RA-Lsi">
+                                <rect key="frame" x="348" y="104" width="49" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleColor" name="AppColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="CalendarVC.finishbtntitle"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="FinishBtnPressed:" destination="7q2-Vs-63K" eventType="touchUpInside" id="GbA-dX-Kd3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Choose your preferred calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l27-Jr-Nn8">
+                                <rect key="frame" x="17" y="157" width="243" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AppGrayColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="CalendarVC.subTitleLbl"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeb-9a-1EC">
+                                <rect key="frame" x="17" y="211.5" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="2ua-eb-oBM"/>
+                                    <constraint firstAttribute="height" constant="22" id="py0-R5-Tmv"/>
+                                </constraints>
+                                <state key="normal" image="uncheckCalendar"/>
+                                <connections>
+                                    <action selector="checkBtnPressed:" destination="7q2-Vs-63K" eventType="touchUpInside" id="C8S-qp-q4g"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhK-rx-lbb">
+                                <rect key="frame" x="64" y="202.5" width="39.5" height="31"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <color key="NSColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="16" name="SFProText-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.6499999999999999" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="CalendarVC.appleLbl"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nM-Oo-OHm">
+                                <rect key="frame" x="17" y="258.5" width="22" height="22"/>
+                                <state key="normal" image="uncheckCalendar"/>
+                                <connections>
+                                    <action selector="checkBtnPressed:" destination="7q2-Vs-63K" eventType="touchUpInside" id="IWv-Bg-qwQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvN-WD-tfn">
+                                <rect key="frame" x="64" y="249.5" width="39.5" height="31"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <color key="NSColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="16" name="SFProText-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.6499999999999999" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="CalendarVC.googleLbl"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbg-7N-khL">
+                                <rect key="frame" x="17" y="305.5" width="22" height="22"/>
+                                <state key="normal" image="uncheckCalendar"/>
+                                <connections>
+                                    <action selector="checkBtnPressed:" destination="7q2-Vs-63K" eventType="touchUpInside" id="DaZ-ds-XHP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dx3-AD-rRh">
+                                <rect key="frame" x="64" y="296.5" width="39.5" height="31"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <color key="NSColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="16" name="SFProText-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.6499999999999999" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="CalendarVC.MSLbl"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendarMethodMan" translatesAutoresizingMaskIntoConstraints="NO" id="xXQ-js-ebI">
+                                <rect key="frame" x="274" y="298" width="123" height="544"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="2Ay-5X-Zam"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="eQK-cs-fIW">
+                                <rect key="frame" x="183" y="814" width="48" height="12"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unselectedBtn" translatesAutoresizingMaskIntoConstraints="NO" id="TQr-V9-hv3" userLabel="selectedImg">
+                                        <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="9cW-tD-fY0"/>
+                                            <constraint firstAttribute="width" constant="12" id="ScH-gN-MRb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unselectedBtn" translatesAutoresizingMaskIntoConstraints="NO" id="U00-0A-76F" userLabel="unselectedImg">
+                                        <rect key="frame" x="18" y="0.0" width="12" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="Mzz-at-kgO"/>
+                                            <constraint firstAttribute="width" constant="12" id="o5H-vy-T5Q"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectedBtn" translatesAutoresizingMaskIntoConstraints="NO" id="J5I-qd-BAl" userLabel="unselectedImg">
+                                        <rect key="frame" x="36" y="0.0" width="12" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="EFz-wg-94Q"/>
+                                            <constraint firstAttribute="width" constant="12" id="Z8W-lv-2gL"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dHv-Wu-dv2" firstAttribute="right" secondItem="tls-fU-7gE" secondAttribute="left" constant="5" id="0VP-Jq-GdW"/>
+                            <constraint firstItem="Ehz-K2-g18" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="l27-Jr-Nn8" secondAttribute="trailing" symbolic="YES" id="0mT-AC-Aus"/>
+                            <constraint firstItem="Ehz-K2-g18" firstAttribute="bottom" secondItem="tls-fU-7gE" secondAttribute="bottom" constant="20" id="0xt-F2-MHm"/>
+                            <constraint firstItem="xeb-9a-1EC" firstAttribute="leading" secondItem="Ehz-K2-g18" secondAttribute="leading" constant="17" id="16R-2c-RZg"/>
+                            <constraint firstItem="Dx3-AD-rRh" firstAttribute="bottom" secondItem="Xbg-7N-khL" secondAttribute="bottom" id="25z-nW-kgj"/>
+                            <constraint firstItem="Ehz-K2-g18" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lhK-rx-lbb" secondAttribute="trailing" symbolic="YES" id="4de-aC-3eZ"/>
+                            <constraint firstItem="5nM-Oo-OHm" firstAttribute="leading" secondItem="xeb-9a-1EC" secondAttribute="leading" id="5s5-dM-V0o"/>
+                            <constraint firstItem="xeb-9a-1EC" firstAttribute="top" secondItem="l27-Jr-Nn8" secondAttribute="bottom" constant="34" id="7FZ-gu-54h"/>
+                            <constraint firstItem="Ehz-K2-g18" firstAttribute="trailing" secondItem="R3M-RA-Lsi" secondAttribute="trailing" constant="17" id="B2s-Xs-6BD"/>
+                            <constraint firstItem="xXQ-js-ebI" firstAttribute="bottom" secondItem="Ehz-K2-g18" secondAttribute="bottom" constant="-20" id="CPC-vG-SJb"/>
+                            <constraint firstItem="5nM-Oo-OHm" firstAttribute="width" secondItem="xeb-9a-1EC" secondAttribute="width" id="FoG-jz-J6u"/>
+                            <constraint firstItem="Xbg-7N-khL" firstAttribute="width" secondItem="5nM-Oo-OHm" secondAttribute="width" id="KZE-1d-R19"/>
+                            <constraint firstItem="lhK-rx-lbb" firstAttribute="leading" secondItem="xeb-9a-1EC" secondAttribute="trailing" constant="25" id="L0X-ZG-PLm"/>
+                            <constraint firstItem="cvN-WD-tfn" firstAttribute="bottom" secondItem="5nM-Oo-OHm" secondAttribute="bottom" id="MnF-zh-UnY"/>
+                            <constraint firstItem="tls-fU-7gE" firstAttribute="left" secondItem="Ehz-K2-g18" secondAttribute="left" id="RMe-yq-uBs"/>
+                            <constraint firstItem="ZWF-TL-bgo" firstAttribute="leading" secondItem="7eB-dk-Dng" secondAttribute="leading" constant="17" id="Syj-We-Dte"/>
+                            <constraint firstItem="5nM-Oo-OHm" firstAttribute="height" secondItem="xeb-9a-1EC" secondAttribute="height" id="TMT-VX-odN"/>
+                            <constraint firstItem="eQK-cs-fIW" firstAttribute="centerX" secondItem="7eB-dk-Dng" secondAttribute="centerX" id="UYF-PY-TAX"/>
+                            <constraint firstItem="Ehz-K2-g18" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Dx3-AD-rRh" secondAttribute="trailing" symbolic="YES" id="VFr-Pj-hbs"/>
+                            <constraint firstItem="dHv-Wu-dv2" firstAttribute="height" secondItem="tls-fU-7gE" secondAttribute="height" id="WFO-UA-2FC"/>
+                            <constraint firstItem="tls-fU-7gE" firstAttribute="trailing" secondItem="Ehz-K2-g18" secondAttribute="trailing" id="WeH-VF-sxb"/>
+                            <constraint firstItem="dHv-Wu-dv2" firstAttribute="bottom" secondItem="tls-fU-7gE" secondAttribute="bottom" id="YMz-2t-myY"/>
+                            <constraint firstItem="dHv-Wu-dv2" firstAttribute="width" secondItem="tls-fU-7gE" secondAttribute="width" constant="-5" id="Z2H-Bn-1a4"/>
+                            <constraint firstItem="cvN-WD-tfn" firstAttribute="leading" secondItem="lhK-rx-lbb" secondAttribute="leading" id="cMm-Iu-IUb"/>
+                            <constraint firstItem="ZWF-TL-bgo" firstAttribute="top" secondItem="Ehz-K2-g18" secondAttribute="top" constant="56" id="cyl-S6-v6K"/>
+                            <constraint firstItem="Xbg-7N-khL" firstAttribute="leading" secondItem="5nM-Oo-OHm" secondAttribute="leading" id="dc8-bf-ELy"/>
+                            <constraint firstItem="lhK-rx-lbb" firstAttribute="bottom" secondItem="xeb-9a-1EC" secondAttribute="bottom" id="dcN-fa-nbb"/>
+                            <constraint firstItem="Xbg-7N-khL" firstAttribute="height" secondItem="5nM-Oo-OHm" secondAttribute="height" id="dqu-lv-6qh"/>
+                            <constraint firstItem="tls-fU-7gE" firstAttribute="height" secondItem="Ehz-K2-g18" secondAttribute="height" multiplier="0.595" id="ek8-4d-9nU"/>
+                            <constraint firstItem="Dx3-AD-rRh" firstAttribute="leading" secondItem="cvN-WD-tfn" secondAttribute="leading" id="h2P-Em-xDh"/>
+                            <constraint firstItem="5nM-Oo-OHm" firstAttribute="top" secondItem="xeb-9a-1EC" secondAttribute="bottom" constant="25" id="mWZ-6Z-eT1"/>
+                            <constraint firstItem="R3M-RA-Lsi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZWF-TL-bgo" secondAttribute="trailing" constant="8" symbolic="YES" id="o6g-09-elf"/>
+                            <constraint firstItem="eQK-cs-fIW" firstAttribute="bottom" secondItem="tls-fU-7gE" secondAttribute="bottom" constant="-16" id="oeS-kx-I5c"/>
+                            <constraint firstItem="Xbg-7N-khL" firstAttribute="top" secondItem="5nM-Oo-OHm" secondAttribute="bottom" constant="25" id="plM-ei-Oeh"/>
+                            <constraint firstItem="Ehz-K2-g18" firstAttribute="trailing" secondItem="xXQ-js-ebI" secondAttribute="trailing" constant="17" id="qzO-go-vEV"/>
+                            <constraint firstItem="Ehz-K2-g18" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cvN-WD-tfn" secondAttribute="trailing" symbolic="YES" id="vLH-if-AOH"/>
+                            <constraint firstItem="R3M-RA-Lsi" firstAttribute="centerY" secondItem="ZWF-TL-bgo" secondAttribute="centerY" id="wE4-W3-wky"/>
+                            <constraint firstItem="l27-Jr-Nn8" firstAttribute="top" secondItem="ZWF-TL-bgo" secondAttribute="bottom" constant="15" id="xTb-Nf-ddN"/>
+                            <constraint firstItem="l27-Jr-Nn8" firstAttribute="leading" secondItem="ZWF-TL-bgo" secondAttribute="leading" id="zv1-zw-XJt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ehz-K2-g18"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vx9-UI-bEz"/>
+                    <connections>
+                        <outlet property="animatedImage" destination="tls-fU-7gE" id="VXz-1j-PJ9"/>
+                        <outlet property="animatedImage2" destination="dHv-Wu-dv2" id="yRr-Su-NeG"/>
+                        <outlet property="animatedImageLeading" destination="RMe-yq-uBs" id="kWW-JR-6YS"/>
+                        <outlet property="animatedImageTrailing" destination="WeH-VF-sxb" id="cP9-X9-5fC"/>
+                        <outletCollection property="checkBtns" destination="xeb-9a-1EC" collectionClass="NSMutableArray" id="PtS-MR-dRo"/>
+                        <outletCollection property="checkBtns" destination="5nM-Oo-OHm" collectionClass="NSMutableArray" id="Q78-hi-wcI"/>
+                        <outletCollection property="checkBtns" destination="Xbg-7N-khL" collectionClass="NSMutableArray" id="2pR-bV-gFM"/>
+                        <outletCollection property="checkTitleLbl" destination="lhK-rx-lbb" collectionClass="NSMutableArray" id="3dY-9T-YAb"/>
+                        <outletCollection property="checkTitleLbl" destination="cvN-WD-tfn" collectionClass="NSMutableArray" id="rhh-HM-30f"/>
+                        <outletCollection property="checkTitleLbl" destination="Dx3-AD-rRh" collectionClass="NSMutableArray" id="pQj-AP-ECt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VuN-Uh-bKW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="210" y="68"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="calendarMethodMan" width="280" height="272"/>
         <image name="languageMan" width="124" height="311"/>
         <image name="location" width="18" height="18"/>
         <image name="locationMan" width="145.5" height="269"/>
@@ -521,6 +731,7 @@ sadipscing elitr, sed diam.</string>
         <image name="selectedBtn" width="12" height="12"/>
         <image name="selectedRadio" width="21" height="21"/>
         <image name="splachbg" width="375" height="418"/>
+        <image name="uncheckCalendar" width="22" height="22"/>
         <image name="unselectedBtn" width="12" height="12"/>
         <image name="unselectedRadio" width="21" height="21"/>
         <namedColor name="AppColor">
