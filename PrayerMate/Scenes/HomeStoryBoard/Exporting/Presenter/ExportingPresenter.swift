@@ -34,22 +34,25 @@ protocol  ExportingViewControllerProtocol :class {
     func imoprtToCalendarsSuccess()
 }
 protocol UpdateExportingPrayerTimeCellProtcol {
-  func displayData(prayerTimeName: String, prayerTime: String, isCellSelected: Bool,isBtnChecked:Bool,cellIndex:Int)
+    func displayData(prayerTimeName: String, prayerTime: String, isCellSelected: Bool,isBtnChecked:Bool,cellIndex:Int)
 }
 /// This is a presenter class created for handling HomeVC Functions.
 class ExportingPresenter{
     
     //MARK:VARiIABLES
-    
+    var appleEvents = [EKEvent]()
+    let eventStore : EKEventStore = EKEventStore()
+    var event:EKEvent!
     private weak var view : ExportingViewControllerProtocol?
     init(view:ExportingViewControllerProtocol) {
         self.view=view
+        event = EKEvent(eventStore: eventStore)
     }
     let prayerTimesNames=["Home.fajrPrayerLblTitle","Home.sunrisePrayerLblTitle","Home.zuhrPrayerLblTitle","Home.asrPrayerLblTitle","Home.maghribPrayerLblTitle","Home.ishaPrayerLblTitle"]
     var todayParyerTimes = [String]()
     var annualPrayerTimes : [PrayerTimesResponseModel]?
     var calendarDateTitle = ""
-    
+         
     //MARK:- Methods
     
     /**
@@ -65,32 +68,32 @@ class ExportingPresenter{
      - isChecked : is the radio button at the cell is Checked or Not.
      - cellIndex : the Cell Index At tableView.
      */
-     func ConfigureCell(cell:UpdateExportingPrayerTimeCellProtcol,isCellSelected:Bool,isChecked:Bool,cellIndex:Int){
+    func ConfigureCell(cell:UpdateExportingPrayerTimeCellProtcol,isCellSelected:Bool,isChecked:Bool,cellIndex:Int){
         todayParyerTimes = (UserDefaults.standard.value(forKey: UserDefaultsConstants.todayParyerTimes) as! [String])
-         cell.displayData(prayerTimeName: prayerTimesNames[cellIndex].localized, prayerTime: todayParyerTimes[cellIndex] , isCellSelected:isCellSelected,isBtnChecked:isChecked,cellIndex:cellIndex)
-         
-     }
+        cell.displayData(prayerTimeName: prayerTimesNames[cellIndex].localized, prayerTime: todayParyerTimes[cellIndex] , isCellSelected:isCellSelected,isBtnChecked:isChecked,cellIndex:cellIndex)
+        
+    }
     
-  
-  /**
-  Call this function to get Prayer Time Accurate String as the string returned from the API like 3:4 am -> 3:04 AM .
-  
-  ### Usage Example: ###
-  ````
-  getPrayerTimeAccurateString(time:prayerTime)
-  ````
-  - Parameters:
-   - time : prayer Time.
-  */
-  func getPrayerTimeAccurateString(time : String) -> String{
-      var accurateString :String = ""
-      accurateString = time.count == 7 ? "0" + time : time
-      accurateString = accurateString.replacingOccurrences(of: "am", with: "AM")
-      accurateString = accurateString.replacingOccurrences(of: "pm", with: "PM")
-      accurateString = accurateString.replacingOccurrences(of: " ", with: ":00 ")
-      return accurateString
-  }
- 
+    
+    /**
+     Call this function to get Prayer Time Accurate String as the string returned from the API like 3:4 am -> 3:04 AM .
+     
+     ### Usage Example: ###
+     ````
+     getPrayerTimeAccurateString(time:prayerTime)
+     ````
+     - Parameters:
+     - time : prayer Time.
+     */
+    func getPrayerTimeAccurateString(time : String) -> String{
+        var accurateString :String = ""
+        accurateString = time.count == 7 ? "0" + time : time
+        accurateString = accurateString.replacingOccurrences(of: "am", with: "AM")
+        accurateString = accurateString.replacingOccurrences(of: "pm", with: "PM")
+        accurateString = accurateString.replacingOccurrences(of: " ", with: ":00 ")
+        return accurateString
+    }
+    
 }
 /// This is a presenter class created for handling HomeVC JTAppleCalendar helper Functions.
 extension ExportingPresenter{
@@ -128,7 +131,7 @@ extension ExportingPresenter{
         // return (month + " " + year)
     }
     
-
+    
 }
 /// This is a presenter class created for handling importing prayerTimes To different Calendars
 extension ExportingPresenter{
@@ -141,14 +144,15 @@ extension ExportingPresenter{
      self.presenter.importPrayerTimesToSelectedCalendars()
      ````
      - Parameters:
-        - importStartDateAsString : start date at string format.
-        - importEndDateAsString : end date at string format.
+     - importStartDateAsString : start date at string format.
+     - importEndDateAsString : end date at string format.
      
      */
     func importPrayerTimesToSelectedCalendars(importStartDateAsString:String , importEndDateAsString:String,activityIndicator:SYActivityIndicatorView){
         UIApplication.shared.beginIgnoringInteractionEvents()
         let realm = try! Realm()
-        
+     
+  
         //
         let eventFormatter = DateFormatter()
         eventFormatter.dateFormat="yyyy-M-dd hh:mm:ss a"
@@ -171,11 +175,18 @@ extension ExportingPresenter{
         googleTillDateFormatter.dateFormat="yyyy-MM-dd"
         googleTillDateFormatter.locale=NSLocale(localeIdentifier: "en") as Locale
         
-
+        
         // Query using an NSPredicate to get the id of object that have the same start date
-        let predicate = NSPredicate(format: "date = %@ ", importStartDateAsString)
-        let firstImportDateObjFromRealm = realm.objects(RealmPrayerTimeModel.self).filter(predicate).first
- 
+                let predicate = NSPredicate(format: "date = %@ ", importStartDateAsString)
+                let firstImportDateObjFromRealm = realm.objects(RealmPrayerTimeModel.self).filter(predicate).first
+        // Query using an NSPredicate to get all objects betwwen start and end date
+        var pericateToGetAllObjects:NSPredicate!
+        var objects: Results<RealmPrayerTimeModel>?
+         let diffInDays = Calendar.current.dateComponents([.day], from: AppleDateFormatter.date(from: importStartDateAsString) ?? Date(), to: AppleDateFormatter.date(from: importEndDateAsString) ?? Date()).day
+        if let id = firstImportDateObjFromRealm?.id{
+            pericateToGetAllObjects = NSPredicate(format: "id BETWEEN { %ld,  %ld}",id,Int(id + (diffInDays ?? 0)))
+            objects = realm.objects(RealmPrayerTimeModel.self).filter(pericateToGetAllObjects)
+        }
         
         ///get prayer buffer
         let fetchedData = UserDefaults.standard.data(forKey: UserDefaultsConstants.prayerTimesBufferArray)!
@@ -187,14 +198,14 @@ extension ExportingPresenter{
         // get selected prayer times indicies
         let selectedPrayerTimesIndicies = UserDefaults.standard.value(forKey: UserDefaultsConstants.selectedPrayerTimesIndicies) as? [Int]
         
-      
+        
         
         let calendar = Calendar.current
         var eventStartDate:Date?
         var eventEndDate:Date?
         
-        if let obj = firstImportDateObjFromRealm{
-            
+//        if let obj = firstImportDateObjFromRealm{
+             objects?.forEach({ (obj) in
             selectedPrayerTimesIndicies?.forEach({ (index) in
                 
                 let timeBefore = prayerTimesBufferArray[index].before
@@ -231,30 +242,38 @@ extension ExportingPresenter{
                 }else if(type == "H"){
                     eventStartDate = calendar.date(byAdding: .hour, value: (-1 * timeBefore), to: date)
                     eventEndDate = calendar.date(byAdding: .hour, value: timeAfter, to: date)
-              
+                    
                 }
                 if(calendars?.contains(0) ?? false){
-                    self.addEventListToAppleCalendar(title: "it's \(prayerName) time", description: "", eventStartDate: eventStartDate ?? Date(), eventEndDate: eventEndDate ?? Date(), tillDate: AppleDateFormatter.date(from: importEndDateAsString) ?? Date())
-                    sleep(1)
+//                    sleep(1)
+                    //
+                    event = EKEvent(eventStore: eventStore)
+                    event.title = "it's \(prayerName) time"
+                    event.startDate = eventStartDate ?? Date()
+                    event.endDate = eventStartDate ?? Date()
+                    event.notes = ""
+                    event.calendar = eventStore.defaultCalendarForNewEvents
+                    appleEvents.append(event)
                 }
-                if(calendars?.contains(1) ?? false){
-                    var tillEndDate=googleTillDateFormatter.date(from: importEndDateAsString)
-                    tillEndDate = calendar.date(byAdding: .day, value: 1 , to: tillEndDate ?? Date())
-                    
-                    self.addEventListToGoogleCalendar(title: "it's \(prayerName) time", description: "", eventStartDate:googleFormatter.string(from: eventStartDate ?? Date()), eventEndDate: googleFormatter.string(from: eventEndDate ?? Date()) , tillDate: googleTillDateFormatter.string(from: tillEndDate ?? Date()).replacingOccurrences(of: "-", with: "") )
-                    sleep(1)
-                }
-                if(calendars?.contains(2) ?? false){
-                    
-                    let id = UserDefaults.standard.value(forKey: UserDefaultsConstants.microsoftCalendarID) as! String
-                    
-                    self.addEventListToMicrosoftCalendar(calendarId:id , title: "it's \(prayerName) time", description: "", eventStartDate:MSFormatter.string(from: eventStartDate ?? Date()), eventEndDate: MSFormatter.string(from: eventEndDate ?? Date()) , tillDate: importEndDateAsString)
-                    sleep(1)
-                }
+//                if(calendars?.contains(1) ?? false){
+//                    var tillEndDate=googleTillDateFormatter.date(from: importEndDateAsString)
+//                    tillEndDate = calendar.date(byAdding: .day, value: 1 , to: tillEndDate ?? Date())
+//
+//                    self.addEventToGoogleCalendar(title: "it's \(prayerName) time", description: "", eventStartDate:googleFormatter.string(from: eventStartDate ?? Date()), eventEndDate: googleFormatter.string(from: eventEndDate ?? Date()))
+//                    sleep(1)
+//                }
+//                if(calendars?.contains(2) ?? false){
+//
+//                    let id = UserDefaults.standard.value(forKey: UserDefaultsConstants.microsoftCalendarID) as! String
+//
+//                    self.addEventListToMicrosoftCalendar(calendarId:id , title: "it's \(prayerName) time", description: "", eventStartDate:MSFormatter.string(from: eventStartDate ?? Date()), eventEndDate: MSFormatter.string(from: eventEndDate ?? Date()) , tillDate: importEndDateAsString)
+//                    sleep(1)
+//                }
                 
             })
-        }
-         UIApplication.shared.endIgnoringInteractionEvents()
+               })
+        addEventToAppleCalendar(events: appleEvents)
+        UIApplication.shared.endIgnoringInteractionEvents()
         view?.imoprtToCalendarsSuccess()
     }
     
@@ -263,84 +282,50 @@ extension ExportingPresenter{
      
      ### Usage Example: ###
      ````
-   self.addEventListToAppleCalendar(title: "it's \(prayerName) time", description: "", eventStartDate: eventStartDate ?? Date(), eventEndDate: eventEndDate ?? Date(), tillDate: AppleDateFormatter.date(from: importEndDateAsString) ?? Date())
+    addEventToAppleCalendar(events: appleEvents)
      ````
      - Parameters:
-       - title : event title.
-       - description:event description.
-       - eventStartDate: event start date.
-       - eventEndDate: event end date.
-       - tillDate:repeat the event  till this date.
-     
+       - events : list of  events to be added to apple calendar .
      */
-    func addEventListToAppleCalendar(title: String, description: String?, eventStartDate: Date, eventEndDate: Date,tillDate:Date){
-        let eventStore : EKEventStore = EKEventStore()
-        let repeatTillDate = Calendar.current.date(byAdding: .day, value: 1, to: tillDate) ?? Date()
-        
-        // 'EKEntityTypeReminder' or 'EKEntityTypeEvent'
-        
+    func addEventToAppleCalendar(events:[EKEvent]){
         eventStore.requestAccess(to: .event) { (granted, error) in
             
             if (granted) && (error == nil) {
                 print("granted \(granted)")
                 print("error \(String(describing: error))")
-//                self.view?.showError(error: "error \(error)")
-                var event:EKEvent = EKEvent(eventStore: eventStore)
-                //                for index in 1...5 {
-                event = EKEvent(eventStore: eventStore)
-                event.title = title
-                event.startDate = eventStartDate
-                event.endDate = eventEndDate
-                event.notes = description
-                event.calendar = eventStore.defaultCalendarForNewEvents
-                
-                let recurrenceRule = EKRecurrenceRule.init(
-                    recurrenceWith: .daily,
-                    interval: 1,
-                    daysOfTheWeek: [EKRecurrenceDayOfWeek.init(EKWeekday.saturday),EKRecurrenceDayOfWeek.init(EKWeekday.sunday),EKRecurrenceDayOfWeek.init(EKWeekday.monday),EKRecurrenceDayOfWeek.init(EKWeekday.tuesday),EKRecurrenceDayOfWeek.init(EKWeekday.wednesday),EKRecurrenceDayOfWeek.init(EKWeekday.thursday),EKRecurrenceDayOfWeek.init(EKWeekday.friday)],
-                    daysOfTheMonth: nil,
-                    monthsOfTheYear: nil,
-                    weeksOfTheYear: nil,
-                    daysOfTheYear: nil,
-                    setPositions: nil,
-                    end: EKRecurrenceEnd.init(end:repeatTillDate)
-                )
-                
-                event.recurrenceRules = [recurrenceRule]
+                events.forEach({ (event) in
                 do {
-                    try eventStore.save(event, span: .thisEvent)
+                    try self.eventStore.save(event, span: .thisEvent)
                 } catch let error as NSError {
                     print("failed to save event with error : \(error)")
-//                    self.view?.showError(error: "failed to save event with error : \(error)")
+                    //                    self.view?.showError(error: "failed to save event with error : \(error)")
                 }
                 print("Saved Event")
-                //                }
+                    
+                })
             }
             else{
-                
                 print("failed to save event with error : \(String(describing: error)) or access not granted")
-                
-//                self.view?.showError(error:"failed to save event with error : \(String(describing: error)) or access not granted")
             }
         }
     }
-
+    
     /**
-      Call this function to import PrayerTimes To Microsoft Calendar.
-      
-      ### Usage Example: ###
-      ````
-    self.addEventListToMicrosoftCalendar(calendarId:id , title: "it's \(prayerName) time", description: "", eventStartDate:MSFormatter.string(from: eventStartDate ?? Date()), eventEndDate: MSFormatter.string(from: eventEndDate ?? Date()) , tillDate: importEndDateAsString)
-      ````
-      - Parameters:
-        - calendarId : defaullt calender id to add the event to.
-        - title : event title.
-        - description:event description.
-        - eventStartDate: event start date.
-        - eventEndDate: event end date.
-        - tillDate:repeat the event  till this date.
-      
-      */
+     Call this function to import PrayerTimes To Microsoft Calendar.
+     
+     ### Usage Example: ###
+     ````
+     self.addEventListToMicrosoftCalendar(calendarId:id , title: "it's \(prayerName) time", description: "", eventStartDate:MSFormatter.string(from: eventStartDate ?? Date()), eventEndDate: MSFormatter.string(from: eventEndDate ?? Date()) , tillDate: importEndDateAsString)
+     ````
+     - Parameters:
+     - calendarId : defaullt calender id to add the event to.
+     - title : event title.
+     - description:event description.
+     - eventStartDate: event start date.
+     - eventEndDate: event end date.
+     - tillDate:repeat the event  till this date.
+     
+     */
     func  addEventListToMicrosoftCalendar(calendarId:String,title: String, description: String?, eventStartDate: String, eventEndDate: String,tillDate:String){
         let token = UserDefaults.standard.value(forKey: UserDefaultsConstants.microsoftAuthorization) as! String
         let httpClient = MSClientFactory.createHTTPClient(with: AuthenticationManager.instance)
@@ -360,7 +345,7 @@ extension ExportingPresenter{
         }
         catch {
             print(error)
-//             self.view?.showError(error:"error")
+            //             self.view?.showError(error:"error")
         }
         
         var meDataTask: MSURLSessionDataTask? = nil
@@ -379,21 +364,21 @@ extension ExportingPresenter{
         
     }
     /**
-       Call this function to import PrayerTimes To Google Calendar.
-       
-       ### Usage Example: ###
-       ````
+     Call this function to import PrayerTimes To Google Calendar.
+     
+     ### Usage Example: ###
+     ````
      self.addEventListToGoogleCalendar(title: "it's \(prayerName) time", description: "", eventStartDate:googleFormatter.string(from: eventStartDate ?? Date()), eventEndDate: googleFormatter.string(from: eventEndDate ?? Date()) , tillDate: googleTillDateFormatter.string(from: tillEndDate ?? Date()).replacingOccurrences(of: "-", with: "") )
-       ````
-       - Parameters:
-         - title : event title.
-         - description:event description.
-         - eventStartDate: event start date.
-         - eventEndDate: event end date.
-         - tillDate:repeat the event  till this date.
-       
-       */
-    func  addEventListToGoogleCalendar(title: String, description: String?, eventStartDate: String, eventEndDate: String,tillDate:String){
+     ````
+     - Parameters:
+     - title : event title.
+     - description:event description.
+     - eventStartDate: event start date.
+     - eventEndDate: event end date.
+     - tillDate:repeat the event  till this date.
+     
+     */
+    func  addEventToGoogleCalendar(title: String, description: String?, eventStartDate: String, eventEndDate: String){
         let calendarEvent = GTLRCalendar_Event()
         calendarEvent.summary = title
         calendarEvent.descriptionProperty = description
@@ -405,19 +390,19 @@ extension ExportingPresenter{
         
         guard let toBuildDateStart = startDate else {
             print("Error getting start date")
-//             self.view?.showError(error:"Error getting start date")
+            //             self.view?.showError(error:"Error getting start date")
             return
         }
         guard let toBuildDateEnd = endDate else {
             print("Error getting end date")
-//            self.view?.showError(error:"Error getting end date")
+            //            self.view?.showError(error:"Error getting end date")
             return
         }
         calendarEvent.start = buildDate(date: toBuildDateStart)
         calendarEvent.end = buildDate(date: toBuildDateEnd)
         
         let insertQuery = GTLRCalendarQuery_EventsInsert.query(withObject: calendarEvent, calendarId: "primary")
-        calendarEvent.recurrence = ["RRULE:FREQ=DAILY;UNTIL=\(tillDate)"]
+//        calendarEvent.recurrence = ["RRULE:FREQ=DAILY;UNTIL=\(tillDate)"]
         let decoded  =  UserDefaults.standard.data(forKey: UserDefaultsConstants.googleService)
         let decodedservice = NSKeyedUnarchiver.unarchiveObject(with: decoded! ) as! GoogleService
         
@@ -426,23 +411,23 @@ extension ExportingPresenter{
                 print("Event inserted")
             } else {
                 print(error)
-//                self.view?.showError(error:"\(error)")
+                //                self.view?.showError(error:"\(error)")
                 
             }
         }
     }
-
+    
     /**
-          Call this function to build google calendar date object
-          
-          ### Usage Example: ###
-          ````
-          buildDate(date: toBuildDateStart)
-          ````
-          - Parameters:
-            - date : the date used to generate GTLRCalendar.
-          
-          */
+     Call this function to build google calendar date object
+     
+     ### Usage Example: ###
+     ````
+     buildDate(date: toBuildDateStart)
+     ````
+     - Parameters:
+     - date : the date used to generate GTLRCalendar.
+     
+     */
     func buildDate(date: Date) -> GTLRCalendar_EventDateTime {
         let timeZone = NSTimeZone.system
         let datetime = GTLRDateTime(date: date)
