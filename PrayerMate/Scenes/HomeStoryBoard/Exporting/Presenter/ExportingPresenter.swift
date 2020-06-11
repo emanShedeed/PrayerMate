@@ -258,13 +258,12 @@ extension ExportingPresenter{
                 if(calendars?.contains(1) ?? false){
                     self.addEventToGoogleCalendar(title: "it's \(prayerName) time", description: "", eventStartDate:googleFormatter.string(from: eventStartDate ?? Date()), eventEndDate: googleFormatter.string(from: eventEndDate ?? Date()))
                 }
-//                if(calendars?.contains(2) ?? false){
-//
-//                    let id = UserDefaults.standard.value(forKey: UserDefaultsConstants.microsoftCalendarID) as! String
-//
-//                    self.addEventListToMicrosoftCalendar(calendarId:id , title: "it's \(prayerName) time", description: "", eventStartDate:MSFormatter.string(from: eventStartDate ?? Date()), eventEndDate: MSFormatter.string(from: eventEndDate ?? Date()) , tillDate: importEndDateAsString)
-//                    sleep(1)
-//                }
+                if(calendars?.contains(2) ?? false){
+
+                    let id = UserDefaults.standard.value(forKey: UserDefaultsConstants.microsoftCalendarID) as! String
+
+                    self.addEventToMicrosoftCalendar(calendarId:id , title: "it's \(prayerName) time", description: "", eventStartDate:MSFormatter.string(from: eventStartDate ?? Date()), eventEndDate: MSFormatter.string(from: eventEndDate ?? Date()))
+                }
                 
             })
                })
@@ -322,7 +321,7 @@ extension ExportingPresenter{
      - tillDate:repeat the event  till this date.
      
      */
-    func  addEventListToMicrosoftCalendar(calendarId:String,title: String, description: String?, eventStartDate: String, eventEndDate: String,tillDate:String){
+    func  addEventToMicrosoftCalendar(calendarId:String,title: String, description: String?, eventStartDate: String, eventEndDate: String){
         let token = UserDefaults.standard.value(forKey: UserDefaultsConstants.microsoftAuthorization) as! String
         let httpClient = MSClientFactory.createHTTPClient(with: AuthenticationManager.instance)
         let MSGraphBaseURL = "https://graph.microsoft.com/v1.0/"
@@ -333,9 +332,9 @@ extension ExportingPresenter{
         urlRequest?.httpMethod = "POST"
         urlRequest?.setValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest?.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-        let event2 = ["subject":title , "body":["contentType" : "text"],"start" :["dateTime":eventStartDate , "timeZone":"UTC"],"end" :["dateTime":eventEndDate , "timeZone":"UTC"],"recurrence":["pattern":["type":"daily","interval":"1"],"range":["type":"endDate","startDate":eventStartDate.split(separator: " ").first ?? "","endDate":tillDate]]] as [String : Any]
+        let event = ["subject":title , "body":["contentType" : "text"],"start" :["dateTime":eventStartDate , "timeZone":"UTC"],"end" :["dateTime":eventEndDate , "timeZone":"UTC"]] as [String : Any]
         do{
-            let eventData = try JSONSerialization.data(withJSONObject: event2, options: .prettyPrinted)
+            let eventData = try JSONSerialization.data(withJSONObject: event, options: .prettyPrinted)
             print(eventData)
             urlRequest?.httpBody = eventData
         }
