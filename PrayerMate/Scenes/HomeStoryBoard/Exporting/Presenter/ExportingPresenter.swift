@@ -255,13 +255,9 @@ extension ExportingPresenter{
                     event.calendar = eventStore.defaultCalendarForNewEvents
                     appleEvents.append(event)
                 }
-//                if(calendars?.contains(1) ?? false){
-//                    var tillEndDate=googleTillDateFormatter.date(from: importEndDateAsString)
-//                    tillEndDate = calendar.date(byAdding: .day, value: 1 , to: tillEndDate ?? Date())
-//
-//                    self.addEventToGoogleCalendar(title: "it's \(prayerName) time", description: "", eventStartDate:googleFormatter.string(from: eventStartDate ?? Date()), eventEndDate: googleFormatter.string(from: eventEndDate ?? Date()))
-//                    sleep(1)
-//                }
+                if(calendars?.contains(1) ?? false){
+                    self.addEventToGoogleCalendar(title: "it's \(prayerName) time", description: "", eventStartDate:googleFormatter.string(from: eventStartDate ?? Date()), eventEndDate: googleFormatter.string(from: eventEndDate ?? Date()))
+                }
 //                if(calendars?.contains(2) ?? false){
 //
 //                    let id = UserDefaults.standard.value(forKey: UserDefaultsConstants.microsoftCalendarID) as! String
