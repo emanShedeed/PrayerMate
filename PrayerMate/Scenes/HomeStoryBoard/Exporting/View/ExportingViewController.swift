@@ -25,6 +25,8 @@ class ExportingViewController: BaseViewController {
     
     @IBOutlet weak var closeCalendarViewBtn: UIButton!
     @IBOutlet weak var navigationViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var automaticSelectPrayerTimeswitch: UISwitch!
+    
     //MARK:VARiIABLES
     let titleLabel=UILabel()
     let countDownTimerFormatter = DateFormatter()
@@ -63,7 +65,7 @@ class ExportingViewController: BaseViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-         prayerTimesArray=[(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false)]
+          prayerTimesArray = [(Bool,Bool)]( repeating: (false,false), count: 6 )
     }
     override func viewDidAppear(_ animated: Bool) {
           super.viewDidAppear(animated)
@@ -187,7 +189,8 @@ class ExportingViewController: BaseViewController {
                 UserDefaults.standard.set(self.secondDate, forKey:UserDefaultsConstants.lastImportDate)
                 //                let _ = LocalNotification()
             }
-            prayerTimesArray=[(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false),(isCellSelected:false,isBtnChecked:false)]
+             prayerTimesArray = [(Bool,Bool)]( repeating: (false,false), count: 6 )
+            automaticSelectPrayerTimeswitch.isOn = false
             self.prayerTimestableView.reloadData()
         }
     }
