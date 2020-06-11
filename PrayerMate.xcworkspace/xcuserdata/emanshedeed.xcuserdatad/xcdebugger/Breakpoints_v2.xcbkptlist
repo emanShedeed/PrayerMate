@@ -7,223 +7,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "779C0F8B-815F-4808-9C52-8DD99487BEB0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/HomeStoryBoard/Exporting/View/ExportingCellUIModel/ExportingCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "ExportingPrayerTimeCellProtcol"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "61FC8AFC-BDCD-4753-ABA9-0D07FDDEA482"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/MainStoryBoard/Calendar/View/CalendarViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
-            landmarkName = "sign(_:didSignInFor:withError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "30687F0C-AE14-41FA-B9A8-7020C48D2ADC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/MainStoryBoard/Calendar/View/CalendarViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
-            landmarkName = "sign(_:didSignInFor:withError:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0A71162A-59EB-4A84-B531-2687104D20B1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/MainStoryBoard/Calendar/View/CalendarViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6E997AE2-5C30-4051-B7F1-733A2EF01817"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/HomeStoryBoard/Exporting/Presenter/ExportingPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "286"
-            endingLineNumber = "286"
-            landmarkName = "addEventToAppleCalendar(events:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6E997AE2-5C30-4051-B7F1-733A2EF01817 - bb56749e56a8896"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PrayerMate.ExportingPresenter.addEventToAppleCalendar(events: Swift.Array&lt;__C.EKEvent&gt;) -&gt; ()"
-                  moduleName = "PrayerMate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Exporting/Presenter/ExportingPresenter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "297"
-                  endingLineNumber = "297"
-                  offsetFromSymbolStart = "78">
-               </Location>
-               <Location
-                  uuid = "6E997AE2-5C30-4051-B7F1-733A2EF01817 - 996180b6e079702a"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PrayerMate.ExportingPresenter.addEventToAppleCalendar(events: Swift.Array&lt;__C.EKEvent&gt;) -&gt; ()"
-                  moduleName = "PrayerMate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Exporting/Presenter/ExportingPresenter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "299"
-                  endingLineNumber = "299"
-                  offsetFromSymbolStart = "149">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "82AC1837-45A4-4E49-A12E-699681ED8CB1"
+            uuid = "041B9DA4-48E2-4DBE-B7C2-C080E17A4357"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PrayerMate/Scenes/HomeStoryBoard/Exporting/Presenter/ExportingPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
-            landmarkName = "addEventToAppleCalendar(events:)"
+            startingLineNumber = "412"
+            endingLineNumber = "412"
+            landmarkName = "addEventToGoogleCalendar(title:description:eventStartDate:eventEndDate:decodedservice:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4A8F38C8-8C53-41F0-BFA8-04EA8DE1DA3B"
+            uuid = "B0BAE225-B88C-41A5-AA54-E5EE569DD0BC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PrayerMate/Scenes/HomeStoryBoard/Exporting/Presenter/ExportingPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "291"
-            endingLineNumber = "291"
-            landmarkName = "addEventToAppleCalendar(events:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4A8F38C8-8C53-41F0-BFA8-04EA8DE1DA3B - 996180b6e079702a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PrayerMate.ExportingPresenter.addEventToAppleCalendar(events: Swift.Array&lt;__C.EKEvent&gt;) -&gt; ()"
-                  moduleName = "PrayerMate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Exporting/Presenter/ExportingPresenter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "302"
-                  endingLineNumber = "302"
-                  offsetFromSymbolStart = "1405">
-               </Location>
-               <Location
-                  uuid = "4A8F38C8-8C53-41F0-BFA8-04EA8DE1DA3B - b18420df653717e6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.EKEvent) -&gt; () in closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PrayerMate.ExportingPresenter.addEventToAppleCalendar(events: Swift.Array&lt;__C.EKEvent&gt;) -&gt; ()"
-                  moduleName = "PrayerMate"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emanshedeed/Desktop/BSSProjects/PrayerMate/PrayerMate/Scenes/HomeStoryBoard/Exporting/Presenter/ExportingPresenter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "304"
-                  endingLineNumber = "304"
-                  offsetFromSymbolStart = "112">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "73835D4F-38E0-496E-BC11-2D46AA93248F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/HomeStoryBoard/Exporting/Presenter/ExportingPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
-            landmarkName = "importPrayerTimesToSelectedCalendars(importStartDateAsString:importEndDateAsString:activityIndicator:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8B52D4B2-EA9E-46A8-84E5-3CD88FFBC6FA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/HomeStoryBoard/Exporting/Presenter/ExportingPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "importPrayerTimesToSelectedCalendars(importStartDateAsString:importEndDateAsString:activityIndicator:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "603BDA26-CC7B-4E26-9432-2A5E2C84ABA4"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PrayerMate/Scenes/HomeStoryBoard/Exporting/Presenter/ExportingPresenter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
             landmarkName = "importPrayerTimesToSelectedCalendars(importStartDateAsString:importEndDateAsString:activityIndicator:)"
             landmarkType = "7">
          </BreakpointContent>

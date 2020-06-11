@@ -52,7 +52,7 @@ class ExportingPresenter{
     var todayParyerTimes = [String]()
     var annualPrayerTimes : [PrayerTimesResponseModel]?
     var calendarDateTitle = ""
-         
+    
     //MARK:- Methods
     
     /**
@@ -151,8 +151,9 @@ extension ExportingPresenter{
     func importPrayerTimesToSelectedCalendars(importStartDateAsString:String , importEndDateAsString:String,activityIndicator:SYActivityIndicatorView){
         UIApplication.shared.beginIgnoringInteractionEvents()
         let realm = try! Realm()
-     
-  
+        let decoded  =  UserDefaults.standard.data(forKey: UserDefaultsConstants.googleService)
+        let decodedservice = NSKeyedUnarchiver.unarchiveObject(with: decoded! ) as! GoogleService
+        
         //
         let eventFormatter = DateFormatter()
         eventFormatter.dateFormat="yyyy-M-dd hh:mm:ss a"
@@ -177,12 +178,12 @@ extension ExportingPresenter{
         
         
         // Query using an NSPredicate to get the id of object that have the same start date
-                let predicate = NSPredicate(format: "date = %@ ", importStartDateAsString)
-                let firstImportDateObjFromRealm = realm.objects(RealmPrayerTimeModel.self).filter(predicate).first
+        let predicate = NSPredicate(format: "date = %@ ", importStartDateAsString)
+        let firstImportDateObjFromRealm = realm.objects(RealmPrayerTimeModel.self).filter(predicate).first
         // Query using an NSPredicate to get all objects betwwen start and end date
         var pericateToGetAllObjects:NSPredicate!
         var objects: Results<RealmPrayerTimeModel>?
-         let diffInDays = Calendar.current.dateComponents([.day], from: AppleDateFormatter.date(from: importStartDateAsString) ?? Date(), to: AppleDateFormatter.date(from: importEndDateAsString) ?? Date()).day
+        let diffInDays = Calendar.current.dateComponents([.day], from: AppleDateFormatter.date(from: importStartDateAsString) ?? Date(), to: AppleDateFormatter.date(from: importEndDateAsString) ?? Date()).day
         if let id = firstImportDateObjFromRealm?.id{
             pericateToGetAllObjects = NSPredicate(format: "id BETWEEN { %ld,  %ld}",id,Int(id + (diffInDays ?? 0)))
             objects = realm.objects(RealmPrayerTimeModel.self).filter(pericateToGetAllObjects)
@@ -204,8 +205,8 @@ extension ExportingPresenter{
         var eventStartDate:Date?
         var eventEndDate:Date?
         
-//        if let obj = firstImportDateObjFromRealm{
-             objects?.forEach({ (obj) in
+        //        if let obj = firstImportDateObjFromRealm{
+        objects?.forEach({ (obj) in
             selectedPrayerTimesIndicies?.forEach({ (index) in
                 
                 let timeBefore = prayerTimesBufferArray[index].before
@@ -245,8 +246,6 @@ extension ExportingPresenter{
                     
                 }
                 if(calendars?.contains(0) ?? false){
-//                    sleep(1)
-                    //
                     event = EKEvent(eventStore: eventStore)
                     event.title = "it's \(prayerName) time"
                     event.startDate = eventStartDate ?? Date()
@@ -256,20 +255,23 @@ extension ExportingPresenter{
                     appleEvents.append(event)
                 }
                 if(calendars?.contains(1) ?? false){
-                    self.addEventToGoogleCalendar(title: "it's \(prayerName) time", description: "", eventStartDate:googleFormatter.string(from: eventStartDate ?? Date()), eventEndDate: googleFormatter.string(from: eventEndDate ?? Date()))
+                    self.addEventToGoogleCalendar(title: "it's \(prayerName) time", description: "", eventStartDate:googleFormatter.string(from: eventStartDate ?? Date()), eventEndDate: googleFormatter.string(from: eventEndDate ?? Date()), decodedservice: decodedservice)
+                    
                 }
                 if(calendars?.contains(2) ?? false){
-
+                    
                     let id = UserDefaults.standard.value(forKey: UserDefaultsConstants.microsoftCalendarID) as! String
-
+                    
                     self.addEventToMicrosoftCalendar(calendarId:id , title: "it's \(prayerName) time", description: "", eventStartDate:MSFormatter.string(from: eventStartDate ?? Date()), eventEndDate: MSFormatter.string(from: eventEndDate ?? Date()))
                 }
-                
             })
-               })
+        })
+
         addEventToAppleCalendar(events: appleEvents)
+  
         UIApplication.shared.endIgnoringInteractionEvents()
         view?.imoprtToCalendarsSuccess()
+
     }
     
     /**
@@ -277,10 +279,10 @@ extension ExportingPresenter{
      
      ### Usage Example: ###
      ````
-    addEventToAppleCalendar(events: appleEvents)
+     addEventToAppleCalendar(events: appleEvents)
      ````
      - Parameters:
-       - events : list of  events to be added to apple calendar .
+     - events : list of  events to be added to apple calendar .
      */
     func addEventToAppleCalendar(events:[EKEvent]){
         eventStore.requestAccess(to: .event) { (granted, error) in
@@ -289,15 +291,15 @@ extension ExportingPresenter{
                 print("granted \(granted)")
                 print("error \(String(describing: error))")
                 events.forEach({ (event) in
-                do {
-                    try self.eventStore.save(event, span: .thisEvent)
-                } catch let error as NSError {
-                    print("failed to save event with error : \(error)")
-                    //                    self.view?.showError(error: "failed to save event with error : \(error)")
-                }
-                print("Saved Event")
-                    
+                    do {
+                        try self.eventStore.save(event, span: .thisEvent)
+                    } catch let error as NSError {
+                        print("failed to save event with error : \(error)")
+                        //                    self.view?.showError(error: "failed to save event with error : \(error)")
+                    }
+                    print("Saved Event")
                 })
+
             }
             else{
                 print("failed to save event with error : \(String(describing: error)) or access not granted")
@@ -373,7 +375,7 @@ extension ExportingPresenter{
      - tillDate:repeat the event  till this date.
      
      */
-    func  addEventToGoogleCalendar(title: String, description: String?, eventStartDate: String, eventEndDate: String){
+    func  addEventToGoogleCalendar(title: String, description: String?, eventStartDate: String, eventEndDate: String,decodedservice:GoogleService){
         let calendarEvent = GTLRCalendar_Event()
         calendarEvent.summary = title
         calendarEvent.descriptionProperty = description
@@ -385,29 +387,25 @@ extension ExportingPresenter{
         
         guard let toBuildDateStart = startDate else {
             print("Error getting start date")
-            //             self.view?.showError(error:"Error getting start date")
             return
         }
         guard let toBuildDateEnd = endDate else {
             print("Error getting end date")
-            //            self.view?.showError(error:"Error getting end date")
+
             return
         }
         calendarEvent.start = buildDate(date: toBuildDateStart)
         calendarEvent.end = buildDate(date: toBuildDateEnd)
         
         let insertQuery = GTLRCalendarQuery_EventsInsert.query(withObject: calendarEvent, calendarId: "primary")
-//        calendarEvent.recurrence = ["RRULE:FREQ=DAILY;UNTIL=\(tillDate)"]
-        let decoded  =  UserDefaults.standard.data(forKey: UserDefaultsConstants.googleService)
-        let decodedservice = NSKeyedUnarchiver.unarchiveObject(with: decoded! ) as! GoogleService
+        //        calendarEvent.recurrence = ["RRULE:FREQ=DAILY;UNTIL=\(tillDate)"]
         
         decodedservice.executeQuery(insertQuery) { (ticket, object, error) in
             if error == nil {
                 print("Event inserted")
             } else {
-                print(error)
-                //                self.view?.showError(error:"\(error)")
-                
+                //                print(error)
+                print("event not added with title \(title) at \(startDate)")
             }
         }
     }

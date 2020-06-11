@@ -142,15 +142,34 @@ class ExportingViewController: BaseViewController {
         closeCalendarViewBtn.isHidden = true
       }
     @IBAction func importBtnPressed(_ sender: Any) {
-        if(numberOfSelectedPrayerTimes > 0){
-            firstDate = nil
-            secondDate = nil
-            calendarView.deselectAllDates()
-             calendarDateTitleLbl.text = presenter.calendarDateTitle
-            calendarView.reloadData()
-            calenadrIncludingHeaderView.isHidden=false
-            closeCalendarViewBtn.isEnabled = true
-            closeCalendarViewBtn.isHidden = false
+//        if(numberOfSelectedPrayerTimes > 0){
+//            firstDate = nil
+//            secondDate = nil
+//            calendarView.deselectAllDates()
+//             calendarDateTitleLbl.text = presenter.calendarDateTitle
+//            calendarView.reloadData()
+//            calenadrIncludingHeaderView.isHidden=false
+//            closeCalendarViewBtn.isEnabled = true
+//            closeCalendarViewBtn.isHidden = false
+//        }
+        let alert=UIAlertController(title: "Confirm exporting", message: "You will only be able to edit or remove exported prayer times directly from your calendar", preferredStyle: .alert)
+                  let okAction=UIAlertAction(title: "Continue", style: .default) { (action) in
+                    self.firstDate = nil
+                    self.secondDate = nil
+                    self.calendarView.deselectAllDates()
+                    self.calendarDateTitleLbl.text = self.presenter.calendarDateTitle
+                    self.calendarView.reloadData()
+                    self.calenadrIncludingHeaderView.isHidden=false
+                    self.closeCalendarViewBtn.isEnabled = true
+                    self.closeCalendarViewBtn.isHidden = false
+                      
+                  }
+                  let cancelAction=UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+                  }
+                  alert.addAction(okAction)
+                  alert.addAction(cancelAction)
+         if(numberOfSelectedPrayerTimes > 0){
+         self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -191,6 +210,7 @@ class ExportingViewController: BaseViewController {
             }
              prayerTimesArray = [(Bool,Bool)]( repeating: (false,false), count: 6 )
             automaticSelectPrayerTimeswitch.isOn = false
+            numberOfSelectedPrayerTimes = 0
             self.prayerTimestableView.reloadData()
         }
     }
