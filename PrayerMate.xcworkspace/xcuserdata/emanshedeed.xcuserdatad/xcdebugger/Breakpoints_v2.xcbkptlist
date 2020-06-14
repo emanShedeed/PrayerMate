@@ -7,31 +7,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "041B9DA4-48E2-4DBE-B7C2-C080E17A4357"
+            uuid = "1E500341-C3E8-4672-AE3E-291E81CD831A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PrayerMate/Scenes/HomeStoryBoard/Exporting/Presenter/ExportingPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "412"
-            endingLineNumber = "412"
-            landmarkName = "addEventToGoogleCalendar(title:description:eventStartDate:eventEndDate:decodedservice:)"
+            startingLineNumber = "307"
+            endingLineNumber = "307"
+            landmarkName = "importPrayerTimesToSelectedCalendars(importStartDateAsString:importEndDateAsString:activityIndicator:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B0BAE225-B88C-41A5-AA54-E5EE569DD0BC"
+            uuid = "46D6CD82-1746-4E8A-9E88-6215B9FA27B4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PrayerMate/Scenes/HomeStoryBoard/Exporting/Presenter/ExportingPresenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "270"
-            endingLineNumber = "270"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
+            landmarkName = "importPrayerTimesToSelectedCalendars(importStartDateAsString:importEndDateAsString:activityIndicator:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C7BF3C2B-A30D-49BC-BD4E-3B2649A6C9B3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PrayerMate/Scenes/HomeStoryBoard/Exporting/Presenter/ExportingPresenter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "285"
+            endingLineNumber = "285"
             landmarkName = "importPrayerTimesToSelectedCalendars(importStartDateAsString:importEndDateAsString:activityIndicator:)"
             landmarkType = "7">
          </BreakpointContent>

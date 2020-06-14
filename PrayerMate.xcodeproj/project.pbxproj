@@ -28,6 +28,7 @@
 		BD21C9CD24887E8300BA9BA1 /* ExportingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD21C9CC24887E8300BA9BA1 /* ExportingPresenter.swift */; };
 		BD21C9CF2488DEC600BA9BA1 /* ExportingPrayerTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD21C9CE2488DEC600BA9BA1 /* ExportingPrayerTimeCell.swift */; };
 		BD21C9D12488DF8D00BA9BA1 /* ExportingVC+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD21C9D02488DF8D00BA9BA1 /* ExportingVC+PresenterDelegate.swift */; };
+		BD243D642495A70D004A79E1 /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD243D632495A70D004A79E1 /* EventData.swift */; };
 		BD287BCA243B0BD100373170 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD287BC9243B0BD100373170 /* SplashPresenter.swift */; };
 		BD287BCD243B466800373170 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD287BCC243B466800373170 /* SettingPresenter.swift */; };
 		BD287BD0243B50BA00373170 /* SettingsLocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD287BCF243B50BA00373170 /* SettingsLocationPresenter.swift */; };
@@ -112,6 +113,7 @@
 		BD21C9CC24887E8300BA9BA1 /* ExportingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportingPresenter.swift; sourceTree = "<group>"; };
 		BD21C9CE2488DEC600BA9BA1 /* ExportingPrayerTimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExportingPrayerTimeCell.swift; path = ../../../../../../../../ExportingPrayerTimeCell.swift; sourceTree = "<group>"; };
 		BD21C9D02488DF8D00BA9BA1 /* ExportingVC+PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExportingVC+PresenterDelegate.swift"; sourceTree = "<group>"; };
+		BD243D632495A70D004A79E1 /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
 		BD287BC9243B0BD100373170 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		BD287BCC243B466800373170 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
 		BD287BCF243B50BA00373170 /* SettingsLocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLocationPresenter.swift; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 		BD21C9C62488748500BA9BA1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BD243D632495A70D004A79E1 /* EventData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -910,6 +913,7 @@
 			files = (
 				BDFCFE432418E78A0033D031 /* UIViewExtension.swift in Sources */,
 				BDD1F74A2417B5C7006B87B7 /* UIString+Extension.swift in Sources */,
+				BD243D642495A70D004A79E1 /* EventData.swift in Sources */,
 				BD65891E2430D0EC00FEE06C /* FrequentlyQuestionsViewController.swift in Sources */,
 				BDFFDA7A24361E5C0066F493 /* PrayerTimeBufferPresenter.swift in Sources */,
 				BD28C062246171BC00E97EC6 /* LocationPresenter.swift in Sources */,
