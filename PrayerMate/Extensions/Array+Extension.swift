@@ -1,0 +1,16 @@
+//
+//  ArrayExtension.swift
+//  PrayerMate
+//
+//  Created by eman shedeed on 6/15/20.
+//  Copyright © 2020 eman shedeed. All rights reserved.
+//
+
+import Foundation
+extension Array {
+    func chunked(into size: Int) -> [[Element]] {
+        return stride(from: 0, to: count, by: size).map {
+            Array(self[$0 ..< Swift.min($0 + size, count)])
+        }
+    }
+}

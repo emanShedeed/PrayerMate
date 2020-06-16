@@ -153,11 +153,14 @@ extension ExportingPresenter{
      */
     func importPrayerTimesToSelectedCalendars(importStartDateAsString:String , importEndDateAsString:String,activityIndicator:SYActivityIndicatorView){
         UIApplication.shared.beginIgnoringInteractionEvents()
+         appleEvents = [EKEvent]()
+        googleEvents = [EventData]()
+        microsoftEvents  = [EventData]()
         var numberOfcalenderThatImportData = 0
         let realm = try! Realm()
-        let decoded  =  UserDefaults.standard.data(forKey: UserDefaultsConstants.googleService)
-        let decodedservice = NSKeyedUnarchiver.unarchiveObject(with: decoded! ) as! GoogleService
-        
+      
+        var decoded :Data?
+        var decodedservice:GoogleService?
         //
         let eventFormatter = DateFormatter()
         eventFormatter.dateFormat="yyyy-M-dd hh:mm:ss a"
@@ -199,7 +202,11 @@ extension ExportingPresenter{
         
         //get selected calendars
         let calendars = UserDefaults.standard.value(forKey: UserDefaultsConstants.choosenCalendars) as? [Int]
-        
+        if(calendars?.contains(1) ?? false){
+          decoded = UserDefaults.standard.data(forKey: UserDefaultsConstants.googleService)
+            decodedservice = NSKeyedUnarchiver.unarchiveObject(with: decoded! ) as? GoogleService
+                   
+        }
         // get selected prayer times indicies
         let selectedPrayerTimesIndicies = UserDefaults.standard.value(forKey: UserDefaultsConstants.selectedPrayerTimesIndicies) as? [Int]
         
@@ -278,7 +285,7 @@ extension ExportingPresenter{
         })
         
         
-        
+        if(calendars?.contains(0) ?? false){
         addEventToAppleCalendar(events: appleEvents){ (success) -> Void in
             if(success){
                 numberOfcalenderThatImportData += 1
@@ -289,8 +296,9 @@ extension ExportingPresenter{
                     }
                 }
             }
-        }
-        addEventToGoogleCalendar(events:googleEvents, decodedservice: decodedservice){ (success) -> Void in
+            }}
+         if(calendars?.contains(1) ?? false){
+            addEventToGoogleCalendar(events:googleEvents, decodedservice: decodedservice!){ (success) -> Void in
             if(success){
                 numberOfcalenderThatImportData += 1
                 if(numberOfcalenderThatImportData == calendars?.count ?? 0){
@@ -301,6 +309,8 @@ extension ExportingPresenter{
                 }
             }
         }
+        }
+         if(calendars?.contains(2) ?? false){
         addEventToMicrosoftCalendar(events:microsoftEvents,calendarId:microsoftCalendarID){ (success) -> Void in
             if(success){
                 numberOfcalenderThatImportData += 1
@@ -311,6 +321,7 @@ extension ExportingPresenter{
                     }
                 }
             }
+        }
         }
     }
     
@@ -382,6 +393,7 @@ extension ExportingPresenter{
         urlRequest?.setValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest?.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         for (index,microsoftEvent) in events.enumerated(){
+        
             let event = ["subject":microsoftEvent.title , "body":["contentType" : "text"],"start" :["dateTime":microsoftEvent.eventStartDate , "timeZone":"UTC"],"end" :["dateTime":microsoftEvent.eventEndDate , "timeZone":"UTC"]] as [String : Any]
         do{
             let eventData = try JSONSerialization.data(withJSONObject: event, options: .prettyPrinted)
@@ -390,7 +402,7 @@ extension ExportingPresenter{
         }
         catch {
             print(error)
-            //             self.view?.showError(error:"error")
+          
         }
         
         var meDataTask: MSURLSessionDataTask? = nil
@@ -427,13 +439,55 @@ extension ExportingPresenter{
      - tillDate:repeat the event  till this date.
      
      */
+//    func  addEventToGoogleCalendar(events:[EventData],decodedservice:GoogleService,completion:@escaping (Bool) -> ()){
+//        for (index,event) in events.enumerated(){
+//           let calendarEvent = GTLRCalendar_Event()
+//            calendarEvent.summary = event.title
+//            calendarEvent.descriptionProperty = event.description
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+//            let startDate = dateFormatter.date(from: event.eventStartDate)
+//            let endDate = dateFormatter.date(from: event.eventEndDate)
+//
+//        guard let toBuildDateStart = startDate else {
+//            print("Error getting start date")
+//            return
+//        }
+//        guard let toBuildDateEnd = endDate else {
+//            print("Error getting end date")
+//
+//            return
+//        }
+//        calendarEvent.start = buildDate(date: toBuildDateStart)
+//        calendarEvent.end = buildDate(date: toBuildDateEnd)
+//
+//        let insertQuery = GTLRCalendarQuery_EventsInsert.query(withObject: calendarEvent, calendarId: "primary")
+//            //        calendarEvent.recurrence = ["RRULE:FREQ=DAILY;UNTIL=\(tillDate)"]
+//
+//            decodedservice.executeQuery(insertQuery) { (ticket, object, error) in
+//                if error == nil {
+//                    print("Event inserted")
+//                } else {
+//                    print("event not added with title \(event.title) at \(event.eventStartDate)")
+//                }
+//                if(index == events.count - 1){
+//                    completion(true)
+//                }
+//        }
+//        }
+//    }
     func  addEventToGoogleCalendar(events:[EventData],decodedservice:GoogleService,completion:@escaping (Bool) -> ()){
-//        var calendarEvent = GTLRCalendar_Event()
-        for (index,event) in events.enumerated(){
+        print(events.count)
+       let result = events.chunked(into: 50)
+        var batchQuery = GTLRBatchQuery()
+     for (index,batch) in result.enumerated(){
+        print(batch.count)
+       batchQuery = GTLRBatchQuery()
+
+         batch.forEach({ (event) in
            let calendarEvent = GTLRCalendar_Event()
             calendarEvent.summary = event.title
             calendarEvent.descriptionProperty = event.description
-        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
             let startDate = dateFormatter.date(from: event.eventStartDate)
@@ -453,21 +507,24 @@ extension ExportingPresenter{
         
         let insertQuery = GTLRCalendarQuery_EventsInsert.query(withObject: calendarEvent, calendarId: "primary")
             //        calendarEvent.recurrence = ["RRULE:FREQ=DAILY;UNTIL=\(tillDate)"]
-            
-            decodedservice.executeQuery(insertQuery) { (ticket, object, error) in
-                if error == nil {
-                    print("Event inserted")
-                } else {
-                    print(error)
-                    print("event not added with title \(event.title) at \(event.eventStartDate)")
-                }
-                if(index == events.count - 1){
-                    completion(true)
-                }
+         batchQuery.addQuery(insertQuery)
+        })
+           decodedservice.executeQuery(batchQuery) { (ticket, object, error) in
+               if error == nil {
+                   print("Event inserted")
+                  
+               } else {
+                   print("event not added with title ")
+               }
+            if(index == result.count - 1){
+                completion(true)
+            }
+             
         }
+
         }
+     
     }
-    
     /**
      Call this function to build google calendar date object
      

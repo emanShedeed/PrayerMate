@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		673E7AA17F98FCA8BDCB85FF /* Pods_PrayerMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E1AAC8FDC32641284F33D08 /* Pods_PrayerMate.framework */; };
+		BD0067A6249769B700C4FDD0 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0067A5249769B700C4FDD0 /* Array+Extension.swift */; };
 		BD0C9043242358D5000B8EAC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0C9042242358D5000B8EAC /* Home.storyboard */; };
 		BD0C90482423A161000B8EAC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C90472423A161000B8EAC /* HomeViewController.swift */; };
 		BD0C904A2423A4C8000B8EAC /* HomePrayerTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C90492423A4C8000B8EAC /* HomePrayerTimeCell.swift */; };
@@ -93,6 +94,7 @@
 		7E1AAC8FDC32641284F33D08 /* Pods_PrayerMate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrayerMate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F20701864EACE850C8951F /* Pods-PrayerMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerMate.release.xcconfig"; path = "Target Support Files/Pods-PrayerMate/Pods-PrayerMate.release.xcconfig"; sourceTree = "<group>"; };
 		B9165590C6B8B564D385D5DC /* Pods-PrayerMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerMate.debug.xcconfig"; path = "Target Support Files/Pods-PrayerMate/Pods-PrayerMate.debug.xcconfig"; sourceTree = "<group>"; };
+		BD0067A5249769B700C4FDD0 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		BD0C9042242358D5000B8EAC /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BD0C90472423A161000B8EAC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BD0C90492423A4C8000B8EAC /* HomePrayerTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePrayerTimeCell.swift; sourceTree = "<group>"; };
@@ -655,6 +657,7 @@
 				BDD1F7472417B5C6006B87B7 /* UIString+Extension.swift */,
 				BDA3F870241F7E2B00705569 /* localizedText+Extension.swift */,
 				BD0C905424273A8B000B8EAC /* UIButton+Extension.swift */,
+				BD0067A5249769B700C4FDD0 /* Array+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -938,6 +941,7 @@
 				BD287BCA243B0BD100373170 /* SplashPresenter.swift in Sources */,
 				BD0C905A24276C13000B8EAC /* MapViewController.swift in Sources */,
 				BDA3F871241F7E2B00705569 /* localizedText+Extension.swift in Sources */,
+				BD0067A6249769B700C4FDD0 /* Array+Extension.swift in Sources */,
 				BDD1F7492417B5C7006B87B7 /* UIImage+Extension.swift in Sources */,
 				BD78EDBC248E6D21000271D5 /* CalendarViewController.swift in Sources */,
 				BDD1F74B2417B5C7006B87B7 /* UIColor+Externsion.swift in Sources */,
