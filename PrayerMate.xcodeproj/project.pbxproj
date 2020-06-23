@@ -41,7 +41,6 @@
 		BD28C06624618A9200E97EC6 /* SettingLocation+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD28C06524618A9200E97EC6 /* SettingLocation+PresenterDelegate.swift */; };
 		BD2E0BF12431D64800D2B6E6 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2E0BF02431D64800D2B6E6 /* AboutViewController.swift */; };
 		BD371D902439DA3B00ED2874 /* CustomActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD371D8F2439DA3B00ED2874 /* CustomActionViewController.swift */; };
-		BD42746D242A4459007DE9AC /* CustomJTAppleCalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD42746C242A4459007DE9AC /* CustomJTAppleCalendarCell.swift */; };
 		BD5FC48D24320C5D0033BCCE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5FC48C24320C5D0033BCCE /* BaseViewController.swift */; };
 		BD65890F24307CA300FEE06C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD65890E24307CA300FEE06C /* Settings.storyboard */; };
 		BD6589152430944500FEE06C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6589142430944500FEE06C /* SettingViewController.swift */; };
@@ -129,7 +128,6 @@
 		BD28C06524618A9200E97EC6 /* SettingLocation+PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingLocation+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		BD2E0BF02431D64800D2B6E6 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		BD371D8F2439DA3B00ED2874 /* CustomActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomActionViewController.swift; sourceTree = "<group>"; };
-		BD42746C242A4459007DE9AC /* CustomJTAppleCalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomJTAppleCalendarCell.swift; sourceTree = "<group>"; };
 		BD5FC48C24320C5D0033BCCE /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BD65890E24307CA300FEE06C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		BD6589142430944500FEE06C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -232,7 +230,6 @@
 				BD0C90472423A161000B8EAC /* HomeViewController.swift */,
 				BD0C904F2423B175000B8EAC /* HomeVC+PresenterDelegate.swift */,
 				BD751ADD242A42CF005A9764 /* HomeCellUIModel */,
-				BD751ADE242A42F5005A9764 /* JTAppleCalendar Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -541,14 +538,6 @@
 				BD0C90492423A4C8000B8EAC /* HomePrayerTimeCell.swift */,
 			);
 			path = HomeCellUIModel;
-			sourceTree = "<group>";
-		};
-		BD751ADE242A42F5005A9764 /* JTAppleCalendar Cell */ = {
-			isa = PBXGroup;
-			children = (
-				BD42746C242A4459007DE9AC /* CustomJTAppleCalendarCell.swift */,
-			);
-			path = "JTAppleCalendar Cell";
 			sourceTree = "<group>";
 		};
 		BD772156241657E3008A8947 /* Model */ = {
@@ -1001,7 +990,6 @@
 				BD21C9C8248874D300BA9BA1 /* ExportingViewController.swift in Sources */,
 				BD21C9CF2488DEC600BA9BA1 /* ExportingPrayerTimeCell.swift in Sources */,
 				BD0C904A2423A4C8000B8EAC /* HomePrayerTimeCell.swift in Sources */,
-				BD42746D242A4459007DE9AC /* CustomJTAppleCalendarCell.swift in Sources */,
 				BD6589152430944500FEE06C /* SettingViewController.swift in Sources */,
 				BDFFDA69243359180066F493 /* SettingsLocationViewController.swift in Sources */,
 				BDA3F8822420CAAC00705569 /* LanguageViewController.swift in Sources */,

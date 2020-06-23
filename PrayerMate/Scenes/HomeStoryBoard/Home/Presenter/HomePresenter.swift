@@ -84,7 +84,7 @@ class HomePresenter{
      
      */
     func dataRequest (FINAL_URL : URL) {
-        
+        UIApplication.shared.beginIgnoringInteractionEvents()
         if Helper.isConnectedToNetwork(){
             
             let task = URLSession.shared.dataTask(with: FINAL_URL){
@@ -108,13 +108,18 @@ class HomePresenter{
                               UserDefaults.standard.set( self.todayParyerTimes, forKey: UserDefaultsConstants.todayParyerTimes)
                             self.annualPrayerTimes = times
                             self.view?.fetchDataSucess()
+                            DispatchQueue.main.async {
+                                   UIApplication.shared.endIgnoringInteractionEvents()
+                            }
                         }else{
                             self.view?.showError(error: "Home.errorGettingAPIdata".localized)
+                              UIApplication.shared.beginIgnoringInteractionEvents()
                         }
                         
                     }catch {
                         print("Error: \(error)")
                         self.view?.showError(error: "Home.errorGettingAPIdata".localized)
+                          UIApplication.shared.beginIgnoringInteractionEvents()
                     }
                     
                 }
@@ -125,6 +130,7 @@ class HomePresenter{
         }else{
             self.view?.showError(error: "internetFailMessage".localized)
         }
+       
     }
     
     
