@@ -13,7 +13,7 @@ class FrequentlyQuestionsViewController: BaseViewController {
     //MARK:- IBOUTLET
     @IBOutlet weak var questionsTV: UITableView!
     
-   
+    
     @IBOutlet weak var navigationViewHeight: NSLayoutConstraint!
     //MARK:VARiIABLES
     var searchBar = UISearchBar()
@@ -43,17 +43,17 @@ class FrequentlyQuestionsViewController: BaseViewController {
     //MARK:- Methods
     
     /**
-                        Call this function for setup UI
-                        
-                        
-                          
-                        ### Usage Example: ###
-                        ````
-                         setupView()
-                        
-                        ````
-                  - Parameters:
-                        */
+     Call this function for setup UI
+     
+     
+     
+     ### Usage Example: ###
+     ````
+     setupView()
+     
+     ````
+     - Parameters:
+     */
     func setupView(){
         
         // For remove extra cells
@@ -72,24 +72,24 @@ class FrequentlyQuestionsViewController: BaseViewController {
         cellHeight = UITableView.automaticDimension
         
         questionsTV.estimatedRowHeight = 63.0;
-          if(UIScreen.main.bounds.height>667){
+        if(UIScreen.main.bounds.height>667){
             navigationViewHeight.constant = 100.0
-          }else{
+        }else{
             navigationViewHeight.constant = 66.0
         }
     }
     /**
-                        Call this function for set Questions Array
-                        
-                        
-                          
-                        ### Usage Example: ###
-                        ````
-                         loadArray()
-                        
-                        ````
-                  - Parameters:
-                        */
+     Call this function for set Questions Array
+     
+     
+     
+     ### Usage Example: ###
+     ````
+     loadArray()
+     
+     ````
+     - Parameters:
+     */
     func loadArray(){
         //1
         questionsArray.append((questionTitle: "FAQs.firstQuestionTitle".localized, questionAnswer: "FAQs.firstQuestionDescription".localized, isExpanded: false))
@@ -110,17 +110,17 @@ class FrequentlyQuestionsViewController: BaseViewController {
     }
     
     /**
-                           Call this function for setup navigation Controller
-                           
-                           
-                             
-                           ### Usage Example: ###
-                           ````
-                            setUpNavBar()
-                           
-                           ````
-                     - Parameters:
-                           */
+     Call this function for setup navigation Controller
+     
+     
+     
+     ### Usage Example: ###
+     ````
+     setUpNavBar()
+     
+     ````
+     - Parameters:
+     */
     
     func setUpNavBar(){
         styleNavBar()
@@ -142,7 +142,7 @@ class FrequentlyQuestionsViewController: BaseViewController {
         searchBar.frame=CGRect(x:  UIScreen.main.bounds.width, y: 0, width: searchBar.frame.width, height: searchBar.frame.height)
         var searchText : UITextField?
         if #available(iOS 13.0, *) {
-           searchText  = searchBar.searchTextField
+            searchText  = searchBar.searchTextField
         }
         else {
             searchText = searchBar.value(forKey: "_searchField") as? UITextField
@@ -153,22 +153,22 @@ class FrequentlyQuestionsViewController: BaseViewController {
         searchbarBtnIcon = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchButtonPressed))
         navigationItem.rightBarButtonItem = searchbarBtnIcon
     }
-
+    
     @objc func searchButtonPressed(sender: AnyObject) {
         showSearchBar()
     }
     /**
-                              Call this function to show search bar
-                              
-                              
-                                
-                              ### Usage Example: ###
-                              ````
-                               showSearchBar()
-                              
-                              ````
-                        - Parameters:
-                              */
+     Call this function to show search bar
+     
+     
+     
+     ### Usage Example: ###
+     ````
+     showSearchBar()
+     
+     ````
+     - Parameters:
+     */
     
     func showSearchBar() {
         searchBar.showsCancelButton=true
@@ -184,17 +184,17 @@ class FrequentlyQuestionsViewController: BaseViewController {
         })
     }
     /**
-                                Call this function to hide search bar
-                                
-                                
-                                  
-                                ### Usage Example: ###
-                                ````
-                                 hideSearchBar()
-                                
-                                ````
-                          - Parameters:
-                                */
+     Call this function to hide search bar
+     
+     
+     
+     ### Usage Example: ###
+     ````
+     hideSearchBar()
+     
+     ````
+     - Parameters:
+     */
     func hideSearchBar() {
         navigationItem.hidesBackButton=false
         UIView.animate(withDuration: 0.5, animations: {

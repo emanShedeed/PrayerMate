@@ -240,7 +240,7 @@ class HomePresenter{
             }
             
         }
-//       let _ = LocalNotification()
+//       let _ = PrayerTimeLocalNotification()
         print(realm.configuration.fileURL ?? "")
     }
     

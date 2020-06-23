@@ -33,7 +33,7 @@ public class SYActivityIndicatorView: UIView {
         }
         else {
             let bundle = Bundle(for: SYActivityIndicatorView.self)
-            let image = UIImage(named: "loading.png", in: bundle, compatibleWith: nil)!
+            let image = UIImage.loadingIcon!
             loadingImage = image
             frame = CGRect(x: 0.0, y: 0.0, width: image.size.width, height: image.size.height)
             

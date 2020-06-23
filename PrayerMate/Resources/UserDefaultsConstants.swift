@@ -23,6 +23,7 @@ struct UserDefaultsConstants {
     microsoftAuthorization = "microsoftAuthorization",
     microsoftCalendarID = "microsoftCalendarID",
     isLaunchedBefore = "isLaunchedBefore",
-    todayParyerTimes = "todayParyerTimes"
+    todayParyerTimes = "todayParyerTimes",
+    selectedExortingPeriod = "selectedExortingPeriod"
     
 }

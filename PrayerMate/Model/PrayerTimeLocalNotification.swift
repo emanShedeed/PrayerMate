@@ -1,5 +1,5 @@
 //
-//  LocalNotification.swift
+//  PrayerTimeLocalNotification.swift
 //  PrayerMate
 //
 //  Created by eman shedeed on 4/23/20.
@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 import UserNotifications
-class LocalNotification {
+class PrayerTimeLocalNotification {
     var notificationArray : [Notification] = .init()
     let formatter=DateFormatter()
     init() {

@@ -46,4 +46,5 @@ extension UIImage {
     static let asrIcon = UIImage(named: "asrIcon")
     static let maghribIcon = UIImage(named: "maghribIcon")
     static let ishaIcon = UIImage(named: "ishaIcon")
+    static let loadingIcon = UIImage(named: "Loading")
 }

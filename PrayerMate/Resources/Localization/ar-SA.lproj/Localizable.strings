@@ -1,4 +1,4 @@
-/* 
+/*
   Localization.strings
   PrayerMate
 
@@ -70,6 +70,17 @@
 "ExportingVC.switchTitleLbl" = "إضافة جميع مواقيت الصلاة للتقويم";
 "ExportingVC.switchDetailLbl" = "يمكنك اختيار المواقيت";
 "ExportingVC.ExportBtn" = "إضافة اوقات الصلاة للتقويم";
+"ExportingVC.alertTitle" = "تاكيد الاضافه";
+"ExportingVC.alertMessage" = "سوف يمكنك تعديل او حذف اوقات الصلاة المضافة بشكل مباشر من التقويم";
+"ExportingVC.continueBtnTitle" = "استمرار";
+"ExportingVC.cancelBtnTitle" = "الغاء";
+
+//ExportingPopUpViewController
+"ExportingPopUpViewController.titleLbl" = "عدد الايام التي تريد اضافتها";
+"ExportingPopUpViewController.optionOneLbl" = "٧ ايام";
+"ExportingPopUpViewController.optionTwoLbl" = "١٥ يوم";
+"ExportingPopUpViewController.okBtnTitle" = "تم";
+"ExportingPopUpViewController.cancelBtnTitle" = "الغاء";
 
 //Settings viewController
 "Settings.titleLbl" = "الاعدادات";

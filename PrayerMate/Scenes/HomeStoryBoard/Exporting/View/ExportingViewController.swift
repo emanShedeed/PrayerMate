@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JTAppleCalendar
+//import JTAppleCalendar
 class ExportingViewController: BaseViewController {
     
     
@@ -16,13 +16,6 @@ class ExportingViewController: BaseViewController {
     
     @IBOutlet weak var prayerTimestableView: UITableView!
     @IBOutlet weak var importBtn: UIButton!
-    //// Calendar IBOUTLET
-    @IBOutlet weak var calendarDateTitleLbl: UILabel!
-    @IBOutlet weak var calendarView: JTACMonthView!
-    @IBOutlet weak var calenadrIncludingHeaderView: UIView!
-    @IBOutlet weak var hideCalendareView: UIView!
-    @IBOutlet weak var daysStackView: UIStackView!
-    
     @IBOutlet weak var closeCalendarViewBtn: UIButton!
     @IBOutlet weak var navigationViewHeight: NSLayoutConstraint!
     @IBOutlet weak var automaticSelectPrayerTimeswitch: UISwitch!
@@ -37,14 +30,6 @@ class ExportingViewController: BaseViewController {
     var presenter:ExportingPresenter!
     var prayerTimesArray: [(isCellSelected: Bool, isBtnChecked:Bool)] = .init()
     
-    //    var getNextDayTimes = false
-    ////Calendar VARiIABLES
-    let calendareFormatter = DateFormatter()
-    var firstDate: Date?
-    var secondDate: Date?
-    var twoDatesAlreadySelected: Bool {
-        return firstDate != nil && calendarView.selectedDates.count > 1
-    }
     
     ///
     var selectedPrayerTimesIndicies: [Int] = .init()
@@ -54,14 +39,6 @@ class ExportingViewController: BaseViewController {
         // Do any additional setup after loading the view.
         setupView()
         setUpNavBar()
-    calenadrIncludingHeaderView.roundCorners([.topLeft,.topRight], radius: 20)
-        
-        presenter.setupCalendarView(calendarView: calendarView, calendareFormatter: calendareFormatter)
-       
-        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-        tap.cancelsTouchesInView = false
-        hideCalendareView.addGestureRecognizer(tap)
-        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -86,8 +63,6 @@ class ExportingViewController: BaseViewController {
      - Parameters:
      */
     func setupView(){
-        calendarView.semanticContentAttribute = .forceRightToLeft
-        daysStackView.semanticContentAttribute = .forceLeftToRight
         presenter = ExportingPresenter(view: self)
         countDownTimerFormatter.locale = NSLocale(localeIdentifier: "en") as Locale?
         countDownTimerFormatter.dateFormat = "hh:mm:ss a"
@@ -98,28 +73,9 @@ class ExportingViewController: BaseViewController {
                }else{
                  navigationViewHeight.constant = 66.0
              }
-//        prayerTimestableView.backgroundColor = UIColor.clear
     }
     
-    /**
-     Call this function for hide calendare view
-     
-     
-     ### Usage Example: ###
-     ````
-     let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-     
-     hideCalendareView.addGestureRecognizer(tap)
-     
-     ````
-     - Parameters:
-     - sender: the tap Gesture Recognizer
-     - Return Type :
-     */
-    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
-        calenadrIncludingHeaderView.isHidden = true
-//        shadowView.isHidden = true
-    }
+    
     
     func setUpNavBar(){
           styleNavBar()
@@ -127,44 +83,15 @@ class ExportingViewController: BaseViewController {
           let backButton = UIBarButtonItem()
           backButton.title = "ExportingVC.navigationBackButton".localized
           self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-          
-//          let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18),NSAttributedString.Key.foregroundColor:UIColor.white]
-//          titleLabel.attributedText = NSAttributedString(string: "FAQs.titleLbl".localized, attributes: attributes as [NSAttributedString.Key : Any])
-//
-//          titleLabel.letterSpace=1.08
-//          titleLabel.sizeToFit()
-//        navigationItem.titleView = titleLabel
     }
-    //MARK:- IBActions
-    @IBAction func closeCalendarViewBtnPressed(_ sender: Any) {
-           calenadrIncludingHeaderView.isHidden = true
-        closeCalendarViewBtn.isEnabled = false
-        closeCalendarViewBtn.isHidden = true
-      }
-    @IBAction func importBtnPressed(_ sender: Any) {
-//        if(numberOfSelectedPrayerTimes > 0){
-//            firstDate = nil
-//            secondDate = nil
-//            calendarView.deselectAllDates()
-//             calendarDateTitleLbl.text = presenter.calendarDateTitle
-//            calendarView.reloadData()
-//            calenadrIncludingHeaderView.isHidden=false
-//            closeCalendarViewBtn.isEnabled = true
-//            closeCalendarViewBtn.isHidden = false
-//        }
-        let alert=UIAlertController(title: "Confirm exporting", message: "You will only be able to edit or remove exported prayer times directly from your calendar", preferredStyle: .alert)
-                  let okAction=UIAlertAction(title: "Continue", style: .default) { (action) in
-                    self.firstDate = nil
-                    self.secondDate = nil
-                    self.calendarView.deselectAllDates()
-                    self.calendarDateTitleLbl.text = self.presenter.calendarDateTitle
-                    self.calendarView.reloadData()
-                    self.calenadrIncludingHeaderView.isHidden=false
-                    self.closeCalendarViewBtn.isEnabled = true
-                    self.closeCalendarViewBtn.isHidden = false
-                      
+
+    @IBAction func exportBtnPressed(_ sender: Any) {
+
+        let alert=UIAlertController(title: "ExportingVC.alertTitle".localized, message: "ExportingVC.alertMessage".localized, preferredStyle: .alert)
+        let okAction=UIAlertAction(title: "ExportingVC.continueBtnTitle".localized, style: .default) { (action) in
+                    self.showPopover()
                   }
-                  let cancelAction=UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+        let cancelAction=UIAlertAction(title: "ExportingVC.cancelBtnTitle".localized, style: .cancel) { (action) in
                   }
                   alert.addAction(okAction)
                   alert.addAction(cancelAction)
@@ -186,34 +113,6 @@ class ExportingViewController: BaseViewController {
     }
     
     
-    @IBAction func calendarDoneBtnPressed(_ sender: Any) {
-        self.view.addSubview(activityIndicator)
-        activityIndicator.center = self.view.center
-        let formatter=DateFormatter()
-        formatter.dateFormat = "yyyy-M-d"
-        
-        if(self.firstDate == nil ){
-            Helper.showToast(message: "Home.chooseDateRangeToasterMessage".localized)
-            return
-        }else{
-            if(self.secondDate == nil){
-                self.secondDate = self.firstDate
-            }
-            self.calenadrIncludingHeaderView.isHidden = true
-            closeCalendarViewBtn.isEnabled = false
-            closeCalendarViewBtn.isHidden = true
-            self.activityIndicator.startAnimating()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
-                self.presenter.importPrayerTimesToSelectedCalendars(importStartDateAsString: formatter.string(from:self.firstDate ?? Date()), importEndDateAsString: formatter.string(from:self.secondDate ?? Date()),activityIndicator: self.activityIndicator)
-                UserDefaults.standard.set(self.secondDate, forKey:UserDefaultsConstants.lastImportDate)
-                //                let _ = LocalNotification()
-            }
-             prayerTimesArray = [(Bool,Bool)]( repeating: (false,false), count: 6 )
-            automaticSelectPrayerTimeswitch.isOn = false
-            numberOfSelectedPrayerTimes = 0
-            self.prayerTimestableView.reloadData()
-        }
-    }
     func saveSelectedPrayerTimesIndicies(){
         self.selectedPrayerTimesIndicies = self.prayerTimesArray.indices.filter{self.prayerTimesArray[$0].isBtnChecked == true}
         UserDefaults.standard.set(self.selectedPrayerTimesIndicies, forKey: UserDefaultsConstants.selectedPrayerTimesIndicies)
@@ -256,146 +155,40 @@ extension ExportingViewController:UITableViewDelegate,UITableViewDataSource{
     
 }
 
-/// This is a class created for handling JTAppleCalendar dataSource functions
-extension ExportingViewController:JTACMonthViewDataSource{
-    func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
-        let startDate = Date()
-        var endDate = Date()
-        // Get the current year
-        let year = Calendar.current.component(.year, from: Date())
-        if let firstOfNextYear = Calendar.current.date(from: DateComponents(year: year + 1, month: 1, day: 1)) {
-            // Get the last day of the current year
-            endDate = Calendar.current.date(byAdding: .day, value: -1, to: firstOfNextYear) ?? Date()
-        }
-        //        let endDate = Calendar.current.date(byAdding: .year, value: 1, to: Date()) ?? Date()
-        let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate, numberOfRows: 5, calendar: Calendar(identifier: .gregorian), generateInDates: .forAllMonths, generateOutDates: .tillEndOfRow, firstDayOfWeek: .sunday)
-        return parameters
-    }
-}
-/// This is a class created for handling JTAppleCalendar delegate functions
-extension ExportingViewController:JTACMonthViewDelegate{
-    //Display the Cell
-    func calendar(_ calendar: JTACMonthView, willDisplay cell: JTACDayCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
-        let cell = cell as! CustomJTAppleCalendarCell
-        configureCell(view: cell, cellState: cellState, calendareFormatter: calendareFormatter)
-    }
-    
-    func calendar(_ calendar: JTACMonthView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTACDayCell {
-        let cell=calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomJTAppleCalendarCell", for: indexPath) as! CustomJTAppleCalendarCell
-        cell.dayLabel.text = cellState.text
-        handelCellSelectedColor(cell: cell, celssState: cellState)
-        configureCell(view: cell, cellState: cellState, calendareFormatter: calendareFormatter)
-        return cell
-    }
-    
-    func calendar(_ calendar: JTACMonthView, didSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
-        if firstDate != nil {
-            calendar.selectDates(from: firstDate!, to: date,  triggerSelectionDelegate: false, keepSelectionIfMultiSelectionAllowed: true)
-            secondDate = date
-        } else {
-            firstDate = date
-        }
-        configureCell(view: cell, cellState: cellState, calendareFormatter: calendareFormatter)
-    }
-    
-    func calendar(_ calendar: JTACMonthView, didDeselectDate date: Date, cell: JTACDayCell?, cellState: CellState) {
-        configureCell(view: cell, cellState: cellState, calendareFormatter: calendareFormatter)
-    }
-    
-    func calendar(_ calendar: JTACMonthView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
-        presenter.setupViewsOfCalendar(from: visibleDates)
-        calendarDateTitleLbl.text = presenter.calendarDateTitle
-    }
-    func calendar(_ calendar: JTACMonthView, shouldSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) -> Bool{
-        let dateAsString = calendareFormatter.string(from: date)
-        let currentDateAsString=calendareFormatter.string(from: Date())
-        if(calendareFormatter.date(from: dateAsString)! < calendareFormatter.date(from: currentDateAsString)!){
-            Helper.showToast(message: "Home.PreviousDateToasterMessage".localized)
-            return false
-        }
+extension ExportingViewController:UIPopoverPresentationControllerDelegate{
+    func showPopover() {
+        let buttonFrame = self.navigationController?.navigationBar.frame
+        /* Rest is same as showing popoer */
+        let popoverContentController = self.storyboard?.instantiateViewController(withIdentifier: "ExportingPopUpViewController") as? ExportingPopUpViewController
+        popoverContentController?.modalPresentationStyle = .popover
         
-        if twoDatesAlreadySelected && cellState.selectionType != .programatic || firstDate != nil && ( date <= (calendarView.selectedDates.count > 0 ? calendarView.selectedDates[0] : date)) {
-            firstDate = nil
-            let retval = !calendarView.selectedDates.contains(date)
-            calendarView.deselectAllDates(triggerSelectionDelegate: false)
-            return retval
-        }
-        if( firstDate != nil && date > calendarView.selectedDates[0]){
-            let firstDateAsString = calendareFormatter.string(from: firstDate!)
-            let MaxDate =  Calendar.current.date(byAdding: .month, value: 1, to: calendareFormatter.date(from: firstDateAsString)!) ?? Date()
-            let maxDateAsString = calendareFormatter.string(from: MaxDate)
-            if(calendareFormatter.date(from: dateAsString)! > calendareFormatter.date(from: maxDateAsString)!){
-                Helper.showToast(message:"Home.moreThanMonthToasterMessage".localized)
-                return false
+        
+        if let popoverPresentationController = popoverContentController?.popoverPresentationController {
+            popoverPresentationController.permittedArrowDirections = []
+            popoverPresentationController.sourceView = self.view
+            
+            popoverPresentationController.sourceRect = CGRect(x: (buttonFrame?.maxX)! - 30, y: self.view.frame.height/2
+                , width: 0, height: 0)
+            
+            popoverContentController!.preferredContentSize = CGSize(width : self.view.frame.width, height: 220)
+            popoverPresentationController.delegate = self
+            popoverContentController?.delegate=self
+            if let popoverController = popoverContentController {
+                present(popoverController, animated: true, completion: nil)
             }
         }
+    }
+    //UIPopoverPresentationControllerDelegate inherits from UIAdaptivePresentationControllerDelegate, we will use this method to define the presentation style for popover presentation controller
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+    
+    //UIPopoverPresentationControllerDelegate
+    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
+        
+    }
+    
+    func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool {
         return true
     }
-    
-    func calendar(_ calendar: JTACMonthView, shouldDeselectDate date: Date, cell: JTACDayCell?, cellState: CellState) -> Bool {
-        if twoDatesAlreadySelected && cellState.selectionType != .programatic {
-            firstDate = nil
-            calendarView.deselectAllDates(triggerSelectionDelegate: false)
-            return false
-        }
-        return true
-    }
-    
 }
-extension ExportingViewController{
-    func configureCell(view: JTACDayCell?, cellState: CellState,calendareFormatter:DateFormatter) {
-        guard let cell = view as? CustomJTAppleCalendarCell  else { return }
-        cell.dayLabel.text = cellState.text
-        handleCellTextColor(cell: cell, cellState: cellState,calendareFormatter:calendareFormatter)
-        handleCellSelected(cell: cell, cellState: cellState)
-    }
-    func handelCellSelectedColor(cell:JTACDayCell?,celssState:CellState){
-        guard let validCell = cell as? CustomJTAppleCalendarCell else{return}
-        if(validCell.isSelected){
-            validCell.selectedView.isHidden=false
-        }else{
-            validCell.selectedView.isHidden=true
-        }
-    }
-    
-    func handleCellTextColor(cell:JTACDayCell?,cellState:CellState,calendareFormatter:DateFormatter){
-        guard let validCell = cell as? CustomJTAppleCalendarCell else{return}
-        if(validCell.isSelected){
-            validCell.dayLabel.textColor = UIColor.appColor
-        }else{
-            if cellState.dateBelongsTo == .thisMonth{
-                validCell.dayLabel.textColor = .black
-            }else{
-                validCell.dayLabel.textColor = UIColor.dayCellGrayTextColor
-            }
-        }
-        let currentDateAsString=calendareFormatter.string(from: Date())
-        let cellDateAsString=calendareFormatter.string(from: cellState.date)
-        if(calendareFormatter.date(from: cellDateAsString)! < calendareFormatter.date(from: currentDateAsString)!){
-            //  Helper.showToast(message: "can't select date before today")
-            validCell.dayLabel.textColor = UIColor(rgb:0xDEE3E7)
-        }
-    }
-    
-    func handleCellSelected(cell: CustomJTAppleCalendarCell, cellState: CellState) {
-        cell.selectedView.isHidden = !cellState.isSelected
-        switch cellState.selectedPosition() {
-        case .left:
-            //              cell.selectedView.layer.cornerRadius = 20
-            cell.selectedView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
-        case .middle:
-            //              cell.selectedView.layer.cornerRadius = 0
-            cell.selectedView.layer.maskedCorners = []
-        case .right:
-            //              cell.selectedView.layer.cornerRadius = 20
-            cell.selectedView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
-        case .full:
-            //              cell.selectedView.layer.cornerRadius = 20
-            cell.selectedView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMinXMinYCorner]
-        default: break
-        }
-    }
-    
-    
-}
-

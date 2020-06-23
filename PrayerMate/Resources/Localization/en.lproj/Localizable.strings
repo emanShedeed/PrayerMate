@@ -1,4 +1,4 @@
-/* 
+/*
   Localization.strings
   PrayerMate
 
@@ -74,8 +74,17 @@
 "ExportingVC.switchTitleLbl" = "Export all times to calender";
 "ExportingVC.switchDetailLbl" = "You can export it manually";
 "ExportingVC.ExportBtn" = "Export";
+"ExportingVC.alertTitle" = "Confirm exporting";
+"ExportingVC.alertMessage" = "You will only be able to edit or remove exported prayer times directly from your calendar";
+"ExportingVC.continueBtnTitle" = "Continue";
+"ExportingVC.cancelBtnTitle" = "Cancel";
 
-
+//ExportingPopUpViewController
+"ExportingPopUpViewController.titleLbl" = "Number of days to export";
+"ExportingPopUpViewController.optionOneLbl" = "7 days";
+"ExportingPopUpViewController.optionTwoLbl" = "15 days";
+"ExportingPopUpViewController.okBtnTitle" = "Ok";
+"ExportingPopUpViewController.cancelBtnTitle" = "Cancel";
 
 
 //Settings viewController

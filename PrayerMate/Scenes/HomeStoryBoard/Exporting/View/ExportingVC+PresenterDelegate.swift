@@ -32,6 +32,31 @@ extension ExportingViewController:ExportingViewControllerProtocol{
     func imoprtToCalendarsSuccess() {
         Helper.showToast(message: "Home.exportedSuccessfullyToasterMessage".localized)
         activityIndicator.stopAnimating()
+     
       }
       
+}
+extension ExportingViewController:ExportingPopUpViewControllerProtocol{
+    
+    func importToCalendarsOkBtnPressed(withperiodSelected: Int) {
+        let formatter=DateFormatter()
+        formatter.locale=NSLocale(localeIdentifier: "en") as Locale
+       formatter.dateFormat = "yyyy-M-d"
+        
+        let secondDate = Calendar.current.date(byAdding: .day, value: withperiodSelected - 1 , to: Date())
+//        self.activityIndicator.startAnimating()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                    self.presenter.importPrayerTimesToSelectedCalendars(importStartDateAsString: formatter.string(from: Date()), importEndDateAsString: formatter.string(from:secondDate ?? Date()))
+                    UserDefaults.standard.set(secondDate, forKey:UserDefaultsConstants.lastImportDate)
+//                                 let _ = PrayerTimeLocalNotification()
+                }
+                prayerTimesArray = [(Bool,Bool)]( repeating: (false,false), count: 6 )
+                automaticSelectPrayerTimeswitch.isOn = false
+                numberOfSelectedPrayerTimes = 0
+                self.prayerTimestableView.reloadData()
+        let renewalNotificationDate = Calendar.current.date(byAdding: .day, value: -1 , to: secondDate ?? Date())
+         let _ = ExportPrayerTimeToCalendarNotification(notification: Notification(title: "renew Exporting", description: "choose Ok to renew Exporting your prayer times", time: "3:56 pm", date: Date()))//renewalNotificationDate
+    }
+    
+
 }

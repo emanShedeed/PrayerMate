@@ -7,16 +7,6 @@
 //
 
 import Foundation
-//
-//  HomeVCPresenter.swift
-//  PrayerMate
-//
-//  Created by eman shedeed on 3/19/20.
-//  Copyright © 2020 eman shedeed. All rights reserved.
-//
-
-import Foundation
-import JTAppleCalendar
 import RealmSwift
 //Apple
 import EventKit
@@ -32,6 +22,14 @@ protocol  ExportingViewControllerProtocol :class {
     func showError(error:String)
     func showIndicator()
     func imoprtToCalendarsSuccess()
+}
+extension ExportingViewControllerProtocol{
+    func showError(error:String){
+        
+    }
+    func showIndicator(){
+        
+    }
 }
 protocol UpdateExportingPrayerTimeCellProtcol {
     func displayData(prayerTimeName: String, prayerTime: String, isCellSelected: Bool,isBtnChecked:Bool,cellIndex:Int)
@@ -98,44 +96,7 @@ class ExportingPresenter{
     }
     
 }
-/// This is a presenter class created for handling HomeVC JTAppleCalendar helper Functions.
-extension ExportingPresenter{
-    
-    func setupCalendarView(calendarView:JTACMonthView,calendareFormatter:DateFormatter){
-        //
-        
-        calendareFormatter.dateFormat="yyyy MM dd"
-        calendareFormatter.timeZone = Calendar.current.timeZone
-        calendareFormatter.locale = NSLocale(localeIdentifier: "en") as Locale?
-        calendarView.allowsMultipleSelection = true
-        calendarView.allowsRangedSelection = true
-        //make top rounded calendar
-        
-        //setup calendarSpacing
-        calendarView.minimumLineSpacing=0
-        calendarView.minimumInteritemSpacing=0
-        //setup header Date Label
-        
-        calendarView.visibleDates { (visableDates)  in
-            self.setupViewsOfCalendar(from: visableDates)
-        }
-        
-    }
-    
-    func setupViewsOfCalendar(from visibleDates:DateSegmentInfo) {
-        let date = visibleDates.monthDates.first!.date
-        let calenderTitleFormatter = DateFormatter()
-        calenderTitleFormatter.locale = NSLocale(localeIdentifier: "en") as Locale
-        calenderTitleFormatter.dateFormat="yyyy"
-        let year=calenderTitleFormatter.string(from: date)
-        calenderTitleFormatter.dateFormat="MMMM"
-        let month=calenderTitleFormatter.string(from: date)
-        calendarDateTitle = month + " " + year
-        // return (month + " " + year)
-    }
-    
-    
-}
+
 /// This is a presenter class created for handling importing prayerTimes To different Calendars
 extension ExportingPresenter{
     
@@ -151,7 +112,8 @@ extension ExportingPresenter{
      - importEndDateAsString : end date at string format.
      
      */
-    func importPrayerTimesToSelectedCalendars(importStartDateAsString:String , importEndDateAsString:String,activityIndicator:SYActivityIndicatorView){
+    func importPrayerTimesToSelectedCalendars(importStartDateAsString:String , importEndDateAsString:String){
+        view?.showIndicator()
         UIApplication.shared.beginIgnoringInteractionEvents()
          appleEvents = [EKEvent]()
         googleEvents = [EventData]()
@@ -217,7 +179,7 @@ extension ExportingPresenter{
         var eventEndDate:Date?
         
         //        if let obj = firstImportDateObjFromRealm{
-        let microsoftCalendarID = UserDefaults.standard.value(forKey: UserDefaultsConstants.microsoftCalendarID) as! String
+        let microsoftCalendarID = UserDefaults.standard.value(forKey: UserDefaultsConstants.microsoftCalendarID) as? String
         var googleEventObj : EventData!
         var microsoftEventObj : EventData!
         
@@ -311,7 +273,7 @@ extension ExportingPresenter{
         }
         }
          if(calendars?.contains(2) ?? false){
-        addEventToMicrosoftCalendar(events:microsoftEvents,calendarId:microsoftCalendarID){ (success) -> Void in
+        addEventToMicrosoftCalendar(events:microsoftEvents,calendarId:microsoftCalendarID!){ (success) -> Void in
             if(success){
                 numberOfcalenderThatImportData += 1
                 if(numberOfcalenderThatImportData == calendars?.count ?? 0){

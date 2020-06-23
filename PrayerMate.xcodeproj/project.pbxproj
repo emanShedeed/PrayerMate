@@ -19,7 +19,7 @@
 		BD0C905924276C13000B8EAC /* LocationSearchtable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905724276C12000B8EAC /* LocationSearchtable.swift */; };
 		BD0C905A24276C13000B8EAC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905824276C13000B8EAC /* MapViewController.swift */; };
 		BD0C905C242787E9000B8EAC /* PrayerTimesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0C905B242787E9000B8EAC /* PrayerTimesResponseModel.swift */; };
-		BD0CFB9A2451BAA900177761 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0CFB992451BAA900177761 /* LocalNotification.swift */; };
+		BD0CFB9A2451BAA900177761 /* PrayerTimeLocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0CFB992451BAA900177761 /* PrayerTimeLocalNotification.swift */; };
 		BD0CFB9C2451BF7100177761 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0CFB9B2451BF7100177761 /* Notification.swift */; };
 		BD12EB46242225EB00001437 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB45242225EA00001437 /* RoundedButton.swift */; };
 		BD12EB492422267F00001437 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12EB482422267F00001437 /* LocationViewController.swift */; };
@@ -30,6 +30,8 @@
 		BD21C9CF2488DEC600BA9BA1 /* ExportingPrayerTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD21C9CE2488DEC600BA9BA1 /* ExportingPrayerTimeCell.swift */; };
 		BD21C9D12488DF8D00BA9BA1 /* ExportingVC+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD21C9D02488DF8D00BA9BA1 /* ExportingVC+PresenterDelegate.swift */; };
 		BD243D642495A70D004A79E1 /* EventData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD243D632495A70D004A79E1 /* EventData.swift */; };
+		BD24CDF724A2B2BD007FEEB1 /* ExportingPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD24CDF624A2B2BD007FEEB1 /* ExportingPopUpViewController.swift */; };
+		BD24CDF924A2B574007FEEB1 /* ExportPrayerTimeToCalendarNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD24CDF824A2B574007FEEB1 /* ExportPrayerTimeToCalendarNotification.swift */; };
 		BD287BCA243B0BD100373170 /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD287BC9243B0BD100373170 /* SplashPresenter.swift */; };
 		BD287BCD243B466800373170 /* SettingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD287BCC243B466800373170 /* SettingPresenter.swift */; };
 		BD287BD0243B50BA00373170 /* SettingsLocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD287BCF243B50BA00373170 /* SettingsLocationPresenter.swift */; };
@@ -105,7 +107,7 @@
 		BD0C905724276C12000B8EAC /* LocationSearchtable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchtable.swift; sourceTree = "<group>"; };
 		BD0C905824276C13000B8EAC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BD0C905B242787E9000B8EAC /* PrayerTimesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimesResponseModel.swift; sourceTree = "<group>"; };
-		BD0CFB992451BAA900177761 /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
+		BD0CFB992451BAA900177761 /* PrayerTimeLocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimeLocalNotification.swift; sourceTree = "<group>"; };
 		BD0CFB9B2451BF7100177761 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		BD12EB45242225EA00001437 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		BD12EB482422267F00001437 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,8 @@
 		BD21C9CE2488DEC600BA9BA1 /* ExportingPrayerTimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExportingPrayerTimeCell.swift; path = ../../../../../../../../ExportingPrayerTimeCell.swift; sourceTree = "<group>"; };
 		BD21C9D02488DF8D00BA9BA1 /* ExportingVC+PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExportingVC+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		BD243D632495A70D004A79E1 /* EventData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventData.swift; sourceTree = "<group>"; };
+		BD24CDF624A2B2BD007FEEB1 /* ExportingPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportingPopUpViewController.swift; sourceTree = "<group>"; };
+		BD24CDF824A2B574007FEEB1 /* ExportPrayerTimeToCalendarNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExportPrayerTimeToCalendarNotification.swift; path = PrayerMate/Scenes/HomeStoryBoard/ExportingPopUp/View/ExportPrayerTimeToCalendarNotification.swift; sourceTree = SOURCE_ROOT; };
 		BD287BC9243B0BD100373170 /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		BD287BCC243B466800373170 /* SettingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPresenter.swift; sourceTree = "<group>"; };
 		BD287BCF243B50BA00373170 /* SettingsLocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLocationPresenter.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 			children = (
 				BD0C90462423A143000B8EAC /* Home */,
 				BD21C9C3248873F300BA9BA1 /* Exporting */,
+				BD24CDF224A2B26B007FEEB1 /* ExportingPopUp */,
 			);
 			path = HomeStoryBoard;
 			sourceTree = "<group>";
@@ -442,6 +447,38 @@
 			path = ExportingCellUIModel;
 			sourceTree = "<group>";
 		};
+		BD24CDF224A2B26B007FEEB1 /* ExportingPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				BD24CDF424A2B29F007FEEB1 /* Model */,
+				BD24CDF324A2B288007FEEB1 /* View */,
+				BD24CDF524A2B2A5007FEEB1 /* Presenter */,
+			);
+			path = ExportingPopUp;
+			sourceTree = "<group>";
+		};
+		BD24CDF324A2B288007FEEB1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD24CDF624A2B2BD007FEEB1 /* ExportingPopUpViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD24CDF424A2B29F007FEEB1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD24CDF524A2B2A5007FEEB1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		BD2E0BEF2431D5F800D2B6E6 /* About */ = {
 			isa = PBXGroup;
 			children = (
@@ -519,7 +556,8 @@
 			children = (
 				BD88917F244CB33C00C58D5E /* GoogleService.swift */,
 				BD0CFB9B2451BF7100177761 /* Notification.swift */,
-				BD0CFB992451BAA900177761 /* LocalNotification.swift */,
+				BD0CFB992451BAA900177761 /* PrayerTimeLocalNotification.swift */,
+				BD24CDF824A2B574007FEEB1 /* ExportPrayerTimeToCalendarNotification.swift */,
 				BDD1F73B2417A8EB006B87B7 /* MicrosoftCalendarSDKFiles */,
 			);
 			path = Model;
@@ -922,6 +960,7 @@
 				BD28C062246171BC00E97EC6 /* LocationPresenter.swift in Sources */,
 				BD28C05F2461673A00E97EC6 /* UserDefaultsConstants.swift in Sources */,
 				BD5FC48D24320C5D0033BCCE /* BaseViewController.swift in Sources */,
+				BD24CDF724A2B2BD007FEEB1 /* ExportingPopUpViewController.swift in Sources */,
 				BDFFDA7C243622400066F493 /* PrayerTimeBufferVC+PresenterDelegate.swift in Sources */,
 				BD2E0BF12431D64800D2B6E6 /* AboutViewController.swift in Sources */,
 				BD287BCD243B466800373170 /* SettingPresenter.swift in Sources */,
@@ -932,6 +971,7 @@
 				BD287BD0243B50BA00373170 /* SettingsLocationPresenter.swift in Sources */,
 				BD889180244CB33C00C58D5E /* GoogleService.swift in Sources */,
 				BD1FC1DD24458D3200540A2B /* RealmPrayerTimeModel.swift in Sources */,
+				BD24CDF924A2B574007FEEB1 /* ExportPrayerTimeToCalendarNotification.swift in Sources */,
 				BD12EB492422267F00001437 /* LocationViewController.swift in Sources */,
 				BDFCFE49241E4B310033D031 /* SYActivityIndicatorView.swift in Sources */,
 				BD0CFB9C2451BF7100177761 /* Notification.swift in Sources */,
@@ -951,7 +991,7 @@
 				BDA3F868241F712400705569 /* BundleExtension.swift in Sources */,
 				BDFFDA56243252B70066F493 /* CalendarMethodViewController.swift in Sources */,
 				BD21C9D12488DF8D00BA9BA1 /* ExportingVC+PresenterDelegate.swift in Sources */,
-				BD0CFB9A2451BAA900177761 /* LocalNotification.swift in Sources */,
+				BD0CFB9A2451BAA900177761 /* PrayerTimeLocalNotification.swift in Sources */,
 				BD0C90502423B175000B8EAC /* HomeVC+PresenterDelegate.swift in Sources */,
 				BDFFDA622432EEDD0066F493 /* SettingCell.swift in Sources */,
 				BDFFDA702434C44A0066F493 /* ImportToCalendarViewController.swift in Sources */,
