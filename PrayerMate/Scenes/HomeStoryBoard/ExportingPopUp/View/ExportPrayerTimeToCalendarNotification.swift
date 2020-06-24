@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import UserNotifications
 
 class ExportPrayerTimeToCalendarNotification{
@@ -18,7 +19,7 @@ class ExportPrayerTimeToCalendarNotification{
     }
     func registerLocal(_notification:Notification) {
          let center = UNUserNotificationCenter.current()
-         center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+         center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
              if granted {
                 self.scheduleLocal(notification: _notification)
              } else {
@@ -57,7 +58,10 @@ class ExportPrayerTimeToCalendarNotification{
         center.add(request, withCompletionHandler: nil)
         
         //Actions
-        let okAction=UNNotificationAction(identifier: "OkAction", title: "OK", options: .foreground)
+        let okAction=UNNotificationAction(identifier: "OkAction", title: "OK", options: [])
+      
+//        okAction.setValue(UIColor.black, forKey: "titleTextColor")
+//        okAction.setValue(NSAttributedString(string:okAction.title, attributes: [NSAttributedString.Key.foregroundColor : UIColor.black]), forKey: "attributedTitle")
         let cancelAction=UNNotificationAction(identifier: "CancelAction", title: "Cancel", options: .foreground)
         
         let category=UNNotificationCategory(identifier: "ExportingRenewal", actions: [okAction,cancelAction], intentIdentifiers: [], options: [])

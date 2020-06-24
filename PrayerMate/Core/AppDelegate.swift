@@ -71,7 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
            completionHandler()
      }
      func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-       completionHandler([.alert, .badge, .sound])
+       completionHandler([.alert, .sound])
      }
      
     // MARK: UISceneSession Lifecycle

@@ -44,7 +44,7 @@ class PrayerTimeLocalNotification {
     func registerLocal() {
         let center = UNUserNotificationCenter.current()
 
-        center.requestAuthorization(options: [.alert, .badge, .sound]) {[weak self] (granted, error) in
+        center.requestAuthorization(options: [.alert, .sound]) {[weak self] (granted, error) in
             if granted {
                 self?.scheduleLocal()
             } else {
