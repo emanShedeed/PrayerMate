@@ -190,6 +190,11 @@
 "alertToEnableNotifications" = "الرجاء تمكين الإشعارات إذا كنت تريد تلقي تنبيه لأوقات الصلاة";
 "alertToRenewImportPeriodTitle" = "تجديد فترة الاستيراد";
 "alertToRenewImportPeriodDescription" = "يرجى ملاحظة أن فترة إضافة أوقات الصلاة للتقويم ستنتهي غدًا";
+
+// renewal exporting Local Notification
+"notificationBody" = "آخر موعد محجوز لمواقيت الصلاة في جدول اعمالك هو يوم الغد. هل ترغب بتجديد المواعيد؟";
+"okBtnTitle" = "موافق";
+"cancelBtnTitle" = "الغاء";
 //"language.description" = "اللغه";
 
 

@@ -58,11 +58,11 @@ class ExportPrayerTimeToCalendarNotification{
         center.add(request, withCompletionHandler: nil)
         
         //Actions
-        let okAction=UNNotificationAction(identifier: "OkAction", title: "OK", options: [])
+        let okAction=UNNotificationAction(identifier: "OkAction", title: "okBtnTitle".localized, options: [])
       
 //        okAction.setValue(UIColor.black, forKey: "titleTextColor")
 //        okAction.setValue(NSAttributedString(string:okAction.title, attributes: [NSAttributedString.Key.foregroundColor : UIColor.black]), forKey: "attributedTitle")
-        let cancelAction=UNNotificationAction(identifier: "CancelAction", title: "Cancel", options: .foreground)
+        let cancelAction=UNNotificationAction(identifier: "CancelAction", title: "cancelBtnTitle".localized, options: .foreground)
         
         let category=UNNotificationCategory(identifier: "ExportingRenewal", actions: [okAction,cancelAction], intentIdentifiers: [], options: [])
         UNUserNotificationCenter.current().setNotificationCategories([category])
