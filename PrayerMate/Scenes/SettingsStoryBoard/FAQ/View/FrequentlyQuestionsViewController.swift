@@ -72,7 +72,7 @@ class FrequentlyQuestionsViewController: BaseViewController {
         cellHeight = UITableView.automaticDimension
         
         questionsTV.estimatedRowHeight = 63.0;
-        if(UIScreen.main.bounds.height>667){
+        if(UIScreen.main.bounds.height>736){
             navigationViewHeight.constant = 100.0
         }else{
             navigationViewHeight.constant = 66.0
