@@ -55,7 +55,7 @@ extension ExportingViewController:ExportingPopUpViewControllerProtocol{
                 numberOfSelectedPrayerTimes = 0
                 self.prayerTimestableView.reloadData()
         let renewalNotificationDate = Calendar.current.date(byAdding: .day, value: -1 , to: secondDate ?? Date())
-        let _ = ExportPrayerTimeToCalendarNotification(notification: Notification(title: "", description: "notificationBody".localized, time: "7:55 am", date: renewalNotificationDate))//Date()
+        let _ = ExportPrayerTimeToCalendarNotification(notification: Notification(title: "", description: "notificationBody".localized, time: "12:00 am", date: renewalNotificationDate))//Date()
     }
     
 
