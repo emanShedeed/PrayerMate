@@ -226,7 +226,7 @@ extension ExportingPresenter{
                     event = EKEvent(eventStore: eventStore)
                     event.title = "it's \(prayerName) time"
                     event.startDate = eventStartDate ?? Date()
-                    event.endDate = eventStartDate ?? Date()
+                    event.endDate = eventEndDate ?? Date()
                     event.notes = ""
                     event.calendar = eventStore.defaultCalendarForNewEvents
                     appleEvents.append(event)
