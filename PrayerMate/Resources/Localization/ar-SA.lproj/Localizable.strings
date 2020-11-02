@@ -100,7 +100,7 @@
 
 //Language viewController
 "Language.en" = "الإنجليزية";
-"Language.ar" = "العربيه";
+"Language.ar" = "العربية";
 "Language.done" = "تأكيد";
 
 //PrayerTimeBuffer viewController
@@ -198,5 +198,5 @@
 //"language.description" = "اللغه";
 
 
-"language" = "العربيه";
+"language" = "العربية";
 

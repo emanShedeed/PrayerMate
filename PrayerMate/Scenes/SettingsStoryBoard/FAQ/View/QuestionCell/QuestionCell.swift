@@ -12,7 +12,6 @@ class QuestionCell: UITableViewCell {
     //MARK:- IBOUTLET
     @IBOutlet weak var questionTitleLbl:UILabel!
     @IBOutlet weak var questionAnswerLbl:UILabel!
-    @IBOutlet weak var answerLblHeight: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()

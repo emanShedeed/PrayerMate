@@ -258,13 +258,13 @@ extension FrequentlyQuestionsViewController:UITableViewDelegate,UITableViewDataS
         }
         questionsTV.reloadData()
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let question = isFiltering ? filteredQuestions[indexPath.row] : questionsArray[indexPath.row]
-        if(question.isExpanded){
-            return cellHeight
-        }
-        return 63.0
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        let question = isFiltering ? filteredQuestions[indexPath.row] : questionsArray[indexPath.row]
+//        if(question.isExpanded){
+//            return cellHeight
+//        }
+//        return 63.0
+//    }
     
 }
 //MARK: UISearchBarDelegate functions
