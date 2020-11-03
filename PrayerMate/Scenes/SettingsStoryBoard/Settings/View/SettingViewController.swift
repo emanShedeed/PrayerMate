@@ -30,6 +30,9 @@ class SettingViewController: UIViewController {
         
         // For remove last separator
         settingsTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: settingsTableView.frame.size.width, height: 1))
+        // for adding space at the end of table view
+        let insets = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
+        settingsTableView.contentInset = insets
         
         SettingsArray = presenter.setDefaultValues()
         

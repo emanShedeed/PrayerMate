@@ -16,6 +16,9 @@ class QuestionCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        let lang = AppSetting.shared.getCurrentLanguage()
+          questionTitleLbl.textAlignment = (lang == .ar ? .right : .left)
+           questionAnswerLbl .textAlignment =  questionTitleLbl.textAlignment
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
